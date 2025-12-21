@@ -1,0 +1,463 @@
+/* ===========================================
+   Adamus - Components CSS
+   Cards, Buttons, Badges, Progress
+   =========================================== */
+
+/* ===========================================
+   Subject Card (Homepage)
+   =========================================== */
+.subject-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-4);
+  min-height: 140px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration-fast) var(--ease),
+    box-shadow var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease);
+  text-align: center;
+}
+
+.subject-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent, var(--border-strong));
+}
+
+.subject-card:focus-visible {
+  outline: 3px solid var(--accent, var(--accent-blue));
+  outline-offset: 2px;
+}
+
+.subject-card .icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent, var(--accent-blue)) 0%, var(--accent-dark, var(--accent-blue-dark)) 100%);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.subject-card .icon-wrap svg {
+  width: 32px;
+  height: 32px;
+  stroke: white;
+  fill: none;
+}
+
+.subject-card .subject-name {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ===========================================
+   Quiz Card (Subject Page)
+   =========================================== */
+.quiz-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  text-decoration: none;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration-fast) var(--ease),
+    box-shadow var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease);
+}
+
+.quiz-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent, var(--border-strong));
+}
+
+.quiz-card:focus-visible {
+  outline: 3px solid var(--accent, var(--accent-blue));
+  outline-offset: 2px;
+}
+
+.quiz-card .icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-light, var(--accent-blue-light));
+  flex-shrink: 0;
+}
+
+.quiz-card .icon-wrap svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent, var(--accent-blue));
+  fill: none;
+}
+
+.quiz-card .quiz-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.quiz-card .quiz-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.quiz-card .quiz-meta {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.quiz-card .arrow {
+  color: var(--muted);
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+.quiz-card:hover .arrow {
+  transform: translateX(4px);
+  color: var(--accent, var(--accent-blue));
+}
+
+/* ===========================================
+   Buttons
+   =========================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    transform var(--duration-fast) var(--ease),
+    box-shadow var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-alt);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-blue-dark) 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--accent-blue-dark) 0%, #1e40af 100%);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+}
+
+/* Success Button */
+.btn-success {
+  background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* Danger Button */
+.btn-danger {
+  background: linear-gradient(135deg, var(--error) 0%, var(--error) 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--bg-alt);
+}
+
+/* Button Sizes */
+.btn-sm {
+  min-height: 36px;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  min-height: 56px;
+  padding: var(--space-4) var(--space-6);
+  font-size: 1rem;
+}
+
+/* Full Width Button */
+.btn-block {
+  width: 100%;
+}
+
+/* ===========================================
+   Badges
+   =========================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-full);
+  background: var(--bg-alt);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+}
+
+.badge-blue {
+  background: var(--accent-blue-light);
+  color: var(--accent-blue-dark);
+  border-color: transparent;
+}
+
+.badge-red {
+  background: var(--accent-red-light);
+  color: var(--accent-red-dark);
+  border-color: transparent;
+}
+
+.badge-green {
+  background: var(--accent-green-light);
+  color: var(--accent-green-dark);
+  border-color: transparent;
+}
+
+.badge-purple {
+  background: var(--accent-purple-light);
+  color: var(--accent-purple-dark);
+  border-color: transparent;
+}
+
+.badge-success {
+  background: var(--success-light);
+  color: #065f46;
+  border-color: transparent;
+}
+
+.badge-error {
+  background: var(--error-light);
+  color: #991b1b;
+  border-color: transparent;
+}
+
+/* ===========================================
+   Progress Bar
+   =========================================== */
+.progress {
+  height: 8px;
+  background: var(--bg-alt);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+  border-radius: var(--radius-full);
+  transition: width var(--duration-normal) var(--ease);
+}
+
+/* Progress with label */
+.progress-labeled {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.progress-labeled .progress {
+  flex: 1;
+}
+
+.progress-labeled .progress-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-light);
+  min-width: 48px;
+  text-align: right;
+}
+
+/* ===========================================
+   Card (Generic)
+   =========================================== */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+  margin-bottom: var(--space-4);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-body {
+  /* Default styling */
+}
+
+.card-footer {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+/* ===========================================
+   Stats Display
+   =========================================== */
+.stats-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stat-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--success);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.stat-dot.paused {
+  background: var(--warning);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.stat-dot.danger {
+  background: var(--error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* ===========================================
+   Alert / Message
+   =========================================== */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+}
+
+.alert-success {
+  background: var(--success-light);
+  color: #065f46;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.alert-error {
+  background: var(--error-light);
+  color: #991b1b;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.alert-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* ===========================================
+   Loading Skeleton
+   =========================================== */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton-card {
+  height: 140px;
+}
+
+.skeleton-row {
+  height: 72px;
+}

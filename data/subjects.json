@@ -4,56 +4,56 @@
       "id": "latijn-flumen-toets",
       "label": "Latijn – Proeftoets (Flumen)",
       "title": "Latijn – Proeftoets (Flumen)",
-      "file": "toets-flumen-final.json",
+      "file": "data/latijn/flumen.json",
       "schema": "toets"
     },
     {
       "id": "geschiedenis-jagers-en-boeren",
       "label": "Geschiedenis – Tijdvak 1: Jagers & Boeren",
       "title": "Geschiedenis – Tijdvak 1: Jagers & Boeren",
-      "file": "questions-geschiedenis.json",
+      "file": "data/geschiedenis/tijdvak1.json",
       "schema": "quiz"
     },
     {
       "id": "aardrijkskunde-p1",
       "label": "Aardrijkskunde – Paragraaf 1: Waar wil je wonen?",
       "title": "Aardrijkskunde – Paragraaf 1: Waar wil je wonen?",
-      "file": "vragen-aardrijkskunde-p1.json",
+      "file": "data/aardrijkskunde/p1.json",
       "schema": "quiz"
     },
     {
       "id": "aardrijkskunde-p2",
       "label": "Aardrijkskunde – Paragraaf 2: Verstedelijking in Nederland",
       "title": "Aardrijkskunde – Paragraaf 2: Verstedelijking in Nederland",
-      "file": "vragen-aardrijkskunde-p2.json",
+      "file": "data/aardrijkskunde/p2.json",
       "schema": "quiz"
     },
     {
       "id": "aardrijkskunde-p3",
       "label": "Aardrijkskunde – Paragraaf 3: De opbouw van de Nederlandse stad",
       "title": "Aardrijkskunde – Paragraaf 3: De opbouw van de Nederlandse stad",
-      "file": "vragen-aardrijkskunde-p3.json",
+      "file": "data/aardrijkskunde/p3.json",
       "schema": "quiz"
     },
     {
       "id": "aardrijkskunde-p4",
       "label": "Aardrijkskunde – Paragraaf 4: Steden en hun omgeving",
       "title": "Aardrijkskunde – Paragraaf 4: Steden en hun omgeving",
-      "file": "vragen-aardrijkskunde-p4.json",
+      "file": "data/aardrijkskunde/p4.json",
       "schema": "quiz"
     },
     {
       "id": "aardrijkskunde-p7",
       "label": "Aardrijkskunde – Paragraaf 7: Plaatsbepaling op aarde",
       "title": "Aardrijkskunde – Paragraaf 7: Plaatsbepaling op aarde",
-      "file": "vragen-aardrijkskunde-p7.json",
+      "file": "data/aardrijkskunde/p7.json",
       "schema": "quiz"
     },
     {
       "id": "aardrijkskunde-p8",
       "label": "Aardrijkskunde – Paragraaf 8: Tijdzones en de draaiing van de aarde",
       "title": "Aardrijkskunde – Paragraaf 8: Tijdzones en de draaiing van de aarde",
-      "file": "vragen-aardrijkskunde-p8.json",
+      "file": "data/aardrijkskunde/p8.json",
       "schema": "quiz"
     }
   ]

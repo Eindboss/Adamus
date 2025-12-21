@@ -1,78 +1,67 @@
 <!DOCTYPE html>
-
 <html lang="nl">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Adamus</title>
-<meta content="Beantwoord vragen en oefen je kennis." name="description"/>
-<meta content="light dark" name="color-scheme"/>
-<link href="assets/style.css" rel="stylesheet"/></head>
-<body>
-<!-- gedeelde header -->
-<div id="topbar-root"></div>
-<main class="wrap page"><div id="toets-app" style="margin-top:12px;"></div>
-<div class="meta">
-<div aria-hidden="true" class="dot" id="timerDot"></div>
-<div id="stat">0 goed / 0 fout / 0 overgeslagen • vraag 0 van 0</div>
-<div style="margin-left:auto">Resterend: <strong id="countdown">90</strong> s</div>
-</div>
-<div aria-hidden="true" class="progressbar">
-<div class="bar" id="progressBar"></div>
-</div>
-<div class="qcard" id="quizArea">
-<div class="qtitle" id="pageTitle" style="display:none"></div>
-</div>
-<!-- Rij 1: Pauzeren · Voorlopig overslaan · Controleer -->
-<div class="controls" id="rowMain">
-<button class="btn" id="btn-restart" type="button">Begin opnieuw</button>
-<button class="btn" id="pauseBtn" type="button">Pauzeren</button>
-<button class="btn" id="skipBtn" type="button">Voorlopig overslaan</button>
-<button class="btn primary" id="checkBtn" type="button">Controleer</button>
-</div>
-<!-- Rij 2: alleen Volgende (verschijnt pas na Controleer) -->
-<div class="controls single" id="rowNext" style="display:none">
-<button class="btn primary" id="nextBtn" type="button">Volgende</button>
-</div>
-</main>
-<!-- Pauze overlay -->
-<div aria-labelledby="pauseTitle" aria-modal="true" class="overlay" id="pauseOverlay" role="dialog">
-<div class="box">
-<h3 id="pauseTitle">Gepauzeerd</h3>
-<p>De tijd staat stil en de vraag is verborgen. Klaar om verder te gaan?</p>
-<button class="btn primary" id="resumeBtn" type="button">Ga verder</button>
-</div>
-</div>
-<script defer="" src="assets/header.js?v=20251106"></script>
-<script defer="" src="script.js"></script>
-<script>
-    // Knoppenlogica zonder jouw script.js te wijzigen:
-    // - Start/bij nieuwe vraag: rijMain zichtbaar, rijNext verborgen
-    // - Na "Controleer": rijMain verbergen, rijNext tonen
-    // - Na "Volgende": terug naar startopstelling
-    (function(){
-      function showMain(){ document.getElementById('rowMain').style.display='grid'; document.getElementById('rowNext').style.display='none'; }
-      function showNext(){ document.getElementById('rowMain').style.display='none'; document.getElementById('rowNext').style.display='grid'; }
-      showMain();
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adamus - Quiz</title>
+  <meta name="description" content="Beantwoord vragen en oefen je kennis.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="quiz">
+  <!-- Header -->
+  <div id="topbar-root"></div>
 
-      // Na controleren → alleen Volgende
-      var check = document.getElementById('checkBtn');
-      if (check){
-        check.addEventListener('click', function(){
-          // Wacht een tick zodat script.js eerst kan afhandelen
-          setTimeout(showNext, 0);
-        });
-      }
-      // Na volgende vraag → terug naar hoofdknoppen
-      var next = document.getElementById('nextBtn');
-      if (next){
-        next.addEventListener('click', function(){
-          setTimeout(showMain, 0);
-        });
-      }
-      // Voorlopig overslaan laat de hoofdopstelling staan (script.js regelt naar volgende vraag)
-      // Pauzeren wordt al afgehandeld in script.js; blur is extra robuust via :has selector
-    })();
+  <!-- Main Content -->
+  <main class="wrap quiz-page">
+    <!-- Meta / Stats -->
+    <div class="quiz-meta">
+      <div id="timerDot" class="stat-dot"></div>
+      <div id="stat">0 goed / 0 fout / 0 overgeslagen • vraag 0 van 0</div>
+      <div class="timer">Resterend: <strong id="countdown">90</strong> s</div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="quiz-progress">
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Question Area -->
+    <div class="question-card" id="quizArea">
+      <div class="question-title">Laden...</div>
+    </div>
+
+    <!-- Controls Row 1: Main Actions -->
+    <div class="quiz-controls" id="rowMain">
+      <button class="btn" id="btn-restart" type="button">Opnieuw</button>
+      <button class="btn" id="pauseBtn" type="button">Pauze</button>
+      <button class="btn" id="skipBtn" type="button">Overslaan</button>
+      <button class="btn btn-primary" id="checkBtn" type="button">Controleer</button>
+    </div>
+
+    <!-- Controls Row 2: Next (after check) -->
+    <div class="quiz-controls single" id="rowNext" style="display: none;">
+      <button class="btn btn-primary" id="nextBtn" type="button">Volgende</button>
+    </div>
+  </main>
+
+  <!-- Pause Overlay -->
+  <div class="pause-overlay" id="pauseOverlay" role="dialog" aria-modal="true" aria-labelledby="pauseTitle">
+    <div class="pause-box">
+      <h3 id="pauseTitle">Gepauzeerd</h3>
+      <p>De tijd staat stil. Klaar om verder te gaan?</p>
+      <button class="btn btn-primary" id="resumeBtn" type="button">Ga verder</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/header.js"></script>
+  <script type="module">
+    import { initQuiz } from './assets/js/quiz.js';
+    initQuiz();
   </script>
 </body>
 </html>

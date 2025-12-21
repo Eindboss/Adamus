@@ -1,139 +1,29 @@
 <!DOCTYPE html>
-
 <html lang="nl">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title id="pageTitle">Adamus · Vak</title>
-<meta content="Kies een oefentoets en start direct met oefenen." name="description"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="pageTitle">Adamus - Vak</title>
+  <meta name="description" content="Kies een toets en start direct met oefenen.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="subject">
+  <!-- Header -->
+  <div id="topbar-root"></div>
 
+  <!-- Main Content -->
+  <main class="wrap">
+    <div class="page-header">
+      <span class="badge" id="subjectBadge"></span>
+      <h1 id="subjectTitle"></h1>
+    </div>
+    <div class="quiz-grid" id="list" aria-live="polite"></div>
+  </main>
 
-<link href="assets/style.css" rel="stylesheet"/></head>
-<body>
-<div id="topbar-root"></div>
-<main class="wrap">
-<div class="heading">
-<span class="badge" id="subjectBadge"></span>
-<h2 id="subjectTitle"></h2>
-</div>
-<div aria-live="polite" class="list" id="list"></div>
-</main>
-<script defer="" src="assets/header.js?v=20251106"></script>
-<script>
-        // helpers
-    const p = new URLSearchParams(location.search);
-    const subjectKey = (p.get('subject') || '').toLowerCase();
-
-    // kleur per vak
-    function accentsFor(subject){
-      const s = subject.toLowerCase();
-      if (s.startsWith('aardrijkskunde')) return ['#2e90fa','#e8f1ff','#0b4ea2'];
-      if (s.startsWith('geschiedenis'))   return ['#ef4444','#fee2e2','#991b1b'];
-      if (s.startsWith('latijn'))         return ['#16a34a','#dcfce7','#14532d'];
-      return ['#6d5bd0','#efeaff','#4338ca'];
-    }
-
-    // icoon kiezen op basis van titel of onderwerp
-    
-    // icoon kiezen op basis van titel of onderwerp (kleurrijker)
-    function iconFor(meta){
-      const txt = (meta.label || meta.title || meta.id || '').toLowerCase();
-      // simple hash to pick hue
-      function hueFrom(text){
-        let h = 0;
-        for (let i=0;i<text.length;i++){ h = (h*31 + text.charCodeAt(i)) % 360; }
-        return h;
-      }
-      function wrap(inner, hue){
-        const bg = `hsl(${hue}, 85%, 88%)`;
-        const fg = `hsl(${hue}, 65%, 35%)`;
-        return `<svg viewBox="0 0 64 64" role="img" aria-hidden="true">
-          <defs>
-            <filter id="s${hue}"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity=".2"/></filter>
-          </defs>
-          <rect x="4" y="4" width="56" height="56" rx="14" fill="${bg}" stroke="${fg}" stroke-width="2"/>
-          <g transform="translate(12,12)" fill="none" stroke="${fg}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#s${hue})">
-            ${inner}
-          </g>
-        </svg>`;
-      }
-      // Choose a pictogram based on keywords
-      if (txt.includes('kaart') || txt.includes('plaatsbepaling') || txt.includes('topografie')){
-        return wrap(`<path d="M6 10l10-4 10 4 10-4 10 4v24l-10 4-10-4-10 4-10-4V10z"/><path d="M16 6v28M26 10v28M36 6v28"/>`, 205);
-      }
-      if (txt.includes('tijd') || txt.includes('tijdvak') || txt.includes('geschiedenis') || txt.includes('rome') || txt.includes('middeleeuwen')){
-        return wrap(`<circle cx="20" cy="20" r="12"/><path d="M20 12v10l8 4"/>`, 8);
-      }
-      if (txt.includes('rivier') || txt.includes('flumen') || txt.includes('water') || txt.includes('klimaat')){
-        return wrap(`<path d="M0 24c6-4 10-4 16 0s10 4 16 0 10-4 16 0" /><path d="M0 12c6-4 10-4 16 0s10 4 16 0 10-4 16 0" />`, 195);
-      }
-      if (txt.includes('staat') || txt.includes('landen') || txt.includes('werelddeel')){
-        return wrap(`<path d="M24 2a22 22 0 1 1 0 44 22 22 0 0 1 0-44z"/><path d="M2 24h44"/><path d="M24 2a64 64 0 0 0 0 44"/><path d="M24 2a64 64 0 0 1 0 44"/>`, 145);
-      }
-      if (txt.includes('taal') || txt.includes('latijn') || txt.includes('grammatica') || txt.includes('woorden')){
-        return wrap(`<path d="M2 6h28v20H2z"/><path d="M6 10h10M6 16h16M6 22h12"/><path d="M34 4h10v28H22l12-8z"/>`, 120);
-      }
-      // default: book
-      const h = hueFrom(txt);
-      return wrap(`<path d="M4 4h24a6 6 0 0 1 6 6v24a6 6 0 0 0-6-6H4z"/><path d="M4 4v24a6 6 0 0 0 6 6h24V10a6 6 0 0 0-6-6z"/>`, h);
-    }function metaSubject(meta){
-      if (meta.subject) return String(meta.subject);
-      const raw = meta.label || meta.title || meta.id || '';
-      const parts = String(raw).split(/\s[–-]\s/);
-      if (parts.length >= 2) return parts[0];
-      const id = String(meta.id||'').toLowerCase();
-      if (id.startsWith('aardrijkskunde')) return 'Aardrijkskunde';
-      if (id.startsWith('geschiedenis'))   return 'Geschiedenis';
-      if (id.startsWith('latijn'))         return 'Latijn';
-      return 'Vak';
-    }
-
-    function unitFrom(meta, subj){
-      const raw = meta.label || meta.title || meta.id || '';
-      return String(raw).replace(new RegExp('^\\s*'+subj+'\\s*[–-]\\s*','i'), '').trim() || raw;
-    }
-
-    const badge = document.getElementById('subjectBadge');
-    const title = document.getElementById('subjectTitle');
-    const list  = document.getElementById('list');
-
-    fetch('subjects.json?v=20251106',{cache:'no-store'}).then(r=>r.json()).then(json=>{
-      const all = (json.subjects || json || []).map(s => (typeof s==='object'? s : {id:String(s)}));
-
-      const first = all.find(m => metaSubject(m).toLowerCase().startsWith(subjectKey));
-      const displayName = first ? metaSubject(first) : (subjectKey.charAt(0).toUpperCase()+subjectKey.slice(1));
-      const [acc, badgeBg, badgeFg] = accentsFor(displayName);
-      badge.textContent = displayName;
-      badge.style.setProperty('--badgeBg', badgeBg);
-      badge.style.setProperty('--badgeFg', badgeFg);
-      title.textContent = '';
-
-      const items = [];
-{
-  const key = subjectKey.toLowerCase().trim();
-  const norm = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  all.forEach(m => {
-    const subj = metaSubject(m).toLowerCase().trim();
-    if (subj === key || norm(subj) === norm(key) || subj.startsWith(key) || norm(subj).startsWith(norm(key))) {
-      items.push(m);
-    }
-  });
-}
-list.innerHTML = '';
-      items.forEach(meta=>{
-        const a = document.createElement('a');
-        a.className = 'subject-btn';
-        a.href = 'quiz.html?subject=' + encodeURIComponent(meta.id);
-        a.style.setProperty('--acc', acc);
-        a.innerHTML = `
-          <span class="iconwrap" aria-hidden="true">${iconFor(meta)}</span>
-          <span class="text"><span class="unit">${unitFrom(meta, displayName)}</span></span>
-        `;
-        list.appendChild(a);
-      });
-    }).catch(err=>{
-      list.innerHTML = '<div style="color:#b91c1c">Kan onderdelen niet laden: '+err.message+'</div>';
-    });
-    </script>
+  <!-- Scripts -->
+  <script src="assets/js/header.js"></script>
+  <script type="module" src="assets/js/subject.js"></script>
 </body>
 </html>
