@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "subject": "Aardrijkskunde – Paragraaf 4: Steden en hun omgeving",
+    "themeColor": "#6d5bd0"
+  },
+  "questions": [
+    {
+      "q": "Veel mensen werken in de stad, maar wonen buiten de stad. Ze reizen elke dag heen en weer. Hoe noem je dit dagelijks reizen tussen woon- en werkplaats?",
+      "a": [
+        "Forensisme",
+        "Migratie",
+        "Verstedelijking",
+        "Recreatie"
+      ],
+      "c": 0,
+      "e": "Forensisme is het dagelijks reizen tussen woonplaats en werkplaats, vaak met auto of trein."
+    },
+    {
+      "q": "Rond grote steden liggen dorpen en kleinere plaatsen waar veel forensen wonen. Hoe noem je deze gebieden samen met de stad?",
+      "a": [
+        "Stadsgewest",
+        "Vinex-wijk",
+        "Poldergebied",
+        "Industriezone"
+      ],
+      "c": 0,
+      "e": "Een stadsgewest is de stad met omliggende dorpen die sterk met elkaar verbonden zijn."
+    },
+    {
+      "q": "In de Randstad liggen grote steden dicht bij elkaar, zoals Rotterdam en Den Haag. Wat is een voordeel van deze ligging?",
+      "a": [
+        "Mensen kunnen makkelijk naar andere steden reizen",
+        "Er is veel landbouwgrond",
+        "Er is weinig verkeer",
+        "Er zijn geen snelwegen nodig"
+      ],
+      "c": 0,
+      "e": "De korte afstanden tussen steden zorgen voor goede samenwerking en bereikbaarheid."
+    },
+    {
+      "q": "De stad trekt mensen aan voor werk en voorzieningen. Tegelijk gebruiken inwoners van de stad het buitengebied voor ontspanning. Hoe werken stad en omgeving samen?",
+      "a": [
+        "De stad en omgeving vullen elkaar aan met functies",
+        "Ze hebben niets met elkaar te maken",
+        "De stad bepaalt alles",
+        "Het platteland gebruikt de stad niet"
+      ],
+      "c": 0,
+      "e": "De stad biedt werk en diensten, terwijl het buitengebied ruimte en natuur biedt."
+    },
+    {
+      "q": "Steden breiden zich uit over de omgeving. Daardoor verdwijnen weilanden en natuur. Waarom is dat een probleem voor boeren?",
+      "a": [
+        "Er blijft minder landbouwgrond over",
+        "Er komen meer klanten bij",
+        "Ze krijgen meer subsidie",
+        "Ze kunnen meer grond kopen"
+      ],
+      "c": 0,
+      "e": "Door uitbreiding van steden neemt de beschikbare landbouwgrond af."
+    },
+    {
+      "q": "Steden hebben veel verkeer en bedrijvigheid. Waarom liggen grote distributiecentra vaak buiten de stad?",
+      "a": [
+        "Er is daar meer ruimte en betere aansluiting op snelwegen",
+        "Er is meer toerisme",
+        "Er zijn meer winkels",
+        "Er zijn meer monumenten"
+      ],
+      "c": 0,
+      "e": "Aan de rand is ruimte voor grote gebouwen en vrachtverkeer met snelle wegaansluitingen."
+    },
+    {
+      "q": "Door het wonen en werken in verschillende gebieden ontstaat veel autoverkeer. Wat is een nadeel daarvan?",
+      "a": [
+        "Meer files en luchtvervuiling",
+        "Minder vervoer",
+        "Meer rust en stilte",
+        "Betere luchtkwaliteit"
+      ],
+      "c": 0,
+      "e": "Veel autoverkeer veroorzaakt drukte, files en luchtvervuiling."
+    },
+    {
+      "q": "Het openbaar vervoer speelt een belangrijke rol tussen stad en omgeving. Waarom is goed openbaar vervoer belangrijk voor de regio?",
+      "a": [
+        "Het houdt steden bereikbaar en vermindert autoverkeer",
+        "Het zorgt voor meer files",
+        "Het maakt de stad minder aantrekkelijk",
+        "Het sluit dorpen af"
+      ],
+      "c": 0,
+      "e": "Met goed openbaar vervoer kunnen mensen makkelijk en duurzaam reizen tussen stad en omgeving."
+    },
+    {
+      "q": "Rondom de stad liggen vaak recreatiegebieden, bossen en plassen. Waarom zijn die belangrijk voor stedelingen?",
+      "a": [
+        "Ze bieden ruimte voor ontspanning en natuur dichtbij huis",
+        "Ze maken het verkeer drukker",
+        "Ze zijn bedoeld voor landbouw",
+        "Ze worden nauwelijks bezocht"
+      ],
+      "c": 0,
+      "e": "Recreatiegebieden geven stedelingen ruimte om te ontspannen in de natuur dicht bij de stad."
+    },
+    {
+      "q": "Sommige mensen verhuizen van de stad naar omliggende dorpen. Wat is een gevolg van deze trek?",
+      "a": [
+        "De dorpen groeien en krijgen een stedelijker karakter",
+        "De dorpen krimpen",
+        "De steden groeien harder",
+        "De voorzieningen verdwijnen"
+      ],
+      "c": 0,
+      "e": "Door suburbanisatie groeien dorpen en worden ze stedelijker qua uiterlijk en functies."
+    },
+    {
+      "q": "Een gebied met meerdere steden en dorpen die samenwerken heet een stedelijk netwerk. Wat is een voordeel van zo’n netwerk?",
+      "a": [
+        "Betere afstemming van verkeer en voorzieningen",
+        "Minder banen",
+        "Meer reistijd",
+        "Minder samenwerking"
+      ],
+      "c": 0,
+      "e": "Samenwerkende steden kunnen voorzieningen en infrastructuur beter afstemmen."
+    },
+    {
+      "q": "Het Groene Hart ligt midden in de Randstad. Waarom is het belangrijk dat dit gebied groen blijft?",
+      "a": [
+        "Het zorgt voor open ruimte en natuur in een druk gebied",
+        "Het levert veel industrie op",
+        "Het ligt vol met kantoren",
+        "Het is belangrijk voor scheepvaart"
+      ],
+      "c": 0,
+      "e": "Het Groene Hart biedt rust, natuur en landbouwgrond tussen grote steden."
+    },
+    {
+      "q": "Steden en dorpen hebben elkaar nodig. Wat is een voorbeeld van deze wederzijdse afhankelijkheid?",
+      "a": [
+        "Dorpen leveren voedsel, steden bieden werk en voorzieningen",
+        "Dorpen leveren toeristen, steden landbouwproducten",
+        "Steden gebruiken geen diensten van dorpen",
+        "Dorpen en steden staan los van elkaar"
+      ],
+      "c": 0,
+      "e": "Dorpen zorgen voor voedsel en ruimte, terwijl steden werk en diensten bieden."
+    },
+    {
+      "q": "De overheid probeert de groei van steden te sturen met regels over bouwen en natuur. Hoe heet dit beleid?",
+      "a": [
+        "Ruimtelijke ordening",
+        "Landbouwplanning",
+        "Verkeer en vervoer",
+        "Sociale zekerheid"
+      ],
+      "c": 0,
+      "e": "Ruimtelijke ordening bepaalt hoe ruimte in een gebied wordt gebruikt en beschermd."
+    },
+    {
+      "q": "Door de verstedelijking is de luchtkwaliteit in sommige regio’s achteruitgegaan. Wat kan helpen om dit te verbeteren?",
+      "a": [
+        "Meer gebruik van openbaar vervoer en fietsen",
+        "Meer autowegen aanleggen",
+        "Meer fabrieken bouwen",
+        "Meer vrachtverkeer toelaten"
+      ],
+      "c": 0,
+      "e": "Duurzame mobiliteit zoals fietsen en OV vermindert uitstoot en verbetert de luchtkwaliteit."
+    },
+    {
+      "q": "De regio Amsterdam trekt veel internationale bedrijven aan. Wat maakt deze stad aantrekkelijk voor hen?",
+      "a": [
+        "Goede bereikbaarheid en internationale verbindingen",
+        "Lage bevolkingsdichtheid",
+        "Weinig voorzieningen",
+        "Weinig toerisme"
+      ],
+      "c": 0,
+      "e": "Amsterdam heeft een gunstige ligging, veel voorzieningen en een internationale luchthaven."
+    },
+    {
+      "q": "Een moderne stad heeft veel functies die elkaar aanvullen. Wat betekent dat voor de relatie met omliggende gemeenten?",
+      "a": [
+        "Ze moeten samenwerken over verkeer, wonen en werk",
+        "Ze kunnen elk apart beleid maken",
+        "Ze hebben geen contact nodig",
+        "Ze richten zich alleen op landbouw"
+      ],
+      "c": 0,
+      "e": "Steden en omliggende gemeenten werken samen in beleid over verkeer, wonen en economie."
+    },
+    {
+      "q": "Forensen dragen bij aan de economie van zowel hun woonplaats als hun werkplaats. Waarom is dat zo?",
+      "a": [
+        "Ze besteden geld in beide gebieden",
+        "Ze blijven altijd thuis",
+        "Ze gebruiken geen voorzieningen",
+        "Ze vermijden winkels"
+      ],
+      "c": 0,
+      "e": "Forensen kopen en gebruiken voorzieningen op meerdere plekken, wat economische activiteit verspreidt."
+    },
+    {
+      "q": "Een groot winkelcentrum aan de rand van de stad trekt bezoekers uit omliggende dorpen. Wat is het gevolg voor het centrum van de stad?",
+      "a": [
+        "Minder klanten in binnenstadwinkels",
+        "Meer bezoekers in de binnenstad",
+        "Meer toerisme in dorpen",
+        "Meer industrie in de stad"
+      ],
+      "c": 0,
+      "e": "Grote winkelcentra buiten de stad kunnen klanten weghalen bij winkels in het centrum."
+    },
+    {
+      "q": "Inzichtvraag: Waarom is het belangrijk dat steden en dorpen samen plannen maken voor verkeer en woningbouw?",
+      "a": [
+        "Hun inwoners gebruiken elkaars voorzieningen",
+        "Ze zijn volledig onafhankelijk",
+        "Ze hebben weinig contact",
+        "Ze hebben geen verkeer nodig"
+      ],
+      "c": 0,
+      "e": "Steden en dorpen vormen samen een regio waar mensen wonen, werken en reizen."
+    },
+    {
+      "q": "Inzichtvraag: Waarom kan te veel verstedelijking het landschap aantasten?",
+      "a": [
+        "Er verdwijnt open ruimte en natuur",
+        "Er komt meer groen bij",
+        "Er ontstaan meer parken",
+        "Er worden minder huizen gebouwd"
+      ],
+      "c": 0,
+      "e": "Uitbreiding van steden kan natuur en open landschap doen verdwijnen."
+    },
+    {
+      "q": "Inzichtvraag: Waarom trekken sommige bedrijven liever naar locaties buiten de stad?",
+      "a": [
+        "Daar is meer ruimte en minder verkeer",
+        "Daar wonen meer klanten",
+        "Daar is meer toerisme",
+        "Daar zijn meer grachten"
+      ],
+      "c": 0,
+      "e": "Buiten de stad is meer ruimte voor grote gebouwen en minder verkeersdrukte."
+    },
+    {
+      "q": "Inzichtvraag: Waarom kan een stedelijk netwerk de concurrentiepositie van een regio versterken?",
+      "a": [
+        "Door samenwerking profiteren steden van elkaars sterke punten",
+        "Steden werken elkaar tegen",
+        "Steden verliezen functies",
+        "Er ontstaan minder banen"
+      ],
+      "c": 0,
+      "e": "In een netwerk vullen steden elkaar aan en trekken samen meer bedrijven en bewoners."
+    },
+    {
+      "q": "Inzichtvraag: Waarom is het belangrijk dat er recreatiegebieden blijven rond steden?",
+      "a": [
+        "Mensen hebben ruimte nodig om te ontspannen",
+        "Recreatie belemmert stedelijke groei",
+        "Niemand gebruikt die gebieden",
+        "Ze liggen te ver van de stad"
+      ],
+      "c": 0,
+      "e": "Recreatiegebieden zorgen voor ontspanning, gezondheid en contact met de natuur."
+    }
+  ],
+  "bonus": null,
+  "orderingSets": []
+}

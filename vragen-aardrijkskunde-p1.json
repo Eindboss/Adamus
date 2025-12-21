@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "subject": "Aardrijkskunde – Paragraaf 1: Waar wil je wonen?",
+    "themeColor": "#6d5bd0"
+  },
+  "questions": [
+    {
+      "q": "In een stad wonen veel mensen op een klein gebied. Er zijn veel winkels en scholen. Wat is een veelvoorkomende reden om in de stad te wonen?",
+      "a": [
+        "Meer rust en ruimte",
+        "Meer werk en voorzieningen",
+        "Minder verkeer",
+        "Lagere huizenprijzen"
+      ],
+      "c": 1,
+      "e": "Steden bieden veel banen en voorzieningen zoals scholen, winkels en openbaar vervoer."
+    },
+    {
+      "q": "In een dorp is het vaak stiller dan in de stad. De afstanden zijn groter. Wat is kenmerkend voor een dorp?",
+      "a": [
+        "Veel hoogbouw en druk verkeer",
+        "Lage bevolkingsdichtheid en meer natuur",
+        "Veel kantoren en industrie",
+        "Een groot centraal station"
+      ],
+      "c": 1,
+      "e": "In dorpen wonen minder mensen per vierkante kilometer en is meer ruimte voor groen."
+    },
+    {
+      "q": "Sommige regio’s hebben weinig inwoners per vierkante kilometer. Andere regio’s hebben juist veel inwoners. Hoe noem je een gebied met veel inwoners op een klein oppervlak?",
+      "a": [
+        "Dunbevolkt",
+        "Dichtbevolkt",
+        "Leeg",
+        "Uitgestrekt"
+      ],
+      "c": 1,
+      "e": "Dichtbevolkt betekent veel inwoners per vierkante kilometer."
+    },
+    {
+      "q": "Je vergelijkt twee gemeenten. Je wilt weten waar gemiddeld meer mensen wonen op één vierkante kilometer. Welk begrip gebruik je dan?",
+      "a": [
+        "Bevolkingsgroei",
+        "Bevolkingsdichtheid",
+        "Migratiesaldo",
+        "Vergrijzing"
+      ],
+      "c": 1,
+      "e": "Bevolkingsdichtheid is het aantal inwoners per vierkante kilometer."
+    },
+    {
+      "q": "In de stad liggen voorzieningen vaak dichtbij. Denk aan een supermarkt om de hoek. Wat is een voordeel van wonen in de stad?",
+      "a": [
+        "Meer rust",
+        "Dicht bij winkels en voorzieningen",
+        "Goedkopere huizen",
+        "Minder verkeer"
+      ],
+      "c": 1,
+      "e": "In de stad liggen winkels, scholen en haltes vaak op loopafstand."
+    },
+    {
+      "q": "In een drukke binnenstad rijden veel auto’s en bussen. Er zijn veel geluiden. Wat is een nadeel van wonen in de stad?",
+      "a": [
+        "Meer drukte en lawaai",
+        "Minder verkeer",
+        "Minder werk",
+        "Meer natuur"
+      ],
+      "c": 0,
+      "e": "Steden zijn meestal drukker en daardoor lawaaiiger dan dorpen."
+    },
+    {
+      "q": "Een bibliotheek is een voorbeeld van een voorziening. Een ziekenhuis is dat ook. Wat betekent het woord voorziening in aardrijkskunde?",
+      "a": [
+        "Een winkel of dienst die mensen gebruiken",
+        "Een natuurlijke hulpbron",
+        "Een type woning",
+        "Een bron van energie"
+      ],
+      "c": 0,
+      "e": "Voorzieningen zijn diensten of plekken die mensen gebruiken zoals scholen en ziekenhuizen."
+    },
+    {
+      "q": "Jongeren kiezen vaak voor een stad met een mbo of een universiteit. Er zijn ook clubs en musea. Waarom wonen veel jongeren liever in de stad?",
+      "a": [
+        "Omdat er meer banen en opleidingen zijn",
+        "Omdat het er altijd stil is",
+        "Omdat huizen er goedkoper zijn",
+        "Omdat er veel landbouw is"
+      ],
+      "c": 0,
+      "e": "Jongeren zoeken studie, werk en activiteiten en die zijn vaak in de stad."
+    },
+    {
+      "q": "Ouderen kiezen vaker voor een rustige wijk met groen. De straat is breder en het verkeer is rustiger. Waarom kiezen veel ouderen voor een dorp of randgebied?",
+      "a": [
+        "Ze willen meer rust en ruimte",
+        "Ze willen dicht bij uitgaansgelegenheden wonen",
+        "Ze zoeken een baan in de fabriek",
+        "Ze willen meer verkeer"
+      ],
+      "c": 0,
+      "e": "Ouderen waarderen rust en groen en kiezen daarom vaker voor een rustigere woonomgeving."
+    },
+    {
+      "q": "Je vergelijkt een stad met een dorp. De ene plaats heeft meer dan vijftigduizend inwoners. De andere plaats minder. Wat is het belangrijkste verschil?",
+      "a": [
+        "Een stad heeft meer inwoners dan een dorp",
+        "Een dorp heeft meer inwoners dan een stad",
+        "Een stad is kleiner dan een dorp",
+        "Een dorp heeft meer hoogbouw dan een stad"
+      ],
+      "c": 0,
+      "e": "Een stad heeft in het algemeen veel inwoners en meer voorzieningen dan een dorp."
+    },
+    {
+      "q": "In de negentiende eeuw trokken veel mensen van het platteland naar plaatsen met fabrieken. Steden groeiden snel. Hoe heet dit proces?",
+      "a": [
+        "Urbanisatie",
+        "Suburbanisatie",
+        "Re-urbanisatie",
+        "Segregatie"
+      ],
+      "c": 0,
+      "e": "Urbanisatie is verstedelijking door verhuizing naar de stad."
+    },
+    {
+      "q": "Veel oude steden ontstonden bij een rivier of aan zee. Er voeren schepen met goederen. Waarom lagen steden vaak bij waterwegen?",
+      "a": [
+        "Voor handel en vervoer",
+        "Voor mijnbouw",
+        "Voor toerisme",
+        "Voor landbouw"
+      ],
+      "c": 0,
+      "e": "Waterwegen maakten handel en vervoer mogelijk en trokken mensen en bedrijven aan."
+    },
+    {
+      "q": "Rond 1960 verhuisden gezinnen naar rustige woonwijken buiten de stad. De auto werd normaal. Hoe heet dit verschijnsel?",
+      "a": [
+        "Suburbanisatie",
+        "Urbanisatie",
+        "Re-urbanisatie",
+        "Krimp"
+      ],
+      "c": 0,
+      "e": "Suburbanisatie is verhuizen van de stad naar omliggende woongebieden."
+    },
+    {
+      "q": "Na opknapprojecten kwamen meer bewoners terug naar oude wijken. Er verschenen nieuwe woningen en parken. Hoe heet de terugkeer naar de stad?",
+      "a": [
+        "Re-urbanisatie",
+        "Urbanisatie",
+        "Emigratie",
+        "Vergrijzing"
+      ],
+      "c": 0,
+      "e": "Re-urbanisatie is terugkeer naar de stad na een periode van vertrek."
+    },
+    {
+      "q": "Sommige dorpen groeien vast aan een stad. De grenzen zijn lastig te zien. Hoe noem je zo’n aaneengegroeid gebied?",
+      "a": [
+        "Agglomeratie",
+        "Stadsdeel",
+        "Metropool",
+        "Gemeente"
+      ],
+      "c": 0,
+      "e": "In een agglomeratie groeien stad en omliggende dorpen aan elkaar."
+    },
+    {
+      "q": "Een stad werkt samen met omliggende woonplaatsen. Er zijn gedeelde buslijnen en werklocaties. Hoe heet zo’n samenhangend gebied?",
+      "a": [
+        "Stadsgewest",
+        "Poldergebied",
+        "Randdorp",
+        "Buitenwijk"
+      ],
+      "c": 0,
+      "e": "Een stadsgewest is een stad met sterk verbonden omliggende plaatsen."
+    },
+    {
+      "q": "Meerdere steden liggen dicht bij elkaar en vullen elkaar aan. Denk aan Amsterdam en Utrecht. Hoe noem je zo’n samenwerking?",
+      "a": [
+        "Stedelijk netwerk",
+        "Landelijk netwerk",
+        "Dorpskring",
+        "Provincie"
+      ],
+      "c": 0,
+      "e": "Een stedelijk netwerk ontstaat als steden functies delen en afstemmen zoals banen en voorzieningen."
+    },
+    {
+      "q": "In een druk gebied moeten gemeenten samenwerken. Ze plannen wegen en woningen samen. Wat is een voordeel van zo’n netwerk?",
+      "a": [
+        "Meer keuze in werk en voorzieningen",
+        "Meer leegstand",
+        "Minder openbaar vervoer",
+        "Minder bereikbaarheid"
+      ],
+      "c": 0,
+      "e": "Door samenwerking delen steden voorzieningen en verbeteren zij de bereikbaarheid."
+    },
+    {
+      "q": "Drukke gebieden hebben ook nadelen. Denk aan files tijdens de spits. Wat is een nadeel van sterke verstedelijking?",
+      "a": [
+        "Meer verkeer en drukte",
+        "Meer rust en stilte",
+        "Minder banen",
+        "Minder woningen"
+      ],
+      "c": 0,
+      "e": "Als veel mensen dicht bij elkaar wonen neemt verkeer en drukte toe."
+    },
+    {
+      "q": "De Randstad heeft meerdere grote steden dicht bij elkaar. Er zijn spoorlijnen en snelwegen tussen de steden. Wat is een kenmerk van dit gebied?",
+      "a": [
+        "Een stedelijk netwerk",
+        "Een berggebied",
+        "Een dunbevolkt gebied",
+        "Een bosrijk natuurgebied"
+      ],
+      "c": 0,
+      "e": "De Randstad is een stedelijk netwerk met grote steden die samenwerken."
+    },
+    {
+      "q": "Een bedrijf zoekt veel klanten en goed personeel. De locatie moet bereikbaar zijn. Wat maakt een stad aantrekkelijk voor bedrijven?",
+      "a": [
+        "Goede infrastructuur en veel werknemers",
+        "Weinig mensen en weinig wegen",
+        "Veel landbouwgrond",
+        "Weinig woningen"
+      ],
+      "c": 0,
+      "e": "Bedrijven kiezen graag voor bereikbaarheid en een grote arbeidsmarkt."
+    },
+    {
+      "q": "Als veel gezinnen de stad verlaten ontstaan lege woningen. Sommige wijken raken verouderd. Wat is een nadeel van suburbanisatie voor de stad?",
+      "a": [
+        "Leegstand en veroudering",
+        "Meer groen in het centrum",
+        "Meer bewoners in de stad",
+        "Minder reistijd"
+      ],
+      "c": 0,
+      "e": "Vertrek uit de stad kan leiden tot leegstand en achteruitgang in oude wijken."
+    },
+    {
+      "q": "Nieuwe woonwijken nemen ruimte in. Soms verdwijnt landbouwgrond. Waarom kan verstedelijking nadelen hebben voor de natuur?",
+      "a": [
+        "Er komt meer bebouwing en minder groen",
+        "Er wordt meer natuur aangelegd",
+        "Er komen minder mensen wonen",
+        "Er ontstaat minder verkeer"
+      ],
+      "c": 0,
+      "e": "Uitbreiding van steden drukt op open ruimte en natuur."
+    },
+    {
+      "q": "Veel mensen wonen buiten de stad en reizen naar hun werk. Ze nemen de trein of de auto. Hoe noem je zo iemand?",
+      "a": [
+        "Forens",
+        "Student",
+        "Toerist",
+        "Migrant"
+      ],
+      "c": 0,
+      "e": "Een forens reist dagelijks tussen woonplaats en werk."
+    },
+    {
+      "q": "Inzichtvraag: Na 1850 groeiden steden snel door fabrieken. Waarom leidde dit tot veel verhuizingen naar de stad?",
+      "a": [
+        "Er kwam veel werk dicht bij elkaar",
+        "Er was meer landbouw",
+        "Er waren minder mensen",
+        "Er waren meer bossen"
+      ],
+      "c": 0,
+      "e": "Fabrieken boden veel banen op één plek en trokken arbeiders aan."
+    },
+    {
+      "q": "Inzichtvraag: Jongeren en ouderen kiezen vaak andere woonplekken. Jongeren zoeken studie en werk. Ouderen zoeken rust. Wat verklaart dit verschil?",
+      "a": [
+        "Ze hebben andere woonwensen",
+        "Ze willen elkaar niet ontmoeten",
+        "Jongeren zijn rijker",
+        "Ouderen moeten verhuizen"
+      ],
+      "c": 0,
+      "e": "Leeftijdsgroepen hebben verschillende behoeften en kiezen daarom andere woonomgevingen."
+    },
+    {
+      "q": "Inzichtvraag: Een stad kan niet oneindig groeien. Er is beperkte ruimte en er zijn regels. Welke reden past hierbij het best?",
+      "a": [
+        "Behoud van natuur en ruimte",
+        "Geen vraag naar woningen",
+        "Geen banen meer",
+        "Verbod op bouwen overal"
+      ],
+      "c": 0,
+      "e": "Nederland beschermt natuur en landbouw en plant groei zorgvuldig."
+    },
+    {
+      "q": "Inzichtvraag: Meerdere steden werken samen in verkeer en economie. Wat is het voordeel voor bewoners?",
+      "a": [
+        "Meer keuze in banen en voorzieningen",
+        "Minder openbaar vervoer",
+        "Minder bereikbaarheid",
+        "Minder winkels"
+      ],
+      "c": 0,
+      "e": "Samenwerkende steden bieden een groter aanbod aan werk en diensten."
+    },
+    {
+      "q": "Inzichtvraag: Nederland is sterk verstedelijkt en toch groen. Ruimte is schaars. Hoe blijft er toch groen over?",
+      "a": [
+        "Door ruimtelijke ordening en bescherming van gebieden",
+        "Door minder inwoners",
+        "Door minder steden",
+        "Door leegstand"
+      ],
+      "c": 0,
+      "e": "Nederland beschermt natuur en plant de groei van steden met regels en plannen."
+    }
+  ],
+  "bonus": null,
+  "orderingSets": []
+}

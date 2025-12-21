@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "subject": "Aardrijkskunde – Paragraaf 2: Verstedelijking in Nederland",
+    "themeColor": "#6d5bd0"
+  },
+  "questions": [
+    {
+      "q": "In de negentiende eeuw veranderde het leven in Nederland snel door nieuwe fabrieken en machines. Hoe heet het proces dat steden snel deed groeien doordat mensen naar fabriekswerk trokken?",
+      "a": [
+        "Suburbanisatie",
+        "Urbanisatie",
+        "Re-urbanisatie",
+        "Migratie naar het buitenland"
+      ],
+      "c": 1,
+      "e": "Urbanisatie is verstedelijking: steeds meer mensen gaan in steden wonen, vaak door werkgelegenheid in fabrieken."
+    },
+    {
+      "q": "Veel oude steden ontstonden bij rivieren zoals de Maas of het IJ. Langs water konden goederen en mensen makkelijk reizen. Waarom lagen steden vaak bij rivieren of zee?",
+      "a": [
+        "Voor landbouw",
+        "Voor handel en vervoer",
+        "Voor toerisme",
+        "Voor militaire oefenterreinen"
+      ],
+      "c": 1,
+      "e": "Waterwegen maakten handel en vervoer mogelijk, wat groei van steden stimuleerde."
+    },
+    {
+      "q": "Na 1960 kregen steeds meer gezinnen een auto en kozen voor rustiger woonwijken buiten de stad. Hoe heet deze verhuizing van stad naar omliggende woongebieden?",
+      "a": [
+        "Urbanisatie",
+        "Suburbanisatie",
+        "Krimp",
+        "Segregatie"
+      ],
+      "c": 1,
+      "e": "Suburbanisatie is het verhuizen van bewoners vanuit de stad naar randgemeenten of dorpen."
+    },
+    {
+      "q": "Toen veel gezinnen wegtrokken, bleven sommige oude wijken achter met leegstand. Dat is in meerdere Nederlandse steden gebeurd. Wat was een gevolg daarvan voor de stad?",
+      "a": [
+        "Oude wijken raakten in verval",
+        "Er kwamen meer parken in het centrum",
+        "De stad werd goedkoper om te onderhouden",
+        "Er ontstond minder verkeer"
+      ],
+      "c": 0,
+      "e": "Vertrek van bewoners leidde tot leegstand en achteruitgang in oude stadswijken."
+    },
+    {
+      "q": "In de jaren negentig werden binnensteden vernieuwd met nieuwe woningen en voorzieningen. Hierdoor keerden meer mensen terug. Hoe heet deze beweging?",
+      "a": [
+        "Re-urbanisatie",
+        "De-urbanisatie",
+        "Suburbanisatie",
+        "Ruralisatie"
+      ],
+      "c": 0,
+      "e": "Re-urbanisatie is de terugkeer van bewoners naar de stad na een periode van vertrek."
+    },
+    {
+      "q": "De Randstad bestaat uit meerdere grote steden die dicht bij elkaar liggen en samenwerken. Denk aan Amsterdam, Rotterdam, Den Haag en Utrecht. Hoe noem je zo’n samenwerking van steden?",
+      "a": [
+        "Stedelijk netwerk",
+        "Provinciaal verbond",
+        "Dorpscluster",
+        "Agglomeratie"
+      ],
+      "c": 0,
+      "e": "Een stedelijk netwerk is een groep steden die elkaar aanvullen en samenwerken."
+    },
+    {
+      "q": "Een stad kan vastgroeien aan omliggende dorpen, waardoor grenzen vervagen. Dit zie je rond steden als Eindhoven of Groningen. Hoe heet zo’n aaneengegroeid gebied?",
+      "a": [
+        "Agglomeratie",
+        "Vinex-wijk",
+        "Stadsdeel",
+        "Riviervlakte"
+      ],
+      "c": 0,
+      "e": "In een agglomeratie groeien stad en omliggende dorpen aan elkaar."
+    },
+    {
+      "q": "Een stad en de omliggende gemeenten gebruiken vaak dezelfde voorzieningen zoals ziekenhuizen en OV-knooppunten. Hoe noem je zo’n functioneel samenhangend gebied?",
+      "a": [
+        "Stadsgewest",
+        "Poldergebied",
+        "Waterschap",
+        "Landbouwregio"
+      ],
+      "c": 0,
+      "e": "Een stadsgewest is een stad met omliggende plaatsen die economisch en sociaal sterk verbonden zijn."
+    },
+    {
+      "q": "Dagelijks reizen veel mensen vanuit randgemeenten naar banen in de stad. In de spits staat het daarom druk op snelwegen en spoorlijnen. Hoe noem je deze groep reizigers?",
+      "a": [
+        "Forensen",
+        "Expats",
+        "Toeristen",
+        "Studenten"
+      ],
+      "c": 0,
+      "e": "Forensen reizen heen en weer tussen woonplaats buiten de stad en werk of studie in de stad."
+    },
+    {
+      "q": "Veel steden groeiden langs belangrijke infrastructuur zoals spoorlijnen en snelwegen. Dat maakte bedrijven en woningen beter bereikbaar. Welk effect heeft goede bereikbaarheid op stedengroei?",
+      "a": [
+        "Minder werkgelegenheid",
+        "Stagnatie van de groei",
+        "Snellere groei door nieuwe vestigingen",
+        "Meer landbouw in de stad"
+      ],
+      "c": 2,
+      "e": "Goede bereikbaarheid trekt bewoners en bedrijven aan en versnelt de groei."
+    },
+    {
+      "q": "Vinex-wijken werden sinds de jaren negentig gebouwd aan de rand van steden. Ze moesten de woningnood verminderen. Wat is een kenmerk van een vinex-wijk?",
+      "a": [
+        "Historische grachtenpanden",
+        "Moderne nieuwbouw dicht bij de stad",
+        "Grote industriecomplexen",
+        "Boerderijen in lintvorm"
+      ],
+      "c": 1,
+      "e": "Vinex-wijken zijn moderne nieuwbouwwijken aan de rand van steden."
+    },
+    {
+      "q": "Stedelijke vernieuwing zorgde voor betere woningen, meer groen en nieuwe functies in oude wijken. Dat zie je in meerdere binnensteden. Wat is een direct gevolg van stedelijke vernieuwing?",
+      "a": [
+        "De leefbaarheid verbetert",
+        "De stad krimpt",
+        "De voorzieningen verdwijnen",
+        "De huurprijzen dalen sterk"
+      ],
+      "c": 0,
+      "e": "Opknappen van wijken maakt een stad aantrekkelijker en leefbaarder."
+    },
+    {
+      "q": "In sterk verstedelijkte gebieden wonen mensen dicht op elkaar met veel voorzieningen. De druk op ruimte is daar groot. Wat is een kenmerk van zulke gebieden?",
+      "a": [
+        "Hoge bevolkingsdichtheid",
+        "Veel landbouwgrond",
+        "Weinig verkeer",
+        "Weinig voorzieningen"
+      ],
+      "c": 0,
+      "e": "In verstedelijkte gebieden is de bevolkingsdichtheid hoog en zijn veel voorzieningen aanwezig."
+    },
+    {
+      "q": "Bij sterke verstedelijking neemt het verkeer toe, vooral tijdens de spits. Dit gebeurt rond grote steden als Rotterdam en Utrecht. Welk probleem hoort daar vaak bij?",
+      "a": [
+        "Meer files",
+        "Meer natuurgebieden",
+        "Minder CO₂-uitstoot",
+        "Lege treinen"
+      ],
+      "c": 0,
+      "e": "Meer inwoners en forensen leiden tot meer verkeer en files."
+    },
+    {
+      "q": "Als steden groeien, verdwijnt soms open ruimte. Daarom reserveren overheden groene zones rond steden. Wat is het doel van zo’n groene gordel?",
+      "a": [
+        "Meer industrie toestaan",
+        "Woningbouw versnellen",
+        "Natuur en open ruimte behouden",
+        "Meer snelwegen aanleggen"
+      ],
+      "c": 2,
+      "e": "Groene gordels beschermen open ruimte en beperken ongebreidelde uitbreiding."
+    },
+    {
+      "q": "Steden bieden bedrijven een grote afzetmarkt en veel werknemers. Denk aan logistiek rond Schiphol of de haven van Rotterdam. Waarom kiezen bedrijven vaak voor stedelijke regio’s?",
+      "a": [
+        "Vanwege goedkope landbouwgrond",
+        "Vanwege bereikbaarheid en arbeidsmarkt",
+        "Vanwege stilte en rust",
+        "Vanwege weinig concurrentie"
+      ],
+      "c": 1,
+      "e": "Bereikbaarheid en een grote arbeidsmarkt maken steden aantrekkelijk voor bedrijven."
+    },
+    {
+      "q": "Samenwerking tussen steden helpt bij het plannen van woningbouw, verkeer en groen. In de Randstad gebeurt dat al lang. Wat is een voordeel van zo’n stedelijk netwerk?",
+      "a": [
+        "Betere afstemming van voorzieningen en verkeer",
+        "Meer grenzen en belemmeringen",
+        "Minder OV-verbindingen",
+        "Minder economische groei"
+      ],
+      "c": 0,
+      "e": "Door samenwerking kunnen steden voorzieningen en infrastructuur beter afstemmen."
+    },
+    {
+      "q": "Suburbanisatie veranderde dorpen rond de stad in forensenplaatsen. Ze bleven dorps van naam maar stedelijk van functie. Wat betekent dit voor hun karakter?",
+      "a": [
+        "Ze verliezen een deel van hun rustige identiteit",
+        "Ze worden landbouwkern",
+        "Ze krimpen sterk",
+        "Ze worden volledig industriegebied"
+      ],
+      "c": 0,
+      "e": "Dorpen groeien mee en krijgen een stedelijker karakter, met meer verkeer en voorzieningen."
+    },
+    {
+      "q": "Re-urbanisatie bracht nieuwe bewoners en functies naar oude wijken. Veel fabrieksgebouwen kregen een nieuwe bestemming. Wat gebeurde er met zulke gebouwen?",
+      "a": [
+        "Ze kregen woningen of kantoren als nieuwe functie",
+        "Ze werden allemaal gesloopt",
+        "Ze werden opslagplaatsen zonder bewoners",
+        "Ze veranderden in landbouwschuren"
+      ],
+      "c": 0,
+      "e": "Herbestemming van oude panden gaf wijken nieuwe energie en functies."
+    },
+    {
+      "q": "Een stad heeft verschillende functies zoals wonen, werken en recreatie. In goed geplande wijken komen deze functies bij elkaar. Waarom is functiemenging gunstig?",
+      "a": [
+        "Het zorgt voor levendigheid en veiligheid",
+        "Het maakt gebieden ’s avonds leeg",
+        "Het verhoogt de reistijd",
+        "Het beperkt voorzieningen"
+      ],
+      "c": 0,
+      "e": "Met functies door elkaar blijven straten actiever en veiliger, ook buiten werktijd."
+    },
+    {
+      "q": "Verkeersdrukte rond steden vraagt om keuzes: OV, fiets of auto. Veel regio’s investeren in treinen en busbanen. Wat is een voordeel van goed openbaar vervoer voor verstedelijkte gebieden?",
+      "a": [
+        "Minder autoverkeer en betere bereikbaarheid",
+        "Meer files",
+        "Minder reizigers",
+        "Minder woningbouw"
+      ],
+      "c": 0,
+      "e": "Sterk OV vermindert autoverkeer en houdt de stad bereikbaar."
+    },
+    {
+      "q": "Gemeenten moeten bouwen en tegelijk natuur beschermen. Dat vraagt plannen op lange termijn. Hoe heet het beleid dat regelt hoe de ruimte wordt gebruikt?",
+      "a": [
+        "Ruimtelijke ordening",
+        "Afwatering",
+        "Landinrichting",
+        "Zeehavensbeleid"
+      ],
+      "c": 0,
+      "e": "Ruimtelijke ordening verdeelt de ruimte tussen wonen, werken, verkeer en natuur."
+    },
+    {
+      "q": "In verstedelijkte regio’s is de woningvraag hoog. Projecten moeten dicht bij werk en OV liggen. Waarom bouwen steden graag inbreidingslocaties in plaats van alleen aan de randen?",
+      "a": [
+        "Dat houdt de stad compact en bereikbaar",
+        "Dat vergroot de afstand tot voorzieningen",
+        "Dat vermindert functiemenging",
+        "Dat maakt wijken leger"
+      ],
+      "c": 0,
+      "e": "Inbreiding benut vrije plekken binnen de stad en voorkomt extra druk op open ruimte buiten."
+    },
+    {
+      "q": "In een agglomeratie zijn stadsgrenzen minder duidelijk zichtbaar. Voor verkeer en economie is het één geheel. Wat is een nadeel als afstemming ontbreekt?",
+      "a": [
+        "Verkeersopstoppingen en onlogische bouwlocaties",
+        "Meer OV-lijnen",
+        "Minder files",
+        "Meer parken"
+      ],
+      "c": 0,
+      "e": "Zonder afstemming ontstaan knelpunten in verkeer en onhandige verdeling van functies."
+    },
+    {
+      "q": "Inzichtvraag: Waarom zorgde de industriële revolutie voor snelle urbanisatie in Nederland en andere landen?",
+      "a": [
+        "Fabrieken boden veel werk op één plek",
+        "Er was meer landbouwgrond",
+        "Mensen wilden dichter bij bossen wonen",
+        "Er waren minder diensten in dorpen"
+      ],
+      "c": 0,
+      "e": "Arbeid concentreerde zich in steden met fabrieken, waardoor veel mensen verhuisden."
+    },
+    {
+      "q": "Inzichtvraag: Waarom leidde suburbanisatie tot meer autoverkeer in en rond steden?",
+      "a": [
+        "Afstanden tussen wonen en werken werden groter",
+        "Mensen gingen minder werken",
+        "Openbaar vervoer werd overbodig",
+        "Bedrijven verhuisden naar dorpen"
+      ],
+      "c": 0,
+      "e": "Wonen buiten de stad vergrootte reisafstanden, waardoor meer autoritten ontstonden."
+    },
+    {
+      "q": "Inzichtvraag: Waarom kan re-urbanisatie positief zijn voor duurzaamheid?",
+      "a": [
+        "Korten afstanden en beter OV maken minder autogebruik mogelijk",
+        "Meer verspreide bebouwing geeft rust",
+        "Er komt meer open ruimte buiten de stad vol te bouwen",
+        "Er zijn minder voorzieningen"
+      ],
+      "c": 0,
+      "e": "Wonen dichter bij werk en OV vermindert autokilometers en energieverbruik."
+    },
+    {
+      "q": "Inzichtvraag: Waarom is samenwerking in een stedelijk netwerk belangrijk voor concurrentiekracht?",
+      "a": [
+        "Steden vullen elkaars functies aan en delen voorzieningen",
+        "Steden vermijden dan concurrentie volledig",
+        "Steden worden elk kleiner",
+        "Steden sluiten grenzen"
+      ],
+      "c": 0,
+      "e": "Door afstemming ontstaan sterkere arbeidsmarkten, kennisclusters en bereikbaarheid."
+    },
+    {
+      "q": "Inzichtvraag: Waarom is het voor dorpen rond steden lastig om hun eigen identiteit te houden?",
+      "a": [
+        "Groei en verkeer maken dorpen stedelijker van karakter",
+        "Ze krijgen minder voorzieningen",
+        "Ze liggen te ver van steden",
+        "Ze worden landbouwkern"
+      ],
+      "c": 0,
+      "e": "Door groei en pendel veranderen dorpen qua functies en uitstraling."
+    }
+  ],
+  "bonus": null,
+  "orderingSets": []
+}

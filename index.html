@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Leren met Adamus · Start</title>
+<meta content="Kies een vak of toets en start direct met oefenen." name="description"/>
+
+
+<link href="assets/style.css" rel="stylesheet"/></head>
+<body data-page="home">
+<!-- gedeelde header -->
+<div id="topbar-root"></div>
+<main class="wrap">
+<div aria-live="polite" class="list" id="list"></div>
+</main>
+<script defer="" src="assets/header.js?v=20251106"></script>
+<script>
+  var _y = document.getElementById('year'); if (_y) { _y.textContent = new Date().getFullYear(); }
+
+  // 1) subject-afleiding (uit field 'subject', of uit label/id vóór het streepje)
+  function metaSubject(meta){
+    if (meta.subject) return String(meta.subject).trim();
+    const raw = meta.label || meta.title || meta.id || '';
+    const parts = String(raw).split(/\s[–-]\s/);
+    if (parts.length >= 2) return parts[0].trim();
+    const id = String(meta.id||'').toLowerCase();
+    if (id.startsWith('aardrijkskunde')) return 'Aardrijkskunde';
+    if (id.startsWith('geschiedenis'))   return 'Geschiedenis';
+    if (id.startsWith('latijn'))         return 'Latijn';
+    return 'Vak';
+  }
+
+  // 2) accent + icoon per vak
+  function accentsFor(subj){
+    const s = String(subj||'').toLowerCase();
+    if (s.startsWith('aardrijkskunde')) return ['#2e90fa','#e8f1ff','#0b4ea2'];
+    if (s.startsWith('geschiedenis'))   return ['#ef4444','#fee2e2','#991b1b'];
+    if (s.startsWith('latijn'))         return ['#16a34a','#dcfce7','#14532d'];
+    return ['#6d5bd0','#efeaff','#4338ca'];
+  }
+  function iconForSubject(subj){
+    const s = String(subj||'').toLowerCase();
+    if (s.startsWith('aardrijkskunde')){
+      return `<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2l6 2l6-2v14l-6 2l-6-2l-6 2V6z"/><path d="M9 4v14M15 6v14"/><path d="M12 10.5a2.75 2.75 0 1 0 0-5.5a2.75 2.75 0 0 0 0 5.5z"/><path d="M12 10.5v3"/></svg>`;
+    }
+    if (s.startsWith('latijn')){
+      return `<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h9a2 2 0 0 1 2 2v8H9a2 2 0 0 1-2-2V7z"/><path d="M7 7a2 2 0 1 0-2 2h2M7 15H5a2 2 0 1 0 2 2"/><path d="M16.5 7.5c2-2 3.5-2.5 5-2l-8 8c-.5-1.5 0-3 1.9-4.9z"/><path d="M13 16l-1.5 2"/></svg>`;
+    }
+    if (s.startsWith('geschiedenis')){
+      return `<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18"/><path d="M4 10V8l8-4l8 4v2"/><path d="M6 10v8M10 10v8M14 10v8M18 10v8"/><path d="M4 18h16M3 20h18"/></svg>`;
+    }
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M20 22H6.5A2.5 2.5 0 0 1 4 19.5V6A2 2 0 0 1 6 4h14v18z"/></svg>`;
+  }
+
+  const listEl = document.getElementById('list');
+  fetch('subjects.json',{cache:'no-store'})
+    .then(r=>r.json())
+    .then(json=>{
+      const all = (json.subjects || json || []).map(s => (typeof s==='object'? s : {id:String(s)}));
+
+      // unieke vakken
+      const map = new Map();
+      all.forEach(m => {
+        const subj = metaSubject(m);
+        if (!map.has(subj)) map.set(subj, m); // eerste meta als representant
+      });
+
+      // render: alleen vak-tegels -> naar subject.html
+      listEl.innerHTML = '';
+      Array.from(map.keys()).forEach(subj=>{
+        const [acc,bg,fg] = accentsFor(subj);
+        const a = document.createElement('a');
+        a.className = 'subject-btn';
+        a.href = 'subject.html?subject=' + encodeURIComponent(subj.toLowerCase());
+        a.style.setProperty('--acc', acc);
+        a.innerHTML = `
+          <span class="iconwrap" aria-hidden="true">${iconForSubject(subj)}</span>
+          <span class="text"><span class="unit">${subj}</span></span>
+        `;
+        listEl.appendChild(a);
+      });
+    })
+    .catch(err=>{
+      listEl.innerHTML = '<div style="color:#b91c1c">Kan vakken niet laden: '+err.message+'</div>';
+    });
+</script>
+</body>
+</html>

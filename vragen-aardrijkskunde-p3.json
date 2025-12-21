@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "subject": "Aardrijkskunde – Paragraaf 3: De opbouw van de Nederlandse stad",
+    "themeColor": "#6d5bd0"
+  },
+  "questions": [
+    {
+      "q": "In veel Nederlandse steden ligt een historisch centrum met smalle straten en pleinen. Wat ligt meestal in het middelpunt van de stad?",
+      "a": [
+        "Het winkelgebied en oude centrum",
+        "De snelweg",
+        "Het industrieterrein",
+        "De veiling"
+      ],
+      "c": 0,
+      "e": "In het centrum liggen vaak winkels, horeca en historische gebouwen waar de stad is ontstaan."
+    },
+    {
+      "q": "Oude steden groeiden stap voor stap verder naar buiten. Aan de randen ontstonden nieuwere wijken. Wat vind je vaak aan de rand van een stad?",
+      "a": [
+        "Nieuwe woonwijken en bedrijventerreinen",
+        "Middeleeuwse grachtenpanden",
+        "Kastelen en vestingmuren",
+        "Recreatieboerderijen"
+      ],
+      "c": 0,
+      "e": "Aan de randen van steden liggen meestal jongere woonwijken en bedrijventerreinen."
+    },
+    {
+      "q": "Binnensteden hebben vaak smalle straten en grachten die eeuwen geleden zijn aangelegd. Waarom hebben oude centra vaak een compacte vorm?",
+      "a": [
+        "De stad lag binnen stadsmuren en was gericht op handel",
+        "Er was veel ruimte buiten de muren",
+        "Men bouwde meteen brede autowegen",
+        "Er waren geen markten nodig"
+      ],
+      "c": 0,
+      "e": "Compacte bebouwing ontstond binnen stadsmuren en rond markten en havens."
+    },
+    {
+      "q": "Na de Tweede Wereldoorlog was er woningnood. In veel steden kwamen nieuwe woonblokken. Wat werd er vooral gebouwd in die periode?",
+      "a": [
+        "Flats en portiekwoningen in nieuwe wijken",
+        "Nieuwe grachtenpanden",
+        "Houten boerderijen",
+        "Kastelen en stadspoorten"
+      ],
+      "c": 0,
+      "e": "Om woningnood op te lossen verrezen veel flats en portiekwoningen in uitbreidingswijken."
+    },
+    {
+      "q": "In een stad wonen niet overal dezelfde groepen mensen. In sommige wijken is het inkomen gemiddeld hoger dan in andere. Hoe noem je dit?",
+      "a": [
+        "Sociale segregatie",
+        "Re-urbanisatie",
+        "Suburbanisatie",
+        "Landinrichting"
+      ],
+      "c": 0,
+      "e": "Sociale segregatie betekent dat bevolkingsgroepen gescheiden wonen naar inkomen of herkomst."
+    },
+    {
+      "q": "Voorzieningen zoals scholen, bibliotheken en bushaltes liggen meestal dicht bij elkaar in of rond het centrum. Waarom is dat handig voor bewoners?",
+      "a": [
+        "Ze kunnen er snel naartoe en combineren activiteiten",
+        "Ze hoeven nooit meer te reizen",
+        "Ze gebruiken geen openbaar vervoer meer",
+        "Ze verhuizen daardoor minder vaak"
+      ],
+      "c": 0,
+      "e": "Dichtbij gelegen voorzieningen maken de stad efficiënt en goed bereikbaar."
+    },
+    {
+      "q": "Aan de stadsrand is vaak meer ruimte voor brede straten en nieuwe woningen. Waarom worden nieuwe wijken vaak daar gebouwd?",
+      "a": [
+        "Omdat daar nog bouwruimte is",
+        "Omdat daar de meeste monumenten staan",
+        "Omdat daar het centrum ligt",
+        "Omdat daar de grachten zijn"
+      ],
+      "c": 0,
+      "e": "Steden breiden aan de randen uit waar ruimte is voor woningen en infrastructuur."
+    },
+    {
+      "q": "Vanaf de jaren negentig bouwde Nederland grote nieuwbouwwijken dicht bij steden. Hoe noem je zulke wijken?",
+      "a": [
+        "Vinex-wijken",
+        "Binnenstadswijken",
+        "Dijkdorpen",
+        "Lintbebouwing"
+      ],
+      "c": 0,
+      "e": "Vinex-wijken zijn na 1990 gebouwd om de woningvraag bij steden op te vangen."
+    },
+    {
+      "q": "Vinex-wijken zijn modern opgezet met groen en brede wegen. Wat was een doel van deze wijken?",
+      "a": [
+        "Woningnood verminderen dicht bij de stad",
+        "Industrie verplaatsen naar het centrum",
+        "Landbouw uitbreiden in de stad",
+        "Toerisme bevorderen in dorpen"
+      ],
+      "c": 0,
+      "e": "Vinex-wijken moesten veel nieuwe woningen leveren in bereikbare locaties."
+    },
+    {
+      "q": "Oude buurten hebben vaak dichte bebouwing met weinig parkeerruimte. Nieuwbouwwijken hebben vaak meer ruimte. Wat is een kenmerkend verschil?",
+      "a": [
+        "Oude wijken zijn compacter bebouwd",
+        "Nieuwbouwwijken hebben smallere straten",
+        "Vinex-wijken liggen in het centrum",
+        "Oude wijken hebben meer parken"
+      ],
+      "c": 0,
+      "e": "Oude stadswijken zijn compact, terwijl nieuwbouw ruimer is opgezet."
+    },
+    {
+      "q": "Veel mensen vertrokken in de jaren zestig uit oude wijken. Later werden die wijken verbeterd. Hoe noem je het opknappen van verouderde buurten?",
+      "a": [
+        "Stedelijke vernieuwing",
+        "Herbebossing",
+        "Landaanwinning",
+        "Verwatering"
+      ],
+      "c": 0,
+      "e": "Stedelijke vernieuwing vervangt of verbetert oude woningen en straten."
+    },
+    {
+      "q": "Door vernieuwing worden straten veiliger en groener. Wat is een voordeel voor bewoners?",
+      "a": [
+        "De leefbaarheid verbetert",
+        "De stad krimpt",
+        "Er verdwijnen voorzieningen",
+        "De reistijd neemt altijd toe"
+      ],
+      "c": 0,
+      "e": "Opknappen van buurten maakt wonen prettiger en veiliger."
+    },
+    {
+      "q": "Als een buurt populairder wordt, stijgen vaak de huren en koopprijzen. Wat kan een nadeel zijn van vernieuwing?",
+      "a": [
+        "Oorspronkelijke bewoners kunnen de wijk niet meer betalen",
+        "Woningen worden slechter",
+        "Straten worden onveiliger",
+        "Er komen geen voorzieningen meer"
+      ],
+      "c": 0,
+      "e": "Hogere prijzen kunnen bewoners verdringen, dit heet gentrificatie."
+    },
+    {
+      "q": "Historische gebouwen zoals kerken en pakhuizen vertellen het verhaal van de stad. Waarom behouden steden vaak deze gebouwen?",
+      "a": [
+        "Ze hebben cultuurhistorische waarde en trekken bezoekers",
+        "Ze zijn altijd goedkoper",
+        "Ze zijn makkelijker te slopen",
+        "Ze hebben geen functie"
+      ],
+      "c": 0,
+      "e": "Monumenten laten de geschiedenis zien en versterken de eigen identiteit van de stad."
+    },
+    {
+      "q": "De rand van de stad is aantrekkelijk voor grote bedrijven en kantoren. Er is ruimte en toegang tot snelwegen. Waarom liggen kantoren vaak buiten het centrum?",
+      "a": [
+        "Meer ruimte en parkeergelegenheid",
+        "Meer historische sfeer",
+        "Lagere werkgelegenheid",
+        "Minder bereikbaarheid"
+      ],
+      "c": 0,
+      "e": "Aan de stadsrand is ruimte voor grote gebouwen en parkeren, met goede wegverbindingen."
+    },
+    {
+      "q": "In steden komen meerdere functies voor zoals wonen, werken en winkelen. Als die functies in één gebied samenkomen, hoe noem je dat?",
+      "a": [
+        "Functiemenging",
+        "Monofunctionaliteit",
+        "Verwatering",
+        "Recreatieverbod"
+      ],
+      "c": 0,
+      "e": "Functiemenging betekent dat verschillende functies in hetzelfde gebied aanwezig zijn."
+    },
+    {
+      "q": "Gebieden met alleen kantoren zijn buiten werktijd vaak stil en leeg. Wat is een nadeel van zo’n wijk?",
+      "a": [
+        "Minder levendigheid en sociale controle",
+        "Te veel parken",
+        "Te veel woningen",
+        "Te veel scholen"
+      ],
+      "c": 0,
+      "e": "Zonder functiemenging is een gebied buiten kantooruren leeg en minder veilig."
+    },
+    {
+      "q": "Openbaar vervoer verbindt woonwijken met scholen, winkels en werk. Waarom is goede bereikbaarheid belangrijk voor een stad?",
+      "a": [
+        "Mensen kunnen snel reizen en bedrijven zijn goed bereikbaar",
+        "Mensen hoeven nooit meer te reizen",
+        "Er ontstaan geen files meer",
+        "Iedereen gaat in dezelfde wijk wonen"
+      ],
+      "c": 0,
+      "e": "Goede bereikbaarheid maakt een stad leefbaar en aantrekkelijk voor bewoners en bedrijven."
+    },
+    {
+      "q": "Veel steden hebben een historische binnenstad met winkels en horeca. Wat is een kenmerk van de binnenstad?",
+      "a": [
+        "Veel voorzieningen en oude gebouwen",
+        "Weinig voorzieningen",
+        "Veel landbouw",
+        "Alleen moderne kantoren"
+      ],
+      "c": 0,
+      "e": "De binnenstad is het oudste deel met veel voorzieningen en monumenten."
+    },
+    {
+      "q": "Aan de rand van grote steden liggen vaak logistieke bedrijven en distributiecentra. Waarom juist daar?",
+      "a": [
+        "Directe aansluiting op snelwegen en ruimte voor grote hallen",
+        "Meer grachten en kades",
+        "Meer toeristen",
+        "Meer monumenten"
+      ],
+      "c": 0,
+      "e": "Logistiek heeft ruimte en snelle wegaansluitingen nodig, die liggen aan de stadsrand."
+    },
+    {
+      "q": "Herbestemming geeft oude fabrieken een nieuw leven als woningen of culturele plekken. Wat is een voordeel van herbestemming?",
+      "a": [
+        "Behouden van karakter en duurzaam gebruik van gebouwen",
+        "Sneller slopen",
+        "Meer leegstand",
+        "Minder voorzieningen"
+      ],
+      "c": 0,
+      "e": "Herbestemming bewaart erfgoed en bespaart materiaal door bestaande gebouwen opnieuw te gebruiken."
+    },
+    {
+      "q": "In oude wijken staat vaak weinig groen. Bij vernieuwing komen plantsoenen en bomen terug. Wat is een positief effect van meer groen in de stad?",
+      "a": [
+        "Koelere straten en betere leefbaarheid",
+        "Meer wateroverlast",
+        "Minder biodiversiteit",
+        "Meer verkeersdrukte"
+      ],
+      "c": 0,
+      "e": "Groen zorgt voor schaduw, vangt water op en maakt buurten prettiger."
+    },
+    {
+      "q": "Steden plannen nieuwbouw soms binnen de bestaande grenzen op lege plekken of oude terreinen. Hoe heet bouwen binnen de stad in plaats van aan de randen?",
+      "a": [
+        "Inbreiding",
+        "Uitbreiding",
+        "Ontpoldering",
+        "Verleggen"
+      ],
+      "c": 0,
+      "e": "Inbreiding benut vrije plekken binnen de stad en spaart open ruimte buiten de stad."
+    },
+    {
+      "q": "Wijken verschillen in bouwstijl en leeftijd. Kaarten met bouwjaren laten dat goed zien. Wat leer je van zo’n kaart?",
+      "a": [
+        "In welke periode delen van de stad zijn gebouwd",
+        "Waar de hoogste bergen liggen",
+        "Hoe diep de rivieren zijn",
+        "Waar de landbouwgrond ligt"
+      ],
+      "c": 0,
+      "e": "Een bouwjarenkaart toont de groeifasen en uitbreiding van de stad."
+    },
+    {
+      "q": "Een stad moet ruimte verdelen over wonen, werken, verkeer en groen. Welke term hoort bij het plannen van die verdeling?",
+      "a": [
+        "Ruimtelijke ordening",
+        "Waterstaat",
+        "Zeevaart",
+        "Luchtvaart"
+      ],
+      "c": 0,
+      "e": "Ruimtelijke ordening is het beleid dat regelt hoe de ruimte wordt gebruikt."
+    },
+    {
+      "q": "Inzichtvraag: Oude stadscentra liggen vaak op een kruising van wegen, water of dijken. Waarom is zo’n plek logisch voor het ontstaan van een stad?",
+      "a": [
+        "Het is een knooppunt voor handel en ontmoeting",
+        "Het is ver van routes",
+        "Het is altijd het goedkoopst",
+        "Het is alleen mooi voor toeristen"
+      ],
+      "c": 0,
+      "e": "Knooppunten trekken handel, markten en ambachten aan en vormen zo het begin van een stad."
+    },
+    {
+      "q": "Inzichtvraag: Waarom worden vinex-wijken dicht bij bestaande steden gebouwd en niet ver weg?",
+      "a": [
+        "Zo blijven werk, scholen en OV goed bereikbaar",
+        "Omdat grond ver weg altijd duurder is",
+        "Omdat ver weg meer monumenten staan",
+        "Omdat er minder vraag is"
+      ],
+      "c": 0,
+      "e": "Ligging dicht bij de stad verkleint reisafstanden en maakt gebruik van voorzieningen mogelijk."
+    },
+    {
+      "q": "Inzichtvraag: Waarom maakt functiemenging een wijk vaak veiliger en levendiger?",
+      "a": [
+        "Er zijn de hele dag en avond mensen op straat",
+        "Er zijn minder voorzieningen",
+        "Winkels sluiten vroeger",
+        "Mensen verhuizen sneller"
+      ],
+      "c": 0,
+      "e": "Als wonen, werken en winkelen mengen, is er langer sociale controle en activiteit."
+    },
+    {
+      "q": "Inzichtvraag: Waarom blijft herbestemming van oude gebouwen belangrijk bij stadsvernieuwing?",
+      "a": [
+        "Het behoudt identiteit en spaart materialen",
+        "Het maakt wijken onherkenbaar",
+        "Het verhoogt leegstand",
+        "Het vermindert veiligheid"
+      ],
+      "c": 0,
+      "e": "Herbestemming bewaart cultuurhistorie en is vaak duurzamer dan nieuwbouw."
+    },
+    {
+      "q": "Inzichtvraag: Waarom kiezen sommige gezinnen voor de stadsrand in plaats van het centrum?",
+      "a": [
+        "Meer ruimte en groen, maar de stad blijft dichtbij",
+        "Minder bereikbaarheid",
+        "Minder voorzieningen",
+        "Meer monumenten"
+      ],
+      "c": 0,
+      "e": "Aan de rand is meer ruimte, terwijl werk en voorzieningen nog steeds goed bereikbaar zijn."
+    }
+  ],
+  "bonus": null,
+  "orderingSets": []
+}

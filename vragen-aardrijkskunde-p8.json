@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "subject": "Aardrijkskunde – Paragraaf 8: Tijdzones en de draaiing van de aarde",
+    "themeColor": "#6d5bd0"
+  },
+  "questions": [
+    {
+      "q": "De aarde draait continu om haar eigen as. Hoe lang duurt één volledige draaiing?",
+      "a": [
+        "24 uur",
+        "12 uur",
+        "48 uur",
+        "1 week"
+      ],
+      "c": 0,
+      "e": "De aarde draait in 24 uur om haar as, waardoor we dag en nacht hebben."
+    },
+    {
+      "q": "De aarde draait van west naar oost. Wat is daarvan het gevolg voor de zon?",
+      "a": [
+        "De zon komt op in het oosten en gaat onder in het westen",
+        "De zon beweegt van oost naar west",
+        "De zon komt op in het westen",
+        "De zon staat altijd in het zuiden"
+      ],
+      "c": 0,
+      "e": "Doordat de aarde van west naar oost draait, lijkt het alsof de zon opkomt in het oosten."
+    },
+    {
+      "q": "Wat noemen we een etmaal?",
+      "a": [
+        "De tijd die de aarde nodig heeft voor één draaiing",
+        "De tijd tussen twee zonsopkomsten",
+        "Een maand",
+        "De tijd van de zon rond de aarde"
+      ],
+      "c": 0,
+      "e": "Een etmaal duurt 24 uur: de tijd voor één volledige draaiing van de aarde."
+    },
+    {
+      "q": "Wat veroorzaakt het verschil tussen dag en nacht?",
+      "a": [
+        "De draaiing van de aarde om haar as",
+        "De afstand tot de zon",
+        "De baan van de maan",
+        "De wolken"
+      ],
+      "c": 0,
+      "e": "Door de draaiing van de aarde wordt steeds een ander deel verlicht door de zon."
+    },
+    {
+      "q": "Waarom is het op sommige plekken dag terwijl het elders nacht is?",
+      "a": [
+        "Omdat de aarde rond is en niet overal tegelijk zonlicht krijgt",
+        "Omdat de zon beweegt",
+        "Omdat de maan het licht tegenhoudt",
+        "Omdat wolken het licht blokkeren"
+      ],
+      "c": 0,
+      "e": "De aarde is rond, dus slechts één helft wordt tegelijk beschenen door de zon."
+    },
+    {
+      "q": "De aarde draait niet alleen om haar as, maar ook om de zon. Hoe lang duurt dat?",
+      "a": [
+        "365 dagen",
+        "30 dagen",
+        "1 week",
+        "24 uur"
+      ],
+      "c": 0,
+      "e": "De aarde doet ongeveer 365 dagen over één baan rond de zon."
+    },
+    {
+      "q": "Waarom is het in Nederland winter als het op het zuidelijk halfrond zomer is?",
+      "a": [
+        "Omdat de aarde scheef staat ten opzichte van haar baan om de zon",
+        "Omdat Nederland verder van de zon ligt",
+        "Omdat de aarde sneller draait",
+        "Omdat het dan bewolkt is"
+      ],
+      "c": 0,
+      "e": "Door de schuine stand van de aardas krijgt het ene halfrond meer zon dan het andere."
+    },
+    {
+      "q": "Wat is de denkbeeldige lijn waar de aarde omheen draait?",
+      "a": [
+        "De aardas",
+        "De evenaar",
+        "De nulmeridiaan",
+        "De poolcirkel"
+      ],
+      "c": 0,
+      "e": "De aarde draait om haar as, een denkbeeldige lijn van de noordpool naar de zuidpool."
+    },
+    {
+      "q": "Door de draaiing van de aarde lijkt de zon te bewegen. Hoe noemen we dat verschijnsel?",
+      "a": [
+        "Schijnbare beweging van de zon",
+        "Werkelijke zonbeweging",
+        "Zonnewisseling",
+        "Dagboog"
+      ],
+      "c": 0,
+      "e": "De zon lijkt te bewegen langs de hemel, maar in werkelijkheid draait de aarde."
+    },
+    {
+      "q": "Waarom verschillen tijden over de wereld?",
+      "a": [
+        "Omdat de aarde in verschillende tijdzones is verdeeld",
+        "Omdat de zon niet overal even sterk schijnt",
+        "Omdat de aarde niet rond is",
+        "Omdat sommige landen dat hebben afgesproken"
+      ],
+      "c": 0,
+      "e": "De aarde is verdeeld in 24 tijdzones, elk met zijn eigen lokale tijd."
+    },
+    {
+      "q": "Hoeveel tijdzones zijn er wereldwijd afgesproken?",
+      "a": [
+        "24",
+        "12",
+        "48",
+        "60"
+      ],
+      "c": 0,
+      "e": "Er zijn 24 tijdzones, één voor elk uur van de dag."
+    },
+    {
+      "q": "Welke lijn is het uitgangspunt voor tijdzones?",
+      "a": [
+        "De nulmeridiaan",
+        "De evenaar",
+        "De poolcirkel",
+        "De datumgrens"
+      ],
+      "c": 0,
+      "e": "De nulmeridiaan bij Greenwich is het nulpunt voor tijdzones."
+    },
+    {
+      "q": "Wat is Greenwich Mean Time (GMT)?",
+      "a": [
+        "De standaardtijd op de nulmeridiaan",
+        "De tijd in Nederland",
+        "De tijd in New York",
+        "De zomertijd in Engeland"
+      ],
+      "c": 0,
+      "e": "GMT is de tijd bij Greenwich, de basis voor alle andere tijdzones."
+    },
+    {
+      "q": "Nederland ligt ten oosten van Greenwich. Wat betekent dat voor de tijd hier?",
+      "a": [
+        "Het is later dan in Engeland",
+        "Het is eerder dan in Engeland",
+        "Dezelfde tijd",
+        "Tijdverschil van 12 uur"
+      ],
+      "c": 0,
+      "e": "Omdat Nederland oostelijk ligt, komt de zon hier eerder op en is het later dan in Engeland."
+    },
+    {
+      "q": "Wat ligt tegenover de nulmeridiaan op 180° lengte?",
+      "a": [
+        "De datumgrens",
+        "De evenaar",
+        "De poolcirkel",
+        "De Kreeftskeerkring"
+      ],
+      "c": 0,
+      "e": "Op 180° ligt de datumgrens, waar de kalender een dag verspringt."
+    },
+    {
+      "q": "Wat gebeurt er als je de datumgrens van west naar oost oversteekt?",
+      "a": [
+        "Je gaat een dag terug in de tijd",
+        "Je gaat een dag vooruit",
+        "De tijd stopt",
+        "Er verandert niets"
+      ],
+      "c": 0,
+      "e": "Bij het oversteken van west naar oost ga je één dag terug."
+    },
+    {
+      "q": "Waarom gebruikt Nederland zomertijd?",
+      "a": [
+        "Om energie te besparen en het ’s avonds langer licht te laten zijn",
+        "Om kortere dagen te hebben",
+        "Om tijd te winnen",
+        "Om meer zon te krijgen"
+      ],
+      "c": 0,
+      "e": "Tijdens zomertijd wordt de klok een uur vooruitgezet, zodat het langer licht blijft."
+    },
+    {
+      "q": "Wat is het verschil tussen lokale tijd en standaardtijd?",
+      "a": [
+        "Lokale tijd is de tijd op één plek, standaardtijd geldt voor een hele tijdzone",
+        "Er is geen verschil",
+        "Lokale tijd is GMT",
+        "Standaardtijd verandert per dag"
+      ],
+      "c": 0,
+      "e": "Lokale tijd hangt af van de stand van de zon, standaardtijd geldt voor een heel gebied."
+    },
+    {
+      "q": "Waarom hebben landen soms afwijkende tijdzones?",
+      "a": [
+        "Om praktische redenen zoals economie of politiek",
+        "Omdat de zon er anders schijnt",
+        "Omdat ze op de evenaar liggen",
+        "Omdat ze groter zijn"
+      ],
+      "c": 0,
+      "e": "Landen kiezen soms een afwijkende tijd om beter aan te sluiten bij buurlanden of eigen gewoonten."
+    },
+    {
+      "q": "Wat is het effect van de draaiing van de aarde op de windrichtingen?",
+      "a": [
+        "Winden worden afgebogen door het Corioliseffect",
+        "Winden waaien recht naar het noorden",
+        "Wind beweegt niet",
+        "Er is geen effect"
+      ],
+      "c": 0,
+      "e": "Door de draaiing van de aarde buigen luchtstromen af, dit heet het Corioliseffect."
+    },
+    {
+      "q": "Waarom duurt een dag aan de evenaar even lang als aan de polen?",
+      "a": [
+        "De aarde draait overal even snel om haar as",
+        "Omdat de zon overal even lang schijnt",
+        "Omdat de aarde niet scheef staat",
+        "Omdat tijdzones dat regelen"
+      ],
+      "c": 0,
+      "e": "De aarde draait overal in 24 uur rond, dus een dag duurt overal even lang."
+    },
+    {
+      "q": "Wat bepaalt het moment van zonsopkomst op een bepaalde plek?",
+      "a": [
+        "De draaiing van de aarde en de ligging ten opzichte van de zon",
+        "De tijdzone",
+        "De temperatuur",
+        "De maanstand"
+      ],
+      "c": 0,
+      "e": "De stand van de aarde ten opzichte van de zon bepaalt wanneer de zon opkomt."
+    },
+    {
+      "q": "In welke richting draait de aarde om haar as?",
+      "a": [
+        "Van west naar oost",
+        "Van oost naar west",
+        "Van noord naar zuid",
+        "Van zuid naar noord"
+      ],
+      "c": 0,
+      "e": "De aarde draait van west naar oost, daarom komt de zon op in het oosten."
+    },
+    {
+      "q": "Wat betekent UTC?",
+      "a": [
+        "De internationale standaardtijd gebaseerd op GMT",
+        "De zomertijd in Nederland",
+        "De lokale tijd in Londen",
+        "De tijd op de evenaar"
+      ],
+      "c": 0,
+      "e": "UTC is de internationale standaardtijd die wordt gebruikt in plaats van GMT."
+    },
+    {
+      "q": "Inzichtvraag: Waarom hebben landen dicht bij de evenaar geen grote verschillen tussen dag en nacht?",
+      "a": [
+        "Omdat de zon daar het hele jaar ongeveer even lang schijnt",
+        "Omdat de aarde daar sneller draait",
+        "Omdat ze geen tijdzones gebruiken",
+        "Omdat het altijd zomer is"
+      ],
+      "c": 0,
+      "e": "Bij de evenaar blijft de hoeveelheid zonlicht per dag bijna gelijk gedurende het jaar."
+    },
+    {
+      "q": "Inzichtvraag: Waarom heeft de aarde 24 tijdzones en niet meer of minder?",
+      "a": [
+        "Omdat de aarde in 24 uur om haar as draait",
+        "Omdat er 12 maanden zijn",
+        "Omdat er 24 graden in een cirkel zijn",
+        "Omdat dat ooit willekeurig gekozen is"
+      ],
+      "c": 0,
+      "e": "De aarde draait in 24 uur om haar as, dus elke tijdzone vertegenwoordigt één uur."
+    },
+    {
+      "q": "Inzichtvraag: Waarom wordt zomertijd niet overal ter wereld gebruikt?",
+      "a": [
+        "Omdat het in sommige landen weinig verschil maakt in daglicht",
+        "Omdat andere landen dichter bij de zon staan",
+        "Omdat het verplicht is",
+        "Omdat tijdzones dat regelen"
+      ],
+      "c": 0,
+      "e": "Rond de evenaar maakt het weinig verschil in daglengte, dus zomertijd heeft daar geen nut."
+    },
+    {
+      "q": "Inzichtvraag: Waarom gebruiken piloten en schepen UTC in plaats van lokale tijd?",
+      "a": [
+        "Omdat UTC overal hetzelfde is",
+        "Omdat het makkelijker te onthouden is",
+        "Omdat UTC sneller is",
+        "Omdat landen dat verplichten"
+      ],
+      "c": 0,
+      "e": "UTC is wereldwijd gelijk, waardoor navigatie en communicatie eenduidig zijn."
+    },
+    {
+      "q": "Inzichtvraag: Waarom zorgt de draaiing van de aarde voor het verschil tussen oostelijke en westelijke tijdzones?",
+      "a": [
+        "Omdat het oosten de zon eerder ziet opkomen",
+        "Omdat de aarde platter is aan de polen",
+        "Omdat het westen dichter bij de zon staat",
+        "Omdat tijdzones willekeurig zijn"
+      ],
+      "c": 0,
+      "e": "Doordat de aarde van west naar oost draait, bereikt het zonlicht eerst het oosten."
+    }
+  ],
+  "orderingSets": [
+    {
+      "title": "Zet de gebeurtenissen in de juiste volgorde bij één etmaal",
+      "items": [
+        "De aarde draait om haar as",
+        "De zon komt op in het oosten",
+        "Het wordt middag",
+        "De zon gaat onder in het westen",
+        "Het wordt nacht"
+      ],
+      "correct": [
+        "De aarde draait om haar as",
+        "De zon komt op in het oosten",
+        "Het wordt middag",
+        "De zon gaat onder in het westen",
+        "Het wordt nacht"
+      ],
+      "explanation": "Door de draaiing van de aarde krijgen we dag en nacht in vaste volgorde over 24 uur."
+    }
+  ]
+}
