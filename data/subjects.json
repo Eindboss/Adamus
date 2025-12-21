@@ -2,20 +2,39 @@
   "subjects": [
     {
       "id": "latijn-flumen-toets",
+      "subject": "Latijn",
       "label": "Latijn – Proeftoets (Flumen)",
       "title": "Latijn – Proeftoets (Flumen)",
       "file": "data/latijn/flumen.json",
       "schema": "toets"
     },
     {
-      "id": "geschiedenis-jagers-en-boeren",
-      "label": "Geschiedenis – Tijdvak 1: Jagers & Boeren",
-      "title": "Geschiedenis – Tijdvak 1: Jagers & Boeren",
-      "file": "data/geschiedenis/tijdvak1.json",
+      "id": "biologie-placeholder",
+      "subject": "Biologie",
+      "label": "Biologie – Binnenkort beschikbaar",
+      "title": "Biologie",
+      "file": null,
+      "schema": "quiz"
+    },
+    {
+      "id": "engels-placeholder",
+      "subject": "Engels",
+      "label": "Engels – Binnenkort beschikbaar",
+      "title": "Engels",
+      "file": null,
+      "schema": "quiz"
+    },
+    {
+      "id": "nederlands-placeholder",
+      "subject": "Nederlands",
+      "label": "Nederlands – Binnenkort beschikbaar",
+      "title": "Nederlands",
+      "file": null,
       "schema": "quiz"
     },
     {
       "id": "aardrijkskunde-p1",
+      "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – Paragraaf 1: Waar wil je wonen?",
       "title": "Aardrijkskunde – Paragraaf 1: Waar wil je wonen?",
       "file": "data/aardrijkskunde/p1.json",
@@ -23,6 +42,7 @@
     },
     {
       "id": "aardrijkskunde-p2",
+      "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – Paragraaf 2: Verstedelijking in Nederland",
       "title": "Aardrijkskunde – Paragraaf 2: Verstedelijking in Nederland",
       "file": "data/aardrijkskunde/p2.json",
@@ -30,6 +50,7 @@
     },
     {
       "id": "aardrijkskunde-p3",
+      "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – Paragraaf 3: De opbouw van de Nederlandse stad",
       "title": "Aardrijkskunde – Paragraaf 3: De opbouw van de Nederlandse stad",
       "file": "data/aardrijkskunde/p3.json",
@@ -37,6 +58,7 @@
     },
     {
       "id": "aardrijkskunde-p4",
+      "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – Paragraaf 4: Steden en hun omgeving",
       "title": "Aardrijkskunde – Paragraaf 4: Steden en hun omgeving",
       "file": "data/aardrijkskunde/p4.json",
@@ -44,6 +66,7 @@
     },
     {
       "id": "aardrijkskunde-p7",
+      "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – Paragraaf 7: Plaatsbepaling op aarde",
       "title": "Aardrijkskunde – Paragraaf 7: Plaatsbepaling op aarde",
       "file": "data/aardrijkskunde/p7.json",
@@ -51,9 +74,26 @@
     },
     {
       "id": "aardrijkskunde-p8",
+      "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – Paragraaf 8: Tijdzones en de draaiing van de aarde",
       "title": "Aardrijkskunde – Paragraaf 8: Tijdzones en de draaiing van de aarde",
       "file": "data/aardrijkskunde/p8.json",
+      "schema": "quiz"
+    },
+    {
+      "id": "wiskunde-placeholder",
+      "subject": "Wiskunde",
+      "label": "Wiskunde – Binnenkort beschikbaar",
+      "title": "Wiskunde",
+      "file": null,
+      "schema": "quiz"
+    },
+    {
+      "id": "geschiedenis-jagers-en-boeren",
+      "subject": "Geschiedenis",
+      "label": "Geschiedenis – Tijdvak 1: Jagers & Boeren",
+      "title": "Geschiedenis – Tijdvak 1: Jagers & Boeren",
+      "file": "data/geschiedenis/tijdvak1.json",
       "schema": "quiz"
     }
   ]
