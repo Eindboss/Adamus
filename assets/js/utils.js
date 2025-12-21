@@ -221,3 +221,142 @@ export function extractQuizTitle(meta, subject) {
     .replace(new RegExp(`^\\s*${subject}\\s*[–-]\\s*`, 'i'), '')
     .trim() || raw;
 }
+
+/* ===========================================
+   Answer Normalization & Matching
+   For complex question types
+   =========================================== */
+
+/**
+ * Remove diacritics (accents) from text
+ * e.g., "café" → "cafe", "naïve" → "naive"
+ */
+export function removeDiacritics(text) {
+  return String(text).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+/**
+ * Normalize text for comparison
+ * @param {string} text - Input text
+ * @param {object} options - Normalization options
+ * @param {boolean} options.lowercase - Convert to lowercase
+ * @param {boolean} options.strip_punctuation - Remove punctuation
+ * @param {boolean} options.collapse_whitespace - Collapse multiple spaces
+ * @param {boolean} options.normalize_diacritics - Remove accents
+ * @param {boolean} options.trim - Trim whitespace (default: true)
+ */
+export function normalizeAnswer(text, options = {}) {
+  let normalized = String(text);
+
+  // Always trim by default
+  if (options.trim !== false) {
+    normalized = normalized.trim();
+  }
+
+  // Remove diacritics (accents)
+  if (options.normalize_diacritics) {
+    normalized = removeDiacritics(normalized);
+  }
+
+  // Convert to lowercase
+  if (options.lowercase) {
+    normalized = normalized.toLowerCase();
+  }
+
+  // Remove punctuation
+  if (options.strip_punctuation) {
+    normalized = normalized.replace(/[.,!?;:'"()[\]{}<>\/\\@#$%^&*_+=|~`-]/g, '');
+  }
+
+  // Collapse whitespace
+  if (options.collapse_whitespace) {
+    normalized = normalized.replace(/\s+/g, ' ').trim();
+  }
+
+  return normalized;
+}
+
+/**
+ * Check if user input matches any accepted answer
+ * Supports aliases and normalization options
+ *
+ * @param {string} input - User's answer
+ * @param {string[]} accepted - List of accepted answers
+ * @param {object} aliases - Optional alias map { "key": ["alias1", "alias2"] }
+ * @param {object} options - Normalization options
+ * @returns {boolean} - True if input matches any accepted answer
+ */
+export function matchesAcceptList(input, accepted = [], aliases = {}, options = {}) {
+  if (!input || !accepted.length) return false;
+
+  // Default options for answer matching
+  const opts = {
+    lowercase: true,
+    trim: true,
+    ...options
+  };
+
+  const normalizedInput = normalizeAnswer(input, opts);
+
+  // Check direct matches
+  for (const accept of accepted) {
+    const normalizedAccept = normalizeAnswer(accept, opts);
+    if (normalizedInput === normalizedAccept) {
+      return true;
+    }
+
+    // Check aliases for this accepted answer
+    const aliasesForAccept = aliases[accept];
+    if (Array.isArray(aliasesForAccept)) {
+      for (const alias of aliasesForAccept) {
+        if (normalizedInput === normalizeAnswer(alias, opts)) {
+          return true;
+        }
+      }
+    }
+  }
+
+  // Also check if input matches any alias key directly
+  for (const [key, aliasList] of Object.entries(aliases)) {
+    if (Array.isArray(aliasList)) {
+      for (const alias of aliasList) {
+        if (normalizedInput === normalizeAnswer(alias, opts)) {
+          // Check if this key is in accepted list
+          if (accepted.some(a => normalizeAnswer(a, opts) === normalizeAnswer(key, opts))) {
+            return true;
+          }
+        }
+      }
+    }
+  }
+
+  return false;
+}
+
+/**
+ * Count fillable cells in table_parse blocks
+ */
+export function countFillableCells(blocks) {
+  let count = 0;
+  for (const block of blocks) {
+    for (const row of block.rows || []) {
+      if (row.invulbaar) count++;
+    }
+  }
+  return count;
+}
+
+/**
+ * Count total inputs needed for grouped questions
+ */
+export function countGroupedInputs(items) {
+  let count = 0;
+  for (const item of items) {
+    if (Array.isArray(item.subfields) && item.subfields.length > 0) {
+      count += item.subfields.length;
+    } else {
+      count++;
+    }
+  }
+  return count;
+}

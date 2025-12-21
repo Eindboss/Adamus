@@ -3,7 +3,7 @@
    Core quiz logic and state management
    =========================================== */
 
-import { $, $$, $$$, shuffle, loadJSON, htmlToText, getUrlParam } from './utils.js';
+import { $, $$, $$$, shuffle, loadJSON, htmlToText, getUrlParam, normalizeAnswer, matchesAcceptList, countFillableCells, countGroupedInputs } from './utils.js';
 import { startTimer, stopTimer, resetTimer, pauseTimer, resumeTimer, initTimer } from './timer.js';
 import { readStats, writeStats, updateStats, createSessionHistory } from './stats.js';
 
@@ -22,7 +22,12 @@ let state = {
   phase: 'question', // 'question' | 'feedback' | 'summary'
   answered: false,
   selectedOption: null,
-  history: null
+  history: null,
+  // For complex question types
+  cellAnswers: {},     // table_parse cell values
+  groupAnswers: {},    // grouped question values
+  partialScore: 0,     // partial points earned
+  maxPartialScore: 0   // max possible partial points
 };
 
 let subjects = [];
@@ -214,18 +219,44 @@ function renderQuestion() {
   state.phase = 'question';
   state.answered = false;
   state.selectedOption = null;
+  state.cellAnswers = {};
+  state.groupAnswers = {};
+  state.partialScore = 0;
+  state.maxPartialScore = 0;
 
   // Reset timer
   resetTimer(QUESTION_SECONDS);
   startTimer();
 
   // Render based on type
-  if (q.type === 'mc') {
-    renderMC(container, q);
-  } else if (q.type === 'open') {
-    renderOpen(container, q);
-  } else {
-    renderOpen(container, { q: q.prompt || q.q || 'Vraag', accept: [], explanation: '' });
+  switch (q.type) {
+    case 'mc':
+      renderMC(container, q);
+      break;
+    case 'open':
+      renderOpen(container, q);
+      break;
+    case 'short_text':
+      renderShortText(container, q);
+      break;
+    case 'table_parse':
+      renderTableParse(container, q);
+      break;
+    case 'grouped_short_text':
+      renderGroupedShortText(container, q);
+      break;
+    case 'grouped_translation':
+      renderGroupedTranslation(container, q);
+      break;
+    case 'grouped_select':
+      renderGroupedSelect(container, q);
+      break;
+    case 'translation_open':
+      renderTranslationOpen(container, q);
+      break;
+    default:
+      // Fallback for unknown types
+      renderOpen(container, { q: q.prompt_html || q.prompt || q.q || 'Vraag', accept: [], explanation: '' });
   }
 
   // Update controls
@@ -295,6 +326,396 @@ function renderOpen(container, q) {
   if (checkBtn) checkBtn.disabled = true;
 }
 
+/* ===========================================
+   Complex Question Type Renderers
+   =========================================== */
+
+/**
+ * Render short_text question (single-line input)
+ */
+function renderShortText(container, q) {
+  container.innerHTML = `
+    <div class="question-title">${q.prompt_html || q.q}</div>
+    <div class="short-text-wrap">
+      <input type="text"
+             id="shortInput"
+             class="short-input"
+             placeholder="Typ je antwoord..."
+             autocomplete="off"
+             autocorrect="off"
+             autocapitalize="off"
+             spellcheck="false">
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  const input = $('shortInput');
+  if (input) {
+    input.addEventListener('input', () => {
+      const checkBtn = $('checkBtn');
+      if (checkBtn) {
+        checkBtn.disabled = input.value.trim().length === 0;
+      }
+    });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.value.trim().length > 0) {
+        e.preventDefault();
+        checkAnswer();
+      }
+    });
+    input.focus();
+  }
+
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Render table_parse question (declension tables)
+ */
+function renderTableParse(container, q) {
+  const blocks = q.blocks || [];
+
+  if (blocks.length === 0) {
+    // Fallback for table variant without blocks
+    renderOpen(container, { q: q.prompt_html || 'Vraag', accept: [] });
+    return;
+  }
+
+  // Build table header with lemma names
+  const headerCells = blocks.map(b => `<th class="table-lemma">${b.lemma}</th>`).join('');
+
+  // Get row labels from first block
+  const rowLabels = blocks[0]?.rows?.map(r => r.veld) || [];
+
+  // Build table rows
+  const rowsHtml = rowLabels.map((label, rowIdx) => {
+    const cells = blocks.map((block, blockIdx) => {
+      const row = block.rows[rowIdx];
+      const cellId = `cell-${blockIdx}-${rowIdx}`;
+
+      if (row.invulbaar) {
+        return `
+          <td class="table-cell table-cell-input">
+            <input type="text"
+                   id="${cellId}"
+                   data-block="${blockIdx}"
+                   data-row="${rowIdx}"
+                   class="table-input"
+                   placeholder="..."
+                   autocomplete="off">
+          </td>`;
+      } else {
+        return `<td class="table-cell table-cell-given">${row.given || ''}</td>`;
+      }
+    }).join('');
+
+    return `<tr><td class="table-row-label">${label}</td>${cells}</tr>`;
+  }).join('');
+
+  const fillableCount = countFillableCells(blocks);
+
+  container.innerHTML = `
+    <div class="question-title">${q.prompt_html || 'Vul de tabel in.'}</div>
+    <div class="table-scroll-wrap">
+      <table class="declension-table question-table">
+        <thead>
+          <tr>
+            <th class="table-corner"></th>
+            ${headerCells}
+          </tr>
+        </thead>
+        <tbody>
+          ${rowsHtml}
+        </tbody>
+      </table>
+    </div>
+    <div class="table-progress">
+      <span id="tableFilled">0</span> / <span id="tableTotal">${fillableCount}</span> ingevuld
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  // Track input changes and update progress
+  $$$('.table-input', container).forEach(input => {
+    input.addEventListener('input', () => {
+      state.cellAnswers[input.id] = input.value;
+      updateTableProgress();
+    });
+  });
+
+  // Focus first input
+  const firstInput = $$('.table-input', container);
+  if (firstInput) firstInput.focus();
+
+  // Disable check button initially
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Update table progress indicator
+ */
+function updateTableProgress() {
+  const filled = $$$('.table-input').filter(i => i.value.trim().length > 0).length;
+  const filledEl = $('tableFilled');
+  if (filledEl) filledEl.textContent = filled;
+
+  // Enable check if at least one cell filled
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = filled === 0;
+}
+
+/**
+ * Render grouped_short_text question (vocabulary translations)
+ */
+function renderGroupedShortText(container, q) {
+  const items = q.words || q.items || [];
+
+  const itemsHtml = items.map((item, idx) => {
+    const hasSubfields = Array.isArray(item.subfields) && item.subfields.length > 0;
+    const latinText = item.latijn || item.vraag || '';
+
+    if (hasSubfields) {
+      const subfieldsHtml = item.subfields.map((sf, sfIdx) => `
+        <div class="subfield-row">
+          <label class="subfield-label">${sf.label}:</label>
+          <input type="text"
+                 id="word-${idx}-sf-${sfIdx}"
+                 class="grouped-input subfield-input"
+                 data-word="${idx}"
+                 data-subfield="${sfIdx}"
+                 placeholder="..."
+                 autocomplete="off">
+        </div>
+      `).join('');
+
+      return `
+        <div class="grouped-item" data-idx="${idx}">
+          <div class="grouped-latin">${latinText}</div>
+          <div class="grouped-subfields">${subfieldsHtml}</div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="grouped-item" data-idx="${idx}">
+        <label class="grouped-latin">${latinText}</label>
+        <input type="text"
+               id="word-${idx}"
+               class="grouped-input"
+               data-word="${idx}"
+               placeholder="..."
+               autocomplete="off">
+      </div>
+    `;
+  }).join('');
+
+  const totalInputs = countGroupedInputs(items);
+
+  container.innerHTML = `
+    <div class="question-title">${q.prompt_html || 'Vertaal de woorden.'}</div>
+    <div class="grouped-list">
+      ${itemsHtml}
+    </div>
+    <div class="group-progress">
+      <span id="groupFilled">0</span> / <span>${totalInputs}</span> ingevuld
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  // Track inputs
+  $$$('.grouped-input', container).forEach(input => {
+    input.addEventListener('input', updateGroupProgress);
+  });
+
+  // Focus first input
+  const firstInput = $$('.grouped-input', container);
+  if (firstInput) firstInput.focus();
+
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Render grouped_translation question (translate underlined words in context)
+ */
+function renderGroupedTranslation(container, q) {
+  const items = q.items || [];
+
+  const itemsHtml = items.map((item, idx) => `
+    <div class="translation-item" data-idx="${idx}">
+      <div class="translation-sentence">${item.latijn_html}</div>
+      <input type="text"
+             id="trans-${idx}"
+             class="translation-input grouped-input"
+             data-idx="${idx}"
+             placeholder="Vertaling van het onderstreepte woord..."
+             autocomplete="off">
+    </div>
+  `).join('');
+
+  container.innerHTML = `
+    <div class="question-title">${q.prompt_html || 'Vertaal de onderstreepte woorden.'}</div>
+    <div class="translation-list">
+      ${itemsHtml}
+    </div>
+    <div class="group-progress">
+      <span id="groupFilled">0</span> / <span>${items.length}</span> ingevuld
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  $$$('.translation-input', container).forEach(input => {
+    input.addEventListener('input', updateGroupProgress);
+  });
+
+  const firstInput = $$('.translation-input', container);
+  if (firstInput) firstInput.focus();
+
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Render grouped_select question (dropdown selectors for grammatical analysis)
+ */
+function renderGroupedSelect(container, q) {
+  const items = q.items || [];
+  const legend = q.legend || {};
+
+  const naamvalOptions = (legend.naamval_options || []).map(opt =>
+    `<option value="${opt}">${opt}</option>`
+  ).join('');
+
+  const getalOptions = (legend.getal_options || []).map(opt =>
+    `<option value="${opt}">${opt}</option>`
+  ).join('');
+
+  const verklaringOptions = (legend.verklaring_options || []).map(opt =>
+    `<option value="${opt}">${opt}</option>`
+  ).join('');
+
+  const itemsHtml = items.map((item, idx) => `
+    <div class="select-item" data-idx="${idx}">
+      <div class="select-sentence">${item.latijn_html}</div>
+      <div class="select-row">
+        <div class="select-group">
+          <label class="select-label">Naamval</label>
+          <select id="naamval-${idx}" class="select-input" data-idx="${idx}" data-field="naamval">
+            <option value="">Kies...</option>
+            ${naamvalOptions}
+          </select>
+        </div>
+        <div class="select-group">
+          <label class="select-label">Getal</label>
+          <select id="getal-${idx}" class="select-input" data-idx="${idx}" data-field="getal">
+            <option value="">Kies...</option>
+            ${getalOptions}
+          </select>
+        </div>
+        <div class="select-group">
+          <label class="select-label">Verklaring</label>
+          <select id="verklaring-${idx}" class="select-input" data-idx="${idx}" data-field="verklaring">
+            <option value="">Kies...</option>
+            ${verklaringOptions}
+          </select>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  container.innerHTML = `
+    <div class="question-title">${q.prompt_html || 'Bepaal naamval, getal en verklaring.'}</div>
+    <div class="select-list">
+      ${itemsHtml}
+    </div>
+    <div class="group-progress">
+      <span id="selectProgress">0</span> / <span>${items.length}</span> volledig ingevuld
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  $$$('.select-input', container).forEach(select => {
+    select.addEventListener('change', updateSelectProgress);
+  });
+
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Render translation_open question (full sentence translation)
+ */
+function renderTranslationOpen(container, q) {
+  const rubric = q.rubric || '';
+
+  container.innerHTML = `
+    <div class="question-title">${q.prompt_html || 'Vertaal de zin.'}</div>
+    <div class="translation-open-wrap">
+      <textarea id="translationInput"
+                class="open-input translation-textarea"
+                placeholder="Typ je vertaling..."
+                autocomplete="off"
+                autocorrect="off"
+                spellcheck="false"></textarea>
+    </div>
+    ${rubric ? `
+      <details class="rubric-hint">
+        <summary>💡 Hint voor nakijken</summary>
+        <p>${rubric}</p>
+      </details>
+    ` : ''}
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  const input = $('translationInput');
+  if (input) {
+    input.addEventListener('input', () => {
+      const checkBtn = $('checkBtn');
+      if (checkBtn) {
+        checkBtn.disabled = input.value.trim().length === 0;
+      }
+    });
+    input.focus();
+  }
+
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Update group progress indicator (for grouped_short_text, grouped_translation)
+ */
+function updateGroupProgress() {
+  const filled = $$$('.grouped-input').filter(i => i.value.trim().length > 0).length;
+  const filledEl = $('groupFilled');
+  if (filledEl) filledEl.textContent = filled;
+
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = filled === 0;
+}
+
+/**
+ * Update select progress indicator (for grouped_select)
+ */
+function updateSelectProgress() {
+  const items = $$$('.select-item');
+  let completeCount = 0;
+
+  items.forEach(item => {
+    const selects = $$$('.select-input', item);
+    const allFilled = selects.every(s => s.value !== '');
+    if (allFilled) completeCount++;
+  });
+
+  const progressEl = $('selectProgress');
+  if (progressEl) progressEl.textContent = completeCount;
+
+  const checkBtn = $('checkBtn');
+  if (checkBtn) checkBtn.disabled = completeCount === 0;
+}
+
 /**
  * Select an MC option
  */
@@ -326,10 +747,33 @@ export function checkAnswer() {
   const q = state.questions[state.currentIndex];
   stopTimer();
 
-  if (q.type === 'mc') {
-    checkMCAnswer(q);
-  } else {
-    checkOpenAnswer(q);
+  switch (q.type) {
+    case 'mc':
+      checkMCAnswer(q);
+      break;
+    case 'open':
+      checkOpenAnswer(q);
+      break;
+    case 'short_text':
+      checkShortText(q);
+      break;
+    case 'table_parse':
+      checkTableParse(q);
+      break;
+    case 'grouped_short_text':
+      checkGroupedShortText(q);
+      break;
+    case 'grouped_translation':
+      checkGroupedTranslation(q);
+      break;
+    case 'grouped_select':
+      checkGroupedSelect(q);
+      break;
+    case 'translation_open':
+      checkTranslationOpen(q);
+      break;
+    default:
+      checkOpenAnswer(q);
   }
 
   state.answered = true;
@@ -430,6 +874,521 @@ function checkAcceptList(acceptList, input, caseSensitive = false) {
   }
 
   return false;
+}
+
+/* ===========================================
+   Complex Question Type Checkers
+   =========================================== */
+
+/**
+ * Check short_text answer
+ */
+function checkShortText(q) {
+  const input = $('shortInput');
+  const value = input?.value?.trim() || '';
+
+  const answer = q.answer || {};
+  const accepted = answer.accepted || [];
+  const opts = {
+    lowercase: !answer.case_sensitive,
+    normalize_diacritics: answer.normalize_diacritics,
+    trim: answer.trim !== false
+  };
+
+  const isCorrect = matchesAcceptList(value, accepted, {}, opts);
+
+  if (isCorrect) {
+    state.score++;
+    input?.classList.add('input-correct');
+  } else {
+    state.wrong++;
+    input?.classList.add('input-wrong');
+  }
+  updateStats(state.subjectId, isCorrect);
+
+  state.history.add({
+    question: htmlToText(q.prompt_html || q.q),
+    type: 'short_text',
+    userAnswer: value,
+    correctAnswer: accepted[0] || '',
+    correct: isCorrect
+  });
+
+  showFeedback(isCorrect, '', accepted[0]);
+}
+
+/**
+ * Check table_parse answer (declension tables)
+ */
+function checkTableParse(q) {
+  const blocks = q.blocks || [];
+  const grading = q.grading || { per_cell_points: 0.5 };
+  let correctCount = 0;
+  let totalFillable = 0;
+  const results = [];
+
+  blocks.forEach((block, blockIdx) => {
+    block.rows.forEach((row, rowIdx) => {
+      if (row.invulbaar) {
+        totalFillable++;
+        const cellId = `cell-${blockIdx}-${rowIdx}`;
+        const input = $(cellId);
+        const value = input?.value?.trim() || '';
+        const isCorrect = matchesAcceptList(value, row.accepted || [], {}, { lowercase: true });
+
+        if (isCorrect) {
+          correctCount++;
+          input?.classList.add('input-correct');
+        } else {
+          input?.classList.add('input-wrong');
+        }
+
+        results.push({
+          veld: row.veld,
+          lemma: block.lemma,
+          value,
+          correct: isCorrect,
+          expected: row.accepted[0]
+        });
+      }
+    });
+  });
+
+  // Calculate partial score
+  const earnedPoints = correctCount * (grading.per_cell_points || 0.5);
+  const maxPoints = totalFillable * (grading.per_cell_points || 0.5);
+  const isFullyCorrect = correctCount === totalFillable;
+
+  // Update score (count as correct if > 50%)
+  if (correctCount >= totalFillable / 2) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, isFullyCorrect);
+
+  state.partialScore = earnedPoints;
+  state.maxPartialScore = maxPoints;
+
+  state.history.add({
+    question: htmlToText(q.prompt_html),
+    type: 'table_parse',
+    correctCount,
+    totalCount: totalFillable,
+    correct: isFullyCorrect,
+    partialScore: earnedPoints
+  });
+
+  showTableFeedback(correctCount, totalFillable, results, earnedPoints, maxPoints);
+}
+
+/**
+ * Check grouped_short_text answer (vocabulary translations)
+ */
+function checkGroupedShortText(q) {
+  const items = q.words || q.items || [];
+  let totalCorrect = 0;
+  let totalItems = 0;
+  const results = [];
+
+  items.forEach((item, idx) => {
+    if (Array.isArray(item.subfields) && item.subfields.length > 0) {
+      item.subfields.forEach((sf, sfIdx) => {
+        totalItems++;
+        const input = $(`word-${idx}-sf-${sfIdx}`);
+        const value = input?.value?.trim() || '';
+        const isCorrect = matchesAcceptList(value, sf.accepted || [], {}, { lowercase: true });
+
+        input?.classList.add(isCorrect ? 'input-correct' : 'input-wrong');
+        if (isCorrect) totalCorrect++;
+
+        results.push({
+          latin: item.latijn || item.vraag,
+          label: sf.label,
+          value,
+          correct: isCorrect,
+          expected: sf.accepted?.[0]
+        });
+      });
+    } else {
+      totalItems++;
+      const input = $(`word-${idx}`);
+      const value = input?.value?.trim() || '';
+      const isCorrect = matchesAcceptList(value, item.accepted || [], {}, { lowercase: true });
+
+      input?.classList.add(isCorrect ? 'input-correct' : 'input-wrong');
+      if (isCorrect) totalCorrect++;
+
+      results.push({
+        latin: item.latijn || item.vraag,
+        value,
+        correct: isCorrect,
+        expected: item.accepted?.[0]
+      });
+    }
+  });
+
+  const isFullyCorrect = totalCorrect === totalItems;
+  if (totalCorrect >= totalItems / 2) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, isFullyCorrect);
+
+  state.history.add({
+    question: htmlToText(q.prompt_html),
+    type: 'grouped_short_text',
+    correctCount: totalCorrect,
+    totalCount: totalItems,
+    correct: isFullyCorrect
+  });
+
+  showGroupedFeedback(totalCorrect, totalItems, results);
+}
+
+/**
+ * Check grouped_translation answer
+ */
+function checkGroupedTranslation(q) {
+  const items = q.items || [];
+  let correctCount = 0;
+  const results = [];
+
+  items.forEach((item, idx) => {
+    const input = $(`trans-${idx}`);
+    const value = input?.value?.trim() || '';
+    const isCorrect = matchesAcceptList(value, item.accepted || [], {}, { lowercase: true });
+
+    input?.classList.add(isCorrect ? 'input-correct' : 'input-wrong');
+    if (isCorrect) correctCount++;
+
+    results.push({
+      sentence: item.latijn_html,
+      value,
+      correct: isCorrect,
+      expected: item.accepted?.[0]
+    });
+  });
+
+  const isFullyCorrect = correctCount === items.length;
+  if (correctCount >= items.length / 2) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, isFullyCorrect);
+
+  state.history.add({
+    question: htmlToText(q.prompt_html),
+    type: 'grouped_translation',
+    correctCount,
+    totalCount: items.length,
+    correct: isFullyCorrect
+  });
+
+  showGroupedFeedback(correctCount, items.length, results);
+}
+
+/**
+ * Check grouped_select answer (grammatical analysis)
+ */
+function checkGroupedSelect(q) {
+  const items = q.items || [];
+  const grading = q.grading || {};
+  const results = [];
+  let totalPoints = 0;
+  let maxPoints = 0;
+
+  items.forEach((item, idx) => {
+    const naamval = $(`naamval-${idx}`)?.value || '';
+    const getal = $(`getal-${idx}`)?.value || '';
+    const verklaring = $(`verklaring-${idx}`)?.value || '';
+
+    const correct = item.correct || {};
+    let matchCount = 0;
+
+    const naamvalCorrect = naamval === correct.naamval;
+    const getalCorrect = getal === correct.getal;
+    const verklaringCorrect = verklaring === correct.verklaring;
+
+    if (naamvalCorrect) matchCount++;
+    if (getalCorrect) matchCount++;
+    if (verklaringCorrect) matchCount++;
+
+    // Calculate points based on grading rules
+    const itemPoints = item.points || 1;
+    maxPoints += itemPoints;
+    let earnedPoints = 0;
+
+    if (matchCount >= (grading.full_points_if || 3)) {
+      earnedPoints = itemPoints;
+    } else if (matchCount >= (grading.half_points_if || 2)) {
+      earnedPoints = itemPoints / 2;
+    }
+    totalPoints += earnedPoints;
+
+    // Mark the item container
+    const container = $$(`[data-idx="${idx}"].select-item`);
+    if (container) {
+      if (matchCount === 3) {
+        container.classList.add('item-correct');
+      } else if (matchCount > 0) {
+        container.classList.add('item-partial');
+      } else {
+        container.classList.add('item-wrong');
+      }
+    }
+
+    results.push({
+      sentence: item.latijn_html,
+      user: { naamval, getal, verklaring },
+      correct: item.correct,
+      matchCount,
+      earnedPoints,
+      details: {
+        naamval: naamvalCorrect,
+        getal: getalCorrect,
+        verklaring: verklaringCorrect
+      }
+    });
+  });
+
+  const isFullyCorrect = totalPoints === maxPoints;
+  if (totalPoints >= maxPoints / 2) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, isFullyCorrect);
+
+  state.history.add({
+    question: htmlToText(q.prompt_html),
+    type: 'grouped_select',
+    results,
+    correct: isFullyCorrect,
+    totalPoints,
+    maxPoints
+  });
+
+  showSelectFeedback(results, totalPoints, maxPoints);
+}
+
+/**
+ * Check translation_open answer
+ */
+function checkTranslationOpen(q) {
+  const input = $('translationInput');
+  const value = input?.value?.trim() || '';
+
+  const answer = q.answer || {};
+  const normalizeOpts = answer.normalize || {};
+
+  const opts = {
+    lowercase: normalizeOpts.lowercase,
+    strip_punctuation: normalizeOpts.strip_punctuation,
+    collapse_whitespace: normalizeOpts.collapse_whitespace
+  };
+
+  // Normalize user input
+  const normalizedValue = normalizeAnswer(value, opts);
+
+  // Check against accepted_any (array of arrays)
+  let isCorrect = false;
+  const acceptedAny = answer.accepted_any || [];
+
+  for (const acceptGroup of acceptedAny) {
+    for (const accept of acceptGroup) {
+      if (normalizedValue === normalizeAnswer(accept, opts)) {
+        isCorrect = true;
+        break;
+      }
+    }
+    if (isCorrect) break;
+  }
+
+  if (isCorrect) {
+    state.score++;
+    input?.classList.add('input-correct');
+  } else {
+    state.wrong++;
+    input?.classList.add('input-wrong');
+  }
+  updateStats(state.subjectId, isCorrect);
+
+  state.history.add({
+    question: htmlToText(q.prompt_html),
+    type: 'translation_open',
+    userAnswer: value,
+    correct: isCorrect
+  });
+
+  const expectedAnswer = acceptedAny[0]?.[0] || '';
+  showFeedback(isCorrect, q.rubric || '', expectedAnswer);
+}
+
+/* ===========================================
+   Feedback Display Functions
+   =========================================== */
+
+/**
+ * Show feedback for table_parse questions
+ */
+function showTableFeedback(correctCount, totalCount, results, earnedPoints, maxPoints) {
+  const feedbackEl = $('feedback');
+  if (!feedbackEl) return;
+
+  const isFullyCorrect = correctCount === totalCount;
+  const isPartial = correctCount > 0 && !isFullyCorrect;
+
+  let className = 'feedback-error';
+  let icon = '✗';
+  let title = 'Niet goed';
+
+  if (isFullyCorrect) {
+    className = 'feedback-success';
+    icon = '✓';
+    title = 'Alles goed!';
+  } else if (isPartial) {
+    className = 'feedback-partial';
+    icon = '◐';
+    title = 'Gedeeltelijk goed';
+  }
+
+  const wrongResults = results.filter(r => !r.correct);
+  const wrongHtml = wrongResults.length > 0 ? `
+    <div class="feedback-results">
+      <div class="feedback-results-title">Verbeteringen:</div>
+      <div class="feedback-results-list">
+        ${wrongResults.map(r => `
+          <div class="feedback-result-item wrong">
+            <span class="feedback-icon">✗</span>
+            <span><strong>${r.lemma}</strong> (${r.veld}): ${r.value || '(leeg)'} → <strong>${r.expected}</strong></span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  feedbackEl.className = `feedback ${className}`;
+  feedbackEl.innerHTML = `
+    <div class="feedback-header">
+      <span>${icon}</span>
+      <span>${title}</span>
+    </div>
+    <div class="feedback-score">${correctCount} / ${totalCount} goed (${earnedPoints.toFixed(1)} / ${maxPoints.toFixed(1)} punten)</div>
+    ${wrongHtml}
+  `;
+  feedbackEl.style.display = 'block';
+}
+
+/**
+ * Show feedback for grouped questions
+ */
+function showGroupedFeedback(correctCount, totalCount, results) {
+  const feedbackEl = $('feedback');
+  if (!feedbackEl) return;
+
+  const isFullyCorrect = correctCount === totalCount;
+  const isPartial = correctCount > 0 && !isFullyCorrect;
+
+  let className = 'feedback-error';
+  let icon = '✗';
+  let title = 'Niet goed';
+
+  if (isFullyCorrect) {
+    className = 'feedback-success';
+    icon = '✓';
+    title = 'Alles goed!';
+  } else if (isPartial) {
+    className = 'feedback-partial';
+    icon = '◐';
+    title = 'Gedeeltelijk goed';
+  }
+
+  const wrongResults = results.filter(r => !r.correct);
+  const wrongHtml = wrongResults.length > 0 ? `
+    <div class="feedback-results">
+      <div class="feedback-results-title">Verbeteringen:</div>
+      <div class="feedback-results-list">
+        ${wrongResults.map(r => `
+          <div class="feedback-result-item wrong">
+            <span class="feedback-icon">✗</span>
+            <span><strong>${r.latin || ''}</strong>${r.label ? ` (${r.label})` : ''}: ${r.value || '(leeg)'} → <strong>${r.expected}</strong></span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  feedbackEl.className = `feedback ${className}`;
+  feedbackEl.innerHTML = `
+    <div class="feedback-header">
+      <span>${icon}</span>
+      <span>${title}</span>
+    </div>
+    <div class="feedback-score">${correctCount} / ${totalCount} goed</div>
+    ${wrongHtml}
+  `;
+  feedbackEl.style.display = 'block';
+}
+
+/**
+ * Show feedback for grouped_select questions
+ */
+function showSelectFeedback(results, totalPoints, maxPoints) {
+  const feedbackEl = $('feedback');
+  if (!feedbackEl) return;
+
+  const perfectCount = results.filter(r => r.matchCount === 3).length;
+  const isFullyCorrect = perfectCount === results.length;
+  const isPartial = totalPoints > 0 && !isFullyCorrect;
+
+  let className = 'feedback-error';
+  let icon = '✗';
+  let title = 'Niet goed';
+
+  if (isFullyCorrect) {
+    className = 'feedback-success';
+    icon = '✓';
+    title = 'Alles goed!';
+  } else if (isPartial) {
+    className = 'feedback-partial';
+    icon = '◐';
+    title = 'Gedeeltelijk goed';
+  }
+
+  const incorrectResults = results.filter(r => r.matchCount < 3);
+  const detailsHtml = incorrectResults.length > 0 ? `
+    <div class="feedback-results">
+      <div class="feedback-results-title">Verbeteringen:</div>
+      <div class="feedback-results-list">
+        ${incorrectResults.map(r => {
+          const corrections = [];
+          if (!r.details.naamval) corrections.push(`naamval: ${r.correct.naamval}`);
+          if (!r.details.getal) corrections.push(`getal: ${r.correct.getal}`);
+          if (!r.details.verklaring) corrections.push(`verklaring: ${r.correct.verklaring}`);
+          return `
+            <div class="feedback-result-item ${r.matchCount > 0 ? 'partial' : 'wrong'}">
+              <span class="feedback-icon">${r.matchCount > 0 ? '◐' : '✗'}</span>
+              <span>${r.matchCount}/3 goed → ${corrections.join(', ')}</span>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  feedbackEl.className = `feedback ${className}`;
+  feedbackEl.innerHTML = `
+    <div class="feedback-header">
+      <span>${icon}</span>
+      <span>${title}</span>
+    </div>
+    <div class="feedback-score">${perfectCount} / ${results.length} volledig goed (${totalPoints.toFixed(1)} / ${maxPoints.toFixed(1)} punten)</div>
+    ${detailsHtml}
+  `;
+  feedbackEl.style.display = 'block';
 }
 
 /**
