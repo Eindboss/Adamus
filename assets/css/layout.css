@@ -83,7 +83,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  margin: var(--space-6) 0 var(--space-5);
+  margin: var(--space-3) 0 var(--space-3);
 }
 
 .page-header h1 {
@@ -92,12 +92,12 @@
   margin: 0;
 }
 
-/* Subject Grid */
+/* Subject Grid - 3 columns for 7 tiles (3-3-1 layout) */
 .subject-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--space-4);
-  margin: var(--space-5) 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin: var(--space-3) 0;
 }
 
 /* Quiz Grid (voor toetsen binnen een vak) */
@@ -161,7 +161,14 @@ main {
 .font-semibold { font-weight: 600; }
 .font-bold { font-weight: 700; }
 
-/* Responsive */
+/* Responsive - tablet */
+@media (max-width: 900px) {
+  .subject-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive - mobile */
 @media (max-width: 640px) {
   .wrap {
     padding: var(--space-3) var(--space-3) var(--space-6);
