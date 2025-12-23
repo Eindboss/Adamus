@@ -391,3 +391,215 @@ export function countGroupedInputs(items) {
   }
   return count;
 }
+
+// ===========================================
+// Confetti Animation
+// ===========================================
+
+const confettiColors = [
+  '#c9a227', // brand gold
+  '#1f4a38', // brand green
+  '#4ade80', // success green
+  '#f59e0b', // amber
+  '#ec4899', // pink
+  '#8b5cf6', // purple
+];
+
+/**
+ * Show confetti celebration
+ */
+export function showConfetti(duration = 3000) {
+  const container = document.createElement('div');
+  container.className = 'confetti-container';
+  document.body.appendChild(container);
+
+  // Create confetti pieces
+  const pieceCount = 50;
+  for (let i = 0; i < pieceCount; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.cssText = `
+      left: ${Math.random() * 100}%;
+      background: ${confettiColors[Math.floor(Math.random() * confettiColors.length)]};
+      animation-delay: ${Math.random() * 2}s;
+      animation-duration: ${2 + Math.random() * 2}s;
+      transform: rotate(${Math.random() * 360}deg);
+      width: ${5 + Math.random() * 10}px;
+      height: ${5 + Math.random() * 10}px;
+      border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+    `;
+    container.appendChild(confetti);
+  }
+
+  // Remove after animation
+  setTimeout(() => {
+    container.remove();
+  }, duration + 1000);
+}
+
+// ===========================================
+// Timer Warnings
+// ===========================================
+
+/**
+ * Update timer with warning states
+ */
+export function updateTimerWarning(timerEl, metaEl, secondsLeft, totalSeconds) {
+  if (!timerEl) return;
+
+  const percentage = secondsLeft / totalSeconds;
+
+  // Remove existing classes
+  timerEl.classList.remove('timer-warning', 'timer-critical');
+  if (metaEl) metaEl.classList.remove('timer-urgent');
+
+  if (percentage <= 0.1 || secondsLeft <= 10) {
+    // Critical: less than 10% or 10 seconds
+    timerEl.classList.add('timer-critical');
+    if (metaEl) metaEl.classList.add('timer-urgent');
+  } else if (percentage <= 0.25 || secondsLeft <= 30) {
+    // Warning: less than 25% or 30 seconds
+    timerEl.classList.add('timer-warning');
+  }
+}
+
+// ===========================================
+// Error Boundary
+// ===========================================
+
+/**
+ * Show error message with retry option
+ */
+export function showError(container, message, onRetry = null) {
+  const errorHtml = `
+    <div class="error-boundary">
+      <div class="card" style="text-align: center; padding: var(--space-6);">
+        <div style="font-size: 3rem; margin-bottom: var(--space-4);">⚠️</div>
+        <h3 style="margin-bottom: var(--space-2);">Er ging iets mis</h3>
+        <p style="color: var(--muted); margin-bottom: var(--space-4);">${message}</p>
+        ${onRetry ? '<button class="btn btn-primary error-retry">Opnieuw proberen</button>' : ''}
+      </div>
+    </div>
+  `;
+
+  if (typeof container === 'string') {
+    container = document.querySelector(container);
+  }
+
+  if (container) {
+    container.innerHTML = errorHtml;
+
+    if (onRetry) {
+      const retryBtn = container.querySelector('.error-retry');
+      if (retryBtn) {
+        retryBtn.addEventListener('click', () => {
+          container.innerHTML = '';
+          onRetry();
+        });
+      }
+    }
+  }
+}
+
+// ===========================================
+// Loading States
+// ===========================================
+
+/**
+ * Show loading spinner
+ */
+export function showLoading(container, message = 'Laden...') {
+  const loadingHtml = `
+    <div class="loading-container">
+      <div class="loading-spinner"></div>
+      <p>${message}</p>
+    </div>
+  `;
+
+  if (typeof container === 'string') {
+    container = document.querySelector(container);
+  }
+
+  if (container) {
+    container.innerHTML = loadingHtml;
+  }
+}
+
+/**
+ * Show skeleton loading cards
+ */
+export function showSkeletonCards(container, count = 3) {
+  let html = '';
+  for (let i = 0; i < count; i++) {
+    html += `<div class="skeleton-loading skeleton-card"></div>`;
+  }
+
+  if (typeof container === 'string') {
+    container = document.querySelector(container);
+  }
+
+  if (container) {
+    container.innerHTML = html;
+  }
+}
+
+// ===========================================
+// Quiz Progress Saving
+// ===========================================
+
+const PROGRESS_KEY = 'adamus-quiz-progress';
+
+/**
+ * Save quiz progress
+ */
+export function saveQuizProgress(subjectId, data) {
+  try {
+    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+    progress[subjectId] = {
+      ...data,
+      savedAt: Date.now()
+    };
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+  } catch (e) {
+    console.warn('Failed to save progress:', e);
+  }
+}
+
+/**
+ * Load quiz progress
+ */
+export function loadQuizProgress(subjectId) {
+  try {
+    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+    const saved = progress[subjectId];
+
+    // Check if progress is recent (within 24 hours)
+    if (saved && Date.now() - saved.savedAt < 24 * 60 * 60 * 1000) {
+      return saved;
+    }
+    return null;
+  } catch (e) {
+    console.warn('Failed to load progress:', e);
+    return null;
+  }
+}
+
+/**
+ * Clear quiz progress
+ */
+export function clearQuizProgress(subjectId) {
+  try {
+    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+    delete progress[subjectId];
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+  } catch (e) {
+    console.warn('Failed to clear progress:', e);
+  }
+}
+
+/**
+ * Check if there's saved progress
+ */
+export function hasQuizProgress(subjectId) {
+  return loadQuizProgress(subjectId) !== null;
+}

@@ -150,6 +150,46 @@
   color: var(--brand);
 }
 
+/* Flashcard Card - Visual distinction */
+.quiz-card-secondary {
+  background: var(--bg);
+  border-style: dashed;
+}
+
+.quiz-card-secondary .icon-wrap {
+  background: linear-gradient(135deg, var(--bg-alt) 0%, var(--card) 100%);
+  border: 1px solid var(--border);
+}
+
+.quiz-card-secondary .icon-wrap svg {
+  stroke: var(--muted);
+}
+
+.quiz-card-secondary:hover .icon-wrap {
+  background: var(--brand-light);
+  border-color: var(--brand);
+}
+
+.quiz-card-secondary:hover .icon-wrap svg {
+  stroke: var(--brand-dark);
+}
+
+.quiz-card-secondary .quiz-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.quiz-card-secondary .quiz-meta::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--muted);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
 /* ===========================================
    Buttons
    =========================================== */

@@ -196,3 +196,59 @@ select:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* ===========================================
+   Dark Mode
+   =========================================== */
+[data-theme="dark"] {
+  --bg: #1a1815;
+  --bg-alt: #252220;
+  --card: #2a2725;
+  --text: #f5f3ef;
+  --text-light: #c9c5bd;
+  --muted: #8a8578;
+  --muted-foreground: #9a9590;
+
+  /* Brand stays the same for consistency */
+  --brand: #d4af37;
+  --brand-light: #3d3520;
+  --brand-dark: #e8c547;
+
+  /* Feedback Colors - adjusted for dark */
+  --success: #4ade80;
+  --success-light: #1a3328;
+  --success-dark: #22c55e;
+  --success-text: #86efac;
+  --error: #f87171;
+  --error-light: #3d2020;
+  --error-dark: #ef4444;
+  --error-text: #fca5a5;
+  --warning: #fbbf24;
+  --warning-light: #3d3520;
+  --warning-text: #fcd34d;
+
+  /* Header Colors - darker green */
+  --header-bg: #0f251c;
+  --header-bg-dark: #0a1a13;
+  --header-text: #f9f8f5;
+  --header-accent: #d4af37;
+
+  /* Flashcard Back */
+  --flashcard-back: #0a1a13;
+
+  /* UI Colors */
+  --border: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode transition */
+body {
+  transition: background-color var(--duration-normal) var(--ease),
+              color var(--duration-normal) var(--ease);
+}
+
+.card, .question-card, .summary-card, .subject-card, .quiz-card {
+  transition: background-color var(--duration-normal) var(--ease),
+              border-color var(--duration-normal) var(--ease);
+}

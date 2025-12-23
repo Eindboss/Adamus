@@ -3,7 +3,7 @@
    Core quiz logic and state management
    =========================================== */
 
-import { $, $$, $$$, shuffle, loadJSON, htmlToText, getUrlParam, normalizeAnswer, matchesAcceptList, countFillableCells, countGroupedInputs } from './utils.js';
+import { $, $$, $$$, shuffle, loadJSON, htmlToText, getUrlParam, normalizeAnswer, matchesAcceptList, countFillableCells, countGroupedInputs, showConfetti, updateTimerWarning, showError as showErrorUI, showLoading, saveQuizProgress, loadQuizProgress, clearQuizProgress, hasQuizProgress } from './utils.js';
 import { startTimer, stopTimer, resetTimer, pauseTimer, resumeTimer, initTimer } from './timer.js';
 import { readStats, writeStats, updateStats, createSessionHistory, updateQuestionBox, incrementSession, getSpacedQuestions, getMasteryStats } from './stats.js';
 import { createCoordinateSystem } from './graph.js';
@@ -72,14 +72,61 @@ export async function initQuiz() {
   // Setup event listeners
   setupEventListeners();
 
-  // Load questions and start
-  await loadQuestions();
+  // Check for saved progress
+  const savedProgress = loadQuizProgress(subjectId);
+  if (savedProgress && savedProgress.currentIndex > 0) {
+    showResumePrompt(savedProgress);
+  } else {
+    // Load questions and start fresh
+    await loadQuestions();
+  }
+}
+
+/**
+ * Show resume prompt for saved progress
+ */
+function showResumePrompt(savedProgress) {
+  const container = $('quizArea');
+  if (!container) return;
+
+  const percentage = savedProgress.totalQuestions > 0
+    ? Math.round((savedProgress.currentIndex / savedProgress.totalQuestions) * 100)
+    : 0;
+
+  container.innerHTML = `
+    <div class="card" style="text-align: center; padding: var(--space-6);">
+      <h3 style="margin-bottom: var(--space-3);">Voortgang gevonden</h3>
+      <p style="color: var(--muted); margin-bottom: var(--space-4);">
+        Je was bij vraag ${savedProgress.currentIndex + 1} van ${savedProgress.totalQuestions} (${percentage}% voltooid).<br>
+        Score: ${savedProgress.score} goed, ${savedProgress.wrong} fout
+      </p>
+      <div style="display: flex; gap: var(--space-3); justify-content: center;">
+        <button class="btn btn-primary" id="resumeQuizBtn">Doorgaan</button>
+        <button class="btn" id="restartQuizBtn">Opnieuw beginnen</button>
+      </div>
+    </div>
+  `;
+
+  $('resumeQuizBtn')?.addEventListener('click', async () => {
+    await loadQuestions(savedProgress);
+  });
+
+  $('restartQuizBtn')?.addEventListener('click', async () => {
+    clearQuizProgress(state.subjectId);
+    await loadQuestions();
+  });
 }
 
 /**
  * Load questions for current subject
  */
-async function loadQuestions() {
+async function loadQuestions(savedProgress = null) {
+  // Show loading state
+  const container = $('quizArea');
+  if (container) {
+    showLoading(container, 'Vragen laden...');
+  }
+
   try {
     const meta = state.subjectMeta;
     const data = await loadJSON(meta.file);
@@ -124,15 +171,25 @@ async function loadQuestions() {
       return q;
     });
 
-    // Reset state
-    state.currentIndex = 0;
-    state.score = 0;
-    state.wrong = 0;
-    state.skipped = 0;
+    // Restore or reset state
+    if (savedProgress && savedProgress.questions) {
+      // Restore saved state
+      state.questions = savedProgress.questions;
+      state.currentIndex = savedProgress.currentIndex;
+      state.score = savedProgress.score;
+      state.wrong = savedProgress.wrong;
+      state.skipped = savedProgress.skipped || 0;
+    } else {
+      // Fresh start
+      state.currentIndex = 0;
+      state.score = 0;
+      state.wrong = 0;
+      state.skipped = 0;
+    }
     state.phase = 'question';
     state.history.clear();
 
-    // Render first question
+    // Render current question
     renderQuestion();
     updateUI();
 
@@ -1575,6 +1632,17 @@ export function skipQuestion() {
 export function nextQuestion() {
   if (state.currentIndex < state.questions.length - 1) {
     state.currentIndex++;
+
+    // Auto-save progress
+    saveQuizProgress(state.subjectId, {
+      currentIndex: state.currentIndex,
+      totalQuestions: state.questions.length,
+      questions: state.questions,
+      score: state.score,
+      wrong: state.wrong,
+      skipped: state.skipped
+    });
+
     renderQuestion();
   } else {
     renderSummary();
@@ -1589,6 +1657,9 @@ function renderSummary() {
   stopTimer();
   state.phase = 'summary';
 
+  // Clear saved progress since quiz is complete
+  clearQuizProgress(state.subjectId);
+
   const container = $('quizArea');
   if (!container) return;
 
@@ -1597,6 +1668,11 @@ function renderSummary() {
   const wrong = state.history.getWrongCount();
   const skipped = state.history.getSkippedCount();
   const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+  // Show confetti for good scores (70%+)
+  if (percentage >= 70) {
+    showConfetti(4000);
+  }
 
   // Build history table
   const historyRows = state.history.getAll().map((h, i) => `
@@ -1730,17 +1806,15 @@ function updateControls() {
 }
 
 /**
- * Show error message
+ * Show error message with retry option
  */
 function showError(message) {
   const container = $('quizArea');
   if (container) {
-    container.innerHTML = `
-      <div class="alert alert-error">
-        <span class="alert-icon">⚠️</span>
-        <span>${message}</span>
-      </div>
-    `;
+    showErrorUI(container, message, () => {
+      // Retry loading questions
+      loadQuestions();
+    });
   }
 }
 

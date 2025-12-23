@@ -2,12 +2,13 @@
    Adamus - Timer Module
    =========================================== */
 
-import { $ } from './utils.js';
+import { $, updateTimerWarning } from './utils.js';
 
 const DEFAULT_SECONDS = 90;
 
 let timerId = null;
 let remaining = DEFAULT_SECONDS;
+let totalSeconds = DEFAULT_SECONDS;
 let isPaused = false;
 let onTimeUp = null;
 
@@ -54,6 +55,7 @@ export function stopTimer() {
  */
 export function resetTimer(seconds = DEFAULT_SECONDS) {
   remaining = seconds;
+  totalSeconds = seconds;
   updateTimerUI();
 }
 
@@ -93,9 +95,13 @@ export function getIsPaused() {
 function updateTimerUI() {
   const countdownEl = $('countdown');
   const dotEl = $('timerDot');
+  const metaEl = $('timerMeta');
 
   if (countdownEl) {
     countdownEl.textContent = String(remaining);
+
+    // Apply warning animations
+    updateTimerWarning(countdownEl, metaEl, remaining, totalSeconds);
   }
 
   if (dotEl) {
