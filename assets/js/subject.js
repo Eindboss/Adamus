@@ -86,6 +86,8 @@ async function init() {
       card.style.setProperty('--accent', accent.color);
       card.style.setProperty('--accent-light', accent.light);
 
+      const weekBadge = meta.week ? `<span class="week-badge">${meta.week}</span>` : '';
+
       card.innerHTML = `
         <div class="icon-wrap">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -95,7 +97,7 @@ async function init() {
         </div>
         <div class="quiz-info">
           <div class="quiz-title">${title}</div>
-          <div class="quiz-meta">${meta.schema === 'toets' ? 'Toets' : 'Quiz'}</div>
+          <div class="quiz-meta">${meta.schema === 'toets' ? 'Toets' : 'Quiz'}${weekBadge}</div>
         </div>
         <span class="arrow">→</span>
       `;
@@ -119,7 +121,7 @@ async function init() {
           </div>
           <div class="quiz-info">
             <div class="quiz-title">${title}</div>
-            <div class="quiz-meta">Flashcards</div>
+            <div class="quiz-meta">Flashcards${weekBadge}</div>
           </div>
           <span class="arrow">→</span>
         `;

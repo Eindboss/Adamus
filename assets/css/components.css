@@ -297,6 +297,21 @@
   border-color: transparent;
 }
 
+/* Week Badge (toetsweek indicator) */
+.week-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: var(--space-2);
+  padding: 2px 8px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-sm);
+  background: var(--brand-light);
+  color: var(--brand-dark);
+}
+
 /* ===========================================
    Progress Bar
    =========================================== */
