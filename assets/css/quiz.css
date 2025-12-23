@@ -933,6 +933,32 @@ textarea.open-input {
   .subfield-label {
     min-width: auto;
   }
+
+  /* Table improvements for mobile */
+  .declension-table {
+    min-width: 320px;
+    font-size: 0.875rem;
+  }
+
+  .declension-table th,
+  .declension-table td {
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .table-input {
+    min-width: 50px;
+    padding: var(--space-1);
+    font-size: 0.8125rem;
+  }
+
+  .table-row-label {
+    min-width: 60px;
+    font-size: 0.75rem;
+  }
+
+  .table-lemma {
+    font-size: 0.8125rem;
+  }
 }
 
 /* ===========================================
