@@ -6,7 +6,8 @@
       "label": "Latijn – Proeftoets (Flumen)",
       "title": "Latijn – Proeftoets (Flumen)",
       "file": "data/latijn/flumen.json",
-      "schema": "toets"
+      "schema": "toets",
+      "hideFlashcards": true
     },
     {
       "id": "aardrijkskunde-p1",

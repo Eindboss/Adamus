@@ -111,6 +111,9 @@ async function loadQuestions() {
     incrementSession(state.subjectId);
     normalized = getSpacedQuestions(state.subjectId, normalized);
 
+    // Shuffle question order for variety
+    shuffle(normalized);
+
     // Shuffle MC answers
     state.questions = normalized.map(q => {
       if (q.type === 'mc') {

@@ -37,23 +37,6 @@ html {
   --accent-light: #f5ecd0;
   --accent-dark: #a68618;
 
-  /* Legacy subject colors - all map to brand for uniformity */
-  --accent-blue: var(--brand);
-  --accent-blue-light: var(--brand-light);
-  --accent-blue-dark: var(--brand-dark);
-
-  --accent-red: var(--brand);
-  --accent-red-light: var(--brand-light);
-  --accent-red-dark: var(--brand-dark);
-
-  --accent-green: var(--brand);
-  --accent-green-light: var(--brand-light);
-  --accent-green-dark: var(--brand-dark);
-
-  --accent-purple: var(--brand);
-  --accent-purple-light: var(--brand-light);
-  --accent-purple-dark: var(--brand-dark);
-
   /* Feedback Colors */
   --success: #2e7d52;
   --success-light: #e3f2e8;
@@ -84,7 +67,7 @@ html {
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-display: 'Plus Jakarta Sans', var(--font-sans);
-  --font-brand: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-brand: 'Plus Jakarta Sans', var(--font-sans);
 
   /* Spacing */
   --space-1: 4px;
@@ -179,15 +162,15 @@ img {
 
 /* Focus States */
 :focus-visible {
-  outline: 3px solid var(--accent-blue);
+  outline: 3px solid var(--brand);
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
 
 /* Selection */
 ::selection {
-  background: var(--accent-blue-light);
-  color: var(--accent-blue-dark);
+  background: var(--brand-light);
+  color: var(--brand-dark);
 }
 
 /* Reduced Motion */

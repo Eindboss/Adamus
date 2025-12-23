@@ -102,8 +102,8 @@ async function init() {
 
       listEl.appendChild(card);
 
-      // Flashcard link (only if quiz has content)
-      if (meta.file) {
+      // Flashcard link (only if quiz has content and flashcards are not hidden)
+      if (meta.file && !meta.hideFlashcards) {
         const flashcardCard = document.createElement('a');
         flashcardCard.className = 'quiz-card quiz-card-secondary';
         flashcardCard.href = `flashcards.html?subject=${encodeURIComponent(meta.id)}`;
