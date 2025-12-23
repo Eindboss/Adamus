@@ -6,35 +6,31 @@
   "questions": [
     {
       "id": "w3-1",
-      "type": "mc",
-      "q": "Bekijk het assenstelsel. Wat zijn de coördinaten van de oorsprong?",
-      "answers": ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"],
-      "correctIndex": 0,
+      "type": "open",
+      "q": "In een assenstelsel heeft de oorsprong O coördinaten (?, ?). Vul de twee getallen in, gescheiden door een komma.",
+      "accept": ["0, 0", "0,0", "(0, 0)", "(0,0)"],
       "explanation": "De oorsprong O is het snijpunt van de x-as en de y-as. Dit punt heeft altijd de coördinaten (0, 0)."
     },
     {
       "id": "w3-2",
-      "type": "mc",
+      "type": "open",
       "q": "Punt A heeft coördinaten (4, 3). Wat is de x-coördinaat van punt A?",
-      "answers": ["4", "3", "7", "1"],
-      "correctIndex": 0,
+      "accept": ["4"],
       "explanation": "Bij coördinaten (x, y) staat het eerste getal voor de x-coördinaat. Dus bij (4, 3) is de x-coördinaat 4."
     },
     {
       "id": "w3-3",
-      "type": "mc",
+      "type": "open",
       "q": "Punt B heeft coördinaten (2, 5). Wat is de y-coördinaat van punt B?",
-      "answers": ["5", "2", "7", "3"],
-      "correctIndex": 0,
+      "accept": ["5"],
       "explanation": "Bij coördinaten (x, y) staat het tweede getal voor de y-coördinaat. Dus bij (2, 5) is de y-coördinaat 5."
     },
     {
       "id": "w3-4",
-      "type": "mc",
-      "q": "In een assenstelsel ligt punt P op 3 hokjes naar rechts en 2 hokjes omhoog vanaf de oorsprong. Wat zijn de coördinaten van P?",
-      "answers": ["(3, 2)", "(2, 3)", "(3, 3)", "(2, 2)"],
-      "correctIndex": 0,
-      "explanation": "Punt P ligt 3 hokjes naar rechts (x = 3) en 2 hokjes omhoog (y = 2). De coördinaten zijn dus (3, 2)."
+      "type": "open",
+      "q": "Punt P ligt 3 naar rechts en 2 omhoog vanaf de oorsprong. Schrijf de coördinaten van P op.",
+      "accept": ["(3, 2)", "(3,2)", "3, 2", "3,2"],
+      "explanation": "3 naar rechts betekent x = 3, 2 omhoog betekent y = 2. Coördinaten: (3, 2)."
     },
     {
       "id": "w3-5",
@@ -47,57 +43,42 @@
         "(2.5, 3.5) en (4.5, 1.5)"
       ],
       "correctIndex": 0,
-      "explanation": "Roosterpunten hebben alleen hele getallen als coördinaten. (2, 3) en (5, 1) zijn allebei roosterpunten want ze hebben geen kommagetallen."
+      "explanation": "Roosterpunten hebben alleen hele getallen als coördinaten. (2, 3) en (5, 1) zijn roosterpunten."
     },
     {
       "id": "w3-6",
-      "type": "mc",
-      "q": "Lisa fietst van huis naar school. De grafiek laat de afgelegde afstand zien. Na 15 minuten stopt de grafiek bij 3 km en blijft dan horizontaal. Hoeveel kilometer is de school van haar huis?",
-      "answers": ["3 km", "4 km", "15 km", "5 km"],
-      "correctIndex": 0,
-      "explanation": "De grafiek stopt bij een afstand van 3 km (lees af op de verticale as). De 15 minuten is de tijd, niet de afstand."
+      "type": "open",
+      "q": "Bereken: 5 - 3 × (2 - 4)",
+      "accept": ["11"],
+      "explanation": "Eerst haakjes: 2 - 4 = -2. Dan vermenigvuldigen: 3 × -2 = -6. Dan aftrekken: 5 - (-6) = 5 + 6 = 11."
     },
     {
       "id": "w3-7",
-      "type": "mc",
-      "q": "In een grafiek van afstand tegen tijd wordt de lijn na een tijdje horizontaal (plat). Wat betekent dit?",
-      "answers": [
-        "Je staat stil (de afstand neemt niet meer toe)",
-        "Je gaat sneller rijden",
-        "Je gaat langzamer rijden",
-        "Je rijdt achteruit"
-      ],
-      "correctIndex": 0,
-      "explanation": "Een horizontale lijn betekent dat de afstand niet verandert. Je beweegt dus niet meer, je staat stil."
+      "type": "open",
+      "q": "Bereken: 2 + 8 × a voor a = 5",
+      "accept": ["42"],
+      "explanation": "Vul a = 5 in: 2 + 8 × 5 = 2 + 40 = 42. Let op: eerst vermenigvuldigen, dan optellen!"
     },
     {
       "id": "w3-8",
-      "type": "mc",
-      "q": "Een grafiek loopt eerst steil omhoog, dan wordt hij vlakker. Wat betekent dit?",
-      "answers": [
-        "Eerst snel, daarna langzamer",
-        "Eerst langzaam, daarna sneller",
-        "De snelheid blijft gelijk",
-        "Er wordt gestopt"
-      ],
-      "correctIndex": 0,
-      "explanation": "Een steile lijn betekent snelle verandering. Een vlakkere lijn betekent langzamere verandering. Dus: eerst snel, daarna langzamer."
+      "type": "open",
+      "q": "Bereken: 3 × b - 10 voor b = 6",
+      "accept": ["8"],
+      "explanation": "Vul b = 6 in: 3 × 6 - 10 = 18 - 10 = 8."
     },
     {
       "id": "w3-9",
-      "type": "mc",
-      "q": "Een taxibedrijf rekent: kosten = 3 + 2 × aantal kilometers. Hoeveel kost een rit van 5 kilometer?",
-      "answers": ["13 euro", "10 euro", "15 euro", "8 euro"],
-      "correctIndex": 0,
-      "explanation": "Vul in: kosten = 3 + 2 × 5 = 3 + 10 = 13 euro. De 3 is het starttarief, en per kilometer betaal je 2 euro extra."
+      "type": "open",
+      "q": "Een taxibedrijf rekent: kosten = 3 + 2 × aantal kilometers. Hoeveel euro kost een rit van 5 kilometer?",
+      "accept": ["13", "€13", "€ 13", "13 euro"],
+      "explanation": "Vul in: kosten = 3 + 2 × 5 = 3 + 10 = 13 euro."
     },
     {
       "id": "w3-10",
-      "type": "mc",
-      "q": "Een zwembad rekent: kosten = 2,50 + 1,50 × aantal uren. Wat kost 3 uur zwemmen?",
-      "answers": ["7 euro", "6 euro", "4,50 euro", "9 euro"],
-      "correctIndex": 0,
-      "explanation": "Vul in: kosten = 2,50 + 1,50 × 3 = 2,50 + 4,50 = 7 euro. De 2,50 is de entree, per uur komt er 1,50 bij."
+      "type": "open",
+      "q": "Een zwembad rekent: kosten = 2,50 + 1,50 × aantal uren. Wat kost 3 uur zwemmen? (antwoord in euro)",
+      "accept": ["7", "7,00", "€7", "€ 7", "7 euro", "€7,00"],
+      "explanation": "Vul in: kosten = 2,50 + 1,50 × 3 = 2,50 + 4,50 = 7 euro."
     },
     {
       "id": "w3-11",
@@ -110,52 +91,42 @@
         "De totale prijs"
       ],
       "correctIndex": 0,
-      "explanation": "In de formule prijs = 8 + 5 × dagen is 8 het vaste bedrag dat je altijd betaalt (basisprijs/starttarief). De 5 is wat je per dag extra betaalt."
+      "explanation": "De 8 is het vaste bedrag dat je altijd betaalt (basisprijs). De 5 is wat je per dag extra betaalt."
     },
     {
       "id": "w3-12",
-      "type": "mc",
-      "q": "De lengte van een kaars in cm kun je berekenen met: lengte = 20 - 2 × aantal uren. Hoe lang is de kaars na 4 uur branden?",
-      "answers": ["12 cm", "14 cm", "8 cm", "16 cm"],
-      "correctIndex": 0,
-      "explanation": "Vul in: lengte = 20 - 2 × 4 = 20 - 8 = 12 cm. De kaars begint op 20 cm en wordt per uur 2 cm korter."
+      "type": "open",
+      "q": "De lengte van een kaars: lengte = 20 - 2 × aantal uren. Hoe lang is de kaars (in cm) na 4 uur branden?",
+      "accept": ["12", "12 cm"],
+      "explanation": "lengte = 20 - 2 × 4 = 20 - 8 = 12 cm."
     },
     {
       "id": "w3-13",
-      "type": "mc",
-      "q": "Gegeven is de formule: bedrag = 15 + 10 × a. Bereken het bedrag als a = 3.",
-      "answers": ["45", "28", "55", "33"],
-      "correctIndex": 0,
-      "explanation": "Vul a = 3 in: bedrag = 15 + 10 × 3 = 15 + 30 = 45."
+      "type": "open",
+      "q": "Gegeven: bedrag = 15 + 10 × a. Bereken het bedrag als a = 3.",
+      "accept": ["45"],
+      "explanation": "bedrag = 15 + 10 × 3 = 15 + 30 = 45."
     },
     {
       "id": "w3-14",
-      "type": "mc",
+      "type": "open",
       "q": "Bij de formule hoogte = 100 - 6 × t, bereken de hoogte voor t = 5.",
-      "answers": ["70", "130", "94", "30"],
-      "correctIndex": 0,
-      "explanation": "Vul t = 5 in: hoogte = 100 - 6 × 5 = 100 - 30 = 70."
+      "accept": ["70"],
+      "explanation": "hoogte = 100 - 6 × 5 = 100 - 30 = 70."
     },
     {
       "id": "w3-15",
-      "type": "mc",
-      "q": "Je hebt de formule kosten = 50 + 10 × d. Welke waarden horen bij d = 0, 1, 2, 3?",
-      "answers": [
-        "50, 60, 70, 80",
-        "10, 20, 30, 40",
-        "50, 51, 52, 53",
-        "0, 60, 70, 80"
-      ],
-      "correctIndex": 0,
-      "explanation": "Voor d=0: 50+10×0=50. Voor d=1: 50+10×1=60. Voor d=2: 50+10×2=70. Voor d=3: 50+10×3=80."
+      "type": "open",
+      "q": "Gegeven de formule y = 3 × x + 2. Bereken y als x = 4.",
+      "accept": ["14"],
+      "explanation": "y = 3 × 4 + 2 = 12 + 2 = 14."
     },
     {
       "id": "w3-16",
-      "type": "mc",
-      "q": "Bij de formule y = 3 × x + 2, wat is y als x = 4?",
-      "answers": ["14", "9", "12", "18"],
-      "correctIndex": 0,
-      "explanation": "Vul x = 4 in: y = 3 × 4 + 2 = 12 + 2 = 14."
+      "type": "open",
+      "q": "Gegeven de formule y = 3 × x + 2. Bereken y als x = 0.",
+      "accept": ["2"],
+      "explanation": "y = 3 × 0 + 2 = 0 + 2 = 2."
     },
     {
       "id": "w3-17",
@@ -168,36 +139,81 @@
         "y = 5 + 10 × x"
       ],
       "correctIndex": 0,
-      "explanation": "Bij x=0 is y=10 (startpunt op de y-as). Per stap naar rechts stijgt y met 10. Dus: y = 10 + 10 × x."
+      "explanation": "Bij x=0 is y=10 (startwaarde). Per stap stijgt y met 10 (dat is de helling). Dus: y = 10 + 10 × x."
     },
     {
       "id": "w3-18",
       "type": "mc",
-      "q": "Een globale grafiek laat zien dat iets eerst snel daalt en daarna langzaam daalt. Welke beschrijving past hierbij?",
+      "q": "Een globale grafiek laat zien dat iets eerst snel daalt en daarna langzaam daalt. Welke situatie past hierbij?",
       "answers": [
         "De temperatuur van thee die afkoelt",
-        "Een auto die steeds sneller gaat rijden",
+        "Een auto die steeds sneller rijdt",
         "Water dat in een gelijk tempo uit een kraan stroomt",
         "Een vliegtuig dat opstijgt"
       ],
       "correctIndex": 0,
-      "explanation": "Hete thee koelt eerst snel af (groot temperatuurverschil met de omgeving), daarna steeds langzamer als hij dichter bij kamertemperatuur komt."
+      "explanation": "Hete thee koelt eerst snel af, daarna steeds langzamer naarmate het dichter bij kamertemperatuur komt."
     },
     {
       "id": "w3-19",
-      "type": "mc",
-      "q": "Een schoonmaakbedrijf rekent: kosten = 40 + 15 × a, waarbij a het aantal uren is. Hoeveel kost 3 uur schoonmaken?",
-      "answers": ["85 euro", "55 euro", "95 euro", "70 euro"],
-      "correctIndex": 0,
-      "explanation": "Vul a = 3 in: kosten = 40 + 15 × 3 = 40 + 45 = 85 euro."
+      "type": "open",
+      "q": "Een schoonmaakbedrijf: kosten = 40 + 15 × a (a = aantal uren). Hoeveel euro kost 3 uur?",
+      "accept": ["85", "€85", "€ 85", "85 euro"],
+      "explanation": "kosten = 40 + 15 × 3 = 40 + 45 = 85 euro."
     },
     {
       "id": "w3-20",
+      "type": "open",
+      "q": "Een vierkant heeft zijde a. De omtrek is: omtrek = 4 × a. Bereken de omtrek als a = 7.",
+      "accept": ["28"],
+      "explanation": "omtrek = 4 × 7 = 28."
+    },
+    {
+      "id": "w3-21",
+      "type": "open",
+      "q": "Bereken: 2 - (b - d) voor b = 7 en d = 3",
+      "accept": ["-2"],
+      "explanation": "Eerst haakjes: b - d = 7 - 3 = 4. Dan: 2 - 4 = -2."
+    },
+    {
+      "id": "w3-22",
+      "type": "open",
+      "q": "Bereken: 5 × (a + 2) voor a = 4",
+      "accept": ["30"],
+      "explanation": "Eerst haakjes: a + 2 = 4 + 2 = 6. Dan: 5 × 6 = 30."
+    },
+    {
+      "id": "w3-23",
       "type": "mc",
-      "q": "Een vierkant heeft zijde a. De omtrek is: omtrek = 4 × a. Wat is de omtrek als a = 7?",
-      "answers": ["28", "11", "49", "14"],
+      "q": "In een grafiek van afstand tegen tijd wordt de lijn horizontaal. Wat betekent dit?",
+      "answers": [
+        "Je staat stil",
+        "Je gaat sneller rijden",
+        "Je gaat langzamer rijden",
+        "Je rijdt achteruit"
+      ],
       "correctIndex": 0,
-      "explanation": "Vul a = 7 in: omtrek = 4 × 7 = 28."
+      "explanation": "Een horizontale lijn betekent dat de afstand niet verandert. Je beweegt niet meer."
+    },
+    {
+      "id": "w3-24",
+      "type": "mc",
+      "q": "Een grafiek loopt eerst steil omhoog, dan wordt hij vlakker. Wat betekent dit?",
+      "answers": [
+        "Eerst snel, daarna langzamer",
+        "Eerst langzaam, daarna sneller",
+        "De snelheid blijft gelijk",
+        "Er wordt gestopt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Steil = snelle verandering. Vlakker = langzamere verandering."
+    },
+    {
+      "id": "w3-25",
+      "type": "open",
+      "q": "De formule voor het aantal tegels is: aantal = 50 + 10 × r. Hoeveel tegels heb je nodig als r = 4?",
+      "accept": ["90"],
+      "explanation": "aantal = 50 + 10 × 4 = 50 + 40 = 90 tegels."
     }
   ]
 }
