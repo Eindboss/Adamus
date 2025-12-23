@@ -469,6 +469,120 @@
       "q": "Deborah legt een boom op een rechte oprit. De formule is: hoogte = 1 + 2 × afstand. Bereken de hoogte (in cm) bij een afstand van 3 meter.",
       "accept": ["7", "7 cm"],
       "explanation": "hoogte = 1 + 2 × 3 = 1 + 6 = 7 cm."
+    },
+    {
+      "id": "w3-41",
+      "type": "open",
+      "q": "Teken in gedachten een assenstelsel. Noem de getallen bij de assen van -4 tot en met 9. Teken het punt A(2, 3). Hoeveel hokjes naar rechts ga je vanuit O?",
+      "accept": ["2"],
+      "explanation": "De x-coördinaat is 2, dus je gaat 2 hokjes naar rechts vanuit de oorsprong O."
+    },
+    {
+      "id": "w3-42",
+      "type": "open",
+      "q": "Punt P ligt 2 hokjes rechts van A(3, 1). Wat zijn de coördinaten van P?",
+      "accept": ["(5, 1)", "(5,1)", "5, 1", "5,1"],
+      "explanation": "A heeft x = 3. Twee hokjes naar rechts: 3 + 2 = 5. De y blijft 1. Dus P = (5, 1).",
+      "graph": {
+        "xMin": -1,
+        "xMax": 7,
+        "yMin": -1,
+        "yMax": 4,
+        "points": [
+          {"x": 3, "y": 1, "label": "A"},
+          {"x": 5, "y": 1, "label": "P", "color": "#ef4444"}
+        ],
+        "lines": [
+          {"x1": 3, "y1": 1, "x2": 5, "y2": 1, "color": "#3b82f6", "dashed": true}
+        ]
+      }
+    },
+    {
+      "id": "w3-43",
+      "type": "open",
+      "q": "Punt M ligt 4 hokjes onder punt A(2, 5). Schrijf de coördinaten van M op.",
+      "accept": ["(2, 1)", "(2,1)", "2, 1", "2,1"],
+      "explanation": "A heeft y = 5. Vier hokjes omlaag: 5 - 4 = 1. De x blijft 2. Dus M = (2, 1).",
+      "graph": {
+        "xMin": -1,
+        "xMax": 5,
+        "yMin": -1,
+        "yMax": 7,
+        "points": [
+          {"x": 2, "y": 5, "label": "A"},
+          {"x": 2, "y": 1, "label": "M", "color": "#ef4444"}
+        ],
+        "lines": [
+          {"x1": 2, "y1": 5, "x2": 2, "y2": 1, "color": "#3b82f6", "dashed": true}
+        ]
+      }
+    },
+    {
+      "id": "w3-44",
+      "type": "mc",
+      "q": "Welke punten liggen op dezelfde horizontale lijn?",
+      "answers": [
+        "A(1, 3) en B(4, 3)",
+        "A(1, 3) en C(1, 5)",
+        "B(4, 3) en D(2, 1)",
+        "C(1, 5) en D(2, 1)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Punten op dezelfde horizontale lijn hebben dezelfde y-coördinaat. A(1, 3) en B(4, 3) hebben allebei y = 3."
+    },
+    {
+      "id": "w3-45",
+      "type": "open",
+      "q": "Bij een globale grafiek van een fietstocht maakt Jens een tussenstop. Hoe zie je dat aan de grafiek?",
+      "accept": ["horizontaal", "vlak", "lijn is vlak", "horizontale lijn", "stilstand", "afstand verandert niet"],
+      "explanation": "Bij een tussenstop (stilstand) verandert de afstand niet. De grafiek wordt dan horizontaal (een vlakke lijn)."
+    },
+    {
+      "id": "w3-46",
+      "type": "open",
+      "q": "De formule voor de huurprijs van een scooter is: kosten = 25 + 50 × d (d = aantal dagen). Bereken de kosten voor 3 dagen huren.",
+      "accept": ["175", "€175", "€ 175", "175 euro"],
+      "explanation": "kosten = 25 + 50 × 3 = 25 + 150 = 175 euro."
+    },
+    {
+      "id": "w3-47",
+      "type": "mc",
+      "q": "Een vat wordt gevuld met water. De waterhoogte stijgt eerst snel, dan steeds langzamer. Welke vorm heeft het vat waarschijnlijk?",
+      "answers": [
+        "Breed onderin, smaller bovenaan (kegelvorm)",
+        "Smal onderin, breder bovenaan",
+        "Overal even breed (cilinder)",
+        "Dit kun je niet bepalen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Als het vat breed is onderin, stijgt het water eerst snel (weinig volume nodig). Bovenaan waar het smaller is, moet het water hoger stijgen voor hetzelfde volume, dus gaat het langzamer."
+    },
+    {
+      "id": "w3-48",
+      "type": "open",
+      "q": "Xian maakt een fietstocht van 20 km. Na het speelkwartier van de kraan stijgt het water met 5 cm per minuut. De hoogte van het water is: hoogte = 5 × m + 10. Hoe hoog staat het water (in cm) na 6 minuten?",
+      "accept": ["40", "40 cm"],
+      "explanation": "hoogte = 5 × 6 + 10 = 30 + 10 = 40 cm."
+    },
+    {
+      "id": "w3-49",
+      "type": "open",
+      "q": "Bij de formule y = 8 × x maak je een tabel. Vul de y-waarde in als x = 4.",
+      "accept": ["32"],
+      "explanation": "y = 8 × 4 = 32."
+    },
+    {
+      "id": "w3-50",
+      "type": "mc",
+      "q": "In de grafiek zie je de temperatuur in Amsterdam en Brussel op een dag in december. De grafiek van Amsterdam begint hoger. Wat kun je hieruit concluderen?",
+      "answers": [
+        "Om 00:00 uur was het warmer in Amsterdam dan in Brussel",
+        "Amsterdam is altijd warmer dan Brussel",
+        "De temperatuur daalt in Amsterdam",
+        "De temperatuur stijgt in Brussel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Het beginpunt van de grafiek (bij tijd = 0, dus 00:00 uur) is hoger voor Amsterdam. Dit betekent dat het op dat moment warmer was in Amsterdam."
     }
   ]
 }
