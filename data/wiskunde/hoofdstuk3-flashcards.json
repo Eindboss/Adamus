@@ -1,0 +1,218 @@
+{
+  "id": "wiskunde-h3-flashcards",
+  "title": "Wiskunde H3 – Flashcards",
+  "subject": "Wiskunde",
+  "schema": "flashcards",
+  "questions": [
+    {
+      "id": "fc3-01",
+      "type": "open",
+      "q": "Wat is de oorsprong O?",
+      "accept": ["snijpunt van de assen", "(0,0)", "het punt (0, 0)"],
+      "explanation": "De oorsprong O is het snijpunt van de x-as en y-as, met coördinaten (0, 0)."
+    },
+    {
+      "id": "fc3-02",
+      "type": "open",
+      "q": "Hoe heet de horizontale as?",
+      "accept": ["x-as", "de x-as"],
+      "explanation": "De horizontale as heet de x-as."
+    },
+    {
+      "id": "fc3-03",
+      "type": "open",
+      "q": "Hoe heet de verticale as?",
+      "accept": ["y-as", "de y-as"],
+      "explanation": "De verticale as heet de y-as."
+    },
+    {
+      "id": "fc3-04",
+      "type": "open",
+      "q": "Wat zijn roosterpunten?",
+      "accept": ["punten met hele getallen", "punten waarvan beide coördinaten hele getallen zijn"],
+      "explanation": "Roosterpunten zijn punten waarvan beide coördinaten hele getallen zijn."
+    },
+    {
+      "id": "fc3-05",
+      "type": "open",
+      "q": "Punten op de x-as hebben altijd y = ?",
+      "accept": ["0", "nul"],
+      "explanation": "Punten op de x-as hebben altijd y = 0."
+    },
+    {
+      "id": "fc3-06",
+      "type": "open",
+      "q": "Punten op de y-as hebben altijd x = ?",
+      "accept": ["0", "nul"],
+      "explanation": "Punten op de y-as hebben altijd x = 0."
+    },
+    {
+      "id": "fc3-07",
+      "type": "open",
+      "q": "Wat is de x-coördinaat van punt (5, 3)?",
+      "accept": ["5"],
+      "explanation": "De x-coördinaat is het eerste getal: 5."
+    },
+    {
+      "id": "fc3-08",
+      "type": "open",
+      "q": "Wat is de y-coördinaat van punt (5, 3)?",
+      "accept": ["3"],
+      "explanation": "De y-coördinaat is het tweede getal: 3."
+    },
+    {
+      "id": "fc3-09",
+      "type": "open",
+      "q": "Punten met dezelfde y-coördinaat liggen op een ... lijn.",
+      "accept": ["horizontale", "horizontale lijn"],
+      "explanation": "Punten met dezelfde y-coördinaat liggen op een horizontale lijn."
+    },
+    {
+      "id": "fc3-10",
+      "type": "open",
+      "q": "Punten met dezelfde x-coördinaat liggen op een ... lijn.",
+      "accept": ["verticale", "verticale lijn"],
+      "explanation": "Punten met dezelfde x-coördinaat liggen op een verticale lijn."
+    },
+    {
+      "id": "fc3-11",
+      "type": "open",
+      "q": "Wat betekent een horizontale lijn in een afstand-tijd grafiek?",
+      "accept": ["stilstand", "je staat stil", "geen beweging"],
+      "explanation": "Een horizontale lijn betekent dat de afstand niet verandert: je staat stil."
+    },
+    {
+      "id": "fc3-12",
+      "type": "open",
+      "q": "Hoe steiler de lijn in een grafiek, hoe ... de verandering.",
+      "accept": ["sneller", "groter"],
+      "explanation": "Hoe steiler de lijn, hoe sneller de verandering."
+    },
+    {
+      "id": "fc3-13",
+      "type": "open",
+      "q": "Wat is een woordformule?",
+      "accept": ["formule in woorden", "een formule uitgeschreven in woorden"],
+      "explanation": "Een woordformule is een formule die met woorden is opgeschreven, zoals: kosten = 5 + 2 × aantal."
+    },
+    {
+      "id": "fc3-14",
+      "type": "open",
+      "q": "In y = 25 + 10x, wat is de startwaarde?",
+      "accept": ["25"],
+      "explanation": "De startwaarde is 25: de waarde van y als x = 0."
+    },
+    {
+      "id": "fc3-15",
+      "type": "open",
+      "q": "In y = 25 + 10x, hoeveel neemt y toe per stap?",
+      "accept": ["10"],
+      "explanation": "Per stap (als x met 1 toeneemt) neemt y toe met 10."
+    },
+    {
+      "id": "fc3-16",
+      "type": "open",
+      "q": "Wat reken je EERST uit: 3 + 4 × 2?",
+      "accept": ["4 × 2", "vermenigvuldigen", "de vermenigvuldiging"],
+      "explanation": "Vermenigvuldigen gaat vóór optellen. Dus: 4 × 2 = 8, dan 3 + 8 = 11."
+    },
+    {
+      "id": "fc3-17",
+      "type": "open",
+      "q": "Bereken: 5 + 3 × 4",
+      "accept": ["17"],
+      "explanation": "Eerst vermenigvuldigen: 3 × 4 = 12. Dan optellen: 5 + 12 = 17."
+    },
+    {
+      "id": "fc3-18",
+      "type": "open",
+      "q": "Bereken: 2 × (3 + 5)",
+      "accept": ["16"],
+      "explanation": "Eerst haakjes: 3 + 5 = 8. Dan vermenigvuldigen: 2 × 8 = 16."
+    },
+    {
+      "id": "fc3-19",
+      "type": "open",
+      "q": "Bereken y als y = 3x + 2 en x = 4",
+      "accept": ["14"],
+      "explanation": "y = 3 × 4 + 2 = 12 + 2 = 14"
+    },
+    {
+      "id": "fc3-20",
+      "type": "open",
+      "q": "Bereken y als y = 10 − 2x en x = 3",
+      "accept": ["4"],
+      "explanation": "y = 10 − 2 × 3 = 10 − 6 = 4"
+    },
+    {
+      "id": "fc3-21",
+      "type": "open",
+      "q": "Bij y = a + bx, wat is de startwaarde?",
+      "accept": ["a"],
+      "explanation": "De startwaarde is a: de waarde van y als x = 0."
+    },
+    {
+      "id": "fc3-22",
+      "type": "open",
+      "q": "Bij y = a + bx, wat is de toename per stap?",
+      "accept": ["b"],
+      "explanation": "b geeft aan hoeveel y toeneemt als x met 1 toeneemt."
+    },
+    {
+      "id": "fc3-23",
+      "type": "open",
+      "q": "Taxi: kosten = 3 + 2 × km. Wat kost 5 km?",
+      "accept": ["13", "€13"],
+      "explanation": "kosten = 3 + 2 × 5 = 3 + 10 = €13"
+    },
+    {
+      "id": "fc3-24",
+      "type": "open",
+      "q": "Kaars: lengte = 20 − 2 × uur. Hoe lang na 3 uur?",
+      "accept": ["14", "14 cm"],
+      "explanation": "lengte = 20 − 2 × 3 = 20 − 6 = 14 cm"
+    },
+    {
+      "id": "fc3-25",
+      "type": "open",
+      "q": "Als een formule een minteken heeft (y = 20 − 3x), dan ... de grafiek.",
+      "accept": ["daalt", "gaat omlaag"],
+      "explanation": "Een minteken voor de variabele betekent dat de waarde daalt als x groter wordt."
+    },
+    {
+      "id": "fc3-26",
+      "type": "open",
+      "q": "Hoe teken je een grafiek bij een formule?",
+      "accept": ["tabel maken", "eerst een tabel maken", "maak een tabel met punten"],
+      "explanation": "Je maakt eerst een tabel met x- en y-waarden, tekent de punten, en verbindt ze."
+    },
+    {
+      "id": "fc3-27",
+      "type": "open",
+      "q": "Wat is een globale grafiek?",
+      "accept": ["grafiek zonder exacte getallen", "grafiek die het verloop laat zien"],
+      "explanation": "Een globale grafiek laat alleen het algemene verloop zien, zonder exacte waarden."
+    },
+    {
+      "id": "fc3-28",
+      "type": "open",
+      "q": "Bereken: 8 + 2 × 6 − 4",
+      "accept": ["16"],
+      "explanation": "Eerst vermenigvuldigen: 2 × 6 = 12. Dan: 8 + 12 − 4 = 16."
+    },
+    {
+      "id": "fc3-29",
+      "type": "open",
+      "q": "Bereken: 3 × (5 + 2) − 4",
+      "accept": ["17"],
+      "explanation": "Eerst haakjes: 5 + 2 = 7. Dan: 3 × 7 = 21. Tenslotte: 21 − 4 = 17."
+    },
+    {
+      "id": "fc3-30",
+      "type": "open",
+      "q": "Wat is de startwaarde bij y = 8 + 5x?",
+      "accept": ["8"],
+      "explanation": "De startwaarde is het getal zonder x: 8. Dit is de y-waarde bij x = 0."
+    }
+  ]
+}

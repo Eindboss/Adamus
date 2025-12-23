@@ -63,6 +63,7 @@
       "label": "Wiskunde – H3: Grafieken en formules",
       "title": "Wiskunde – Hoofdstuk 3: Grafieken en formules",
       "file": "data/wiskunde/hoofdstuk3.json",
+      "flashcardFile": "data/wiskunde/hoofdstuk3-flashcards.json",
       "schema": "toets"
     },
     {

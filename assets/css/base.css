@@ -146,6 +146,9 @@ a {
 
 a:hover {
   color: var(--brand);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
 
 /* Lists */
@@ -167,8 +170,15 @@ img {
 /* Focus States */
 :focus-visible {
   outline: 3px solid var(--brand);
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: var(--radius-sm);
+}
+
+/* Focus visible with background tint for inputs */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-offset: 2px;
 }
 
 /* Selection */

@@ -311,7 +311,7 @@
   height: 100%;
   background: linear-gradient(90deg, var(--brand-dark) 0%, var(--brand) 100%);
   border-radius: var(--radius-full);
-  transition: width var(--duration-normal) var(--ease);
+  transition: width var(--duration-slow) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Progress with label */
@@ -442,9 +442,16 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 80%,
+    transparent 100%
+  );
   transform: translateX(-100%);
-  animation: shimmer 1.5s infinite;
+  animation: shimmer 1.2s infinite cubic-bezier(0.46, 0.29, 0.44, 0.83);
 }
 
 @keyframes shimmer {

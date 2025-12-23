@@ -68,7 +68,9 @@ async function init() {
 async function loadCards() {
   try {
     const meta = state.subjectMeta;
-    const data = await loadJSON(meta.file);
+    // Use separate flashcard file if specified, otherwise use main file
+    const flashcardFile = meta.flashcardFile || meta.file;
+    const data = await loadJSON(flashcardFile);
 
     // Extract questions
     let questions = [];
