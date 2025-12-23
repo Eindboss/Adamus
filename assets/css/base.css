@@ -18,38 +18,63 @@ html {
 
 /* CSS Variables */
 :root {
-  /* Colors */
-  --bg: #f8fafc;
-  --bg-alt: #f1f5f9;
+  /* Colors - Warm, Museum-inspired palette */
+  --bg: #f7f5f0;
+  --bg-alt: #ebe8e0;
   --card: #ffffff;
-  --text: #1e293b;
-  --text-light: #475569;
-  --muted: #64748b;
+  --text: #2c2a26;
+  --text-light: #5c5850;
+  --muted: #8a8578;
 
-  /* Subject Accent Colors */
-  --accent-blue: #3b82f6;
-  --accent-blue-light: #dbeafe;
-  --accent-blue-dark: #1d4ed8;
+  /* Brand Colors - Gold/Amber theme */
+  --brand: #c9a227;
+  --brand-light: #f5ecd0;
+  --brand-dark: #a68618;
+  --brand-deep: #1a3a2a;
 
-  --accent-red: #ef4444;
-  --accent-red-light: #fee2e2;
-  --accent-red-dark: #dc2626;
+  /* Single Accent - Warm Gold (used everywhere) */
+  --accent: #c9a227;
+  --accent-light: #f5ecd0;
+  --accent-dark: #a68618;
 
-  --accent-green: #22c55e;
-  --accent-green-light: #dcfce7;
-  --accent-green-dark: #16a34a;
+  /* Legacy subject colors - all map to brand for uniformity */
+  --accent-blue: var(--brand);
+  --accent-blue-light: var(--brand-light);
+  --accent-blue-dark: var(--brand-dark);
 
-  --accent-purple: #8b5cf6;
-  --accent-purple-light: #ede9fe;
-  --accent-purple-dark: #7c3aed;
+  --accent-red: var(--brand);
+  --accent-red-light: var(--brand-light);
+  --accent-red-dark: var(--brand-dark);
+
+  --accent-green: var(--brand);
+  --accent-green-light: var(--brand-light);
+  --accent-green-dark: var(--brand-dark);
+
+  --accent-purple: var(--brand);
+  --accent-purple-light: var(--brand-light);
+  --accent-purple-dark: var(--brand-dark);
 
   /* Feedback Colors */
-  --success: #10b981;
-  --success-light: #d1fae5;
-  --error: #ef4444;
-  --error-light: #fee2e2;
-  --warning: #f59e0b;
-  --warning-light: #fef3c7;
+  --success: #2e7d52;
+  --success-light: #e3f2e8;
+  --success-dark: #1e6b43;
+  --success-text: #065f46;
+  --error: #c43e3e;
+  --error-light: #fce8e8;
+  --error-dark: #a33232;
+  --error-text: #991b1b;
+  --warning: #c9a227;
+  --warning-light: #f5ecd0;
+  --warning-text: #92400e;
+
+  /* Header Colors */
+  --header-bg: #1f4a38;
+  --header-bg-dark: #163328;
+  --header-text: #f5f0e6;
+  --header-accent: #d4af37;
+
+  /* Flashcard Back */
+  --flashcard-back: #0f251c;
 
   /* UI Colors */
   --border: rgba(0, 0, 0, 0.08);
@@ -127,13 +152,13 @@ p {
 }
 
 a {
-  color: var(--accent-blue);
+  color: var(--brand-dark);
   text-decoration: none;
   transition: color var(--duration-fast) var(--ease);
 }
 
 a:hover {
-  color: var(--accent-blue-dark);
+  color: var(--brand);
 }
 
 /* Lists */

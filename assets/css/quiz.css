@@ -90,21 +90,21 @@
 }
 
 .option:hover {
-  border-color: var(--accent-blue);
-  background: var(--accent-blue-light);
+  border-color: var(--brand);
+  background: var(--brand-light);
   transform: translateY(-1px);
 }
 
 .option:focus-visible {
-  outline: 3px solid var(--accent-blue);
+  outline: 3px solid var(--brand);
   outline-offset: 2px;
 }
 
 /* Selected State */
 .option.selected {
-  border-color: var(--accent-blue);
-  background: var(--accent-blue-light);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  border-color: var(--brand);
+  background: var(--brand-light);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
 }
 
 /* Correct State */
@@ -146,8 +146,8 @@
 }
 
 .option.selected .option-marker {
-  border-color: var(--accent-blue);
-  background: var(--accent-blue);
+  border-color: var(--brand);
+  background: var(--brand);
   color: white;
 }
 
@@ -360,11 +360,11 @@
 }
 
 .feedback-success .feedback-header {
-  color: #065f46;
+  color: var(--success-text);
 }
 
 .feedback-error .feedback-header {
-  color: #991b1b;
+  color: var(--error-text);
 }
 
 .feedback-body {

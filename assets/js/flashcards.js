@@ -117,6 +117,9 @@ async function loadCards() {
     const spacedData = getSpacedData(state.subjectId);
     state.cards = prioritizeCards(state.cards, spacedData);
 
+    // Shuffle the cards for variety
+    shuffle(state.cards);
+
     // Reset state
     state.currentIndex = 0;
     state.flipped = false;

@@ -119,79 +119,15 @@ export function arraysEqual(a, b) {
 
 /**
  * Get accent colors for subject
+ * All subjects now use unified brand colors (warm gold)
  */
 export function getSubjectAccent(subject) {
-  const s = String(subject || '').toLowerCase();
-
-  if (s.startsWith('aardrijkskunde')) {
-    return {
-      color: '#3b82f6',
-      light: '#dbeafe',
-      dark: '#1d4ed8',
-      name: 'blue'
-    };
-  }
-
-  if (s.startsWith('geschiedenis')) {
-    return {
-      color: '#ef4444',
-      light: '#fee2e2',
-      dark: '#dc2626',
-      name: 'red'
-    };
-  }
-
-  if (s.startsWith('latijn')) {
-    return {
-      color: '#22c55e',
-      light: '#dcfce7',
-      dark: '#16a34a',
-      name: 'green'
-    };
-  }
-
-  if (s.startsWith('biologie')) {
-    return {
-      color: '#10b981',
-      light: '#d1fae5',
-      dark: '#059669',
-      name: 'emerald'
-    };
-  }
-
-  if (s.startsWith('engels')) {
-    return {
-      color: '#f59e0b',
-      light: '#fef3c7',
-      dark: '#d97706',
-      name: 'amber'
-    };
-  }
-
-  if (s.startsWith('nederlands')) {
-    return {
-      color: '#f97316',
-      light: '#ffedd5',
-      dark: '#ea580c',
-      name: 'orange'
-    };
-  }
-
-  if (s.startsWith('wiskunde')) {
-    return {
-      color: '#6366f1',
-      light: '#e0e7ff',
-      dark: '#4f46e5',
-      name: 'indigo'
-    };
-  }
-
-  // Default purple
+  // Unified brand colors for all subjects
   return {
-    color: '#8b5cf6',
-    light: '#ede9fe',
-    dark: '#7c3aed',
-    name: 'purple'
+    color: '#c9a227',
+    light: '#f5ecd0',
+    dark: '#a68618',
+    name: 'brand'
   };
 }
 

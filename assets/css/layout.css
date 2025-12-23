@@ -15,9 +15,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(135deg, #1a3a2a 0%, #0d1f17 100%);
-  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, var(--header-bg) 0%, var(--header-bg-dark) 100%);
+  border-bottom: 3px solid var(--brand);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
 }
 
 .topbar-inner {
@@ -65,17 +65,17 @@
 }
 
 .brand-title {
-  font-family: var(--font-brand);
+  font-family: var(--font-display);
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #f5f0e6;
-  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--header-text);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .brand-sub {
   font-size: 0.75rem;
-  color: #d4af37;
+  color: var(--header-accent);
   font-weight: 500;
   letter-spacing: 0.04em;
   font-style: italic;
