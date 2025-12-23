@@ -9,30 +9,6 @@
       "schema": "toets"
     },
     {
-      "id": "biologie-placeholder",
-      "subject": "Biologie",
-      "label": "Biologie – Binnenkort beschikbaar",
-      "title": "Biologie",
-      "file": null,
-      "schema": "quiz"
-    },
-    {
-      "id": "engels-placeholder",
-      "subject": "Engels",
-      "label": "Engels – Binnenkort beschikbaar",
-      "title": "Engels",
-      "file": null,
-      "schema": "quiz"
-    },
-    {
-      "id": "nederlands-placeholder",
-      "subject": "Nederlands",
-      "label": "Nederlands – Binnenkort beschikbaar",
-      "title": "Nederlands",
-      "file": null,
-      "schema": "quiz"
-    },
-    {
       "id": "aardrijkskunde-p1",
       "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – Paragraaf 1: Waar wil je wonen?",
