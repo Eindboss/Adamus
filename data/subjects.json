@@ -81,12 +81,12 @@
       "schema": "quiz"
     },
     {
-      "id": "wiskunde-placeholder",
+      "id": "wiskunde-h3-grafieken-formules",
       "subject": "Wiskunde",
-      "label": "Wiskunde – Binnenkort beschikbaar",
-      "title": "Wiskunde",
-      "file": null,
-      "schema": "quiz"
+      "label": "Wiskunde – H3: Grafieken en formules",
+      "title": "Wiskunde – Hoofdstuk 3: Grafieken en formules",
+      "file": "data/wiskunde/hoofdstuk3.json",
+      "schema": "toets"
     },
     {
       "id": "geschiedenis-jagers-en-boeren",
