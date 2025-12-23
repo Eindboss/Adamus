@@ -59,6 +59,7 @@ html {
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-display: 'Plus Jakarta Sans', var(--font-sans);
+  --font-brand: 'Playfair Display', Georgia, 'Times New Roman', serif;
 
   /* Spacing */
   --space-1: 4px;
