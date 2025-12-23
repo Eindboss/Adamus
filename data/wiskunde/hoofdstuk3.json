@@ -7,191 +7,196 @@
     {
       "id": "w3-1",
       "type": "mc",
-      "question": "Bekijk het assenstelsel. Wat zijn de coördinaten van de oorsprong?",
-      "image": "<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><rect fill='#f8f9fa' width='200' height='200'/><line x1='20' y1='100' x2='180' y2='100' stroke='#333' stroke-width='2'/><line x1='100' y1='20' x2='100' y2='180' stroke='#333' stroke-width='2'/><polygon points='180,100 172,96 172,104' fill='#333'/><polygon points='100,20 96,28 104,28' fill='#333'/><text x='185' y='104' font-size='14'>x</text><text x='104' y='18' font-size='14'>y</text><circle cx='100' cy='100' r='5' fill='#6366f1'/><text x='80' y='118' font-size='12' fill='#6366f1'>O</text></svg>",
-      "options": ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"],
-      "answer": 0,
+      "q": "Bekijk het assenstelsel. Wat zijn de coördinaten van de oorsprong?",
+      "answers": ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"],
+      "correctIndex": 0,
       "explanation": "De oorsprong O is het snijpunt van de x-as en de y-as. Dit punt heeft altijd de coördinaten (0, 0)."
     },
     {
       "id": "w3-2",
-      "type": "short_text",
-      "question": "Punt A heeft coördinaten (4, 3). Wat is de x-coördinaat van punt A?",
-      "accepted": ["4"],
+      "type": "mc",
+      "q": "Punt A heeft coördinaten (4, 3). Wat is de x-coördinaat van punt A?",
+      "answers": ["4", "3", "7", "1"],
+      "correctIndex": 0,
       "explanation": "Bij coördinaten (x, y) staat het eerste getal voor de x-coördinaat. Dus bij (4, 3) is de x-coördinaat 4."
     },
     {
       "id": "w3-3",
-      "type": "short_text",
-      "question": "Punt B heeft coördinaten (2, 5). Wat is de y-coördinaat van punt B?",
-      "accepted": ["5"],
+      "type": "mc",
+      "q": "Punt B heeft coördinaten (2, 5). Wat is de y-coördinaat van punt B?",
+      "answers": ["5", "2", "7", "3"],
+      "correctIndex": 0,
       "explanation": "Bij coördinaten (x, y) staat het tweede getal voor de y-coördinaat. Dus bij (2, 5) is de y-coördinaat 5."
     },
     {
       "id": "w3-4",
       "type": "mc",
-      "question": "Bekijk het assenstelsel. Wat zijn de coördinaten van punt P?",
-      "image": "<svg viewBox='0 0 240 200' xmlns='http://www.w3.org/2000/svg'><rect fill='#f8f9fa' width='240' height='200'/><line x1='20' y1='160' x2='220' y2='160' stroke='#333' stroke-width='2'/><line x1='40' y1='20' x2='40' y2='180' stroke='#333' stroke-width='2'/><g stroke='#ddd' stroke-width='1'><line x1='40' y1='40' x2='220' y2='40'/><line x1='40' y1='80' x2='220' y2='80'/><line x1='40' y1='120' x2='220' y2='120'/><line x1='80' y1='20' x2='80' y2='180'/><line x1='120' y1='20' x2='120' y2='180'/><line x1='160' y1='20' x2='160' y2='180'/><line x1='200' y1='20' x2='200' y2='180'/></g><text x='35' y='175' font-size='11'>0</text><text x='77' y='175' font-size='11'>1</text><text x='117' y='175' font-size='11'>2</text><text x='157' y='175' font-size='11'>3</text><text x='197' y='175' font-size='11'>4</text><text x='25' y='124' font-size='11'>1</text><text x='25' y='84' font-size='11'>2</text><text x='25' y='44' font-size='11'>3</text><circle cx='160' cy='80' r='6' fill='#ef4444'/><text x='168' y='75' font-size='13' font-weight='bold' fill='#ef4444'>P</text></svg>",
-      "options": ["(3, 2)", "(2, 3)", "(3, 3)", "(2, 2)"],
-      "answer": 0,
+      "q": "In een assenstelsel ligt punt P op 3 hokjes naar rechts en 2 hokjes omhoog vanaf de oorsprong. Wat zijn de coördinaten van P?",
+      "answers": ["(3, 2)", "(2, 3)", "(3, 3)", "(2, 2)"],
+      "correctIndex": 0,
       "explanation": "Punt P ligt 3 hokjes naar rechts (x = 3) en 2 hokjes omhoog (y = 2). De coördinaten zijn dus (3, 2)."
     },
     {
       "id": "w3-5",
       "type": "mc",
-      "question": "Welke punten zijn roosterpunten?",
-      "options": [
+      "q": "Welke punten zijn roosterpunten?",
+      "answers": [
         "(2, 3) en (5, 1)",
         "(2.5, 3) en (4, 1)",
         "(2, 3.5) en (5, 1)",
         "(2.5, 3.5) en (4.5, 1.5)"
       ],
-      "answer": 0,
+      "correctIndex": 0,
       "explanation": "Roosterpunten hebben alleen hele getallen als coördinaten. (2, 3) en (5, 1) zijn allebei roosterpunten want ze hebben geen kommagetallen."
     },
     {
       "id": "w3-6",
       "type": "mc",
-      "question": "Lisa fietst van huis naar school. In de grafiek zie je de afgelegde afstand. Hoeveel kilometer is de school van haar huis?",
-      "image": "<svg viewBox='0 0 280 200' xmlns='http://www.w3.org/2000/svg'><rect fill='#f8f9fa' width='280' height='200'/><line x1='40' y1='160' x2='260' y2='160' stroke='#333' stroke-width='2'/><line x1='40' y1='20' x2='40' y2='160' stroke='#333' stroke-width='2'/><g stroke='#ddd' stroke-width='1'><line x1='40' y1='130' x2='260' y2='130'/><line x1='40' y1='100' x2='260' y2='100'/><line x1='40' y1='70' x2='260' y2='70'/><line x1='40' y1='40' x2='260' y2='40'/><line x1='80' y1='20' x2='80' y2='160'/><line x1='120' y1='20' x2='120' y2='160'/><line x1='160' y1='20' x2='160' y2='160'/><line x1='200' y1='20' x2='200' y2='160'/><line x1='240' y1='20' x2='240' y2='160'/></g><text x='25' y='165' font-size='10'>0</text><text x='77' y='175' font-size='10'>5</text><text x='115' y='175' font-size='10'>10</text><text x='155' y='175' font-size='10'>15</text><text x='195' y='175' font-size='10'>20</text><text x='235' y='175' font-size='10'>25</text><text x='130' y='193' font-size='11'>tijd (minuten)</text><text x='20' y='133' font-size='10'>1</text><text x='20' y='103' font-size='10'>2</text><text x='20' y='73' font-size='10'>3</text><text x='20' y='43' font-size='10'>4</text><text x='5' y='90' font-size='10' transform='rotate(-90, 15, 90)'>afstand (km)</text><polyline points='40,160 80,130 120,100 160,70 200,70 240,70' fill='none' stroke='#6366f1' stroke-width='3'/></svg>",
-      "options": ["3 km", "4 km", "15 minuten", "25 minuten"],
-      "answer": 0,
-      "explanation": "De grafiek stopt bij een afstand van 3 km (lees af op de verticale as). Na 15 minuten is Lisa op school, maar de vraag is naar de afstand, niet de tijd."
+      "q": "Lisa fietst van huis naar school. De grafiek laat de afgelegde afstand zien. Na 15 minuten stopt de grafiek bij 3 km en blijft dan horizontaal. Hoeveel kilometer is de school van haar huis?",
+      "answers": ["3 km", "4 km", "15 km", "5 km"],
+      "correctIndex": 0,
+      "explanation": "De grafiek stopt bij een afstand van 3 km (lees af op de verticale as). De 15 minuten is de tijd, niet de afstand."
     },
     {
       "id": "w3-7",
-      "type": "short_text",
-      "question": "In de grafiek van vraag 6: na hoeveel minuten is Lisa op school aangekomen?",
-      "accepted": ["15", "15 minuten"],
-      "explanation": "De grafiek wordt horizontaal (plat) na 15 minuten. Dat betekent dat de afstand niet meer toeneemt, dus Lisa is aangekomen."
+      "type": "mc",
+      "q": "In een grafiek van afstand tegen tijd wordt de lijn na een tijdje horizontaal (plat). Wat betekent dit?",
+      "answers": [
+        "Je staat stil (de afstand neemt niet meer toe)",
+        "Je gaat sneller rijden",
+        "Je gaat langzamer rijden",
+        "Je rijdt achteruit"
+      ],
+      "correctIndex": 0,
+      "explanation": "Een horizontale lijn betekent dat de afstand niet verandert. Je beweegt dus niet meer, je staat stil."
     },
     {
       "id": "w3-8",
       "type": "mc",
-      "question": "Een grafiek loopt eerst steil omhoog, dan wordt hij vlakker. Wat betekent dit?",
-      "options": [
+      "q": "Een grafiek loopt eerst steil omhoog, dan wordt hij vlakker. Wat betekent dit?",
+      "answers": [
         "Eerst snel, daarna langzamer",
         "Eerst langzaam, daarna sneller",
         "De snelheid blijft gelijk",
         "Er wordt gestopt"
       ],
-      "answer": 0,
+      "correctIndex": 0,
       "explanation": "Een steile lijn betekent snelle verandering. Een vlakkere lijn betekent langzamere verandering. Dus: eerst snel, daarna langzamer."
     },
     {
       "id": "w3-9",
-      "type": "short_text",
-      "question": "Een taxibedrijf rekent: kosten = 3 + 2 × aantal kilometers. Hoeveel kost een rit van 5 kilometer?",
-      "accepted": ["13", "€13", "13 euro", "€ 13"],
+      "type": "mc",
+      "q": "Een taxibedrijf rekent: kosten = 3 + 2 × aantal kilometers. Hoeveel kost een rit van 5 kilometer?",
+      "answers": ["13 euro", "10 euro", "15 euro", "8 euro"],
+      "correctIndex": 0,
       "explanation": "Vul in: kosten = 3 + 2 × 5 = 3 + 10 = 13 euro. De 3 is het starttarief, en per kilometer betaal je 2 euro extra."
     },
     {
       "id": "w3-10",
-      "type": "short_text",
-      "question": "Een zwembad rekent: kosten = 2,50 + 1,50 × aantal uren. Wat kost 3 uur zwemmen?",
-      "accepted": ["7", "7,00", "€7", "€ 7", "7 euro", "€7,00", "7,50"],
+      "type": "mc",
+      "q": "Een zwembad rekent: kosten = 2,50 + 1,50 × aantal uren. Wat kost 3 uur zwemmen?",
+      "answers": ["7 euro", "6 euro", "4,50 euro", "9 euro"],
+      "correctIndex": 0,
       "explanation": "Vul in: kosten = 2,50 + 1,50 × 3 = 2,50 + 4,50 = 7 euro. De 2,50 is de entree, per uur komt er 1,50 bij."
     },
     {
       "id": "w3-11",
       "type": "mc",
-      "question": "De formule voor de huurprijs van een fiets is: prijs = 8 + 5 × aantal dagen. Wat betekent de 8 in deze formule?",
-      "options": [
+      "q": "De formule voor de huurprijs van een fiets is: prijs = 8 + 5 × aantal dagen. Wat betekent de 8 in deze formule?",
+      "answers": [
         "De basisprijs (je betaalt altijd 8 euro)",
         "De prijs per dag",
         "Het aantal dagen",
         "De totale prijs"
       ],
-      "answer": 0,
+      "correctIndex": 0,
       "explanation": "In de formule prijs = 8 + 5 × dagen is 8 het vaste bedrag dat je altijd betaalt (basisprijs/starttarief). De 5 is wat je per dag extra betaalt."
     },
     {
       "id": "w3-12",
-      "type": "short_text",
-      "question": "De lengte van een kaars in cm kun je berekenen met: lengte = 20 - 2 × aantal uren. Hoe lang is de kaars na 4 uur branden?",
-      "accepted": ["12", "12 cm"],
+      "type": "mc",
+      "q": "De lengte van een kaars in cm kun je berekenen met: lengte = 20 - 2 × aantal uren. Hoe lang is de kaars na 4 uur branden?",
+      "answers": ["12 cm", "14 cm", "8 cm", "16 cm"],
+      "correctIndex": 0,
       "explanation": "Vul in: lengte = 20 - 2 × 4 = 20 - 8 = 12 cm. De kaars begint op 20 cm en wordt per uur 2 cm korter."
     },
     {
       "id": "w3-13",
       "type": "mc",
-      "question": "Gegeven is de formule: bedrag = 15 + 10 × a. Bereken het bedrag als a = 3.",
-      "options": ["45", "28", "55", "33"],
-      "answer": 0,
+      "q": "Gegeven is de formule: bedrag = 15 + 10 × a. Bereken het bedrag als a = 3.",
+      "answers": ["45", "28", "55", "33"],
+      "correctIndex": 0,
       "explanation": "Vul a = 3 in: bedrag = 15 + 10 × 3 = 15 + 30 = 45."
     },
     {
       "id": "w3-14",
-      "type": "short_text",
-      "question": "Bij de formule hoogte = 100 - 6 × t, bereken de hoogte voor t = 5.",
-      "accepted": ["70"],
+      "type": "mc",
+      "q": "Bij de formule hoogte = 100 - 6 × t, bereken de hoogte voor t = 5.",
+      "answers": ["70", "130", "94", "30"],
+      "correctIndex": 0,
       "explanation": "Vul t = 5 in: hoogte = 100 - 6 × 5 = 100 - 30 = 70."
     },
     {
       "id": "w3-15",
       "type": "mc",
-      "question": "Je hebt de formule kosten = 50 + 10 × d. Welke tabel hoort hierbij?",
-      "options": [
-        "d=0: 50, d=1: 60, d=2: 70, d=3: 80",
-        "d=0: 10, d=1: 20, d=2: 30, d=3: 40",
-        "d=0: 50, d=1: 51, d=2: 52, d=3: 53",
-        "d=0: 0, d=1: 60, d=2: 70, d=3: 80"
+      "q": "Je hebt de formule kosten = 50 + 10 × d. Welke waarden horen bij d = 0, 1, 2, 3?",
+      "answers": [
+        "50, 60, 70, 80",
+        "10, 20, 30, 40",
+        "50, 51, 52, 53",
+        "0, 60, 70, 80"
       ],
-      "answer": 0,
-      "explanation": "Voor d=0: 50+10×0=50. Voor d=1: 50+10×1=60. Voor d=2: 50+10×2=70. Voor d=3: 50+10×3=80. Dit klopt met de eerste tabel."
+      "correctIndex": 0,
+      "explanation": "Voor d=0: 50+10×0=50. Voor d=1: 50+10×1=60. Voor d=2: 50+10×2=70. Voor d=3: 50+10×3=80."
     },
     {
       "id": "w3-16",
-      "type": "grouped_short_text",
-      "question": "Vul de tabel in bij de formule: y = 3 × x + 2",
-      "items": [
-        {"prompt": "x = 0, y = ", "accepted": ["2"]},
-        {"prompt": "x = 1, y = ", "accepted": ["5"]},
-        {"prompt": "x = 2, y = ", "accepted": ["8"]},
-        {"prompt": "x = 4, y = ", "accepted": ["14"]}
-      ],
-      "explanation": "Vul steeds x in: x=0: 3×0+2=2. x=1: 3×1+2=5. x=2: 3×2+2=8. x=4: 3×4+2=14."
+      "type": "mc",
+      "q": "Bij de formule y = 3 × x + 2, wat is y als x = 4?",
+      "answers": ["14", "9", "12", "18"],
+      "correctIndex": 0,
+      "explanation": "Vul x = 4 in: y = 3 × 4 + 2 = 12 + 2 = 14."
     },
     {
       "id": "w3-17",
       "type": "mc",
-      "question": "Bekijk de grafiek. Bij welke formule hoort deze grafiek?",
-      "image": "<svg viewBox='0 0 260 200' xmlns='http://www.w3.org/2000/svg'><rect fill='#f8f9fa' width='260' height='200'/><line x1='40' y1='160' x2='240' y2='160' stroke='#333' stroke-width='2'/><line x1='40' y1='20' x2='40' y2='160' stroke='#333' stroke-width='2'/><g stroke='#ddd' stroke-width='1'><line x1='40' y1='120' x2='240' y2='120'/><line x1='40' y1='80' x2='240' y2='80'/><line x1='40' y1='40' x2='240' y2='40'/><line x1='80' y1='20' x2='80' y2='160'/><line x1='120' y1='20' x2='120' y2='160'/><line x1='160' y1='20' x2='160' y2='160'/><line x1='200' y1='20' x2='200' y2='160'/></g><text x='35' y='175' font-size='10'>0</text><text x='77' y='175' font-size='10'>1</text><text x='117' y='175' font-size='10'>2</text><text x='157' y='175' font-size='10'>3</text><text x='197' y='175' font-size='10'>4</text><text x='25' y='123' font-size='10'>10</text><text x='25' y='83' font-size='10'>20</text><text x='25' y='43' font-size='10'>30</text><polyline points='40,120 80,80 120,40' fill='none' stroke='#22c55e' stroke-width='3'/><circle cx='40' cy='120' r='4' fill='#22c55e'/><circle cx='80' cy='80' r='4' fill='#22c55e'/><circle cx='120' cy='40' r='4' fill='#22c55e'/></svg>",
-      "options": [
+      "q": "Een grafiek begint bij y = 10 (als x = 0) en stijgt steeds met 10 per stap. Welke formule hoort hierbij?",
+      "answers": [
         "y = 10 + 10 × x",
         "y = 10 × x",
         "y = 20 + 5 × x",
         "y = 5 + 10 × x"
       ],
-      "answer": 0,
+      "correctIndex": 0,
       "explanation": "Bij x=0 is y=10 (startpunt op de y-as). Per stap naar rechts stijgt y met 10. Dus: y = 10 + 10 × x."
     },
     {
       "id": "w3-18",
       "type": "mc",
-      "question": "Een globale grafiek laat zien dat iets eerst snel daalt en daarna langzaam daalt. Welke beschrijving past hierbij?",
-      "options": [
+      "q": "Een globale grafiek laat zien dat iets eerst snel daalt en daarna langzaam daalt. Welke beschrijving past hierbij?",
+      "answers": [
         "De temperatuur van thee die afkoelt",
         "Een auto die steeds sneller gaat rijden",
         "Water dat in een gelijk tempo uit een kraan stroomt",
         "Een vliegtuig dat opstijgt"
       ],
-      "answer": 0,
+      "correctIndex": 0,
       "explanation": "Hete thee koelt eerst snel af (groot temperatuurverschil met de omgeving), daarna steeds langzamer als hij dichter bij kamertemperatuur komt."
     },
     {
       "id": "w3-19",
-      "type": "short_text",
-      "question": "Een schoonmaakbedrijf rekent: kosten = 40 + 15 × a, waarbij a het aantal uren is. Hoeveel kost 3 uur schoonmaken?",
-      "accepted": ["85", "€85", "€ 85", "85 euro"],
+      "type": "mc",
+      "q": "Een schoonmaakbedrijf rekent: kosten = 40 + 15 × a, waarbij a het aantal uren is. Hoeveel kost 3 uur schoonmaken?",
+      "answers": ["85 euro", "55 euro", "95 euro", "70 euro"],
+      "correctIndex": 0,
       "explanation": "Vul a = 3 in: kosten = 40 + 15 × 3 = 40 + 45 = 85 euro."
     },
     {
       "id": "w3-20",
       "type": "mc",
-      "question": "Een vierkant heeft zijde a. De omtrek is: omtrek = 4 × a. Wat is de omtrek als a = 7?",
-      "options": ["28", "11", "49", "14"],
-      "answer": 0,
+      "q": "Een vierkant heeft zijde a. De omtrek is: omtrek = 4 × a. Wat is de omtrek als a = 7?",
+      "answers": ["28", "11", "49", "14"],
+      "correctIndex": 0,
       "explanation": "Vul a = 7 in: omtrek = 4 × 7 = 28."
     }
   ]
