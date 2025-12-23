@@ -5,6 +5,7 @@
 
 import { $, loadJSON, getUrlParam, shuffle } from './utils.js';
 import { getSpacedData, updateQuestionBox, incrementSession, getMasteryStats } from './stats.js';
+import { renderGraphQuestion } from './graph.js';
 
 // State
 let state = {
@@ -104,7 +105,8 @@ async function loadCards() {
         id: q.id,
         front,
         back,
-        explanation
+        explanation,
+        graph: q.graph || null
       };
     }).filter(c => c.front && c.back);
 
@@ -174,8 +176,23 @@ function renderCard() {
   state.flipped = false;
   flashcard?.classList.remove('flipped');
 
-  // Set content
-  if (frontEl) frontEl.innerHTML = card.front;
+  // Set content - include graph if present
+  if (frontEl) {
+    let frontHTML = card.front;
+    if (card.graph) {
+      frontHTML += '<div id="flashcardGraph" class="graph-container" style="margin-top: 12px;"></div>';
+    }
+    frontEl.innerHTML = frontHTML;
+
+    // Render graph after HTML is set
+    if (card.graph) {
+      const graphContainer = document.getElementById('flashcardGraph');
+      if (graphContainer) {
+        renderGraphQuestion(graphContainer, card.graph);
+      }
+    }
+  }
+
   if (backEl) backEl.innerHTML = card.back;
   if (explanationEl) {
     explanationEl.innerHTML = card.explanation || '';
