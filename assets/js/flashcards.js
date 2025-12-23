@@ -176,6 +176,13 @@ function renderCard() {
   state.flipped = false;
   flashcard?.classList.remove('flipped');
 
+  // Add/remove has-graph class
+  if (card.graph) {
+    flashcard?.classList.add('has-graph');
+  } else {
+    flashcard?.classList.remove('has-graph');
+  }
+
   // Set content - include graph if present
   if (frontEl) {
     let frontHTML = card.front;

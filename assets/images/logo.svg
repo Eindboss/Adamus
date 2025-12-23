@@ -1,96 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <!-- Ibis head in Egyptian line art style -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Thoth ibis head in authentic Egyptian hieroglyphic style -->
 
-  <!-- Main head outline -->
-  <path d="M85 35
-           C85 25, 75 15, 60 15
-           C45 15, 35 25, 35 40
-           C35 55, 45 65, 55 70
-           L60 72
-           L65 70
-           C75 65, 85 55, 85 40
+  <!-- Head shape - profile view -->
+  <path d="M70 25
+           C70 18, 62 12, 50 14
+           C42 15, 38 20, 38 28
+           L38 45
+           C38 52, 42 58, 50 60
+           L55 61
+           C62 60, 68 54, 70 45
            Z"
+        fill="#1e293b"
+        stroke="none"/>
+
+  <!-- Long curved beak - characteristic ibis shape -->
+  <path d="M38 28
+           C32 30, 22 38, 15 52
+           C12 60, 12 68, 16 72
+           L18 71
+           C16 66, 17 60, 20 54
+           C26 42, 34 34, 38 32
+           Z"
+        fill="#1e293b"
+        stroke="none"/>
+
+  <!-- Eye - Egyptian almond style -->
+  <ellipse cx="52" cy="30" rx="4" ry="3"
+           fill="#fef3c7"
+           transform="rotate(-5 52 30)"/>
+
+  <!-- Eye outline/liner - Egyptian style -->
+  <path d="M48 30
+           C48 27, 50 26, 53 26
+           C56 26, 58 28, 58 30
+           C58 32, 56 34, 53 34
+           C50 34, 48 33, 48 30"
         fill="none"
         stroke="#1e293b"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
+        stroke-width="1"/>
 
-  <!-- Long curved beak - iconic ibis feature -->
-  <path d="M35 40
-           C30 42, 20 50, 12 65
-           C8 75, 10 85, 15 90"
-        fill="none"
-        stroke="#1e293b"
-        stroke-width="2.5"
-        stroke-linecap="round"/>
-
-  <!-- Beak detail line -->
-  <path d="M33 45
-           C28 50, 20 58, 14 70"
-        fill="none"
-        stroke="#1e293b"
-        stroke-width="1.5"
-        stroke-linecap="round"/>
-
-  <!-- Eye - almond shaped Egyptian style -->
-  <ellipse cx="55" cy="35" rx="6" ry="4"
-           fill="none"
-           stroke="#1e293b"
-           stroke-width="2"
-           transform="rotate(-10 55 35)"/>
-
-  <!-- Eye pupil -->
-  <circle cx="55" cy="35" r="2" fill="#1e293b"/>
-
-  <!-- Eye line (Egyptian style) -->
-  <path d="M62 36 L72 40"
-        fill="none"
-        stroke="#1e293b"
-        stroke-width="1.5"
-        stroke-linecap="round"/>
-
-  <!-- Decorative neck lines -->
-  <path d="M55 70 L55 95"
-        fill="none"
+  <!-- Eye extension line (Egyptian makeup style) -->
+  <path d="M58 29 L65 28"
         stroke="#1e293b"
         stroke-width="2"
         stroke-linecap="round"/>
 
-  <path d="M60 72 L60 98"
+  <!-- Neck decoration band 1 -->
+  <path d="M42 62
+           C42 65, 48 68, 55 68
+           C62 68, 68 65, 68 62"
         fill="none"
-        stroke="#1e293b"
-        stroke-width="2"
-        stroke-linecap="round"/>
+        stroke="#d4af37"
+        stroke-width="3"/>
 
-  <path d="M65 70 L65 95"
+  <!-- Neck decoration band 2 -->
+  <path d="M40 68
+           C40 72, 47 76, 55 76
+           C63 76, 70 72, 70 68"
         fill="none"
-        stroke="#1e293b"
-        stroke-width="2"
-        stroke-linecap="round"/>
+        stroke="#d4af37"
+        stroke-width="3"/>
 
-  <!-- Collar/neck band decoration -->
-  <path d="M48 75
-           C48 78, 52 80, 60 80
-           C68 80, 72 78, 72 75"
-        fill="none"
-        stroke="#1e293b"
-        stroke-width="2"
-        stroke-linecap="round"/>
+  <!-- Neck/collar fill between bands -->
+  <path d="M42 62
+           C42 65, 48 68, 55 68
+           C62 68, 68 65, 68 62
+           L70 68
+           C70 72, 63 76, 55 76
+           C47 76, 40 72, 40 68
+           Z"
+        fill="#1e293b"
+        stroke="none"/>
 
-  <!-- Crown/headdress hint -->
-  <path d="M50 15
-           C50 8, 55 5, 60 5
-           C65 5, 70 8, 70 15"
-        fill="none"
-        stroke="#1e293b"
-        stroke-width="2"
-        stroke-linecap="round"/>
+  <!-- Vertical neck stripes -->
+  <line x1="48" y1="68" x2="48" y2="76" stroke="#d4af37" stroke-width="1.5"/>
+  <line x1="52" y1="68" x2="52" y2="76" stroke="#d4af37" stroke-width="1.5"/>
+  <line x1="56" y1="68" x2="56" y2="76" stroke="#d4af37" stroke-width="1.5"/>
+  <line x1="60" y1="68" x2="60" y2="76" stroke="#d4af37" stroke-width="1.5"/>
 
-  <!-- Small decorative feather detail on head -->
-  <path d="M75 25 C80 22, 82 25, 80 30"
-        fill="none"
-        stroke="#1e293b"
-        stroke-width="1.5"
-        stroke-linecap="round"/>
+  <!-- Headdress base -->
+  <path d="M45 14
+           L45 8
+           L65 8
+           L65 14"
+        fill="#d4af37"
+        stroke="none"/>
+
+  <!-- Moon disk on headdress (Thoth symbol) -->
+  <circle cx="55" cy="8" r="6" fill="#fef3c7" stroke="#d4af37" stroke-width="1.5"/>
+
+  <!-- Crescent moon detail -->
+  <path d="M52 4
+           C54 6, 54 10, 52 12
+           C56 10, 56 6, 52 4"
+        fill="#d4af37"/>
 </svg>
