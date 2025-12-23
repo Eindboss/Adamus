@@ -111,12 +111,14 @@ async function loadQuestions() {
     incrementSession(state.subjectId);
     normalized = getSpacedQuestions(state.subjectId, normalized);
 
-    // Shuffle question order for variety
-    shuffle(normalized);
+    // Only shuffle for quizzes, not for toets (structured tests need fixed order)
+    if (meta.schema !== 'toets') {
+      shuffle(normalized);
+    }
 
-    // Shuffle MC answers
+    // Shuffle MC answers (only for quizzes)
     state.questions = normalized.map(q => {
-      if (q.type === 'mc') {
+      if (q.type === 'mc' && meta.schema !== 'toets') {
         return shuffleMCAnswers(q);
       }
       return q;
