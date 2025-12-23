@@ -15,21 +15,21 @@
   text-decoration: none;
   color: var(--text);
   background: var(--card);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: var(--space-6) var(--space-4);
-  min-height: 140px;
+  padding: var(--space-7) var(--space-5);
+  min-height: 150px;
   box-shadow: var(--shadow-sm);
   transition:
-    transform var(--duration-fast) var(--ease),
-    box-shadow var(--duration-fast) var(--ease),
+    transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out),
     border-color var(--duration-fast) var(--ease);
   text-align: center;
 }
 
 .subject-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(201, 162, 39, 0.15);
   border-color: var(--brand);
 }
 
@@ -48,6 +48,15 @@
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
   box-shadow:
     0 4px 12px rgba(201, 162, 39, 0.25),
+    0 0 24px rgba(201, 162, 39, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.subject-card:hover .icon-wrap {
+  box-shadow:
+    0 6px 16px rgba(201, 162, 39, 0.35),
+    0 0 32px rgba(201, 162, 39, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
@@ -60,7 +69,7 @@
 
 .subject-card .subject-name {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
 }
@@ -71,23 +80,23 @@
 .quiz-card {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-5);
   text-decoration: none;
   color: var(--text);
   background: var(--card);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: var(--space-4);
+  padding: var(--space-5);
   box-shadow: var(--shadow-sm);
   transition:
-    transform var(--duration-fast) var(--ease),
-    box-shadow var(--duration-fast) var(--ease),
+    transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out),
     border-color var(--duration-fast) var(--ease);
 }
 
 .quiz-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   border-color: var(--brand);
 }
 
@@ -121,7 +130,7 @@
 
 .quiz-card .quiz-title {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   color: var(--text);
   margin-bottom: 2px;
 }
@@ -174,7 +183,11 @@
 }
 
 .btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.98);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration-fast) var(--ease-in),
+    box-shadow var(--duration-fast) var(--ease-in);
 }
 
 .btn:focus-visible {
@@ -183,10 +196,11 @@
 }
 
 .btn:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+  filter: grayscale(30%);
 }
 
 /* Primary Button */

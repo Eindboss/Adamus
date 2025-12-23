@@ -78,7 +78,7 @@
 }
 
 .flashcard:focus {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--brand);
   outline-offset: 4px;
   border-radius: var(--radius-lg);
 }
@@ -270,10 +270,32 @@
   color: var(--error);
 }
 
-/* Responsive */
+/* Responsive - iPad */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .flashcard {
+    max-width: 460px;
+  }
+
+  .flashcard-content {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive - iPhone/mobile */
 @media (max-width: 640px) {
   .flashcard {
-    height: 240px;
+    max-width: 100%;
+    min-height: 260px;
+  }
+
+  .flashcard-inner {
+    min-height: 260px;
+  }
+
+  .flashcard-front,
+  .flashcard-back {
+    min-height: 260px;
+    padding: var(--space-5);
   }
 
   .flashcard-content {
@@ -291,10 +313,23 @@
 
   .flashcard-buttons .btn {
     width: 100%;
+    min-height: 52px;
+    font-size: 1rem;
   }
 
   .mastery-legend {
     flex-wrap: wrap;
     gap: var(--space-2);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .flashcard {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .flashcard-buttons .btn {
+    min-height: 52px;
   }
 }

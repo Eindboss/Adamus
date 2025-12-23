@@ -7,582 +7,290 @@
     {
       "id": "w3-01",
       "type": "open",
-      "q": "Bekijk het assenstelsel. Wat zijn de coördinaten van de oorsprong O?",
-      "accept": ["0, 0", "0,0", "(0, 0)", "(0,0)", "0 0"],
-      "explanation": "De oorsprong O is het snijpunt van de x-as en de y-as. Dit punt heeft altijd de coördinaten (0, 0).",
-      "graph": {
-        "xMin": -5,
-        "xMax": 5,
-        "yMin": -5,
-        "yMax": 5
-      }
+      "q": "Wat is de oorsprong O in een assenstelsel?",
+      "accept": ["snijpunt", "snijpunt van de assen", "(0,0)", "0,0", "het punt waar de x-as en y-as elkaar snijden"],
+      "explanation": "De oorsprong O is het snijpunt van de x-as en de y-as, met coördinaten (0, 0)."
     },
     {
       "id": "w3-02",
       "type": "open",
-      "q": "Lees de coördinaten van punt A af uit het assenstelsel.",
-      "accept": ["(4, 3)", "(4,3)", "4, 3", "4,3"],
-      "explanation": "Punt A ligt 4 naar rechts (x = 4) en 3 omhoog (y = 3). De coördinaten zijn (4, 3).",
-      "graph": {
-        "xMin": -1,
-        "xMax": 6,
-        "yMin": -1,
-        "yMax": 5,
-        "points": [
-          {"x": 4, "y": 3, "label": "A"}
-        ]
-      }
+      "q": "Hoe heet de horizontale as?",
+      "accept": ["x-as", "de x-as", "horizontale as"],
+      "explanation": "De horizontale as heet de x-as."
     },
     {
       "id": "w3-03",
       "type": "open",
-      "q": "Lees de coördinaten van punt B af uit het assenstelsel.",
-      "accept": ["(-3, 2)", "(-3,2)", "-3, 2", "-3,2"],
-      "explanation": "Punt B ligt 3 naar links (x = -3) en 2 omhoog (y = 2). De coördinaten zijn (-3, 2).",
-      "graph": {
-        "xMin": -5,
-        "xMax": 3,
-        "yMin": -1,
-        "yMax": 4,
-        "points": [
-          {"x": -3, "y": 2, "label": "B"}
-        ]
-      }
+      "q": "Hoe heet de verticale as?",
+      "accept": ["y-as", "de y-as", "verticale as"],
+      "explanation": "De verticale as heet de y-as."
     },
     {
       "id": "w3-04",
       "type": "open",
-      "q": "Lees de coördinaten van punt C af. Let op: C ligt in het derde kwadrant!",
-      "accept": ["(-2, -4)", "(-2,-4)", "-2, -4", "-2,-4"],
-      "explanation": "Punt C ligt 2 naar links (x = -2) en 4 omlaag (y = -4). In het derde kwadrant zijn beide coördinaten negatief.",
-      "graph": {
-        "xMin": -5,
-        "xMax": 2,
-        "yMin": -6,
-        "yMax": 2,
-        "points": [
-          {"x": -2, "y": -4, "label": "C"}
-        ]
-      }
+      "q": "Wat zijn roosterpunten?",
+      "accept": ["punten met hele getallen", "gehele getallen", "punten waarvan de coördinaten hele getallen zijn"],
+      "explanation": "Roosterpunten zijn punten waarvan beide coördinaten hele getallen zijn."
     },
     {
       "id": "w3-05",
-      "type": "open",
-      "q": "Welk punt ligt op de x-as? Schrijf de letter op.",
-      "accept": ["D", "d", "punt D"],
-      "explanation": "Punt D ligt op de x-as omdat de y-coördinaat gelijk is aan 0. D heeft coördinaten (3, 0).",
-      "graph": {
-        "xMin": -2,
-        "xMax": 5,
-        "yMin": -2,
-        "yMax": 4,
-        "points": [
-          {"x": 1, "y": 2, "label": "A"},
-          {"x": -1, "y": 3, "label": "B"},
-          {"x": 2, "y": -1, "label": "C"},
-          {"x": 3, "y": 0, "label": "D", "color": "#22c55e"}
-        ]
-      }
+      "type": "mc",
+      "q": "Een punt op de x-as heeft altijd...",
+      "answers": [
+        "y-coördinaat 0",
+        "x-coördinaat 0",
+        "positieve coördinaten",
+        "negatieve coördinaten"
+      ],
+      "correctIndex": 0,
+      "explanation": "Punten op de x-as hebben altijd y = 0."
     },
     {
       "id": "w3-06",
-      "type": "open",
-      "q": "Welk punt ligt op de y-as? Schrijf de letter op.",
-      "accept": ["B", "b", "punt B"],
-      "explanation": "Punt B ligt op de y-as omdat de x-coördinaat gelijk is aan 0. B heeft coördinaten (0, 3).",
-      "graph": {
-        "xMin": -3,
-        "xMax": 5,
-        "yMin": -2,
-        "yMax": 5,
-        "points": [
-          {"x": 2, "y": 1, "label": "A"},
-          {"x": 0, "y": 3, "label": "B", "color": "#22c55e"},
-          {"x": 4, "y": 2, "label": "C"},
-          {"x": 3, "y": -1, "label": "D"}
-        ]
-      }
+      "type": "mc",
+      "q": "Een punt op de y-as heeft altijd...",
+      "answers": [
+        "x-coördinaat 0",
+        "y-coördinaat 0",
+        "positieve coördinaten",
+        "negatieve coördinaten"
+      ],
+      "correctIndex": 0,
+      "explanation": "Punten op de y-as hebben altijd x = 0."
     },
     {
       "id": "w3-07",
-      "type": "mc",
-      "q": "Bekijk de punten in het assenstelsel. Welke twee punten hebben dezelfde x-coördinaat?",
-      "answers": [
-        "A en C",
-        "A en B",
-        "B en D",
-        "C en D"
-      ],
-      "correctIndex": 0,
-      "explanation": "A(2, 4) en C(2, 1) hebben allebei x = 2. Punten met dezelfde x-coördinaat liggen op een verticale lijn.",
-      "graph": {
-        "xMin": -1,
-        "xMax": 6,
-        "yMin": -1,
-        "yMax": 6,
-        "points": [
-          {"x": 2, "y": 4, "label": "A"},
-          {"x": 4, "y": 3, "label": "B"},
-          {"x": 2, "y": 1, "label": "C"},
-          {"x": 5, "y": 2, "label": "D"}
-        ]
-      }
+      "type": "open",
+      "q": "Wat is de x-coördinaat van punt (5, 3)?",
+      "accept": ["5"],
+      "explanation": "De x-coördinaat is het eerste getal: 5."
     },
     {
       "id": "w3-08",
-      "type": "mc",
-      "q": "Welke punten zijn roosterpunten?",
-      "answers": [
-        "(2, 3) en (5, 1)",
-        "(2.5, 3) en (4, 1)",
-        "(2, 3.5) en (5, 1)",
-        "(2.5, 3.5) en (4.5, 1.5)"
-      ],
-      "correctIndex": 0,
-      "explanation": "Roosterpunten hebben alleen hele getallen als coördinaten. Alleen (2, 3) en (5, 1) voldoen hieraan."
+      "type": "open",
+      "q": "Wat is de y-coördinaat van punt (5, 3)?",
+      "accept": ["3"],
+      "explanation": "De y-coördinaat is het tweede getal: 3."
     },
     {
       "id": "w3-09",
-      "type": "open",
-      "q": "Punt P ligt 3 naar rechts en 2 omhoog vanaf de oorsprong. Schrijf de coördinaten van P op.",
-      "accept": ["(3, 2)", "(3,2)", "3, 2", "3,2"],
-      "explanation": "3 naar rechts betekent x = 3, 2 omhoog betekent y = 2. Coördinaten: (3, 2).",
-      "graph": {
-        "xMin": -1,
-        "xMax": 5,
-        "yMin": -1,
-        "yMax": 4,
-        "points": [
-          {"x": 3, "y": 2, "label": "P", "color": "#ef4444"}
-        ],
-        "lines": [
-          {"x1": 0, "y1": 0, "x2": 3, "y2": 0, "color": "#3b82f6", "dashed": true},
-          {"x1": 3, "y1": 0, "x2": 3, "y2": 2, "color": "#3b82f6", "dashed": true}
-        ]
-      }
+      "type": "mc",
+      "q": "Punten met dezelfde y-coördinaat liggen op een...",
+      "answers": [
+        "horizontale lijn",
+        "verticale lijn",
+        "diagonale lijn",
+        "kromme"
+      ],
+      "correctIndex": 0,
+      "explanation": "Punten met dezelfde y-coördinaat liggen op een horizontale lijn."
     },
     {
       "id": "w3-10",
-      "type": "open",
-      "q": "Vanuit punt A(3, 2) ga je 4 naar links en 3 omhoog. In welk punt kom je?",
-      "accept": ["(-1, 5)", "(-1,5)", "-1, 5", "-1,5"],
-      "explanation": "Start: (3, 2). 4 naar links: 3 - 4 = -1. 3 omhoog: 2 + 3 = 5. Eindpunt: (-1, 5).",
-      "graph": {
-        "xMin": -3,
-        "xMax": 5,
-        "yMin": -1,
-        "yMax": 7,
-        "points": [
-          {"x": 3, "y": 2, "label": "A"},
-          {"x": -1, "y": 5, "label": "?", "color": "#ef4444"}
-        ],
-        "lines": [
-          {"x1": 3, "y1": 2, "x2": -1, "y2": 2, "color": "#3b82f6", "dashed": true},
-          {"x1": -1, "y1": 2, "x2": -1, "y2": 5, "color": "#3b82f6", "dashed": true}
-        ]
-      }
+      "type": "mc",
+      "q": "Punten met dezelfde x-coördinaat liggen op een...",
+      "answers": [
+        "verticale lijn",
+        "horizontale lijn",
+        "diagonale lijn",
+        "kromme"
+      ],
+      "correctIndex": 0,
+      "explanation": "Punten met dezelfde x-coördinaat liggen op een verticale lijn."
     },
     {
       "id": "w3-11",
       "type": "open",
-      "q": "Bereken: 5 − 3 × (2 − 4)",
-      "accept": ["11"],
-      "explanation": "Eerst haakjes: 2 − 4 = −2. Dan vermenigvuldigen: 3 × (−2) = −6. Dan aftrekken: 5 − (−6) = 5 + 6 = 11."
+      "q": "Wat is een woordformule?",
+      "accept": ["formule in woorden", "formule met woorden", "een formule uitgeschreven in woorden"],
+      "explanation": "Een woordformule is een formule die met woorden is opgeschreven, zoals: kosten = 5 + 2 × aantal."
     },
     {
       "id": "w3-12",
       "type": "open",
-      "q": "Bereken: 2 + 8 × a voor a = 5",
-      "accept": ["42"],
-      "explanation": "Vul a = 5 in: 2 + 8 × 5 = 2 + 40 = 42. Let op: eerst vermenigvuldigen, dan optellen!"
+      "q": "In de formule kosten = 25 + 10 × d, wat is 25?",
+      "accept": ["startwaarde", "beginwaarde", "beginkosten", "vaste kosten", "het vaste bedrag"],
+      "explanation": "25 is de startwaarde (beginkosten): het bedrag dat je altijd betaalt."
     },
     {
       "id": "w3-13",
       "type": "open",
-      "q": "Bereken: 3 × b − 10 voor b = 6",
-      "accept": ["8"],
-      "explanation": "Vul b = 6 in: 3 × 6 − 10 = 18 − 10 = 8."
+      "q": "In de formule kosten = 25 + 10 × d, wat betekent de 10?",
+      "accept": ["kosten per dag", "prijs per dag", "wat je per dag extra betaalt", "per dag"],
+      "explanation": "10 is het bedrag per dag (per eenheid)."
     },
     {
       "id": "w3-14",
-      "type": "open",
-      "q": "Bereken: 3 − 4b voor b = −7",
-      "accept": ["31"],
-      "explanation": "Vul b = −7 in: 3 − 4 × (−7) = 3 − (−28) = 3 + 28 = 31."
+      "type": "mc",
+      "q": "Wat reken je EERST uit: 3 + 4 × 2?",
+      "answers": [
+        "4 × 2 (vermenigvuldigen)",
+        "3 + 4 (optellen)",
+        "Maakt niet uit",
+        "Van links naar rechts"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vermenigvuldigen gaat vóór optellen. Dus: 4 × 2 = 8, dan 3 + 8 = 11."
     },
     {
       "id": "w3-15",
       "type": "open",
-      "q": "Bereken: 2 − (b − d) voor b = 7 en d = 3",
-      "accept": ["-2"],
-      "explanation": "Eerst haakjes: b − d = 7 − 3 = 4. Dan: 2 − 4 = −2."
+      "q": "Bereken: 5 + 3 × 4",
+      "accept": ["17"],
+      "explanation": "Eerst vermenigvuldigen: 3 × 4 = 12. Dan optellen: 5 + 12 = 17."
     },
     {
       "id": "w3-16",
       "type": "open",
-      "q": "Bereken: 5 × (a + 2) voor a = 4",
-      "accept": ["30"],
-      "explanation": "Eerst haakjes: a + 2 = 4 + 2 = 6. Dan: 5 × 6 = 30."
+      "q": "Bereken: 2 × (3 + 5)",
+      "accept": ["16"],
+      "explanation": "Eerst haakjes: 3 + 5 = 8. Dan vermenigvuldigen: 2 × 8 = 16."
     },
     {
       "id": "w3-17",
-      "type": "open",
-      "q": "Een taxibedrijf rekent: kosten = 3 + 2 × aantal kilometers. Hoeveel euro kost een rit van 5 kilometer?",
-      "accept": ["13", "€13", "€ 13", "13 euro", "13,00"],
-      "explanation": "Vul 5 km in: kosten = 3 + 2 × 5 = 3 + 10 = 13 euro."
+      "type": "mc",
+      "q": "Wat is een globale grafiek?",
+      "answers": [
+        "Een grafiek die het verloop laat zien zonder exacte getallen",
+        "Een grafiek met alle exacte punten",
+        "Een grafiek van de hele wereld",
+        "Een grafiek met alleen rechte lijnen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Een globale grafiek laat alleen het algemene verloop zien, zonder exacte waarden."
     },
     {
       "id": "w3-18",
-      "type": "open",
-      "q": "Een zwembad rekent: kosten = 2,50 + 1,50 × aantal uren. Wat kost 3 uur zwemmen? (in euro)",
-      "accept": ["7", "7,00", "€7", "€ 7", "7 euro", "€7,00"],
-      "explanation": "Vul 3 uur in: kosten = 2,50 + 1,50 × 3 = 2,50 + 4,50 = 7 euro."
+      "type": "mc",
+      "q": "Een horizontale lijn in een afstand-tijd grafiek betekent...",
+      "answers": [
+        "stilstand",
+        "sneller gaan",
+        "langzamer gaan",
+        "constante snelheid"
+      ],
+      "correctIndex": 0,
+      "explanation": "Een horizontale lijn betekent dat de afstand niet verandert: je staat stil."
     },
     {
       "id": "w3-19",
       "type": "mc",
-      "q": "De formule voor de huurprijs van een fiets is: prijs = 8 + 5 × aantal dagen. Wat betekent de 8 in deze formule?",
+      "q": "Een steile lijn in een grafiek betekent...",
       "answers": [
-        "De basisprijs (je betaalt altijd 8 euro)",
-        "De prijs per dag",
-        "Het aantal dagen",
-        "De totale prijs"
+        "snelle verandering",
+        "langzame verandering",
+        "geen verandering",
+        "constante waarde"
       ],
       "correctIndex": 0,
-      "explanation": "De 8 is het vaste bedrag (basisprijs/startkosten) dat je altijd betaalt, ongeacht het aantal dagen. De 5 is wat je per dag extra betaalt."
+      "explanation": "Hoe steiler de lijn, hoe sneller de verandering."
     },
     {
       "id": "w3-20",
-      "type": "open",
-      "q": "De lengte van een kaars: lengte = 20 − 2 × aantal uren. Hoe lang is de kaars (in cm) na 4 uur branden?",
-      "accept": ["12", "12 cm"],
-      "explanation": "lengte = 20 − 2 × 4 = 20 − 8 = 12 cm."
+      "type": "mc",
+      "q": "Een vlakke/minder steile lijn betekent...",
+      "answers": [
+        "langzamere verandering",
+        "snellere verandering",
+        "geen verandering",
+        "negatieve waarde"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hoe vlakker de lijn, hoe langzamer de verandering."
     },
     {
       "id": "w3-21",
       "type": "open",
-      "q": "Bekijk de grafiek van y = 2x + 1. Wat is de y-waarde als x = 2?",
-      "accept": ["5"],
-      "explanation": "y = 2 × 2 + 1 = 4 + 1 = 5. Je kunt dit ook aflezen uit de grafiek: bij x = 2 is y = 5.",
-      "graph": {
-        "xMin": -2,
-        "xMax": 4,
-        "yMin": -2,
-        "yMax": 10,
-        "functions": [
-          {"expr": "2*x+1", "color": "#ef4444"}
-        ],
-        "points": [
-          {"x": 2, "y": 5, "label": "?", "color": "#3b82f6"}
-        ]
-      }
+      "q": "Bereken y als y = 3x + 2 en x = 4",
+      "accept": ["14"],
+      "explanation": "y = 3 × 4 + 2 = 12 + 2 = 14"
     },
     {
       "id": "w3-22",
       "type": "open",
-      "q": "Bekijk de grafiek. Bij welke x-waarde is y = 0? (het snijpunt met de x-as)",
-      "accept": ["-0.5", "-0,5", "-1/2"],
-      "explanation": "De lijn snijdt de x-as bij x = -0,5 (daar is y = 0). Controle: y = 2 × (-0,5) + 1 = -1 + 1 = 0.",
-      "graph": {
-        "xMin": -3,
-        "xMax": 3,
-        "yMin": -3,
-        "yMax": 5,
-        "functions": [
-          {"expr": "2*x+1", "color": "#ef4444"}
-        ]
-      }
+      "q": "Bereken y als y = 10 - 2x en x = 3",
+      "accept": ["4"],
+      "explanation": "y = 10 - 2 × 3 = 10 - 6 = 4"
     },
     {
       "id": "w3-23",
-      "type": "open",
-      "q": "Gegeven de formule y = 3 × x + 2. Bereken y als x = 4.",
-      "accept": ["14"],
-      "explanation": "y = 3 × 4 + 2 = 12 + 2 = 14."
+      "type": "mc",
+      "q": "Als een formule een minteken heeft (zoals y = 20 - 3x), dan...",
+      "answers": [
+        "daalt de grafiek",
+        "stijgt de grafiek",
+        "blijft de grafiek horizontaal",
+        "is er geen grafiek mogelijk"
+      ],
+      "correctIndex": 0,
+      "explanation": "Een minteken voor de variabele betekent dat de waarde daalt als x groter wordt."
     },
     {
       "id": "w3-24",
       "type": "open",
-      "q": "Gegeven de formule y = 3 × x + 2. Bereken y als x = 0.",
-      "accept": ["2"],
-      "explanation": "y = 3 × 0 + 2 = 0 + 2 = 2. Dit is ook het snijpunt met de y-as!"
+      "q": "Wat is de startwaarde bij y = 8 + 5x?",
+      "accept": ["8"],
+      "explanation": "De startwaarde is het getal zonder x: 8. Dit is de y-waarde bij x = 0."
     },
     {
       "id": "w3-25",
-      "type": "mc",
-      "q": "Bekijk de grafiek. Welke formule hoort hierbij?",
-      "answers": [
-        "y = 10 + 5 × x",
-        "y = 5 + 10 × x",
-        "y = 10 × x",
-        "y = 5 × x"
-      ],
-      "correctIndex": 0,
-      "explanation": "Bij x = 0 is y = 10 (dat is de startwaarde). Per stap (als x met 1 toeneemt) stijgt y met 5. Dus: y = 10 + 5 × x.",
-      "graph": {
-        "xMin": -1,
-        "xMax": 5,
-        "yMin": -2,
-        "yMax": 35,
-        "functions": [
-          {"expr": "10+5*x", "color": "#ef4444"}
-        ],
-        "points": [
-          {"x": 0, "y": 10, "label": "(0,10)"},
-          {"x": 1, "y": 15, "label": ""},
-          {"x": 2, "y": 20, "label": ""},
-          {"x": 3, "y": 25, "label": ""}
-        ]
-      }
+      "type": "open",
+      "q": "Hoeveel neemt y toe per stap bij y = 8 + 5x?",
+      "accept": ["5"],
+      "explanation": "Per stap (als x met 1 toeneemt) neemt y toe met 5."
     },
     {
       "id": "w3-26",
       "type": "mc",
-      "q": "Een grafiek laat zien dat iets eerst snel daalt en daarna langzaam daalt. Welke situatie past hierbij?",
+      "q": "Bij een formule y = a + b × x, wat is de startwaarde?",
       "answers": [
-        "De temperatuur van thee die afkoelt",
-        "Een auto die steeds sneller rijdt",
-        "Water dat met constante snelheid uit een kraan stroomt",
-        "Een vliegtuig dat opstijgt"
+        "a",
+        "b",
+        "x",
+        "y"
       ],
       "correctIndex": 0,
-      "explanation": "Hete thee koelt eerst snel af (groot temperatuurverschil met omgeving), daarna steeds langzamer naarmate het dichter bij kamertemperatuur komt."
+      "explanation": "De startwaarde is a: de waarde van y als x = 0."
     },
     {
       "id": "w3-27",
       "type": "mc",
-      "q": "In een grafiek van afstand tegen tijd wordt de lijn horizontaal. Wat betekent dit?",
+      "q": "Bij een formule y = a + b × x, wat is de toename per stap?",
       "answers": [
-        "Je staat stil (snelheid is 0)",
-        "Je gaat steeds sneller rijden",
-        "Je gaat steeds langzamer rijden",
-        "Je rijdt met constante snelheid"
+        "b",
+        "a",
+        "x",
+        "y"
       ],
       "correctIndex": 0,
-      "explanation": "Een horizontale lijn in een afstand-tijd grafiek betekent dat de afstand niet verandert. Je beweegt dus niet (je staat stil)."
+      "explanation": "b geeft aan hoeveel y toeneemt als x met 1 toeneemt."
     },
     {
       "id": "w3-28",
-      "type": "mc",
-      "q": "Een grafiek loopt eerst steil omhoog, dan wordt hij vlakker. Wat kun je hieruit concluderen?",
-      "answers": [
-        "De toename gaat eerst snel, daarna langzamer",
-        "De toename gaat eerst langzaam, daarna sneller",
-        "De snelheid blijft constant",
-        "Er is geen verandering"
-      ],
-      "correctIndex": 0,
-      "explanation": "Steil = snelle verandering (grote toename per tijdseenheid). Vlakker = langzamere verandering (kleinere toename per tijdseenheid)."
+      "type": "open",
+      "q": "Taxi: kosten = 3 + 2 × km. Wat kost 5 km?",
+      "accept": ["13", "€13", "13 euro"],
+      "explanation": "kosten = 3 + 2 × 5 = 3 + 10 = 13 euro"
     },
     {
       "id": "w3-29",
       "type": "open",
-      "q": "Een schoonmaakbedrijf rekent: kosten = 40 + 15 × a (a = aantal uren). Hoeveel euro kost 3 uur schoonmaken?",
-      "accept": ["85", "€85", "€ 85", "85 euro"],
-      "explanation": "kosten = 40 + 15 × 3 = 40 + 45 = 85 euro."
+      "q": "Kaars: lengte = 20 - 2 × uur. Hoe lang na 3 uur?",
+      "accept": ["14", "14 cm"],
+      "explanation": "lengte = 20 - 2 × 3 = 20 - 6 = 14 cm"
     },
     {
       "id": "w3-30",
-      "type": "open",
-      "q": "Een vierkant heeft zijde a. De omtrek is: omtrek = 4 × a. Bereken de omtrek als a = 7.",
-      "accept": ["28"],
-      "explanation": "omtrek = 4 × 7 = 28."
-    },
-    {
-      "id": "w3-31",
-      "type": "open",
-      "q": "De formule voor het aantal tegels is: aantal = 50 + 10 × r. Hoeveel tegels heb je nodig als r = 4?",
-      "accept": ["90"],
-      "explanation": "aantal = 50 + 10 × 4 = 50 + 40 = 90 tegels."
-    },
-    {
-      "id": "w3-32",
-      "type": "open",
-      "q": "Susan houdt het gewicht van een pasgeboren kitten bij. In week 0 weegt het 95 gram. Elke week komt er 100 gram bij. Hoeveel gram weegt de kitten in week 4?",
-      "accept": ["495", "495 gram"],
-      "explanation": "Start: 95 gram. Per week +100 gram. Na 4 weken: 95 + 4 × 100 = 95 + 400 = 495 gram."
-    },
-    {
-      "id": "w3-33",
-      "type": "open",
-      "q": "Bij de formule gewicht = 95 + 100 × w (w = aantal weken), wat is het startgewicht (bij w = 0)?",
-      "accept": ["95", "95 gram"],
-      "explanation": "Vul w = 0 in: gewicht = 95 + 100 × 0 = 95 + 0 = 95 gram. Het getal 95 is de startwaarde."
-    },
-    {
-      "id": "w3-34",
       "type": "mc",
-      "q": "Je ziet een tabel met x-waarden 0, 1, 2, 3 en y-waarden 5, 8, 11, 14. Welke formule past hierbij?",
+      "q": "Hoe teken je een grafiek bij een formule?",
       "answers": [
-        "y = 5 + 3 × x",
-        "y = 3 + 5 × x",
-        "y = 8 + 3 × x",
-        "y = 5 × x"
+        "Maak eerst een tabel met punten",
+        "Trek meteen een lijn",
+        "Begin altijd bij (0,0)",
+        "Raad waar de lijn komt"
       ],
       "correctIndex": 0,
-      "explanation": "Bij x = 0 is y = 5 (startwaarde). De y neemt elke stap met 3 toe (8-5=3, 11-8=3, 14-11=3). Dus: y = 5 + 3 × x."
-    },
-    {
-      "id": "w3-35",
-      "type": "open",
-      "q": "De Baan kost per rit: kosten = 50 + 10 × aantal personen. Dit heet een woordformule. Schrijf de beginkosten op.",
-      "accept": ["50", "€50", "50 euro"],
-      "explanation": "De beginkosten zijn het vaste bedrag dat je altijd betaalt, ongeacht het aantal personen. Dat is 50 (euro)."
-    },
-    {
-      "id": "w3-36",
-      "type": "open",
-      "q": "Bij kosten = 50 + 10 × aantal personen, hoeveel kost het per persoon extra?",
-      "accept": ["10", "€10", "10 euro"],
-      "explanation": "Het getal 10 staat voor de kosten per persoon. Elke extra persoon kost 10 euro meer."
-    },
-    {
-      "id": "w3-37",
-      "type": "open",
-      "q": "Bereken: 14 + c voor c = −3",
-      "accept": ["11"],
-      "explanation": "14 + (−3) = 14 − 3 = 11."
-    },
-    {
-      "id": "w3-38",
-      "type": "open",
-      "q": "Bereken: −5 + 2d voor d = 4",
-      "accept": ["3"],
-      "explanation": "−5 + 2 × 4 = −5 + 8 = 3."
-    },
-    {
-      "id": "w3-39",
-      "type": "mc",
-      "q": "De waterhoogte in een aquarium: hoogte = 100 − 0,25 × t (t in minuten). Wat gebeurt er met de waterhoogte?",
-      "answers": [
-        "De waterhoogte daalt (het water stroomt weg)",
-        "De waterhoogte stijgt (het water stroomt erin)",
-        "De waterhoogte blijft gelijk",
-        "Dit kun je niet zeggen"
-      ],
-      "correctIndex": 0,
-      "explanation": "Er staat een minteken voor 0,25 × t. Hoe groter t wordt, hoe meer er wordt afgetrokken. De hoogte daalt dus (het water stroomt weg)."
-    },
-    {
-      "id": "w3-40",
-      "type": "open",
-      "q": "Deborah legt een boom op een rechte oprit. De formule is: hoogte = 1 + 2 × afstand. Bereken de hoogte (in cm) bij een afstand van 3 meter.",
-      "accept": ["7", "7 cm"],
-      "explanation": "hoogte = 1 + 2 × 3 = 1 + 6 = 7 cm."
-    },
-    {
-      "id": "w3-41",
-      "type": "open",
-      "q": "Teken in gedachten een assenstelsel. Noem de getallen bij de assen van -4 tot en met 9. Teken het punt A(2, 3). Hoeveel hokjes naar rechts ga je vanuit O?",
-      "accept": ["2"],
-      "explanation": "De x-coördinaat is 2, dus je gaat 2 hokjes naar rechts vanuit de oorsprong O."
-    },
-    {
-      "id": "w3-42",
-      "type": "open",
-      "q": "Punt P ligt 2 hokjes rechts van A(3, 1). Wat zijn de coördinaten van P?",
-      "accept": ["(5, 1)", "(5,1)", "5, 1", "5,1"],
-      "explanation": "A heeft x = 3. Twee hokjes naar rechts: 3 + 2 = 5. De y blijft 1. Dus P = (5, 1).",
-      "graph": {
-        "xMin": -1,
-        "xMax": 7,
-        "yMin": -1,
-        "yMax": 4,
-        "points": [
-          {"x": 3, "y": 1, "label": "A"},
-          {"x": 5, "y": 1, "label": "P", "color": "#ef4444"}
-        ],
-        "lines": [
-          {"x1": 3, "y1": 1, "x2": 5, "y2": 1, "color": "#3b82f6", "dashed": true}
-        ]
-      }
-    },
-    {
-      "id": "w3-43",
-      "type": "open",
-      "q": "Punt M ligt 4 hokjes onder punt A(2, 5). Schrijf de coördinaten van M op.",
-      "accept": ["(2, 1)", "(2,1)", "2, 1", "2,1"],
-      "explanation": "A heeft y = 5. Vier hokjes omlaag: 5 - 4 = 1. De x blijft 2. Dus M = (2, 1).",
-      "graph": {
-        "xMin": -1,
-        "xMax": 5,
-        "yMin": -1,
-        "yMax": 7,
-        "points": [
-          {"x": 2, "y": 5, "label": "A"},
-          {"x": 2, "y": 1, "label": "M", "color": "#ef4444"}
-        ],
-        "lines": [
-          {"x1": 2, "y1": 5, "x2": 2, "y2": 1, "color": "#3b82f6", "dashed": true}
-        ]
-      }
-    },
-    {
-      "id": "w3-44",
-      "type": "mc",
-      "q": "Welke punten liggen op dezelfde horizontale lijn?",
-      "answers": [
-        "A(1, 3) en B(4, 3)",
-        "A(1, 3) en C(1, 5)",
-        "B(4, 3) en D(2, 1)",
-        "C(1, 5) en D(2, 1)"
-      ],
-      "correctIndex": 0,
-      "explanation": "Punten op dezelfde horizontale lijn hebben dezelfde y-coördinaat. A(1, 3) en B(4, 3) hebben allebei y = 3."
-    },
-    {
-      "id": "w3-45",
-      "type": "open",
-      "q": "Bij een globale grafiek van een fietstocht maakt Jens een tussenstop. Hoe zie je dat aan de grafiek?",
-      "accept": ["horizontaal", "vlak", "lijn is vlak", "horizontale lijn", "stilstand", "afstand verandert niet"],
-      "explanation": "Bij een tussenstop (stilstand) verandert de afstand niet. De grafiek wordt dan horizontaal (een vlakke lijn)."
-    },
-    {
-      "id": "w3-46",
-      "type": "open",
-      "q": "De formule voor de huurprijs van een scooter is: kosten = 25 + 50 × d (d = aantal dagen). Bereken de kosten voor 3 dagen huren.",
-      "accept": ["175", "€175", "€ 175", "175 euro"],
-      "explanation": "kosten = 25 + 50 × 3 = 25 + 150 = 175 euro."
-    },
-    {
-      "id": "w3-47",
-      "type": "mc",
-      "q": "Een vat wordt gevuld met water. De waterhoogte stijgt eerst snel, dan steeds langzamer. Welke vorm heeft het vat waarschijnlijk?",
-      "answers": [
-        "Breed onderin, smaller bovenaan (kegelvorm)",
-        "Smal onderin, breder bovenaan",
-        "Overal even breed (cilinder)",
-        "Dit kun je niet bepalen"
-      ],
-      "correctIndex": 0,
-      "explanation": "Als het vat breed is onderin, stijgt het water eerst snel (weinig volume nodig). Bovenaan waar het smaller is, moet het water hoger stijgen voor hetzelfde volume, dus gaat het langzamer."
-    },
-    {
-      "id": "w3-48",
-      "type": "open",
-      "q": "Xian maakt een fietstocht van 20 km. Na het speelkwartier van de kraan stijgt het water met 5 cm per minuut. De hoogte van het water is: hoogte = 5 × m + 10. Hoe hoog staat het water (in cm) na 6 minuten?",
-      "accept": ["40", "40 cm"],
-      "explanation": "hoogte = 5 × 6 + 10 = 30 + 10 = 40 cm."
-    },
-    {
-      "id": "w3-49",
-      "type": "open",
-      "q": "Bij de formule y = 8 × x maak je een tabel. Vul de y-waarde in als x = 4.",
-      "accept": ["32"],
-      "explanation": "y = 8 × 4 = 32."
-    },
-    {
-      "id": "w3-50",
-      "type": "mc",
-      "q": "In de grafiek zie je de temperatuur in Amsterdam en Brussel op een dag in december. De grafiek van Amsterdam begint hoger. Wat kun je hieruit concluderen?",
-      "answers": [
-        "Om 00:00 uur was het warmer in Amsterdam dan in Brussel",
-        "Amsterdam is altijd warmer dan Brussel",
-        "De temperatuur daalt in Amsterdam",
-        "De temperatuur stijgt in Brussel"
-      ],
-      "correctIndex": 0,
-      "explanation": "Het beginpunt van de grafiek (bij tijd = 0, dus 00:00 uur) is hoger voor Amsterdam. Dit betekent dat het op dat moment warmer was in Amsterdam."
+      "explanation": "Je maakt eerst een tabel met x- en y-waarden, tekent de punten, en verbindt ze."
     }
   ]
 }
