@@ -1,62 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
   <defs>
-    <!-- Gradient for leaves -->
-    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22c55e"/>
-      <stop offset="100%" stop-color="#16a34a"/>
+    <!-- Body gradient -->
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
     </linearGradient>
-    <!-- Lighter leaf -->
-    <linearGradient id="leafLight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4ade80"/>
-      <stop offset="100%" stop-color="#22c55e"/>
+    <!-- Accent gradient (beak, legs) -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
     </linearGradient>
-    <!-- Stem gradient -->
-    <linearGradient id="stemGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#22c55e"/>
-      <stop offset="100%" stop-color="#15803d"/>
-    </linearGradient>
-    <!-- Soil/pot gradient -->
-    <linearGradient id="soilGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#a16207"/>
-      <stop offset="100%" stop-color="#854d0e"/>
+    <!-- Wing detail -->
+    <linearGradient id="wingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
     </linearGradient>
   </defs>
 
-  <!-- Soil/ground base -->
-  <ellipse cx="60" cy="100" rx="28" ry="8" fill="url(#soilGradient)"/>
+  <!-- Body -->
+  <ellipse cx="60" cy="65" rx="28" ry="22" fill="url(#bodyGradient)" stroke="#94a3b8" stroke-width="1"/>
 
-  <!-- Main stem - forms the left leg of the A -->
-  <path d="M60 95 Q58 70, 45 35" stroke="url(#stemGradient)" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Wing -->
+  <path d="M45 55
+           Q35 65, 40 80
+           Q50 75, 55 70
+           Q50 60, 45 55"
+        fill="url(#wingGradient)"/>
 
-  <!-- Right stem - forms the right leg of the A -->
-  <path d="M60 95 Q62 70, 75 35" stroke="url(#stemGradient)" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Wing feather details -->
+  <path d="M42 62 Q38 70, 42 76" stroke="#64748b" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M47 60 Q44 68, 48 74" stroke="#64748b" stroke-width="1" fill="none" opacity="0.5"/>
 
-  <!-- Cross bar of the A (small branch) -->
-  <path d="M50 62 Q60 58, 70 62" stroke="url(#stemGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Neck -->
+  <path d="M75 55
+           Q85 45, 80 30
+           Q78 22, 70 18"
+        stroke="url(#bodyGradient)"
+        stroke-width="8"
+        fill="none"
+        stroke-linecap="round"/>
+  <path d="M75 55
+           Q85 45, 80 30
+           Q78 22, 70 18"
+        stroke="#94a3b8"
+        stroke-width="1"
+        fill="none"
+        stroke-linecap="round"/>
 
-  <!-- Left leaf (larger, main leaf) -->
-  <path d="M45 35
-           Q30 30, 25 15
-           Q35 20, 45 35"
-        fill="url(#leafGradient)"/>
-  <!-- Left leaf vein -->
-  <path d="M44 34 Q36 28, 30 20" stroke="#15803d" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- Head -->
+  <circle cx="68" cy="16" r="8" fill="url(#bodyGradient)" stroke="#94a3b8" stroke-width="1"/>
 
-  <!-- Right leaf (slightly smaller) -->
-  <path d="M75 35
-           Q90 30, 95 15
-           Q85 20, 75 35"
-        fill="url(#leafLight)"/>
-  <!-- Right leaf vein -->
-  <path d="M76 34 Q84 28, 90 20" stroke="#16a34a" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- Curved beak (iconic ibis feature) -->
+  <path d="M62 18
+           Q50 22, 38 35
+           Q36 38, 38 40"
+        stroke="url(#accentGradient)"
+        stroke-width="3"
+        fill="none"
+        stroke-linecap="round"/>
 
-  <!-- Small sprouting leaf at top center -->
-  <path d="M60 40
-           Q60 25, 55 12
-           Q62 22, 60 40"
-        fill="url(#leafGradient)"/>
-  <path d="M60 40
-           Q60 25, 65 12
-           Q58 22, 60 40"
-        fill="url(#leafLight)"/>
+  <!-- Eye -->
+  <circle cx="70" cy="14" r="2.5" fill="#1e293b"/>
+  <circle cx="71" cy="13" r="0.8" fill="white"/>
+
+  <!-- Legs -->
+  <path d="M50 85 L45 105" stroke="url(#accentGradient)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M65 85 L68 105" stroke="url(#accentGradient)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Feet -->
+  <path d="M42 105 L48 105" stroke="url(#accentGradient)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M65 105 L71 105" stroke="url(#accentGradient)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Tail feathers -->
+  <path d="M32 70 Q25 75, 22 82" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M34 73 Q28 80, 26 88" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round"/>
 </svg>
