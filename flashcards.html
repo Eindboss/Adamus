@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="pageTitle">Adamus - Flashcards</title>
+  <meta name="description" content="Oefen met flashcards - flip om het antwoord te zien.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="flashcards">
+  <!-- Header -->
+  <div id="topbar-root"></div>
+
+  <!-- Main Content -->
+  <main class="wrap">
+    <div class="page-header">
+      <span class="badge" id="subjectBadge"></span>
+      <h1 id="subjectTitle">Flashcards</h1>
+    </div>
+
+    <!-- Mastery Progress -->
+    <div class="mastery-bar" id="masteryBar">
+      <div class="mastery-segment mastery-new" id="masteryNew" title="Nieuw"></div>
+      <div class="mastery-segment mastery-learning" id="masteryLearning" title="Aan het leren"></div>
+      <div class="mastery-segment mastery-reviewing" id="masteryReviewing" title="Herhalen"></div>
+      <div class="mastery-segment mastery-mastered" id="masteryMastered" title="Geleerd"></div>
+    </div>
+    <div class="mastery-legend">
+      <span><span class="dot dot-new"></span> Nieuw</span>
+      <span><span class="dot dot-learning"></span> Leren</span>
+      <span><span class="dot dot-reviewing"></span> Herhalen</span>
+      <span><span class="dot dot-mastered"></span> Geleerd</span>
+    </div>
+
+    <!-- Flashcard Area -->
+    <div class="flashcard-container" id="flashcardArea">
+      <div class="flashcard" id="flashcard" tabindex="0">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <div class="flashcard-content" id="cardFront">Laden...</div>
+          </div>
+          <div class="flashcard-back">
+            <div class="flashcard-content" id="cardBack">Antwoord</div>
+            <div class="flashcard-explanation" id="cardExplanation"></div>
+          </div>
+        </div>
+      </div>
+      <p class="flashcard-hint">Klik of druk op spatie om te flippen</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="flashcard-controls">
+      <div class="flashcard-progress">
+        <span id="cardProgress">1 / 10</span>
+      </div>
+      <div class="flashcard-buttons">
+        <button class="btn btn-error" id="btnWrong" title="Wist ik niet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+          Opnieuw
+        </button>
+        <button class="btn btn-success" id="btnCorrect" title="Wist ik wel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+          Wist ik
+        </button>
+      </div>
+    </div>
+
+    <!-- Summary (hidden initially) -->
+    <div class="flashcard-summary" id="summary" style="display: none;">
+      <h2>Ronde voltooid!</h2>
+      <div class="summary-stats">
+        <div class="summary-stat correct">
+          <div class="value" id="summaryCorrect">0</div>
+          <div class="label">Goed</div>
+        </div>
+        <div class="summary-stat wrong">
+          <div class="value" id="summaryWrong">0</div>
+          <div class="label">Opnieuw</div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <button class="btn btn-primary btn-block" id="btnRestart">Nog een ronde</button>
+        <a href="subject.html" class="btn btn-secondary btn-block mt-2" id="btnBack">Terug naar overzicht</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="assets/js/header.js"></script>
+  <script type="module" src="assets/js/flashcards.js"></script>
+</body>
+</html>

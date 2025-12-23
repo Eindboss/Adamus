@@ -79,6 +79,7 @@ async function init() {
     quizzes.forEach(meta => {
       const title = extractQuizTitle(meta, displayName);
 
+      // Quiz card
       const card = document.createElement('a');
       card.className = 'quiz-card';
       card.href = `quiz.html?subject=${encodeURIComponent(meta.id)}`;
@@ -100,6 +101,31 @@ async function init() {
       `;
 
       listEl.appendChild(card);
+
+      // Flashcard link (only if quiz has content)
+      if (meta.file) {
+        const flashcardCard = document.createElement('a');
+        flashcardCard.className = 'quiz-card quiz-card-secondary';
+        flashcardCard.href = `flashcards.html?subject=${encodeURIComponent(meta.id)}`;
+        flashcardCard.style.setProperty('--accent', accent.color);
+        flashcardCard.style.setProperty('--accent-light', accent.light);
+
+        flashcardCard.innerHTML = `
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M12 8v8M8 12h8"/>
+            </svg>
+          </div>
+          <div class="quiz-info">
+            <div class="quiz-title">${title}</div>
+            <div class="quiz-meta">Flashcards</div>
+          </div>
+          <span class="arrow">→</span>
+        `;
+
+        listEl.appendChild(flashcardCard);
+      }
     });
 
   } catch (error) {

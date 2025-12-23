@@ -1,0 +1,263 @@
+/* ===========================================
+   Adamus - Flashcards Styles
+   =========================================== */
+
+/* Mastery Progress Bar */
+.mastery-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--muted);
+  margin-bottom: var(--space-2);
+}
+
+.mastery-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.mastery-new {
+  background: var(--muted);
+}
+
+.mastery-learning {
+  background: #f59e0b;
+}
+
+.mastery-reviewing {
+  background: #3b82f6;
+}
+
+.mastery-mastered {
+  background: #22c55e;
+}
+
+.mastery-legend {
+  display: flex;
+  gap: var(--space-4);
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-bottom: var(--space-4);
+}
+
+.mastery-legend .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.dot-new { background: var(--muted); }
+.dot-learning { background: #f59e0b; }
+.dot-reviewing { background: #3b82f6; }
+.dot-mastered { background: #22c55e; }
+
+/* Flashcard Container */
+.flashcard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--space-4) 0;
+}
+
+/* Flashcard */
+.flashcard {
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  perspective: 1000px;
+  cursor: pointer;
+  outline: none;
+}
+
+.flashcard:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-lg);
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  box-shadow: var(--shadow-md);
+}
+
+.flashcard-front {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.flashcard-back {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark, #4f46e5));
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flashcard-content {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.flashcard-back .flashcard-content {
+  font-size: 1.5rem;
+}
+
+.flashcard-explanation {
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  opacity: 0.9;
+  text-align: center;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.flashcard-hint {
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* Controls */
+.flashcard-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.flashcard-progress {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.flashcard-buttons {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.flashcard-buttons .btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 120px;
+  justify-content: center;
+}
+
+.flashcard-buttons .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-success {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: #16a34a;
+}
+
+.btn-error {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-error:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+/* Summary */
+.flashcard-summary {
+  text-align: center;
+  padding: var(--space-5);
+}
+
+.flashcard-summary h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.summary-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.summary-stat {
+  text-align: center;
+}
+
+.summary-stat .value {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.summary-stat .label {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.summary-stat.correct .value {
+  color: #22c55e;
+}
+
+.summary-stat.wrong .value {
+  color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .flashcard {
+    height: 240px;
+  }
+
+  .flashcard-content {
+    font-size: 1.1rem;
+  }
+
+  .flashcard-back .flashcard-content {
+    font-size: 1.25rem;
+  }
+
+  .flashcard-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .flashcard-buttons .btn {
+    width: 100%;
+  }
+
+  .mastery-legend {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+}

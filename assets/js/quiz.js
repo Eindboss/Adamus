@@ -5,7 +5,8 @@
 
 import { $, $$, $$$, shuffle, loadJSON, htmlToText, getUrlParam, normalizeAnswer, matchesAcceptList, countFillableCells, countGroupedInputs } from './utils.js';
 import { startTimer, stopTimer, resetTimer, pauseTimer, resumeTimer, initTimer } from './timer.js';
-import { readStats, writeStats, updateStats, createSessionHistory } from './stats.js';
+import { readStats, writeStats, updateStats, createSessionHistory, updateQuestionBox, incrementSession, getSpacedQuestions, getMasteryStats } from './stats.js';
+import { createCoordinateSystem } from './graph.js';
 
 // Constants
 const QUESTION_SECONDS = 90;
@@ -103,11 +104,15 @@ async function loadQuestions() {
       throw new Error('Geen vragen gevonden');
     }
 
-    // Normalize and optionally shuffle
-    state.questions = questions.map(q => normalizeQuestion(q, meta.schema === 'quiz'));
+    // Normalize questions
+    let normalized = questions.map(q => normalizeQuestion(q, meta.schema === 'quiz'));
+
+    // Increment session and apply spaced repetition
+    incrementSession(state.subjectId);
+    normalized = getSpacedQuestions(state.subjectId, normalized);
 
     // Shuffle MC answers
-    state.questions = state.questions.map(q => {
+    state.questions = normalized.map(q => {
       if (q.type === 'mc') {
         return shuffleMCAnswers(q);
       }
@@ -159,21 +164,27 @@ function normalizeQuestion(raw, preferMC = false) {
     }
 
     return {
+      id: raw.id,
       type: 'mc',
       q: raw.q || raw.question || '',
       answers,
       correctIndex,
-      explanation: raw.explanation || raw.why || raw.e || ''
+      explanation: raw.explanation || raw.why || raw.e || '',
+      graph: raw.graph || null,
+      image: raw.image || null
     };
   }
 
   // Open question
   return {
+    id: raw.id,
     type: 'open',
     q: raw.q || raw.question || raw.vraag || '',
     accept: raw.accept || [],
     caseSensitive: !!raw.caseSensitive,
-    explanation: raw.explanation || raw.e || ''
+    explanation: raw.explanation || raw.e || '',
+    graph: raw.graph || null,
+    image: raw.image || null
   };
 }
 
@@ -304,11 +315,18 @@ function renderMC(container, q) {
 function renderOpen(container, q) {
   container.innerHTML = `
     <div class="question-title">${q.q}</div>
+    ${q.graph ? '<div id="graphContainer" class="graph-container"></div>' : ''}
+    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ''}
     <div class="open-input-wrap">
-      <textarea id="openInput" class="open-input" placeholder="Typ je antwoord..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+      <input type="text" id="openInput" class="open-input" placeholder="Typ je antwoord..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  // Render graph if present
+  if (q.graph) {
+    renderGraph($('graphContainer'), q.graph);
+  }
 
   const input = $('openInput');
   if (input) {
@@ -318,12 +336,71 @@ function renderOpen(container, q) {
         checkBtn.disabled = input.value.trim().length === 0;
       }
     });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.value.trim().length > 0) {
+        e.preventDefault();
+        checkAnswer();
+      }
+    });
     input.focus();
   }
 
   // Disable check button initially
   const checkBtn = $('checkBtn');
   if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Render a graph/coordinate system
+ */
+function renderGraph(container, config) {
+  if (!container || !config) return;
+
+  const graph = createCoordinateSystem({
+    width: 320,
+    height: 320,
+    xMin: config.xMin ?? -6,
+    xMax: config.xMax ?? 6,
+    yMin: config.yMin ?? -6,
+    yMax: config.yMax ?? 6,
+    showGrid: config.showGrid !== false,
+    showLabels: config.showLabels !== false
+  });
+
+  // Add points
+  if (Array.isArray(config.points)) {
+    config.points.forEach(p => {
+      graph.addPoint(p.x, p.y, {
+        label: p.label || '',
+        color: p.color || '#6366f1'
+      });
+    });
+  }
+
+  // Add lines
+  if (Array.isArray(config.lines)) {
+    config.lines.forEach(l => {
+      graph.addLine(l.x1, l.y1, l.x2, l.y2, {
+        color: l.color || '#6366f1',
+        dashed: l.dashed || false
+      });
+    });
+  }
+
+  // Add functions (parsed from string)
+  if (Array.isArray(config.functions)) {
+    config.functions.forEach(f => {
+      try {
+        // Simple function parser: "2*x+1" -> (x) => 2*x+1
+        const fn = new Function('x', `return ${f.expr}`);
+        graph.addFunction(fn, { color: f.color || '#ef4444' });
+      } catch (e) {
+        console.warn('Invalid function:', f.expr);
+      }
+    });
+  }
+
+  container.appendChild(graph.svg);
 }
 
 /* ===========================================
@@ -798,13 +875,14 @@ function checkMCAnswer(q) {
     }
   });
 
-  // Update stats
+  // Update stats and spaced repetition
   if (isCorrect) {
     state.score++;
   } else {
     state.wrong++;
   }
   updateStats(state.subjectId, isCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
   // Add to history
   state.history.add({
@@ -834,6 +912,7 @@ function checkOpenAnswer(q) {
     state.wrong++;
   }
   updateStats(state.subjectId, isCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
   // Add to history
   state.history.add({
@@ -905,6 +984,7 @@ function checkShortText(q) {
     input?.classList.add('input-wrong');
   }
   updateStats(state.subjectId, isCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
   state.history.add({
     question: htmlToText(q.prompt_html || q.q),
