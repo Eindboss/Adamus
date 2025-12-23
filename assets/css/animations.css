@@ -33,7 +33,9 @@
 
 /* Theme toggle button animation */
 .theme-toggle svg {
-  transition: transform 300ms var(--ease-out), opacity 200ms var(--ease);
+  transition:
+    transform 300ms var(--ease-out),
+    opacity 200ms var(--ease);
 }
 
 .theme-toggle:hover svg {
@@ -59,8 +61,12 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInUp {
@@ -133,7 +139,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -142,9 +149,23 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
-  20%, 40%, 60%, 80% { transform: translateX(4px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-4px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(4px);
+  }
 }
 
 @keyframes successPop {
@@ -183,20 +204,46 @@ main.wrap {
   animation: slideInUp 400ms var(--ease-out) both;
 }
 
-.subject-grid > *:nth-child(1) { animation-delay: 50ms; }
-.subject-grid > *:nth-child(2) { animation-delay: 100ms; }
-.subject-grid > *:nth-child(3) { animation-delay: 150ms; }
-.subject-grid > *:nth-child(4) { animation-delay: 200ms; }
-.subject-grid > *:nth-child(5) { animation-delay: 250ms; }
-.subject-grid > *:nth-child(6) { animation-delay: 300ms; }
-.subject-grid > *:nth-child(7) { animation-delay: 350ms; }
+.subject-grid > *:nth-child(1) {
+  animation-delay: 50ms;
+}
+.subject-grid > *:nth-child(2) {
+  animation-delay: 100ms;
+}
+.subject-grid > *:nth-child(3) {
+  animation-delay: 150ms;
+}
+.subject-grid > *:nth-child(4) {
+  animation-delay: 200ms;
+}
+.subject-grid > *:nth-child(5) {
+  animation-delay: 250ms;
+}
+.subject-grid > *:nth-child(6) {
+  animation-delay: 300ms;
+}
+.subject-grid > *:nth-child(7) {
+  animation-delay: 350ms;
+}
 
-.quiz-grid > *:nth-child(1) { animation-delay: 50ms; }
-.quiz-grid > *:nth-child(2) { animation-delay: 100ms; }
-.quiz-grid > *:nth-child(3) { animation-delay: 150ms; }
-.quiz-grid > *:nth-child(4) { animation-delay: 200ms; }
-.quiz-grid > *:nth-child(5) { animation-delay: 250ms; }
-.quiz-grid > *:nth-child(6) { animation-delay: 300ms; }
+.quiz-grid > *:nth-child(1) {
+  animation-delay: 50ms;
+}
+.quiz-grid > *:nth-child(2) {
+  animation-delay: 100ms;
+}
+.quiz-grid > *:nth-child(3) {
+  animation-delay: 150ms;
+}
+.quiz-grid > *:nth-child(4) {
+  animation-delay: 200ms;
+}
+.quiz-grid > *:nth-child(5) {
+  animation-delay: 250ms;
+}
+.quiz-grid > *:nth-child(6) {
+  animation-delay: 300ms;
+}
 
 /* Page header animation */
 .page-header {
@@ -216,10 +263,18 @@ main.wrap {
   animation: slideInLeft 300ms var(--ease-out) both;
 }
 
-.options-list .option:nth-child(1) { animation-delay: 100ms; }
-.options-list .option:nth-child(2) { animation-delay: 150ms; }
-.options-list .option:nth-child(3) { animation-delay: 200ms; }
-.options-list .option:nth-child(4) { animation-delay: 250ms; }
+.options-list .option:nth-child(1) {
+  animation-delay: 100ms;
+}
+.options-list .option:nth-child(2) {
+  animation-delay: 150ms;
+}
+.options-list .option:nth-child(3) {
+  animation-delay: 200ms;
+}
+.options-list .option:nth-child(4) {
+  animation-delay: 250ms;
+}
 
 /* Correct/wrong feedback animation */
 .option.correct {
@@ -261,7 +316,7 @@ main.wrap {
 }
 
 .btn::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -280,7 +335,7 @@ main.wrap {
 
 /* Primary button glow on hover */
 .btn-primary::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -2px;
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
@@ -306,7 +361,7 @@ main.wrap {
 /* Subtle shine effect on hover */
 .subject-card::before,
 .quiz-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -338,7 +393,7 @@ main.wrap {
 }
 
 .progress-bar::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -355,8 +410,12 @@ main.wrap {
 }
 
 @keyframes progressShine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* ===========================================
@@ -388,9 +447,15 @@ main.wrap {
   animation: slideInUp 400ms var(--ease-out) both;
 }
 
-.summary-stat:nth-child(1) .value { animation-delay: 200ms; }
-.summary-stat:nth-child(2) .value { animation-delay: 300ms; }
-.summary-stat:nth-child(3) .value { animation-delay: 400ms; }
+.summary-stat:nth-child(1) .value {
+  animation-delay: 200ms;
+}
+.summary-stat:nth-child(2) .value {
+  animation-delay: 300ms;
+}
+.summary-stat:nth-child(3) .value {
+  animation-delay: 400ms;
+}
 
 /* ===========================================
    Quiz Controls Animation
@@ -417,7 +482,9 @@ main.wrap {
 }
 
 .feedback-success {
-  animation: slideInUp 350ms var(--ease-out) both, successPop 400ms var(--ease) 350ms;
+  animation:
+    slideInUp 350ms var(--ease-out) both,
+    successPop 400ms var(--ease) 350ms;
 }
 
 /* ===========================================
@@ -445,7 +512,9 @@ main.wrap {
    Loading Dots Animation
    =========================================== */
 @keyframes loadingDot {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     transform: scale(0);
     opacity: 0.5;
   }
@@ -465,9 +534,15 @@ main.wrap {
   animation: loadingDot 1.4s infinite ease-in-out both;
 }
 
-.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
-.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
-.loading-dots span:nth-child(3) { animation-delay: 0; }
+.loading-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.loading-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+.loading-dots span:nth-child(3) {
+  animation-delay: 0;
+}
 
 /* ===========================================
    Icon Animation
@@ -495,7 +570,8 @@ main.wrap {
    Timer Warning Animation
    =========================================== */
 @keyframes timerPulse {
-  0%, 100% {
+  0%,
+  100% {
     color: var(--error);
     transform: scale(1);
   }
@@ -506,7 +582,8 @@ main.wrap {
 }
 
 @keyframes timerUrgent {
-  0%, 100% {
+  0%,
+  100% {
     background: transparent;
   }
   50% {
@@ -544,7 +621,8 @@ main.wrap {
 }
 
 @keyframes confettiSway {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
@@ -571,16 +649,32 @@ main.wrap {
 }
 
 .confetti:nth-child(odd) {
-  animation: confettiFall 3s linear forwards, confettiSway 0.5s ease-in-out infinite;
+  animation:
+    confettiFall 3s linear forwards,
+    confettiSway 0.5s ease-in-out infinite;
 }
 
 /* ===========================================
    Error State Animation
    =========================================== */
 @keyframes errorShake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
-  20%, 40%, 60%, 80% { transform: translateX(8px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-8px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(8px);
+  }
 }
 
 .error-boundary {

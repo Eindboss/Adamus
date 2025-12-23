@@ -3,9 +3,14 @@
    Interactive flashcard learning mode
    =========================================== */
 
-import { $, loadJSON, getUrlParam, shuffle } from './utils.js';
-import { getSpacedData, updateQuestionBox, incrementSession, getMasteryStats } from './stats.js';
-import { renderGraphQuestion } from './graph.js';
+import { $, loadJSON, getUrlParam, shuffle } from "./utils.js";
+import {
+  getSpacedData,
+  updateQuestionBox,
+  incrementSession,
+  getMasteryStats,
+} from "./stats.js";
+import { renderGraphQuestion } from "./graph.js";
 
 // State
 let state = {
@@ -16,7 +21,7 @@ let state = {
   flipped: false,
   correct: 0,
   wrong: 0,
-  phase: 'learning' // 'learning' | 'summary'
+  phase: "learning", // 'learning' | 'summary'
 };
 
 let subjects = [];
@@ -28,18 +33,20 @@ let subjectMap = {};
 async function init() {
   // Load subjects
   try {
-    const data = await loadJSON('data/subjects.json');
+    const data = await loadJSON("data/subjects.json");
     subjects = data.subjects || data || [];
-    subjects.forEach(s => { subjectMap[s.id] = s; });
+    subjects.forEach((s) => {
+      subjectMap[s.id] = s;
+    });
   } catch (error) {
-    showError('Kan vakken niet laden: ' + error.message);
+    showError("Kan vakken niet laden: " + error.message);
     return;
   }
 
   // Get subject from URL
-  const subjectId = getUrlParam('subject');
+  const subjectId = getUrlParam("subject");
   if (!subjectId || !subjectMap[subjectId]) {
-    showError('Onbekend vak. Ga terug naar de homepage.');
+    showError("Onbekend vak. Ga terug naar de homepage.");
     return;
   }
 
@@ -48,12 +55,13 @@ async function init() {
 
   // Update page title
   document.title = `Flashcards - ${state.subjectMeta.title}`;
-  const titleEl = $('subjectTitle');
+  const titleEl = $("subjectTitle");
   if (titleEl) titleEl.textContent = `Flashcards: ${state.subjectMeta.label}`;
 
   // Update back link
-  const backBtn = $('btnBack');
-  if (backBtn) backBtn.href = `subject.html?subject=${encodeURIComponent(state.subjectMeta.subject)}`;
+  const backBtn = $("btnBack");
+  if (backBtn)
+    backBtn.href = `subject.html?subject=${encodeURIComponent(state.subjectMeta.subject)}`;
 
   // Setup event listeners
   setupEventListeners();
@@ -74,43 +82,45 @@ async function loadCards() {
 
     // Extract questions
     let questions = [];
-    if (meta.schema === 'toets') {
+    if (meta.schema === "toets") {
       questions = data.questions || [];
     } else {
       questions = data.questions || data || [];
     }
 
     if (!questions.length) {
-      showError('Geen vragen gevonden');
+      showError("Geen vragen gevonden");
       return;
     }
 
     // Convert questions to flashcards
     // Front: question, Back: answer + explanation
-    state.cards = questions.map(q => {
-      let front = q.q || q.prompt_html || q.question || '';
-      let back = '';
-      let explanation = q.explanation || q.e || '';
+    state.cards = questions
+      .map((q) => {
+        let front = q.q || q.prompt_html || q.question || "";
+        let back = "";
+        let explanation = q.explanation || q.e || "";
 
-      // Determine answer based on question type
-      if (q.type === 'mc' && Array.isArray(q.answers)) {
-        back = q.answers[q.correctIndex] || q.answers[q.c] || '';
-      } else if (q.accept && q.accept.length > 0) {
-        back = q.accept[0];
-      } else if (q.answer?.accepted) {
-        back = q.answer.accepted[0] || '';
-      } else if (Array.isArray(q.a)) {
-        back = q.a[q.c || 0] || '';
-      }
+        // Determine answer based on question type
+        if (q.type === "mc" && Array.isArray(q.answers)) {
+          back = q.answers[q.correctIndex] || q.answers[q.c] || "";
+        } else if (q.accept && q.accept.length > 0) {
+          back = q.accept[0];
+        } else if (q.answer?.accepted) {
+          back = q.answer.accepted[0] || "";
+        } else if (Array.isArray(q.a)) {
+          back = q.a[q.c || 0] || "";
+        }
 
-      return {
-        id: q.id,
-        front,
-        back,
-        explanation,
-        graph: q.graph || null
-      };
-    }).filter(c => c.front && c.back);
+        return {
+          id: q.id,
+          front,
+          back,
+          explanation,
+          graph: q.graph || null,
+        };
+      })
+      .filter((c) => c.front && c.back);
 
     // Increment session for spaced repetition
     incrementSession(state.subjectId);
@@ -127,14 +137,13 @@ async function loadCards() {
     state.flipped = false;
     state.correct = 0;
     state.wrong = 0;
-    state.phase = 'learning';
+    state.phase = "learning";
 
     // Update UI
     updateMasteryBar();
     renderCard();
-
   } catch (error) {
-    showError('Kan vragen niet laden: ' + error.message);
+    showError("Kan vragen niet laden: " + error.message);
   }
 }
 
@@ -145,12 +154,12 @@ function prioritizeCards(cards, spacedData) {
   const session = spacedData.sessionCount;
   const intervals = { 1: 1, 2: 2, 3: 4, 4: 8, 5: 16 };
 
-  const withPriority = cards.map(card => {
+  const withPriority = cards.map((card) => {
     const qData = spacedData.questions[card.id] || { box: 1, lastSeen: -999 };
     const interval = intervals[qData.box] || 1;
     const sessionsSince = session - qData.lastSeen;
     const isDue = sessionsSince >= interval;
-    const priority = isDue ? (6 - qData.box) * 100 : (6 - qData.box);
+    const priority = isDue ? (6 - qData.box) * 100 : 6 - qData.box;
 
     return { ...card, _priority: priority, _box: qData.box };
   });
@@ -171,34 +180,35 @@ function renderCard() {
     return;
   }
 
-  const flashcard = $('flashcard');
-  const frontEl = $('cardFront');
-  const backEl = $('cardBack');
-  const explanationEl = $('cardExplanation');
-  const progressEl = $('cardProgress');
+  const flashcard = $("flashcard");
+  const frontEl = $("cardFront");
+  const backEl = $("cardBack");
+  const explanationEl = $("cardExplanation");
+  const progressEl = $("cardProgress");
 
   // Reset flip state
   state.flipped = false;
-  flashcard?.classList.remove('flipped');
+  flashcard?.classList.remove("flipped");
 
   // Add/remove has-graph class
   if (card.graph) {
-    flashcard?.classList.add('has-graph');
+    flashcard?.classList.add("has-graph");
   } else {
-    flashcard?.classList.remove('has-graph');
+    flashcard?.classList.remove("has-graph");
   }
 
   // Set content - include graph if present
   if (frontEl) {
     let frontHTML = card.front;
     if (card.graph) {
-      frontHTML += '<div id="flashcardGraph" class="graph-container" style="margin-top: 12px;"></div>';
+      frontHTML +=
+        '<div id="flashcardGraph" class="graph-container" style="margin-top: 12px;"></div>';
     }
     frontEl.innerHTML = frontHTML;
 
     // Render graph after HTML is set
     if (card.graph) {
-      const graphContainer = document.getElementById('flashcardGraph');
+      const graphContainer = document.getElementById("flashcardGraph");
       if (graphContainer) {
         renderGraphQuestion(graphContainer, card.graph);
       }
@@ -207,8 +217,8 @@ function renderCard() {
 
   if (backEl) backEl.innerHTML = card.back;
   if (explanationEl) {
-    explanationEl.innerHTML = card.explanation || '';
-    explanationEl.style.display = card.explanation ? 'block' : 'none';
+    explanationEl.innerHTML = card.explanation || "";
+    explanationEl.style.display = card.explanation ? "block" : "none";
   }
 
   // Update progress
@@ -224,12 +234,12 @@ function renderCard() {
  * Flip the card
  */
 function flipCard() {
-  if (state.phase !== 'learning') return;
+  if (state.phase !== "learning") return;
 
   state.flipped = !state.flipped;
-  const flashcard = $('flashcard');
+  const flashcard = $("flashcard");
   if (flashcard) {
-    flashcard.classList.toggle('flipped', state.flipped);
+    flashcard.classList.toggle("flipped", state.flipped);
   }
   updateButtons();
 }
@@ -238,7 +248,7 @@ function flipCard() {
  * Mark current card as correct
  */
 function markCorrect() {
-  if (!state.flipped || state.phase !== 'learning') return;
+  if (!state.flipped || state.phase !== "learning") return;
 
   const card = state.cards[state.currentIndex];
   state.correct++;
@@ -255,7 +265,7 @@ function markCorrect() {
  * Mark current card as wrong (need to review again)
  */
 function markWrong() {
-  if (!state.flipped || state.phase !== 'learning') return;
+  if (!state.flipped || state.phase !== "learning") return;
 
   const card = state.cards[state.currentIndex];
   state.wrong++;
@@ -297,10 +307,10 @@ function updateMasteryBar() {
   const reviewingPct = (stats.reviewing / total) * 100;
   const masteredPct = (stats.mastered / total) * 100;
 
-  const newEl = $('masteryNew');
-  const learningEl = $('masteryLearning');
-  const reviewingEl = $('masteryReviewing');
-  const masteredEl = $('masteryMastered');
+  const newEl = $("masteryNew");
+  const learningEl = $("masteryLearning");
+  const reviewingEl = $("masteryReviewing");
+  const masteredEl = $("masteryMastered");
 
   if (newEl) newEl.style.width = `${newPct}%`;
   if (learningEl) learningEl.style.width = `${learningPct}%`;
@@ -312,8 +322,8 @@ function updateMasteryBar() {
  * Update button states
  */
 function updateButtons() {
-  const btnCorrect = $('btnCorrect');
-  const btnWrong = $('btnWrong');
+  const btnCorrect = $("btnCorrect");
+  const btnWrong = $("btnWrong");
 
   // Buttons only active when card is flipped
   if (btnCorrect) btnCorrect.disabled = !state.flipped;
@@ -324,18 +334,18 @@ function updateButtons() {
  * Show summary
  */
 function showSummary() {
-  state.phase = 'summary';
+  state.phase = "summary";
 
-  const flashcardArea = $('flashcardArea');
-  const controls = document.querySelector('.flashcard-controls');
-  const summary = $('summary');
+  const flashcardArea = $("flashcardArea");
+  const controls = document.querySelector(".flashcard-controls");
+  const summary = $("summary");
 
-  if (flashcardArea) flashcardArea.style.display = 'none';
-  if (controls) controls.style.display = 'none';
-  if (summary) summary.style.display = 'block';
+  if (flashcardArea) flashcardArea.style.display = "none";
+  if (controls) controls.style.display = "none";
+  if (summary) summary.style.display = "block";
 
-  const correctEl = $('summaryCorrect');
-  const wrongEl = $('summaryWrong');
+  const correctEl = $("summaryCorrect");
+  const wrongEl = $("summaryWrong");
 
   if (correctEl) correctEl.textContent = state.correct;
   if (wrongEl) wrongEl.textContent = state.wrong;
@@ -345,13 +355,13 @@ function showSummary() {
  * Restart flashcards
  */
 function restart() {
-  const flashcardArea = $('flashcardArea');
-  const controls = document.querySelector('.flashcard-controls');
-  const summary = $('summary');
+  const flashcardArea = $("flashcardArea");
+  const controls = document.querySelector(".flashcard-controls");
+  const summary = $("summary");
 
-  if (flashcardArea) flashcardArea.style.display = 'block';
-  if (controls) controls.style.display = 'block';
-  if (summary) summary.style.display = 'none';
+  if (flashcardArea) flashcardArea.style.display = "block";
+  if (controls) controls.style.display = "block";
+  if (summary) summary.style.display = "none";
 
   loadCards();
 }
@@ -360,7 +370,7 @@ function restart() {
  * Show error
  */
 function showError(message) {
-  const area = $('flashcardArea');
+  const area = $("flashcardArea");
   if (area) {
     area.innerHTML = `
       <div class="alert alert-error">
@@ -376,11 +386,11 @@ function showError(message) {
  */
 function setupEventListeners() {
   // Flashcard click/tap
-  const flashcard = $('flashcard');
+  const flashcard = $("flashcard");
   if (flashcard) {
-    flashcard.addEventListener('click', flipCard);
-    flashcard.addEventListener('keydown', (e) => {
-      if (e.key === ' ' || e.key === 'Enter') {
+    flashcard.addEventListener("click", flipCard);
+    flashcard.addEventListener("keydown", (e) => {
+      if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
         flipCard();
       }
@@ -388,31 +398,31 @@ function setupEventListeners() {
   }
 
   // Correct/Wrong buttons
-  const btnCorrect = $('btnCorrect');
-  const btnWrong = $('btnWrong');
-  const btnRestart = $('btnRestart');
+  const btnCorrect = $("btnCorrect");
+  const btnWrong = $("btnWrong");
+  const btnRestart = $("btnRestart");
 
-  if (btnCorrect) btnCorrect.addEventListener('click', markCorrect);
-  if (btnWrong) btnWrong.addEventListener('click', markWrong);
-  if (btnRestart) btnRestart.addEventListener('click', restart);
+  if (btnCorrect) btnCorrect.addEventListener("click", markCorrect);
+  if (btnWrong) btnWrong.addEventListener("click", markWrong);
+  if (btnRestart) btnRestart.addEventListener("click", restart);
 
   // Keyboard shortcuts
-  document.addEventListener('keydown', (e) => {
-    if (state.phase !== 'learning') return;
+  document.addEventListener("keydown", (e) => {
+    if (state.phase !== "learning") return;
 
     switch (e.key) {
-      case ' ':
+      case " ":
         if (document.activeElement !== flashcard) {
           e.preventDefault();
           flipCard();
         }
         break;
-      case 'ArrowRight':
-      case 'j':
+      case "ArrowRight":
+      case "j":
         if (state.flipped) markCorrect();
         break;
-      case 'ArrowLeft':
-      case 'k':
+      case "ArrowLeft":
+      case "k":
         if (state.flipped) markWrong();
         break;
     }

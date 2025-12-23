@@ -4,7 +4,9 @@
    =========================================== */
 
 /* CSS Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -61,14 +63,16 @@ html {
   --flashcard-back: #0f251c;
 
   /* UI Colors */
-  --border: rgba(0, 0, 0, 0.10);
+  --border: rgba(0, 0, 0, 0.1);
   --border-strong: rgba(0, 0, 0, 0.15);
   --shadow-color: rgba(0, 0, 0, 0.08);
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-display: 'Plus Jakarta Sans', var(--font-sans);
-  --font-brand: 'Plus Jakarta Sans', var(--font-sans);
+  --font-sans:
+    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-display: "Plus Jakarta Sans", var(--font-sans);
+  --font-brand: "Plus Jakarta Sans", var(--font-sans);
 
   /* Spacing */
   --space-1: 4px;
@@ -122,17 +126,30 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.4;
   color: var(--text);
 }
 
-h1 { font-size: 2.125rem; }
-h2 { font-size: 1.625rem; }
-h3 { font-size: 1.375rem; }
-h4 { font-size: 1.125rem; }
+h1 {
+  font-size: 2.125rem;
+}
+h2 {
+  font-size: 1.625rem;
+}
+h3 {
+  font-size: 1.375rem;
+}
+h4 {
+  font-size: 1.125rem;
+}
 
 p {
   margin-bottom: var(--space-4);
@@ -152,7 +169,8 @@ a:hover {
 }
 
 /* Lists */
-ul, ol {
+ul,
+ol {
   padding-left: var(--space-5);
 }
 
@@ -189,7 +207,9 @@ select:focus-visible {
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -237,18 +257,24 @@ select:focus-visible {
   --flashcard-back: #0a1a13;
 
   /* UI Colors */
-  --border: rgba(255, 255, 255, 0.10);
+  --border: rgba(255, 255, 255, 0.1);
   --border-strong: rgba(255, 255, 255, 0.15);
   --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Dark mode transition */
 body {
-  transition: background-color var(--duration-normal) var(--ease),
-              color var(--duration-normal) var(--ease);
+  transition:
+    background-color var(--duration-normal) var(--ease),
+    color var(--duration-normal) var(--ease);
 }
 
-.card, .question-card, .summary-card, .subject-card, .quiz-card {
-  transition: background-color var(--duration-normal) var(--ease),
-              border-color var(--duration-normal) var(--ease);
+.card,
+.question-card,
+.summary-card,
+.subject-card,
+.quiz-card {
+  transition:
+    background-color var(--duration-normal) var(--ease),
+    border-color var(--duration-normal) var(--ease);
 }

@@ -5,7 +5,7 @@
 
 // Settings state
 const settings = {
-  theme: 'light'
+  theme: "light",
 };
 
 /**
@@ -13,19 +13,21 @@ const settings = {
  */
 export function initSettings() {
   // Load saved settings
-  const saved = localStorage.getItem('adamus-settings');
+  const saved = localStorage.getItem("adamus-settings");
   if (saved) {
     try {
       Object.assign(settings, JSON.parse(saved));
     } catch (e) {
-      console.warn('Failed to load settings:', e);
+      console.warn("Failed to load settings:", e);
     }
   }
 
   // Check system preference for dark mode if no saved preference
   if (!saved) {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    settings.theme = prefersDark ? 'dark' : 'light';
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    settings.theme = prefersDark ? "dark" : "light";
   }
 
   // Apply theme
@@ -35,18 +37,20 @@ export function initSettings() {
   setupThemeToggle();
 
   // Listen for system theme changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('adamus-settings')) {
-      setTheme(e.matches ? 'dark' : 'light');
-    }
-  });
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (!localStorage.getItem("adamus-settings")) {
+        setTheme(e.matches ? "dark" : "light");
+      }
+    });
 }
 
 /**
  * Apply theme to document
  */
 function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute("data-theme", theme);
   settings.theme = theme;
 }
 
@@ -62,7 +66,7 @@ export function setTheme(theme) {
  * Toggle between light and dark mode
  */
 export function toggleTheme() {
-  const newTheme = settings.theme === 'dark' ? 'light' : 'dark';
+  const newTheme = settings.theme === "dark" ? "light" : "dark";
   setTheme(newTheme);
   return newTheme;
 }
@@ -71,9 +75,9 @@ export function toggleTheme() {
  * Setup theme toggle button in topbar
  */
 function setupThemeToggle() {
-  const toggle = document.querySelector('.theme-toggle');
+  const toggle = document.querySelector(".theme-toggle");
   if (toggle) {
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener("click", () => {
       toggleTheme();
     });
   }
@@ -84,9 +88,9 @@ function setupThemeToggle() {
  */
 function saveSettings() {
   try {
-    localStorage.setItem('adamus-settings', JSON.stringify(settings));
+    localStorage.setItem("adamus-settings", JSON.stringify(settings));
   } catch (e) {
-    console.warn('Failed to save settings:', e);
+    console.warn("Failed to save settings:", e);
   }
 }
 
@@ -98,8 +102,8 @@ export function getSettings() {
 }
 
 // Auto-initialize on DOM ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initSettings);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSettings);
 } else {
   initSettings();
 }

@@ -3,11 +3,11 @@
    Import all CSS modules
    =========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
 
-@import url('./base.css');
-@import url('./layout.css');
-@import url('./components.css');
-@import url('./quiz.css');
-@import url('./flashcards.css');
-@import url('./animations.css');
+@import url("./base.css");
+@import url("./layout.css");
+@import url("./components.css");
+@import url("./quiz.css");
+@import url("./flashcards.css");
+@import url("./animations.css");

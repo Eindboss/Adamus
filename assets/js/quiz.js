@@ -3,10 +3,46 @@
    Core quiz logic and state management
    =========================================== */
 
-import { $, $$, $$$, shuffle, loadJSON, htmlToText, getUrlParam, normalizeAnswer, matchesAcceptList, countFillableCells, countGroupedInputs, showConfetti, updateTimerWarning, showError as showErrorUI, showLoading, saveQuizProgress, loadQuizProgress, clearQuizProgress, hasQuizProgress } from './utils.js';
-import { startTimer, stopTimer, resetTimer, pauseTimer, resumeTimer, initTimer } from './timer.js';
-import { readStats, writeStats, updateStats, createSessionHistory, updateQuestionBox, incrementSession, getSpacedQuestions, getMasteryStats } from './stats.js';
-import { createCoordinateSystem } from './graph.js';
+import {
+  $,
+  $$,
+  $$$,
+  shuffle,
+  loadJSON,
+  htmlToText,
+  getUrlParam,
+  normalizeAnswer,
+  matchesAcceptList,
+  countFillableCells,
+  countGroupedInputs,
+  showConfetti,
+  updateTimerWarning,
+  showError as showErrorUI,
+  showLoading,
+  saveQuizProgress,
+  loadQuizProgress,
+  clearQuizProgress,
+  hasQuizProgress,
+} from "./utils.js";
+import {
+  startTimer,
+  stopTimer,
+  resetTimer,
+  pauseTimer,
+  resumeTimer,
+  initTimer,
+} from "./timer.js";
+import {
+  readStats,
+  writeStats,
+  updateStats,
+  createSessionHistory,
+  updateQuestionBox,
+  incrementSession,
+  getSpacedQuestions,
+  getMasteryStats,
+} from "./stats.js";
+import { createCoordinateSystem } from "./graph.js";
 
 // Constants
 const QUESTION_SECONDS = 90;
@@ -20,15 +56,15 @@ let state = {
   score: 0,
   wrong: 0,
   skipped: 0,
-  phase: 'question', // 'question' | 'feedback' | 'summary'
+  phase: "question", // 'question' | 'feedback' | 'summary'
   answered: false,
   selectedOption: null,
   history: null,
   // For complex question types
-  cellAnswers: {},     // table_parse cell values
-  groupAnswers: {},    // grouped question values
-  partialScore: 0,     // partial points earned
-  maxPartialScore: 0   // max possible partial points
+  cellAnswers: {}, // table_parse cell values
+  groupAnswers: {}, // grouped question values
+  partialScore: 0, // partial points earned
+  maxPartialScore: 0, // max possible partial points
 };
 
 let subjects = [];
@@ -40,22 +76,22 @@ let subjectMap = {};
 export async function initQuiz() {
   // Load subjects
   try {
-    const data = await loadJSON('data/subjects.json');
+    const data = await loadJSON("data/subjects.json");
     subjects = data.subjects || data || [];
 
     // Build subject map
-    subjects.forEach(s => {
+    subjects.forEach((s) => {
       subjectMap[s.id] = s;
     });
   } catch (error) {
-    showError('Kan vakken niet laden: ' + error.message);
+    showError("Kan vakken niet laden: " + error.message);
     return;
   }
 
   // Get subject from URL
-  const subjectId = getUrlParam('subject');
+  const subjectId = getUrlParam("subject");
   if (!subjectId || !subjectMap[subjectId]) {
-    showError('Onbekend vak. Ga terug naar de homepage.');
+    showError("Onbekend vak. Ga terug naar de homepage.");
     return;
   }
 
@@ -66,7 +102,7 @@ export async function initQuiz() {
 
   // Setup timer callbacks
   initTimer({
-    onTimeUp: handleTimeUp
+    onTimeUp: handleTimeUp,
   });
 
   // Setup event listeners
@@ -86,12 +122,15 @@ export async function initQuiz() {
  * Show resume prompt for saved progress
  */
 function showResumePrompt(savedProgress) {
-  const container = $('quizArea');
+  const container = $("quizArea");
   if (!container) return;
 
-  const percentage = savedProgress.totalQuestions > 0
-    ? Math.round((savedProgress.currentIndex / savedProgress.totalQuestions) * 100)
-    : 0;
+  const percentage =
+    savedProgress.totalQuestions > 0
+      ? Math.round(
+          (savedProgress.currentIndex / savedProgress.totalQuestions) * 100,
+        )
+      : 0;
 
   container.innerHTML = `
     <div class="card" style="text-align: center; padding: var(--space-6);">
@@ -107,11 +146,11 @@ function showResumePrompt(savedProgress) {
     </div>
   `;
 
-  $('resumeQuizBtn')?.addEventListener('click', async () => {
+  $("resumeQuizBtn")?.addEventListener("click", async () => {
     await loadQuestions(savedProgress);
   });
 
-  $('restartQuizBtn')?.addEventListener('click', async () => {
+  $("restartQuizBtn")?.addEventListener("click", async () => {
     clearQuizProgress(state.subjectId);
     await loadQuestions();
   });
@@ -122,9 +161,9 @@ function showResumePrompt(savedProgress) {
  */
 async function loadQuestions(savedProgress = null) {
   // Show loading state
-  const container = $('quizArea');
+  const container = $("quizArea");
   if (container) {
-    showLoading(container, 'Vragen laden...');
+    showLoading(container, "Vragen laden...");
   }
 
   try {
@@ -133,11 +172,11 @@ async function loadQuestions(savedProgress = null) {
 
     // Extract questions based on schema
     let questions = [];
-    if (meta.schema === 'toets') {
+    if (meta.schema === "toets") {
       if (Array.isArray(data.questions)) {
         questions = data.questions;
       } else if (Array.isArray(data.toets)) {
-        data.toets.forEach(section => {
+        data.toets.forEach((section) => {
           if (section.vragen) {
             questions.push(...section.vragen);
           }
@@ -148,24 +187,26 @@ async function loadQuestions(savedProgress = null) {
     }
 
     if (!questions.length) {
-      throw new Error('Geen vragen gevonden');
+      throw new Error("Geen vragen gevonden");
     }
 
     // Normalize questions
-    let normalized = questions.map(q => normalizeQuestion(q, meta.schema === 'quiz'));
+    let normalized = questions.map((q) =>
+      normalizeQuestion(q, meta.schema === "quiz"),
+    );
 
     // Increment session and apply spaced repetition
     incrementSession(state.subjectId);
     normalized = getSpacedQuestions(state.subjectId, normalized);
 
     // Only shuffle for quizzes, not for toets (structured tests need fixed order)
-    if (meta.schema !== 'toets') {
+    if (meta.schema !== "toets") {
       shuffle(normalized);
     }
 
     // Shuffle MC answers (only for quizzes)
-    state.questions = normalized.map(q => {
-      if (q.type === 'mc' && meta.schema !== 'toets') {
+    state.questions = normalized.map((q) => {
+      if (q.type === "mc" && meta.schema !== "toets") {
         return shuffleMCAnswers(q);
       }
       return q;
@@ -186,15 +227,14 @@ async function loadQuestions(savedProgress = null) {
       state.wrong = 0;
       state.skipped = 0;
     }
-    state.phase = 'question';
+    state.phase = "question";
     state.history.clear();
 
     // Render current question
     renderQuestion();
     updateUI();
-
   } catch (error) {
-    showError('Kan vragen niet laden: ' + error.message);
+    showError("Kan vragen niet laden: " + error.message);
   }
 }
 
@@ -203,22 +243,32 @@ async function loadQuestions(savedProgress = null) {
  */
 function normalizeQuestion(raw, preferMC = false) {
   // Special types stay as-is
-  const richTypes = ['short_text', 'grouped_short_text', 'translation_open', 'grouped_translation', 'table_parse', 'grouped_select'];
+  const richTypes = [
+    "short_text",
+    "grouped_short_text",
+    "translation_open",
+    "grouped_translation",
+    "table_parse",
+    "grouped_select",
+  ];
   if (richTypes.includes(raw.type)) {
     return raw;
   }
 
   // Detect MC
-  const hasMC = Array.isArray(raw.answers) || Array.isArray(raw.options) || Array.isArray(raw.a);
+  const hasMC =
+    Array.isArray(raw.answers) ||
+    Array.isArray(raw.options) ||
+    Array.isArray(raw.a);
 
-  if (preferMC && hasMC || raw.type === 'mc' || hasMC) {
+  if ((preferMC && hasMC) || raw.type === "mc" || hasMC) {
     const answers = raw.answers || raw.a || [];
     let correctIndex = raw.correctIndex ?? raw.c ?? null;
 
     // Extract from options format
     if (Array.isArray(raw.options)) {
       raw.options.forEach((opt, idx) => {
-        answers.push(opt.text ?? '');
+        answers.push(opt.text ?? "");
         if (opt.correct && correctIndex === null) {
           correctIndex = idx;
         }
@@ -227,26 +277,26 @@ function normalizeQuestion(raw, preferMC = false) {
 
     return {
       id: raw.id,
-      type: 'mc',
-      q: raw.q || raw.question || '',
+      type: "mc",
+      q: raw.q || raw.question || "",
       answers,
       correctIndex,
-      explanation: raw.explanation || raw.why || raw.e || '',
+      explanation: raw.explanation || raw.why || raw.e || "",
       graph: raw.graph || null,
-      image: raw.image || null
+      image: raw.image || null,
     };
   }
 
   // Open question
   return {
     id: raw.id,
-    type: 'open',
-    q: raw.q || raw.question || raw.vraag || '',
+    type: "open",
+    q: raw.q || raw.question || raw.vraag || "",
     accept: raw.accept || [],
     caseSensitive: !!raw.caseSensitive,
-    explanation: raw.explanation || raw.e || '',
+    explanation: raw.explanation || raw.e || "",
     graph: raw.graph || null,
-    image: raw.image || null
+    image: raw.image || null,
   };
 }
 
@@ -254,7 +304,7 @@ function normalizeQuestion(raw, preferMC = false) {
  * Shuffle MC answers while tracking correct index
  */
 function shuffleMCAnswers(q) {
-  if (q.type !== 'mc' || !Array.isArray(q.answers)) return q;
+  if (q.type !== "mc" || !Array.isArray(q.answers)) return q;
 
   const indices = q.answers.map((_, i) => i);
   shuffle(indices);
@@ -272,7 +322,7 @@ function shuffleMCAnswers(q) {
   return {
     ...q,
     answers: newAnswers,
-    correctIndex: newCorrectIndex
+    correctIndex: newCorrectIndex,
   };
 }
 
@@ -286,10 +336,10 @@ function renderQuestion() {
     return;
   }
 
-  const container = $('quizArea');
+  const container = $("quizArea");
   if (!container) return;
 
-  state.phase = 'question';
+  state.phase = "question";
   state.answered = false;
   state.selectedOption = null;
   state.cellAnswers = {};
@@ -303,33 +353,37 @@ function renderQuestion() {
 
   // Render based on type
   switch (q.type) {
-    case 'mc':
+    case "mc":
       renderMC(container, q);
       break;
-    case 'open':
+    case "open":
       renderOpen(container, q);
       break;
-    case 'short_text':
+    case "short_text":
       renderShortText(container, q);
       break;
-    case 'table_parse':
+    case "table_parse":
       renderTableParse(container, q);
       break;
-    case 'grouped_short_text':
+    case "grouped_short_text":
       renderGroupedShortText(container, q);
       break;
-    case 'grouped_translation':
+    case "grouped_translation":
       renderGroupedTranslation(container, q);
       break;
-    case 'grouped_select':
+    case "grouped_select":
       renderGroupedSelect(container, q);
       break;
-    case 'translation_open':
+    case "translation_open":
       renderTranslationOpen(container, q);
       break;
     default:
       // Fallback for unknown types
-      renderOpen(container, { q: q.prompt_html || q.prompt || q.q || 'Vraag', accept: [], explanation: '' });
+      renderOpen(container, {
+        q: q.prompt_html || q.prompt || q.q || "Vraag",
+        accept: [],
+        explanation: "",
+      });
   }
 
   // Update controls
@@ -340,12 +394,16 @@ function renderQuestion() {
  * Render multiple choice question
  */
 function renderMC(container, q) {
-  const optionsHtml = q.answers.map((answer, idx) => `
+  const optionsHtml = q.answers
+    .map(
+      (answer, idx) => `
     <div class="option" data-idx="${idx}" tabindex="0" role="radio" aria-checked="false">
       <span class="option-marker">${String.fromCharCode(65 + idx)}</span>
       <span class="option-text">${answer}</span>
     </div>
-  `).join('');
+  `,
+    )
+    .join("");
 
   container.innerHTML = `
     <div class="question-title">${q.q}</div>
@@ -356,10 +414,10 @@ function renderMC(container, q) {
   `;
 
   // Add click handlers to options
-  $$$('.option', container).forEach(el => {
-    el.addEventListener('click', () => selectOption(el));
-    el.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+  $$$(".option", container).forEach((el) => {
+    el.addEventListener("click", () => selectOption(el));
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         selectOption(el);
       }
@@ -367,7 +425,7 @@ function renderMC(container, q) {
   });
 
   // Focus first option
-  const first = $$('.option', container);
+  const first = $$(".option", container);
   if (first) first.focus();
 }
 
@@ -377,8 +435,8 @@ function renderMC(container, q) {
 function renderOpen(container, q) {
   container.innerHTML = `
     <div class="question-title">${q.q}</div>
-    ${q.graph ? '<div id="graphContainer" class="graph-container"></div>' : ''}
-    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ''}
+    ${q.graph ? '<div id="graphContainer" class="graph-container"></div>' : ""}
+    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ""}
     <div class="open-input-wrap">
       <input type="text" id="openInput" class="open-input" placeholder="Typ je antwoord..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
@@ -387,19 +445,19 @@ function renderOpen(container, q) {
 
   // Render graph if present
   if (q.graph) {
-    renderGraph($('graphContainer'), q.graph);
+    renderGraph($("graphContainer"), q.graph);
   }
 
-  const input = $('openInput');
+  const input = $("openInput");
   if (input) {
-    input.addEventListener('input', () => {
-      const checkBtn = $('checkBtn');
+    input.addEventListener("input", () => {
+      const checkBtn = $("checkBtn");
       if (checkBtn) {
         checkBtn.disabled = input.value.trim().length === 0;
       }
     });
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && input.value.trim().length > 0) {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && input.value.trim().length > 0) {
         e.preventDefault();
         checkAnswer();
       }
@@ -408,7 +466,7 @@ function renderOpen(container, q) {
   }
 
   // Disable check button initially
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
 }
 
@@ -426,38 +484,38 @@ function renderGraph(container, config) {
     yMin: config.yMin ?? -6,
     yMax: config.yMax ?? 6,
     showGrid: config.showGrid !== false,
-    showLabels: config.showLabels !== false
+    showLabels: config.showLabels !== false,
   });
 
   // Add points
   if (Array.isArray(config.points)) {
-    config.points.forEach(p => {
+    config.points.forEach((p) => {
       graph.addPoint(p.x, p.y, {
-        label: p.label || '',
-        color: p.color || '#6366f1'
+        label: p.label || "",
+        color: p.color || "#6366f1",
       });
     });
   }
 
   // Add lines
   if (Array.isArray(config.lines)) {
-    config.lines.forEach(l => {
+    config.lines.forEach((l) => {
       graph.addLine(l.x1, l.y1, l.x2, l.y2, {
-        color: l.color || '#6366f1',
-        dashed: l.dashed || false
+        color: l.color || "#6366f1",
+        dashed: l.dashed || false,
       });
     });
   }
 
   // Add functions (parsed from string)
   if (Array.isArray(config.functions)) {
-    config.functions.forEach(f => {
+    config.functions.forEach((f) => {
       try {
         // Simple function parser: "2*x+1" -> (x) => 2*x+1
-        const fn = new Function('x', `return ${f.expr}`);
-        graph.addFunction(fn, { color: f.color || '#ef4444' });
+        const fn = new Function("x", `return ${f.expr}`);
+        graph.addFunction(fn, { color: f.color || "#ef4444" });
       } catch (e) {
-        console.warn('Invalid function:', f.expr);
+        console.warn("Invalid function:", f.expr);
       }
     });
   }
@@ -488,16 +546,16 @@ function renderShortText(container, q) {
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
 
-  const input = $('shortInput');
+  const input = $("shortInput");
   if (input) {
-    input.addEventListener('input', () => {
-      const checkBtn = $('checkBtn');
+    input.addEventListener("input", () => {
+      const checkBtn = $("checkBtn");
       if (checkBtn) {
         checkBtn.disabled = input.value.trim().length === 0;
       }
     });
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && input.value.trim().length > 0) {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && input.value.trim().length > 0) {
         e.preventDefault();
         checkAnswer();
       }
@@ -505,7 +563,7 @@ function renderShortText(container, q) {
     input.focus();
   }
 
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
 }
 
@@ -517,24 +575,28 @@ function renderTableParse(container, q) {
 
   if (blocks.length === 0) {
     // Fallback for table variant without blocks
-    renderOpen(container, { q: q.prompt_html || 'Vraag', accept: [] });
+    renderOpen(container, { q: q.prompt_html || "Vraag", accept: [] });
     return;
   }
 
   // Build table header with lemma names
-  const headerCells = blocks.map(b => `<th class="table-lemma">${b.lemma}</th>`).join('');
+  const headerCells = blocks
+    .map((b) => `<th class="table-lemma">${b.lemma}</th>`)
+    .join("");
 
   // Get row labels from first block
-  const rowLabels = blocks[0]?.rows?.map(r => r.veld) || [];
+  const rowLabels = blocks[0]?.rows?.map((r) => r.veld) || [];
 
   // Build table rows
-  const rowsHtml = rowLabels.map((label, rowIdx) => {
-    const cells = blocks.map((block, blockIdx) => {
-      const row = block.rows[rowIdx];
-      const cellId = `cell-${blockIdx}-${rowIdx}`;
+  const rowsHtml = rowLabels
+    .map((label, rowIdx) => {
+      const cells = blocks
+        .map((block, blockIdx) => {
+          const row = block.rows[rowIdx];
+          const cellId = `cell-${blockIdx}-${rowIdx}`;
 
-      if (row.invulbaar) {
-        return `
+          if (row.invulbaar) {
+            return `
           <td class="table-cell table-cell-input">
             <input type="text"
                    id="${cellId}"
@@ -544,18 +606,20 @@ function renderTableParse(container, q) {
                    placeholder="..."
                    autocomplete="off">
           </td>`;
-      } else {
-        return `<td class="table-cell table-cell-given">${row.given || ''}</td>`;
-      }
-    }).join('');
+          } else {
+            return `<td class="table-cell table-cell-given">${row.given || ""}</td>`;
+          }
+        })
+        .join("");
 
-    return `<tr><td class="table-row-label">${label}</td>${cells}</tr>`;
-  }).join('');
+      return `<tr><td class="table-row-label">${label}</td>${cells}</tr>`;
+    })
+    .join("");
 
   const fillableCount = countFillableCells(blocks);
 
   container.innerHTML = `
-    <div class="question-title">${q.prompt_html || 'Vul de tabel in.'}</div>
+    <div class="question-title">${q.prompt_html || "Vul de tabel in."}</div>
     <div class="table-scroll-wrap">
       <table class="declension-table question-table">
         <thead>
@@ -576,19 +640,19 @@ function renderTableParse(container, q) {
   `;
 
   // Track input changes and update progress
-  $$$('.table-input', container).forEach(input => {
-    input.addEventListener('input', () => {
+  $$$(".table-input", container).forEach((input) => {
+    input.addEventListener("input", () => {
       state.cellAnswers[input.id] = input.value;
       updateTableProgress();
     });
   });
 
   // Focus first input
-  const firstInput = $$('.table-input', container);
+  const firstInput = $$(".table-input", container);
   if (firstInput) firstInput.focus();
 
   // Disable check button initially
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
 }
 
@@ -596,12 +660,14 @@ function renderTableParse(container, q) {
  * Update table progress indicator
  */
 function updateTableProgress() {
-  const filled = $$$('.table-input').filter(i => i.value.trim().length > 0).length;
-  const filledEl = $('tableFilled');
+  const filled = $$$(".table-input").filter(
+    (i) => i.value.trim().length > 0,
+  ).length;
+  const filledEl = $("tableFilled");
   if (filledEl) filledEl.textContent = filled;
 
   // Enable check if at least one cell filled
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = filled === 0;
 }
 
@@ -611,12 +677,16 @@ function updateTableProgress() {
 function renderGroupedShortText(container, q) {
   const items = q.words || q.items || [];
 
-  const itemsHtml = items.map((item, idx) => {
-    const hasSubfields = Array.isArray(item.subfields) && item.subfields.length > 0;
-    const latinText = item.latijn || item.vraag || '';
+  const itemsHtml = items
+    .map((item, idx) => {
+      const hasSubfields =
+        Array.isArray(item.subfields) && item.subfields.length > 0;
+      const latinText = item.latijn || item.vraag || "";
 
-    if (hasSubfields) {
-      const subfieldsHtml = item.subfields.map((sf, sfIdx) => `
+      if (hasSubfields) {
+        const subfieldsHtml = item.subfields
+          .map(
+            (sf, sfIdx) => `
         <div class="subfield-row">
           <label class="subfield-label">${sf.label}:</label>
           <input type="text"
@@ -627,17 +697,19 @@ function renderGroupedShortText(container, q) {
                  placeholder="..."
                  autocomplete="off">
         </div>
-      `).join('');
+      `,
+          )
+          .join("");
 
-      return `
+        return `
         <div class="grouped-item" data-idx="${idx}">
           <div class="grouped-latin">${latinText}</div>
           <div class="grouped-subfields">${subfieldsHtml}</div>
         </div>
       `;
-    }
+      }
 
-    return `
+      return `
       <div class="grouped-item" data-idx="${idx}">
         <label class="grouped-latin">${latinText}</label>
         <input type="text"
@@ -648,12 +720,13 @@ function renderGroupedShortText(container, q) {
                autocomplete="off">
       </div>
     `;
-  }).join('');
+    })
+    .join("");
 
   const totalInputs = countGroupedInputs(items);
 
   container.innerHTML = `
-    <div class="question-title">${q.prompt_html || 'Vertaal de woorden.'}</div>
+    <div class="question-title">${q.prompt_html || "Vertaal de woorden."}</div>
     <div class="grouped-list">
       ${itemsHtml}
     </div>
@@ -664,15 +737,15 @@ function renderGroupedShortText(container, q) {
   `;
 
   // Track inputs
-  $$$('.grouped-input', container).forEach(input => {
-    input.addEventListener('input', updateGroupProgress);
+  $$$(".grouped-input", container).forEach((input) => {
+    input.addEventListener("input", updateGroupProgress);
   });
 
   // Focus first input
-  const firstInput = $$('.grouped-input', container);
+  const firstInput = $$(".grouped-input", container);
   if (firstInput) firstInput.focus();
 
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
 }
 
@@ -682,7 +755,9 @@ function renderGroupedShortText(container, q) {
 function renderGroupedTranslation(container, q) {
   const items = q.items || [];
 
-  const itemsHtml = items.map((item, idx) => `
+  const itemsHtml = items
+    .map(
+      (item, idx) => `
     <div class="translation-item" data-idx="${idx}">
       <div class="translation-sentence">${item.latijn_html}</div>
       <input type="text"
@@ -692,10 +767,12 @@ function renderGroupedTranslation(container, q) {
              placeholder="Vertaling van het onderstreepte woord..."
              autocomplete="off">
     </div>
-  `).join('');
+  `,
+    )
+    .join("");
 
   container.innerHTML = `
-    <div class="question-title">${q.prompt_html || 'Vertaal de onderstreepte woorden.'}</div>
+    <div class="question-title">${q.prompt_html || "Vertaal de onderstreepte woorden."}</div>
     <div class="translation-list">
       ${itemsHtml}
     </div>
@@ -705,14 +782,14 @@ function renderGroupedTranslation(container, q) {
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
 
-  $$$('.translation-input', container).forEach(input => {
-    input.addEventListener('input', updateGroupProgress);
+  $$$(".translation-input", container).forEach((input) => {
+    input.addEventListener("input", updateGroupProgress);
   });
 
-  const firstInput = $$('.translation-input', container);
+  const firstInput = $$(".translation-input", container);
   if (firstInput) firstInput.focus();
 
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
 }
 
@@ -723,19 +800,21 @@ function renderGroupedSelect(container, q) {
   const items = q.items || [];
   const legend = q.legend || {};
 
-  const naamvalOptions = (legend.naamval_options || []).map(opt =>
-    `<option value="${opt}">${opt}</option>`
-  ).join('');
+  const naamvalOptions = (legend.naamval_options || [])
+    .map((opt) => `<option value="${opt}">${opt}</option>`)
+    .join("");
 
-  const getalOptions = (legend.getal_options || []).map(opt =>
-    `<option value="${opt}">${opt}</option>`
-  ).join('');
+  const getalOptions = (legend.getal_options || [])
+    .map((opt) => `<option value="${opt}">${opt}</option>`)
+    .join("");
 
-  const verklaringOptions = (legend.verklaring_options || []).map(opt =>
-    `<option value="${opt}">${opt}</option>`
-  ).join('');
+  const verklaringOptions = (legend.verklaring_options || [])
+    .map((opt) => `<option value="${opt}">${opt}</option>`)
+    .join("");
 
-  const itemsHtml = items.map((item, idx) => `
+  const itemsHtml = items
+    .map(
+      (item, idx) => `
     <div class="select-item" data-idx="${idx}">
       <div class="select-sentence">${item.latijn_html}</div>
       <div class="select-row">
@@ -762,10 +841,12 @@ function renderGroupedSelect(container, q) {
         </div>
       </div>
     </div>
-  `).join('');
+  `,
+    )
+    .join("");
 
   container.innerHTML = `
-    <div class="question-title">${q.prompt_html || 'Bepaal naamval, getal en verklaring.'}</div>
+    <div class="question-title">${q.prompt_html || "Bepaal naamval, getal en verklaring."}</div>
     <div class="select-list">
       ${itemsHtml}
     </div>
@@ -775,11 +856,11 @@ function renderGroupedSelect(container, q) {
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
 
-  $$$('.select-input', container).forEach(select => {
-    select.addEventListener('change', updateSelectProgress);
+  $$$(".select-input", container).forEach((select) => {
+    select.addEventListener("change", updateSelectProgress);
   });
 
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
 }
 
@@ -787,10 +868,10 @@ function renderGroupedSelect(container, q) {
  * Render translation_open question (full sentence translation)
  */
 function renderTranslationOpen(container, q) {
-  const rubric = q.rubric || '';
+  const rubric = q.rubric || "";
 
   container.innerHTML = `
-    <div class="question-title">${q.prompt_html || 'Vertaal de zin.'}</div>
+    <div class="question-title">${q.prompt_html || "Vertaal de zin."}</div>
     <div class="translation-open-wrap">
       <textarea id="translationInput"
                 class="open-input translation-textarea"
@@ -799,19 +880,23 @@ function renderTranslationOpen(container, q) {
                 autocorrect="off"
                 spellcheck="false"></textarea>
     </div>
-    ${rubric ? `
+    ${
+      rubric
+        ? `
       <details class="rubric-hint">
         <summary>💡 Hint voor nakijken</summary>
         <p>${rubric}</p>
       </details>
-    ` : ''}
+    `
+        : ""
+    }
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
 
-  const input = $('translationInput');
+  const input = $("translationInput");
   if (input) {
-    input.addEventListener('input', () => {
-      const checkBtn = $('checkBtn');
+    input.addEventListener("input", () => {
+      const checkBtn = $("checkBtn");
       if (checkBtn) {
         checkBtn.disabled = input.value.trim().length === 0;
       }
@@ -819,7 +904,7 @@ function renderTranslationOpen(container, q) {
     input.focus();
   }
 
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
 }
 
@@ -827,11 +912,13 @@ function renderTranslationOpen(container, q) {
  * Update group progress indicator (for grouped_short_text, grouped_translation)
  */
 function updateGroupProgress() {
-  const filled = $$$('.grouped-input').filter(i => i.value.trim().length > 0).length;
-  const filledEl = $('groupFilled');
+  const filled = $$$(".grouped-input").filter(
+    (i) => i.value.trim().length > 0,
+  ).length;
+  const filledEl = $("groupFilled");
   if (filledEl) filledEl.textContent = filled;
 
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = filled === 0;
 }
 
@@ -839,19 +926,19 @@ function updateGroupProgress() {
  * Update select progress indicator (for grouped_select)
  */
 function updateSelectProgress() {
-  const items = $$$('.select-item');
+  const items = $$$(".select-item");
   let completeCount = 0;
 
-  items.forEach(item => {
-    const selects = $$$('.select-input', item);
-    const allFilled = selects.every(s => s.value !== '');
+  items.forEach((item) => {
+    const selects = $$$(".select-input", item);
+    const allFilled = selects.every((s) => s.value !== "");
     if (allFilled) completeCount++;
   });
 
-  const progressEl = $('selectProgress');
+  const progressEl = $("selectProgress");
   if (progressEl) progressEl.textContent = completeCount;
 
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = completeCount === 0;
 }
 
@@ -862,18 +949,18 @@ function selectOption(el) {
   if (state.answered) return;
 
   // Deselect all
-  $$$('.option').forEach(opt => {
-    opt.classList.remove('selected');
-    opt.setAttribute('aria-checked', 'false');
+  $$$(".option").forEach((opt) => {
+    opt.classList.remove("selected");
+    opt.setAttribute("aria-checked", "false");
   });
 
   // Select this one
-  el.classList.add('selected');
-  el.setAttribute('aria-checked', 'true');
+  el.classList.add("selected");
+  el.setAttribute("aria-checked", "true");
   state.selectedOption = parseInt(el.dataset.idx, 10);
 
   // Enable check button
-  const checkBtn = $('checkBtn');
+  const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = false;
 }
 
@@ -887,28 +974,28 @@ export function checkAnswer() {
   stopTimer();
 
   switch (q.type) {
-    case 'mc':
+    case "mc":
       checkMCAnswer(q);
       break;
-    case 'open':
+    case "open":
       checkOpenAnswer(q);
       break;
-    case 'short_text':
+    case "short_text":
       checkShortText(q);
       break;
-    case 'table_parse':
+    case "table_parse":
       checkTableParse(q);
       break;
-    case 'grouped_short_text':
+    case "grouped_short_text":
       checkGroupedShortText(q);
       break;
-    case 'grouped_translation':
+    case "grouped_translation":
       checkGroupedTranslation(q);
       break;
-    case 'grouped_select':
+    case "grouped_select":
       checkGroupedSelect(q);
       break;
-    case 'translation_open':
+    case "translation_open":
       checkTranslationOpen(q);
       break;
     default:
@@ -916,7 +1003,7 @@ export function checkAnswer() {
   }
 
   state.answered = true;
-  state.phase = 'feedback';
+  state.phase = "feedback";
   updateControls();
 }
 
@@ -927,13 +1014,13 @@ function checkMCAnswer(q) {
   const isCorrect = state.selectedOption === q.correctIndex;
 
   // Mark options
-  $$$('.option').forEach((el, idx) => {
-    el.classList.add('disabled');
+  $$$(".option").forEach((el, idx) => {
+    el.classList.add("disabled");
     if (idx === q.correctIndex) {
-      el.classList.add('correct');
+      el.classList.add("correct");
     }
     if (idx === state.selectedOption && !isCorrect) {
-      el.classList.add('wrong');
+      el.classList.add("wrong");
     }
   });
 
@@ -949,11 +1036,11 @@ function checkMCAnswer(q) {
   // Add to history
   state.history.add({
     question: q.q,
-    type: 'mc',
+    type: "mc",
     userAnswer: q.answers[state.selectedOption],
     correctAnswer: q.answers[q.correctIndex],
     correct: isCorrect,
-    explanation: q.explanation
+    explanation: q.explanation,
   });
 
   // Show feedback
@@ -964,8 +1051,8 @@ function checkMCAnswer(q) {
  * Check open answer
  */
 function checkOpenAnswer(q) {
-  const input = $('openInput');
-  const value = input ? input.value.trim() : '';
+  const input = $("openInput");
+  const value = input ? input.value.trim() : "";
   const isCorrect = checkAcceptList(q.accept || [], value, q.caseSensitive);
 
   if (isCorrect) {
@@ -979,11 +1066,11 @@ function checkOpenAnswer(q) {
   // Add to history
   state.history.add({
     question: q.q,
-    type: 'open',
+    type: "open",
     userAnswer: value,
-    correctAnswer: q.accept[0] || '',
+    correctAnswer: q.accept[0] || "",
     correct: isCorrect,
-    explanation: q.explanation
+    explanation: q.explanation,
   });
 
   showFeedback(isCorrect, q.explanation, q.accept[0]);
@@ -997,9 +1084,13 @@ function checkAcceptList(acceptList, input, caseSensitive = false) {
 
   for (const accept of acceptList) {
     // Check for regex pattern
-    if (typeof accept === 'string' && accept.startsWith('/') && accept.lastIndexOf('/') > 0) {
+    if (
+      typeof accept === "string" &&
+      accept.startsWith("/") &&
+      accept.lastIndexOf("/") > 0
+    ) {
       try {
-        const lastSlash = accept.lastIndexOf('/');
+        const lastSlash = accept.lastIndexOf("/");
         const pattern = accept.slice(1, lastSlash);
         const flags = accept.slice(lastSlash + 1);
         const regex = new RegExp(pattern, flags);
@@ -1009,7 +1100,9 @@ function checkAcceptList(acceptList, input, caseSensitive = false) {
       }
     } else {
       // Plain string comparison
-      const target = caseSensitive ? String(accept).trim() : String(accept).trim().toLowerCase();
+      const target = caseSensitive
+        ? String(accept).trim()
+        : String(accept).trim().toLowerCase();
       if (normalized === target) return true;
     }
   }
@@ -1025,38 +1118,38 @@ function checkAcceptList(acceptList, input, caseSensitive = false) {
  * Check short_text answer
  */
 function checkShortText(q) {
-  const input = $('shortInput');
-  const value = input?.value?.trim() || '';
+  const input = $("shortInput");
+  const value = input?.value?.trim() || "";
 
   const answer = q.answer || {};
   const accepted = answer.accepted || [];
   const opts = {
     lowercase: !answer.case_sensitive,
     normalize_diacritics: answer.normalize_diacritics,
-    trim: answer.trim !== false
+    trim: answer.trim !== false,
   };
 
   const isCorrect = matchesAcceptList(value, accepted, {}, opts);
 
   if (isCorrect) {
     state.score++;
-    input?.classList.add('input-correct');
+    input?.classList.add("input-correct");
   } else {
     state.wrong++;
-    input?.classList.add('input-wrong');
+    input?.classList.add("input-wrong");
   }
   updateStats(state.subjectId, isCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
   state.history.add({
     question: htmlToText(q.prompt_html || q.q),
-    type: 'short_text',
+    type: "short_text",
     userAnswer: value,
-    correctAnswer: accepted[0] || '',
-    correct: isCorrect
+    correctAnswer: accepted[0] || "",
+    correct: isCorrect,
   });
 
-  showFeedback(isCorrect, '', accepted[0]);
+  showFeedback(isCorrect, "", accepted[0]);
 }
 
 /**
@@ -1075,14 +1168,19 @@ function checkTableParse(q) {
         totalFillable++;
         const cellId = `cell-${blockIdx}-${rowIdx}`;
         const input = $(cellId);
-        const value = input?.value?.trim() || '';
-        const isCorrect = matchesAcceptList(value, row.accepted || [], {}, { lowercase: true });
+        const value = input?.value?.trim() || "";
+        const isCorrect = matchesAcceptList(
+          value,
+          row.accepted || [],
+          {},
+          { lowercase: true },
+        );
 
         if (isCorrect) {
           correctCount++;
-          input?.classList.add('input-correct');
+          input?.classList.add("input-correct");
         } else {
-          input?.classList.add('input-wrong');
+          input?.classList.add("input-wrong");
         }
 
         results.push({
@@ -1090,7 +1188,7 @@ function checkTableParse(q) {
           lemma: block.lemma,
           value,
           correct: isCorrect,
-          expected: row.accepted[0]
+          expected: row.accepted[0],
         });
       }
     });
@@ -1114,14 +1212,20 @@ function checkTableParse(q) {
 
   state.history.add({
     question: htmlToText(q.prompt_html),
-    type: 'table_parse',
+    type: "table_parse",
     correctCount,
     totalCount: totalFillable,
     correct: isFullyCorrect,
-    partialScore: earnedPoints
+    partialScore: earnedPoints,
   });
 
-  showTableFeedback(correctCount, totalFillable, results, earnedPoints, maxPoints);
+  showTableFeedback(
+    correctCount,
+    totalFillable,
+    results,
+    earnedPoints,
+    maxPoints,
+  );
 }
 
 /**
@@ -1138,10 +1242,15 @@ function checkGroupedShortText(q) {
       item.subfields.forEach((sf, sfIdx) => {
         totalItems++;
         const input = $(`word-${idx}-sf-${sfIdx}`);
-        const value = input?.value?.trim() || '';
-        const isCorrect = matchesAcceptList(value, sf.accepted || [], {}, { lowercase: true });
+        const value = input?.value?.trim() || "";
+        const isCorrect = matchesAcceptList(
+          value,
+          sf.accepted || [],
+          {},
+          { lowercase: true },
+        );
 
-        input?.classList.add(isCorrect ? 'input-correct' : 'input-wrong');
+        input?.classList.add(isCorrect ? "input-correct" : "input-wrong");
         if (isCorrect) totalCorrect++;
 
         results.push({
@@ -1149,23 +1258,28 @@ function checkGroupedShortText(q) {
           label: sf.label,
           value,
           correct: isCorrect,
-          expected: sf.accepted?.[0]
+          expected: sf.accepted?.[0],
         });
       });
     } else {
       totalItems++;
       const input = $(`word-${idx}`);
-      const value = input?.value?.trim() || '';
-      const isCorrect = matchesAcceptList(value, item.accepted || [], {}, { lowercase: true });
+      const value = input?.value?.trim() || "";
+      const isCorrect = matchesAcceptList(
+        value,
+        item.accepted || [],
+        {},
+        { lowercase: true },
+      );
 
-      input?.classList.add(isCorrect ? 'input-correct' : 'input-wrong');
+      input?.classList.add(isCorrect ? "input-correct" : "input-wrong");
       if (isCorrect) totalCorrect++;
 
       results.push({
         latin: item.latijn || item.vraag,
         value,
         correct: isCorrect,
-        expected: item.accepted?.[0]
+        expected: item.accepted?.[0],
       });
     }
   });
@@ -1180,10 +1294,10 @@ function checkGroupedShortText(q) {
 
   state.history.add({
     question: htmlToText(q.prompt_html),
-    type: 'grouped_short_text',
+    type: "grouped_short_text",
     correctCount: totalCorrect,
     totalCount: totalItems,
-    correct: isFullyCorrect
+    correct: isFullyCorrect,
   });
 
   showGroupedFeedback(totalCorrect, totalItems, results);
@@ -1199,17 +1313,22 @@ function checkGroupedTranslation(q) {
 
   items.forEach((item, idx) => {
     const input = $(`trans-${idx}`);
-    const value = input?.value?.trim() || '';
-    const isCorrect = matchesAcceptList(value, item.accepted || [], {}, { lowercase: true });
+    const value = input?.value?.trim() || "";
+    const isCorrect = matchesAcceptList(
+      value,
+      item.accepted || [],
+      {},
+      { lowercase: true },
+    );
 
-    input?.classList.add(isCorrect ? 'input-correct' : 'input-wrong');
+    input?.classList.add(isCorrect ? "input-correct" : "input-wrong");
     if (isCorrect) correctCount++;
 
     results.push({
       sentence: item.latijn_html,
       value,
       correct: isCorrect,
-      expected: item.accepted?.[0]
+      expected: item.accepted?.[0],
     });
   });
 
@@ -1223,10 +1342,10 @@ function checkGroupedTranslation(q) {
 
   state.history.add({
     question: htmlToText(q.prompt_html),
-    type: 'grouped_translation',
+    type: "grouped_translation",
     correctCount,
     totalCount: items.length,
-    correct: isFullyCorrect
+    correct: isFullyCorrect,
   });
 
   showGroupedFeedback(correctCount, items.length, results);
@@ -1243,9 +1362,9 @@ function checkGroupedSelect(q) {
   let maxPoints = 0;
 
   items.forEach((item, idx) => {
-    const naamval = $(`naamval-${idx}`)?.value || '';
-    const getal = $(`getal-${idx}`)?.value || '';
-    const verklaring = $(`verklaring-${idx}`)?.value || '';
+    const naamval = $(`naamval-${idx}`)?.value || "";
+    const getal = $(`getal-${idx}`)?.value || "";
+    const verklaring = $(`verklaring-${idx}`)?.value || "";
 
     const correct = item.correct || {};
     let matchCount = 0;
@@ -1274,11 +1393,11 @@ function checkGroupedSelect(q) {
     const container = $$(`[data-idx="${idx}"].select-item`);
     if (container) {
       if (matchCount === 3) {
-        container.classList.add('item-correct');
+        container.classList.add("item-correct");
       } else if (matchCount > 0) {
-        container.classList.add('item-partial');
+        container.classList.add("item-partial");
       } else {
-        container.classList.add('item-wrong');
+        container.classList.add("item-wrong");
       }
     }
 
@@ -1291,8 +1410,8 @@ function checkGroupedSelect(q) {
       details: {
         naamval: naamvalCorrect,
         getal: getalCorrect,
-        verklaring: verklaringCorrect
-      }
+        verklaring: verklaringCorrect,
+      },
     });
   });
 
@@ -1306,11 +1425,11 @@ function checkGroupedSelect(q) {
 
   state.history.add({
     question: htmlToText(q.prompt_html),
-    type: 'grouped_select',
+    type: "grouped_select",
     results,
     correct: isFullyCorrect,
     totalPoints,
-    maxPoints
+    maxPoints,
   });
 
   showSelectFeedback(results, totalPoints, maxPoints);
@@ -1320,8 +1439,8 @@ function checkGroupedSelect(q) {
  * Check translation_open answer
  */
 function checkTranslationOpen(q) {
-  const input = $('translationInput');
-  const value = input?.value?.trim() || '';
+  const input = $("translationInput");
+  const value = input?.value?.trim() || "";
 
   const answer = q.answer || {};
   const normalizeOpts = answer.normalize || {};
@@ -1329,7 +1448,7 @@ function checkTranslationOpen(q) {
   const opts = {
     lowercase: normalizeOpts.lowercase,
     strip_punctuation: normalizeOpts.strip_punctuation,
-    collapse_whitespace: normalizeOpts.collapse_whitespace
+    collapse_whitespace: normalizeOpts.collapse_whitespace,
   };
 
   // Normalize user input
@@ -1351,22 +1470,22 @@ function checkTranslationOpen(q) {
 
   if (isCorrect) {
     state.score++;
-    input?.classList.add('input-correct');
+    input?.classList.add("input-correct");
   } else {
     state.wrong++;
-    input?.classList.add('input-wrong');
+    input?.classList.add("input-wrong");
   }
   updateStats(state.subjectId, isCorrect);
 
   state.history.add({
     question: htmlToText(q.prompt_html),
-    type: 'translation_open',
+    type: "translation_open",
     userAnswer: value,
-    correct: isCorrect
+    correct: isCorrect,
   });
 
-  const expectedAnswer = acceptedAny[0]?.[0] || '';
-  showFeedback(isCorrect, q.rubric || '', expectedAnswer);
+  const expectedAnswer = acceptedAny[0]?.[0] || "";
+  showFeedback(isCorrect, q.rubric || "", expectedAnswer);
 }
 
 /* ===========================================
@@ -1376,41 +1495,54 @@ function checkTranslationOpen(q) {
 /**
  * Show feedback for table_parse questions
  */
-function showTableFeedback(correctCount, totalCount, results, earnedPoints, maxPoints) {
-  const feedbackEl = $('feedback');
+function showTableFeedback(
+  correctCount,
+  totalCount,
+  results,
+  earnedPoints,
+  maxPoints,
+) {
+  const feedbackEl = $("feedback");
   if (!feedbackEl) return;
 
   const isFullyCorrect = correctCount === totalCount;
   const isPartial = correctCount > 0 && !isFullyCorrect;
 
-  let className = 'feedback-error';
-  let icon = '✗';
-  let title = 'Niet goed';
+  let className = "feedback-error";
+  let icon = "✗";
+  let title = "Niet goed";
 
   if (isFullyCorrect) {
-    className = 'feedback-success';
-    icon = '✓';
-    title = 'Alles goed!';
+    className = "feedback-success";
+    icon = "✓";
+    title = "Alles goed!";
   } else if (isPartial) {
-    className = 'feedback-partial';
-    icon = '◐';
-    title = 'Gedeeltelijk goed';
+    className = "feedback-partial";
+    icon = "◐";
+    title = "Gedeeltelijk goed";
   }
 
-  const wrongResults = results.filter(r => !r.correct);
-  const wrongHtml = wrongResults.length > 0 ? `
+  const wrongResults = results.filter((r) => !r.correct);
+  const wrongHtml =
+    wrongResults.length > 0
+      ? `
     <div class="feedback-results">
       <div class="feedback-results-title">Verbeteringen:</div>
       <div class="feedback-results-list">
-        ${wrongResults.map(r => `
+        ${wrongResults
+          .map(
+            (r) => `
           <div class="feedback-result-item wrong">
             <span class="feedback-icon">✗</span>
-            <span><strong>${r.lemma}</strong> (${r.veld}): ${r.value || '(leeg)'} → <strong>${r.expected}</strong></span>
+            <span><strong>${r.lemma}</strong> (${r.veld}): ${r.value || "(leeg)"} → <strong>${r.expected}</strong></span>
           </div>
-        `).join('')}
+        `,
+          )
+          .join("")}
       </div>
     </div>
-  ` : '';
+  `
+      : "";
 
   feedbackEl.className = `feedback ${className}`;
   feedbackEl.innerHTML = `
@@ -1421,47 +1553,54 @@ function showTableFeedback(correctCount, totalCount, results, earnedPoints, maxP
     <div class="feedback-score">${correctCount} / ${totalCount} goed (${earnedPoints.toFixed(1)} / ${maxPoints.toFixed(1)} punten)</div>
     ${wrongHtml}
   `;
-  feedbackEl.style.display = 'block';
+  feedbackEl.style.display = "block";
 }
 
 /**
  * Show feedback for grouped questions
  */
 function showGroupedFeedback(correctCount, totalCount, results) {
-  const feedbackEl = $('feedback');
+  const feedbackEl = $("feedback");
   if (!feedbackEl) return;
 
   const isFullyCorrect = correctCount === totalCount;
   const isPartial = correctCount > 0 && !isFullyCorrect;
 
-  let className = 'feedback-error';
-  let icon = '✗';
-  let title = 'Niet goed';
+  let className = "feedback-error";
+  let icon = "✗";
+  let title = "Niet goed";
 
   if (isFullyCorrect) {
-    className = 'feedback-success';
-    icon = '✓';
-    title = 'Alles goed!';
+    className = "feedback-success";
+    icon = "✓";
+    title = "Alles goed!";
   } else if (isPartial) {
-    className = 'feedback-partial';
-    icon = '◐';
-    title = 'Gedeeltelijk goed';
+    className = "feedback-partial";
+    icon = "◐";
+    title = "Gedeeltelijk goed";
   }
 
-  const wrongResults = results.filter(r => !r.correct);
-  const wrongHtml = wrongResults.length > 0 ? `
+  const wrongResults = results.filter((r) => !r.correct);
+  const wrongHtml =
+    wrongResults.length > 0
+      ? `
     <div class="feedback-results">
       <div class="feedback-results-title">Verbeteringen:</div>
       <div class="feedback-results-list">
-        ${wrongResults.map(r => `
+        ${wrongResults
+          .map(
+            (r) => `
           <div class="feedback-result-item wrong">
             <span class="feedback-icon">✗</span>
-            <span><strong>${r.latin || ''}</strong>${r.label ? ` (${r.label})` : ''}: ${r.value || '(leeg)'} → <strong>${r.expected}</strong></span>
+            <span><strong>${r.latin || ""}</strong>${r.label ? ` (${r.label})` : ""}: ${r.value || "(leeg)"} → <strong>${r.expected}</strong></span>
           </div>
-        `).join('')}
+        `,
+          )
+          .join("")}
       </div>
     </div>
-  ` : '';
+  `
+      : "";
 
   feedbackEl.className = `feedback ${className}`;
   feedbackEl.innerHTML = `
@@ -1472,54 +1611,61 @@ function showGroupedFeedback(correctCount, totalCount, results) {
     <div class="feedback-score">${correctCount} / ${totalCount} goed</div>
     ${wrongHtml}
   `;
-  feedbackEl.style.display = 'block';
+  feedbackEl.style.display = "block";
 }
 
 /**
  * Show feedback for grouped_select questions
  */
 function showSelectFeedback(results, totalPoints, maxPoints) {
-  const feedbackEl = $('feedback');
+  const feedbackEl = $("feedback");
   if (!feedbackEl) return;
 
-  const perfectCount = results.filter(r => r.matchCount === 3).length;
+  const perfectCount = results.filter((r) => r.matchCount === 3).length;
   const isFullyCorrect = perfectCount === results.length;
   const isPartial = totalPoints > 0 && !isFullyCorrect;
 
-  let className = 'feedback-error';
-  let icon = '✗';
-  let title = 'Niet goed';
+  let className = "feedback-error";
+  let icon = "✗";
+  let title = "Niet goed";
 
   if (isFullyCorrect) {
-    className = 'feedback-success';
-    icon = '✓';
-    title = 'Alles goed!';
+    className = "feedback-success";
+    icon = "✓";
+    title = "Alles goed!";
   } else if (isPartial) {
-    className = 'feedback-partial';
-    icon = '◐';
-    title = 'Gedeeltelijk goed';
+    className = "feedback-partial";
+    icon = "◐";
+    title = "Gedeeltelijk goed";
   }
 
-  const incorrectResults = results.filter(r => r.matchCount < 3);
-  const detailsHtml = incorrectResults.length > 0 ? `
+  const incorrectResults = results.filter((r) => r.matchCount < 3);
+  const detailsHtml =
+    incorrectResults.length > 0
+      ? `
     <div class="feedback-results">
       <div class="feedback-results-title">Verbeteringen:</div>
       <div class="feedback-results-list">
-        ${incorrectResults.map(r => {
-          const corrections = [];
-          if (!r.details.naamval) corrections.push(`naamval: ${r.correct.naamval}`);
-          if (!r.details.getal) corrections.push(`getal: ${r.correct.getal}`);
-          if (!r.details.verklaring) corrections.push(`verklaring: ${r.correct.verklaring}`);
-          return `
-            <div class="feedback-result-item ${r.matchCount > 0 ? 'partial' : 'wrong'}">
-              <span class="feedback-icon">${r.matchCount > 0 ? '◐' : '✗'}</span>
-              <span>${r.matchCount}/3 goed → ${corrections.join(', ')}</span>
+        ${incorrectResults
+          .map((r) => {
+            const corrections = [];
+            if (!r.details.naamval)
+              corrections.push(`naamval: ${r.correct.naamval}`);
+            if (!r.details.getal) corrections.push(`getal: ${r.correct.getal}`);
+            if (!r.details.verklaring)
+              corrections.push(`verklaring: ${r.correct.verklaring}`);
+            return `
+            <div class="feedback-result-item ${r.matchCount > 0 ? "partial" : "wrong"}">
+              <span class="feedback-icon">${r.matchCount > 0 ? "◐" : "✗"}</span>
+              <span>${r.matchCount}/3 goed → ${corrections.join(", ")}</span>
             </div>
           `;
-        }).join('')}
+          })
+          .join("")}
       </div>
     </div>
-  ` : '';
+  `
+      : "";
 
   feedbackEl.className = `feedback ${className}`;
   feedbackEl.innerHTML = `
@@ -1530,19 +1676,19 @@ function showSelectFeedback(results, totalPoints, maxPoints) {
     <div class="feedback-score">${perfectCount} / ${results.length} volledig goed (${totalPoints.toFixed(1)} / ${maxPoints.toFixed(1)} punten)</div>
     ${detailsHtml}
   `;
-  feedbackEl.style.display = 'block';
+  feedbackEl.style.display = "block";
 }
 
 /**
  * Show feedback
  */
 function showFeedback(isCorrect, explanation, correctAnswer) {
-  const feedbackEl = $('feedback');
+  const feedbackEl = $("feedback");
   if (!feedbackEl) return;
 
-  const icon = isCorrect ? '✓' : '✗';
-  const title = isCorrect ? 'Goed!' : 'Niet goed';
-  const className = isCorrect ? 'feedback-success' : 'feedback-error';
+  const icon = isCorrect ? "✓" : "✗";
+  const title = isCorrect ? "Goed!" : "Niet goed";
+  const className = isCorrect ? "feedback-success" : "feedback-error";
 
   let html = `
     <div class="feedback-header">
@@ -1561,7 +1707,7 @@ function showFeedback(isCorrect, explanation, correctAnswer) {
 
   feedbackEl.className = `feedback ${className}`;
   feedbackEl.innerHTML = html;
-  feedbackEl.style.display = 'block';
+  feedbackEl.style.display = "block";
 }
 
 /**
@@ -1574,27 +1720,27 @@ function handleTimeUp() {
 
   state.wrong++;
   state.answered = true;
-  state.phase = 'feedback';
+  state.phase = "feedback";
 
   state.history.add({
-    question: q.q || htmlToText(q.prompt_html) || 'Vraag',
+    question: q.q || htmlToText(q.prompt_html) || "Vraag",
     type: q.type,
-    userAnswer: '(tijd op)',
+    userAnswer: "(tijd op)",
     correct: false,
-    timedOut: true
+    timedOut: true,
   });
 
   // Show feedback
-  const feedbackEl = $('feedback');
+  const feedbackEl = $("feedback");
   if (feedbackEl) {
-    feedbackEl.className = 'feedback feedback-error';
+    feedbackEl.className = "feedback feedback-error";
     feedbackEl.innerHTML = `
       <div class="feedback-header">
         <span>⏱️</span>
         <span>Tijd voorbij!</span>
       </div>
     `;
-    feedbackEl.style.display = 'block';
+    feedbackEl.style.display = "block";
   }
 
   updateControls();
@@ -1610,11 +1756,11 @@ export function skipQuestion() {
   state.skipped++;
 
   state.history.add({
-    question: q.q || htmlToText(q.prompt_html) || 'Vraag',
+    question: q.q || htmlToText(q.prompt_html) || "Vraag",
     type: q.type,
-    userAnswer: '(overgeslagen)',
+    userAnswer: "(overgeslagen)",
     correct: false,
-    skipped: true
+    skipped: true,
   });
 
   // Move skipped question to end (optional revisit)
@@ -1640,7 +1786,7 @@ export function nextQuestion() {
       questions: state.questions,
       score: state.score,
       wrong: state.wrong,
-      skipped: state.skipped
+      skipped: state.skipped,
     });
 
     renderQuestion();
@@ -1655,12 +1801,12 @@ export function nextQuestion() {
  */
 function renderSummary() {
   stopTimer();
-  state.phase = 'summary';
+  state.phase = "summary";
 
   // Clear saved progress since quiz is complete
   clearQuizProgress(state.subjectId);
 
-  const container = $('quizArea');
+  const container = $("quizArea");
   if (!container) return;
 
   const total = state.history.getTotal();
@@ -1675,18 +1821,23 @@ function renderSummary() {
   }
 
   // Build history table
-  const historyRows = state.history.getAll().map((h, i) => `
+  const historyRows = state.history
+    .getAll()
+    .map(
+      (h, i) => `
     <tr>
       <td>${i + 1}</td>
-      <td>${h.question.substring(0, 50)}${h.question.length > 50 ? '...' : ''}</td>
+      <td>${h.question.substring(0, 50)}${h.question.length > 50 ? "..." : ""}</td>
       <td>${h.userAnswer}</td>
       <td>
-        ${h.correct ? '<span class="badge badge-success">Goed</span>' : ''}
-        ${h.skipped ? '<span class="badge">Overgeslagen</span>' : ''}
-        ${!h.correct && !h.skipped ? '<span class="badge badge-error">Fout</span>' : ''}
+        ${h.correct ? '<span class="badge badge-success">Goed</span>' : ""}
+        ${h.skipped ? '<span class="badge">Overgeslagen</span>' : ""}
+        ${!h.correct && !h.skipped ? '<span class="badge badge-error">Fout</span>' : ""}
       </td>
     </tr>
-  `).join('');
+  `,
+    )
+    .join("");
 
   container.innerHTML = `
     <div class="summary-card">
@@ -1707,7 +1858,9 @@ function renderSummary() {
         </div>
       </div>
 
-      ${total > 0 ? `
+      ${
+        total > 0
+          ? `
         <table class="summary-table">
           <thead>
             <tr>
@@ -1721,7 +1874,9 @@ function renderSummary() {
             ${historyRows}
           </tbody>
         </table>
-      ` : ''}
+      `
+          : ""
+      }
 
       <div class="mt-5">
         <button class="btn btn-primary btn-block" onclick="location.reload()">Opnieuw</button>
@@ -1737,18 +1892,18 @@ function renderSummary() {
  */
 export function showPause() {
   pauseTimer();
-  const overlay = $('pauseOverlay');
-  const page = $$('.quiz-page');
-  if (overlay) overlay.classList.add('show');
-  if (page) page.classList.add('page-blur');
+  const overlay = $("pauseOverlay");
+  const page = $$(".quiz-page");
+  if (overlay) overlay.classList.add("show");
+  if (page) page.classList.add("page-blur");
 }
 
 export function hidePause() {
   resumeTimer();
-  const overlay = $('pauseOverlay');
-  const page = $$('.quiz-page');
-  if (overlay) overlay.classList.remove('show');
-  if (page) page.classList.remove('page-blur');
+  const overlay = $("pauseOverlay");
+  const page = $$(".quiz-page");
+  if (overlay) overlay.classList.remove("show");
+  if (page) page.classList.remove("page-blur");
 }
 
 /**
@@ -1760,7 +1915,7 @@ function updateUI() {
 }
 
 function updateMeta() {
-  const statEl = $('stat');
+  const statEl = $("stat");
   if (statEl) {
     const total = state.questions.length;
     const current = Math.min(state.currentIndex + 1, total);
@@ -1769,7 +1924,7 @@ function updateMeta() {
 }
 
 function updateProgress() {
-  const bar = $('progressBar');
+  const bar = $("progressBar");
   if (bar) {
     const total = state.questions.length;
     const pct = total > 0 ? Math.round((state.currentIndex / total) * 100) : 0;
@@ -1778,30 +1933,33 @@ function updateProgress() {
 }
 
 function updateControls() {
-  const checkBtn = $('checkBtn');
-  const nextBtn = $('nextBtn');
-  const skipBtn = $('skipBtn');
-  const pauseBtn = $('pauseBtn');
-  const rowMain = $('rowMain');
-  const rowNext = $('rowNext');
+  const checkBtn = $("checkBtn");
+  const nextBtn = $("nextBtn");
+  const skipBtn = $("skipBtn");
+  const pauseBtn = $("pauseBtn");
+  const rowMain = $("rowMain");
+  const rowNext = $("rowNext");
 
-  if (state.phase === 'summary') {
-    if (rowMain) rowMain.style.display = 'none';
-    if (rowNext) rowNext.style.display = 'none';
+  if (state.phase === "summary") {
+    if (rowMain) rowMain.style.display = "none";
+    if (rowNext) rowNext.style.display = "none";
     return;
   }
 
-  if (state.phase === 'feedback') {
-    if (rowMain) rowMain.style.display = 'none';
-    if (rowNext) rowNext.style.display = 'grid';
+  if (state.phase === "feedback") {
+    if (rowMain) rowMain.style.display = "none";
+    if (rowNext) rowNext.style.display = "grid";
   } else {
-    if (rowMain) rowMain.style.display = 'grid';
-    if (rowNext) rowNext.style.display = 'none';
+    if (rowMain) rowMain.style.display = "grid";
+    if (rowNext) rowNext.style.display = "none";
   }
 
   // Update next button text
   if (nextBtn) {
-    nextBtn.textContent = state.currentIndex >= state.questions.length - 1 ? 'Resultaat' : 'Volgende';
+    nextBtn.textContent =
+      state.currentIndex >= state.questions.length - 1
+        ? "Resultaat"
+        : "Volgende";
   }
 }
 
@@ -1809,7 +1967,7 @@ function updateControls() {
  * Show error message with retry option
  */
 function showError(message) {
-  const container = $('quizArea');
+  const container = $("quizArea");
   if (container) {
     showErrorUI(container, message, () => {
       // Retry loading questions
@@ -1822,23 +1980,24 @@ function showError(message) {
  * Setup event listeners
  */
 function setupEventListeners() {
-  const checkBtn = $('checkBtn');
-  const nextBtn = $('nextBtn');
-  const skipBtn = $('skipBtn');
-  const pauseBtn = $('pauseBtn');
-  const resumeBtn = $('resumeBtn');
-  const restartBtn = $('btn-restart');
+  const checkBtn = $("checkBtn");
+  const nextBtn = $("nextBtn");
+  const skipBtn = $("skipBtn");
+  const pauseBtn = $("pauseBtn");
+  const resumeBtn = $("resumeBtn");
+  const restartBtn = $("btn-restart");
 
-  if (checkBtn) checkBtn.addEventListener('click', checkAnswer);
-  if (nextBtn) nextBtn.addEventListener('click', nextQuestion);
-  if (skipBtn) skipBtn.addEventListener('click', skipQuestion);
-  if (pauseBtn) pauseBtn.addEventListener('click', showPause);
-  if (resumeBtn) resumeBtn.addEventListener('click', hidePause);
-  if (restartBtn) restartBtn.addEventListener('click', () => {
-    if (confirm('Weet je zeker dat je opnieuw wilt beginnen?')) {
-      location.reload();
-    }
-  });
+  if (checkBtn) checkBtn.addEventListener("click", checkAnswer);
+  if (nextBtn) nextBtn.addEventListener("click", nextQuestion);
+  if (skipBtn) skipBtn.addEventListener("click", skipQuestion);
+  if (pauseBtn) pauseBtn.addEventListener("click", showPause);
+  if (resumeBtn) resumeBtn.addEventListener("click", hidePause);
+  if (restartBtn)
+    restartBtn.addEventListener("click", () => {
+      if (confirm("Weet je zeker dat je opnieuw wilt beginnen?")) {
+        location.reload();
+      }
+    });
 }
 
 // Export state for debugging

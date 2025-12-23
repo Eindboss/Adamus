@@ -25,7 +25,7 @@ export function createCoordinateSystem(options = {}) {
     yMax = 6,
     showGrid = true,
     showLabels = true,
-    gridStep = 1
+    gridStep = 1,
   } = options;
 
   const padding = 40;
@@ -37,46 +37,55 @@ export function createCoordinateSystem(options = {}) {
   const scaleY = (y) => padding + ((yMax - y) / (yMax - yMin)) * innerHeight;
 
   // Create SVG
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-  svg.setAttribute('class', 'coordinate-system');
-  svg.style.maxWidth = '100%';
-  svg.style.height = 'auto';
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("class", "coordinate-system");
+  svg.style.maxWidth = "100%";
+  svg.style.height = "auto";
 
   // Background
-  const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-  bg.setAttribute('width', width);
-  bg.setAttribute('height', height);
-  bg.setAttribute('fill', '#fafafa');
-  bg.setAttribute('rx', '8');
+  const bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  bg.setAttribute("width", width);
+  bg.setAttribute("height", height);
+  bg.setAttribute("fill", "#fafafa");
+  bg.setAttribute("rx", "8");
   svg.appendChild(bg);
 
   // Grid lines
   if (showGrid) {
-    const gridGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    gridGroup.setAttribute('class', 'grid');
-    gridGroup.setAttribute('stroke', '#e5e5e5');
-    gridGroup.setAttribute('stroke-width', '1');
+    const gridGroup = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "g",
+    );
+    gridGroup.setAttribute("class", "grid");
+    gridGroup.setAttribute("stroke", "#e5e5e5");
+    gridGroup.setAttribute("stroke-width", "1");
 
     // Vertical grid lines
     for (let x = Math.ceil(xMin); x <= Math.floor(xMax); x += gridStep) {
       if (x === 0) continue; // Skip axis
-      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('x1', scaleX(x));
-      line.setAttribute('y1', padding);
-      line.setAttribute('x2', scaleX(x));
-      line.setAttribute('y2', height - padding);
+      const line = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "line",
+      );
+      line.setAttribute("x1", scaleX(x));
+      line.setAttribute("y1", padding);
+      line.setAttribute("x2", scaleX(x));
+      line.setAttribute("y2", height - padding);
       gridGroup.appendChild(line);
     }
 
     // Horizontal grid lines
     for (let y = Math.ceil(yMin); y <= Math.floor(yMax); y += gridStep) {
       if (y === 0) continue; // Skip axis
-      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('x1', padding);
-      line.setAttribute('y1', scaleY(y));
-      line.setAttribute('x2', width - padding);
-      line.setAttribute('y2', scaleY(y));
+      const line = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "line",
+      );
+      line.setAttribute("x1", padding);
+      line.setAttribute("y1", scaleY(y));
+      line.setAttribute("x2", width - padding);
+      line.setAttribute("y2", scaleY(y));
       gridGroup.appendChild(line);
     }
 
@@ -84,59 +93,77 @@ export function createCoordinateSystem(options = {}) {
   }
 
   // Axes
-  const axesGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  axesGroup.setAttribute('class', 'axes');
-  axesGroup.setAttribute('stroke', '#333');
-  axesGroup.setAttribute('stroke-width', '2');
+  const axesGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  axesGroup.setAttribute("class", "axes");
+  axesGroup.setAttribute("stroke", "#333");
+  axesGroup.setAttribute("stroke-width", "2");
 
   // X-axis
-  const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  xAxis.setAttribute('x1', padding);
-  xAxis.setAttribute('y1', scaleY(0));
-  xAxis.setAttribute('x2', width - padding);
-  xAxis.setAttribute('y2', scaleY(0));
+  const xAxis = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  xAxis.setAttribute("x1", padding);
+  xAxis.setAttribute("y1", scaleY(0));
+  xAxis.setAttribute("x2", width - padding);
+  xAxis.setAttribute("y2", scaleY(0));
   axesGroup.appendChild(xAxis);
 
   // Y-axis
-  const yAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  yAxis.setAttribute('x1', scaleX(0));
-  yAxis.setAttribute('y1', padding);
-  yAxis.setAttribute('x2', scaleX(0));
-  yAxis.setAttribute('y2', height - padding);
+  const yAxis = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  yAxis.setAttribute("x1", scaleX(0));
+  yAxis.setAttribute("y1", padding);
+  yAxis.setAttribute("x2", scaleX(0));
+  yAxis.setAttribute("y2", height - padding);
   axesGroup.appendChild(yAxis);
 
   // Arrow heads
   const arrowSize = 8;
 
   // X-axis arrow
-  const xArrow = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-  xArrow.setAttribute('points', `${width - padding},${scaleY(0)} ${width - padding - arrowSize},${scaleY(0) - arrowSize / 2} ${width - padding - arrowSize},${scaleY(0) + arrowSize / 2}`);
-  xArrow.setAttribute('fill', '#333');
+  const xArrow = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "polygon",
+  );
+  xArrow.setAttribute(
+    "points",
+    `${width - padding},${scaleY(0)} ${width - padding - arrowSize},${scaleY(0) - arrowSize / 2} ${width - padding - arrowSize},${scaleY(0) + arrowSize / 2}`,
+  );
+  xArrow.setAttribute("fill", "#333");
   axesGroup.appendChild(xArrow);
 
   // Y-axis arrow
-  const yArrow = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-  yArrow.setAttribute('points', `${scaleX(0)},${padding} ${scaleX(0) - arrowSize / 2},${padding + arrowSize} ${scaleX(0) + arrowSize / 2},${padding + arrowSize}`);
-  yArrow.setAttribute('fill', '#333');
+  const yArrow = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "polygon",
+  );
+  yArrow.setAttribute(
+    "points",
+    `${scaleX(0)},${padding} ${scaleX(0) - arrowSize / 2},${padding + arrowSize} ${scaleX(0) + arrowSize / 2},${padding + arrowSize}`,
+  );
+  yArrow.setAttribute("fill", "#333");
   axesGroup.appendChild(yArrow);
 
   svg.appendChild(axesGroup);
 
   // Axis labels
   if (showLabels) {
-    const labelsGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    labelsGroup.setAttribute('class', 'labels');
-    labelsGroup.setAttribute('font-family', 'Inter, sans-serif');
-    labelsGroup.setAttribute('font-size', '12');
-    labelsGroup.setAttribute('fill', '#666');
+    const labelsGroup = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "g",
+    );
+    labelsGroup.setAttribute("class", "labels");
+    labelsGroup.setAttribute("font-family", "Inter, sans-serif");
+    labelsGroup.setAttribute("font-size", "12");
+    labelsGroup.setAttribute("fill", "#666");
 
     // X-axis labels
     for (let x = Math.ceil(xMin); x <= Math.floor(xMax); x += gridStep) {
       if (x === 0) continue;
-      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-      label.setAttribute('x', scaleX(x));
-      label.setAttribute('y', scaleY(0) + 16);
-      label.setAttribute('text-anchor', 'middle');
+      const label = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "text",
+      );
+      label.setAttribute("x", scaleX(x));
+      label.setAttribute("y", scaleY(0) + 16);
+      label.setAttribute("text-anchor", "middle");
       label.textContent = x;
       labelsGroup.appendChild(label);
     }
@@ -144,45 +171,60 @@ export function createCoordinateSystem(options = {}) {
     // Y-axis labels
     for (let y = Math.ceil(yMin); y <= Math.floor(yMax); y += gridStep) {
       if (y === 0) continue;
-      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-      label.setAttribute('x', scaleX(0) - 8);
-      label.setAttribute('y', scaleY(y) + 4);
-      label.setAttribute('text-anchor', 'end');
+      const label = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "text",
+      );
+      label.setAttribute("x", scaleX(0) - 8);
+      label.setAttribute("y", scaleY(y) + 4);
+      label.setAttribute("text-anchor", "end");
       label.textContent = y;
       labelsGroup.appendChild(label);
     }
 
     // Origin label
-    const originLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    originLabel.setAttribute('x', scaleX(0) - 8);
-    originLabel.setAttribute('y', scaleY(0) + 16);
-    originLabel.setAttribute('text-anchor', 'end');
-    originLabel.textContent = 'O';
-    originLabel.setAttribute('font-weight', '600');
+    const originLabel = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "text",
+    );
+    originLabel.setAttribute("x", scaleX(0) - 8);
+    originLabel.setAttribute("y", scaleY(0) + 16);
+    originLabel.setAttribute("text-anchor", "end");
+    originLabel.textContent = "O";
+    originLabel.setAttribute("font-weight", "600");
     labelsGroup.appendChild(originLabel);
 
     // X label
-    const xLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    xLabel.setAttribute('x', width - padding + 5);
-    xLabel.setAttribute('y', scaleY(0) + 16);
-    xLabel.textContent = 'x';
-    xLabel.setAttribute('font-style', 'italic');
+    const xLabel = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "text",
+    );
+    xLabel.setAttribute("x", width - padding + 5);
+    xLabel.setAttribute("y", scaleY(0) + 16);
+    xLabel.textContent = "x";
+    xLabel.setAttribute("font-style", "italic");
     labelsGroup.appendChild(xLabel);
 
     // Y label
-    const yLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    yLabel.setAttribute('x', scaleX(0) + 10);
-    yLabel.setAttribute('y', padding + 5);
-    yLabel.textContent = 'y';
-    yLabel.setAttribute('font-style', 'italic');
+    const yLabel = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "text",
+    );
+    yLabel.setAttribute("x", scaleX(0) + 10);
+    yLabel.setAttribute("y", padding + 5);
+    yLabel.textContent = "y";
+    yLabel.setAttribute("font-style", "italic");
     labelsGroup.appendChild(yLabel);
 
     svg.appendChild(labelsGroup);
   }
 
   // Create a group for points and lines
-  const contentGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  contentGroup.setAttribute('class', 'content');
+  const contentGroup = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "g",
+  );
+  contentGroup.setAttribute("class", "content");
   svg.appendChild(contentGroup);
 
   // Return object with methods to add points, lines, etc.
@@ -197,32 +239,38 @@ export function createCoordinateSystem(options = {}) {
      */
     addPoint(x, y, options = {}) {
       const {
-        color = '#6366f1',
+        color = "#6366f1",
         radius = 6,
-        label = '',
-        labelOffset = { x: 10, y: -10 }
+        label = "",
+        labelOffset = { x: 10, y: -10 },
       } = options;
 
-      const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-      group.setAttribute('class', 'point');
+      const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      group.setAttribute("class", "point");
 
       // Point circle
-      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      circle.setAttribute('cx', scaleX(x));
-      circle.setAttribute('cy', scaleY(y));
-      circle.setAttribute('r', radius);
-      circle.setAttribute('fill', color);
+      const circle = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "circle",
+      );
+      circle.setAttribute("cx", scaleX(x));
+      circle.setAttribute("cy", scaleY(y));
+      circle.setAttribute("r", radius);
+      circle.setAttribute("fill", color);
       group.appendChild(circle);
 
       // Label
       if (label) {
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('x', scaleX(x) + labelOffset.x);
-        text.setAttribute('y', scaleY(y) + labelOffset.y);
-        text.setAttribute('font-family', 'Inter, sans-serif');
-        text.setAttribute('font-size', '14');
-        text.setAttribute('font-weight', '600');
-        text.setAttribute('fill', color);
+        const text = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "text",
+        );
+        text.setAttribute("x", scaleX(x) + labelOffset.x);
+        text.setAttribute("y", scaleY(y) + labelOffset.y);
+        text.setAttribute("font-family", "Inter, sans-serif");
+        text.setAttribute("font-size", "14");
+        text.setAttribute("font-weight", "600");
+        text.setAttribute("fill", color);
         text.textContent = label;
         group.appendChild(text);
       }
@@ -235,21 +283,20 @@ export function createCoordinateSystem(options = {}) {
      * Add a line between two points
      */
     addLine(x1, y1, x2, y2, options = {}) {
-      const {
-        color = '#6366f1',
-        width = 2,
-        dashed = false
-      } = options;
+      const { color = "#6366f1", width = 2, dashed = false } = options;
 
-      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('x1', scaleX(x1));
-      line.setAttribute('y1', scaleY(y1));
-      line.setAttribute('x2', scaleX(x2));
-      line.setAttribute('y2', scaleY(y2));
-      line.setAttribute('stroke', color);
-      line.setAttribute('stroke-width', width);
+      const line = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "line",
+      );
+      line.setAttribute("x1", scaleX(x1));
+      line.setAttribute("y1", scaleY(y1));
+      line.setAttribute("x2", scaleX(x2));
+      line.setAttribute("y2", scaleY(y2));
+      line.setAttribute("stroke", color);
+      line.setAttribute("stroke-width", width);
       if (dashed) {
-        line.setAttribute('stroke-dasharray', '5,5');
+        line.setAttribute("stroke-dasharray", "5,5");
       }
 
       contentGroup.appendChild(line);
@@ -260,21 +307,20 @@ export function createCoordinateSystem(options = {}) {
      * Add a function graph (e.g., y = 2x + 1)
      */
     addFunction(fn, options = {}) {
-      const {
-        color = '#6366f1',
-        width = 2,
-        step = 0.1
-      } = options;
+      const { color = "#6366f1", width = 2, step = 0.1 } = options;
 
-      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      let d = '';
+      const path = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "path",
+      );
+      let d = "";
 
       for (let x = xMin; x <= xMax; x += step) {
         const y = fn(x);
         if (y >= yMin && y <= yMax) {
           const px = scaleX(x);
           const py = scaleY(y);
-          if (d === '') {
+          if (d === "") {
             d = `M ${px} ${py}`;
           } else {
             d += ` L ${px} ${py}`;
@@ -282,10 +328,10 @@ export function createCoordinateSystem(options = {}) {
         }
       }
 
-      path.setAttribute('d', d);
-      path.setAttribute('stroke', color);
-      path.setAttribute('stroke-width', width);
-      path.setAttribute('fill', 'none');
+      path.setAttribute("d", d);
+      path.setAttribute("stroke", color);
+      path.setAttribute("stroke-width", width);
+      path.setAttribute("fill", "none");
 
       contentGroup.appendChild(path);
       return path;
@@ -295,8 +341,8 @@ export function createCoordinateSystem(options = {}) {
      * Clear all content (points, lines, functions)
      */
     clear() {
-      contentGroup.innerHTML = '';
-    }
+      contentGroup.innerHTML = "";
+    },
   };
 }
 
@@ -311,7 +357,7 @@ export function renderGraphQuestion(container, config) {
     xMin = -6,
     xMax = 6,
     yMin = -6,
-    yMax = 6
+    yMax = 6,
   } = config;
 
   const graph = createCoordinateSystem({
@@ -320,29 +366,29 @@ export function renderGraphQuestion(container, config) {
     xMin,
     xMax,
     yMin,
-    yMax
+    yMax,
   });
 
   // Add points
-  points.forEach(p => {
+  points.forEach((p) => {
     graph.addPoint(p.x, p.y, {
-      label: p.label || '',
-      color: p.color || '#6366f1'
+      label: p.label || "",
+      color: p.color || "#6366f1",
     });
   });
 
   // Add lines
-  lines.forEach(l => {
+  lines.forEach((l) => {
     graph.addLine(l.x1, l.y1, l.x2, l.y2, {
-      color: l.color || '#6366f1',
-      dashed: l.dashed || false
+      color: l.color || "#6366f1",
+      dashed: l.dashed || false,
     });
   });
 
   // Add functions
-  functions.forEach(f => {
+  functions.forEach((f) => {
     graph.addFunction(f.fn, {
-      color: f.color || '#6366f1'
+      color: f.color || "#6366f1",
     });
   });
 

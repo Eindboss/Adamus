@@ -3,20 +3,26 @@
    Display quizzes for a subject
    =========================================== */
 
-import { loadJSON, extractSubject, extractQuizTitle, getSubjectAccent, getUrlParam } from './utils.js';
+import {
+  loadJSON,
+  extractSubject,
+  extractQuizTitle,
+  getSubjectAccent,
+  getUrlParam,
+} from "./utils.js";
 
 /**
  * Initialize subject page
  */
 async function init() {
-  const listEl = document.getElementById('list');
-  const badgeEl = document.getElementById('subjectBadge');
-  const titleEl = document.getElementById('subjectTitle');
+  const listEl = document.getElementById("list");
+  const badgeEl = document.getElementById("subjectBadge");
+  const titleEl = document.getElementById("subjectTitle");
 
   if (!listEl) return;
 
   // Get subject from URL
-  const subjectKey = (getUrlParam('subject') || '').toLowerCase();
+  const subjectKey = (getUrlParam("subject") || "").toLowerCase();
 
   if (!subjectKey) {
     listEl.innerHTML = `
@@ -37,11 +43,11 @@ async function init() {
     `;
 
     // Load subjects
-    const data = await loadJSON('data/subjects.json');
+    const data = await loadJSON("data/subjects.json");
     const subjects = data.subjects || data || [];
 
     // Filter quizzes for this subject
-    const quizzes = subjects.filter(meta => {
+    const quizzes = subjects.filter((meta) => {
       const subject = extractSubject(meta).toLowerCase();
       return subject === subjectKey || subject.startsWith(subjectKey);
     });
@@ -67,26 +73,28 @@ async function init() {
     }
 
     if (titleEl) {
-      titleEl.textContent = '';
+      titleEl.textContent = "";
     }
 
     // Update page title
     document.title = `${displayName} - Adamus`;
 
     // Render quiz cards
-    listEl.innerHTML = '';
+    listEl.innerHTML = "";
 
-    quizzes.forEach(meta => {
+    quizzes.forEach((meta) => {
       const title = extractQuizTitle(meta, displayName);
 
       // Quiz card
-      const card = document.createElement('a');
-      card.className = 'quiz-card';
+      const card = document.createElement("a");
+      card.className = "quiz-card";
       card.href = `quiz.html?subject=${encodeURIComponent(meta.id)}`;
-      card.style.setProperty('--accent', accent.color);
-      card.style.setProperty('--accent-light', accent.light);
+      card.style.setProperty("--accent", accent.color);
+      card.style.setProperty("--accent-light", accent.light);
 
-      const weekBadge = meta.week ? `<span class="week-badge">${meta.week}</span>` : '';
+      const weekBadge = meta.week
+        ? `<span class="week-badge">${meta.week}</span>`
+        : "";
 
       card.innerHTML = `
         <div class="icon-wrap">
@@ -97,7 +105,7 @@ async function init() {
         </div>
         <div class="quiz-info">
           <div class="quiz-title">${title}</div>
-          <div class="quiz-meta">${meta.schema === 'toets' ? 'Toets' : 'Quiz'}${weekBadge}</div>
+          <div class="quiz-meta">${meta.schema === "toets" ? "Toets" : "Quiz"}${weekBadge}</div>
         </div>
         <span class="arrow">→</span>
       `;
@@ -106,11 +114,11 @@ async function init() {
 
       // Flashcard link (only if quiz has content and flashcards are not hidden)
       if (meta.file && !meta.hideFlashcards) {
-        const flashcardCard = document.createElement('a');
-        flashcardCard.className = 'quiz-card quiz-card-secondary';
+        const flashcardCard = document.createElement("a");
+        flashcardCard.className = "quiz-card quiz-card-secondary";
         flashcardCard.href = `flashcards.html?subject=${encodeURIComponent(meta.id)}`;
-        flashcardCard.style.setProperty('--accent', accent.color);
-        flashcardCard.style.setProperty('--accent-light', accent.light);
+        flashcardCard.style.setProperty("--accent", accent.color);
+        flashcardCard.style.setProperty("--accent-light", accent.light);
 
         flashcardCard.innerHTML = `
           <div class="icon-wrap">
@@ -129,9 +137,8 @@ async function init() {
         listEl.appendChild(flashcardCard);
       }
     });
-
   } catch (error) {
-    console.error('Error loading quizzes:', error);
+    console.error("Error loading quizzes:", error);
     listEl.innerHTML = `
       <div class="alert alert-error">
         <span class="alert-icon">⚠️</span>
@@ -142,8 +149,8 @@ async function init() {
 }
 
 // Initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
 } else {
   init();
 }

@@ -49,10 +49,18 @@
   margin-right: 4px;
 }
 
-.dot-new { background: var(--muted); }
-.dot-learning { background: var(--brand); }
-.dot-reviewing { background: var(--brand-dark); }
-.dot-mastered { background: var(--success); }
+.dot-new {
+  background: var(--muted);
+}
+.dot-learning {
+  background: var(--brand);
+}
+.dot-reviewing {
+  background: var(--brand-dark);
+}
+.dot-mastered {
+  background: var(--success);
+}
 
 /* Flashcard Container */
 .flashcard-container {
@@ -136,14 +144,22 @@
 
 .flashcard-front {
   background:
-    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.01) 100%),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.01) 100%
+    ),
     #fffef9;
   border: none;
 }
 
 .flashcard-back {
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.05) 100%),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(0, 0, 0, 0.05) 100%
+    ),
     linear-gradient(135deg, var(--brand-deep) 0%, var(--flashcard-back) 100%);
   color: var(--header-text);
   transform: rotateY(180deg);

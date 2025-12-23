@@ -2,7 +2,7 @@
    Adamus - Timer Module
    =========================================== */
 
-import { $, updateTimerWarning } from './utils.js';
+import { $, updateTimerWarning } from "./utils.js";
 
 const DEFAULT_SECONDS = 90;
 
@@ -93,9 +93,9 @@ export function getIsPaused() {
  * Update timer UI elements
  */
 function updateTimerUI() {
-  const countdownEl = $('countdown');
-  const dotEl = $('timerDot');
-  const metaEl = $('timerMeta');
+  const countdownEl = $("countdown");
+  const dotEl = $("timerDot");
+  const metaEl = $("timerMeta");
 
   if (countdownEl) {
     countdownEl.textContent = String(remaining);
@@ -106,11 +106,11 @@ function updateTimerUI() {
 
   if (dotEl) {
     if (isPaused) {
-      dotEl.className = 'stat-dot paused';
+      dotEl.className = "stat-dot paused";
     } else if (remaining <= 10) {
-      dotEl.className = 'stat-dot danger';
+      dotEl.className = "stat-dot danger";
     } else {
-      dotEl.className = 'stat-dot';
+      dotEl.className = "stat-dot";
     }
   }
 }
@@ -121,5 +121,5 @@ function updateTimerUI() {
 export function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = seconds % 60;
-  return `${mins}:${secs.toString().padStart(2, '0')}`;
+  return `${mins}:${secs.toString().padStart(2, "0")}`;
 }

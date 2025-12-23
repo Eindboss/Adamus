@@ -3,36 +3,41 @@
    Loads topbar partial into page + theme toggle
    =========================================== */
 
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
   // Apply saved theme immediately to prevent flash
-  const savedSettings = localStorage.getItem('adamus-settings');
+  const savedSettings = localStorage.getItem("adamus-settings");
   if (savedSettings) {
     try {
       const { theme } = JSON.parse(savedSettings);
-      if (theme) document.documentElement.setAttribute('data-theme', theme);
+      if (theme) document.documentElement.setAttribute("data-theme", theme);
     } catch (e) {}
   } else {
     // Check system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    document.documentElement.setAttribute(
+      "data-theme",
+      prefersDark ? "dark" : "light",
+    );
   }
 
   async function loadHeader() {
-    const root = document.getElementById('topbar-root');
+    const root = document.getElementById("topbar-root");
     if (!root) return;
 
     try {
-      const response = await fetch('partials/topbar.html');
-      if (!response.ok) throw new Error('Failed to load header');
+      const response = await fetch("partials/topbar.html");
+      if (!response.ok) throw new Error("Failed to load header");
       const html = await response.text();
       root.innerHTML = html;
 
       // Setup theme toggle after header is loaded
       setupThemeToggle();
     } catch (error) {
-      console.warn('Could not load header:', error);
+      console.warn("Could not load header:", error);
       // Fallback inline header with theme toggle
       root.innerHTML = `
         <div class="topbar">
@@ -56,26 +61,29 @@
   }
 
   function setupThemeToggle() {
-    const toggle = document.querySelector('.theme-toggle');
+    const toggle = document.querySelector(".theme-toggle");
     if (!toggle) return;
 
-    toggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'light';
-      const newTheme = current === 'dark' ? 'light' : 'dark';
+    toggle.addEventListener("click", () => {
+      const current =
+        document.documentElement.getAttribute("data-theme") || "light";
+      const newTheme = current === "dark" ? "light" : "dark";
 
-      document.documentElement.setAttribute('data-theme', newTheme);
+      document.documentElement.setAttribute("data-theme", newTheme);
 
       // Save preference
       try {
-        const settings = JSON.parse(localStorage.getItem('adamus-settings') || '{}');
+        const settings = JSON.parse(
+          localStorage.getItem("adamus-settings") || "{}",
+        );
         settings.theme = newTheme;
-        localStorage.setItem('adamus-settings', JSON.stringify(settings));
+        localStorage.setItem("adamus-settings", JSON.stringify(settings));
       } catch (e) {}
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadHeader);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", loadHeader);
   } else {
     loadHeader();
   }

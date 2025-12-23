@@ -4,7 +4,7 @@
    Spaced repetition tracking per question
    =========================================== */
 
-const STORAGE_PREFIX = 'adamus:';
+const STORAGE_PREFIX = "adamus:";
 
 /* ===========================================
    Spaced Repetition System
@@ -28,7 +28,7 @@ export function getSpacedData(subjectId) {
     const raw = localStorage.getItem(key);
     return raw ? JSON.parse(raw) : { questions: {}, sessionCount: 0 };
   } catch (e) {
-    console.warn('Error reading spaced data:', e);
+    console.warn("Error reading spaced data:", e);
     return { questions: {}, sessionCount: 0 };
   }
 }
@@ -41,7 +41,7 @@ export function saveSpacedData(subjectId, data) {
   try {
     localStorage.setItem(key, JSON.stringify(data));
   } catch (e) {
-    console.warn('Error saving spaced data:', e);
+    console.warn("Error saving spaced data:", e);
   }
 }
 
@@ -99,14 +99,14 @@ export function getSpacedQuestions(subjectId, allQuestions) {
   // Box intervals: how many sessions between reviews
   const intervals = { 1: 1, 2: 2, 3: 4, 4: 8, 5: 16 };
 
-  const prioritized = allQuestions.map(q => {
+  const prioritized = allQuestions.map((q) => {
     const qData = data.questions[q.id] || { box: 1, lastSeen: -999 };
     const interval = intervals[qData.box] || 1;
     const sessionsSince = session - qData.lastSeen;
     const isDue = sessionsSince >= interval;
 
     // Priority: lower box = higher priority, due questions first
-    const priority = isDue ? (6 - qData.box) * 100 : (6 - qData.box);
+    const priority = isDue ? (6 - qData.box) * 100 : 6 - qData.box;
 
     return { ...q, _spacedData: qData, _priority: priority, _isDue: isDue };
   });
@@ -124,7 +124,7 @@ export function getMasteryStats(subjectId, totalQuestions) {
   const data = getSpacedData(subjectId);
   const boxes = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
 
-  Object.values(data.questions).forEach(q => {
+  Object.values(data.questions).forEach((q) => {
     boxes[q.box] = (boxes[q.box] || 0) + 1;
   });
 
@@ -138,7 +138,7 @@ export function getMasteryStats(subjectId, totalQuestions) {
     reviewing: boxes[3] + boxes[4],
     mastered: boxes[5],
     total: totalQuestions,
-    sessionCount: data.sessionCount
+    sessionCount: data.sessionCount,
   };
 }
 
@@ -158,7 +158,7 @@ export function readStats(subjectId) {
     const raw = localStorage.getItem(key);
     return raw ? JSON.parse(raw) : { rounds: 0, correct: 0, total: 0 };
   } catch (e) {
-    console.warn('Error reading stats:', e);
+    console.warn("Error reading stats:", e);
     return { rounds: 0, correct: 0, total: 0 };
   }
 }
@@ -171,7 +171,7 @@ export function writeStats(subjectId, stats) {
   try {
     localStorage.setItem(key, JSON.stringify(stats));
   } catch (e) {
-    console.warn('Error writing stats:', e);
+    console.warn("Error writing stats:", e);
   }
 }
 
@@ -206,7 +206,7 @@ export function clearStats(subjectId) {
   try {
     localStorage.removeItem(key);
   } catch (e) {
-    console.warn('Error clearing stats:', e);
+    console.warn("Error clearing stats:", e);
   }
 }
 
@@ -218,13 +218,13 @@ export function getAllStats() {
   try {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key && key.startsWith(STORAGE_PREFIX) && key.endsWith(':stats')) {
-        const subjectId = key.replace(STORAGE_PREFIX, '').replace(':stats', '');
+      if (key && key.startsWith(STORAGE_PREFIX) && key.endsWith(":stats")) {
+        const subjectId = key.replace(STORAGE_PREFIX, "").replace(":stats", "");
         stats[subjectId] = readStats(subjectId);
       }
     }
   } catch (e) {
-    console.warn('Error getting all stats:', e);
+    console.warn("Error getting all stats:", e);
   }
   return stats;
 }
@@ -240,7 +240,7 @@ export class SessionHistory {
   add(entry) {
     this.history.push({
       timestamp: Date.now(),
-      ...entry
+      ...entry,
     });
   }
 
@@ -253,15 +253,15 @@ export class SessionHistory {
   }
 
   getCorrectCount() {
-    return this.history.filter(h => h.correct).length;
+    return this.history.filter((h) => h.correct).length;
   }
 
   getWrongCount() {
-    return this.history.filter(h => !h.correct && !h.skipped).length;
+    return this.history.filter((h) => !h.correct && !h.skipped).length;
   }
 
   getSkippedCount() {
-    return this.history.filter(h => h.skipped).length;
+    return this.history.filter((h) => h.skipped).length;
   }
 
   getTotal() {

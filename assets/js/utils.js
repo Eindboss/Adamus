@@ -33,13 +33,13 @@ export function shuffle(array) {
  */
 export async function loadJSON(path) {
   try {
-    const response = await fetch(path, { cache: 'no-store' });
+    const response = await fetch(path, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`Failed to load ${path} (${response.status})`);
     }
     return await response.json();
   } catch (error) {
-    console.error('loadJSON error:', error);
+    console.error("loadJSON error:", error);
     throw error;
   }
 }
@@ -48,8 +48,11 @@ export async function loadJSON(path) {
  * Strip HTML tags from string
  */
 export function htmlToText(html) {
-  if (typeof html !== 'string') return '';
-  return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  if (typeof html !== "string") return "";
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 /**
@@ -70,14 +73,14 @@ export function getUrlParam(name) {
 export function setUrlParam(name, value) {
   const url = new URL(window.location);
   url.searchParams.set(name, value);
-  window.history.replaceState({}, '', url);
+  window.history.replaceState({}, "", url);
 }
 
 /**
  * Escape HTML entities
  */
 export function escapeHtml(text) {
-  const div = document.createElement('div');
+  const div = document.createElement("div");
   div.textContent = text;
   return div.innerHTML;
 }
@@ -102,7 +105,7 @@ export function debounce(func, wait) {
  */
 export function pad(num, size = 2) {
   let s = String(num);
-  while (s.length < size) s = '0' + s;
+  while (s.length < size) s = "0" + s;
   return s;
 }
 
@@ -124,10 +127,10 @@ export function arraysEqual(a, b) {
 export function getSubjectAccent(subject) {
   // Unified brand colors for all subjects
   return {
-    color: '#c9a227',
-    light: '#f5ecd0',
-    dark: '#a68618',
-    name: 'brand'
+    color: "#c9a227",
+    light: "#f5ecd0",
+    dark: "#a68618",
+    name: "brand",
   };
 }
 
@@ -135,9 +138,9 @@ export function getSubjectAccent(subject) {
  * Get icon SVG for subject (Egyptian/Classical theme)
  */
 export function getSubjectIcon(subject) {
-  const s = String(subject || '').toLowerCase();
+  const s = String(subject || "").toLowerCase();
 
-  if (s.startsWith('aardrijkskunde')) {
+  if (s.startsWith("aardrijkskunde")) {
     // Pyramid icon
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 2L2 20h20L12 2z"/>
@@ -146,7 +149,7 @@ export function getSubjectIcon(subject) {
     </svg>`;
   }
 
-  if (s.startsWith('geschiedenis')) {
+  if (s.startsWith("geschiedenis")) {
     // Greek/Roman temple with columns
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M3 21h18"/>
@@ -159,7 +162,7 @@ export function getSubjectIcon(subject) {
     </svg>`;
   }
 
-  if (s.startsWith('latijn')) {
+  if (s.startsWith("latijn")) {
     // Scroll/papyrus icon
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M5 3c0 1.5 1 2 2 2s2-.5 2-2"/>
@@ -173,7 +176,7 @@ export function getSubjectIcon(subject) {
     </svg>`;
   }
 
-  if (s.startsWith('biologie')) {
+  if (s.startsWith("biologie")) {
     // Lotus/papyrus plant (Egyptian symbol)
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 22v-10"/>
@@ -183,7 +186,7 @@ export function getSubjectIcon(subject) {
     </svg>`;
   }
 
-  if (s.startsWith('engels')) {
+  if (s.startsWith("engels")) {
     // Rosetta stone / tablet
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/>
@@ -193,7 +196,7 @@ export function getSubjectIcon(subject) {
     </svg>`;
   }
 
-  if (s.startsWith('nederlands')) {
+  if (s.startsWith("nederlands")) {
     // Quill/reed pen icon
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M20 2c-2 2-6 6-10 10l-2 6 6-2c4-4 8-8 10-10-1-2-3-3-4-4z"/>
@@ -202,7 +205,7 @@ export function getSubjectIcon(subject) {
     </svg>`;
   }
 
-  if (s.startsWith('wiskunde')) {
+  if (s.startsWith("wiskunde")) {
     // Eye of Horus / geometry (triangle with eye)
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
@@ -231,26 +234,28 @@ export function getSubjectIcon(subject) {
 export function extractSubject(meta) {
   if (meta.subject) return String(meta.subject).trim();
 
-  const raw = meta.label || meta.title || meta.id || '';
+  const raw = meta.label || meta.title || meta.id || "";
   const parts = String(raw).split(/\s[–-]\s/);
   if (parts.length >= 2) return parts[0].trim();
 
-  const id = String(meta.id || '').toLowerCase();
-  if (id.startsWith('aardrijkskunde')) return 'Aardrijkskunde';
-  if (id.startsWith('geschiedenis')) return 'Geschiedenis';
-  if (id.startsWith('latijn')) return 'Latijn';
+  const id = String(meta.id || "").toLowerCase();
+  if (id.startsWith("aardrijkskunde")) return "Aardrijkskunde";
+  if (id.startsWith("geschiedenis")) return "Geschiedenis";
+  if (id.startsWith("latijn")) return "Latijn";
 
-  return 'Vak';
+  return "Vak";
 }
 
 /**
  * Extract quiz title from meta (without subject prefix)
  */
 export function extractQuizTitle(meta, subject) {
-  const raw = meta.label || meta.title || meta.id || '';
-  return String(raw)
-    .replace(new RegExp(`^\\s*${subject}\\s*[–-]\\s*`, 'i'), '')
-    .trim() || raw;
+  const raw = meta.label || meta.title || meta.id || "";
+  return (
+    String(raw)
+      .replace(new RegExp(`^\\s*${subject}\\s*[–-]\\s*`, "i"), "")
+      .trim() || raw
+  );
 }
 
 /* ===========================================
@@ -263,7 +268,9 @@ export function extractQuizTitle(meta, subject) {
  * e.g., "café" → "cafe", "naïve" → "naive"
  */
 export function removeDiacritics(text) {
-  return String(text).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return String(text)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 }
 
 /**
@@ -296,12 +303,15 @@ export function normalizeAnswer(text, options = {}) {
 
   // Remove punctuation
   if (options.strip_punctuation) {
-    normalized = normalized.replace(/[.,!?;:'"()[\]{}<>\/\\@#$%^&*_+=|~`-]/g, '');
+    normalized = normalized.replace(
+      /[.,!?;:'"()[\]{}<>\/\\@#$%^&*_+=|~`-]/g,
+      "",
+    );
   }
 
   // Collapse whitespace
   if (options.collapse_whitespace) {
-    normalized = normalized.replace(/\s+/g, ' ').trim();
+    normalized = normalized.replace(/\s+/g, " ").trim();
   }
 
   return normalized;
@@ -317,14 +327,19 @@ export function normalizeAnswer(text, options = {}) {
  * @param {object} options - Normalization options
  * @returns {boolean} - True if input matches any accepted answer
  */
-export function matchesAcceptList(input, accepted = [], aliases = {}, options = {}) {
+export function matchesAcceptList(
+  input,
+  accepted = [],
+  aliases = {},
+  options = {},
+) {
   if (!input || !accepted.length) return false;
 
   // Default options for answer matching
   const opts = {
     lowercase: true,
     trim: true,
-    ...options
+    ...options,
   };
 
   const normalizedInput = normalizeAnswer(input, opts);
@@ -353,7 +368,11 @@ export function matchesAcceptList(input, accepted = [], aliases = {}, options = 
       for (const alias of aliasList) {
         if (normalizedInput === normalizeAnswer(alias, opts)) {
           // Check if this key is in accepted list
-          if (accepted.some(a => normalizeAnswer(a, opts) === normalizeAnswer(key, opts))) {
+          if (
+            accepted.some(
+              (a) => normalizeAnswer(a, opts) === normalizeAnswer(key, opts),
+            )
+          ) {
             return true;
           }
         }
@@ -397,27 +416,27 @@ export function countGroupedInputs(items) {
 // ===========================================
 
 const confettiColors = [
-  '#c9a227', // brand gold
-  '#1f4a38', // brand green
-  '#4ade80', // success green
-  '#f59e0b', // amber
-  '#ec4899', // pink
-  '#8b5cf6', // purple
+  "#c9a227", // brand gold
+  "#1f4a38", // brand green
+  "#4ade80", // success green
+  "#f59e0b", // amber
+  "#ec4899", // pink
+  "#8b5cf6", // purple
 ];
 
 /**
  * Show confetti celebration
  */
 export function showConfetti(duration = 3000) {
-  const container = document.createElement('div');
-  container.className = 'confetti-container';
+  const container = document.createElement("div");
+  container.className = "confetti-container";
   document.body.appendChild(container);
 
   // Create confetti pieces
   const pieceCount = 50;
   for (let i = 0; i < pieceCount; i++) {
-    const confetti = document.createElement('div');
-    confetti.className = 'confetti';
+    const confetti = document.createElement("div");
+    confetti.className = "confetti";
     confetti.style.cssText = `
       left: ${Math.random() * 100}%;
       background: ${confettiColors[Math.floor(Math.random() * confettiColors.length)]};
@@ -426,7 +445,7 @@ export function showConfetti(duration = 3000) {
       transform: rotate(${Math.random() * 360}deg);
       width: ${5 + Math.random() * 10}px;
       height: ${5 + Math.random() * 10}px;
-      border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+      border-radius: ${Math.random() > 0.5 ? "50%" : "0"};
     `;
     container.appendChild(confetti);
   }
@@ -450,16 +469,16 @@ export function updateTimerWarning(timerEl, metaEl, secondsLeft, totalSeconds) {
   const percentage = secondsLeft / totalSeconds;
 
   // Remove existing classes
-  timerEl.classList.remove('timer-warning', 'timer-critical');
-  if (metaEl) metaEl.classList.remove('timer-urgent');
+  timerEl.classList.remove("timer-warning", "timer-critical");
+  if (metaEl) metaEl.classList.remove("timer-urgent");
 
   if (percentage <= 0.1 || secondsLeft <= 10) {
     // Critical: less than 10% or 10 seconds
-    timerEl.classList.add('timer-critical');
-    if (metaEl) metaEl.classList.add('timer-urgent');
+    timerEl.classList.add("timer-critical");
+    if (metaEl) metaEl.classList.add("timer-urgent");
   } else if (percentage <= 0.25 || secondsLeft <= 30) {
     // Warning: less than 25% or 30 seconds
-    timerEl.classList.add('timer-warning');
+    timerEl.classList.add("timer-warning");
   }
 }
 
@@ -477,12 +496,12 @@ export function showError(container, message, onRetry = null) {
         <div style="font-size: 3rem; margin-bottom: var(--space-4);">⚠️</div>
         <h3 style="margin-bottom: var(--space-2);">Er ging iets mis</h3>
         <p style="color: var(--muted); margin-bottom: var(--space-4);">${message}</p>
-        ${onRetry ? '<button class="btn btn-primary error-retry">Opnieuw proberen</button>' : ''}
+        ${onRetry ? '<button class="btn btn-primary error-retry">Opnieuw proberen</button>' : ""}
       </div>
     </div>
   `;
 
-  if (typeof container === 'string') {
+  if (typeof container === "string") {
     container = document.querySelector(container);
   }
 
@@ -490,10 +509,10 @@ export function showError(container, message, onRetry = null) {
     container.innerHTML = errorHtml;
 
     if (onRetry) {
-      const retryBtn = container.querySelector('.error-retry');
+      const retryBtn = container.querySelector(".error-retry");
       if (retryBtn) {
-        retryBtn.addEventListener('click', () => {
-          container.innerHTML = '';
+        retryBtn.addEventListener("click", () => {
+          container.innerHTML = "";
           onRetry();
         });
       }
@@ -508,7 +527,7 @@ export function showError(container, message, onRetry = null) {
 /**
  * Show loading spinner
  */
-export function showLoading(container, message = 'Laden...') {
+export function showLoading(container, message = "Laden...") {
   const loadingHtml = `
     <div class="loading-container">
       <div class="loading-spinner"></div>
@@ -516,7 +535,7 @@ export function showLoading(container, message = 'Laden...') {
     </div>
   `;
 
-  if (typeof container === 'string') {
+  if (typeof container === "string") {
     container = document.querySelector(container);
   }
 
@@ -529,12 +548,12 @@ export function showLoading(container, message = 'Laden...') {
  * Show skeleton loading cards
  */
 export function showSkeletonCards(container, count = 3) {
-  let html = '';
+  let html = "";
   for (let i = 0; i < count; i++) {
     html += `<div class="skeleton-loading skeleton-card"></div>`;
   }
 
-  if (typeof container === 'string') {
+  if (typeof container === "string") {
     container = document.querySelector(container);
   }
 
@@ -547,21 +566,21 @@ export function showSkeletonCards(container, count = 3) {
 // Quiz Progress Saving
 // ===========================================
 
-const PROGRESS_KEY = 'adamus-quiz-progress';
+const PROGRESS_KEY = "adamus-quiz-progress";
 
 /**
  * Save quiz progress
  */
 export function saveQuizProgress(subjectId, data) {
   try {
-    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}");
     progress[subjectId] = {
       ...data,
-      savedAt: Date.now()
+      savedAt: Date.now(),
     };
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
   } catch (e) {
-    console.warn('Failed to save progress:', e);
+    console.warn("Failed to save progress:", e);
   }
 }
 
@@ -570,7 +589,7 @@ export function saveQuizProgress(subjectId, data) {
  */
 export function loadQuizProgress(subjectId) {
   try {
-    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}");
     const saved = progress[subjectId];
 
     // Check if progress is recent (within 24 hours)
@@ -579,7 +598,7 @@ export function loadQuizProgress(subjectId) {
     }
     return null;
   } catch (e) {
-    console.warn('Failed to load progress:', e);
+    console.warn("Failed to load progress:", e);
     return null;
   }
 }
@@ -589,11 +608,11 @@ export function loadQuizProgress(subjectId) {
  */
 export function clearQuizProgress(subjectId) {
   try {
-    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+    const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}");
     delete progress[subjectId];
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
   } catch (e) {
-    console.warn('Failed to clear progress:', e);
+    console.warn("Failed to clear progress:", e);
   }
 }
 

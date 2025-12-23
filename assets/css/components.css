@@ -181,7 +181,7 @@
 }
 
 .quiz-card-secondary .quiz-meta::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -258,7 +258,11 @@
 
 /* Success Button */
 .btn-success {
-  background: linear-gradient(135deg, var(--success) 0%, var(--success-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--success) 0%,
+    var(--success-dark) 100%
+  );
   color: white;
   border-color: transparent;
 }

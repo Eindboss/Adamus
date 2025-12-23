@@ -3,13 +3,18 @@
    Display subjects on homepage
    =========================================== */
 
-import { loadJSON, extractSubject, getSubjectAccent, getSubjectIcon } from './utils.js';
+import {
+  loadJSON,
+  extractSubject,
+  getSubjectAccent,
+  getSubjectIcon,
+} from "./utils.js";
 
 /**
  * Initialize homepage
  */
 async function init() {
-  const listEl = document.getElementById('list');
+  const listEl = document.getElementById("list");
   if (!listEl) return;
 
   try {
@@ -21,12 +26,12 @@ async function init() {
     `;
 
     // Load subjects
-    const data = await loadJSON('data/subjects.json');
+    const data = await loadJSON("data/subjects.json");
     const subjects = data.subjects || data || [];
 
     // Get unique subjects
     const subjectMap = new Map();
-    subjects.forEach(meta => {
+    subjects.forEach((meta) => {
       const subject = extractSubject(meta);
       if (!subjectMap.has(subject)) {
         subjectMap.set(subject, meta);
@@ -34,17 +39,17 @@ async function init() {
     });
 
     // Render subject cards
-    listEl.innerHTML = '';
+    listEl.innerHTML = "";
 
     subjectMap.forEach((meta, subject) => {
       const accent = getSubjectAccent(subject);
       const icon = getSubjectIcon(subject);
 
-      const card = document.createElement('a');
-      card.className = 'subject-card';
+      const card = document.createElement("a");
+      card.className = "subject-card";
       card.href = `subject.html?subject=${encodeURIComponent(subject.toLowerCase())}`;
-      card.style.setProperty('--accent', accent.color);
-      card.style.setProperty('--accent-dark', accent.dark);
+      card.style.setProperty("--accent", accent.color);
+      card.style.setProperty("--accent-dark", accent.dark);
 
       card.innerHTML = `
         <div class="icon-wrap">
@@ -55,9 +60,8 @@ async function init() {
 
       listEl.appendChild(card);
     });
-
   } catch (error) {
-    console.error('Error loading subjects:', error);
+    console.error("Error loading subjects:", error);
     listEl.innerHTML = `
       <div class="alert alert-error">
         <span class="alert-icon">⚠️</span>
@@ -68,8 +72,8 @@ async function init() {
 }
 
 // Initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
 } else {
   init();
 }
