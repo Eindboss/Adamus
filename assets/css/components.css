@@ -467,3 +467,111 @@
 .skeleton-row {
   height: 72px;
 }
+
+/* ===========================================
+   Mobile Responsive Components
+   =========================================== */
+@media (max-width: 640px) {
+  .subject-card {
+    padding: var(--space-5) var(--space-4);
+    min-height: 130px;
+  }
+
+  .subject-card .icon-wrap {
+    width: 56px;
+    height: 56px;
+  }
+
+  .subject-card .icon-wrap svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .subject-card .subject-name {
+    font-size: 1.125rem;
+  }
+
+  .quiz-card {
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .quiz-card .icon-wrap {
+    width: 42px;
+    height: 42px;
+  }
+
+  .quiz-card .icon-wrap svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .quiz-card .quiz-title {
+    font-size: 1rem;
+  }
+
+  .badge {
+    font-size: 0.6875rem;
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .subject-card {
+    padding: var(--space-4) var(--space-3);
+    min-height: 120px;
+  }
+
+  .subject-card .icon-wrap {
+    width: 48px;
+    height: 48px;
+  }
+
+  .subject-card .icon-wrap svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .subject-card .subject-name {
+    font-size: 1rem;
+  }
+
+  .quiz-card {
+    padding: var(--space-3);
+    gap: var(--space-3);
+  }
+
+  .quiz-card .quiz-title {
+    font-size: 0.9375rem;
+  }
+
+  .quiz-card .quiz-meta {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .subject-card {
+    min-height: 110px;
+    padding: var(--space-3);
+  }
+
+  .subject-card .icon-wrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .subject-card .subject-name {
+    font-size: 0.9375rem;
+  }
+
+  .btn {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.875rem;
+  }
+
+  .btn-lg {
+    min-height: 48px;
+    padding: var(--space-3) var(--space-4);
+  }
+}

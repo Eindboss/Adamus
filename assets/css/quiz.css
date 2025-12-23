@@ -413,6 +413,77 @@ textarea.open-input {
   .quiz-controls {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .question-card {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .question-title {
+    font-size: 1rem;
+  }
+
+  .option {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .option-marker {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .option-text {
+    font-size: 0.9375rem;
+  }
+
+  .quiz-meta {
+    flex-wrap: wrap;
+    font-size: 0.8125rem;
+  }
+
+  .feedback {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-controls {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .quiz-controls .btn {
+    font-size: 0.875rem;
+  }
+
+  .question-card {
+    padding: var(--space-3);
+  }
+
+  .summary-score {
+    gap: var(--space-4);
+  }
+
+  .summary-stat .value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .option {
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .option-marker {
+    width: 22px;
+    height: 22px;
+  }
+
+  .quiz-meta {
+    font-size: 0.75rem;
+  }
 }
 
 /* ===========================================
