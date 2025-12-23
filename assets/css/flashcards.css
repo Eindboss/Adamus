@@ -111,7 +111,7 @@
 }
 
 .flashcard-back {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark, #4f46e5));
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
   color: white;
   transform: rotateY(180deg);
 }
