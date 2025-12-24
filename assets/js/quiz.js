@@ -600,6 +600,7 @@ function renderMC(container, q) {
 
   container.innerHTML = `
     <div class="question-title">${q.q}</div>
+    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ""}
     <div class="options-list" role="radiogroup">
       ${optionsHtml}
     </div>
