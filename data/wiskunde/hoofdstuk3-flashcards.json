@@ -3,216 +3,375 @@
   "title": "Wiskunde H3 – Flashcards",
   "subject": "Wiskunde",
   "schema": "flashcards",
+  "module": "H3 Grafieken en formules (deel 3.1-3.5 + Onderzoek groeiende figuren)",
   "questions": [
     {
-      "id": "fc3-01",
+      "id": "fc-01",
       "type": "open",
-      "q": "Wat is de oorsprong O?",
-      "accept": ["snijpunt van de assen", "(0,0)", "het punt (0, 0)"],
-      "explanation": "De oorsprong O is het snijpunt van de x-as en y-as, met coördinaten (0, 0)."
+      "q": "Wat is een assenstelsel?",
+      "accept": [
+        "twee loodrechte assen",
+        "twee assen waarmee je punten kunt tekenen",
+        "x-as en y-as",
+        "horizontale en verticale as"
+      ],
+      "explanation": "Twee loodrechte assen (x-as horizontaal, y-as verticaal) waarmee je punten kunt tekenen en aflezen.",
+      "tags": ["3.1", "begrip"]
     },
     {
-      "id": "fc3-02",
+      "id": "fc-02",
       "type": "open",
-      "q": "Hoe heet de horizontale as?",
-      "accept": ["x-as", "de x-as"],
-      "explanation": "De horizontale as heet de x-as."
+      "q": "Wat is de x-as?",
+      "accept": [
+        "horizontale as",
+        "de horizontale as",
+        "de horizontale as in een assenstelsel"
+      ],
+      "explanation": "De horizontale as in een assenstelsel.",
+      "tags": ["3.1", "begrip"]
     },
     {
-      "id": "fc3-03",
+      "id": "fc-03",
       "type": "open",
-      "q": "Hoe heet de verticale as?",
-      "accept": ["y-as", "de y-as"],
-      "explanation": "De verticale as heet de y-as."
+      "q": "Wat is de y-as?",
+      "accept": [
+        "verticale as",
+        "de verticale as",
+        "de verticale as in een assenstelsel"
+      ],
+      "explanation": "De verticale as in een assenstelsel.",
+      "tags": ["3.1", "begrip"]
     },
     {
-      "id": "fc3-04",
+      "id": "fc-04",
       "type": "open",
-      "q": "Wat zijn roosterpunten?",
-      "accept": ["punten met hele getallen", "punten waarvan beide coördinaten hele getallen zijn"],
-      "explanation": "Roosterpunten zijn punten waarvan beide coördinaten hele getallen zijn."
+      "q": "Wat is de oorsprong (O)?",
+      "accept": [
+        "snijpunt van de assen",
+        "snijpunt van x-as en y-as",
+        "(0, 0)",
+        "(0,0)",
+        "het punt (0, 0)"
+      ],
+      "explanation": "Het snijpunt van de x-as en de y-as. De coördinaten zijn (0, 0).",
+      "tags": ["3.1", "begrip"]
     },
     {
-      "id": "fc3-05",
+      "id": "fc-05",
       "type": "open",
-      "q": "Punten op de x-as hebben altijd y = ?",
-      "accept": ["0", "nul"],
-      "explanation": "Punten op de x-as hebben altijd y = 0."
+      "q": "Wat is een roosterpunt?",
+      "accept": [
+        "punt op een kruising van roosterlijnen",
+        "punt met hele getallen",
+        "punt waarvan de coördinaten hele getallen zijn"
+      ],
+      "explanation": "Een punt precies op een kruising van roosterlijnen (hele vakjes). De coördinaten zijn dan meestal gehele getallen.",
+      "tags": ["3.1", "begrip"]
     },
     {
-      "id": "fc3-06",
+      "id": "fc-06",
       "type": "open",
-      "q": "Punten op de y-as hebben altijd x = ?",
-      "accept": ["0", "nul"],
-      "explanation": "Punten op de y-as hebben altijd x = 0."
+      "q": "Wat betekenen coördinaten (x, y)?",
+      "accept": [
+        "eerst x dan y",
+        "eerst horizontaal dan verticaal",
+        "x is horizontaal, y is verticaal"
+      ],
+      "explanation": "Eerst de x-coördinaat: hoeveel naar rechts (positief) of links (negatief). Daarna de y-coördinaat: hoeveel omhoog (positief) of omlaag (negatief).",
+      "tags": ["3.1", "vaardigheid"]
     },
     {
-      "id": "fc3-07",
+      "id": "fc-07",
       "type": "open",
-      "q": "Wat is de x-coördinaat van punt (5, 3)?",
-      "accept": ["5"],
-      "explanation": "De x-coördinaat is het eerste getal: 5."
+      "q": "Wat is de x-coördinaat van een punt?",
+      "accept": [
+        "eerste getal",
+        "het eerste getal",
+        "hoeveel naar rechts of links"
+      ],
+      "explanation": "Het eerste getal van (x, y). Het geeft aan hoe ver het punt horizontaal van de oorsprong ligt.",
+      "tags": ["3.1", "begrip"]
     },
     {
-      "id": "fc3-08",
+      "id": "fc-08",
       "type": "open",
-      "q": "Wat is de y-coördinaat van punt (5, 3)?",
-      "accept": ["3"],
-      "explanation": "De y-coördinaat is het tweede getal: 3."
+      "q": "Wat is de y-coördinaat van een punt?",
+      "accept": [
+        "tweede getal",
+        "het tweede getal",
+        "hoeveel omhoog of omlaag"
+      ],
+      "explanation": "Het tweede getal van (x, y). Het geeft aan hoe ver het punt verticaal van de oorsprong ligt.",
+      "tags": ["3.1", "begrip"]
     },
     {
-      "id": "fc3-09",
+      "id": "fc-09",
       "type": "open",
-      "q": "Punten met dezelfde y-coördinaat liggen op een ... lijn.",
-      "accept": ["horizontale", "horizontale lijn"],
-      "explanation": "Punten met dezelfde y-coördinaat liggen op een horizontale lijn."
+      "q": "Wanneer ligt een punt op de x-as?",
+      "accept": [
+        "als y = 0",
+        "als de y-coördinaat 0 is",
+        "y is 0",
+        "y-coördinaat is 0"
+      ],
+      "explanation": "Als de y-coördinaat 0 is (x, 0).",
+      "tags": ["3.1", "eigenschap"]
     },
     {
-      "id": "fc3-10",
+      "id": "fc-10",
       "type": "open",
-      "q": "Punten met dezelfde x-coördinaat liggen op een ... lijn.",
-      "accept": ["verticale", "verticale lijn"],
-      "explanation": "Punten met dezelfde x-coördinaat liggen op een verticale lijn."
+      "q": "Wanneer ligt een punt op de y-as?",
+      "accept": [
+        "als x = 0",
+        "als de x-coördinaat 0 is",
+        "x is 0",
+        "x-coördinaat is 0"
+      ],
+      "explanation": "Als de x-coördinaat 0 is (0, y).",
+      "tags": ["3.1", "eigenschap"]
     },
     {
-      "id": "fc3-11",
+      "id": "fc-11",
       "type": "open",
-      "q": "Wat betekent een horizontale lijn in een afstand-tijd grafiek?",
-      "accept": ["stilstand", "je staat stil", "geen beweging"],
-      "explanation": "Een horizontale lijn betekent dat de afstand niet verandert: je staat stil."
+      "q": "Wat lees je af op de horizontale as van een grafiek?",
+      "accept": [
+        "invoer",
+        "de invoer",
+        "x-waarde",
+        "tijd",
+        "afstand",
+        "aantal"
+      ],
+      "explanation": "De 'invoer' (bijv. tijd, afstand, aantal). Lees eerst de x-waarde en dan de y-waarde.",
+      "tags": ["3.2", "vaardigheid"]
     },
     {
-      "id": "fc3-12",
+      "id": "fc-12",
       "type": "open",
-      "q": "Hoe steiler de lijn in een grafiek, hoe ... de verandering.",
-      "accept": ["sneller", "groter"],
-      "explanation": "Hoe steiler de lijn, hoe sneller de verandering."
+      "q": "Wat lees je af op de verticale as van een grafiek?",
+      "accept": [
+        "uitvoer",
+        "de uitvoer",
+        "y-waarde",
+        "temperatuur",
+        "hoogte",
+        "kosten"
+      ],
+      "explanation": "De 'uitvoer' (bijv. temperatuur, hoogte, kosten).",
+      "tags": ["3.2", "vaardigheid"]
     },
     {
-      "id": "fc3-13",
+      "id": "fc-13",
       "type": "open",
-      "q": "Wat is een woordformule?",
-      "accept": ["formule in woorden", "een formule uitgeschreven in woorden"],
-      "explanation": "Een woordformule is een formule die met woorden is opgeschreven, zoals: kosten = 5 + 2 × aantal."
+      "q": "Wat betekent een stijgend stuk in een grafiek?",
+      "accept": [
+        "waarde neemt toe",
+        "grafiek gaat omhoog",
+        "de waarde wordt groter"
+      ],
+      "explanation": "Als je naar rechts gaat, gaat de grafiek omhoog: de waarde neemt toe.",
+      "tags": ["3.2", "begrip"]
     },
     {
-      "id": "fc3-14",
+      "id": "fc-14",
       "type": "open",
-      "q": "In y = 25 + 10x, wat is de startwaarde?",
-      "accept": ["25"],
-      "explanation": "De startwaarde is 25: de waarde van y als x = 0."
+      "q": "Wat betekent een dalend stuk in een grafiek?",
+      "accept": [
+        "waarde neemt af",
+        "grafiek gaat omlaag",
+        "de waarde wordt kleiner"
+      ],
+      "explanation": "Als je naar rechts gaat, gaat de grafiek omlaag: de waarde neemt af.",
+      "tags": ["3.2", "begrip"]
     },
     {
-      "id": "fc3-15",
+      "id": "fc-15",
       "type": "open",
-      "q": "In y = 25 + 10x, hoeveel neemt y toe per stap?",
-      "accept": ["10"],
-      "explanation": "Per stap (als x met 1 toeneemt) neemt y toe met 10."
+      "q": "Wat betekent een constant stuk in een grafiek?",
+      "accept": [
+        "waarde blijft gelijk",
+        "grafiek loopt horizontaal",
+        "de waarde verandert niet"
+      ],
+      "explanation": "De grafiek loopt horizontaal: de waarde blijft gelijk.",
+      "tags": ["3.2", "begrip"]
     },
     {
-      "id": "fc3-16",
-      "type": "open",
-      "q": "Wat reken je EERST uit: 3 + 4 × 2?",
-      "accept": ["4 × 2", "vermenigvuldigen", "de vermenigvuldiging"],
-      "explanation": "Vermenigvuldigen gaat vóór optellen. Dus: 4 × 2 = 8, dan 3 + 8 = 11."
-    },
-    {
-      "id": "fc3-17",
-      "type": "open",
-      "q": "Bereken: 5 + 3 × 4",
-      "accept": ["17"],
-      "explanation": "Eerst vermenigvuldigen: 3 × 4 = 12. Dan optellen: 5 + 12 = 17."
-    },
-    {
-      "id": "fc3-18",
-      "type": "open",
-      "q": "Bereken: 2 × (3 + 5)",
-      "accept": ["16"],
-      "explanation": "Eerst haakjes: 3 + 5 = 8. Dan vermenigvuldigen: 2 × 8 = 16."
-    },
-    {
-      "id": "fc3-19",
-      "type": "open",
-      "q": "Bereken y als y = 3x + 2 en x = 4",
-      "accept": ["14"],
-      "explanation": "y = 3 × 4 + 2 = 12 + 2 = 14"
-    },
-    {
-      "id": "fc3-20",
-      "type": "open",
-      "q": "Bereken y als y = 10 − 2x en x = 3",
-      "accept": ["4"],
-      "explanation": "y = 10 − 2 × 3 = 10 − 6 = 4"
-    },
-    {
-      "id": "fc3-21",
-      "type": "open",
-      "q": "Bij y = a + bx, wat is de startwaarde?",
-      "accept": ["a"],
-      "explanation": "De startwaarde is a: de waarde van y als x = 0."
-    },
-    {
-      "id": "fc3-22",
-      "type": "open",
-      "q": "Bij y = a + bx, wat is de toename per stap?",
-      "accept": ["b"],
-      "explanation": "b geeft aan hoeveel y toeneemt als x met 1 toeneemt."
-    },
-    {
-      "id": "fc3-23",
-      "type": "open",
-      "q": "Taxi: kosten = 3 + 2 × km. Wat kost 5 km?",
-      "accept": ["13", "€13"],
-      "explanation": "kosten = 3 + 2 × 5 = 3 + 10 = €13"
-    },
-    {
-      "id": "fc3-24",
-      "type": "open",
-      "q": "Kaars: lengte = 20 − 2 × uur. Hoe lang na 3 uur?",
-      "accept": ["14", "14 cm"],
-      "explanation": "lengte = 20 − 2 × 3 = 20 − 6 = 14 cm"
-    },
-    {
-      "id": "fc3-25",
-      "type": "open",
-      "q": "Als een formule een minteken heeft (y = 20 − 3x), dan ... de grafiek.",
-      "accept": ["daalt", "gaat omlaag"],
-      "explanation": "Een minteken voor de variabele betekent dat de waarde daalt als x groter wordt."
-    },
-    {
-      "id": "fc3-26",
-      "type": "open",
-      "q": "Hoe teken je een grafiek bij een formule?",
-      "accept": ["tabel maken", "eerst een tabel maken", "maak een tabel met punten"],
-      "explanation": "Je maakt eerst een tabel met x- en y-waarden, tekent de punten, en verbindt ze."
-    },
-    {
-      "id": "fc3-27",
+      "id": "fc-16",
       "type": "open",
       "q": "Wat is een globale grafiek?",
-      "accept": ["grafiek zonder exacte getallen", "grafiek die het verloop laat zien"],
-      "explanation": "Een globale grafiek laat alleen het algemene verloop zien, zonder exacte waarden."
+      "accept": [
+        "schets zonder precieze getallen",
+        "grafiek die het verloop laat zien",
+        "schets van stijgend dalend constant"
+      ],
+      "explanation": "Een schets van het verloop (stijgend/dalend/constant) zonder precieze getallen op de assen.",
+      "tags": ["3.2", "begrip"]
     },
     {
-      "id": "fc3-28",
+      "id": "fc-17",
       "type": "open",
-      "q": "Bereken: 8 + 2 × 6 − 4",
-      "accept": ["16"],
-      "explanation": "Eerst vermenigvuldigen: 2 × 6 = 12. Dan: 8 + 12 − 4 = 16."
+      "q": "Hoe maak je een grafiek uit een tabel?",
+      "accept": [
+        "punten uitzetten en verbinden",
+        "assen kiezen, schaal kiezen, punten tekenen, verbinden",
+        "tabel omzetten naar punten"
+      ],
+      "explanation": "1) Kies assen en zet de variabele van de onderste rij op de x-as. 2) Kies een schaal. 3) Zet de punten uit de tabel in het rooster. 4) Verbind de punten netjes.",
+      "tags": ["3.2", "3.5", "stappenplan"]
     },
     {
-      "id": "fc3-29",
+      "id": "fc-18",
       "type": "open",
-      "q": "Bereken: 3 × (5 + 2) − 4",
-      "accept": ["17"],
-      "explanation": "Eerst haakjes: 5 + 2 = 7. Dan: 3 × 7 = 21. Tenslotte: 21 − 4 = 17."
+      "q": "Wat is een woordformule?",
+      "accept": [
+        "formule in woorden",
+        "een formule opgeschreven in woorden",
+        "formule zonder letters"
+      ],
+      "explanation": "Een formule die je in woorden opschrijft, bijvoorbeeld: prijs = startbedrag + bedrag per km · aantal km.",
+      "tags": ["3.3", "begrip"]
     },
     {
-      "id": "fc3-30",
+      "id": "fc-19",
       "type": "open",
-      "q": "Wat is de startwaarde bij y = 8 + 5x?",
-      "accept": ["8"],
-      "explanation": "De startwaarde is het getal zonder x: 8. Dit is de y-waarde bij x = 0."
+      "q": "Wat is een formule met letters?",
+      "accept": [
+        "formule met variabelen",
+        "formule waarin letters voor variabelen staan",
+        "bijvoorbeeld K = 5 + 2t"
+      ],
+      "explanation": "Een formule waarin letters staan voor variabelen, bijvoorbeeld K = 5 + 2·t.",
+      "tags": ["3.4", "begrip"]
+    },
+    {
+      "id": "fc-20",
+      "type": "open",
+      "q": "Wat betekent 'invullen' in een formule?",
+      "accept": [
+        "letters vervangen door getallen",
+        "getallen invullen voor letters",
+        "waarden substitueren"
+      ],
+      "explanation": "Je vervangt de letter(s) door de gegeven getallen en rekent uit.",
+      "tags": ["3.4", "vaardigheid"]
+    },
+    {
+      "id": "fc-21",
+      "type": "open",
+      "q": "Wat is een variabele?",
+      "accept": [
+        "letter die kan veranderen",
+        "letter die een getal voorstelt",
+        "veranderlijke"
+      ],
+      "explanation": "Een letter die kan veranderen en een getal voorstelt (bijv. t voor tijd).",
+      "tags": ["3.4", "begrip"]
+    },
+    {
+      "id": "fc-22",
+      "type": "open",
+      "q": "Wat is de startwaarde in een formule zoals K = 5 + 2·t?",
+      "accept": ["5", "de 5"],
+      "explanation": "De waarde als t = 0. Hier is dat 5.",
+      "tags": ["3.4", "eigenschap"]
+    },
+    {
+      "id": "fc-23",
+      "type": "open",
+      "q": "Wat betekent de 2 in K = 5 + 2·t?",
+      "accept": [
+        "toename per stap",
+        "K neemt toe met 2 per stap",
+        "per 1 stap in t neemt K toe met 2"
+      ],
+      "explanation": "Per 1 stap in t neemt K toe met 2.",
+      "tags": ["3.4", "eigenschap"]
+    },
+    {
+      "id": "fc-24",
+      "type": "open",
+      "q": "Hoe teken je een grafiek bij een formule?",
+      "accept": [
+        "tabel maken en punten tekenen",
+        "x-waarden kiezen, y berekenen, punten tekenen",
+        "eerst een tabel maken"
+      ],
+      "explanation": "Maak een tabel (kies een paar x-waarden), bereken de bijbehorende y-waarden, zet de punten in het rooster en trek de grafiek.",
+      "tags": ["3.5", "stappenplan"]
+    },
+    {
+      "id": "fc-25",
+      "type": "open",
+      "q": "Waarom zet je labels (naam + eenheid) bij assen?",
+      "accept": [
+        "zodat je weet wat de grafiek voorstelt",
+        "duidelijk maken wat je afleest",
+        "om de eenheid aan te geven"
+      ],
+      "explanation": "Zodat je weet wat de grafiek voorstelt en in welke eenheid je afleest (bijv. tijd in min, hoogte in cm).",
+      "tags": ["3.2", "vaardigheid"]
+    },
+    {
+      "id": "fc-26",
+      "type": "open",
+      "q": "Wat is een schaal op een as?",
+      "accept": [
+        "hoeveel een vakje voorstelt",
+        "eenheden per vakje",
+        "stapgrootte op de as"
+      ],
+      "explanation": "Hoeveel eenheden één vakje voorstelt. De schaal moet gelijk blijven op dezelfde as.",
+      "tags": ["3.2", "begrip"]
+    },
+    {
+      "id": "fc-27",
+      "type": "open",
+      "q": "Wat is het snijpunt met de y-as bij een grafiek van een formule?",
+      "accept": [
+        "startwaarde",
+        "de startwaarde",
+        "waarde bij x = 0",
+        "y-waarde als x nul is"
+      ],
+      "explanation": "Het punt waar de grafiek de y-as raakt. Dat is de waarde bij x = 0 (de startwaarde).",
+      "tags": ["3.5", "eigenschap"]
+    },
+    {
+      "id": "fc-28",
+      "type": "open",
+      "q": "Wat doe je bij 'groeiende figuren'?",
+      "accept": [
+        "regelmaat zoeken en formule maken",
+        "patroon zoeken",
+        "kijken hoe het groeit per stap"
+      ],
+      "explanation": "Je zoekt een regelmaat: hoe groeit het aantal blokjes/lucifers/vierkantjes per stap en maakt daar een formule bij.",
+      "tags": ["onderzoek", "begrip"]
+    },
+    {
+      "id": "fc-29",
+      "type": "open",
+      "q": "Wat betekent 'stapnummer' (n)?",
+      "accept": [
+        "nummer van de figuur",
+        "welke figuur in de rij",
+        "1e figuur is n=1, 2e is n=2"
+      ],
+      "explanation": "Het nummer van de figuur/stap in de rij (1e figuur: n=1, 2e figuur: n=2, ...).",
+      "tags": ["onderzoek", "begrip"]
+    },
+    {
+      "id": "fc-30",
+      "type": "open",
+      "q": "Hoe controleer je of je formule klopt?",
+      "accept": [
+        "stapnummers invullen en vergelijken",
+        "n=1,2,3 invullen en kijken",
+        "testen met bekende waarden"
+      ],
+      "explanation": "Vul een paar stapnummers in (bijv. n=1,2,3) en kijk of je dezelfde aantallen krijgt als in de figuren/tabel.",
+      "tags": ["onderzoek", "vaardigheid"]
     }
   ]
 }

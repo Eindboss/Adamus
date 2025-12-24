@@ -17,6 +17,7 @@
       "title": "Aardrijkskunde – Paragraaf 1: Waar wil je wonen?",
       "file": "data/aardrijkskunde/p1.json",
       "schema": "quiz",
+      "hideFlashcards": true,
       "week": "1e toetsweek"
     },
     {
@@ -26,6 +27,7 @@
       "title": "Aardrijkskunde – Paragraaf 2: Verstedelijking in Nederland",
       "file": "data/aardrijkskunde/p2.json",
       "schema": "quiz",
+      "hideFlashcards": true,
       "week": "1e toetsweek"
     },
     {
@@ -35,6 +37,7 @@
       "title": "Aardrijkskunde – Paragraaf 3: De opbouw van de Nederlandse stad",
       "file": "data/aardrijkskunde/p3.json",
       "schema": "quiz",
+      "hideFlashcards": true,
       "week": "1e toetsweek"
     },
     {
@@ -44,6 +47,7 @@
       "title": "Aardrijkskunde – Paragraaf 4: Steden en hun omgeving",
       "file": "data/aardrijkskunde/p4.json",
       "schema": "quiz",
+      "hideFlashcards": true,
       "week": "1e toetsweek"
     },
     {
@@ -53,6 +57,7 @@
       "title": "Aardrijkskunde – Paragraaf 7: Plaatsbepaling op aarde",
       "file": "data/aardrijkskunde/p7.json",
       "schema": "quiz",
+      "hideFlashcards": true,
       "week": "1e toetsweek"
     },
     {
@@ -62,6 +67,7 @@
       "title": "Aardrijkskunde – Paragraaf 8: Tijdzones en de draaiing van de aarde",
       "file": "data/aardrijkskunde/p8.json",
       "schema": "quiz",
+      "hideFlashcards": true,
       "week": "1e toetsweek"
     },
     {
@@ -81,6 +87,7 @@
       "title": "Geschiedenis – Tijdvak 1: Jagers & Boeren",
       "file": "data/geschiedenis/tijdvak1.json",
       "schema": "quiz",
+      "hideFlashcards": true,
       "week": "1e toetsweek"
     }
   ]
