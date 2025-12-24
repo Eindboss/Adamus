@@ -50,6 +50,7 @@ import {
 
 // Constants
 const QUESTION_SECONDS = 90;
+const QUESTION_SECONDS_MULTIPART = 120;
 
 // State
 let state = {
@@ -450,8 +451,11 @@ function renderQuestion() {
   state.partialScore = 0;
   state.maxPartialScore = 0;
 
-  // Reset timer
-  resetTimer(QUESTION_SECONDS);
+  // Reset timer - more time for multi-part questions
+  const isMultiPart = q.type === "wiskunde_multi_part" || q.type === "table_parse" ||
+                      q.type === "grouped_short_text" || q.type === "grouped_select" ||
+                      q.type === "ratio_table" || q.type === "ordering";
+  resetTimer(isMultiPart ? QUESTION_SECONDS_MULTIPART : QUESTION_SECONDS);
   startTimer();
 
   // Render based on type
@@ -3029,15 +3033,19 @@ function handleTimeUp() {
   state.answered = true;
   state.phase = "feedback";
 
+  // Get the correct answer to show
+  const correctAnswer = getCorrectAnswer(q);
+
   state.history.add({
-    question: q.q || htmlToText(q.prompt_html) || "Vraag",
+    question: q.q || q.title || htmlToText(q.prompt_html) || "Vraag",
     type: q.type,
     userAnswer: "(tijd op)",
+    correctAnswer: correctAnswer,
     correct: false,
     timedOut: true,
   });
 
-  // Show feedback
+  // Show feedback with the correct answer
   const feedbackEl = $("feedback");
   if (feedbackEl) {
     feedbackEl.className = "feedback feedback-error";
@@ -3046,11 +3054,43 @@ function handleTimeUp() {
         <span>⏱️</span>
         <span>Tijd voorbij!</span>
       </div>
+      ${correctAnswer ? `<div class="feedback-body">Het juiste antwoord was: <strong>${correctAnswer}</strong></div>` : ""}
     `;
     feedbackEl.style.display = "block";
   }
 
   updateControls();
+}
+
+/**
+ * Get the correct answer for a question (for time-up display)
+ */
+function getCorrectAnswer(q) {
+  switch (q.type) {
+    case "mc":
+      return q.answers?.[q.correctIndex] || "";
+    case "open":
+      return q.accept?.[0] || "";
+    case "short_text":
+      return q.answer?.accepted?.[0] || "";
+    case "wiskunde_multi_part":
+      // Show first part's answer as example
+      const firstPart = q.parts?.[0];
+      if (firstPart) {
+        const ans = firstPart.answer;
+        if (firstPart.type === "text") return `a) ${ans?.value || ""}`;
+        if (firstPart.type === "mcq") return `a) ${firstPart.options?.[ans?.correct_index] || ""}`;
+      }
+      return "";
+    case "ratio_table":
+      const vals = Object.values(q.answer?.values || {});
+      return vals.length > 0 ? vals.join(", ") : "";
+    case "ordering":
+      const order = q.answer?.order || [];
+      return order.map((idx, pos) => `${pos + 1}. ${q.items?.[idx] || ""}`).join(", ");
+    default:
+      return "";
+  }
 }
 
 /**
