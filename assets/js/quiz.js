@@ -312,6 +312,7 @@ function normalizeQuestion(raw, preferMC = false) {
     return {
       id: raw.id,
       type: "mc",
+      quiz_group: raw.quiz_group,
       q: raw.q || raw.question || "",
       answers,
       correctIndex,
@@ -325,6 +326,7 @@ function normalizeQuestion(raw, preferMC = false) {
   return {
     id: raw.id,
     type: "open",
+    quiz_group: raw.quiz_group,
     q: raw.q || raw.question || raw.vraag || "",
     accept: raw.accept || [],
     caseSensitive: !!raw.caseSensitive,
