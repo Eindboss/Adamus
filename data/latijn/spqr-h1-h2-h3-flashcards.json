@@ -1,1326 +1,1737 @@
 {
-  "title": "Latijn SPQR - Hoofdstuk 1, 2 & 3 Woordjes",
-  "description": "Alle vetgedrukte woorden uit Flumen, Lupa en Regnum",
-  "flashcards": [
+  "id": "latijn-spqr-h1-h2-h3-flashcards",
+  "title": "Latijn SPQR H1-H3 – Woordjes",
+  "subject": "Latijn",
+  "schema": "flashcards",
+  "module": "SPQR Hoofdstuk 1, 2 & 3 (Flumen, Lupa, Regnum)",
+  "questions": [
     {
       "id": "fl-01",
-      "front": "rivier",
-      "back": "flumen, flumina",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: rivier",
+      "accept": ["flumen", "flumina"],
+      "explanation": "flumen, flumina = rivier",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-02",
-      "front": "flumen, flumina",
-      "back": "rivier",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: flumen",
+      "accept": ["rivier"],
+      "explanation": "flumen, flumina = rivier",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-03",
-      "front": "koning",
-      "back": "rex, regis",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: koning",
+      "accept": ["rex", "regis"],
+      "explanation": "rex, regis = koning",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-04",
-      "front": "rex, regis",
-      "back": "koning",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: rex",
+      "accept": ["koning"],
+      "explanation": "rex, regis = koning",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-05",
-      "front": "slaaf",
-      "back": "servus",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: slaaf",
+      "accept": ["servus"],
+      "explanation": "servus = slaaf",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-06",
-      "front": "servus",
-      "back": "slaaf",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: servus",
+      "accept": ["slaaf"],
+      "explanation": "servus = slaaf",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-07",
-      "front": "roepen",
-      "back": "vocare",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: roepen",
+      "accept": ["vocare"],
+      "explanation": "vocare = roepen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-08",
-      "front": "vocare",
-      "back": "roepen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: vocare",
+      "accept": ["roepen"],
+      "explanation": "vocare = roepen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-09",
-      "front": "komen",
-      "back": "venire",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: komen",
+      "accept": ["venire"],
+      "explanation": "venire = komen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-10",
-      "front": "venire",
-      "back": "komen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: venire",
+      "accept": ["komen"],
+      "explanation": "venire = komen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-11",
-      "front": "baby",
-      "back": "infans, infantes",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: baby",
+      "accept": ["infans", "infantes"],
+      "explanation": "infans, infantes = baby",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-12",
-      "front": "infans, infantes",
-      "back": "baby",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: infans",
+      "accept": ["baby"],
+      "explanation": "infans, infantes = baby",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-13",
-      "front": "horen",
-      "back": "audire",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: horen",
+      "accept": ["audire"],
+      "explanation": "audire = horen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-14",
-      "front": "audire",
-      "back": "horen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: audire",
+      "accept": ["horen"],
+      "explanation": "audire = horen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-15",
-      "front": "mandje",
-      "back": "corbis, corbes",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: mandje",
+      "accept": ["corbis", "corbes"],
+      "explanation": "corbis, corbes = mandje",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-16",
-      "front": "corbis, corbes",
-      "back": "mandje",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: corbis",
+      "accept": ["mandje"],
+      "explanation": "corbis, corbes = mandje",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-17",
-      "front": "zien",
-      "back": "videre",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: zien",
+      "accept": ["videre"],
+      "explanation": "videre = zien",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-18",
-      "front": "videre",
-      "back": "zien",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: videre",
+      "accept": ["zien"],
+      "explanation": "videre = zien",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-19",
-      "front": "in het mandje",
-      "back": "in corbe",
-      "tags": ["flumen", "uitdr"]
+      "type": "open",
+      "q": "Vertaal: jongen",
+      "accept": ["puer", "pueri"],
+      "explanation": "puer, pueri = jongen",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-20",
-      "front": "in corbe",
-      "back": "in het mandje",
-      "tags": ["flumen", "uitdr"]
+      "type": "open",
+      "q": "Vertaal: puer",
+      "accept": ["jongen"],
+      "explanation": "puer, pueri = jongen",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-21",
-      "front": "jongen",
-      "back": "puer, pueri",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: liggen",
+      "accept": ["iacere"],
+      "explanation": "iacere = liggen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-22",
-      "front": "puer, pueri",
-      "back": "jongen",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: iacere",
+      "accept": ["liggen"],
+      "explanation": "iacere = liggen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-23",
-      "front": "liggen",
-      "back": "iacere",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: schreeuwen",
+      "accept": ["clamare"],
+      "explanation": "clamare = schreeuwen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-24",
-      "front": "iacere",
-      "back": "liggen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: clamare",
+      "accept": ["schreeuwen"],
+      "explanation": "clamare = schreeuwen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-25",
-      "front": "schreeuwen",
-      "back": "clamare",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: en",
+      "accept": ["et"],
+      "explanation": "et = en",
+      "tags": ["flumen", "vw", "nl-la"]
     },
     {
       "id": "fl-26",
-      "front": "clamare",
-      "back": "schreeuwen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: et",
+      "accept": ["en"],
+      "explanation": "et = en",
+      "tags": ["flumen", "vw", "la-nl"]
     },
     {
       "id": "fl-27",
-      "front": "en",
-      "back": "et",
-      "tags": ["flumen", "vw"]
+      "type": "open",
+      "q": "Vertaal: huilen",
+      "accept": ["lacrimare"],
+      "explanation": "lacrimare = huilen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-28",
-      "front": "et",
-      "back": "en",
-      "tags": ["flumen", "vw"]
+      "type": "open",
+      "q": "Vertaal: lacrimare",
+      "accept": ["huilen"],
+      "explanation": "lacrimare = huilen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-29",
-      "front": "huilen",
-      "back": "lacrimare",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: doden",
+      "accept": ["necare"],
+      "explanation": "necare = doden",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-30",
-      "front": "lacrimare",
-      "back": "huilen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: necare",
+      "accept": ["doden"],
+      "explanation": "necare = doden",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-31",
-      "front": "doden",
-      "back": "necare",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: bevelen",
+      "accept": ["iubere"],
+      "explanation": "iubere = bevelen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-32",
-      "front": "necare",
-      "back": "doden",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: iubere",
+      "accept": ["bevelen"],
+      "explanation": "iubere = bevelen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-33",
-      "front": "bevelen",
-      "back": "iubere",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: vrezen / bang zijn voor",
+      "accept": ["timere"],
+      "explanation": "timere = vrezen, bang zijn voor",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-34",
-      "front": "iubere",
-      "back": "bevelen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: timere",
+      "accept": ["vrezen", "bang zijn voor", "bang zijn"],
+      "explanation": "timere = vrezen, bang zijn voor",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-35",
-      "front": "vrezen, bang zijn voor",
-      "back": "timere",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: daarom",
+      "accept": ["ideo"],
+      "explanation": "ideo = daarom",
+      "tags": ["flumen", "bw", "nl-la"]
     },
     {
       "id": "fl-36",
-      "front": "timere",
-      "back": "vrezen, bang zijn voor",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: ideo",
+      "accept": ["daarom"],
+      "explanation": "ideo = daarom",
+      "tags": ["flumen", "bw", "la-nl"]
     },
     {
       "id": "fl-37",
-      "front": "daarom",
-      "back": "ideo",
-      "tags": ["flumen", "bw"]
+      "type": "open",
+      "q": "Vertaal: opdracht",
+      "accept": ["mandatum"],
+      "explanation": "mandatum = opdracht",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-38",
-      "front": "ideo",
-      "back": "daarom",
-      "tags": ["flumen", "bw"]
+      "type": "open",
+      "q": "Vertaal: mandatum",
+      "accept": ["opdracht"],
+      "explanation": "mandatum = opdracht",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-39",
-      "front": "opdracht",
-      "back": "mandatum",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: niet",
+      "accept": ["non"],
+      "explanation": "non = niet",
+      "tags": ["flumen", "bw", "nl-la"]
     },
     {
       "id": "fl-40",
-      "front": "mandatum",
-      "back": "opdracht",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: non",
+      "accept": ["niet"],
+      "explanation": "non = niet",
+      "tags": ["flumen", "bw", "la-nl"]
     },
     {
       "id": "fl-41",
-      "front": "niet",
-      "back": "non",
-      "tags": ["flumen", "bw"]
+      "type": "open",
+      "q": "Vertaal: weigeren",
+      "accept": ["recusare"],
+      "explanation": "recusare = weigeren",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-42",
-      "front": "non",
-      "back": "niet",
-      "tags": ["flumen", "bw"]
+      "type": "open",
+      "q": "Vertaal: recusare",
+      "accept": ["weigeren"],
+      "explanation": "recusare = weigeren",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-43",
-      "front": "weigeren",
-      "back": "recusare",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: toch",
+      "accept": ["tamen"],
+      "explanation": "tamen = toch",
+      "tags": ["flumen", "bw", "nl-la"]
     },
     {
       "id": "fl-44",
-      "front": "recusare",
-      "back": "weigeren",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: tamen",
+      "accept": ["toch"],
+      "explanation": "tamen = toch",
+      "tags": ["flumen", "bw", "la-nl"]
     },
     {
       "id": "fl-45",
-      "front": "toch",
-      "back": "tamen",
-      "tags": ["flumen", "bw"]
+      "type": "open",
+      "q": "Vertaal: optillen",
+      "accept": ["tollere"],
+      "explanation": "tollere = optillen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-46",
-      "front": "tamen",
-      "back": "toch",
-      "tags": ["flumen", "bw"]
+      "type": "open",
+      "q": "Vertaal: tollere",
+      "accept": ["optillen"],
+      "explanation": "tollere = optillen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-47",
-      "front": "optillen",
-      "back": "tollere",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: naar, tot (voorzetsel + acc)",
+      "accept": ["ad"],
+      "explanation": "ad + acc = naar, tot",
+      "tags": ["flumen", "vz", "nl-la"]
     },
     {
       "id": "fl-48",
-      "front": "tollere",
-      "back": "optillen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: ad (+ acc)",
+      "accept": ["naar", "tot"],
+      "explanation": "ad + acc = naar, tot",
+      "tags": ["flumen", "vz", "la-nl"]
     },
     {
       "id": "fl-49",
-      "front": "naar, tot (+ acc)",
-      "back": "ad + acc",
-      "tags": ["flumen", "vz"]
+      "type": "open",
+      "q": "Vertaal: dragen",
+      "accept": ["portare"],
+      "explanation": "portare = dragen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-50",
-      "front": "ad + acc",
-      "back": "naar, tot",
-      "tags": ["flumen", "vz"]
+      "type": "open",
+      "q": "Vertaal: portare",
+      "accept": ["dragen"],
+      "explanation": "portare = dragen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-51",
-      "front": "dragen",
-      "back": "portare",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: plaatsen in",
+      "accept": ["imponere"],
+      "explanation": "imponere = plaatsen in",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-52",
-      "front": "portare",
-      "back": "dragen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: imponere",
+      "accept": ["plaatsen in"],
+      "explanation": "imponere = plaatsen in",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-53",
-      "front": "in, naar (+ acc)",
-      "back": "in + acc",
-      "tags": ["flumen", "vz"]
+      "type": "open",
+      "q": "Vertaal: plaatsen",
+      "accept": ["ponere"],
+      "explanation": "ponere = plaatsen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-54",
-      "front": "in + acc",
-      "back": "in, naar",
-      "tags": ["flumen", "vz"]
+      "type": "open",
+      "q": "Vertaal: ponere",
+      "accept": ["plaatsen"],
+      "explanation": "ponere = plaatsen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-55",
-      "front": "plaatsen in",
-      "back": "imponere",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: (blijven) drijven",
+      "accept": ["natare"],
+      "explanation": "natare = (blijven) drijven",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-56",
-      "front": "imponere",
-      "back": "plaatsen in",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: natare",
+      "accept": ["drijven", "blijven drijven"],
+      "explanation": "natare = (blijven) drijven",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-57",
-      "front": "plaatsen",
-      "back": "ponere",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: plaats",
+      "accept": ["locus"],
+      "explanation": "locus = plaats",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-58",
-      "front": "ponere",
-      "back": "plaatsen",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: locus",
+      "accept": ["plaats"],
+      "explanation": "locus = plaats",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-59",
-      "front": "(blijven) drijven",
-      "back": "natare",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: waar",
+      "accept": ["ubi"],
+      "explanation": "ubi = waar",
+      "tags": ["flumen", "bw", "nl-la"]
     },
     {
       "id": "fl-60",
-      "front": "natare",
-      "back": "(blijven) drijven",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: ubi",
+      "accept": ["waar"],
+      "explanation": "ubi = waar",
+      "tags": ["flumen", "bw", "la-nl"]
     },
     {
       "id": "fl-61",
-      "front": "plaats",
-      "back": "locus",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: water",
+      "accept": ["aqua"],
+      "explanation": "aqua = water",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-62",
-      "front": "locus",
-      "back": "plaats",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: aqua",
+      "accept": ["water"],
+      "explanation": "aqua = water",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-63",
-      "front": "waar",
-      "back": "ubi",
-      "tags": ["flumen", "bw"]
+      "type": "open",
+      "q": "Vertaal: tussen (voorzetsel + acc)",
+      "accept": ["inter"],
+      "explanation": "inter + acc = tussen",
+      "tags": ["flumen", "vz", "nl-la"]
     },
     {
       "id": "fl-64",
-      "front": "ubi",
-      "back": "waar",
-      "tags": ["flumen", "bw"]
+      "type": "open",
+      "q": "Vertaal: inter (+ acc)",
+      "accept": ["tussen"],
+      "explanation": "inter + acc = tussen",
+      "tags": ["flumen", "vz", "la-nl"]
     },
     {
       "id": "fl-65",
-      "front": "water",
-      "back": "aqua",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: boom",
+      "accept": ["arbor", "arbores"],
+      "explanation": "arbor, arbores = boom",
+      "tags": ["flumen", "zn", "nl-la"]
     },
     {
       "id": "fl-66",
-      "front": "aqua",
-      "back": "water",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: arbor",
+      "accept": ["boom"],
+      "explanation": "arbor, arbores = boom",
+      "tags": ["flumen", "zn", "la-nl"]
     },
     {
       "id": "fl-67",
-      "front": "tussen",
-      "back": "inter + acc",
-      "tags": ["flumen", "vz"]
+      "type": "open",
+      "q": "Vertaal: stromen",
+      "accept": ["fluere"],
+      "explanation": "fluere = stromen",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-68",
-      "front": "inter + acc",
-      "back": "tussen",
-      "tags": ["flumen", "vz"]
+      "type": "open",
+      "q": "Vertaal: fluere",
+      "accept": ["stromen"],
+      "explanation": "fluere = stromen",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "fl-69",
-      "front": "boom",
-      "back": "arbor, arbores",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: daar",
+      "accept": ["ibi"],
+      "explanation": "ibi = daar",
+      "tags": ["flumen", "bw", "nl-la"]
     },
     {
       "id": "fl-70",
-      "front": "arbor, arbores",
-      "back": "boom",
-      "tags": ["flumen", "zn"]
+      "type": "open",
+      "q": "Vertaal: ibi",
+      "accept": ["daar"],
+      "explanation": "ibi = daar",
+      "tags": ["flumen", "bw", "la-nl"]
     },
     {
       "id": "fl-71",
-      "front": "stromen",
-      "back": "fluere",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: blijven steken",
+      "accept": ["haerere"],
+      "explanation": "haerere = blijven steken",
+      "tags": ["flumen", "ww", "nl-la"]
     },
     {
       "id": "fl-72",
-      "front": "fluere",
-      "back": "stromen",
-      "tags": ["flumen", "ww"]
-    },
-    {
-      "id": "fl-73",
-      "front": "daar",
-      "back": "ibi",
-      "tags": ["flumen", "bw"]
-    },
-    {
-      "id": "fl-74",
-      "front": "ibi",
-      "back": "daar",
-      "tags": ["flumen", "bw"]
-    },
-    {
-      "id": "fl-75",
-      "front": "blijven steken",
-      "back": "haerere",
-      "tags": ["flumen", "ww"]
-    },
-    {
-      "id": "fl-76",
-      "front": "haerere",
-      "back": "blijven steken",
-      "tags": ["flumen", "ww"]
+      "type": "open",
+      "q": "Vertaal: haerere",
+      "accept": ["blijven steken"],
+      "explanation": "haerere = blijven steken",
+      "tags": ["flumen", "ww", "la-nl"]
     },
     {
       "id": "lu-01",
-      "front": "herder",
-      "back": "pastor, pastores",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: herder",
+      "accept": ["pastor", "pastores"],
+      "explanation": "pastor, pastores = herder",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-02",
-      "front": "pastor, pastores",
-      "back": "herder",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: pastor",
+      "accept": ["herder"],
+      "explanation": "pastor, pastores = herder",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-03",
-      "front": "zijn (infinitivus)",
-      "back": "esse",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: zijn (infinitivus)",
+      "accept": ["esse"],
+      "explanation": "esse = zijn (infinitivus)",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-04",
-      "front": "esse",
-      "back": "zijn (infinitivus)",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: esse",
+      "accept": ["zijn"],
+      "explanation": "esse = zijn (infinitivus)",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-05",
-      "front": "kudde",
-      "back": "grex, greges",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: kudde",
+      "accept": ["grex", "greges"],
+      "explanation": "grex, greges = kudde",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-06",
-      "front": "grex, greges",
-      "back": "kudde",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: grex",
+      "accept": ["kudde"],
+      "explanation": "grex, greges = kudde",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-07",
-      "front": "bewaken",
-      "back": "custodire",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: bewaken",
+      "accept": ["custodire"],
+      "explanation": "custodire = bewaken",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-08",
-      "front": "custodire",
-      "back": "bewaken",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: custodire",
+      "accept": ["bewaken"],
+      "explanation": "custodire = bewaken",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-09",
-      "front": "plotseling",
-      "back": "subito",
-      "tags": ["lupa", "bw"]
+      "type": "open",
+      "q": "Vertaal: plotseling",
+      "accept": ["subito"],
+      "explanation": "subito = plotseling",
+      "tags": ["lupa", "bw", "nl-la"]
     },
     {
       "id": "lu-10",
-      "front": "subito",
-      "back": "plotseling",
-      "tags": ["lupa", "bw"]
+      "type": "open",
+      "q": "Vertaal: subito",
+      "accept": ["plotseling"],
+      "explanation": "subito = plotseling",
+      "tags": ["lupa", "bw", "la-nl"]
     },
     {
       "id": "lu-11",
-      "front": "gaan naar, naderen",
-      "back": "accedere",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: gaan naar / naderen",
+      "accept": ["accedere"],
+      "explanation": "accedere = gaan naar, naderen",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-12",
-      "front": "accedere",
-      "back": "gaan naar, naderen",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: accedere",
+      "accept": ["gaan naar", "naderen"],
+      "explanation": "accedere = gaan naar, naderen",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-13",
-      "front": "tepels",
-      "back": "ubera",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: tepels",
+      "accept": ["ubera"],
+      "explanation": "ubera = tepels",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-14",
-      "front": "ubera",
-      "back": "tepels",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: ubera",
+      "accept": ["tepels"],
+      "explanation": "ubera = tepels",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-15",
-      "front": "(aan)bieden",
-      "back": "praebere",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: (aan)bieden",
+      "accept": ["praebere"],
+      "explanation": "praebere = (aan)bieden",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-16",
-      "front": "praebere",
-      "back": "(aan)bieden",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: praebere",
+      "accept": ["aanbieden", "bieden"],
+      "explanation": "praebere = (aan)bieden",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-17",
-      "front": "drinken",
-      "back": "bibere",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: drinken",
+      "accept": ["bibere"],
+      "explanation": "bibere = drinken",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-18",
-      "front": "bibere",
-      "back": "drinken",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: bibere",
+      "accept": ["drinken"],
+      "explanation": "bibere = drinken",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-19",
-      "front": "zo",
-      "back": "sic",
-      "tags": ["lupa", "bw"]
+      "type": "open",
+      "q": "Vertaal: zo",
+      "accept": ["sic"],
+      "explanation": "sic = zo",
+      "tags": ["lupa", "bw", "nl-la"]
     },
     {
       "id": "lu-20",
-      "front": "sic",
-      "back": "zo",
-      "tags": ["lupa", "bw"]
+      "type": "open",
+      "q": "Vertaal: sic",
+      "accept": ["zo"],
+      "explanation": "sic = zo",
+      "tags": ["lupa", "bw", "la-nl"]
     },
     {
       "id": "lu-21",
-      "front": "(na)denken",
-      "back": "cogitare",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: (na)denken",
+      "accept": ["cogitare"],
+      "explanation": "cogitare = (na)denken",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-22",
-      "front": "cogitare",
-      "back": "(na)denken",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: cogitare",
+      "accept": ["nadenken", "denken"],
+      "explanation": "cogitare = (na)denken",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-23",
-      "front": "god",
-      "back": "deus",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: god",
+      "accept": ["deus"],
+      "explanation": "deus = god",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-24",
-      "front": "deus",
-      "back": "god",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: deus",
+      "accept": ["god"],
+      "explanation": "deus = god",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-25",
-      "front": "beschermen",
-      "back": "protegere",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: beschermen",
+      "accept": ["protegere"],
+      "explanation": "protegere = beschermen",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-26",
-      "front": "protegere",
-      "back": "beschermen",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: protegere",
+      "accept": ["beschermen"],
+      "explanation": "protegere = beschermen",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-27",
-      "front": "want",
-      "back": "nam",
-      "tags": ["lupa", "vw"]
+      "type": "open",
+      "q": "Vertaal: want",
+      "accept": ["nam"],
+      "explanation": "nam = want",
+      "tags": ["lupa", "vw", "nl-la"]
     },
     {
       "id": "lu-28",
-      "front": "nam",
-      "back": "want",
-      "tags": ["lupa", "vw"]
+      "type": "open",
+      "q": "Vertaal: nam",
+      "accept": ["want"],
+      "explanation": "nam = want",
+      "tags": ["lupa", "vw", "la-nl"]
     },
     {
       "id": "lu-29",
-      "front": "laten verdrinken",
-      "back": "submergere",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: laten verdrinken",
+      "accept": ["submergere"],
+      "explanation": "submergere = laten verdrinken",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-30",
-      "front": "submergere",
-      "back": "laten verdrinken",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: submergere",
+      "accept": ["laten verdrinken", "verdrinken"],
+      "explanation": "submergere = laten verdrinken",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-31",
-      "front": "kwaad doen (+ dat)",
-      "back": "nocere + dat",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: kwaad doen (+ dativus)",
+      "accept": ["nocere"],
+      "explanation": "nocere + dat = kwaad doen",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-32",
-      "front": "nocere + dat",
-      "back": "kwaad doen",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: nocere (+ dat)",
+      "accept": ["kwaad doen"],
+      "explanation": "nocere + dat = kwaad doen",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-33",
-      "front": "naar huis",
-      "back": "domum",
-      "tags": ["lupa", "bw"]
+      "type": "open",
+      "q": "Vertaal: naar huis",
+      "accept": ["domum"],
+      "explanation": "domum = naar huis",
+      "tags": ["lupa", "bw", "nl-la"]
     },
     {
       "id": "lu-34",
-      "front": "domum",
-      "back": "naar huis",
-      "tags": ["lupa", "bw"]
+      "type": "open",
+      "q": "Vertaal: domum",
+      "accept": ["naar huis"],
+      "explanation": "domum = naar huis",
+      "tags": ["lupa", "bw", "la-nl"]
     },
     {
       "id": "lu-35",
-      "front": "echtgenote",
-      "back": "uxor, uxores",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: echtgenote",
+      "accept": ["uxor", "uxores"],
+      "explanation": "uxor, uxores = echtgenote",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-36",
-      "front": "uxor, uxores",
-      "back": "echtgenote",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: uxor",
+      "accept": ["echtgenote"],
+      "explanation": "uxor, uxores = echtgenote",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-37",
-      "front": "overhandigen",
-      "back": "tradere",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: overhandigen",
+      "accept": ["tradere"],
+      "explanation": "tradere = overhandigen",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-38",
-      "front": "tradere",
-      "back": "overhandigen",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: tradere",
+      "accept": ["overhandigen"],
+      "explanation": "tradere = overhandigen",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-39",
-      "front": "zeggen",
-      "back": "dicere",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: zeggen",
+      "accept": ["dicere"],
+      "explanation": "dicere = zeggen",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-40",
-      "front": "dicere",
-      "back": "zeggen",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: dicere",
+      "accept": ["zeggen"],
+      "explanation": "dicere = zeggen",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-41",
-      "front": "steun geven aan (+ dat)",
-      "back": "favere + dat",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: steun geven aan (+ dativus)",
+      "accept": ["favere"],
+      "explanation": "favere + dat = steun geven aan",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-42",
-      "front": "favere + dat",
-      "back": "steun geven aan",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: favere (+ dat)",
+      "accept": ["steun geven aan", "steunen"],
+      "explanation": "favere + dat = steun geven aan",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-43",
-      "front": "zoon",
-      "back": "filius",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: zoon",
+      "accept": ["filius"],
+      "explanation": "filius = zoon",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-44",
-      "front": "filius",
-      "back": "zoon",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: filius",
+      "accept": ["zoon"],
+      "explanation": "filius = zoon",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-45",
-      "front": "vrouw",
-      "back": "femina",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: vrouw",
+      "accept": ["femina"],
+      "explanation": "femina = vrouw",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-46",
-      "front": "femina",
-      "back": "vrouw",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: femina",
+      "accept": ["vrouw"],
+      "explanation": "femina = vrouw",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-47",
-      "front": "lachen",
-      "back": "ridere",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: lachen",
+      "accept": ["ridere"],
+      "explanation": "ridere = lachen",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-48",
-      "front": "ridere",
-      "back": "lachen",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: ridere",
+      "accept": ["lachen"],
+      "explanation": "ridere = lachen",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-49",
-      "front": "naam",
-      "back": "nomen, nomina",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: naam",
+      "accept": ["nomen", "nomina"],
+      "explanation": "nomen, nomina = naam",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-50",
-      "front": "nomen, nomina",
-      "back": "naam",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: nomen",
+      "accept": ["naam"],
+      "explanation": "nomen, nomina = naam",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-51",
-      "front": "geven",
-      "back": "dare",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: geven",
+      "accept": ["dare"],
+      "explanation": "dare = geven",
+      "tags": ["lupa", "ww", "nl-la"]
     },
     {
       "id": "lu-52",
-      "front": "dare",
-      "back": "geven",
-      "tags": ["lupa", "ww"]
+      "type": "open",
+      "q": "Vertaal: dare",
+      "accept": ["geven"],
+      "explanation": "dare = geven",
+      "tags": ["lupa", "ww", "la-nl"]
     },
     {
       "id": "lu-53",
-      "front": "de een, de ander",
-      "back": "alter...alter",
-      "tags": ["lupa", "vnw"]
+      "type": "open",
+      "q": "Vertaal: de een... de ander",
+      "accept": ["alter...alter"],
+      "explanation": "alter...alter = de een... de ander",
+      "tags": ["lupa", "vnw", "nl-la"]
     },
     {
       "id": "lu-54",
-      "front": "alter...alter",
-      "back": "de een, de ander",
-      "tags": ["lupa", "vnw"]
+      "type": "open",
+      "q": "Vertaal: alter...alter",
+      "accept": ["de een de ander", "de een... de ander"],
+      "explanation": "alter...alter = de een... de ander",
+      "tags": ["lupa", "vnw", "la-nl"]
     },
     {
       "id": "lu-55",
-      "front": "moeder",
-      "back": "mater, matres",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: moeder",
+      "accept": ["mater", "matres"],
+      "explanation": "mater, matres = moeder",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-56",
-      "front": "mater, matres",
-      "back": "moeder",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: mater",
+      "accept": ["moeder"],
+      "explanation": "mater, matres = moeder",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "lu-57",
-      "front": "zoals",
-      "back": "sicut",
-      "tags": ["lupa", "vw"]
+      "type": "open",
+      "q": "Vertaal: zoals",
+      "accept": ["sicut"],
+      "explanation": "sicut = zoals",
+      "tags": ["lupa", "vw", "nl-la"]
     },
     {
       "id": "lu-58",
-      "front": "sicut",
-      "back": "zoals",
-      "tags": ["lupa", "vw"]
+      "type": "open",
+      "q": "Vertaal: sicut",
+      "accept": ["zoals"],
+      "explanation": "sicut = zoals",
+      "tags": ["lupa", "vw", "la-nl"]
     },
     {
       "id": "lu-59",
-      "front": "vader",
-      "back": "pater, patres",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: vader",
+      "accept": ["pater", "patres"],
+      "explanation": "pater, patres = vader",
+      "tags": ["lupa", "zn", "nl-la"]
     },
     {
       "id": "lu-60",
-      "front": "pater, patres",
-      "back": "vader",
-      "tags": ["lupa", "zn"]
+      "type": "open",
+      "q": "Vertaal: pater",
+      "accept": ["vader"],
+      "explanation": "pater, patres = vader",
+      "tags": ["lupa", "zn", "la-nl"]
     },
     {
       "id": "re-01",
-      "front": "vriend",
-      "back": "amicus",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: vriend",
+      "accept": ["amicus"],
+      "explanation": "amicus = vriend",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-02",
-      "front": "amicus",
-      "back": "vriend",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: amicus",
+      "accept": ["vriend"],
+      "explanation": "amicus = vriend",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-03",
-      "front": "van(af) (+ abl)",
-      "back": "de + abl",
-      "tags": ["regnum", "vz"]
+      "type": "open",
+      "q": "Vertaal: van(af) (voorzetsel + abl)",
+      "accept": ["de"],
+      "explanation": "de + abl = van(af)",
+      "tags": ["regnum", "vz", "nl-la"]
     },
     {
       "id": "re-04",
-      "front": "de + abl",
-      "back": "van(af)",
-      "tags": ["regnum", "vz"]
+      "type": "open",
+      "q": "Vertaal: de (+ abl)",
+      "accept": ["van", "vanaf"],
+      "explanation": "de + abl = van(af)",
+      "tags": ["regnum", "vz", "la-nl"]
     },
     {
       "id": "re-05",
-      "front": "berg, heuvel",
-      "back": "mons, montes",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: berg / heuvel",
+      "accept": ["mons", "montes"],
+      "explanation": "mons, montes = berg, heuvel",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-06",
-      "front": "mons, montes",
-      "back": "berg, heuvel",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: mons",
+      "accept": ["berg", "heuvel"],
+      "explanation": "mons, montes = berg, heuvel",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-07",
-      "front": "afdalen",
-      "back": "descendere",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: afdalen",
+      "accept": ["descendere"],
+      "explanation": "descendere = afdalen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-08",
-      "front": "descendere",
-      "back": "afdalen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: descendere",
+      "accept": ["afdalen"],
+      "explanation": "descendere = afdalen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-09",
-      "front": "met (+ abl)",
-      "back": "cum + abl",
-      "tags": ["regnum", "vz"]
+      "type": "open",
+      "q": "Vertaal: met (voorzetsel + abl)",
+      "accept": ["cum"],
+      "explanation": "cum + abl = met",
+      "tags": ["regnum", "vz", "nl-la"]
     },
     {
       "id": "re-10",
-      "front": "cum + abl",
-      "back": "met",
-      "tags": ["regnum", "vz"]
+      "type": "open",
+      "q": "Vertaal: cum (+ abl)",
+      "accept": ["met"],
+      "explanation": "cum + abl = met",
+      "tags": ["regnum", "vz", "la-nl"]
     },
     {
       "id": "re-11",
-      "front": "broer",
-      "back": "frater, fratres",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: broer",
+      "accept": ["frater", "fratres"],
+      "explanation": "frater, fratres = broer",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-12",
-      "front": "frater, fratres",
-      "back": "broer",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: frater",
+      "accept": ["broer"],
+      "explanation": "frater, fratres = broer",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-13",
-      "front": "samenkomen",
-      "back": "convenire",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: samenkomen",
+      "accept": ["convenire"],
+      "explanation": "convenire = samenkomen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-14",
-      "front": "convenire",
-      "back": "samenkomen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: convenire",
+      "accept": ["samenkomen"],
+      "explanation": "convenire = samenkomen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-15",
-      "front": "volk",
-      "back": "populus",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: volk",
+      "accept": ["populus"],
+      "explanation": "populus = volk",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-16",
-      "front": "populus",
-      "back": "volk",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: populus",
+      "accept": ["volk"],
+      "explanation": "populus = volk",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-17",
-      "front": "allen",
-      "back": "omnes",
-      "tags": ["regnum", "vnw"]
+      "type": "open",
+      "q": "Vertaal: allen",
+      "accept": ["omnes"],
+      "explanation": "omnes = allen",
+      "tags": ["regnum", "vnw", "nl-la"]
     },
     {
       "id": "re-18",
-      "front": "omnes",
-      "back": "allen",
-      "tags": ["regnum", "vnw"]
+      "type": "open",
+      "q": "Vertaal: omnes",
+      "accept": ["allen", "iedereen"],
+      "explanation": "omnes = allen",
+      "tags": ["regnum", "vnw", "la-nl"]
     },
     {
       "id": "re-19",
-      "front": "zwijgen",
-      "back": "tacere",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: zwijgen",
+      "accept": ["tacere"],
+      "explanation": "tacere = zwijgen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-20",
-      "front": "tacere",
-      "back": "zwijgen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: tacere",
+      "accept": ["zwijgen"],
+      "explanation": "tacere = zwijgen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-21",
-      "front": "bekijken",
-      "back": "aspicere, aspicio",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: bekijken",
+      "accept": ["aspicere", "aspicio"],
+      "explanation": "aspicere, aspicio = bekijken",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-22",
-      "front": "aspicere, aspicio",
-      "back": "bekijken",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: aspicere",
+      "accept": ["bekijken"],
+      "explanation": "aspicere, aspicio = bekijken",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-23",
-      "front": "ook",
-      "back": "quoque",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: ook",
+      "accept": ["quoque"],
+      "explanation": "quoque = ook",
+      "tags": ["regnum", "bw", "nl-la"]
     },
     {
       "id": "re-24",
-      "front": "quoque",
-      "back": "ook",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: quoque",
+      "accept": ["ook"],
+      "explanation": "quoque = ook",
+      "tags": ["regnum", "bw", "la-nl"]
     },
     {
       "id": "re-25",
-      "front": "eindelijk",
-      "back": "tandem",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: eindelijk",
+      "accept": ["tandem"],
+      "explanation": "tandem = eindelijk",
+      "tags": ["regnum", "bw", "nl-la"]
     },
     {
       "id": "re-26",
-      "front": "tandem",
-      "back": "eindelijk",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: tandem",
+      "accept": ["eindelijk"],
+      "explanation": "tandem = eindelijk",
+      "tags": ["regnum", "bw", "la-nl"]
     },
     {
       "id": "re-27",
-      "front": "zowel...als",
-      "back": "et...et",
-      "tags": ["regnum", "vw"]
+      "type": "open",
+      "q": "Vertaal: zowel... als",
+      "accept": ["et...et"],
+      "explanation": "et...et = zowel... als",
+      "tags": ["regnum", "vw", "nl-la"]
     },
     {
       "id": "re-28",
-      "front": "et...et",
-      "back": "zowel...als",
-      "tags": ["regnum", "vw"]
+      "type": "open",
+      "q": "Vertaal: et...et",
+      "accept": ["zowel als", "zowel... als"],
+      "explanation": "et...et = zowel... als",
+      "tags": ["regnum", "vw", "la-nl"]
     },
     {
       "id": "re-29",
-      "front": "verdelen",
-      "back": "dividere",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: verdelen",
+      "accept": ["dividere"],
+      "explanation": "dividere = verdelen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-30",
-      "front": "dividere",
-      "back": "verdelen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: dividere",
+      "accept": ["verdelen"],
+      "explanation": "dividere = verdelen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-31",
-      "front": "stad",
-      "back": "urbs, urbes",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: stad",
+      "accept": ["urbs", "urbes"],
+      "explanation": "urbs, urbes = stad",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-32",
-      "front": "urbs, urbes",
-      "back": "stad",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: urbs",
+      "accept": ["stad"],
+      "explanation": "urbs, urbes = stad",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-33",
-      "front": "bouwen",
-      "back": "aedificare",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: bouwen",
+      "accept": ["aedificare"],
+      "explanation": "aedificare = bouwen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-34",
-      "front": "aedificare",
-      "back": "bouwen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: aedificare",
+      "accept": ["bouwen"],
+      "explanation": "aedificare = bouwen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-35",
-      "front": "eerst",
-      "back": "primum",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: eerst",
+      "accept": ["primum"],
+      "explanation": "primum = eerst",
+      "tags": ["regnum", "bw", "nl-la"]
     },
     {
       "id": "re-36",
-      "front": "primum",
-      "back": "eerst",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: primum",
+      "accept": ["eerst"],
+      "explanation": "primum = eerst",
+      "tags": ["regnum", "bw", "la-nl"]
     },
     {
       "id": "re-37",
-      "front": "in, op (+ abl)",
-      "back": "in + abl",
-      "tags": ["regnum", "vz"]
+      "type": "open",
+      "q": "Vertaal: in / op (voorzetsel + abl)",
+      "accept": ["in"],
+      "explanation": "in + abl = in, op",
+      "tags": ["regnum", "vz", "nl-la"]
     },
     {
       "id": "re-38",
-      "front": "in + abl",
-      "back": "in, op",
-      "tags": ["regnum", "vz"]
+      "type": "open",
+      "q": "Vertaal: in (+ abl)",
+      "accept": ["in", "op"],
+      "explanation": "in + abl = in, op",
+      "tags": ["regnum", "vz", "la-nl"]
     },
     {
       "id": "re-39",
-      "front": "man",
-      "back": "vir, viri",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: man",
+      "accept": ["vir", "viri"],
+      "explanation": "vir, viri = man",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-40",
-      "front": "vir, viri",
-      "back": "man",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: vir",
+      "accept": ["man"],
+      "explanation": "vir, viri = man",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-41",
-      "front": "rots, rotsblok",
-      "back": "saxum",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: rots / rotsblok",
+      "accept": ["saxum"],
+      "explanation": "saxum = rots, rotsblok",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-42",
-      "front": "saxum",
-      "back": "rots, rotsblok",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: saxum",
+      "accept": ["rots", "rotsblok"],
+      "explanation": "saxum = rots, rotsblok",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-43",
-      "front": "muur",
-      "back": "murus",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: muur",
+      "accept": ["murus"],
+      "explanation": "murus = muur",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-44",
-      "front": "murus",
-      "back": "muur",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: murus",
+      "accept": ["muur"],
+      "explanation": "murus = muur",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-45",
-      "front": "boomstam",
-      "back": "truncus",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: boomstam",
+      "accept": ["truncus"],
+      "explanation": "truncus = boomstam",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-46",
-      "front": "truncus",
-      "back": "boomstam",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: truncus",
+      "accept": ["boomstam"],
+      "explanation": "truncus = boomstam",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-47",
-      "front": "huis",
-      "back": "casa",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: huis",
+      "accept": ["casa"],
+      "explanation": "casa = huis",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-48",
-      "front": "casa",
-      "back": "huis",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: casa",
+      "accept": ["huis"],
+      "explanation": "casa = huis",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-49",
-      "front": "maken",
-      "back": "facere, facio",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: maken",
+      "accept": ["facere", "facio"],
+      "explanation": "facere, facio = maken",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-50",
-      "front": "facere, facio",
-      "back": "maken",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: facere",
+      "accept": ["maken"],
+      "explanation": "facere, facio = maken",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-51",
-      "front": "riet",
-      "back": "arundo, arundines",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: riet",
+      "accept": ["arundo", "arundines"],
+      "explanation": "arundo, arundines = riet",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-52",
-      "front": "arundo, arundines",
-      "back": "riet",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: arundo",
+      "accept": ["riet"],
+      "explanation": "arundo, arundines = riet",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-53",
-      "front": "verzamelen",
-      "back": "colligere",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: verzamelen",
+      "accept": ["colligere"],
+      "explanation": "colligere = verzamelen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-54",
-      "front": "colligere",
-      "back": "verzamelen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: colligere",
+      "accept": ["verzamelen"],
+      "explanation": "colligere = verzamelen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-55",
-      "front": "ontvangen",
-      "back": "accipere",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: ontvangen",
+      "accept": ["accipere"],
+      "explanation": "accipere = ontvangen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-56",
-      "front": "accipere",
-      "back": "ontvangen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: accipere",
+      "accept": ["ontvangen"],
+      "explanation": "accipere = ontvangen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-57",
-      "front": "bevallen (+ dat)",
-      "back": "placere + dat",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: bevallen (+ dativus)",
+      "accept": ["placere"],
+      "explanation": "placere + dat = bevallen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-58",
-      "front": "placere + dat",
-      "back": "bevallen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: placere (+ dat)",
+      "accept": ["bevallen"],
+      "explanation": "placere + dat = bevallen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-59",
-      "front": "waarom",
-      "back": "cur",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: waarom",
+      "accept": ["cur"],
+      "explanation": "cur = waarom",
+      "tags": ["regnum", "bw", "nl-la"]
     },
     {
       "id": "re-60",
-      "front": "cur",
-      "back": "waarom",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: cur",
+      "accept": ["waarom"],
+      "explanation": "cur = waarom",
+      "tags": ["regnum", "bw", "la-nl"]
     },
     {
       "id": "re-61",
-      "front": "het is toegestaan (aan)",
-      "back": "licet",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: het is toegestaan",
+      "accept": ["licet"],
+      "explanation": "licet = het is toegestaan",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-62",
-      "front": "licet",
-      "back": "het is toegestaan (aan)",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: licet",
+      "accept": ["het is toegestaan", "mag"],
+      "explanation": "licet = het is toegestaan",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-63",
-      "front": "'s avonds",
-      "back": "vesperi",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: 's avonds",
+      "accept": ["vesperi"],
+      "explanation": "vesperi = 's avonds",
+      "tags": ["regnum", "bw", "nl-la"]
     },
     {
       "id": "re-64",
-      "front": "vesperi",
-      "back": "'s avonds",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: vesperi",
+      "accept": ["s avonds", "'s avonds"],
+      "explanation": "vesperi = 's avonds",
+      "tags": ["regnum", "bw", "la-nl"]
     },
     {
       "id": "re-65",
-      "front": "al, reeds",
-      "back": "iam",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: al / reeds",
+      "accept": ["iam"],
+      "explanation": "iam = al, reeds",
+      "tags": ["regnum", "bw", "nl-la"]
     },
     {
       "id": "re-66",
-      "front": "iam",
-      "back": "al, reeds",
-      "tags": ["regnum", "bw"]
+      "type": "open",
+      "q": "Vertaal: iam",
+      "accept": ["al", "reeds"],
+      "explanation": "iam = al, reeds",
+      "tags": ["regnum", "bw", "la-nl"]
     },
     {
       "id": "re-67",
-      "front": "staan",
-      "back": "stare",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: staan",
+      "accept": ["stare"],
+      "explanation": "stare = staan",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-68",
-      "front": "stare",
-      "back": "staan",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: stare",
+      "accept": ["staan"],
+      "explanation": "stare = staan",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-69",
-      "front": "belachelijk maken (+ dat)",
-      "back": "illudere + dat",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: belachelijk maken (+ dativus)",
+      "accept": ["illudere"],
+      "explanation": "illudere + dat = belachelijk maken",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-70",
-      "front": "illudere + dat",
-      "back": "belachelijk maken",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: illudere (+ dat)",
+      "accept": ["belachelijk maken"],
+      "explanation": "illudere + dat = belachelijk maken",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-71",
-      "front": "het is gemakkelijk",
-      "back": "facile est",
-      "tags": ["regnum", "uitdr"]
+      "type": "open",
+      "q": "Vertaal: het is gemakkelijk",
+      "accept": ["facile est"],
+      "explanation": "facile est = het is gemakkelijk",
+      "tags": ["regnum", "uitdr", "nl-la"]
     },
     {
       "id": "re-72",
-      "front": "facile est",
-      "back": "het is gemakkelijk",
-      "tags": ["regnum", "uitdr"]
+      "type": "open",
+      "q": "Vertaal: facile est",
+      "accept": ["het is gemakkelijk"],
+      "explanation": "facile est = het is gemakkelijk",
+      "tags": ["regnum", "uitdr", "la-nl"]
     },
     {
       "id": "re-73",
-      "front": "vijand",
-      "back": "hostis, hostes",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: vijand",
+      "accept": ["hostis", "hostes"],
+      "explanation": "hostis, hostes = vijand",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-74",
-      "front": "hostis, hostes",
-      "back": "vijand",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: hostis",
+      "accept": ["vijand"],
+      "explanation": "hostis, hostes = vijand",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-75",
-      "front": "binnenkomen",
-      "back": "intrare",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: binnenkomen",
+      "accept": ["intrare"],
+      "explanation": "intrare = binnenkomen",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-76",
-      "front": "intrare",
-      "back": "binnenkomen",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: intrare",
+      "accept": ["binnenkomen"],
+      "explanation": "intrare = binnenkomen",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-77",
-      "front": "springen over",
-      "back": "transire",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: oversteken / overgaan",
+      "accept": ["transire"],
+      "explanation": "transire = oversteken, overgaan",
+      "tags": ["regnum", "ww", "nl-la"]
     },
     {
       "id": "re-78",
-      "front": "transire",
-      "back": "springen over",
-      "tags": ["regnum", "ww"]
+      "type": "open",
+      "q": "Vertaal: transire",
+      "accept": ["oversteken", "overgaan"],
+      "explanation": "transire = oversteken, overgaan",
+      "tags": ["regnum", "ww", "la-nl"]
     },
     {
       "id": "re-79",
-      "front": "burger",
-      "back": "civis, cives",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: burger",
+      "accept": ["civis", "cives"],
+      "explanation": "civis, cives = burger",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-80",
-      "front": "civis, cives",
-      "back": "burger",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: civis",
+      "accept": ["burger"],
+      "explanation": "civis, cives = burger",
+      "tags": ["regnum", "zn", "la-nl"]
     },
     {
       "id": "re-81",
-      "front": "maar",
-      "back": "sed",
-      "tags": ["regnum", "vw"]
+      "type": "open",
+      "q": "Vertaal: maar",
+      "accept": ["sed"],
+      "explanation": "sed = maar",
+      "tags": ["regnum", "vw", "nl-la"]
     },
     {
       "id": "re-82",
-      "front": "sed",
-      "back": "maar",
-      "tags": ["regnum", "vw"]
+      "type": "open",
+      "q": "Vertaal: sed",
+      "accept": ["maar"],
+      "explanation": "sed = maar",
+      "tags": ["regnum", "vw", "la-nl"]
     },
     {
       "id": "re-83",
-      "front": "zwaard",
-      "back": "gladius",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: zwaard",
+      "accept": ["gladius"],
+      "explanation": "gladius = zwaard",
+      "tags": ["regnum", "zn", "nl-la"]
     },
     {
       "id": "re-84",
-      "front": "gladius",
-      "back": "zwaard",
-      "tags": ["regnum", "zn"]
+      "type": "open",
+      "q": "Vertaal: gladius",
+      "accept": ["zwaard"],
+      "explanation": "gladius = zwaard",
+      "tags": ["regnum", "zn", "la-nl"]
     }
   ]
 }
