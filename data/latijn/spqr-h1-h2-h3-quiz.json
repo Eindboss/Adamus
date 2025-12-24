@@ -739,6 +739,242 @@
         {"vraag": "De herders bewaken.", "accepted": ["pastores custodiunt"]},
         {"vraag": "De jongens huilen.", "accepted": ["pueri lacrimant"]}
       ]
+    },
+    {
+      "id": "q076",
+      "type": "table_parse",
+      "quiz_group": 5,
+      "prompt_html": "Vul de ontbrekende vormen in van <b>servus</b> (slaaf, groep 2).",
+      "blocks": [
+        {
+          "lemma": "servus",
+          "rows": [
+            { "veld": "nom. ev", "invulbaar": false, "given": "servus" },
+            { "veld": "gen. ev", "invulbaar": true, "accepted": ["servi"] },
+            { "veld": "dat. ev", "invulbaar": true, "accepted": ["servo"] },
+            { "veld": "acc. ev", "invulbaar": true, "accepted": ["servum"] },
+            { "veld": "abl. ev", "invulbaar": true, "accepted": ["servo"] },
+            { "veld": "nom. mv", "invulbaar": true, "accepted": ["servi"] },
+            { "veld": "acc. mv", "invulbaar": true, "accepted": ["servos"] }
+          ]
+        }
+      ],
+      "points": 6,
+      "grading": { "per_cell_points": 1 }
+    },
+    {
+      "id": "q077",
+      "type": "table_parse",
+      "quiz_group": 5,
+      "prompt_html": "Vul de ontbrekende vormen in van <b>femina</b> (vrouw, groep 1).",
+      "blocks": [
+        {
+          "lemma": "femina",
+          "rows": [
+            { "veld": "nom. ev", "invulbaar": false, "given": "femina" },
+            { "veld": "gen. ev", "invulbaar": true, "accepted": ["feminae"] },
+            { "veld": "dat. ev", "invulbaar": true, "accepted": ["feminae"] },
+            { "veld": "acc. ev", "invulbaar": true, "accepted": ["feminam"] },
+            { "veld": "abl. ev", "invulbaar": true, "accepted": ["femina"] },
+            { "veld": "nom. mv", "invulbaar": true, "accepted": ["feminae"] },
+            { "veld": "acc. mv", "invulbaar": true, "accepted": ["feminas"] }
+          ]
+        }
+      ],
+      "points": 6,
+      "grading": { "per_cell_points": 1 }
+    },
+    {
+      "id": "q078",
+      "type": "table_parse",
+      "quiz_group": 6,
+      "prompt_html": "Vul de ontbrekende vormen in van <b>rex</b> (koning, groep 3).",
+      "blocks": [
+        {
+          "lemma": "rex",
+          "rows": [
+            { "veld": "nom. ev", "invulbaar": false, "given": "rex" },
+            { "veld": "gen. ev", "invulbaar": true, "accepted": ["regis"] },
+            { "veld": "dat. ev", "invulbaar": true, "accepted": ["regi"] },
+            { "veld": "acc. ev", "invulbaar": true, "accepted": ["regem"] },
+            { "veld": "abl. ev", "invulbaar": true, "accepted": ["rege"] },
+            { "veld": "nom. mv", "invulbaar": true, "accepted": ["reges"] },
+            { "veld": "acc. mv", "invulbaar": true, "accepted": ["reges"] }
+          ]
+        }
+      ],
+      "points": 6,
+      "grading": { "per_cell_points": 1 }
+    },
+    {
+      "id": "q079",
+      "type": "table_parse",
+      "quiz_group": 6,
+      "prompt_html": "Vul de ontbrekende vormen in van <b>nomen</b> (naam, groep 3).",
+      "blocks": [
+        {
+          "lemma": "nomen",
+          "rows": [
+            { "veld": "nom. ev", "invulbaar": false, "given": "nomen" },
+            { "veld": "gen. ev", "invulbaar": true, "accepted": ["nominis"] },
+            { "veld": "dat. ev", "invulbaar": true, "accepted": ["nomini"] },
+            { "veld": "acc. ev", "invulbaar": true, "accepted": ["nomen"] },
+            { "veld": "abl. ev", "invulbaar": true, "accepted": ["nomine"] },
+            { "veld": "nom. mv", "invulbaar": true, "accepted": ["nomina"] },
+            { "veld": "acc. mv", "invulbaar": true, "accepted": ["nomina"] }
+          ]
+        }
+      ],
+      "points": 6,
+      "grading": { "per_cell_points": 1 }
+    },
+    {
+      "id": "q080",
+      "type": "grouped_translation",
+      "quiz_group": 7,
+      "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin.",
+      "items": [
+        { "latijn_html": "Rex servum <u>iubet</u> pueros necare.", "accepted": ["beveelt", "gebiedt"], "points": 1 },
+        { "latijn_html": "Pueri in <u>flumen</u> natant.", "accepted": ["de rivier", "rivier"], "points": 1 },
+        { "latijn_html": "Femina pueros <u>videt</u>.", "accepted": ["ziet"], "points": 1 },
+        { "latijn_html": "Pastor gregem <u>custodit</u>.", "accepted": ["bewaakt"], "points": 1 },
+        { "latijn_html": "Servi <u>domum</u> portant.", "accepted": ["naar huis"], "points": 1 }
+      ],
+      "points": 5
+    },
+    {
+      "id": "q081",
+      "type": "grouped_translation",
+      "quiz_group": 7,
+      "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin.",
+      "items": [
+        { "latijn_html": "<u>Lupa</u> infantes protegit.", "accepted": ["de wolvin", "wolvin"], "points": 1 },
+        { "latijn_html": "Pater filio <u>favet</u>.", "accepted": ["steunt", "geeft steun aan"], "points": 1 },
+        { "latijn_html": "Rex <u>populum</u> aspicit.", "accepted": ["het volk", "volk"], "points": 1 },
+        { "latijn_html": "Fratres urbem <u>aedificant</u>.", "accepted": ["bouwen"], "points": 1 },
+        { "latijn_html": "Romulus Remum gladio <u>necat</u>.", "accepted": ["doodt"], "points": 1 }
+      ],
+      "points": 5
+    },
+    {
+      "id": "q082",
+      "type": "grouped_select",
+      "quiz_group": 8,
+      "prompt_html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het onderstreepte woord.",
+      "legend": {
+        "naamval_options": ["nominativus", "accusativus", "dativus", "ablativus"],
+        "getal_options": ["enkelvoud", "meervoud"],
+        "verklaring_options": ["onderwerp", "lijdend voorwerp", "meewerkend voorwerp", "bijwoordelijke bepaling"]
+      },
+      "items": [
+        {
+          "latijn_html": "<u>Rex</u> servum vocat.",
+          "correct": { "naamval": "nominativus", "getal": "enkelvoud", "verklaring": "onderwerp" },
+          "points": 1
+        },
+        {
+          "latijn_html": "Rex <u>servum</u> vocat.",
+          "correct": { "naamval": "accusativus", "getal": "enkelvoud", "verklaring": "lijdend voorwerp" },
+          "points": 1
+        },
+        {
+          "latijn_html": "Pater <u>filio</u> donum dat.",
+          "correct": { "naamval": "dativus", "getal": "enkelvoud", "verklaring": "meewerkend voorwerp" },
+          "points": 1
+        },
+        {
+          "latijn_html": "Servus in <u>campo</u> laborat.",
+          "correct": { "naamval": "ablativus", "getal": "enkelvoud", "verklaring": "bijwoordelijke bepaling" },
+          "points": 1
+        },
+        {
+          "latijn_html": "<u>Feminae</u> pueros vident.",
+          "correct": { "naamval": "nominativus", "getal": "meervoud", "verklaring": "onderwerp" },
+          "points": 1
+        }
+      ],
+      "grading": { "rule": "per_item_partial", "full_points_if": 3, "half_points_if": 2 },
+      "points": 5
+    },
+    {
+      "id": "q083",
+      "type": "grouped_short_text",
+      "quiz_group": 1,
+      "prompt_html": "Beantwoord de vragen over het verhaal van <b>Flumen</b> (Romulus en Remus).",
+      "items": [
+        {
+          "vraag": "Hoe heet de rivier waar de tweeling in wordt gelegd?",
+          "accepted": ["Tiber", "Tiberis", "de Tiber"]
+        },
+        {
+          "vraag": "Wie is de vader van de tweeling volgens de mythe?",
+          "accepted": ["Mars"]
+        },
+        {
+          "vraag": "Welk dier voedt de tweeling op?",
+          "accepted": ["wolf", "wolvin", "lupa", "een wolvin", "een wolf"]
+        },
+        {
+          "vraag": "Wie vindt de tweeling en neemt hen mee naar huis?",
+          "accepted": ["Faustulus", "een herder", "herder"]
+        },
+        {
+          "vraag": "Hoe heet de vrouw van Faustulus?",
+          "accepted": ["Acca Larentia", "Larentia", "Acca"]
+        }
+      ],
+      "points": 5
+    },
+    {
+      "id": "q084",
+      "type": "grouped_short_text",
+      "quiz_group": 3,
+      "prompt_html": "Beantwoord de vragen over het verhaal van <b>Regnum</b> (de stichting van Rome).",
+      "items": [
+        {
+          "vraag": "Wie van de tweeling wordt de eerste koning van Rome?",
+          "accepted": ["Romulus"]
+        },
+        {
+          "vraag": "Waarom doodt Romulus zijn broer Remus?",
+          "accepted": ["Remus springt over de muur", "hij springt over de muur", "over de muur springen", "belediging", "spot"]
+        },
+        {
+          "vraag": "Op welke heuvel sticht Romulus zijn stad?",
+          "accepted": ["Palatijn", "Palatinus", "de Palatijn"]
+        },
+        {
+          "vraag": "Hoe noemt Romulus zijn nieuwe stad?",
+          "accepted": ["Roma", "Rome"]
+        },
+        {
+          "vraag": "Waarmee doodt Romulus zijn broer?",
+          "accepted": ["zwaard", "gladius", "een zwaard"]
+        }
+      ],
+      "points": 5
+    },
+    {
+      "id": "q085",
+      "type": "table_parse",
+      "quiz_group": 2,
+      "prompt_html": "Vul de ontbrekende vormen in van <b>donum</b> (geschenk, groep 2 onzijdig).",
+      "blocks": [
+        {
+          "lemma": "donum",
+          "rows": [
+            { "veld": "nom. ev", "invulbaar": false, "given": "donum" },
+            { "veld": "gen. ev", "invulbaar": true, "accepted": ["doni"] },
+            { "veld": "dat. ev", "invulbaar": true, "accepted": ["dono"] },
+            { "veld": "acc. ev", "invulbaar": true, "accepted": ["donum"] },
+            { "veld": "abl. ev", "invulbaar": true, "accepted": ["dono"] },
+            { "veld": "nom. mv", "invulbaar": true, "accepted": ["dona"] },
+            { "veld": "acc. mv", "invulbaar": true, "accepted": ["dona"] }
+          ]
+        }
+      ],
+      "points": 6,
+      "grading": { "per_cell_points": 1 }
     }
   ]
 }
