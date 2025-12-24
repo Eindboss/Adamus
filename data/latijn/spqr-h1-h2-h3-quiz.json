@@ -2192,12 +2192,6 @@
           ]
         },
         {
-          "vraag": "tacere",
-          "accepted": [
-            "zwijgen"
-          ]
-        },
-        {
           "vraag": "rex",
           "accepted": [
             "koning"
@@ -2228,25 +2222,6 @@
           "accepted": [
             "plaats"
           ]
-        },
-        {
-          "vraag": "facere",
-          "accepted": [
-            "doen",
-            "maken"
-          ]
-        },
-        {
-          "vraag": "aspicere",
-          "accepted": [
-            "aankijken"
-          ]
-        },
-        {
-          "vraag": "videre",
-          "accepted": [
-            "zien"
-          ]
         }
       ]
     },
@@ -2256,12 +2231,6 @@
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "protegere",
-          "accepted": [
-            "beschermen"
-          ]
-        },
         {
           "vraag": "cum",
           "accepted": [
@@ -2278,12 +2247,6 @@
           "vraag": "corbis",
           "accepted": [
             "mandje"
-          ]
-        },
-        {
-          "vraag": "nam",
-          "accepted": [
-            "want"
           ]
         }
       ]
@@ -2304,12 +2267,6 @@
           "vraag": "haerere",
           "accepted": [
             "blijven steken"
-          ]
-        },
-        {
-          "vraag": "cogitare",
-          "accepted": [
-            "(na)denken"
           ]
         },
         {
@@ -2384,12 +2341,6 @@
           ]
         },
         {
-          "vraag": "audire",
-          "accepted": [
-            "horen"
-          ]
-        },
-        {
           "vraag": "praebere",
           "accepted": [
             "(aan)bieden"
@@ -2413,12 +2364,6 @@
           "vraag": "vir",
           "accepted": [
             "man"
-          ]
-        },
-        {
-          "vraag": "sed",
-          "accepted": [
-            "maar"
           ]
         },
         {
@@ -2492,12 +2437,6 @@
           ]
         },
         {
-          "vraag": "aedificare",
-          "accepted": [
-            "bouwen"
-          ]
-        },
-        {
           "vraag": "ideo",
           "accepted": [
             "daarom"
@@ -2544,12 +2483,6 @@
           ]
         },
         {
-          "vraag": "necare",
-          "accepted": [
-            "doden"
-          ]
-        },
-        {
           "vraag": "dicere",
           "accepted": [
             "zeggen"
@@ -2587,12 +2520,6 @@
           "accepted": [
             "tepels"
           ]
-        },
-        {
-          "vraag": "clamare",
-          "accepted": [
-            "schreeuwen"
-          ]
         }
       ]
     },
@@ -2602,12 +2529,6 @@
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "bibere",
-          "accepted": [
-            "drinken"
-          ]
-        },
         {
           "vraag": "colligere",
           "accepted": [
@@ -2644,12 +2565,6 @@
           "vraag": "mandatum",
           "accepted": [
             "opdracht"
-          ]
-        },
-        {
-          "vraag": "gladius",
-          "accepted": [
-            "zwaard"
           ]
         },
         {
@@ -2698,12 +2613,6 @@
           ]
         },
         {
-          "vraag": "tradere",
-          "accepted": [
-            "overhandigen"
-          ]
-        },
-        {
           "vraag": "hostis",
           "accepted": [
             "vijand"
@@ -2718,27 +2627,9 @@
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
         {
-          "vraag": "submergere",
-          "accepted": [
-            "laten verdrinken"
-          ]
-        },
-        {
           "vraag": "revenire",
           "accepted": [
             "terugkomen"
-          ]
-        },
-        {
-          "vraag": "dividere",
-          "accepted": [
-            "verdelen"
-          ]
-        },
-        {
-          "vraag": "portare",
-          "accepted": [
-            "dragen"
           ]
         },
         {
@@ -2774,12 +2665,6 @@
           ]
         },
         {
-          "vraag": "natare",
-          "accepted": [
-            "(blijven) drijven"
-          ]
-        },
-        {
           "vraag": "imponere in",
           "accepted": [
             "plaatsen in"
@@ -2797,12 +2682,6 @@
           "vraag": "vesperi",
           "accepted": [
             "'s avonds"
-          ]
-        },
-        {
-          "vraag": "civis",
-          "accepted": [
-            "burger"
           ]
         },
         {
@@ -2883,21 +2762,9 @@
           ]
         },
         {
-          "vraag": "ponere",
-          "accepted": [
-            "plaatsen"
-          ]
-        },
-        {
           "vraag": "ubi",
           "accepted": [
             "waar"
-          ]
-        },
-        {
-          "vraag": "fluere",
-          "accepted": [
-            "stromen"
           ]
         }
       ]
@@ -2909,22 +2776,10 @@
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
         {
-          "vraag": "arundo",
-          "accepted": [
-            "riet"
-          ]
-        },
-        {
           "vraag": "vocare",
           "accepted": [
             "roepen",
             "noemen"
-          ]
-        },
-        {
-          "vraag": "lacrimare",
-          "accepted": [
-            "huilen"
           ]
         },
         {
@@ -3071,12 +2926,6 @@
           ]
         },
         {
-          "vraag": "tacere",
-          "accepted": [
-            "zwijgen"
-          ]
-        },
-        {
           "vraag": "rex",
           "accepted": [
             "koning"
@@ -3103,34 +2952,27 @@
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
         {
-          "vraag": "locus",
+          "vraag": "cum",
           "accepted": [
-            "plaats"
+            "met"
           ]
         },
         {
-          "vraag": "facere",
+          "vraag": "sicut",
           "accepted": [
-            "doen",
-            "maken"
+            "zoals"
           ]
         },
         {
-          "vraag": "aspicere",
+          "vraag": "corbis",
           "accepted": [
-            "aankijken"
+            "mandje"
           ]
         },
         {
-          "vraag": "videre",
+          "vraag": "mater",
           "accepted": [
-            "zien"
-          ]
-        },
-        {
-          "vraag": "protegere",
-          "accepted": [
-            "beschermen"
+            "moeder"
           ]
         }
       ]
@@ -3142,33 +2984,27 @@
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
         {
-          "vraag": "cum",
+          "vraag": "haerere",
           "accepted": [
-            "met"
+            "blijven steken"
           ]
         },
         {
-          "vraag": "sicut",
+          "vraag": "domum",
           "accepted": [
-            "zoals"
+            "naar huis"
           ]
         },
         {
-          "vraag": "corbis",
+          "vraag": "descendere",
           "accepted": [
-            "mandje"
+            "afdalen"
           ]
         },
         {
-          "vraag": "nam",
+          "vraag": "tamen",
           "accepted": [
-            "want"
-          ]
-        },
-        {
-          "vraag": "mater",
-          "accepted": [
-            "moeder"
+            "toch"
           ]
         }
       ]
@@ -3180,33 +3016,34 @@
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
         {
-          "vraag": "haerere",
+          "vraag": "pastor",
           "accepted": [
-            "blijven steken"
+            "herder"
           ]
         },
         {
-          "vraag": "cogitare",
+          "vraag": "puer",
           "accepted": [
-            "(na)denken"
+            "jongen"
           ]
         },
         {
-          "vraag": "domum",
+          "vraag": "uxor",
           "accepted": [
-            "naar huis"
+            "echtgenote"
           ]
         },
         {
-          "vraag": "descendere",
+          "vraag": "dum",
           "accepted": [
-            "afdalen"
+            "terwijl",
+            "zolang als"
           ]
         },
         {
-          "vraag": "tamen",
+          "vraag": "facile est",
           "accepted": [
-            "toch"
+            "het is gemakkelijk"
           ]
         }
       ]
@@ -3218,54 +3055,9 @@
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
         {
-          "vraag": "pastor",
-          "accepted": [
-            "herder"
-          ]
-        },
-        {
-          "vraag": "puer",
-          "accepted": [
-            "jongen"
-          ]
-        },
-        {
-          "vraag": "uxor",
-          "accepted": [
-            "echtgenote"
-          ]
-        },
-        {
-          "vraag": "dum",
-          "accepted": [
-            "terwijl",
-            "zolang als"
-          ]
-        },
-        {
-          "vraag": "facile est",
-          "accepted": [
-            "het is gemakkelijk"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q117",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
           "vraag": "filius",
           "accepted": [
             "zoon"
-          ]
-        },
-        {
-          "vraag": "audire",
-          "accepted": [
-            "horen"
           ]
         },
         {
@@ -3289,17 +3081,11 @@
       ]
     },
     {
-      "id": "q118",
+      "id": "q117",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "sed",
-          "accepted": [
-            "maar"
-          ]
-        },
         {
           "vraag": "subito",
           "accepted": [
@@ -3327,7 +3113,7 @@
       ]
     },
     {
-      "id": "q119",
+      "id": "q118",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3365,17 +3151,11 @@
       ]
     },
     {
-      "id": "q120",
+      "id": "q119",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "aedificare",
-          "accepted": [
-            "bouwen"
-          ]
-        },
         {
           "vraag": "ideo",
           "accepted": [
@@ -3405,7 +3185,7 @@
       ]
     },
     {
-      "id": "q121",
+      "id": "q120",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3423,12 +3203,6 @@
           ]
         },
         {
-          "vraag": "necare",
-          "accepted": [
-            "doden"
-          ]
-        },
-        {
           "vraag": "dicere",
           "accepted": [
             "zeggen"
@@ -3443,7 +3217,7 @@
       ]
     },
     {
-      "id": "q122",
+      "id": "q121",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3466,23 +3240,11 @@
           "accepted": [
             "tepels"
           ]
-        },
-        {
-          "vraag": "clamare",
-          "accepted": [
-            "schreeuwen"
-          ]
-        },
-        {
-          "vraag": "bibere",
-          "accepted": [
-            "drinken"
-          ]
         }
       ]
     },
     {
-      "id": "q123",
+      "id": "q122",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3520,17 +3282,11 @@
       ]
     },
     {
-      "id": "q124",
+      "id": "q123",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "gladius",
-          "accepted": [
-            "zwaard"
-          ]
-        },
         {
           "vraag": "accedere",
           "accepted": [
@@ -3559,7 +3315,7 @@
       ]
     },
     {
-      "id": "q125",
+      "id": "q124",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3577,27 +3333,15 @@
           ]
         },
         {
-          "vraag": "tradere",
-          "accepted": [
-            "overhandigen"
-          ]
-        },
-        {
           "vraag": "hostis",
           "accepted": [
             "vijand"
-          ]
-        },
-        {
-          "vraag": "submergere",
-          "accepted": [
-            "laten verdrinken"
           ]
         }
       ]
     },
     {
-      "id": "q126",
+      "id": "q125",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3606,18 +3350,6 @@
           "vraag": "revenire",
           "accepted": [
             "terugkomen"
-          ]
-        },
-        {
-          "vraag": "dividere",
-          "accepted": [
-            "verdelen"
-          ]
-        },
-        {
-          "vraag": "portare",
-          "accepted": [
-            "dragen"
           ]
         },
         {
@@ -3635,7 +3367,7 @@
       ]
     },
     {
-      "id": "q127",
+      "id": "q126",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3653,12 +3385,6 @@
           ]
         },
         {
-          "vraag": "natare",
-          "accepted": [
-            "(blijven) drijven"
-          ]
-        },
-        {
           "vraag": "imponere in",
           "accepted": [
             "plaatsen in"
@@ -3673,17 +3399,11 @@
       ]
     },
     {
-      "id": "q128",
+      "id": "q127",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "civis",
-          "accepted": [
-            "burger"
-          ]
-        },
         {
           "vraag": "venire",
           "accepted": [
@@ -3711,7 +3431,7 @@
       ]
     },
     {
-      "id": "q129",
+      "id": "q128",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3750,7 +3470,7 @@
       ]
     },
     {
-      "id": "q130",
+      "id": "q129",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3762,33 +3482,15 @@
           ]
         },
         {
-          "vraag": "ponere",
-          "accepted": [
-            "plaatsen"
-          ]
-        },
-        {
           "vraag": "ubi",
           "accepted": [
             "waar"
-          ]
-        },
-        {
-          "vraag": "fluere",
-          "accepted": [
-            "stromen"
-          ]
-        },
-        {
-          "vraag": "arundo",
-          "accepted": [
-            "riet"
           ]
         }
       ]
     },
     {
-      "id": "q131",
+      "id": "q130",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3798,12 +3500,6 @@
           "accepted": [
             "roepen",
             "noemen"
-          ]
-        },
-        {
-          "vraag": "lacrimare",
-          "accepted": [
-            "huilen"
           ]
         },
         {
@@ -3828,7 +3524,7 @@
       ]
     },
     {
-      "id": "q132",
+      "id": "q131",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3868,7 +3564,7 @@
       ]
     },
     {
-      "id": "q133",
+      "id": "q132",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3906,7 +3602,7 @@
       ]
     },
     {
-      "id": "q134",
+      "id": "q133",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -3944,17 +3640,11 @@
       ]
     },
     {
-      "id": "q135",
+      "id": "q134",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "tacere",
-          "accepted": [
-            "zwijgen"
-          ]
-        },
         {
           "vraag": "rex",
           "accepted": [
@@ -3982,46 +3672,7 @@
       ]
     },
     {
-      "id": "q136",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "facere",
-          "accepted": [
-            "doen",
-            "maken"
-          ]
-        },
-        {
-          "vraag": "aspicere",
-          "accepted": [
-            "aankijken"
-          ]
-        },
-        {
-          "vraag": "videre",
-          "accepted": [
-            "zien"
-          ]
-        },
-        {
-          "vraag": "protegere",
-          "accepted": [
-            "beschermen"
-          ]
-        },
-        {
-          "vraag": "cum",
-          "accepted": [
-            "met"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q137",
+      "id": "q135",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4039,12 +3690,6 @@
           ]
         },
         {
-          "vraag": "nam",
-          "accepted": [
-            "want"
-          ]
-        },
-        {
           "vraag": "mater",
           "accepted": [
             "moeder"
@@ -4059,17 +3704,11 @@
       ]
     },
     {
-      "id": "q138",
+      "id": "q136",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "cogitare",
-          "accepted": [
-            "(na)denken"
-          ]
-        },
         {
           "vraag": "domum",
           "accepted": [
@@ -4097,7 +3736,7 @@
       ]
     },
     {
-      "id": "q139",
+      "id": "q137",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4136,17 +3775,11 @@
       ]
     },
     {
-      "id": "q140",
+      "id": "q138",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "audire",
-          "accepted": [
-            "horen"
-          ]
-        },
         {
           "vraag": "praebere",
           "accepted": [
@@ -4164,17 +3797,11 @@
           "accepted": [
             "man"
           ]
-        },
-        {
-          "vraag": "sed",
-          "accepted": [
-            "maar"
-          ]
         }
       ]
     },
     {
-      "id": "q141",
+      "id": "q139",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4212,7 +3839,7 @@
       ]
     },
     {
-      "id": "q142",
+      "id": "q140",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4240,17 +3867,11 @@
           "accepted": [
             "kudde"
           ]
-        },
-        {
-          "vraag": "aedificare",
-          "accepted": [
-            "bouwen"
-          ]
         }
       ]
     },
     {
-      "id": "q143",
+      "id": "q141",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4290,7 +3911,7 @@
       ]
     },
     {
-      "id": "q144",
+      "id": "q142",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4299,12 +3920,6 @@
           "vraag": "ridere",
           "accepted": [
             "lachen"
-          ]
-        },
-        {
-          "vraag": "necare",
-          "accepted": [
-            "doden"
           ]
         },
         {
@@ -4329,7 +3944,7 @@
       ]
     },
     {
-      "id": "q145",
+      "id": "q143",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4347,18 +3962,6 @@
           ]
         },
         {
-          "vraag": "clamare",
-          "accepted": [
-            "schreeuwen"
-          ]
-        },
-        {
-          "vraag": "bibere",
-          "accepted": [
-            "drinken"
-          ]
-        },
-        {
           "vraag": "colligere",
           "accepted": [
             "verzamelen"
@@ -4367,7 +3970,7 @@
       ]
     },
     {
-      "id": "q146",
+      "id": "q144",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4395,17 +3998,11 @@
           "accepted": [
             "opdracht"
           ]
-        },
-        {
-          "vraag": "gladius",
-          "accepted": [
-            "zwaard"
-          ]
         }
       ]
     },
     {
-      "id": "q147",
+      "id": "q145",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4444,7 +4041,7 @@
       ]
     },
     {
-      "id": "q148",
+      "id": "q146",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4456,21 +4053,9 @@
           ]
         },
         {
-          "vraag": "tradere",
-          "accepted": [
-            "overhandigen"
-          ]
-        },
-        {
           "vraag": "hostis",
           "accepted": [
             "vijand"
-          ]
-        },
-        {
-          "vraag": "submergere",
-          "accepted": [
-            "laten verdrinken"
           ]
         },
         {
@@ -4482,23 +4067,11 @@
       ]
     },
     {
-      "id": "q149",
+      "id": "q147",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "dividere",
-          "accepted": [
-            "verdelen"
-          ]
-        },
-        {
-          "vraag": "portare",
-          "accepted": [
-            "dragen"
-          ]
-        },
         {
           "vraag": "mons",
           "accepted": [
@@ -4520,7 +4093,7 @@
       ]
     },
     {
-      "id": "q150",
+      "id": "q148",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4529,12 +4102,6 @@
           "vraag": "dare",
           "accepted": [
             "geven"
-          ]
-        },
-        {
-          "vraag": "natare",
-          "accepted": [
-            "(blijven) drijven"
           ]
         },
         {
@@ -4548,17 +4115,11 @@
           "accepted": [
             "'s avonds"
           ]
-        },
-        {
-          "vraag": "civis",
-          "accepted": [
-            "burger"
-          ]
         }
       ]
     },
     {
-      "id": "q151",
+      "id": "q149",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4596,7 +4157,7 @@
       ]
     },
     {
-      "id": "q152",
+      "id": "q150",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4635,33 +4196,15 @@
       ]
     },
     {
-      "id": "q153",
+      "id": "q151",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
         {
-          "vraag": "ponere",
-          "accepted": [
-            "plaatsen"
-          ]
-        },
-        {
           "vraag": "ubi",
           "accepted": [
             "waar"
-          ]
-        },
-        {
-          "vraag": "fluere",
-          "accepted": [
-            "stromen"
-          ]
-        },
-        {
-          "vraag": "arundo",
-          "accepted": [
-            "riet"
           ]
         },
         {
@@ -4674,17 +4217,11 @@
       ]
     },
     {
-      "id": "q154",
+      "id": "q152",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "lacrimare",
-          "accepted": [
-            "huilen"
-          ]
-        },
         {
           "vraag": "tandem",
           "accepted": [
@@ -4713,7 +4250,7 @@
       ]
     },
     {
-      "id": "q155",
+      "id": "q153",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4753,7 +4290,7 @@
       ]
     },
     {
-      "id": "q156",
+      "id": "q154",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4791,7 +4328,7 @@
       ]
     },
     {
-      "id": "q157",
+      "id": "q155",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4819,17 +4356,11 @@
           "accepted": [
             "god"
           ]
-        },
-        {
-          "vraag": "tacere",
-          "accepted": [
-            "zwijgen"
-          ]
         }
       ]
     },
     {
-      "id": "q158",
+      "id": "q156",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4857,40 +4388,15 @@
           "accepted": [
             "plaats"
           ]
-        },
-        {
-          "vraag": "facere",
-          "accepted": [
-            "doen",
-            "maken"
-          ]
         }
       ]
     },
     {
-      "id": "q159",
+      "id": "q157",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
       "items": [
-        {
-          "vraag": "aspicere",
-          "accepted": [
-            "aankijken"
-          ]
-        },
-        {
-          "vraag": "videre",
-          "accepted": [
-            "zien"
-          ]
-        },
-        {
-          "vraag": "protegere",
-          "accepted": [
-            "beschermen"
-          ]
-        },
         {
           "vraag": "cum",
           "accepted": [
@@ -4906,7 +4412,7 @@
       ]
     },
     {
-      "id": "q160",
+      "id": "q158",
       "type": "grouped_short_text",
       "quiz_group": 6,
       "prompt_html": "Vertaal de woorden naar het Nederlands.",
@@ -4915,12 +4421,6 @@
           "vraag": "corbis",
           "accepted": [
             "mandje"
-          ]
-        },
-        {
-          "vraag": "nam",
-          "accepted": [
-            "want"
           ]
         },
         {
@@ -4933,12 +4433,6 @@
           "vraag": "haerere",
           "accepted": [
             "blijven steken"
-          ]
-        },
-        {
-          "vraag": "cogitare",
-          "accepted": [
-            "(na)denken"
           ]
         }
       ]
