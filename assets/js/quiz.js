@@ -1316,11 +1316,25 @@ function renderGlobalGraph(container, render) {
   const curve = render.curve || [];
   const axes = render.axes || {};
 
+  // Generate x-axis ticks from curve data points
+  let xTicks = null;
+  if (curve.length > 0) {
+    const xValues = curve.map((p) => p.x);
+    const minX = Math.min(...xValues);
+    const maxX = Math.max(...xValues);
+    // Create ticks at every 2 units (0, 2, 4, 6, 8)
+    xTicks = [];
+    for (let x = minX; x <= maxX; x += 2) {
+      xTicks.push(x);
+    }
+  }
+
   const graph = createGlobalGraph({
     width: 380,
     height: 200,
     xLabel: axes.x_label || "tijd",
     yLabel: axes.y_label || "waarde",
+    xTicks,
   });
 
   // Add the curve

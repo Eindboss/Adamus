@@ -753,6 +753,7 @@ export function createGlobalGraph(options = {}) {
     height = 200,
     xLabel = "tijd",
     yLabel = "waarde",
+    xTicks = null, // Array of tick values e.g. [0, 2, 4, 6, 8]
   } = options;
 
   const padding = { top: 20, right: 20, bottom: 40, left: 50 };
@@ -849,6 +850,53 @@ export function createGlobalGraph(options = {}) {
   labelsGroup.appendChild(yLabelEl);
 
   svg.appendChild(labelsGroup);
+
+  // X-axis tick marks (if provided)
+  if (xTicks && xTicks.length > 0) {
+    const tickGroup = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "g",
+    );
+    tickGroup.setAttribute("class", "x-ticks");
+    tickGroup.setAttribute("font-family", "Inter, sans-serif");
+    tickGroup.setAttribute("font-size", "11");
+    tickGroup.setAttribute("fill", "#666");
+
+    const minTick = Math.min(...xTicks);
+    const maxTick = Math.max(...xTicks);
+    const tickRange = maxTick - minTick;
+
+    xTicks.forEach((tickVal) => {
+      const xPos =
+        padding.left + ((tickVal - minTick) / tickRange) * innerWidth;
+
+      // Tick line
+      const tick = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "line",
+      );
+      tick.setAttribute("x1", xPos);
+      tick.setAttribute("y1", height - padding.bottom);
+      tick.setAttribute("x2", xPos);
+      tick.setAttribute("y2", height - padding.bottom + 5);
+      tick.setAttribute("stroke", "#666");
+      tick.setAttribute("stroke-width", "1");
+      tickGroup.appendChild(tick);
+
+      // Tick label
+      const label = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "text",
+      );
+      label.setAttribute("x", xPos);
+      label.setAttribute("y", height - padding.bottom + 17);
+      label.setAttribute("text-anchor", "middle");
+      label.textContent = tickVal;
+      tickGroup.appendChild(label);
+    });
+
+    svg.appendChild(tickGroup);
+  }
 
   // Content group
   const contentGroup = document.createElementNS(
