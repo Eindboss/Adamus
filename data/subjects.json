@@ -3,11 +3,13 @@
     {
       "id": "latijn-spqr-h1-h2-h3",
       "subject": "Latijn",
-      "label": "Latijn – SPQR H1-H3 Woordjes",
-      "title": "Latijn – SPQR Hoofdstuk 1, 2 & 3 Woordjes",
-      "file": "data/latijn/spqr-h1-h2-h3-flashcards.json",
-      "schema": "flashcards",
-      "week": "2e toetsweek"
+      "label": "Latijn – SPQR H1-H3 Toets",
+      "title": "Latijn – SPQR Hoofdstuk 1, 2 & 3",
+      "file": "data/latijn/spqr-h1-h2-h3-quiz.json",
+      "flashcardFile": "data/latijn/spqr-h1-h2-h3-flashcards.json",
+      "schema": "toets",
+      "week": "2e toetsweek",
+      "questionsPerSession": 10
     },
     {
       "id": "latijn-flumen-toets",

@@ -1,0 +1,744 @@
+{
+  "id": "latijn-spqr-h1-h2-h3-quiz",
+  "title": "Latijn SPQR H1-H3 – Toets",
+  "subject": "Latijn",
+  "description": "Woordjes, grammatica en naamvallen uit Flumen, Lupa en Regnum",
+  "questionsPerSession": 10,
+  "questions": [
+    {
+      "id": "q001",
+      "type": "grouped_short_text",
+      "quiz_group": 1,
+      "prompt_html": "Vertaal de volgende woorden naar het Latijn:",
+      "items": [
+        {"dutch": "rivier", "accept": ["flumen", "flumina"]},
+        {"dutch": "koning", "accept": ["rex", "regis"]},
+        {"dutch": "slaaf", "accept": ["servus"]},
+        {"dutch": "roepen", "accept": ["vocare"]},
+        {"dutch": "komen", "accept": ["venire"]}
+      ]
+    },
+    {
+      "id": "q002",
+      "type": "grouped_short_text",
+      "quiz_group": 1,
+      "prompt_html": "Vertaal de volgende Latijnse woorden naar het Nederlands:",
+      "items": [
+        {"dutch": "audire", "accept": ["horen"]},
+        {"dutch": "videre", "accept": ["zien"]},
+        {"dutch": "clamare", "accept": ["schreeuwen"]},
+        {"dutch": "lacrimare", "accept": ["huilen"]},
+        {"dutch": "necare", "accept": ["doden"]}
+      ]
+    },
+    {
+      "id": "q003",
+      "type": "mc",
+      "quiz_group": 1,
+      "q": "Wat is de juiste vertaling van 'infans, infantes'?",
+      "a": ["baby", "kind", "jongen", "meisje"],
+      "c": 0,
+      "e": "infans, infantes = baby"
+    },
+    {
+      "id": "q004",
+      "type": "mc",
+      "quiz_group": 1,
+      "q": "Welk werkwoord betekent 'bevelen'?",
+      "a": ["iubere", "timere", "videre", "audire"],
+      "c": 0,
+      "e": "iubere = bevelen"
+    },
+    {
+      "id": "q005",
+      "type": "open",
+      "quiz_group": 1,
+      "q": "Vertaal naar het Latijn: vrezen / bang zijn voor",
+      "accept": ["timere"],
+      "e": "timere = vrezen, bang zijn voor"
+    },
+    {
+      "id": "q006",
+      "type": "mc",
+      "quiz_group": 1,
+      "q": "Wat betekent 'mandatum'?",
+      "a": ["opdracht", "bevel", "wet", "regel"],
+      "c": 0,
+      "e": "mandatum = opdracht"
+    },
+    {
+      "id": "q007",
+      "type": "grouped_short_text",
+      "quiz_group": 1,
+      "prompt_html": "Vertaal de volgende woorden naar het Latijn:",
+      "items": [
+        {"dutch": "niet", "accept": ["non"]},
+        {"dutch": "toch", "accept": ["tamen"]},
+        {"dutch": "daarom", "accept": ["ideo"]},
+        {"dutch": "waar", "accept": ["ubi"]},
+        {"dutch": "daar", "accept": ["ibi"]}
+      ]
+    },
+    {
+      "id": "q008",
+      "type": "mc",
+      "quiz_group": 1,
+      "q": "Welk voorzetsel betekent 'naar, tot' en gaat met de accusativus?",
+      "a": ["ad", "in", "de", "cum"],
+      "c": 0,
+      "e": "ad + acc = naar, tot"
+    },
+    {
+      "id": "q009",
+      "type": "grouped_short_text",
+      "quiz_group": 1,
+      "prompt_html": "Vertaal de volgende werkwoorden naar het Nederlands:",
+      "items": [
+        {"dutch": "portare", "accept": ["dragen"]},
+        {"dutch": "ponere", "accept": ["plaatsen"]},
+        {"dutch": "imponere", "accept": ["plaatsen in"]},
+        {"dutch": "natare", "accept": ["drijven", "blijven drijven"]},
+        {"dutch": "fluere", "accept": ["stromen"]}
+      ]
+    },
+    {
+      "id": "q010",
+      "type": "mc",
+      "quiz_group": 1,
+      "q": "Wat betekent 'haerere'?",
+      "a": ["blijven steken", "stromen", "drijven", "vallen"],
+      "c": 0,
+      "e": "haerere = blijven steken"
+    },
+    {
+      "id": "q011",
+      "type": "grouped_short_text",
+      "quiz_group": 2,
+      "prompt_html": "Vertaal de volgende woorden naar het Latijn (Lupa):",
+      "items": [
+        {"dutch": "herder", "accept": ["pastor", "pastores"]},
+        {"dutch": "kudde", "accept": ["grex", "greges"]},
+        {"dutch": "bewaken", "accept": ["custodire"]},
+        {"dutch": "plotseling", "accept": ["subito"]},
+        {"dutch": "naderen", "accept": ["accedere"]}
+      ]
+    },
+    {
+      "id": "q012",
+      "type": "mc",
+      "quiz_group": 2,
+      "q": "Wat is de infinitivus van het werkwoord 'zijn'?",
+      "a": ["esse", "est", "sum", "sunt"],
+      "c": 0,
+      "e": "esse = zijn (infinitivus)"
+    },
+    {
+      "id": "q013",
+      "type": "open",
+      "quiz_group": 2,
+      "q": "Vertaal naar het Latijn: (aan)bieden",
+      "accept": ["praebere"],
+      "e": "praebere = (aan)bieden"
+    },
+    {
+      "id": "q014",
+      "type": "grouped_short_text",
+      "quiz_group": 2,
+      "prompt_html": "Vertaal de volgende werkwoorden naar het Nederlands:",
+      "items": [
+        {"dutch": "bibere", "accept": ["drinken"]},
+        {"dutch": "cogitare", "accept": ["nadenken", "denken"]},
+        {"dutch": "protegere", "accept": ["beschermen"]},
+        {"dutch": "submergere", "accept": ["laten verdrinken", "verdrinken"]},
+        {"dutch": "tradere", "accept": ["overhandigen"]}
+      ]
+    },
+    {
+      "id": "q015",
+      "type": "mc",
+      "quiz_group": 2,
+      "q": "Welk werkwoord gaat met de DATIVUS en betekent 'kwaad doen'?",
+      "a": ["nocere", "necare", "facere", "dicere"],
+      "c": 0,
+      "e": "nocere + dat = kwaad doen"
+    },
+    {
+      "id": "q016",
+      "type": "open",
+      "quiz_group": 2,
+      "q": "Vertaal naar het Nederlands: domum",
+      "accept": ["naar huis"],
+      "e": "domum = naar huis"
+    },
+    {
+      "id": "q017",
+      "type": "grouped_short_text",
+      "quiz_group": 2,
+      "prompt_html": "Vertaal de volgende zelfstandige naamwoorden naar het Latijn:",
+      "items": [
+        {"dutch": "echtgenote", "accept": ["uxor", "uxores"]},
+        {"dutch": "zoon", "accept": ["filius"]},
+        {"dutch": "vrouw", "accept": ["femina"]},
+        {"dutch": "naam", "accept": ["nomen", "nomina"]},
+        {"dutch": "god", "accept": ["deus"]}
+      ]
+    },
+    {
+      "id": "q018",
+      "type": "mc",
+      "quiz_group": 2,
+      "q": "Wat betekent 'alter...alter'?",
+      "a": ["de een... de ander", "beiden", "niemand", "iedereen"],
+      "c": 0,
+      "e": "alter...alter = de een... de ander"
+    },
+    {
+      "id": "q019",
+      "type": "grouped_short_text",
+      "quiz_group": 2,
+      "prompt_html": "Vertaal de volgende familiewoorden naar het Latijn:",
+      "items": [
+        {"dutch": "moeder", "accept": ["mater", "matres"]},
+        {"dutch": "vader", "accept": ["pater", "patres"]},
+        {"dutch": "broer", "accept": ["frater", "fratres"]},
+        {"dutch": "zoon", "accept": ["filius"]},
+        {"dutch": "vrouw", "accept": ["femina"]}
+      ]
+    },
+    {
+      "id": "q020",
+      "type": "mc",
+      "quiz_group": 2,
+      "q": "Welk werkwoord gaat met de DATIVUS en betekent 'steun geven aan'?",
+      "a": ["favere", "dare", "dicere", "facere"],
+      "c": 0,
+      "e": "favere + dat = steun geven aan"
+    },
+    {
+      "id": "q021",
+      "type": "grouped_short_text",
+      "quiz_group": 3,
+      "prompt_html": "Vertaal de volgende woorden naar het Latijn (Regnum):",
+      "items": [
+        {"dutch": "vriend", "accept": ["amicus"]},
+        {"dutch": "berg", "accept": ["mons", "montes"]},
+        {"dutch": "afdalen", "accept": ["descendere"]},
+        {"dutch": "samenkomen", "accept": ["convenire"]},
+        {"dutch": "volk", "accept": ["populus"]}
+      ]
+    },
+    {
+      "id": "q022",
+      "type": "mc",
+      "quiz_group": 3,
+      "q": "Welk voorzetsel betekent 'van(af)' en gaat met de ablativus?",
+      "a": ["de", "ad", "in", "cum"],
+      "c": 0,
+      "e": "de + abl = van(af)"
+    },
+    {
+      "id": "q023",
+      "type": "mc",
+      "quiz_group": 3,
+      "q": "Welk voorzetsel betekent 'met' en gaat met de ablativus?",
+      "a": ["cum", "de", "ad", "in"],
+      "c": 0,
+      "e": "cum + abl = met"
+    },
+    {
+      "id": "q024",
+      "type": "grouped_short_text",
+      "quiz_group": 3,
+      "prompt_html": "Vertaal de volgende werkwoorden naar het Nederlands:",
+      "items": [
+        {"dutch": "tacere", "accept": ["zwijgen"]},
+        {"dutch": "aspicere", "accept": ["bekijken"]},
+        {"dutch": "dividere", "accept": ["verdelen"]},
+        {"dutch": "aedificare", "accept": ["bouwen"]},
+        {"dutch": "facere", "accept": ["maken"]}
+      ]
+    },
+    {
+      "id": "q025",
+      "type": "mc",
+      "quiz_group": 3,
+      "q": "Wat betekent 'quoque'?",
+      "a": ["ook", "en", "maar", "want"],
+      "c": 0,
+      "e": "quoque = ook"
+    },
+    {
+      "id": "q026",
+      "type": "open",
+      "quiz_group": 3,
+      "q": "Vertaal naar het Latijn: eindelijk",
+      "accept": ["tandem"],
+      "e": "tandem = eindelijk"
+    },
+    {
+      "id": "q027",
+      "type": "mc",
+      "quiz_group": 3,
+      "q": "Wat betekent 'et...et'?",
+      "a": ["zowel... als", "of... of", "noch... noch", "en... en"],
+      "c": 0,
+      "e": "et...et = zowel... als"
+    },
+    {
+      "id": "q028",
+      "type": "grouped_short_text",
+      "quiz_group": 3,
+      "prompt_html": "Vertaal de volgende bouwwoorden naar het Latijn:",
+      "items": [
+        {"dutch": "stad", "accept": ["urbs", "urbes"]},
+        {"dutch": "muur", "accept": ["murus"]},
+        {"dutch": "huis", "accept": ["casa"]},
+        {"dutch": "rots", "accept": ["saxum"]},
+        {"dutch": "boomstam", "accept": ["truncus"]}
+      ]
+    },
+    {
+      "id": "q029",
+      "type": "mc",
+      "quiz_group": 3,
+      "q": "Wat betekent 'primum'?",
+      "a": ["eerst", "laatste", "altijd", "soms"],
+      "c": 0,
+      "e": "primum = eerst"
+    },
+    {
+      "id": "q030",
+      "type": "open",
+      "quiz_group": 3,
+      "q": "Vertaal naar het Nederlands: vir, viri",
+      "accept": ["man"],
+      "e": "vir, viri = man"
+    },
+    {
+      "id": "q031",
+      "type": "grouped_short_text",
+      "quiz_group": 4,
+      "prompt_html": "Vertaal de volgende werkwoorden naar het Latijn:",
+      "items": [
+        {"dutch": "verzamelen", "accept": ["colligere"]},
+        {"dutch": "ontvangen", "accept": ["accipere"]},
+        {"dutch": "staan", "accept": ["stare"]},
+        {"dutch": "binnenkomen", "accept": ["intrare"]},
+        {"dutch": "oversteken", "accept": ["transire"]}
+      ]
+    },
+    {
+      "id": "q032",
+      "type": "mc",
+      "quiz_group": 4,
+      "q": "Welk werkwoord gaat met de DATIVUS en betekent 'bevallen'?",
+      "a": ["placere", "facere", "dicere", "ridere"],
+      "c": 0,
+      "e": "placere + dat = bevallen"
+    },
+    {
+      "id": "q033",
+      "type": "open",
+      "quiz_group": 4,
+      "q": "Vertaal naar het Nederlands: cur",
+      "accept": ["waarom"],
+      "e": "cur = waarom"
+    },
+    {
+      "id": "q034",
+      "type": "mc",
+      "quiz_group": 4,
+      "q": "Wat betekent 'licet'?",
+      "a": ["het is toegestaan", "het is verboden", "het is moeilijk", "het is nodig"],
+      "c": 0,
+      "e": "licet = het is toegestaan"
+    },
+    {
+      "id": "q035",
+      "type": "grouped_short_text",
+      "quiz_group": 4,
+      "prompt_html": "Vertaal de volgende bijwoorden naar het Latijn:",
+      "items": [
+        {"dutch": "'s avonds", "accept": ["vesperi"]},
+        {"dutch": "al / reeds", "accept": ["iam"]},
+        {"dutch": "eerst", "accept": ["primum"]},
+        {"dutch": "eindelijk", "accept": ["tandem"]},
+        {"dutch": "ook", "accept": ["quoque"]}
+      ]
+    },
+    {
+      "id": "q036",
+      "type": "mc",
+      "quiz_group": 4,
+      "q": "Welk werkwoord gaat met de DATIVUS en betekent 'belachelijk maken'?",
+      "a": ["illudere", "ridere", "ludere", "videre"],
+      "c": 0,
+      "e": "illudere + dat = belachelijk maken"
+    },
+    {
+      "id": "q037",
+      "type": "open",
+      "quiz_group": 4,
+      "q": "Vertaal naar het Latijn: vijand",
+      "accept": ["hostis", "hostes"],
+      "e": "hostis, hostes = vijand"
+    },
+    {
+      "id": "q038",
+      "type": "grouped_short_text",
+      "quiz_group": 4,
+      "prompt_html": "Vertaal de volgende woorden naar het Nederlands:",
+      "items": [
+        {"dutch": "civis", "accept": ["burger"]},
+        {"dutch": "gladius", "accept": ["zwaard"]},
+        {"dutch": "arundo", "accept": ["riet"]},
+        {"dutch": "sed", "accept": ["maar"]},
+        {"dutch": "nam", "accept": ["want"]}
+      ]
+    },
+    {
+      "id": "q039",
+      "type": "mc",
+      "quiz_group": 4,
+      "q": "Wat betekent 'facile est'?",
+      "a": ["het is gemakkelijk", "het is moeilijk", "het is mogelijk", "het is nodig"],
+      "c": 0,
+      "e": "facile est = het is gemakkelijk"
+    },
+    {
+      "id": "q040",
+      "type": "open",
+      "quiz_group": 4,
+      "q": "Vertaal naar het Latijn: zoals",
+      "accept": ["sicut"],
+      "e": "sicut = zoals"
+    },
+    {
+      "id": "q041",
+      "type": "mc",
+      "quiz_group": 5,
+      "q": "In welke naamval staat het ONDERWERP van een zin?",
+      "a": ["nominativus", "accusativus", "dativus", "ablativus"],
+      "c": 0,
+      "e": "Het onderwerp staat in de nominativus"
+    },
+    {
+      "id": "q042",
+      "type": "mc",
+      "quiz_group": 5,
+      "q": "In welke naamval staat het LIJDEND VOORWERP?",
+      "a": ["accusativus", "nominativus", "dativus", "ablativus"],
+      "c": 0,
+      "e": "Het lijdend voorwerp staat in de accusativus"
+    },
+    {
+      "id": "q043",
+      "type": "mc",
+      "quiz_group": 5,
+      "q": "In welke naamval staat het MEEWERKEND VOORWERP?",
+      "a": ["dativus", "accusativus", "nominativus", "ablativus"],
+      "c": 0,
+      "e": "Het meewerkend voorwerp staat in de dativus"
+    },
+    {
+      "id": "q044",
+      "type": "mc",
+      "quiz_group": 5,
+      "q": "Welke naamval gebruik je voor BIJWOORDELIJKE BEPALINGEN (waar? waarmee?)?",
+      "a": ["ablativus", "dativus", "accusativus", "nominativus"],
+      "c": 0,
+      "e": "De ablativus wordt gebruikt voor bijwoordelijke bepalingen"
+    },
+    {
+      "id": "q045",
+      "type": "mc",
+      "quiz_group": 5,
+      "q": "Wat is de nominativus enkelvoud van 'femina' (vrouw)?",
+      "a": ["femina", "feminam", "feminae", "feminas"],
+      "c": 0,
+      "e": "femina is de nominativus enkelvoud"
+    },
+    {
+      "id": "q046",
+      "type": "mc",
+      "quiz_group": 5,
+      "q": "Wat is de accusativus enkelvoud van 'servus' (slaaf)?",
+      "a": ["servum", "servus", "servi", "servo"],
+      "c": 0,
+      "e": "servum is de accusativus enkelvoud (groep 2)"
+    },
+    {
+      "id": "q047",
+      "type": "mc",
+      "quiz_group": 5,
+      "q": "Wat is de dativus enkelvoud van 'rex' (koning)?",
+      "a": ["regi", "regem", "rex", "regis"],
+      "c": 0,
+      "e": "regi is de dativus enkelvoud (groep 3)"
+    },
+    {
+      "id": "q048",
+      "type": "open",
+      "quiz_group": 5,
+      "q": "Zet in de accusativus enkelvoud: femina",
+      "accept": ["feminam"],
+      "e": "femina → feminam (accusativus ev)"
+    },
+    {
+      "id": "q049",
+      "type": "open",
+      "quiz_group": 5,
+      "q": "Zet in de nominativus meervoud: servus",
+      "accept": ["servi"],
+      "e": "servus → servi (nominativus mv)"
+    },
+    {
+      "id": "q050",
+      "type": "mc",
+      "quiz_group": 5,
+      "q": "Tot welke verbuigingsgroep behoort 'aqua' (water)?",
+      "a": ["groep 1 (a-stam)", "groep 2 (o-stam)", "groep 3 (cons-stam)", "groep 4"],
+      "c": 0,
+      "e": "aqua behoort tot groep 1 (a-stam): aqua, aquae"
+    },
+    {
+      "id": "q051",
+      "type": "mc",
+      "quiz_group": 6,
+      "q": "Tot welke verbuigingsgroep behoort 'donum' (geschenk)?",
+      "a": ["groep 2 (o-stam)", "groep 1 (a-stam)", "groep 3 (cons-stam)", "groep 4"],
+      "c": 0,
+      "e": "donum behoort tot groep 2 (o-stam): donum, doni"
+    },
+    {
+      "id": "q052",
+      "type": "mc",
+      "quiz_group": 6,
+      "q": "Tot welke verbuigingsgroep behoort 'nomen' (naam)?",
+      "a": ["groep 3", "groep 1", "groep 2", "groep 4"],
+      "c": 0,
+      "e": "nomen behoort tot groep 3: nomen, nominis"
+    },
+    {
+      "id": "q053",
+      "type": "grouped_short_text",
+      "quiz_group": 6,
+      "prompt_html": "Vul de persoonsvorm van 'esse' (zijn) in:",
+      "items": [
+        {"dutch": "ik ben", "accept": ["sum"]},
+        {"dutch": "jij bent", "accept": ["es"]},
+        {"dutch": "hij/zij is", "accept": ["est"]},
+        {"dutch": "wij zijn", "accept": ["sumus"]},
+        {"dutch": "zij zijn (mv)", "accept": ["sunt"]}
+      ]
+    },
+    {
+      "id": "q054",
+      "type": "mc",
+      "quiz_group": 6,
+      "q": "Wat is 'jullie zijn' in het Latijn?",
+      "a": ["estis", "sunt", "sumus", "es"],
+      "c": 0,
+      "e": "estis = jullie zijn"
+    },
+    {
+      "id": "q055",
+      "type": "open",
+      "quiz_group": 6,
+      "q": "Vertaal: De slaaf roept.",
+      "accept": ["servus vocat", "servus clamat"],
+      "e": "De slaaf roept = Servus vocat/clamat"
+    },
+    {
+      "id": "q056",
+      "type": "open",
+      "quiz_group": 6,
+      "q": "Vertaal: De vrouw ziet de slaaf.",
+      "accept": ["femina servum videt"],
+      "e": "De vrouw (nom) ziet de slaaf (acc) = Femina servum videt"
+    },
+    {
+      "id": "q057",
+      "type": "mc",
+      "quiz_group": 6,
+      "q": "In de zin 'Pater servo mandatum dat', wat is de functie van 'servo'?",
+      "a": ["meewerkend voorwerp (dativus)", "lijdend voorwerp (accusativus)", "onderwerp (nominativus)", "bijwoordelijke bepaling (ablativus)"],
+      "c": 0,
+      "e": "servo is dativus = meewerkend voorwerp (aan de slaaf)"
+    },
+    {
+      "id": "q058",
+      "type": "mc",
+      "quiz_group": 6,
+      "q": "Wat is het persoonlijk voornaamwoord 'ik' in de nominativus?",
+      "a": ["ego", "me", "mihi", "nos"],
+      "c": 0,
+      "e": "ego = ik (nominativus)"
+    },
+    {
+      "id": "q059",
+      "type": "mc",
+      "quiz_group": 6,
+      "q": "Wat is 'aan/voor mij' in het Latijn (dativus)?",
+      "a": ["mihi", "me", "ego", "mei"],
+      "c": 0,
+      "e": "mihi = aan/voor mij (dativus)"
+    },
+    {
+      "id": "q060",
+      "type": "mc",
+      "quiz_group": 6,
+      "q": "Wat is 'aan/voor jou' in het Latijn (dativus)?",
+      "a": ["tibi", "te", "tu", "tui"],
+      "c": 0,
+      "e": "tibi = aan/voor jou (dativus)"
+    },
+    {
+      "id": "q061",
+      "type": "grouped_short_text",
+      "quiz_group": 7,
+      "prompt_html": "Vertaal de volgende zinnen naar het Nederlands:",
+      "items": [
+        {"dutch": "Servus bibit.", "accept": ["de slaaf drinkt"]},
+        {"dutch": "Femina ridet.", "accept": ["de vrouw lacht"]},
+        {"dutch": "Puer clamat.", "accept": ["de jongen schreeuwt"]},
+        {"dutch": "Rex iubet.", "accept": ["de koning beveelt"]},
+        {"dutch": "Pastor custodiat.", "accept": ["de herder bewaakt"]}
+      ]
+    },
+    {
+      "id": "q062",
+      "type": "mc",
+      "quiz_group": 7,
+      "q": "Welke uitgang krijgt een werkwoord in de 3e persoon enkelvoud?",
+      "a": ["-t", "-nt", "-s", "-mus"],
+      "c": 0,
+      "e": "De 3e persoon enkelvoud eindigt op -t (bijv. vocat, videt)"
+    },
+    {
+      "id": "q063",
+      "type": "mc",
+      "quiz_group": 7,
+      "q": "Welke uitgang krijgt een werkwoord in de 3e persoon meervoud?",
+      "a": ["-nt", "-t", "-mus", "-tis"],
+      "c": 0,
+      "e": "De 3e persoon meervoud eindigt op -nt (bijv. vocant, vident)"
+    },
+    {
+      "id": "q064",
+      "type": "open",
+      "quiz_group": 7,
+      "q": "Zet in de ablativus enkelvoud: aqua",
+      "accept": ["aqua"],
+      "e": "aqua → aqua (ablativus ev, groep 1)"
+    },
+    {
+      "id": "q065",
+      "type": "open",
+      "quiz_group": 7,
+      "q": "Zet in de ablativus enkelvoud: servus",
+      "accept": ["servo"],
+      "e": "servus → servo (ablativus ev, groep 2)"
+    },
+    {
+      "id": "q066",
+      "type": "mc",
+      "quiz_group": 7,
+      "q": "Wat is de ablativus enkelvoud van 'rex'?",
+      "a": ["rege", "regi", "regem", "regis"],
+      "c": 0,
+      "e": "rex → rege (ablativus ev, groep 3)"
+    },
+    {
+      "id": "q067",
+      "type": "grouped_short_text",
+      "quiz_group": 7,
+      "prompt_html": "Geef de stam van deze zelfstandige naamwoorden:",
+      "items": [
+        {"dutch": "femina, feminae", "accept": ["femin-", "femin"]},
+        {"dutch": "servus, servi", "accept": ["serv-", "serv"]},
+        {"dutch": "rex, regis", "accept": ["reg-", "reg"]},
+        {"dutch": "nomen, nominis", "accept": ["nomin-", "nomin"]},
+        {"dutch": "flumen, fluminis", "accept": ["flumin-", "flumin"]}
+      ]
+    },
+    {
+      "id": "q068",
+      "type": "mc",
+      "quiz_group": 7,
+      "q": "In + accusativus betekent...",
+      "a": ["in, naar (richting)", "in, op (plaats)", "met", "van"],
+      "c": 0,
+      "e": "in + acc = in, naar (richting/beweging)"
+    },
+    {
+      "id": "q069",
+      "type": "mc",
+      "quiz_group": 7,
+      "q": "In + ablativus betekent...",
+      "a": ["in, op (plaats)", "in, naar (richting)", "met", "van"],
+      "c": 0,
+      "e": "in + abl = in, op (plaats, geen beweging)"
+    },
+    {
+      "id": "q070",
+      "type": "open",
+      "quiz_group": 7,
+      "q": "Vertaal naar het Latijn: De vader geeft aan de zoon.",
+      "accept": ["pater filio dat"],
+      "e": "Pater (nom) filio (dat) dat = De vader geeft aan de zoon"
+    },
+    {
+      "id": "q071",
+      "type": "grouped_short_text",
+      "quiz_group": 8,
+      "prompt_html": "Vertaal de volgende werkwoorden naar het Latijn:",
+      "items": [
+        {"dutch": "zeggen", "accept": ["dicere"]},
+        {"dutch": "geven", "accept": ["dare"]},
+        {"dutch": "lachen", "accept": ["ridere"]},
+        {"dutch": "weigeren", "accept": ["recusare"]},
+        {"dutch": "optillen", "accept": ["tollere"]}
+      ]
+    },
+    {
+      "id": "q072",
+      "type": "mc",
+      "quiz_group": 8,
+      "q": "Wat is de nominativus meervoud van 'urbs' (stad)?",
+      "a": ["urbes", "urbis", "urbi", "urbem"],
+      "c": 0,
+      "e": "urbs → urbes (nominativus mv, groep 3)"
+    },
+    {
+      "id": "q073",
+      "type": "open",
+      "quiz_group": 8,
+      "q": "Vertaal naar het Nederlands: Servi gregem custodiunt.",
+      "accept": ["de slaven bewaken de kudde"],
+      "e": "Servi (nom mv) gregem (acc) custodiunt = De slaven bewaken de kudde"
+    },
+    {
+      "id": "q074",
+      "type": "mc",
+      "quiz_group": 8,
+      "q": "Hoe herken je een infinitivus in het Latijn?",
+      "a": ["eindigt op -re of -ere", "eindigt op -t", "eindigt op -nt", "eindigt op -s"],
+      "c": 0,
+      "e": "De infinitivus eindigt op -re of -ere (vocare, videre, esse)"
+    },
+    {
+      "id": "q075",
+      "type": "grouped_short_text",
+      "quiz_group": 8,
+      "prompt_html": "Vertaal de volgende zinnen naar het Latijn:",
+      "items": [
+        {"dutch": "De koning ziet.", "accept": ["rex videt"]},
+        {"dutch": "De slaven komen.", "accept": ["servi veniunt"]},
+        {"dutch": "De vrouw roept.", "accept": ["femina vocat", "femina clamat"]},
+        {"dutch": "De herders bewaken.", "accept": ["pastores custodiunt"]},
+        {"dutch": "De jongens huilen.", "accept": ["pueri lacrimant"]}
+      ]
+    }
+  ]
+}
