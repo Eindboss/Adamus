@@ -86,9 +86,11 @@
       "subject": "Wiskunde",
       "label": "Wiskunde – H4: Getallen in de praktijk",
       "title": "Wiskunde – Hoofdstuk 4: Getallen in de praktijk",
-      "file": "data/wiskunde/hoofdstuk4-flashcards.json",
-      "schema": "flashcards",
-      "week": "2e toetsweek"
+      "file": "data/wiskunde/hoofdstuk4-quiz.json",
+      "flashcardFile": "data/wiskunde/hoofdstuk4-flashcards.json",
+      "schema": "toets",
+      "week": "2e toetsweek",
+      "questionsPerSession": 10
     },
     {
       "id": "geschiedenis-jagers-en-boeren",
