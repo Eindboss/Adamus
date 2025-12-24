@@ -1460,6 +1460,15 @@ function renderWiskundeMultiPart(container, q) {
     case "text":
       renderHtml = renderTextBlocks(render.blocks);
       break;
+    case "instruction":
+      // Instruction type with optional table and grid
+      if (render.table) {
+        renderHtml += renderMathTable(render.table);
+      }
+      if (render.ui_instructions?.grid_spec) {
+        renderHtml += '<div id="wiskundeGraph" class="wiskunde-graph"></div>';
+      }
+      break;
     default:
       renderHtml = "";
   }
@@ -1493,6 +1502,9 @@ function renderWiskundeMultiPart(container, q) {
     renderLineGraph($("wiskundeGraph"), render);
   } else if (render.type === "global_graph") {
     renderGlobalGraph($("wiskundeGraph"), render);
+  } else if (render.type === "instruction" && render.ui_instructions?.grid_spec) {
+    // Render grid from instruction spec
+    renderInstructionGrid($("wiskundeGraph"), render.ui_instructions.grid_spec);
   }
 
   // Setup event listeners for inputs
@@ -1768,6 +1780,29 @@ function renderGlobalGraph(container, render) {
       width: 3,
     });
   }
+
+  container.appendChild(graph.svg);
+}
+
+/**
+ * Render instruction grid (empty grid for drawing)
+ */
+function renderInstructionGrid(container, gridSpec) {
+  if (!container) return;
+
+  const graph = createLineGraph({
+    width: 400,
+    height: 300,
+    xMin: gridSpec.x_min ?? 0,
+    xMax: gridSpec.x_max ?? 10,
+    yMin: gridSpec.y_min ?? 0,
+    yMax: gridSpec.y_max ?? 100,
+    xStep: gridSpec.x_step ?? 1,
+    yStep: gridSpec.y_step ?? 10,
+    xLabel: gridSpec.x_label || "x",
+    yLabel: gridSpec.y_label || "y",
+    showGrid: true,
+  });
 
   container.appendChild(graph.svg);
 }
