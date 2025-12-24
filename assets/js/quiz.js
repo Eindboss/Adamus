@@ -754,6 +754,25 @@ function renderShortText(container, q) {
 }
 
 /**
+ * Expand abbreviated case labels to full names
+ */
+function expandCaseLabel(abbrev) {
+  const expansions = {
+    "nom. ev": "nominativus ev",
+    "gen. ev": "genitivus ev",
+    "dat. ev": "dativus ev",
+    "acc. ev": "accusativus ev",
+    "abl. ev": "ablativus ev",
+    "nom. mv": "nominativus mv",
+    "gen. mv": "genitivus mv",
+    "dat. mv": "dativus mv",
+    "acc. mv": "accusativus mv",
+    "abl. mv": "ablativus mv",
+  };
+  return expansions[abbrev] || abbrev;
+}
+
+/**
  * Render table_parse question (declension tables)
  */
 function renderTableParse(container, q) {
@@ -770,8 +789,8 @@ function renderTableParse(container, q) {
     .map((b) => `<th class="table-lemma">${b.lemma}</th>`)
     .join("");
 
-  // Get row labels from first block
-  const rowLabels = blocks[0]?.rows?.map((r) => r.veld) || [];
+  // Get row labels from first block (expand abbreviations)
+  const rowLabels = blocks[0]?.rows?.map((r) => expandCaseLabel(r.veld)) || [];
 
   // Build table rows
   const rowsHtml = rowLabels
