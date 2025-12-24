@@ -509,14 +509,14 @@
           "prompt": "Een punt (x, y) ligt op de x-as als…",
           "points": 1,
           "options": [
-            "x = 0",
             "y = 0",
+            "x = 0",
             "x = y",
             "x + y = 0"
           ],
-          "shuffle_options": true,
+          "shuffle_options": false,
           "answer": {
-            "correct_index": 1
+            "correct_index": 0
           }
         },
         {
@@ -525,14 +525,14 @@
           "prompt": "De oorsprong heeft coördinaten…",
           "points": 1,
           "options": [
+            "(0, 0)",
             "(1, 0)",
             "(0, 1)",
-            "(0, 0)",
             "(−1, −1)"
           ],
-          "shuffle_options": true,
+          "shuffle_options": false,
           "answer": {
-            "correct_index": 2
+            "correct_index": 0
           }
         }
       ],
@@ -1840,7 +1840,7 @@
               ],
               [
                 4,
-                40
+                50
               ],
               [
                 6,
@@ -3208,10 +3208,10 @@
           "prompt": "Wat betaal je voor 2 uur huren?",
           "points": 2,
           "answer": {
-            "value": "18",
+            "value": "26",
             "accept": [
-              "18",
-              "€18"
+              "26",
+              "€26"
             ]
           }
         },
@@ -3697,7 +3697,7 @@
           ],
           "shuffle_options": true,
           "answer": {
-            "correct_index": 2
+            "correct_index": 1
           }
         }
       ],

@@ -82,6 +82,15 @@
       "questionsPerSession": 10
     },
     {
+      "id": "wiskunde-h4-getallen-praktijk",
+      "subject": "Wiskunde",
+      "label": "Wiskunde – H4: Getallen in de praktijk",
+      "title": "Wiskunde – Hoofdstuk 4: Getallen in de praktijk",
+      "file": "data/wiskunde/hoofdstuk4-flashcards.json",
+      "schema": "flashcards",
+      "week": "2e toetsweek"
+    },
+    {
       "id": "geschiedenis-jagers-en-boeren",
       "subject": "Geschiedenis",
       "label": "Geschiedenis – Tijdvak 1: Jagers & Boeren",

@@ -1,0 +1,252 @@
+{
+  "id": "wiskunde-h4-flashcards",
+  "title": "Wiskunde H4 – Flashcards",
+  "subject": "Wiskunde",
+  "schema": "flashcards",
+  "level": "1e klas gymnasium",
+  "module": "H4 Getallen in de praktijk (4.1 t/m 4.5)",
+  "_comment": "Visuele hints per kaart staan in ui_notes; JSON heeft geen echte comments.",
+  "questions": [
+    {
+      "id": "h4-fc-01",
+      "type": "open",
+      "q": "Wat betekent afronden op 2 decimalen?",
+      "accept": ["op centen", "twee cijfers achter de komma", "2 cijfers achter de komma"],
+      "explanation": "Je houdt 2 cijfers achter de komma. Je kijkt naar het 3e cijfer achter de komma om te beslissen of je omhoog of omlaag afrondt.",
+      "ui_notes": ["Laat een voorbeeld zien: 12,964 → 12,96; 12,965 → 12,97."],
+      "tags": ["4.1", "afronden"]
+    },
+    {
+      "id": "h4-fc-02",
+      "type": "open",
+      "q": "Wat doe je bij vermenigvuldigen met 1000?",
+      "accept": ["komma 3 plaatsen naar rechts", "drie plaatsen naar rechts", "×1000 is 3 naar rechts"],
+      "explanation": "Je verschuift de komma 3 plaatsen naar rechts.",
+      "tags": ["4.1", "decimalen"]
+    },
+    {
+      "id": "h4-fc-03",
+      "type": "open",
+      "q": "Wat doe je bij delen door 100?",
+      "accept": ["komma 2 plaatsen naar links", "twee plaatsen naar links", "÷100 is 2 naar links"],
+      "explanation": "Je verschuift de komma 2 plaatsen naar links.",
+      "tags": ["4.1", "decimalen"]
+    },
+    {
+      "id": "h4-fc-04",
+      "type": "open",
+      "q": "Wanneer rond je een getal omhoog af?",
+      "accept": ["als het volgende cijfer 5 of hoger is", "bij 5-9", "5 6 7 8 9"],
+      "explanation": "Als het cijfer ná de plek waarop je afrondt 5, 6, 7, 8 of 9 is.",
+      "tags": ["4.1", "afronden"]
+    },
+    {
+      "id": "h4-fc-05",
+      "type": "open",
+      "q": "Wat is het verschil tussen miljoen en miljard?",
+      "accept": ["miljoen is 10^6 en miljard 10^9", "1 000 000 en 1 000 000 000"],
+      "explanation": "1 miljoen = 1 000 000. 1 miljard = 1 000 000 000.",
+      "tags": ["4.1", "grote getallen"]
+    },
+    {
+      "id": "h4-fc-06",
+      "type": "open",
+      "q": "Wat is schatten bij rekenen?",
+      "accept": ["ongeveer uitrekenen", "afronden en globaal rekenen", "controle met afronden"],
+      "explanation": "Je rondt getallen handig af en rekent globaal, om te controleren of de echte uitkomst logisch is.",
+      "tags": ["4.2", "schatten"]
+    },
+    {
+      "id": "h4-fc-07",
+      "type": "open",
+      "q": "Waarom gebruik je haakjes op de rekenmachine?",
+      "accept": ["om de juiste volgorde te krijgen", "prioriteit", "eerst dit dan dat"],
+      "explanation": "Haakjes zorgen dat je eerst de bewerking binnen de haakjes uitrekent, zodat de volgorde klopt.",
+      "tags": ["4.2", "rekenmachine"]
+    },
+    {
+      "id": "h4-fc-08",
+      "type": "open",
+      "q": "Hoe bereken je p% van een getal?",
+      "accept": ["deel door 100 en vermenigvuldig", "p/100 × getal", "percentage als decimaal"],
+      "explanation": "Zet p% om naar een decimaal (p/100) en vermenigvuldig met het getal.",
+      "tags": ["4.4", "procenten"]
+    },
+    {
+      "id": "h4-fc-09",
+      "type": "open",
+      "q": "Hoe bereken je 'welk percentage is deel van geheel'?",
+      "accept": ["deel/geheel × 100%", "deel gedeeld door geheel keer 100"],
+      "explanation": "percentage = (deel ÷ geheel) × 100%.",
+      "tags": ["4.4", "procenten"]
+    },
+    {
+      "id": "h4-fc-10",
+      "type": "open",
+      "q": "Wat betekent evenredig?",
+      "accept": ["als het ene 2x wordt, wordt het andere ook 2x", "vaste verhouding", "recht evenredig"],
+      "explanation": "De verhouding blijft gelijk: vermenigvuldig je de ene grootheid met een factor, dan vermenigvuldigt de andere met dezelfde factor.",
+      "tags": ["4.5", "evenredig"]
+    },
+    {
+      "id": "h4-fc-11",
+      "type": "open",
+      "q": "Wat betekent omgekeerd evenredig?",
+      "accept": ["als het ene 2x wordt, wordt het andere half", "product blijft constant", "1/x verband"],
+      "explanation": "Het product blijft gelijk: als de ene grootheid met een factor groter wordt, wordt de andere met dezelfde factor kleiner.",
+      "tags": ["4.5", "omgekeerd evenredig"]
+    },
+    {
+      "id": "h4-fc-12",
+      "type": "open",
+      "q": "Welke test helpt bij evenredig?",
+      "accept": ["verhouding constant", "deel door elkaar en kijk of hetzelfde blijft"],
+      "explanation": "Bij evenredig is (y ÷ x) constant (vaste verhouding).",
+      "tags": ["4.5", "controle"]
+    },
+    {
+      "id": "h4-fc-13",
+      "type": "open",
+      "q": "Welke test helpt bij omgekeerd evenredig?",
+      "accept": ["product constant", "x×y blijft gelijk"],
+      "explanation": "Bij omgekeerd evenredig is (x × y) constant.",
+      "tags": ["4.5", "controle"]
+    },
+    {
+      "id": "h4-fc-14",
+      "type": "open",
+      "q": "Wat is een verhoudingstabel?",
+      "accept": ["tabel met twee rijen die samen horen", "tabel om evenredig te rekenen"],
+      "explanation": "Een tabel met twee (of meer) rijen waarin bijbehorende waarden staan; je rekent door met dezelfde factor.",
+      "tags": ["4.5", "verhoudingstabel"]
+    },
+    {
+      "id": "h4-fc-15",
+      "type": "open",
+      "q": "Hoe reken je korting van p% uit?",
+      "accept": ["nieuw = oud × (1 - p/100)", "eerst p% eraf", "100% - p%"],
+      "explanation": "Nieuwe prijs = oude prijs × (1 − p/100).",
+      "tags": ["4.4", "korting"]
+    },
+    {
+      "id": "h4-fc-16",
+      "type": "open",
+      "q": "Hoe reken je prijsstijging van p% uit?",
+      "accept": ["nieuw = oud × (1 + p/100)", "100% + p%"],
+      "explanation": "Nieuwe prijs = oude prijs × (1 + p/100).",
+      "tags": ["4.4", "stijging"]
+    },
+    {
+      "id": "h4-fc-17",
+      "type": "open",
+      "q": "Wat betekent 'afronden op duizendtallen'?",
+      "accept": ["dichtstbijzijnde 1000", "op 1000 nauwkeurig"],
+      "explanation": "Je rondt af naar het dichtstbijzijnde veelvoud van 1000 (bijv. 67 462 → 67 000).",
+      "tags": ["4.1", "afronden"]
+    },
+    {
+      "id": "h4-fc-18",
+      "type": "open",
+      "q": "Waarom rond je eurobedragen meestal op 2 decimalen af?",
+      "accept": ["centen", "geld heeft centen", "2 decimalen = centen"],
+      "explanation": "Omdat €-bedragen in centen worden betaald: 2 decimalen.",
+      "tags": ["4.1", "toepassing"]
+    },
+    {
+      "id": "h4-fc-19",
+      "type": "open",
+      "q": "Wat is een schatting die 'handig' is?",
+      "accept": ["met mooie getallen", "afronden naar 10, 100, 0,5, 1", "makkelijk rekenen"],
+      "explanation": "Je rondt af naar getallen die je snel kunt rekenen (bijv. 698→700, 19,6→20).",
+      "tags": ["4.2", "schatten"]
+    },
+    {
+      "id": "h4-fc-20",
+      "type": "open",
+      "q": "Wat betekent 0,25 liter in milliliter?",
+      "accept": ["250 ml", "250"],
+      "explanation": "0,25 L = 250 ml (want 1 L = 1000 ml).",
+      "tags": ["4.1", "eenheden"]
+    },
+    {
+      "id": "h4-fc-21",
+      "type": "open",
+      "q": "Wat is de valkuil bij (deelstreep) breuken op de rekenmachine?",
+      "accept": ["haakjes vergeten", "teller/noemer verkeerd", "prioriteit fout"],
+      "explanation": "Zonder haakjes kan de rekenmachine een andere volgorde nemen. Schrijf teller en noemer duidelijk (met haakjes indien nodig).",
+      "tags": ["4.2", "rekenmachine"]
+    },
+    {
+      "id": "h4-fc-22",
+      "type": "open",
+      "q": "Hoe herken je 'geen van beide' bij verbanden?",
+      "accept": ["verhouding niet constant en product niet constant", "geen vaste regel"],
+      "explanation": "Als de verhouding niet constant is én het product ook niet constant is, is het geen evenredig en geen omgekeerd evenredig verband.",
+      "tags": ["4.5", "verbanden"]
+    },
+    {
+      "id": "h4-fc-23",
+      "type": "open",
+      "q": "Evenredig: wat gebeurt er als je beide grootheden met 3 vermenigvuldigt?",
+      "accept": ["verhouding blijft gelijk", "tabel blijft kloppen"],
+      "explanation": "Bij evenredig blijft de verhouding gelijk; je schaalt beide rijen met dezelfde factor.",
+      "tags": ["4.5", "evenredig"]
+    },
+    {
+      "id": "h4-fc-24",
+      "type": "open",
+      "q": "Omgekeerd evenredig: wat gebeurt er als je x verdubbelt?",
+      "accept": ["y halveert", "y wordt gedeeld door 2"],
+      "explanation": "Bij omgekeerd evenredig blijft x·y constant, dus als x ×2 gaat, moet y ÷2 gaan.",
+      "tags": ["4.5", "omgekeerd evenredig"]
+    },
+    {
+      "id": "h4-fc-25",
+      "type": "open",
+      "q": "Hoe zet je een percentage om naar een decimaal?",
+      "accept": ["delen door 100", "komma 2 naar links", "p% = p/100"],
+      "explanation": "Deel door 100: 17,5% = 0,175.",
+      "tags": ["4.4", "procenten"]
+    },
+    {
+      "id": "h4-fc-26",
+      "type": "open",
+      "q": "Hoe zet je een decimaal om naar een percentage?",
+      "accept": ["keer 100", "komma 2 naar rechts", "×100%"],
+      "explanation": "Vermenigvuldig met 100: 0,358 = 35,8%.",
+      "tags": ["4.4", "procenten"]
+    },
+    {
+      "id": "h4-fc-27",
+      "type": "open",
+      "q": "Wat is afronden op gehelen?",
+      "accept": ["op hele getallen", "zonder decimalen", "dichtstbijzijnde hele"],
+      "explanation": "Je rondt af naar het dichtstbijzijnde hele getal (0 decimalen).",
+      "tags": ["4.1", "afronden"]
+    },
+    {
+      "id": "h4-fc-28",
+      "type": "open",
+      "q": "Wat is handig bij omgekeerd evenredig rekenen met pompen/werkers?",
+      "accept": ["personen × tijd constant", "werk constant", "product constant"],
+      "explanation": "Denk: totaal werk blijft gelijk. Dus (aantal) × (tijd) = constant.",
+      "tags": ["4.5", "toepassing"]
+    },
+    {
+      "id": "h4-fc-29",
+      "type": "open",
+      "q": "Wat is handig bij evenredig rekenen met prijs per stuk/kg?",
+      "accept": ["eenheidsprijs", "per 1", "deel door aantal"],
+      "explanation": "Reken vaak eerst naar 1 (eenheidsprijs) en schaal dan op.",
+      "tags": ["4.5", "toepassing"]
+    },
+    {
+      "id": "h4-fc-30",
+      "type": "open",
+      "q": "Wat is het verschil tussen 'exact' en 'schatting'?",
+      "accept": ["exact is precies, schatting is ongeveer", "schatting is controle"],
+      "explanation": "Exact is de precieze uitkomst; een schatting is een snelle, afgeronde controle of de uitkomst logisch is.",
+      "tags": ["4.2", "begrip"]
+    }
+  ]
+}
