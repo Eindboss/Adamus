@@ -2513,9 +2513,13 @@ function checkWiskundeMultiPart(q) {
   state.partialScore = totalPoints;
   state.maxPartialScore = maxPoints;
 
+  // Build user answer summary from results
+  const userAnswerSummary = results.map((r) => `${r.partId}) ${r.userAnswer}`).join(", ");
+
   state.history.add({
     question: q.title || "Wiskunde vraag",
     type: "wiskunde_multi_part",
+    userAnswer: userAnswerSummary,
     correctCount,
     totalCount: parts.length,
     correct: isFullyCorrect,
