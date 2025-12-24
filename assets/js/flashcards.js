@@ -82,7 +82,14 @@ async function loadCards() {
 
     // Extract questions
     let questions = [];
-    if (meta.schema === "toets") {
+
+    // Detect v2 schema (ChatGPT extended format)
+    if (data.schema_version?.startsWith("2.") && Array.isArray(data.question_bank)) {
+      // Use the preserved source.raw data from v2 format
+      questions = data.question_bank
+        .map((q) => q.source?.raw || q)
+        .filter((q) => q);
+    } else if (meta.schema === "toets") {
       questions = data.questions || [];
     } else {
       questions = data.questions || data || [];

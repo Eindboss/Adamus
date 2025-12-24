@@ -177,7 +177,19 @@ async function loadQuestions(savedProgress = null) {
 
     // Extract questions based on schema
     let questions = [];
-    if (meta.schema === "toets") {
+
+    // Detect v2 schema (ChatGPT extended format)
+    if (data.schema_version?.startsWith("2.") && Array.isArray(data.question_bank)) {
+      // Convert v2 back to v1 using the preserved source.raw data
+      questions = data.question_bank.map((q) => {
+        // Use the original v1 format if available
+        if (q.source?.raw) {
+          return { ...q.source.raw, quiz_group: parseInt(q.group_id) || q.source.raw.quiz_group };
+        }
+        // Fallback: reconstruct from v2 payload
+        return convertV2ToV1(q);
+      });
+    } else if (meta.schema === "toets") {
       if (Array.isArray(data.questions)) {
         questions = data.questions;
       } else if (Array.isArray(data.toets)) {
@@ -346,6 +358,61 @@ function shuffleMCAnswers(q) {
     answers: newAnswers,
     correctIndex: newCorrectIndex,
   };
+}
+
+/**
+ * Convert v2 schema question to v1 format (fallback when source.raw is missing)
+ */
+function convertV2ToV1(q) {
+  const base = {
+    id: q.id,
+    type: q.type,
+    quiz_group: parseInt(q.group_id) || 1,
+  };
+
+  switch (q.type) {
+    case "mc":
+      return {
+        ...base,
+        q: q.payload?.question || q.prompt?.text || "",
+        a: q.payload?.choices?.map((c) => c.text) || [],
+        c: q.payload?.choices?.findIndex((c) => c.id === q.payload?.correct_choice_id) ?? 0,
+        e: q.feedback?.explanation || "",
+      };
+
+    case "open":
+      return {
+        ...base,
+        q: q.payload?.question || q.prompt?.text || "",
+        accepted: q.payload?.accepted_answers || [],
+        e: q.feedback?.explanation || "",
+      };
+
+    case "grouped_short_text":
+      return {
+        ...base,
+        prompt_html: q.payload?.instruction_html || q.prompt?.html || q.prompt?.text || "",
+        items: q.payload?.items?.map((item) => ({
+          vraag: item.question,
+          accepted: item.accepted_answers,
+        })) || [],
+      };
+
+    case "translation_open":
+      return {
+        ...base,
+        prompt_html: q.prompt?.html || q.prompt?.text || "",
+        answer: {
+          model_answer: q.payload?.model_answer || "",
+          keywords: q.payload?.keywords || [],
+        },
+        points: q.points || 1,
+      };
+
+    default:
+      // Return as-is for unknown types
+      return { ...base, ...q.payload };
+  }
 }
 
 /**
