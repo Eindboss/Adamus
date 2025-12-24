@@ -260,6 +260,9 @@ function normalizeQuestion(raw, preferMC = false) {
     "table_parse",
     "grouped_select",
     "wiskunde_multi_part", // New: math questions with parts
+    "ordering", // Ordering/sequence questions
+    "ratio_table", // Verhoudingstabel questions
+    "info_card", // Info display (no answer required)
   ];
   if (richTypes.includes(raw.type)) {
     return raw;
@@ -479,6 +482,15 @@ function renderQuestion() {
       break;
     case "wiskunde_multi_part":
       renderWiskundeMultiPart(container, q);
+      break;
+    case "ordering":
+      renderOrdering(container, q);
+      break;
+    case "ratio_table":
+      renderRatioTable(container, q);
+      break;
+    case "info_card":
+      renderInfoCard(container, q);
       break;
     default:
       // Fallback for unknown types
@@ -1046,6 +1058,379 @@ function updateSelectProgress() {
 }
 
 /* ===========================================
+   Ordering Question Type
+   =========================================== */
+
+/**
+ * Render ordering question (put items in correct sequence)
+ * Uses drag-and-drop or number inputs to arrange items
+ */
+function renderOrdering(container, q) {
+  const items = q.items || [];
+  const prompt = q.prompt_html || q.prompt || "Zet de items in de juiste volgorde.";
+
+  // Shuffle items for display (store original indices)
+  const shuffledItems = items.map((item, idx) => ({ text: item, originalIdx: idx }));
+  shuffle(shuffledItems);
+
+  const itemsHtml = shuffledItems
+    .map(
+      (item, idx) => `
+    <div class="ordering-item" data-idx="${idx}" data-original="${item.originalIdx}" draggable="true">
+      <span class="ordering-handle">☰</span>
+      <span class="ordering-number">${idx + 1}</span>
+      <span class="ordering-text">${item.text}</span>
+      <input type="number" class="ordering-input" data-idx="${idx}" min="1" max="${items.length}" placeholder="${idx + 1}">
+    </div>
+  `,
+    )
+    .join("");
+
+  container.innerHTML = `
+    <div class="question-title">${prompt}</div>
+    <div class="ordering-instructions">Sleep de items of vul nummers in (1 = eerste)</div>
+    <div class="ordering-list" id="orderingList">
+      ${itemsHtml}
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  // Setup drag and drop
+  setupOrderingDragDrop();
+
+  // Setup number inputs
+  $$$(".ordering-input", container).forEach((input) => {
+    input.addEventListener("input", updateOrderingProgress);
+  });
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = false; // Always enabled - can check current order
+}
+
+/**
+ * Setup drag and drop for ordering items
+ */
+function setupOrderingDragDrop() {
+  const list = $("orderingList");
+  if (!list) return;
+
+  let draggedItem = null;
+
+  $$$(".ordering-item").forEach((item) => {
+    item.addEventListener("dragstart", (e) => {
+      draggedItem = item;
+      item.classList.add("dragging");
+      e.dataTransfer.effectAllowed = "move";
+    });
+
+    item.addEventListener("dragend", () => {
+      item.classList.remove("dragging");
+      draggedItem = null;
+      updateOrderingNumbers();
+    });
+
+    item.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      if (draggedItem && draggedItem !== item) {
+        const rect = item.getBoundingClientRect();
+        const midY = rect.top + rect.height / 2;
+        if (e.clientY < midY) {
+          list.insertBefore(draggedItem, item);
+        } else {
+          list.insertBefore(draggedItem, item.nextSibling);
+        }
+      }
+    });
+  });
+}
+
+/**
+ * Update ordering numbers after drag
+ */
+function updateOrderingNumbers() {
+  $$$(".ordering-item").forEach((item, idx) => {
+    const numEl = $$(".ordering-number", item);
+    if (numEl) numEl.textContent = idx + 1;
+    const input = $$(".ordering-input", item);
+    if (input) input.placeholder = idx + 1;
+  });
+}
+
+/**
+ * Update ordering progress
+ */
+function updateOrderingProgress() {
+  // Always allow checking since drag order is valid
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = false;
+}
+
+/**
+ * Check ordering answer
+ */
+function checkOrdering(q) {
+  const items = q.items || [];
+  const correctOrder = q.answer?.order || items.map((_, i) => i); // Default: original order is correct
+  const list = $("orderingList");
+
+  // Get current order from DOM (after any drag operations)
+  const currentItems = $$$(".ordering-item", list);
+  const userOrder = currentItems.map((item) => parseInt(item.dataset.original, 10));
+
+  // Check if order matches
+  const isCorrect = userOrder.every((val, idx) => val === correctOrder[idx]);
+
+  // Mark items as correct/wrong
+  currentItems.forEach((item, idx) => {
+    const userIdx = parseInt(item.dataset.original, 10);
+    const expectedIdx = correctOrder[idx];
+    if (userIdx === expectedIdx) {
+      item.classList.add("ordering-correct");
+    } else {
+      item.classList.add("ordering-wrong");
+    }
+  });
+
+  if (isCorrect) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, isCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
+
+  state.history.add({
+    question: htmlToText(q.prompt_html || q.prompt),
+    type: "ordering",
+    correct: isCorrect,
+  });
+
+  // Build correct order for feedback
+  const correctOrderText = correctOrder.map((idx) => `${correctOrder.indexOf(idx) + 1}. ${items[idx]}`).join("<br>");
+
+  showFeedback(isCorrect, "", isCorrect ? "" : `Juiste volgorde:<br>${correctOrderText}`);
+}
+
+/* ===========================================
+   Ratio Table Question Type
+   =========================================== */
+
+/**
+ * Render ratio table (verhoudingstabel) question
+ */
+function renderRatioTable(container, q) {
+  const table = q.table || {};
+  const headers = table.headers || [];
+  const rows = table.rows || [];
+  const prompt = q.prompt_html || q.prompt || "Vul de verhoudingstabel in.";
+
+  // Build table
+  const headerHtml = headers.map((h) => `<th>${h}</th>`).join("");
+  const rowsHtml = rows
+    .map(
+      (row, rowIdx) => `
+    <tr>
+      ${row
+        .map((cell, colIdx) => {
+          if (cell === null || cell === "?") {
+            return `
+            <td class="ratio-cell ratio-cell-input">
+              <input type="text"
+                     id="ratio-${rowIdx}-${colIdx}"
+                     class="ratio-input"
+                     data-row="${rowIdx}"
+                     data-col="${colIdx}"
+                     placeholder="?"
+                     autocomplete="off">
+            </td>`;
+          } else {
+            return `<td class="ratio-cell ratio-cell-given">${cell}</td>`;
+          }
+        })
+        .join("")}
+    </tr>
+  `,
+    )
+    .join("");
+
+  const fillableCount = rows.flat().filter((c) => c === null || c === "?").length;
+
+  container.innerHTML = `
+    <div class="question-title">${prompt}</div>
+    <div class="ratio-table-wrap">
+      <table class="ratio-table">
+        <thead>
+          <tr>${headerHtml}</tr>
+        </thead>
+        <tbody>
+          ${rowsHtml}
+        </tbody>
+      </table>
+    </div>
+    <div class="ratio-progress">
+      <span id="ratioFilled">0</span> / <span>${fillableCount}</span> ingevuld
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  // Setup input listeners
+  $$$(".ratio-input", container).forEach((input) => {
+    input.addEventListener("input", updateRatioProgress);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const allInputs = $$$(".ratio-input");
+        const currentIdx = allInputs.indexOf(input);
+        if (currentIdx < allInputs.length - 1) {
+          allInputs[currentIdx + 1].focus();
+        }
+      }
+    });
+  });
+
+  // Focus first input
+  const firstInput = $$(".ratio-input", container);
+  if (firstInput) firstInput.focus();
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Update ratio table progress
+ */
+function updateRatioProgress() {
+  const filled = $$$(".ratio-input").filter((i) => i.value.trim().length > 0).length;
+  const filledEl = $("ratioFilled");
+  if (filledEl) filledEl.textContent = filled;
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = filled === 0;
+}
+
+/**
+ * Check ratio table answer
+ */
+function checkRatioTable(q) {
+  const answers = q.answer?.values || {};
+  let correctCount = 0;
+  let totalCount = 0;
+  const results = [];
+
+  $$$(".ratio-input").forEach((input) => {
+    totalCount++;
+    const row = input.dataset.row;
+    const col = input.dataset.col;
+    const key = `${row}-${col}`;
+    const userValue = input.value.trim();
+    const expectedValue = answers[key];
+
+    // Normalize numbers for comparison
+    const normalizedUser = userValue.replace(/,/g, ".").replace(/\s/g, "");
+    const normalizedExpected = String(expectedValue).replace(/,/g, ".").replace(/\s/g, "");
+
+    const isCorrect = normalizedUser === normalizedExpected ||
+      parseFloat(normalizedUser) === parseFloat(normalizedExpected);
+
+    if (isCorrect) {
+      correctCount++;
+      input.classList.add("input-correct");
+    } else {
+      input.classList.add("input-wrong");
+    }
+
+    results.push({
+      position: `rij ${parseInt(row) + 1}, kolom ${parseInt(col) + 1}`,
+      value: userValue,
+      expected: expectedValue,
+      correct: isCorrect,
+    });
+  });
+
+  const isFullyCorrect = correctCount === totalCount;
+  if (correctCount >= totalCount / 2) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, isFullyCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, isFullyCorrect);
+
+  state.history.add({
+    question: htmlToText(q.prompt_html || q.prompt),
+    type: "ratio_table",
+    correctCount,
+    totalCount,
+    correct: isFullyCorrect,
+  });
+
+  showGroupedFeedback(correctCount, totalCount, results.filter((r) => !r.correct).map((r) => ({
+    latin: r.position,
+    value: r.value,
+    expected: r.expected,
+    correct: false,
+  })));
+}
+
+/* ===========================================
+   Info Card Question Type
+   =========================================== */
+
+/**
+ * Render info card (no answer required, just display info)
+ */
+function renderInfoCard(container, q) {
+  const title = q.title || "Informatie";
+  const content = q.content_html || q.content || "";
+  const image = q.image || null;
+
+  container.innerHTML = `
+    <div class="info-card">
+      <div class="info-card-header">
+        <span class="info-icon">ℹ️</span>
+        <span class="info-title">${title}</span>
+      </div>
+      <div class="info-card-content">
+        ${content}
+      </div>
+      ${image ? `<div class="info-card-image"><img src="${image}" alt="Afbeelding"></div>` : ""}
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  // Info cards don't need checking - just show "next" immediately
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.textContent = "Begrepen";
+  if (checkBtn) checkBtn.disabled = false;
+}
+
+/**
+ * Check info card (always "correct" - just acknowledge)
+ */
+function checkInfoCard(q) {
+  // Info cards are always considered "seen"
+  state.history.add({
+    question: q.title || "Informatie",
+    type: "info_card",
+    correct: true,
+    skipped: false,
+  });
+
+  // Don't add to score, just show positive feedback
+  const feedbackEl = $("feedback");
+  if (feedbackEl) {
+    feedbackEl.className = "feedback feedback-info";
+    feedbackEl.innerHTML = `
+      <div class="feedback-header">
+        <span>✓</span>
+        <span>Gelezen</span>
+      </div>
+    `;
+    feedbackEl.style.display = "block";
+  }
+}
+
+/* ===========================================
    Wiskunde Multi-Part Question Renderer
    =========================================== */
 
@@ -1590,6 +1975,15 @@ export function checkAnswer() {
       break;
     case "wiskunde_multi_part":
       checkWiskundeMultiPart(q);
+      break;
+    case "ordering":
+      checkOrdering(q);
+      break;
+    case "ratio_table":
+      checkRatioTable(q);
+      break;
+    case "info_card":
+      checkInfoCard(q);
       break;
     default:
       checkOpenAnswer(q);
