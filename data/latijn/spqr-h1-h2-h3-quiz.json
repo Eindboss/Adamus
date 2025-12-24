@@ -11,11 +11,11 @@
       "quiz_group": 1,
       "prompt_html": "Vertaal de volgende woorden naar het Latijn:",
       "items": [
-        {"dutch": "rivier", "accept": ["flumen", "flumina"]},
-        {"dutch": "koning", "accept": ["rex", "regis"]},
-        {"dutch": "slaaf", "accept": ["servus"]},
-        {"dutch": "roepen", "accept": ["vocare"]},
-        {"dutch": "komen", "accept": ["venire"]}
+        {"vraag": "rivier", "accepted": ["flumen", "flumina"]},
+        {"vraag": "koning", "accepted": ["rex", "regis"]},
+        {"vraag": "slaaf", "accepted": ["servus"]},
+        {"vraag": "roepen", "accepted": ["vocare"]},
+        {"vraag": "komen", "accepted": ["venire"]}
       ]
     },
     {
@@ -24,11 +24,11 @@
       "quiz_group": 1,
       "prompt_html": "Vertaal de volgende Latijnse woorden naar het Nederlands:",
       "items": [
-        {"dutch": "audire", "accept": ["horen"]},
-        {"dutch": "videre", "accept": ["zien"]},
-        {"dutch": "clamare", "accept": ["schreeuwen"]},
-        {"dutch": "lacrimare", "accept": ["huilen"]},
-        {"dutch": "necare", "accept": ["doden"]}
+        {"vraag": "audire", "accepted": ["horen"]},
+        {"vraag": "videre", "accepted": ["zien"]},
+        {"vraag": "clamare", "accepted": ["schreeuwen"]},
+        {"vraag": "lacrimare", "accepted": ["huilen"]},
+        {"vraag": "necare", "accepted": ["doden"]}
       ]
     },
     {
@@ -54,7 +54,7 @@
       "type": "open",
       "quiz_group": 1,
       "q": "Vertaal naar het Latijn: vrezen / bang zijn voor",
-      "accept": ["timere"],
+      "accepted": ["timere"],
       "e": "timere = vrezen, bang zijn voor"
     },
     {
@@ -72,11 +72,11 @@
       "quiz_group": 1,
       "prompt_html": "Vertaal de volgende woorden naar het Latijn:",
       "items": [
-        {"dutch": "niet", "accept": ["non"]},
-        {"dutch": "toch", "accept": ["tamen"]},
-        {"dutch": "daarom", "accept": ["ideo"]},
-        {"dutch": "waar", "accept": ["ubi"]},
-        {"dutch": "daar", "accept": ["ibi"]}
+        {"vraag": "niet", "accepted": ["non"]},
+        {"vraag": "toch", "accepted": ["tamen"]},
+        {"vraag": "daarom", "accepted": ["ideo"]},
+        {"vraag": "waar", "accepted": ["ubi"]},
+        {"vraag": "daar", "accepted": ["ibi"]}
       ]
     },
     {
@@ -94,11 +94,11 @@
       "quiz_group": 1,
       "prompt_html": "Vertaal de volgende werkwoorden naar het Nederlands:",
       "items": [
-        {"dutch": "portare", "accept": ["dragen"]},
-        {"dutch": "ponere", "accept": ["plaatsen"]},
-        {"dutch": "imponere", "accept": ["plaatsen in"]},
-        {"dutch": "natare", "accept": ["drijven", "blijven drijven"]},
-        {"dutch": "fluere", "accept": ["stromen"]}
+        {"vraag": "portare", "accepted": ["dragen"]},
+        {"vraag": "ponere", "accepted": ["plaatsen"]},
+        {"vraag": "imponere", "accepted": ["plaatsen in"]},
+        {"vraag": "natare", "accepted": ["drijven", "blijven drijven"]},
+        {"vraag": "fluere", "accepted": ["stromen"]}
       ]
     },
     {
@@ -116,11 +116,11 @@
       "quiz_group": 2,
       "prompt_html": "Vertaal de volgende woorden naar het Latijn (Lupa):",
       "items": [
-        {"dutch": "herder", "accept": ["pastor", "pastores"]},
-        {"dutch": "kudde", "accept": ["grex", "greges"]},
-        {"dutch": "bewaken", "accept": ["custodire"]},
-        {"dutch": "plotseling", "accept": ["subito"]},
-        {"dutch": "naderen", "accept": ["accedere"]}
+        {"vraag": "herder", "accepted": ["pastor", "pastores"]},
+        {"vraag": "kudde", "accepted": ["grex", "greges"]},
+        {"vraag": "bewaken", "accepted": ["custodire"]},
+        {"vraag": "plotseling", "accepted": ["subito"]},
+        {"vraag": "naderen", "accepted": ["accedere"]}
       ]
     },
     {
@@ -137,7 +137,7 @@
       "type": "open",
       "quiz_group": 2,
       "q": "Vertaal naar het Latijn: (aan)bieden",
-      "accept": ["praebere"],
+      "accepted": ["praebere"],
       "e": "praebere = (aan)bieden"
     },
     {
@@ -146,11 +146,11 @@
       "quiz_group": 2,
       "prompt_html": "Vertaal de volgende werkwoorden naar het Nederlands:",
       "items": [
-        {"dutch": "bibere", "accept": ["drinken"]},
-        {"dutch": "cogitare", "accept": ["nadenken", "denken"]},
-        {"dutch": "protegere", "accept": ["beschermen"]},
-        {"dutch": "submergere", "accept": ["laten verdrinken", "verdrinken"]},
-        {"dutch": "tradere", "accept": ["overhandigen"]}
+        {"vraag": "bibere", "accepted": ["drinken"]},
+        {"vraag": "cogitare", "accepted": ["nadenken", "denken"]},
+        {"vraag": "protegere", "accepted": ["beschermen"]},
+        {"vraag": "submergere", "accepted": ["laten verdrinken", "verdrinken"]},
+        {"vraag": "tradere", "accepted": ["overhandigen"]}
       ]
     },
     {
@@ -167,7 +167,7 @@
       "type": "open",
       "quiz_group": 2,
       "q": "Vertaal naar het Nederlands: domum",
-      "accept": ["naar huis"],
+      "accepted": ["naar huis"],
       "e": "domum = naar huis"
     },
     {
@@ -176,11 +176,11 @@
       "quiz_group": 2,
       "prompt_html": "Vertaal de volgende zelfstandige naamwoorden naar het Latijn:",
       "items": [
-        {"dutch": "echtgenote", "accept": ["uxor", "uxores"]},
-        {"dutch": "zoon", "accept": ["filius"]},
-        {"dutch": "vrouw", "accept": ["femina"]},
-        {"dutch": "naam", "accept": ["nomen", "nomina"]},
-        {"dutch": "god", "accept": ["deus"]}
+        {"vraag": "echtgenote", "accepted": ["uxor", "uxores"]},
+        {"vraag": "zoon", "accepted": ["filius"]},
+        {"vraag": "vrouw", "accepted": ["femina"]},
+        {"vraag": "naam", "accepted": ["nomen", "nomina"]},
+        {"vraag": "god", "accepted": ["deus"]}
       ]
     },
     {
@@ -198,11 +198,11 @@
       "quiz_group": 2,
       "prompt_html": "Vertaal de volgende familiewoorden naar het Latijn:",
       "items": [
-        {"dutch": "moeder", "accept": ["mater", "matres"]},
-        {"dutch": "vader", "accept": ["pater", "patres"]},
-        {"dutch": "broer", "accept": ["frater", "fratres"]},
-        {"dutch": "zoon", "accept": ["filius"]},
-        {"dutch": "vrouw", "accept": ["femina"]}
+        {"vraag": "moeder", "accepted": ["mater", "matres"]},
+        {"vraag": "vader", "accepted": ["pater", "patres"]},
+        {"vraag": "broer", "accepted": ["frater", "fratres"]},
+        {"vraag": "zoon", "accepted": ["filius"]},
+        {"vraag": "vrouw", "accepted": ["femina"]}
       ]
     },
     {
@@ -220,11 +220,11 @@
       "quiz_group": 3,
       "prompt_html": "Vertaal de volgende woorden naar het Latijn (Regnum):",
       "items": [
-        {"dutch": "vriend", "accept": ["amicus"]},
-        {"dutch": "berg", "accept": ["mons", "montes"]},
-        {"dutch": "afdalen", "accept": ["descendere"]},
-        {"dutch": "samenkomen", "accept": ["convenire"]},
-        {"dutch": "volk", "accept": ["populus"]}
+        {"vraag": "vriend", "accepted": ["amicus"]},
+        {"vraag": "berg", "accepted": ["mons", "montes"]},
+        {"vraag": "afdalen", "accepted": ["descendere"]},
+        {"vraag": "samenkomen", "accepted": ["convenire"]},
+        {"vraag": "volk", "accepted": ["populus"]}
       ]
     },
     {
@@ -251,11 +251,11 @@
       "quiz_group": 3,
       "prompt_html": "Vertaal de volgende werkwoorden naar het Nederlands:",
       "items": [
-        {"dutch": "tacere", "accept": ["zwijgen"]},
-        {"dutch": "aspicere", "accept": ["bekijken"]},
-        {"dutch": "dividere", "accept": ["verdelen"]},
-        {"dutch": "aedificare", "accept": ["bouwen"]},
-        {"dutch": "facere", "accept": ["maken"]}
+        {"vraag": "tacere", "accepted": ["zwijgen"]},
+        {"vraag": "aspicere", "accepted": ["bekijken"]},
+        {"vraag": "dividere", "accepted": ["verdelen"]},
+        {"vraag": "aedificare", "accepted": ["bouwen"]},
+        {"vraag": "facere", "accepted": ["maken"]}
       ]
     },
     {
@@ -272,7 +272,7 @@
       "type": "open",
       "quiz_group": 3,
       "q": "Vertaal naar het Latijn: eindelijk",
-      "accept": ["tandem"],
+      "accepted": ["tandem"],
       "e": "tandem = eindelijk"
     },
     {
@@ -290,11 +290,11 @@
       "quiz_group": 3,
       "prompt_html": "Vertaal de volgende bouwwoorden naar het Latijn:",
       "items": [
-        {"dutch": "stad", "accept": ["urbs", "urbes"]},
-        {"dutch": "muur", "accept": ["murus"]},
-        {"dutch": "huis", "accept": ["casa"]},
-        {"dutch": "rots", "accept": ["saxum"]},
-        {"dutch": "boomstam", "accept": ["truncus"]}
+        {"vraag": "stad", "accepted": ["urbs", "urbes"]},
+        {"vraag": "muur", "accepted": ["murus"]},
+        {"vraag": "huis", "accepted": ["casa"]},
+        {"vraag": "rots", "accepted": ["saxum"]},
+        {"vraag": "boomstam", "accepted": ["truncus"]}
       ]
     },
     {
@@ -311,7 +311,7 @@
       "type": "open",
       "quiz_group": 3,
       "q": "Vertaal naar het Nederlands: vir, viri",
-      "accept": ["man"],
+      "accepted": ["man"],
       "e": "vir, viri = man"
     },
     {
@@ -320,11 +320,11 @@
       "quiz_group": 4,
       "prompt_html": "Vertaal de volgende werkwoorden naar het Latijn:",
       "items": [
-        {"dutch": "verzamelen", "accept": ["colligere"]},
-        {"dutch": "ontvangen", "accept": ["accipere"]},
-        {"dutch": "staan", "accept": ["stare"]},
-        {"dutch": "binnenkomen", "accept": ["intrare"]},
-        {"dutch": "oversteken", "accept": ["transire"]}
+        {"vraag": "verzamelen", "accepted": ["colligere"]},
+        {"vraag": "ontvangen", "accepted": ["accipere"]},
+        {"vraag": "staan", "accepted": ["stare"]},
+        {"vraag": "binnenkomen", "accepted": ["intrare"]},
+        {"vraag": "oversteken", "accepted": ["transire"]}
       ]
     },
     {
@@ -341,7 +341,7 @@
       "type": "open",
       "quiz_group": 4,
       "q": "Vertaal naar het Nederlands: cur",
-      "accept": ["waarom"],
+      "accepted": ["waarom"],
       "e": "cur = waarom"
     },
     {
@@ -359,11 +359,11 @@
       "quiz_group": 4,
       "prompt_html": "Vertaal de volgende bijwoorden naar het Latijn:",
       "items": [
-        {"dutch": "'s avonds", "accept": ["vesperi"]},
-        {"dutch": "al / reeds", "accept": ["iam"]},
-        {"dutch": "eerst", "accept": ["primum"]},
-        {"dutch": "eindelijk", "accept": ["tandem"]},
-        {"dutch": "ook", "accept": ["quoque"]}
+        {"vraag": "'s avonds", "accepted": ["vesperi"]},
+        {"vraag": "al / reeds", "accepted": ["iam"]},
+        {"vraag": "eerst", "accepted": ["primum"]},
+        {"vraag": "eindelijk", "accepted": ["tandem"]},
+        {"vraag": "ook", "accepted": ["quoque"]}
       ]
     },
     {
@@ -380,7 +380,7 @@
       "type": "open",
       "quiz_group": 4,
       "q": "Vertaal naar het Latijn: vijand",
-      "accept": ["hostis", "hostes"],
+      "accepted": ["hostis", "hostes"],
       "e": "hostis, hostes = vijand"
     },
     {
@@ -389,11 +389,11 @@
       "quiz_group": 4,
       "prompt_html": "Vertaal de volgende woorden naar het Nederlands:",
       "items": [
-        {"dutch": "civis", "accept": ["burger"]},
-        {"dutch": "gladius", "accept": ["zwaard"]},
-        {"dutch": "arundo", "accept": ["riet"]},
-        {"dutch": "sed", "accept": ["maar"]},
-        {"dutch": "nam", "accept": ["want"]}
+        {"vraag": "civis", "accepted": ["burger"]},
+        {"vraag": "gladius", "accepted": ["zwaard"]},
+        {"vraag": "arundo", "accepted": ["riet"]},
+        {"vraag": "sed", "accepted": ["maar"]},
+        {"vraag": "nam", "accepted": ["want"]}
       ]
     },
     {
@@ -410,7 +410,7 @@
       "type": "open",
       "quiz_group": 4,
       "q": "Vertaal naar het Latijn: zoals",
-      "accept": ["sicut"],
+      "accepted": ["sicut"],
       "e": "sicut = zoals"
     },
     {
@@ -481,7 +481,7 @@
       "type": "open",
       "quiz_group": 5,
       "q": "Zet in de accusativus enkelvoud: femina",
-      "accept": ["feminam"],
+      "accepted": ["feminam"],
       "e": "femina → feminam (accusativus ev)"
     },
     {
@@ -489,7 +489,7 @@
       "type": "open",
       "quiz_group": 5,
       "q": "Zet in de nominativus meervoud: servus",
-      "accept": ["servi"],
+      "accepted": ["servi"],
       "e": "servus → servi (nominativus mv)"
     },
     {
@@ -525,11 +525,11 @@
       "quiz_group": 6,
       "prompt_html": "Vul de persoonsvorm van 'esse' (zijn) in:",
       "items": [
-        {"dutch": "ik ben", "accept": ["sum"]},
-        {"dutch": "jij bent", "accept": ["es"]},
-        {"dutch": "hij/zij is", "accept": ["est"]},
-        {"dutch": "wij zijn", "accept": ["sumus"]},
-        {"dutch": "zij zijn (mv)", "accept": ["sunt"]}
+        {"vraag": "ik ben", "accepted": ["sum"]},
+        {"vraag": "jij bent", "accepted": ["es"]},
+        {"vraag": "hij/zij is", "accepted": ["est"]},
+        {"vraag": "wij zijn", "accepted": ["sumus"]},
+        {"vraag": "zij zijn (mv)", "accepted": ["sunt"]}
       ]
     },
     {
@@ -546,7 +546,7 @@
       "type": "open",
       "quiz_group": 6,
       "q": "Vertaal: De slaaf roept.",
-      "accept": ["servus vocat", "servus clamat"],
+      "accepted": ["servus vocat", "servus clamat"],
       "e": "De slaaf roept = Servus vocat/clamat"
     },
     {
@@ -554,7 +554,7 @@
       "type": "open",
       "quiz_group": 6,
       "q": "Vertaal: De vrouw ziet de slaaf.",
-      "accept": ["femina servum videt"],
+      "accepted": ["femina servum videt"],
       "e": "De vrouw (nom) ziet de slaaf (acc) = Femina servum videt"
     },
     {
@@ -599,11 +599,11 @@
       "quiz_group": 7,
       "prompt_html": "Vertaal de volgende zinnen naar het Nederlands:",
       "items": [
-        {"dutch": "Servus bibit.", "accept": ["de slaaf drinkt"]},
-        {"dutch": "Femina ridet.", "accept": ["de vrouw lacht"]},
-        {"dutch": "Puer clamat.", "accept": ["de jongen schreeuwt"]},
-        {"dutch": "Rex iubet.", "accept": ["de koning beveelt"]},
-        {"dutch": "Pastor custodiat.", "accept": ["de herder bewaakt"]}
+        {"vraag": "Servus bibit.", "accepted": ["de slaaf drinkt"]},
+        {"vraag": "Femina ridet.", "accepted": ["de vrouw lacht"]},
+        {"vraag": "Puer clamat.", "accepted": ["de jongen schreeuwt"]},
+        {"vraag": "Rex iubet.", "accepted": ["de koning beveelt"]},
+        {"vraag": "Pastor custodiat.", "accepted": ["de herder bewaakt"]}
       ]
     },
     {
@@ -629,7 +629,7 @@
       "type": "open",
       "quiz_group": 7,
       "q": "Zet in de ablativus enkelvoud: aqua",
-      "accept": ["aqua"],
+      "accepted": ["aqua"],
       "e": "aqua → aqua (ablativus ev, groep 1)"
     },
     {
@@ -637,7 +637,7 @@
       "type": "open",
       "quiz_group": 7,
       "q": "Zet in de ablativus enkelvoud: servus",
-      "accept": ["servo"],
+      "accepted": ["servo"],
       "e": "servus → servo (ablativus ev, groep 2)"
     },
     {
@@ -655,11 +655,11 @@
       "quiz_group": 7,
       "prompt_html": "Geef de stam van deze zelfstandige naamwoorden:",
       "items": [
-        {"dutch": "femina, feminae", "accept": ["femin-", "femin"]},
-        {"dutch": "servus, servi", "accept": ["serv-", "serv"]},
-        {"dutch": "rex, regis", "accept": ["reg-", "reg"]},
-        {"dutch": "nomen, nominis", "accept": ["nomin-", "nomin"]},
-        {"dutch": "flumen, fluminis", "accept": ["flumin-", "flumin"]}
+        {"vraag": "femina, feminae", "accepted": ["femin-", "femin"]},
+        {"vraag": "servus, servi", "accepted": ["serv-", "serv"]},
+        {"vraag": "rex, regis", "accepted": ["reg-", "reg"]},
+        {"vraag": "nomen, nominis", "accepted": ["nomin-", "nomin"]},
+        {"vraag": "flumen, fluminis", "accepted": ["flumin-", "flumin"]}
       ]
     },
     {
@@ -685,7 +685,7 @@
       "type": "open",
       "quiz_group": 7,
       "q": "Vertaal naar het Latijn: De vader geeft aan de zoon.",
-      "accept": ["pater filio dat"],
+      "accepted": ["pater filio dat"],
       "e": "Pater (nom) filio (dat) dat = De vader geeft aan de zoon"
     },
     {
@@ -694,11 +694,11 @@
       "quiz_group": 8,
       "prompt_html": "Vertaal de volgende werkwoorden naar het Latijn:",
       "items": [
-        {"dutch": "zeggen", "accept": ["dicere"]},
-        {"dutch": "geven", "accept": ["dare"]},
-        {"dutch": "lachen", "accept": ["ridere"]},
-        {"dutch": "weigeren", "accept": ["recusare"]},
-        {"dutch": "optillen", "accept": ["tollere"]}
+        {"vraag": "zeggen", "accepted": ["dicere"]},
+        {"vraag": "geven", "accepted": ["dare"]},
+        {"vraag": "lachen", "accepted": ["ridere"]},
+        {"vraag": "weigeren", "accepted": ["recusare"]},
+        {"vraag": "optillen", "accepted": ["tollere"]}
       ]
     },
     {
@@ -715,7 +715,7 @@
       "type": "open",
       "quiz_group": 8,
       "q": "Vertaal naar het Nederlands: Servi gregem custodiunt.",
-      "accept": ["de slaven bewaken de kudde"],
+      "accepted": ["de slaven bewaken de kudde"],
       "e": "Servi (nom mv) gregem (acc) custodiunt = De slaven bewaken de kudde"
     },
     {
@@ -733,11 +733,11 @@
       "quiz_group": 8,
       "prompt_html": "Vertaal de volgende zinnen naar het Latijn:",
       "items": [
-        {"dutch": "De koning ziet.", "accept": ["rex videt"]},
-        {"dutch": "De slaven komen.", "accept": ["servi veniunt"]},
-        {"dutch": "De vrouw roept.", "accept": ["femina vocat", "femina clamat"]},
-        {"dutch": "De herders bewaken.", "accept": ["pastores custodiunt"]},
-        {"dutch": "De jongens huilen.", "accept": ["pueri lacrimant"]}
+        {"vraag": "De koning ziet.", "accepted": ["rex videt"]},
+        {"vraag": "De slaven komen.", "accepted": ["servi veniunt"]},
+        {"vraag": "De vrouw roept.", "accepted": ["femina vocat", "femina clamat"]},
+        {"vraag": "De herders bewaken.", "accepted": ["pastores custodiunt"]},
+        {"vraag": "De jongens huilen.", "accepted": ["pueri lacrimant"]}
       ]
     }
   ]
