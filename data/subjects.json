@@ -1,6 +1,15 @@
 {
   "subjects": [
     {
+      "id": "latijn-spqr-h1-h2-h3",
+      "subject": "Latijn",
+      "label": "Latijn – SPQR H1-H3 Woordjes",
+      "title": "Latijn – SPQR Hoofdstuk 1, 2 & 3 Woordjes",
+      "file": "data/latijn/spqr-h1-h2-h3-flashcards.json",
+      "schema": "flashcards",
+      "week": "2e toetsweek"
+    },
+    {
       "id": "latijn-flumen-toets",
       "subject": "Latijn",
       "label": "Latijn – Proeftoets (Flumen)",

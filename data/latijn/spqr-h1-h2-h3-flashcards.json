@@ -1,0 +1,1326 @@
+{
+  "title": "Latijn SPQR - Hoofdstuk 1, 2 & 3 Woordjes",
+  "description": "Alle vetgedrukte woorden uit Flumen, Lupa en Regnum",
+  "flashcards": [
+    {
+      "id": "fl-01",
+      "front": "rivier",
+      "back": "flumen, flumina",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-02",
+      "front": "flumen, flumina",
+      "back": "rivier",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-03",
+      "front": "koning",
+      "back": "rex, regis",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-04",
+      "front": "rex, regis",
+      "back": "koning",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-05",
+      "front": "slaaf",
+      "back": "servus",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-06",
+      "front": "servus",
+      "back": "slaaf",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-07",
+      "front": "roepen",
+      "back": "vocare",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-08",
+      "front": "vocare",
+      "back": "roepen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-09",
+      "front": "komen",
+      "back": "venire",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-10",
+      "front": "venire",
+      "back": "komen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-11",
+      "front": "baby",
+      "back": "infans, infantes",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-12",
+      "front": "infans, infantes",
+      "back": "baby",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-13",
+      "front": "horen",
+      "back": "audire",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-14",
+      "front": "audire",
+      "back": "horen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-15",
+      "front": "mandje",
+      "back": "corbis, corbes",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-16",
+      "front": "corbis, corbes",
+      "back": "mandje",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-17",
+      "front": "zien",
+      "back": "videre",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-18",
+      "front": "videre",
+      "back": "zien",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-19",
+      "front": "in het mandje",
+      "back": "in corbe",
+      "tags": ["flumen", "uitdr"]
+    },
+    {
+      "id": "fl-20",
+      "front": "in corbe",
+      "back": "in het mandje",
+      "tags": ["flumen", "uitdr"]
+    },
+    {
+      "id": "fl-21",
+      "front": "jongen",
+      "back": "puer, pueri",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-22",
+      "front": "puer, pueri",
+      "back": "jongen",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-23",
+      "front": "liggen",
+      "back": "iacere",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-24",
+      "front": "iacere",
+      "back": "liggen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-25",
+      "front": "schreeuwen",
+      "back": "clamare",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-26",
+      "front": "clamare",
+      "back": "schreeuwen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-27",
+      "front": "en",
+      "back": "et",
+      "tags": ["flumen", "vw"]
+    },
+    {
+      "id": "fl-28",
+      "front": "et",
+      "back": "en",
+      "tags": ["flumen", "vw"]
+    },
+    {
+      "id": "fl-29",
+      "front": "huilen",
+      "back": "lacrimare",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-30",
+      "front": "lacrimare",
+      "back": "huilen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-31",
+      "front": "doden",
+      "back": "necare",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-32",
+      "front": "necare",
+      "back": "doden",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-33",
+      "front": "bevelen",
+      "back": "iubere",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-34",
+      "front": "iubere",
+      "back": "bevelen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-35",
+      "front": "vrezen, bang zijn voor",
+      "back": "timere",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-36",
+      "front": "timere",
+      "back": "vrezen, bang zijn voor",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-37",
+      "front": "daarom",
+      "back": "ideo",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-38",
+      "front": "ideo",
+      "back": "daarom",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-39",
+      "front": "opdracht",
+      "back": "mandatum",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-40",
+      "front": "mandatum",
+      "back": "opdracht",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-41",
+      "front": "niet",
+      "back": "non",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-42",
+      "front": "non",
+      "back": "niet",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-43",
+      "front": "weigeren",
+      "back": "recusare",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-44",
+      "front": "recusare",
+      "back": "weigeren",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-45",
+      "front": "toch",
+      "back": "tamen",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-46",
+      "front": "tamen",
+      "back": "toch",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-47",
+      "front": "optillen",
+      "back": "tollere",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-48",
+      "front": "tollere",
+      "back": "optillen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-49",
+      "front": "naar, tot (+ acc)",
+      "back": "ad + acc",
+      "tags": ["flumen", "vz"]
+    },
+    {
+      "id": "fl-50",
+      "front": "ad + acc",
+      "back": "naar, tot",
+      "tags": ["flumen", "vz"]
+    },
+    {
+      "id": "fl-51",
+      "front": "dragen",
+      "back": "portare",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-52",
+      "front": "portare",
+      "back": "dragen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-53",
+      "front": "in, naar (+ acc)",
+      "back": "in + acc",
+      "tags": ["flumen", "vz"]
+    },
+    {
+      "id": "fl-54",
+      "front": "in + acc",
+      "back": "in, naar",
+      "tags": ["flumen", "vz"]
+    },
+    {
+      "id": "fl-55",
+      "front": "plaatsen in",
+      "back": "imponere",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-56",
+      "front": "imponere",
+      "back": "plaatsen in",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-57",
+      "front": "plaatsen",
+      "back": "ponere",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-58",
+      "front": "ponere",
+      "back": "plaatsen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-59",
+      "front": "(blijven) drijven",
+      "back": "natare",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-60",
+      "front": "natare",
+      "back": "(blijven) drijven",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-61",
+      "front": "plaats",
+      "back": "locus",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-62",
+      "front": "locus",
+      "back": "plaats",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-63",
+      "front": "waar",
+      "back": "ubi",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-64",
+      "front": "ubi",
+      "back": "waar",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-65",
+      "front": "water",
+      "back": "aqua",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-66",
+      "front": "aqua",
+      "back": "water",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-67",
+      "front": "tussen",
+      "back": "inter + acc",
+      "tags": ["flumen", "vz"]
+    },
+    {
+      "id": "fl-68",
+      "front": "inter + acc",
+      "back": "tussen",
+      "tags": ["flumen", "vz"]
+    },
+    {
+      "id": "fl-69",
+      "front": "boom",
+      "back": "arbor, arbores",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-70",
+      "front": "arbor, arbores",
+      "back": "boom",
+      "tags": ["flumen", "zn"]
+    },
+    {
+      "id": "fl-71",
+      "front": "stromen",
+      "back": "fluere",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-72",
+      "front": "fluere",
+      "back": "stromen",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-73",
+      "front": "daar",
+      "back": "ibi",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-74",
+      "front": "ibi",
+      "back": "daar",
+      "tags": ["flumen", "bw"]
+    },
+    {
+      "id": "fl-75",
+      "front": "blijven steken",
+      "back": "haerere",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "fl-76",
+      "front": "haerere",
+      "back": "blijven steken",
+      "tags": ["flumen", "ww"]
+    },
+    {
+      "id": "lu-01",
+      "front": "herder",
+      "back": "pastor, pastores",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-02",
+      "front": "pastor, pastores",
+      "back": "herder",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-03",
+      "front": "zijn (infinitivus)",
+      "back": "esse",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-04",
+      "front": "esse",
+      "back": "zijn (infinitivus)",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-05",
+      "front": "kudde",
+      "back": "grex, greges",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-06",
+      "front": "grex, greges",
+      "back": "kudde",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-07",
+      "front": "bewaken",
+      "back": "custodire",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-08",
+      "front": "custodire",
+      "back": "bewaken",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-09",
+      "front": "plotseling",
+      "back": "subito",
+      "tags": ["lupa", "bw"]
+    },
+    {
+      "id": "lu-10",
+      "front": "subito",
+      "back": "plotseling",
+      "tags": ["lupa", "bw"]
+    },
+    {
+      "id": "lu-11",
+      "front": "gaan naar, naderen",
+      "back": "accedere",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-12",
+      "front": "accedere",
+      "back": "gaan naar, naderen",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-13",
+      "front": "tepels",
+      "back": "ubera",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-14",
+      "front": "ubera",
+      "back": "tepels",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-15",
+      "front": "(aan)bieden",
+      "back": "praebere",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-16",
+      "front": "praebere",
+      "back": "(aan)bieden",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-17",
+      "front": "drinken",
+      "back": "bibere",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-18",
+      "front": "bibere",
+      "back": "drinken",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-19",
+      "front": "zo",
+      "back": "sic",
+      "tags": ["lupa", "bw"]
+    },
+    {
+      "id": "lu-20",
+      "front": "sic",
+      "back": "zo",
+      "tags": ["lupa", "bw"]
+    },
+    {
+      "id": "lu-21",
+      "front": "(na)denken",
+      "back": "cogitare",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-22",
+      "front": "cogitare",
+      "back": "(na)denken",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-23",
+      "front": "god",
+      "back": "deus",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-24",
+      "front": "deus",
+      "back": "god",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-25",
+      "front": "beschermen",
+      "back": "protegere",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-26",
+      "front": "protegere",
+      "back": "beschermen",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-27",
+      "front": "want",
+      "back": "nam",
+      "tags": ["lupa", "vw"]
+    },
+    {
+      "id": "lu-28",
+      "front": "nam",
+      "back": "want",
+      "tags": ["lupa", "vw"]
+    },
+    {
+      "id": "lu-29",
+      "front": "laten verdrinken",
+      "back": "submergere",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-30",
+      "front": "submergere",
+      "back": "laten verdrinken",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-31",
+      "front": "kwaad doen (+ dat)",
+      "back": "nocere + dat",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-32",
+      "front": "nocere + dat",
+      "back": "kwaad doen",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-33",
+      "front": "naar huis",
+      "back": "domum",
+      "tags": ["lupa", "bw"]
+    },
+    {
+      "id": "lu-34",
+      "front": "domum",
+      "back": "naar huis",
+      "tags": ["lupa", "bw"]
+    },
+    {
+      "id": "lu-35",
+      "front": "echtgenote",
+      "back": "uxor, uxores",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-36",
+      "front": "uxor, uxores",
+      "back": "echtgenote",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-37",
+      "front": "overhandigen",
+      "back": "tradere",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-38",
+      "front": "tradere",
+      "back": "overhandigen",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-39",
+      "front": "zeggen",
+      "back": "dicere",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-40",
+      "front": "dicere",
+      "back": "zeggen",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-41",
+      "front": "steun geven aan (+ dat)",
+      "back": "favere + dat",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-42",
+      "front": "favere + dat",
+      "back": "steun geven aan",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-43",
+      "front": "zoon",
+      "back": "filius",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-44",
+      "front": "filius",
+      "back": "zoon",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-45",
+      "front": "vrouw",
+      "back": "femina",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-46",
+      "front": "femina",
+      "back": "vrouw",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-47",
+      "front": "lachen",
+      "back": "ridere",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-48",
+      "front": "ridere",
+      "back": "lachen",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-49",
+      "front": "naam",
+      "back": "nomen, nomina",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-50",
+      "front": "nomen, nomina",
+      "back": "naam",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-51",
+      "front": "geven",
+      "back": "dare",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-52",
+      "front": "dare",
+      "back": "geven",
+      "tags": ["lupa", "ww"]
+    },
+    {
+      "id": "lu-53",
+      "front": "de een, de ander",
+      "back": "alter...alter",
+      "tags": ["lupa", "vnw"]
+    },
+    {
+      "id": "lu-54",
+      "front": "alter...alter",
+      "back": "de een, de ander",
+      "tags": ["lupa", "vnw"]
+    },
+    {
+      "id": "lu-55",
+      "front": "moeder",
+      "back": "mater, matres",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-56",
+      "front": "mater, matres",
+      "back": "moeder",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-57",
+      "front": "zoals",
+      "back": "sicut",
+      "tags": ["lupa", "vw"]
+    },
+    {
+      "id": "lu-58",
+      "front": "sicut",
+      "back": "zoals",
+      "tags": ["lupa", "vw"]
+    },
+    {
+      "id": "lu-59",
+      "front": "vader",
+      "back": "pater, patres",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "lu-60",
+      "front": "pater, patres",
+      "back": "vader",
+      "tags": ["lupa", "zn"]
+    },
+    {
+      "id": "re-01",
+      "front": "vriend",
+      "back": "amicus",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-02",
+      "front": "amicus",
+      "back": "vriend",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-03",
+      "front": "van(af) (+ abl)",
+      "back": "de + abl",
+      "tags": ["regnum", "vz"]
+    },
+    {
+      "id": "re-04",
+      "front": "de + abl",
+      "back": "van(af)",
+      "tags": ["regnum", "vz"]
+    },
+    {
+      "id": "re-05",
+      "front": "berg, heuvel",
+      "back": "mons, montes",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-06",
+      "front": "mons, montes",
+      "back": "berg, heuvel",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-07",
+      "front": "afdalen",
+      "back": "descendere",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-08",
+      "front": "descendere",
+      "back": "afdalen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-09",
+      "front": "met (+ abl)",
+      "back": "cum + abl",
+      "tags": ["regnum", "vz"]
+    },
+    {
+      "id": "re-10",
+      "front": "cum + abl",
+      "back": "met",
+      "tags": ["regnum", "vz"]
+    },
+    {
+      "id": "re-11",
+      "front": "broer",
+      "back": "frater, fratres",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-12",
+      "front": "frater, fratres",
+      "back": "broer",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-13",
+      "front": "samenkomen",
+      "back": "convenire",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-14",
+      "front": "convenire",
+      "back": "samenkomen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-15",
+      "front": "volk",
+      "back": "populus",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-16",
+      "front": "populus",
+      "back": "volk",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-17",
+      "front": "allen",
+      "back": "omnes",
+      "tags": ["regnum", "vnw"]
+    },
+    {
+      "id": "re-18",
+      "front": "omnes",
+      "back": "allen",
+      "tags": ["regnum", "vnw"]
+    },
+    {
+      "id": "re-19",
+      "front": "zwijgen",
+      "back": "tacere",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-20",
+      "front": "tacere",
+      "back": "zwijgen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-21",
+      "front": "bekijken",
+      "back": "aspicere, aspicio",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-22",
+      "front": "aspicere, aspicio",
+      "back": "bekijken",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-23",
+      "front": "ook",
+      "back": "quoque",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-24",
+      "front": "quoque",
+      "back": "ook",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-25",
+      "front": "eindelijk",
+      "back": "tandem",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-26",
+      "front": "tandem",
+      "back": "eindelijk",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-27",
+      "front": "zowel...als",
+      "back": "et...et",
+      "tags": ["regnum", "vw"]
+    },
+    {
+      "id": "re-28",
+      "front": "et...et",
+      "back": "zowel...als",
+      "tags": ["regnum", "vw"]
+    },
+    {
+      "id": "re-29",
+      "front": "verdelen",
+      "back": "dividere",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-30",
+      "front": "dividere",
+      "back": "verdelen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-31",
+      "front": "stad",
+      "back": "urbs, urbes",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-32",
+      "front": "urbs, urbes",
+      "back": "stad",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-33",
+      "front": "bouwen",
+      "back": "aedificare",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-34",
+      "front": "aedificare",
+      "back": "bouwen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-35",
+      "front": "eerst",
+      "back": "primum",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-36",
+      "front": "primum",
+      "back": "eerst",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-37",
+      "front": "in, op (+ abl)",
+      "back": "in + abl",
+      "tags": ["regnum", "vz"]
+    },
+    {
+      "id": "re-38",
+      "front": "in + abl",
+      "back": "in, op",
+      "tags": ["regnum", "vz"]
+    },
+    {
+      "id": "re-39",
+      "front": "man",
+      "back": "vir, viri",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-40",
+      "front": "vir, viri",
+      "back": "man",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-41",
+      "front": "rots, rotsblok",
+      "back": "saxum",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-42",
+      "front": "saxum",
+      "back": "rots, rotsblok",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-43",
+      "front": "muur",
+      "back": "murus",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-44",
+      "front": "murus",
+      "back": "muur",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-45",
+      "front": "boomstam",
+      "back": "truncus",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-46",
+      "front": "truncus",
+      "back": "boomstam",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-47",
+      "front": "huis",
+      "back": "casa",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-48",
+      "front": "casa",
+      "back": "huis",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-49",
+      "front": "maken",
+      "back": "facere, facio",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-50",
+      "front": "facere, facio",
+      "back": "maken",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-51",
+      "front": "riet",
+      "back": "arundo, arundines",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-52",
+      "front": "arundo, arundines",
+      "back": "riet",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-53",
+      "front": "verzamelen",
+      "back": "colligere",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-54",
+      "front": "colligere",
+      "back": "verzamelen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-55",
+      "front": "ontvangen",
+      "back": "accipere",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-56",
+      "front": "accipere",
+      "back": "ontvangen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-57",
+      "front": "bevallen (+ dat)",
+      "back": "placere + dat",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-58",
+      "front": "placere + dat",
+      "back": "bevallen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-59",
+      "front": "waarom",
+      "back": "cur",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-60",
+      "front": "cur",
+      "back": "waarom",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-61",
+      "front": "het is toegestaan (aan)",
+      "back": "licet",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-62",
+      "front": "licet",
+      "back": "het is toegestaan (aan)",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-63",
+      "front": "'s avonds",
+      "back": "vesperi",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-64",
+      "front": "vesperi",
+      "back": "'s avonds",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-65",
+      "front": "al, reeds",
+      "back": "iam",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-66",
+      "front": "iam",
+      "back": "al, reeds",
+      "tags": ["regnum", "bw"]
+    },
+    {
+      "id": "re-67",
+      "front": "staan",
+      "back": "stare",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-68",
+      "front": "stare",
+      "back": "staan",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-69",
+      "front": "belachelijk maken (+ dat)",
+      "back": "illudere + dat",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-70",
+      "front": "illudere + dat",
+      "back": "belachelijk maken",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-71",
+      "front": "het is gemakkelijk",
+      "back": "facile est",
+      "tags": ["regnum", "uitdr"]
+    },
+    {
+      "id": "re-72",
+      "front": "facile est",
+      "back": "het is gemakkelijk",
+      "tags": ["regnum", "uitdr"]
+    },
+    {
+      "id": "re-73",
+      "front": "vijand",
+      "back": "hostis, hostes",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-74",
+      "front": "hostis, hostes",
+      "back": "vijand",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-75",
+      "front": "binnenkomen",
+      "back": "intrare",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-76",
+      "front": "intrare",
+      "back": "binnenkomen",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-77",
+      "front": "springen over",
+      "back": "transire",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-78",
+      "front": "transire",
+      "back": "springen over",
+      "tags": ["regnum", "ww"]
+    },
+    {
+      "id": "re-79",
+      "front": "burger",
+      "back": "civis, cives",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-80",
+      "front": "civis, cives",
+      "back": "burger",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-81",
+      "front": "maar",
+      "back": "sed",
+      "tags": ["regnum", "vw"]
+    },
+    {
+      "id": "re-82",
+      "front": "sed",
+      "back": "maar",
+      "tags": ["regnum", "vw"]
+    },
+    {
+      "id": "re-83",
+      "front": "zwaard",
+      "back": "gladius",
+      "tags": ["regnum", "zn"]
+    },
+    {
+      "id": "re-84",
+      "front": "gladius",
+      "back": "zwaard",
+      "tags": ["regnum", "zn"]
+    }
+  ]
+}
