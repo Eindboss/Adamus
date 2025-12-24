@@ -1303,7 +1303,7 @@
       "id": "q069",
       "type": "grouped_translation",
       "quiz_group": 7,
-      "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin.",
+      "prompt_html": "Vertaal het gemarkeerde woord in de context van de zin.",
       "items": [
         {
           "latijn_html": "Rex servum <u>iubet</u> pueros necare.",
@@ -1349,7 +1349,7 @@
       "id": "q070",
       "type": "grouped_translation",
       "quiz_group": 7,
-      "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin.",
+      "prompt_html": "Vertaal het gemarkeerde woord in de context van de zin.",
       "items": [
         {
           "latijn_html": "<u>Lupa</u> infantes protegit.",
@@ -1396,7 +1396,7 @@
       "id": "q071",
       "type": "grouped_select",
       "quiz_group": 8,
-      "prompt_html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het onderstreepte woord.",
+      "prompt_html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het gemarkeerde woord.",
       "legend": {
         "naamval_options": [
           "nominativus",
@@ -1537,7 +1537,7 @@
       "id": "q073",
       "type": "grouped_translation",
       "quiz_group": 7,
-      "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin.",
+      "prompt_html": "Vertaal het gemarkeerde woord in de context van de zin.",
       "items": [
         {
           "latijn_html": "Pastor gregem <u>custodit</u>.",
@@ -1587,7 +1587,7 @@
       "id": "q074",
       "type": "grouped_translation",
       "quiz_group": 7,
-      "prompt_html": "Vertaal het <u>onderstreepte</u> woord. Let op de naamval!",
+      "prompt_html": "Vertaal het gemarkeerde woord. Let op de naamval!",
       "items": [
         {
           "latijn_html": "<u>Rex</u> servum vocat.",
@@ -1637,7 +1637,7 @@
       "id": "q075",
       "type": "grouped_translation",
       "quiz_group": 7,
-      "prompt_html": "Vertaal het <u>onderstreepte</u> werkwoord.",
+      "prompt_html": "Vertaal het gemarkeerde werkwoord.",
       "items": [
         {
           "latijn_html": "Romulus urbem <u>aedificat</u>.",
@@ -1687,7 +1687,7 @@
       "id": "q076",
       "type": "grouped_select",
       "quiz_group": 8,
-      "prompt_html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het onderstreepte woord.",
+      "prompt_html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het gemarkeerde woord.",
       "legend": {
         "naamval_options": [
           "nominativus",
@@ -1759,7 +1759,7 @@
       "id": "q077",
       "type": "grouped_select",
       "quiz_group": 8,
-      "prompt_html": "Bepaal de <b>naamval</b> en <b>functie</b> van het onderstreepte woord.",
+      "prompt_html": "Bepaal de <b>naamval</b> en <b>functie</b> van het gemarkeerde woord.",
       "legend": {
         "naamval_options": [
           "nominativus",
@@ -2042,6 +2042,193 @@
         ]
       },
       "points": 4
+    },
+    {
+      "id": "q083",
+      "type": "mc",
+      "quiz_group": 11,
+      "q": "Wie was de rechtmatige koning van Alba Longa voordat Amulius de macht greep?",
+      "a": [
+        "Numitor",
+        "Romulus",
+        "Faustulus",
+        "Mars"
+      ],
+      "c": 0,
+      "e": "Numitor was de rechtmatige koning, maar zijn broer Amulius nam de macht over."
+    },
+    {
+      "id": "q084",
+      "type": "mc",
+      "quiz_group": 11,
+      "q": "Waarom dwong Amulius Rhea Silvia om Vestaalse Maagd te worden?",
+      "a": [
+        "zodat ze geen kinderen kon krijgen",
+        "om de goden te eren",
+        "omdat ze dat zelf wilde",
+        "om haar te straffen"
+      ],
+      "c": 0,
+      "e": "Vestaalse Maagden moesten kuis blijven, zo kon Rhea Silvia geen troonopvolger krijgen."
+    },
+    {
+      "id": "q085",
+      "type": "mc",
+      "quiz_group": 11,
+      "q": "Wie is volgens de mythe de vader van Romulus en Remus?",
+      "a": [
+        "Mars",
+        "Jupiter",
+        "Numitor",
+        "Amulius"
+      ],
+      "c": 0,
+      "e": "De god Mars verwekte de tweeling bij Rhea Silvia."
+    },
+    {
+      "id": "q086",
+      "type": "mc",
+      "quiz_group": 11,
+      "q": "Wat beval Amulius te doen met de pasgeboren tweeling?",
+      "a": [
+        "ze in de rivier verdrinken",
+        "ze naar een ander land sturen",
+        "ze in de gevangenis opsluiten",
+        "ze aan de goden offeren"
+      ],
+      "c": 0,
+      "e": "Amulius beval een slaaf om de baby's te verdrinken in de Tiber."
+    },
+    {
+      "id": "q087",
+      "type": "open",
+      "quiz_group": 11,
+      "q": "Wat deed de slaaf in plaats van de tweeling te verdrinken?",
+      "accepted": [
+        "in een mandje op de rivier zetten",
+        "mandje in de rivier",
+        "in mandje gelegd",
+        "op de rivier gezet"
+      ],
+      "e": "De slaaf weigerde de baby's te doden en zette ze in een mandje op de rivier."
+    },
+    {
+      "id": "q088",
+      "type": "mc",
+      "quiz_group": 12,
+      "q": "Waar bleef het mandje met de tweeling steken?",
+      "a": [
+        "bij een vijgenboom aan de oever",
+        "midden op de rivier",
+        "bij een brug",
+        "in de stad Rome"
+      ],
+      "c": 0,
+      "e": "Het mandje bleef haken aan de wortels van een vijgenboom bij de oever."
+    },
+    {
+      "id": "q089",
+      "type": "mc",
+      "quiz_group": 12,
+      "q": "Welk dier vond de tweeling en zorgde voor hen?",
+      "a": [
+        "een wolvin (lupa)",
+        "een beer",
+        "een hert",
+        "een adelaar"
+      ],
+      "c": 0,
+      "e": "Een wolvin (lupa) vond de baby's en gaf ze te drinken."
+    },
+    {
+      "id": "q090",
+      "type": "open",
+      "quiz_group": 12,
+      "q": "Hoe heet de herder die Romulus en Remus vond en mee naar huis nam?",
+      "accepted": [
+        "Faustulus"
+      ],
+      "e": "Faustulus was de herder die de tweeling vond bij de wolvin."
+    },
+    {
+      "id": "q091",
+      "type": "mc",
+      "quiz_group": 12,
+      "q": "Wie voedde Romulus en Remus op als eigen kinderen?",
+      "a": [
+        "Faustulus en zijn vrouw Larentia",
+        "Numitor en Rhea Silvia",
+        "Amulius en zijn vrouw",
+        "de wolvin"
+      ],
+      "c": 0,
+      "e": "De herder Faustulus en zijn vrouw Larentia voedden de tweeling op."
+    },
+    {
+      "id": "q092",
+      "type": "mc",
+      "quiz_group": 13,
+      "q": "Wat deden Romulus en Remus toen ze ontdekten wie ze werkelijk waren?",
+      "a": [
+        "ze doodden Amulius en herstelden Numitor als koning",
+        "ze vluchtten naar een ander land",
+        "ze werden priesters",
+        "ze verzoenden zich met Amulius"
+      ],
+      "c": 0,
+      "e": "De broers doodden de usurpator Amulius en herstelden hun grootvader Numitor op de troon."
+    },
+    {
+      "id": "q093",
+      "type": "mc",
+      "quiz_group": 13,
+      "q": "Waarover kregen Romulus en Remus ruzie bij het stichten van hun stad?",
+      "a": [
+        "de locatie/plek van de stad",
+        "de naam van de stad",
+        "wie koning zou worden",
+        "hoeveel inwoners er mochten komen"
+      ],
+      "c": 0,
+      "e": "De broers kregen ruzie over waar de nieuwe stad gebouwd moest worden."
+    },
+    {
+      "id": "q094",
+      "type": "mc",
+      "quiz_group": 13,
+      "q": "Hoe kwam Remus om het leven?",
+      "a": [
+        "Romulus doodde hem nadat hij over de muur sprong",
+        "hij verdronk in de Tiber",
+        "Amulius doodde hem",
+        "hij stierf aan een ziekte"
+      ],
+      "c": 0,
+      "e": "Remus sprong spottend over de muur van Romulus, waarop Romulus hem doodde."
+    },
+    {
+      "id": "q095",
+      "type": "open",
+      "quiz_group": 13,
+      "q": "Naar wie is de stad Rome vernoemd?",
+      "accepted": [
+        "Romulus"
+      ],
+      "e": "Rome (Roma) is vernoemd naar Romulus, de eerste koning."
+    },
+    {
+      "id": "q096",
+      "type": "mc",
+      "quiz_group": 13,
+      "q": "Wie werd de eerste koning van Rome?",
+      "a": [
+        "Romulus",
+        "Remus",
+        "Numitor",
+        "Faustulus"
+      ],
+      "c": 0,
+      "e": "Romulus werd de eerste koning van Rome na de dood van zijn broer."
     }
   ]
 }

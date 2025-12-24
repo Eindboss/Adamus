@@ -634,3 +634,18 @@
     padding: var(--space-3) var(--space-4);
   }
 }
+
+/* Dark mode: softer glow on subject cards */
+[data-theme="dark"] .subject-card .icon-wrap {
+  box-shadow:
+    0 4px 12px rgba(201, 162, 39, 0.15),
+    0 0 12px rgba(201, 162, 39, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .subject-card:hover .icon-wrap {
+  box-shadow:
+    0 6px 16px rgba(201, 162, 39, 0.2),
+    0 0 16px rgba(201, 162, 39, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}

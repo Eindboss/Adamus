@@ -181,14 +181,24 @@ function renderCard() {
   }
 
   const flashcard = $("flashcard");
+  const flashcardInner = flashcard?.querySelector(".flashcard-inner");
   const frontEl = $("cardFront");
   const backEl = $("cardBack");
   const explanationEl = $("cardExplanation");
   const progressEl = $("cardProgress");
 
-  // Reset flip state
+  // Reset flip state instantly (no animation) to prevent showing answer
   state.flipped = false;
+  if (flashcardInner) {
+    flashcardInner.style.transition = "none";
+  }
   flashcard?.classList.remove("flipped");
+  // Force reflow to apply the instant reset
+  flashcard?.offsetHeight;
+  // Re-enable transition for user flip interaction
+  if (flashcardInner) {
+    flashcardInner.style.transition = "";
+  }
 
   // Add/remove has-graph class
   if (card.graph) {
