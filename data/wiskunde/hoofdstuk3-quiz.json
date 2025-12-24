@@ -1,0 +1,4467 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2025-12-24T08:21:54",
+  "language": "nl",
+  "module": "H3 Grafieken en formules (deel 3.1-3.5 + Onderzoek groeiende figuren)",
+  "count": 75,
+  "questions": [
+    {
+      "id": "q001",
+      "title": "Coördinaten lezen",
+      "difficulty": 1,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "grid",
+        "grid": {
+          "x_min": -4,
+          "x_max": 4,
+          "y_min": -4,
+          "y_max": 4,
+          "step": 1,
+          "show_origin": true
+        },
+        "points": [
+          {
+            "label": "P",
+            "x": 3,
+            "y": -2
+          },
+          {
+            "label": "Q",
+            "x": -1,
+            "y": 4
+          },
+          {
+            "label": "R",
+            "x": 0,
+            "y": -3
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf de coördinaten van punt P op als (x, y).",
+          "points": 1,
+          "answer": {
+            "value": "(3, -2)",
+            "accept": [
+              "(3,-2)",
+              "3,-2"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Schrijf de coördinaten van punt Q op als (x, y).",
+          "points": 1,
+          "answer": {
+            "value": "(-1, 4)",
+            "accept": [
+              "(-1,4)",
+              "-1,4"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Ligt punt R op de y-as? Antwoord met ja of nee.",
+          "points": 1,
+          "answer": {
+            "value": "ja",
+            "accept": [
+              "Ja",
+              "JA"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q002",
+      "title": "Punt tekenen",
+      "difficulty": 1,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "grid",
+        "grid": {
+          "x_min": -5,
+          "x_max": 5,
+          "y_min": -5,
+          "y_max": 5,
+          "step": 1,
+          "show_origin": true
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "point",
+          "prompt": "Plaats punt A in het assenstelsel op (−4, 1).",
+          "points": 2,
+          "answer": {
+            "x": -4,
+            "y": 1
+          }
+        },
+        {
+          "id": "b",
+          "type": "point",
+          "prompt": "Plaats punt B in het assenstelsel op (2, −3).",
+          "points": 2,
+          "answer": {
+            "x": 2,
+            "y": -3
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q003",
+      "title": "Punten op de assen",
+      "difficulty": 1,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "grid",
+        "grid": {
+          "x_min": -6,
+          "x_max": 6,
+          "y_min": -4,
+          "y_max": 4,
+          "step": 1,
+          "show_origin": true
+        },
+        "points": [
+          {
+            "label": "S",
+            "x": 0,
+            "y": 3
+          },
+          {
+            "label": "T",
+            "x": -5,
+            "y": 0
+          },
+          {
+            "label": "U",
+            "x": 2,
+            "y": 0
+          },
+          {
+            "label": "V",
+            "x": 0,
+            "y": -2
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "multi_select",
+          "prompt": "Welke punten liggen op de x-as?",
+          "points": 2,
+          "options": [
+            "S",
+            "T",
+            "U",
+            "V"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_indices": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "multi_select",
+          "prompt": "Welke punten liggen op de y-as?",
+          "points": 2,
+          "options": [
+            "S",
+            "T",
+            "U",
+            "V"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_indices": [
+              0,
+              3
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q004",
+      "title": "Verplaatsen vanaf de oorsprong",
+      "difficulty": 2,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Je start in de oorsprong O(0,0). Je loopt 3 vakjes naar links en daarna 2 vakjes omhoog."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Op welk punt (x, y) kom je uit?",
+          "points": 2,
+          "answer": {
+            "value": "(-3, 2)",
+            "accept": [
+              "(-3,2)",
+              "-3,2"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Welke coördinaat veranderde bij het omhoog lopen: x of y?",
+          "points": 1,
+          "answer": {
+            "value": "y",
+            "accept": [
+              "Y"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q005",
+      "title": "Afstand in vakjes",
+      "difficulty": 2,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "grid",
+        "grid": {
+          "x_min": -5,
+          "x_max": 5,
+          "y_min": -5,
+          "y_max": 5,
+          "step": 1,
+          "show_origin": true
+        },
+        "points": [
+          {
+            "label": "A",
+            "x": -2,
+            "y": 1
+          },
+          {
+            "label": "B",
+            "x": 3,
+            "y": -1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel vakjes naar rechts/links moet je (minimaal) van A naar B?",
+          "points": 1,
+          "answer": {
+            "value": "5",
+            "accept": [
+              "5 vakjes",
+              "5"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoeveel vakjes omhoog/omlaag moet je (minimaal) van A naar B?",
+          "points": 1,
+          "answer": {
+            "value": "2",
+            "accept": [
+              "2 vakjes",
+              "2"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Wat is de totale minimale route in vakjes als je alleen horizontaal en verticaal mag lopen?",
+          "points": 2,
+          "answer": {
+            "value": "7",
+            "accept": [
+              "7 vakjes",
+              "7"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q006",
+      "title": "Coördinaten: vergelijk",
+      "difficulty": 2,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "grid",
+        "grid": {
+          "x_min": -4,
+          "x_max": 4,
+          "y_min": -4,
+          "y_max": 4,
+          "step": 1,
+          "show_origin": true
+        },
+        "points": [
+          {
+            "label": "C",
+            "x": -3,
+            "y": -1
+          },
+          {
+            "label": "D",
+            "x": 1,
+            "y": 3
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Welk punt heeft een negatieve x-coördinaat: C of D?",
+          "points": 1,
+          "answer": {
+            "value": "C",
+            "accept": [
+              "c"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Welk punt ligt het hoogst (grootste y): C of D?",
+          "points": 1,
+          "answer": {
+            "value": "D",
+            "accept": [
+              "d"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q007",
+      "title": "Punt uit beschrijving",
+      "difficulty": 2,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een punt ligt 4 naar rechts en 1 omlaag vanaf O."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf de coördinaten van dit punt.",
+          "points": 2,
+          "answer": {
+            "value": "(4, -1)",
+            "accept": [
+              "(4,-1)",
+              "4,-1"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q008",
+      "title": "Spiegelbeeld",
+      "difficulty": 3,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "grid",
+        "grid": {
+          "x_min": -6,
+          "x_max": 6,
+          "y_min": -6,
+          "y_max": 6,
+          "step": 1,
+          "show_origin": true
+        },
+        "points": [
+          {
+            "label": "P",
+            "x": 2,
+            "y": 5
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Spiegelbeeld van P in de y-as?",
+          "points": 2,
+          "answer": {
+            "value": "(-2, 5)",
+            "accept": [
+              "(-2,5)",
+              "-2,5"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Spiegelbeeld van P in de x-as?",
+          "points": 2,
+          "answer": {
+            "value": "(2, -5)",
+            "accept": [
+              "(2,-5)",
+              "2,-5"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q009",
+      "title": "Welke uitspraak klopt?",
+      "difficulty": 2,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kies de juiste uitspraak."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Een punt (x, y) ligt op de x-as als…",
+          "points": 1,
+          "options": [
+            "x = 0",
+            "y = 0",
+            "x = y",
+            "x + y = 0"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 1
+          }
+        },
+        {
+          "id": "b",
+          "type": "mcq",
+          "prompt": "De oorsprong heeft coördinaten…",
+          "points": 1,
+          "options": [
+            "(1, 0)",
+            "(0, 1)",
+            "(0, 0)",
+            "(−1, −1)"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 2
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q010",
+      "title": "Halve vakjes",
+      "difficulty": 3,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "grid",
+        "grid": {
+          "x_min": -4,
+          "x_max": 4,
+          "y_min": -4,
+          "y_max": 4,
+          "step": 0.5,
+          "show_origin": true
+        },
+        "points": [
+          {
+            "label": "M",
+            "x": 1.5,
+            "y": -2.0
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf de coördinaten van M.",
+          "points": 2,
+          "answer": {
+            "value": "(1.5, -2)",
+            "accept": [
+              "(1.5,-2)",
+              "1.5,-2",
+              "(1,5; -2)",
+              "(1,5,-2)"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q011",
+      "title": "Route vanaf een punt",
+      "difficulty": 3,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Je begint in punt A(−1, −2). Je gaat 4 naar rechts en 3 omhoog."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "In welk punt eindig je?",
+          "points": 2,
+          "answer": {
+            "value": "(3, 1)",
+            "accept": [
+              "(3,1)",
+              "3,1"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q012",
+      "title": "Rechtsonder",
+      "difficulty": 2,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "grid",
+        "grid": {
+          "x_min": -3,
+          "x_max": 3,
+          "y_min": -3,
+          "y_max": 3,
+          "step": 1,
+          "show_origin": true
+        },
+        "points": [
+          {
+            "label": "A",
+            "x": -2,
+            "y": 2
+          },
+          {
+            "label": "B",
+            "x": 2,
+            "y": 2
+          },
+          {
+            "label": "C",
+            "x": 2,
+            "y": -2
+          },
+          {
+            "label": "D",
+            "x": -2,
+            "y": -2
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Welk punt ligt rechtsonder? (A/B/C/D)",
+          "points": 1,
+          "answer": {
+            "value": "C",
+            "accept": [
+              "c"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Noem twee punten met dezelfde y-coördinaat 2 (schrijf bv. 'A en B').",
+          "points": 2,
+          "answer": {
+            "value": "A en B",
+            "accept": [
+              "A,B",
+              "A & B",
+              "B en A",
+              "B,A"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q013",
+      "title": "Roosterpunt?",
+      "difficulty": 3,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Je hebt vakjes van 1. Punt 1 is (2, 3) en punt 2 is (2, 3.4)."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Welk punt is een roosterpunt? Antwoord met 'punt 1' of 'punt 2'.",
+          "points": 1,
+          "answer": {
+            "value": "punt 1",
+            "accept": [
+              "Punt 1",
+              "1",
+              "punt1"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Leg kort uit waarom het andere punt geen roosterpunt is.",
+          "points": 2,
+          "answer": {
+            "value": "Omdat 3.4 niet precies op een roosterlijn/kruising ligt.",
+            "accept": []
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q014",
+      "title": "Negatieve x",
+      "difficulty": 2,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Punt K ligt 6 naar links en 3 omhoog vanaf O."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf de coördinaten van K.",
+          "points": 2,
+          "answer": {
+            "value": "(-6, 3)",
+            "accept": [
+              "(-6,3)",
+              "-6,3"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q015",
+      "title": "Fout controleren",
+      "difficulty": 4,
+      "topic": "assenstelsel",
+      "quiz_group": 1,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Iemand zegt: “Vanuit O 2 naar links en 5 omlaag is (2, −5).”"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Welke keuze is juist?",
+          "points": 2,
+          "options": [
+            "Onjuist: het moet (−2, −5) zijn.",
+            "Juist.",
+            "Onjuist: het moet (2, 5) zijn.",
+            "Onjuist: het moet (−2, 5) zijn."
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 0
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q016",
+      "title": "Globale grafiek: verloop herkennen",
+      "difficulty": 1,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "global_graph",
+        "curve": [
+          {
+            "x": 0,
+            "y": 1
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 4,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 8,
+            "y": 5
+          }
+        ],
+        "axes": {
+          "x_label": "tijd",
+          "y_label": "waarde"
+        },
+        "note": "Schets; geen schaal nodig."
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Noem in welke stukken de grafiek stijgt (gebruik x-intervals).",
+          "points": 2,
+          "answer": {
+            "value": "0-2 en 6-8",
+            "accept": [
+              "0–2 en 6–8",
+              "0-2,6-8",
+              "0 tot 2 en 6 tot 8"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Noem in welk stuk de grafiek constant is.",
+          "points": 1,
+          "answer": {
+            "value": "2-4",
+            "accept": [
+              "2–4",
+              "2-4",
+              "2 tot 4"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Noem in welk stuk de grafiek daalt.",
+          "points": 1,
+          "answer": {
+            "value": "4-6",
+            "accept": [
+              "4–6",
+              "4-6",
+              "4 tot 6"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q017",
+      "title": "Grafiek aflezen (exacte roosterpunten)",
+      "difficulty": 2,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "grid_graph",
+        "axes": {
+          "x_min": 0,
+          "x_max": 10,
+          "y_min": 0,
+          "y_max": 50,
+          "x_step": 1,
+          "y_step": 5,
+          "x_label": "tijd (min)",
+          "y_label": "afstand (m)"
+        },
+        "polyline": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            4,
+            25
+          ],
+          [
+            6,
+            25
+          ],
+          [
+            8,
+            40
+          ],
+          [
+            10,
+            50
+          ]
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel meter is de afstand na 4 minuten?",
+          "points": 1,
+          "answer": {
+            "value": "25",
+            "accept": [
+              "25 m",
+              "25"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Tussen welke minuten staat de afstand stil?",
+          "points": 2,
+          "answer": {
+            "value": "4-6",
+            "accept": [
+              "4–6",
+              "4 tot 6",
+              "4-6"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Hoeveel meter neemt de afstand toe tussen minuut 8 en 10?",
+          "points": 2,
+          "answer": {
+            "value": "10",
+            "accept": [
+              "10 m",
+              "10"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q018",
+      "title": "Grafiek: tijd bij een gegeven waarde",
+      "difficulty": 3,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "grid_graph",
+        "axes": {
+          "x_min": 0,
+          "x_max": 12,
+          "y_min": 0,
+          "y_max": 120,
+          "x_step": 1,
+          "y_step": 10,
+          "x_label": "tijd (min)",
+          "y_label": "hartslag (per min)"
+        },
+        "polyline": [
+          [
+            0,
+            70
+          ],
+          [
+            2,
+            110
+          ],
+          [
+            4,
+            90
+          ],
+          [
+            6,
+            130
+          ],
+          [
+            8,
+            100
+          ],
+          [
+            10,
+            120
+          ],
+          [
+            12,
+            80
+          ]
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bij welke tijd is de hartslag 90?",
+          "points": 2,
+          "answer": {
+            "value": "4",
+            "accept": [
+              "4 min",
+              "4"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Wat is de hoogste hartslag in de grafiek?",
+          "points": 1,
+          "answer": {
+            "value": "130",
+            "accept": [
+              "130",
+              "130 per min"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Noem één tijdstip waarop de hartslag daalt.",
+          "points": 2,
+          "answer": {
+            "value": "2-4",
+            "accept": [
+              "2–4",
+              "2 tot 4",
+              "6-8",
+              "10-12"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q019",
+      "title": "Van tabel naar grafiek: assen kiezen",
+      "difficulty": 2,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "table",
+        "table": {
+          "columns": [
+            "tijd (u)",
+            "temperatuur (°C)"
+          ],
+          "rows": [
+            [
+              0,
+              12
+            ],
+            [
+              1,
+              15
+            ],
+            [
+              2,
+              17
+            ],
+            [
+              3,
+              16
+            ],
+            [
+              4,
+              14
+            ]
+          ]
+        },
+        "ui_instructions": {
+          "show_table": true,
+          "show_grid": true,
+          "grid_suggestion": {
+            "x_min": 0,
+            "x_max": 4,
+            "y_min": 10,
+            "y_max": 18,
+            "x_step": 1,
+            "y_step": 1,
+            "x_label": "tijd (u)",
+            "y_label": "temperatuur (°C)"
+          },
+          "drawing_mode": "polyline"
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Welke grootheid hoort op de horizontale as (x-as)?",
+          "points": 1,
+          "options": [
+            "tijd (u)",
+            "temperatuur (°C)"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "b",
+          "type": "mcq",
+          "prompt": "Welke grootheid hoort op de verticale as (y-as)?",
+          "points": 1,
+          "options": [
+            "tijd (u)",
+            "temperatuur (°C)"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 1
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Welke temperatuur hoort bij tijd 3 uur?",
+          "points": 1,
+          "answer": {
+            "value": "16",
+            "accept": [
+              "16°C",
+              "16"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q020",
+      "title": "Globaal of precies?",
+      "difficulty": 1,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Je ziet een grafiek zonder getallen op de assen, maar je ziet wel of de lijn stijgt, daalt of constant is."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Wat voor grafiek is dit?",
+          "points": 1,
+          "options": [
+            "Een globale grafiek",
+            "Een grafiek in een assenstelsel met schaal"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Wat kun je wél uit zo’n grafiek halen? (noem 1 ding)",
+          "points": 2,
+          "answer": {
+            "value": "Het verloop: stijgend/dalend/constant.",
+            "accept": []
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q021",
+      "title": "Stijgend/dalend/constant herkennen",
+      "difficulty": 2,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "global_graph",
+        "curve": [
+          {
+            "x": 0,
+            "y": 3
+          },
+          {
+            "x": 1,
+            "y": 1
+          },
+          {
+            "x": 3,
+            "y": 1
+          },
+          {
+            "x": 5,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "axes": {
+          "x_label": "tijd",
+          "y_label": "hoogte"
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Is het stuk van x=1 tot x=3 stijgend, dalend of constant?",
+          "points": 1,
+          "answer": {
+            "value": "constant",
+            "accept": [
+              "Constant"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Is het stuk van x=0 tot x=1 stijgend, dalend of constant?",
+          "points": 1,
+          "answer": {
+            "value": "dalend",
+            "accept": [
+              "Dalend"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Is het stuk van x=3 tot x=5 stijgend, dalend of constant?",
+          "points": 1,
+          "answer": {
+            "value": "stijgend",
+            "accept": [
+              "Stijgend"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q022",
+      "title": "Afstand-tijd: pauze",
+      "difficulty": 2,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "grid_graph",
+        "axes": {
+          "x_min": 0,
+          "x_max": 9,
+          "y_min": 0,
+          "y_max": 180,
+          "x_step": 1,
+          "y_step": 20,
+          "x_label": "tijd (min)",
+          "y_label": "afstand (m)"
+        },
+        "polyline": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            60
+          ],
+          [
+            3,
+            60
+          ],
+          [
+            5,
+            140
+          ],
+          [
+            7,
+            140
+          ],
+          [
+            9,
+            170
+          ]
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel pauzes (stilstand) zie je?",
+          "points": 1,
+          "answer": {
+            "value": "2",
+            "accept": [
+              "2 pauzes",
+              "2"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Noem de tijd-interval(s) van de pauze(s).",
+          "points": 2,
+          "answer": {
+            "value": "2-3 en 5-7",
+            "accept": [
+              "2–3 en 5–7",
+              "2-3,5-7"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q023",
+      "title": "Beginwaarde aflezen",
+      "difficulty": 1,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "grid_graph",
+        "axes": {
+          "x_min": 0,
+          "x_max": 6,
+          "y_min": 0,
+          "y_max": 30,
+          "x_step": 1,
+          "y_step": 5,
+          "x_label": "tijd (min)",
+          "y_label": "hoogte (cm)"
+        },
+        "polyline": [
+          [
+            0,
+            10
+          ],
+          [
+            2,
+            15
+          ],
+          [
+            4,
+            22
+          ],
+          [
+            6,
+            28
+          ]
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wat is de hoogte bij start (t=0)?",
+          "points": 1,
+          "answer": {
+            "value": "10",
+            "accept": [
+              "10 cm",
+              "10"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 1
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q024",
+      "title": "Schaal kiezen",
+      "difficulty": 3,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Je wilt een grafiek tekenen voor een afstand van 0 t/m 250 km op de y-as. Je hebt 10 vakjes in de hoogte."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Welke schaal is het handigst?",
+          "points": 2,
+          "options": [
+            "1 vakje = 10 km",
+            "1 vakje = 25 km",
+            "1 vakje = 50 km",
+            "1 vakje = 100 km"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 1
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Waarom is jouw keuze handig? (kort)",
+          "points": 2,
+          "answer": {
+            "value": "Omdat 10 vakjes × 25 km = 250 km, precies passend.",
+            "accept": []
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q025",
+      "title": "Tabel lezen: grootste toename",
+      "difficulty": 2,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "table",
+        "table": {
+          "columns": [
+            "week",
+            "hoogte (cm)"
+          ],
+          "rows": [
+            [
+              0,
+              20
+            ],
+            [
+              1,
+              35
+            ],
+            [
+              2,
+              55
+            ],
+            [
+              3,
+              90
+            ],
+            [
+              4,
+              140
+            ],
+            [
+              5,
+              200
+            ],
+            [
+              6,
+              250
+            ]
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "In welke week is de hoogte het grootst?",
+          "points": 1,
+          "answer": {
+            "value": "6",
+            "accept": [
+              "week 6",
+              "6"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Tussen welke twee weken is de grootste toename?",
+          "points": 2,
+          "answer": {
+            "value": "4-5",
+            "accept": [
+              "4–5",
+              "4-5",
+              "3-4"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q026",
+      "title": "Tabel → punten",
+      "difficulty": 2,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "table",
+        "table": {
+          "columns": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              8
+            ]
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf de punten uit de tabel op als coördinaten, gescheiden door komma’s.",
+          "points": 2,
+          "answer": {
+            "value": "(0,3), (1,5), (2,8), (3,8)",
+            "accept": []
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Tussen welke x-waarden is de grafiek constant?",
+          "points": 1,
+          "answer": {
+            "value": "2-3",
+            "accept": [
+              "2–3",
+              "2-3"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q027",
+      "title": "Snelheid (kwalitatief)",
+      "difficulty": 3,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "global_graph",
+        "curve": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 50
+          },
+          {
+            "x": 4,
+            "y": 90
+          },
+          {
+            "x": 6,
+            "y": 95
+          },
+          {
+            "x": 8,
+            "y": 130
+          }
+        ],
+        "axes": {
+          "x_label": "tijd",
+          "y_label": "afstand"
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Wanneer gaat het het langzaamst vooruit?",
+          "points": 2,
+          "options": [
+            "0-2",
+            "2-4",
+            "4-6",
+            "6-8"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 2
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoe zie je dat aan de grafiek?",
+          "points": 2,
+          "answer": {
+            "value": "Omdat de lijn daar het minst steil is (bijna horizontaal).",
+            "accept": []
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q028",
+      "title": "Grafiek → tabel",
+      "difficulty": 3,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "grid_graph",
+        "axes": {
+          "x_min": 0,
+          "x_max": 5,
+          "y_min": 0,
+          "y_max": 40,
+          "x_step": 1,
+          "y_step": 5,
+          "x_label": "u (uren)",
+          "y_label": "aantal (st)"
+        },
+        "polyline": [
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            16
+          ],
+          [
+            2,
+            22
+          ],
+          [
+            3,
+            28
+          ],
+          [
+            4,
+            34
+          ],
+          [
+            5,
+            40
+          ]
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "table_fill",
+          "prompt": "Vul de ontbrekende waarden in de tabel met behulp van de grafiek.",
+          "points": 3,
+          "table": {
+            "columns": [
+              "u",
+              "aantal"
+            ],
+            "rows": [
+              [
+                0,
+                10
+              ],
+              [
+                1,
+                null
+              ],
+              [
+                2,
+                22
+              ],
+              [
+                3,
+                null
+              ],
+              [
+                4,
+                34
+              ],
+              [
+                5,
+                null
+              ]
+            ]
+          },
+          "answer": {
+            "cells": {
+              "r1c1": 16,
+              "r3c1": 28,
+              "r5c1": 40
+            }
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q029",
+      "title": "Snijpunt van twee lijnen",
+      "difficulty": 4,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "grid_graph_multi",
+        "axes": {
+          "x_min": 0,
+          "x_max": 8,
+          "y_min": 0,
+          "y_max": 80,
+          "x_step": 1,
+          "y_step": 10,
+          "x_label": "tijd (min)",
+          "y_label": "afstand (m)"
+        },
+        "polylines": [
+          {
+            "label": "Anne",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                2,
+                30
+              ],
+              [
+                4,
+                50
+              ],
+              [
+                6,
+                60
+              ],
+              [
+                8,
+                80
+              ]
+            ]
+          },
+          {
+            "label": "Ron",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                2,
+                20
+              ],
+              [
+                4,
+                40
+              ],
+              [
+                6,
+                65
+              ],
+              [
+                8,
+                70
+              ]
+            ]
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bij welke tijd hebben Anne en Ron dezelfde afstand?",
+          "points": 1,
+          "answer": {
+            "value": "0",
+            "accept": [
+              "0 min",
+              "0"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Noem nog een tijdstip waarop hun afstanden gelijk zijn (aflezen).",
+          "points": 2,
+          "answer": {
+            "value": "4",
+            "accept": [
+              "4 min",
+              "4"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Wie loopt tussen 4 en 6 min sneller?",
+          "points": 2,
+          "answer": {
+            "value": "Ron",
+            "accept": [
+              "ron"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q030",
+      "title": "Grafiek: betekenis van dalen naar 0",
+      "difficulty": 2,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een grafiek van 'water in een bak (liter)' tegen 'tijd (min)' daalt en eindigt bij 0."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wat betekent het moment dat de grafiek 0 liter raakt?",
+          "points": 2,
+          "answer": {
+            "value": "De bak is leeg.",
+            "accept": []
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q031",
+      "title": "Lees verschil af",
+      "difficulty": 2,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "grid_graph",
+        "axes": {
+          "x_min": 0,
+          "x_max": 10,
+          "y_min": 0,
+          "y_max": 5,
+          "x_step": 1,
+          "y_step": 0.5,
+          "x_label": "maand",
+          "y_label": "data (GB)"
+        },
+        "polyline": [
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            10,
+            0
+          ]
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel GB is er na 6 maanden over?",
+          "points": 1,
+          "answer": {
+            "value": "2",
+            "accept": [
+              "2 GB",
+              "2"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Na hoeveel maanden is er 1 GB over?",
+          "points": 1,
+          "answer": {
+            "value": "8",
+            "accept": [
+              "8 maanden",
+              "8"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q032",
+      "title": "Kies de juiste beschrijving",
+      "difficulty": 3,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "global_graph",
+        "curve": [
+          {
+            "x": 0,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 5
+          },
+          {
+            "x": 3,
+            "y": 4
+          },
+          {
+            "x": 5,
+            "y": 4
+          },
+          {
+            "x": 7,
+            "y": 1
+          }
+        ],
+        "axes": {
+          "x_label": "tijd",
+          "y_label": "snelheid"
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Welke beschrijving past het best?",
+          "points": 2,
+          "options": [
+            "Eerst versnelt, dan remt, dan rijdt even constant, en remt daarna verder.",
+            "Eerst remt, dan versnelt, dan stopt, en versnelt daarna.",
+            "De snelheid blijft steeds gelijk.",
+            "De snelheid stijgt de hele tijd."
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 0
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q033",
+      "title": "Constante snelheid herkennen",
+      "difficulty": 1,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "global_graph",
+        "curve": [
+          {
+            "x": 0,
+            "y": 3
+          },
+          {
+            "x": 5,
+            "y": 3
+          }
+        ],
+        "axes": {
+          "x_label": "tijd",
+          "y_label": "snelheid"
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Is de snelheid constant? Antwoord ja/nee.",
+          "points": 1,
+          "answer": {
+            "value": "ja",
+            "accept": [
+              "Ja",
+              "JA"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 1
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q034",
+      "title": "Teken-instructie: grafiek maken",
+      "difficulty": 3,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "instruction",
+        "ui_instructions": {
+          "show_table": true,
+          "show_grid": true,
+          "grid_required": true,
+          "grid_spec": {
+            "x_min": 0,
+            "x_max": 9,
+            "y_min": 0,
+            "y_max": 750,
+            "x_step": 1,
+            "y_step": 50,
+            "x_label": "dag",
+            "y_label": "gewicht (g)"
+          },
+          "drawing_mode": "polyline",
+          "must_plot_points": true,
+          "must_connect": true
+        },
+        "table": {
+          "columns": [
+            "dag",
+            "gewicht (g)"
+          ],
+          "rows": [
+            [
+              0,
+              300
+            ],
+            [
+              1,
+              400
+            ],
+            [
+              2,
+              420
+            ],
+            [
+              3,
+              450
+            ],
+            [
+              4,
+              500
+            ],
+            [
+              5,
+              500
+            ],
+            [
+              6,
+              620
+            ],
+            [
+              7,
+              650
+            ],
+            [
+              8,
+              700
+            ],
+            [
+              9,
+              750
+            ]
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Welke as is de horizontale as in deze grafiek: dag of gewicht?",
+          "points": 1,
+          "answer": {
+            "value": "dag",
+            "accept": [
+              "Dag"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Wat is het gewicht op dag 6?",
+          "points": 1,
+          "answer": {
+            "value": "620",
+            "accept": [
+              "620 g",
+              "620"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q035",
+      "title": "Grafiek: grootste daling",
+      "difficulty": 4,
+      "topic": "grafieken",
+      "quiz_group": 2,
+      "render": {
+        "type": "grid_graph",
+        "axes": {
+          "x_min": 0,
+          "x_max": 10,
+          "y_min": 2900,
+          "y_max": 3150,
+          "x_step": 1,
+          "y_step": 50,
+          "x_label": "dag",
+          "y_label": "gewicht (g)"
+        },
+        "polyline": [
+          [
+            0,
+            3000
+          ],
+          [
+            1,
+            2960
+          ],
+          [
+            2,
+            2930
+          ],
+          [
+            3,
+            2910
+          ],
+          [
+            4,
+            2900
+          ],
+          [
+            5,
+            2920
+          ],
+          [
+            6,
+            2940
+          ],
+          [
+            7,
+            2980
+          ],
+          [
+            8,
+            3030
+          ],
+          [
+            9,
+            3080
+          ],
+          [
+            10,
+            3130
+          ]
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Tussen welke twee opeenvolgende dagen is de grootste daling?",
+          "points": 2,
+          "answer": {
+            "value": "0-1",
+            "accept": [
+              "0–1",
+              "0-1",
+              "1-2"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoe groot is die daling in gram?",
+          "points": 2,
+          "answer": {
+            "value": "40",
+            "accept": [
+              "40 g",
+              "40"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q036",
+      "title": "Woordformule: taxi",
+      "difficulty": 2,
+      "topic": "woordformules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een taxi rekent €5 starttarief en daarna €2 per kilometer."
+          },
+          {
+            "type": "p",
+            "text": "Gebruik: bedrag = 5 + 2 · aantal_km."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wat betaal je voor 8 km?",
+          "points": 2,
+          "answer": {
+            "value": "21",
+            "accept": [
+              "€21",
+              "21"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoeveel kilometer heb je gereden als je €29 betaalt?",
+          "points": 3,
+          "answer": {
+            "value": "12",
+            "accept": [
+              "12 km",
+              "12"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q037",
+      "title": "Formule met letters: huurbedrag",
+      "difficulty": 2,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een verhuurbedrijf rekent: bedrag = 25 + 50 · d. Hierin is d het aantal dagen."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken het bedrag bij d = 3.",
+          "points": 2,
+          "answer": {
+            "value": "175",
+            "accept": [
+              "€175",
+              "175"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Wat is het bedrag per dag (het deel dat met d meegaat)?",
+          "points": 1,
+          "answer": {
+            "value": "50",
+            "accept": [
+              "50 euro",
+              "50"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Wat is de startkosten (vast bedrag)?",
+          "points": 1,
+          "answer": {
+            "value": "25",
+            "accept": [
+              "25 euro",
+              "25"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q038",
+      "title": "Tabel lezen: batterij",
+      "difficulty": 1,
+      "topic": "grafieken",
+      "quiz_group": 3,
+      "render": {
+        "type": "table",
+        "table": {
+          "columns": [
+            "tijd (u)",
+            "percentage"
+          ],
+          "rows": [
+            [
+              0,
+              100
+            ],
+            [
+              2,
+              93
+            ],
+            [
+              4,
+              90
+            ],
+            [
+              6,
+              85
+            ],
+            [
+              8,
+              68
+            ],
+            [
+              10,
+              45
+            ],
+            [
+              12,
+              80
+            ],
+            [
+              14,
+              35
+            ]
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wat is het batterijpercentage na 8 uur?",
+          "points": 1,
+          "answer": {
+            "value": "68",
+            "accept": [
+              "68%",
+              "68"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Op welk tijdstip is de batterij weer hoger dan bij 10 uur?",
+          "points": 2,
+          "answer": {
+            "value": "12",
+            "accept": [
+              "12 uur",
+              "12"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q039",
+      "title": "Formule met haakjes",
+      "difficulty": 4,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een parkeergarage rekent voor langer dan 24 uur: bedrag = 72 + 2·(a − 24)."
+          },
+          {
+            "type": "p",
+            "text": "Hierin is a het totaal aantal uren parkeren."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken het bedrag bij a = 30.",
+          "points": 3,
+          "answer": {
+            "value": "84",
+            "accept": [
+              "€84",
+              "84"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Wat betaal je extra per uur boven de 24 uur?",
+          "points": 1,
+          "answer": {
+            "value": "2",
+            "accept": [
+              "€2",
+              "2"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q040",
+      "title": "Formule: kaars brandt op",
+      "difficulty": 3,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "De lengte van een kaars (in cm) na b uur branden is: lengte = 42 − 6·b."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoe lang is de kaars na 3 uur?",
+          "points": 2,
+          "answer": {
+            "value": "24",
+            "accept": [
+              "24 cm",
+              "24"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Na hoeveel uur is de kaars 6 cm lang?",
+          "points": 3,
+          "answer": {
+            "value": "6",
+            "accept": [
+              "6 uur",
+              "6"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q041",
+      "title": "Formule: temperatuur en hoogte",
+      "difficulty": 3,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "De temperatuur in °C hangt af van de hoogte h (in km): T = 21 − 6·h."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken T bij h = 2 km.",
+          "points": 2,
+          "answer": {
+            "value": "9",
+            "accept": [
+              "9°C",
+              "9"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Bij welke hoogte is T = -3°C?",
+          "points": 3,
+          "answer": {
+            "value": "4",
+            "accept": [
+              "4 km",
+              "4"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q042",
+      "title": "Formule: beltegoed",
+      "difficulty": 2,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een simkaart heeft beltegoed (in centen): beltegoed = 4000 − 10·a. Hierin is a het aantal minuten bellen."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel beltegoed is er over na 120 minuten?",
+          "points": 2,
+          "answer": {
+            "value": "2800",
+            "accept": [
+              "2800 cent",
+              "2800"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Na hoeveel minuten is het beltegoed op?",
+          "points": 3,
+          "answer": {
+            "value": "400",
+            "accept": [
+              "400 min",
+              "400"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q043",
+      "title": "Woordformule: vergelijken",
+      "difficulty": 3,
+      "topic": "woordformules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Laagseizoen: €75 per dag + €50 schoonmaakkosten."
+          },
+          {
+            "type": "p",
+            "text": "Hoogseizoen: €90 per dag + €50 schoonmaakkosten."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken de prijs in het laagseizoen voor 10 dagen.",
+          "points": 2,
+          "answer": {
+            "value": "800",
+            "accept": [
+              "€800",
+              "800"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Bereken het prijsverschil (hoog − laag) voor 10 dagen.",
+          "points": 2,
+          "answer": {
+            "value": "150",
+            "accept": [
+              "€150",
+              "150"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q044",
+      "title": "Formule invullen: computercursus",
+      "difficulty": 1,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een cursus kost: K = 8 + 4·u. Hierin is u het aantal uren."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken K bij u = 5.",
+          "points": 1,
+          "answer": {
+            "value": "28",
+            "accept": [
+              "€28",
+              "28"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Wat is de startprijs (als u=0)?",
+          "points": 1,
+          "answer": {
+            "value": "8",
+            "accept": [
+              "€8",
+              "8"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q045",
+      "title": "Uren omrekenen",
+      "difficulty": 2,
+      "topic": "woordformules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een parkeergarage rekent €3 per uur. Je parkeert 2 dagen en 5 uur."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel uur is dat in totaal?",
+          "points": 1,
+          "answer": {
+            "value": "53",
+            "accept": [
+              "53 uur",
+              "53"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoeveel betaal je?",
+          "points": 2,
+          "answer": {
+            "value": "159",
+            "accept": [
+              "€159",
+              "159"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q046",
+      "title": "Formule: waterhoogte",
+      "difficulty": 2,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In een vat staat 10 cm water. Iedere minuut stijgt het water 5 cm. Formule: h = 5·m + 10."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken h na 6 minuten.",
+          "points": 2,
+          "answer": {
+            "value": "40",
+            "accept": [
+              "40 cm",
+              "40"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Na hoeveel minuten is h = 60 cm?",
+          "points": 2,
+          "answer": {
+            "value": "10",
+            "accept": [
+              "10 min",
+              "10"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q047",
+      "title": "Formule: temperatuur in een put",
+      "difficulty": 3,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "De temperatuur in °C in de grond hangt af van de diepte d (in km): T = 30 + 10·d."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken T bij d = 1,5 km.",
+          "points": 2,
+          "answer": {
+            "value": "45",
+            "accept": [
+              "45°C",
+              "45"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Welke diepte hoort bij T = 70°C?",
+          "points": 3,
+          "answer": {
+            "value": "4",
+            "accept": [
+              "4 km",
+              "4"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q048",
+      "title": "Twee formules vergelijken",
+      "difficulty": 4,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kaars I: L1 = 15 − 3·u (cm)."
+          },
+          {
+            "type": "p",
+            "text": "Kaars II: L2 = 12 − 2·u (cm)."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoe lang is kaars I na 2 uur?",
+          "points": 1,
+          "answer": {
+            "value": "9",
+            "accept": [
+              "9 cm",
+              "9"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoe lang is kaars II na 2 uur?",
+          "points": 1,
+          "answer": {
+            "value": "8",
+            "accept": [
+              "8 cm",
+              "8"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Welke kaars brandt het langst (tot lengte 0)?",
+          "points": 2,
+          "answer": {
+            "value": "Kaars II",
+            "accept": [
+              "II",
+              "2",
+              "Kaars 2"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q049",
+      "title": "Formule: inkomsten",
+      "difficulty": 2,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bij een bijbaan krijg je: inkomsten = 2,50 + 4·t. Hierin is t het aantal uur werken."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken inkomsten bij t = 3 uur.",
+          "points": 2,
+          "answer": {
+            "value": "14.50",
+            "accept": [
+              "14,50",
+              "€14,50",
+              "14.5"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoeveel uur werkte je als je €22,50 kreeg?",
+          "points": 3,
+          "answer": {
+            "value": "5",
+            "accept": [
+              "5 uur",
+              "5"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q050",
+      "title": "Woordformule opstellen",
+      "difficulty": 3,
+      "topic": "woordformules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een bedrijf rekent €20 vast en daarna €2,50 per dag."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf een woordformule voor het bedrag in euro’s (gebruik d voor aantal dagen).",
+          "points": 3,
+          "answer": {
+            "value": "bedrag = 20 + 2,5·d",
+            "accept": [
+              "bedrag=20+2,5d",
+              "B=20+2,5d",
+              "20+2,5·d"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q051",
+      "title": "Formule aanpassen",
+      "difficulty": 3,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een formule is: bedrag = 25 + 50·d. De prijs per dag wordt €5 duurder."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf de nieuwe formule.",
+          "points": 3,
+          "answer": {
+            "value": "bedrag = 25 + 55·d",
+            "accept": [
+              "25+55d",
+              "bedrag=25+55d",
+              "25 + 55·d"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q052",
+      "title": "Formule: temperatuur stijgt",
+      "difficulty": 2,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "De temperatuur is: T = −40 + 10·n. Hierin is n het aantal minuten."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken T bij n = 5.",
+          "points": 2,
+          "answer": {
+            "value": "10",
+            "accept": [
+              "10°C",
+              "10"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Na hoeveel minuten is T = 0°C?",
+          "points": 2,
+          "answer": {
+            "value": "4",
+            "accept": [
+              "4",
+              "4 min"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q053",
+      "title": "Formule: surfplank huren",
+      "difficulty": 2,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "De huurprijs is: H = 10 + 2·k. Hierin is k het aantal kwartieren."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wat betaal je voor 2 uur huren?",
+          "points": 2,
+          "answer": {
+            "value": "18",
+            "accept": [
+              "18",
+              "€18"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoeveel kwartieren is 2 uur?",
+          "points": 1,
+          "answer": {
+            "value": "8",
+            "accept": [
+              "8",
+              "8 kwartier"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q054",
+      "title": "Formule: bewaartijd",
+      "difficulty": 4,
+      "topic": "formules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een product bewaart b dagen volgens: b = 10 + 3,5·T. Hierin is T de bewaartemperatuur in °C."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken b bij T = 4°C.",
+          "points": 2,
+          "answer": {
+            "value": "24",
+            "accept": [
+              "24",
+              "24 dagen"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Bereken b bij T = −18°C.",
+          "points": 2,
+          "answer": {
+            "value": "-53",
+            "accept": [
+              "-53",
+              "-53 dagen"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Welke conclusie trek je uit b bij −18°C? (kort)",
+          "points": 3,
+          "answer": {
+            "value": "Deze formule is niet geschikt voor zulke temperaturen; je kunt geen negatieve bewaartijd hebben.",
+            "accept": []
+          }
+        }
+      ],
+      "scoring": {
+        "points": 7
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q055",
+      "title": "Woordformule: omgekeerd rekenen",
+      "difficulty": 3,
+      "topic": "woordformules",
+      "quiz_group": 3,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Je huurt een busje: €50 vaste kosten en €15 per uur."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wat betaal je voor 3 uur?",
+          "points": 2,
+          "answer": {
+            "value": "95",
+            "accept": [
+              "95",
+              "€95"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Je betaalt €170. Hoeveel uur heb je gehuurd?",
+          "points": 3,
+          "answer": {
+            "value": "8",
+            "accept": [
+              "8",
+              "8 uur"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q056",
+      "title": "Grafiek bij formule: tabel maken",
+      "difficulty": 2,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "formula_graph_task",
+        "formula": {
+          "latex": "K = 5 + 3t",
+          "variables": {
+            "t": "tijd (u)",
+            "K": "kosten (€)"
+          }
+        },
+        "ui_instructions": {
+          "require_table": true,
+          "table_template": {
+            "columns": [
+              "t",
+              "K"
+            ],
+            "rows": [
+              [
+                0,
+                null
+              ],
+              [
+                1,
+                null
+              ],
+              [
+                2,
+                null
+              ],
+              [
+                3,
+                null
+              ],
+              [
+                4,
+                null
+              ]
+            ]
+          },
+          "require_graph": true,
+          "grid_spec": {
+            "x_min": 0,
+            "x_max": 4,
+            "y_min": 0,
+            "y_max": 20,
+            "x_step": 1,
+            "y_step": 1,
+            "x_label": "t (u)",
+            "y_label": "K (€)"
+          },
+          "drawing_mode": "line"
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "table_fill",
+          "prompt": "Vul de tabel in met K = 5 + 3t.",
+          "points": 4,
+          "table": {
+            "columns": [
+              "t",
+              "K"
+            ],
+            "rows": [
+              [
+                0,
+                null
+              ],
+              [
+                1,
+                null
+              ],
+              [
+                2,
+                null
+              ],
+              [
+                3,
+                null
+              ],
+              [
+                4,
+                null
+              ]
+            ]
+          },
+          "answer": {
+            "cells": {
+              "r0c1": 5,
+              "r1c1": 8,
+              "r2c1": 11,
+              "r3c1": 14,
+              "r4c1": 17
+            }
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Wat is K als t = 0?",
+          "points": 1,
+          "answer": {
+            "value": "5",
+            "accept": [
+              "5",
+              "€5"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q057",
+      "title": "Grafiek bij formule: waardenreeks",
+      "difficulty": 3,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "formula_table",
+        "formula": {
+          "latex": "y = 2x - 1"
+        },
+        "ui_instructions": {
+          "require_table": true,
+          "require_graph": false
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "table_fill",
+          "prompt": "Bereken y voor de gegeven x-waarden.",
+          "points": 5,
+          "table": {
+            "columns": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                -2,
+                null
+              ],
+              [
+                -1,
+                null
+              ],
+              [
+                0,
+                null
+              ],
+              [
+                1,
+                null
+              ],
+              [
+                2,
+                null
+              ]
+            ]
+          },
+          "answer": {
+            "cells": {
+              "r0c1": -5,
+              "r1c1": -3,
+              "r2c1": -1,
+              "r3c1": 1,
+              "r4c1": 3
+            }
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q058",
+      "title": "Helling en startwaarde",
+      "difficulty": 2,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Gegeven de formule y = 4x + 7."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wat is de startwaarde (y bij x=0)?",
+          "points": 1,
+          "answer": {
+            "value": "7",
+            "accept": [
+              "7"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoeveel stijgt y als x 1 groter wordt?",
+          "points": 1,
+          "answer": {
+            "value": "4",
+            "accept": [
+              "4"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q059",
+      "title": "Formule van een lijn (uit punten)",
+      "difficulty": 4,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een rechte lijn gaat door de punten (0, 2) en (4, 14)."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken de toename van y per 1 stap in x (helling).",
+          "points": 2,
+          "answer": {
+            "value": "3",
+            "accept": [
+              "3"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Schrijf de formule van de lijn als y = a·x + b.",
+          "points": 3,
+          "answer": {
+            "value": "y = 3x + 2",
+            "accept": [
+              "y=3x+2",
+              "3x+2"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q060",
+      "title": "Invullen met kommagetal",
+      "difficulty": 3,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Gegeven: y = 1,5x + 0,5."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken y bij x = 6.",
+          "points": 2,
+          "answer": {
+            "value": "9.5",
+            "accept": [
+              "9,5",
+              "9.5"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Bereken x als y = 5.",
+          "points": 3,
+          "answer": {
+            "value": "3",
+            "accept": [
+              "3"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q061",
+      "title": "Punt op de grafiek?",
+      "difficulty": 2,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Gegeven de formule y = 2x + 1."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Welk punt ligt op de grafiek?",
+          "points": 2,
+          "options": [
+            "(1, 2)",
+            "(2, 5)",
+            "(3, 5)",
+            "(0, 2)"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 2
+          }
+        }
+      ],
+      "scoring": {
+        "points": 2
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q062",
+      "title": "Twee formules vergelijken",
+      "difficulty": 3,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Formule A: y = 3x + 2. Formule B: y = 2x + 6."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken yA bij x=4.",
+          "points": 1,
+          "answer": {
+            "value": "14",
+            "accept": [
+              "14"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Bereken yB bij x=4.",
+          "points": 1,
+          "answer": {
+            "value": "14",
+            "accept": [
+              "14"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Bij welke x-waarde zijn A en B gelijk?",
+          "points": 2,
+          "answer": {
+            "value": "4",
+            "accept": [
+              "4"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q063",
+      "title": "Stijgend of dalend uit formule",
+      "difficulty": 1,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Gegeven: y = −x + 4."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "mcq",
+          "prompt": "Is de grafiek stijgend of dalend?",
+          "points": 1,
+          "options": [
+            "stijgend",
+            "dalend"
+          ],
+          "shuffle_options": true,
+          "answer": {
+            "correct_index": 1
+          }
+        }
+      ],
+      "scoring": {
+        "points": 1
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q064",
+      "title": "Formule uit tabel",
+      "difficulty": 4,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "table",
+        "table": {
+          "columns": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              0,
+              12
+            ],
+            [
+              1,
+              17
+            ],
+            [
+              2,
+              22
+            ],
+            [
+              3,
+              27
+            ]
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf de formule van y in de vorm y = a·x + b.",
+          "points": 4,
+          "answer": {
+            "value": "y = 5x + 12",
+            "accept": [
+              "y=5x+12",
+              "5x+12"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q065",
+      "title": "Snijpunt met y-as bepalen",
+      "difficulty": 3,
+      "topic": "grafiek_bij_formule",
+      "quiz_group": 4,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een lijn heeft helling 4 en gaat door het punt (2, 11)."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Bereken het snijpunt met de y-as (b in y=4x+b).",
+          "points": 4,
+          "answer": {
+            "value": "3",
+            "accept": [
+              "3"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q066",
+      "title": "Groeiende figuur: regelmaat vinden",
+      "difficulty": 2,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een figuur groeit per stap. In stap 1 zijn er 5 blokjes. In stap 2 zijn er 9 blokjes. In stap 3 zijn er 13 blokjes."
+          },
+          {
+            "type": "p",
+            "text": "Neem n = stapnummer."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel blokjes komen er elke stap bij?",
+          "points": 1,
+          "answer": {
+            "value": "4",
+            "accept": [
+              "4"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Schrijf een formule voor het aantal blokjes in stap n.",
+          "points": 3,
+          "answer": {
+            "value": "aantal = 4n + 1",
+            "accept": [
+              "4n+1",
+              "a=4n+1",
+              "aantal=4n+1"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Hoeveel blokjes zijn er in stap 10?",
+          "points": 2,
+          "answer": {
+            "value": "41",
+            "accept": [
+              "41"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 6
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q067",
+      "title": "Groeiende figuur: formule uit tabel",
+      "difficulty": 3,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "table",
+        "table": {
+          "columns": [
+            "stap n",
+            "aantal blokjes"
+          ],
+          "rows": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              10
+            ],
+            [
+              4,
+              15
+            ]
+          ]
+        },
+        "note": "De toename is niet constant; kijk naar het patroon van erbij komen."
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel blokjes komen er van stap 3 naar stap 4 bij?",
+          "points": 1,
+          "answer": {
+            "value": "5",
+            "accept": [
+              "5"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Welke reeks zie je in de toename (van stap naar stap)?",
+          "points": 2,
+          "answer": {
+            "value": "3,4,5,...",
+            "accept": [
+              "3 4 5",
+              "3,4,5"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Past de formule aantal = n(n+1)/2 + 1 bij deze tabel? Antwoord ja/nee.",
+          "points": 2,
+          "answer": {
+            "value": "nee",
+            "accept": [
+              "Nee",
+              "NEE"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q068",
+      "title": "Lucifers: lineaire groei",
+      "difficulty": 2,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Je maakt een rij van aaneengesloten vierkantjes met lucifers."
+          },
+          {
+            "type": "p",
+            "text": "Bij 1 vierkantje heb je 4 lucifers. Bij 2 vierkantjes 7. Bij 3 vierkantjes 10."
+          },
+          {
+            "type": "p",
+            "text": "Neem n = aantal vierkantjes."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel lucifers komen er per extra vierkantje bij?",
+          "points": 1,
+          "answer": {
+            "value": "3",
+            "accept": [
+              "3"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Schrijf de formule voor het aantal lucifers L.",
+          "points": 3,
+          "answer": {
+            "value": "L = 3n + 1",
+            "accept": [
+              "L=3n+1",
+              "3n+1"
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "type": "text",
+          "prompt": "Hoeveel lucifers zijn nodig voor 8 vierkantjes?",
+          "points": 2,
+          "answer": {
+            "value": "25",
+            "accept": [
+              "25"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 6
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q069",
+      "title": "Driehoeksgetallen",
+      "difficulty": 4,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een trapfiguur heeft in stap 1: 1 blokje, stap 2: 3 blokjes, stap 3: 6 blokjes, stap 4: 10 blokjes."
+          },
+          {
+            "type": "p",
+            "text": "Neem n = stapnummer."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf een formule die bij deze aantallen past.",
+          "points": 4,
+          "answer": {
+            "value": "aantal = n(n+1)/2",
+            "accept": [
+              "n(n+1)/2",
+              "n*(n+1)/2",
+              "a=n(n+1)/2"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Bereken het aantal blokjes in stap 7.",
+          "points": 2,
+          "answer": {
+            "value": "28",
+            "accept": [
+              "28"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 6
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q070",
+      "title": "Patroon: kwadraten",
+      "difficulty": 4,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een ruitvormige figuur bestaat uit blokjes. Stap 1: 1 blokje. Stap 2: 9 blokjes. Stap 3: 25 blokjes."
+          },
+          {
+            "type": "p",
+            "text": "Neem n = stapnummer."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Zie je een patroon als kwadraten? Schrijf de bijbehorende formule.",
+          "points": 4,
+          "answer": {
+            "value": "aantal = (2n-1)^2",
+            "accept": [
+              "(2n-1)^2",
+              "(2n−1)^2",
+              "a=(2n-1)^2"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoeveel blokjes in stap 4?",
+          "points": 2,
+          "answer": {
+            "value": "49",
+            "accept": [
+              "49"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 6
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q071",
+      "title": "Groei met startwaarde",
+      "difficulty": 2,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een figuur krijgt elke stap een extra 'ring' van blokjes. In stap 1 zijn er 4 rode blokjes. Elke volgende stap komen er 8 blokjes bij."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf een formule voor aantal in stap n.",
+          "points": 3,
+          "answer": {
+            "value": "aantal = 8n - 4",
+            "accept": [
+              "8n-4",
+              "a=8n-4"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Bereken het aantal in stap 5.",
+          "points": 2,
+          "answer": {
+            "value": "36",
+            "accept": [
+              "36"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q072",
+      "title": "Stapnummer terugrekenen",
+      "difficulty": 3,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Voor een groeiend patroon geldt: aantal = 4n + 1."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Welke stap (n) hoort bij aantal = 57?",
+          "points": 3,
+          "answer": {
+            "value": "14",
+            "accept": [
+              "14"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 3
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q073",
+      "title": "Vergelijk groei",
+      "difficulty": 3,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Patroon A: a = 3n + 4."
+          },
+          {
+            "type": "p",
+            "text": "Patroon B: b = 2n + 10."
+          },
+          {
+            "type": "p",
+            "text": "n is het stapnummer."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Welke groeit per stap sneller? (A/B)",
+          "points": 1,
+          "answer": {
+            "value": "A",
+            "accept": [
+              "a"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "In welke stap zijn A en B even groot?",
+          "points": 3,
+          "answer": {
+            "value": "6",
+            "accept": [
+              "6"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 4
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q074",
+      "title": "Formule opstellen uit tekst",
+      "difficulty": 2,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In stap 1 zijn er 12 blokjes. Elke volgende stap komen er 5 blokjes bij."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schrijf de formule in n (stapnummer) voor het aantal blokjes.",
+          "points": 3,
+          "answer": {
+            "value": "aantal = 5n + 7",
+            "accept": [
+              "5n+7",
+              "a=5n+7"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Hoeveel blokjes in stap 9?",
+          "points": 2,
+          "answer": {
+            "value": "52",
+            "accept": [
+              "52"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 5
+      },
+      "answer_key": {}
+    },
+    {
+      "id": "q075",
+      "title": "Niet-lineaire groei",
+      "difficulty": 4,
+      "topic": "groeiende_figuren",
+      "quiz_group": 5,
+      "render": {
+        "type": "text",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Een patroon heeft aantallen: stap 1 → 2, stap 2 → 6, stap 3 → 12, stap 4 → 20."
+          },
+          {
+            "type": "p",
+            "text": "De toename per stap is 4, 6, 8, ... (dus telkens +2)."
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Geef een formule die hierbij past (hint: n(n+1)).",
+          "points": 4,
+          "answer": {
+            "value": "aantal = n(n+1) + 0",
+            "accept": [
+              "n(n+1)",
+              "n*(n+1)"
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Bereken het aantal in stap 7.",
+          "points": 2,
+          "answer": {
+            "value": "56",
+            "accept": [
+              "56"
+            ]
+          }
+        }
+      ],
+      "scoring": {
+        "points": 6
+      },
+      "answer_key": {}
+    }
+  ],
+  "randomization": {
+    "note": "Vragen zijn standalone ontworpen en kunnen in willekeurige volgorde worden aangeboden.",
+    "shuffle_questions": true,
+    "shuffle_options_default": true
+  },
+  "ui_spec_notes": {
+    "grid": "Gebruik render.type='grid' of 'grid_graph*' om een assenstelsel met schaal te renderen. Bij 'point' parts verwacht je een klik/plaatsing.",
+    "table_fill": "Cells aangeduid in answer.cells gebruiken r{row}c{col} waarbij col is index van kolom binnen de rij; bij deze set is col=1 (tweede kolom) gebruikt voor invulwaarden.",
+    "decimals": "Accepteer zowel komma als punt bij decimale antwoorden, waar relevant."
+  }
+}

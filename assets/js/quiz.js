@@ -42,7 +42,11 @@ import {
   getSpacedQuestions,
   getMasteryStats,
 } from "./stats.js";
-import { createCoordinateSystem } from "./graph.js";
+import {
+  createCoordinateSystem,
+  createLineGraph,
+  createGlobalGraph,
+} from "./graph.js";
 
 // Constants
 const QUESTION_SECONDS = 90;
@@ -195,6 +199,11 @@ async function loadQuestions(savedProgress = null) {
       normalizeQuestion(q, meta.schema === "quiz"),
     );
 
+    // Apply quiz rotation if questionsPerSession is set
+    if (meta.questionsPerSession && normalized.length > meta.questionsPerSession) {
+      normalized = selectQuestionsForSession(normalized, meta.questionsPerSession, state.subjectId);
+    }
+
     // Increment session and apply spaced repetition
     incrementSession(state.subjectId);
     normalized = getSpacedQuestions(state.subjectId, normalized);
@@ -250,9 +259,18 @@ function normalizeQuestion(raw, preferMC = false) {
     "grouped_translation",
     "table_parse",
     "grouped_select",
+    "wiskunde_multi_part", // New: math questions with parts
   ];
   if (richTypes.includes(raw.type)) {
     return raw;
+  }
+
+  // Detect new wiskunde format (has render and parts)
+  if (raw.render && Array.isArray(raw.parts)) {
+    return {
+      ...raw,
+      type: "wiskunde_multi_part",
+    };
   }
 
   // Detect MC
@@ -327,6 +345,88 @@ function shuffleMCAnswers(q) {
 }
 
 /**
+ * Select questions for a session using quiz_group rotation
+ * Questions are grouped by quiz_group (1-5) and rotated through sessions
+ * This ensures variety across study sessions
+ */
+function selectQuestionsForSession(questions, perSession, subjectId) {
+  // Get current session number from localStorage
+  const sessionKey = `adamus_session_${subjectId}`;
+  const sessionData = localStorage.getItem(sessionKey);
+  let sessionNum = 1;
+
+  if (sessionData) {
+    try {
+      const parsed = JSON.parse(sessionData);
+      sessionNum = (parsed.sessionNum || 0) + 1;
+    } catch (e) {
+      sessionNum = 1;
+    }
+  }
+
+  // Save updated session number
+  localStorage.setItem(sessionKey, JSON.stringify({ sessionNum }));
+
+  // Group questions by quiz_group
+  const grouped = {};
+  const noGroup = [];
+
+  questions.forEach((q) => {
+    if (q.quiz_group) {
+      if (!grouped[q.quiz_group]) {
+        grouped[q.quiz_group] = [];
+      }
+      grouped[q.quiz_group].push(q);
+    } else {
+      noGroup.push(q);
+    }
+  });
+
+  const groupKeys = Object.keys(grouped).sort((a, b) => Number(a) - Number(b));
+  const numGroups = groupKeys.length;
+
+  if (numGroups === 0) {
+    // No quiz_group defined, just shuffle and take first N
+    shuffle(questions);
+    return questions.slice(0, perSession);
+  }
+
+  // Determine which groups to use this session
+  // Rotate through groups based on session number
+  const result = [];
+
+  // Calculate questions per group (distribute evenly)
+  const questionsPerGroup = Math.ceil(perSession / numGroups);
+
+  // Start from a rotating group based on session
+  const startGroupIdx = (sessionNum - 1) % numGroups;
+
+  for (let i = 0; i < numGroups && result.length < perSession; i++) {
+    const groupIdx = (startGroupIdx + i) % numGroups;
+    const groupKey = groupKeys[groupIdx];
+    const groupQuestions = [...grouped[groupKey]];
+
+    // Shuffle within group
+    shuffle(groupQuestions);
+
+    // Take up to questionsPerGroup from this group
+    const toTake = Math.min(questionsPerGroup, perSession - result.length, groupQuestions.length);
+    result.push(...groupQuestions.slice(0, toTake));
+  }
+
+  // If we still need more questions, add from ungrouped
+  if (result.length < perSession && noGroup.length > 0) {
+    shuffle(noGroup);
+    result.push(...noGroup.slice(0, perSession - result.length));
+  }
+
+  // Final shuffle to mix questions from different groups
+  shuffle(result);
+
+  return result;
+}
+
+/**
  * Render current question
  */
 function renderQuestion() {
@@ -376,6 +476,9 @@ function renderQuestion() {
       break;
     case "translation_open":
       renderTranslationOpen(container, q);
+      break;
+    case "wiskunde_multi_part":
+      renderWiskundeMultiPart(container, q);
       break;
     default:
       // Fallback for unknown types
@@ -942,6 +1045,440 @@ function updateSelectProgress() {
   if (checkBtn) checkBtn.disabled = completeCount === 0;
 }
 
+/* ===========================================
+   Wiskunde Multi-Part Question Renderer
+   =========================================== */
+
+/**
+ * Render wiskunde question with multiple parts (a, b, c, ...)
+ * Supports render types: grid, grid_graph, global_graph, table, text
+ */
+function renderWiskundeMultiPart(container, q) {
+  const render = q.render || {};
+  const parts = q.parts || [];
+
+  // Build render area based on type
+  let renderHtml = "";
+  switch (render.type) {
+    case "grid":
+      renderHtml = '<div id="wiskundeGraph" class="wiskunde-graph"></div>';
+      break;
+    case "grid_graph":
+      renderHtml = '<div id="wiskundeGraph" class="wiskunde-graph"></div>';
+      break;
+    case "global_graph":
+      renderHtml = '<div id="wiskundeGraph" class="wiskunde-graph wiskunde-graph-global"></div>';
+      break;
+    case "table":
+      renderHtml = renderMathTable(render.table);
+      break;
+    case "text":
+      renderHtml = renderTextBlocks(render.blocks);
+      break;
+    default:
+      renderHtml = "";
+  }
+
+  // Build parts HTML
+  const partsHtml = parts
+    .map((part, idx) => {
+      const partId = part.id || String.fromCharCode(97 + idx); // a, b, c...
+      return renderPart(part, partId, idx);
+    })
+    .join("");
+
+  container.innerHTML = `
+    <div class="wiskunde-question">
+      <div class="wiskunde-title">${q.title || "Vraag"}</div>
+      ${renderHtml}
+      <div class="wiskunde-parts">
+        ${partsHtml}
+      </div>
+      <div class="wiskunde-progress">
+        <span id="wiskundeFilled">0</span> / <span id="wiskundeTotal">${parts.length}</span> ingevuld
+      </div>
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  // Render graph after container is in DOM
+  if (render.type === "grid") {
+    renderCoordinateGrid($("wiskundeGraph"), render);
+  } else if (render.type === "grid_graph") {
+    renderLineGraph($("wiskundeGraph"), render);
+  } else if (render.type === "global_graph") {
+    renderGlobalGraph($("wiskundeGraph"), render);
+  }
+
+  // Setup event listeners for inputs
+  setupWiskundeInputListeners();
+
+  // Focus first input
+  const firstInput = $$(".wiskunde-input", container);
+  if (firstInput) firstInput.focus();
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+/**
+ * Render a single part based on its type
+ */
+function renderPart(part, partId, idx) {
+  const prompt = part.prompt || "";
+  const type = part.type || "text";
+
+  let inputHtml = "";
+  switch (type) {
+    case "text":
+      inputHtml = `
+        <input type="text"
+               id="part-${idx}"
+               class="wiskunde-input"
+               data-part="${idx}"
+               placeholder="..."
+               autocomplete="off"
+               autocorrect="off"
+               spellcheck="false">
+      `;
+      break;
+
+    case "mcq":
+      const options = part.options || [];
+      inputHtml = `
+        <div class="wiskunde-mcq" data-part="${idx}">
+          ${options
+            .map(
+              (opt, optIdx) => `
+            <label class="wiskunde-mcq-option">
+              <input type="radio" name="part-${idx}" value="${optIdx}" class="wiskunde-radio" data-part="${idx}">
+              <span>${opt}</span>
+            </label>
+          `,
+            )
+            .join("")}
+        </div>
+      `;
+      break;
+
+    case "multi_select":
+      const msOptions = part.options || [];
+      inputHtml = `
+        <div class="wiskunde-multi-select" data-part="${idx}">
+          ${msOptions
+            .map(
+              (opt, optIdx) => `
+            <label class="wiskunde-ms-option">
+              <input type="checkbox" value="${optIdx}" class="wiskunde-checkbox" data-part="${idx}">
+              <span>${opt}</span>
+            </label>
+          `,
+            )
+            .join("")}
+        </div>
+      `;
+      break;
+
+    case "point":
+      // For point placement, we'll use text input as fallback
+      // Interactive point placement would require canvas/SVG interaction
+      inputHtml = `
+        <div class="wiskunde-point-input">
+          <span class="point-label">x =</span>
+          <input type="number" id="part-${idx}-x" class="wiskunde-input wiskunde-coord" data-part="${idx}" data-coord="x" placeholder="0">
+          <span class="point-label">y =</span>
+          <input type="number" id="part-${idx}-y" class="wiskunde-input wiskunde-coord" data-part="${idx}" data-coord="y" placeholder="0">
+        </div>
+      `;
+      break;
+
+    case "table_fill":
+      // Table with fillable cells
+      const cells = part.cells || [];
+      inputHtml = `
+        <div class="wiskunde-table-fill" data-part="${idx}">
+          ${cells
+            .map(
+              (cell, cellIdx) => `
+            <div class="table-fill-cell">
+              <span class="cell-label">${cell.label || ""}</span>
+              <input type="text"
+                     id="part-${idx}-cell-${cellIdx}"
+                     class="wiskunde-input wiskunde-cell"
+                     data-part="${idx}"
+                     data-cell="${cellIdx}"
+                     placeholder="...">
+            </div>
+          `,
+            )
+            .join("")}
+        </div>
+      `;
+      break;
+
+    default:
+      inputHtml = `
+        <input type="text"
+               id="part-${idx}"
+               class="wiskunde-input"
+               data-part="${idx}"
+               placeholder="..."
+               autocomplete="off">
+      `;
+  }
+
+  return `
+    <div class="wiskunde-part" data-part-idx="${idx}">
+      <div class="part-label">${partId})</div>
+      <div class="part-content">
+        <div class="part-prompt">${prompt}</div>
+        <div class="part-answer">
+          ${inputHtml}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+/**
+ * Render coordinate grid (for assenstelsel questions)
+ */
+function renderCoordinateGrid(container, render) {
+  if (!container) return;
+
+  const grid = render.grid || {};
+  const points = render.points || [];
+
+  const graph = createCoordinateSystem({
+    width: 350,
+    height: 350,
+    xMin: grid.x_min ?? -6,
+    xMax: grid.x_max ?? 6,
+    yMin: grid.y_min ?? -6,
+    yMax: grid.y_max ?? 6,
+    showGrid: true,
+    showLabels: true,
+    gridStep: grid.step || 1,
+  });
+
+  // Add points with labels
+  points.forEach((p) => {
+    graph.addPoint(p.x, p.y, {
+      label: p.label || "",
+      color: "#6366f1",
+    });
+  });
+
+  container.appendChild(graph.svg);
+}
+
+/**
+ * Render line graph (for grid_graph questions)
+ */
+function renderLineGraph(container, render) {
+  if (!container) return;
+
+  const axes = render.axes || {};
+  const polyline = render.polyline || [];
+
+  const graph = createLineGraph({
+    width: 400,
+    height: 280,
+    xMin: axes.x_min ?? 0,
+    xMax: axes.x_max ?? 10,
+    yMin: axes.y_min ?? 0,
+    yMax: axes.y_max ?? 100,
+    xStep: axes.x_step ?? 1,
+    yStep: axes.y_step ?? 10,
+    xLabel: axes.x_label || "x",
+    yLabel: axes.y_label || "y",
+    showGrid: true,
+  });
+
+  // Add the data line
+  if (polyline.length > 0) {
+    graph.addPolyline(polyline, {
+      color: "#c9a227",
+      width: 3,
+      showPoints: true,
+    });
+  }
+
+  container.appendChild(graph.svg);
+}
+
+/**
+ * Render global/sketch graph (for global_graph questions)
+ */
+function renderGlobalGraph(container, render) {
+  if (!container) return;
+
+  const curve = render.curve || [];
+  const axes = render.axes || {};
+
+  const graph = createGlobalGraph({
+    width: 380,
+    height: 200,
+    xLabel: axes.x_label || "tijd",
+    yLabel: axes.y_label || "waarde",
+  });
+
+  // Add the curve
+  if (curve.length > 0) {
+    graph.addCurve(curve, {
+      color: "#c9a227",
+      width: 3,
+    });
+  }
+
+  container.appendChild(graph.svg);
+}
+
+/**
+ * Render a math table
+ */
+function renderMathTable(tableData) {
+  if (!tableData) return "";
+
+  const columns = tableData.columns || [];
+  const rows = tableData.rows || [];
+
+  const headerHtml = columns.map((col) => `<th>${col}</th>`).join("");
+  const rowsHtml = rows
+    .map(
+      (row) => `
+    <tr>
+      ${row.map((cell) => `<td>${cell}</td>`).join("")}
+    </tr>
+  `,
+    )
+    .join("");
+
+  return `
+    <div class="wiskunde-table-wrap">
+      <table class="wiskunde-table">
+        <thead>
+          <tr>${headerHtml}</tr>
+        </thead>
+        <tbody>
+          ${rowsHtml}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+/**
+ * Render text blocks
+ */
+function renderTextBlocks(blocks) {
+  if (!blocks || !Array.isArray(blocks)) return "";
+
+  return blocks
+    .map((block) => {
+      switch (block.type) {
+        case "p":
+          return `<p class="wiskunde-text">${block.text}</p>`;
+        case "formula":
+          return `<div class="wiskunde-formula">${block.text}</div>`;
+        case "instruction":
+          return `<div class="wiskunde-instruction">${block.text}</div>`;
+        default:
+          return `<p>${block.text || ""}</p>`;
+      }
+    })
+    .join("");
+}
+
+/**
+ * Setup event listeners for wiskunde inputs
+ */
+function setupWiskundeInputListeners() {
+  // Text inputs
+  $$$(".wiskunde-input").forEach((input) => {
+    input.addEventListener("input", updateWiskundeProgress);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        // Move to next input or check
+        const allInputs = $$$(".wiskunde-input");
+        const currentIdx = allInputs.indexOf(input);
+        if (currentIdx < allInputs.length - 1) {
+          allInputs[currentIdx + 1].focus();
+        } else {
+          const checkBtn = $("checkBtn");
+          if (checkBtn && !checkBtn.disabled) {
+            checkAnswer();
+          }
+        }
+      }
+    });
+  });
+
+  // Radio buttons (MCQ)
+  $$$(".wiskunde-radio").forEach((radio) => {
+    radio.addEventListener("change", updateWiskundeProgress);
+  });
+
+  // Checkboxes (multi-select)
+  $$$(".wiskunde-checkbox").forEach((cb) => {
+    cb.addEventListener("change", updateWiskundeProgress);
+  });
+}
+
+/**
+ * Update wiskunde progress indicator
+ */
+function updateWiskundeProgress() {
+  const parts = $$$(".wiskunde-part");
+  let filledCount = 0;
+
+  parts.forEach((part) => {
+    const idx = part.dataset.partIdx;
+
+    // Check text inputs
+    const textInputs = $$$(".wiskunde-input:not(.wiskunde-coord):not(.wiskunde-cell)", part);
+    const textFilled = textInputs.some((i) => i.value.trim().length > 0);
+
+    // Check coordinate inputs
+    const coordInputs = $$$(".wiskunde-coord", part);
+    const coordFilled =
+      coordInputs.length === 0 ||
+      coordInputs.every((i) => i.value.trim().length > 0);
+
+    // Check radio buttons
+    const radios = $$$(".wiskunde-radio", part);
+    const radioFilled = radios.length === 0 || radios.some((r) => r.checked);
+
+    // Check checkboxes
+    const checkboxes = $$$(".wiskunde-checkbox", part);
+    const checkboxFilled =
+      checkboxes.length === 0 || checkboxes.some((c) => c.checked);
+
+    // Check cell inputs
+    const cellInputs = $$$(".wiskunde-cell", part);
+    const cellsFilled =
+      cellInputs.length === 0 ||
+      cellInputs.every((i) => i.value.trim().length > 0);
+
+    if (
+      (textInputs.length > 0 && textFilled) ||
+      (coordInputs.length > 0 && coordFilled) ||
+      (radios.length > 0 && radioFilled) ||
+      (checkboxes.length > 0 && checkboxFilled) ||
+      (cellInputs.length > 0 && cellsFilled)
+    ) {
+      filledCount++;
+    }
+  });
+
+  const filledEl = $("wiskundeFilled");
+  if (filledEl) filledEl.textContent = filledCount;
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = filledCount === 0;
+}
+
 /**
  * Select an MC option
  */
@@ -997,6 +1534,9 @@ export function checkAnswer() {
       break;
     case "translation_open":
       checkTranslationOpen(q);
+      break;
+    case "wiskunde_multi_part":
+      checkWiskundeMultiPart(q);
       break;
     default:
       checkOpenAnswer(q);
@@ -1486,6 +2026,250 @@ function checkTranslationOpen(q) {
 
   const expectedAnswer = acceptedAny[0]?.[0] || "";
   showFeedback(isCorrect, q.rubric || "", expectedAnswer);
+}
+
+/**
+ * Check wiskunde multi-part answer
+ */
+function checkWiskundeMultiPart(q) {
+  const parts = q.parts || [];
+  const results = [];
+  let correctCount = 0;
+  let totalPoints = 0;
+  let maxPoints = 0;
+
+  parts.forEach((part, idx) => {
+    const partResult = checkWiskundePart(part, idx);
+    results.push(partResult);
+
+    if (partResult.correct) {
+      correctCount++;
+    }
+    totalPoints += partResult.earnedPoints;
+    maxPoints += partResult.maxPoints;
+
+    // Mark input as correct/wrong
+    markPartResult(part, idx, partResult.correct);
+  });
+
+  const isFullyCorrect = correctCount === parts.length;
+
+  // Update score (count as correct if > 50% of parts correct)
+  if (correctCount >= parts.length / 2) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, isFullyCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, isFullyCorrect);
+
+  state.partialScore = totalPoints;
+  state.maxPartialScore = maxPoints;
+
+  state.history.add({
+    question: q.title || "Wiskunde vraag",
+    type: "wiskunde_multi_part",
+    correctCount,
+    totalCount: parts.length,
+    correct: isFullyCorrect,
+    totalPoints,
+    maxPoints,
+  });
+
+  showWiskundeFeedback(correctCount, parts.length, results, totalPoints, maxPoints);
+}
+
+/**
+ * Check a single wiskunde part
+ */
+function checkWiskundePart(part, idx) {
+  const type = part.type || "text";
+  const answer = part.answer || {};
+  const points = part.points || 1;
+
+  let userAnswer = "";
+  let isCorrect = false;
+  let expectedAnswer = "";
+
+  switch (type) {
+    case "text": {
+      const input = $(`part-${idx}`);
+      userAnswer = input?.value?.trim() || "";
+      const acceptList = [answer.value, ...(answer.accept || [])].filter(Boolean);
+      expectedAnswer = answer.value || acceptList[0] || "";
+
+      // Normalize comparison (case insensitive, trim whitespace)
+      isCorrect = acceptList.some((acc) => {
+        const normalizedUser = userAnswer.toLowerCase().replace(/\s+/g, "");
+        const normalizedAcc = String(acc).toLowerCase().replace(/\s+/g, "");
+        return normalizedUser === normalizedAcc;
+      });
+      break;
+    }
+
+    case "mcq": {
+      const selected = $$(`input[name="part-${idx}"]:checked`);
+      const selectedIdx = selected ? parseInt(selected.value, 10) : -1;
+      userAnswer = selectedIdx >= 0 ? part.options[selectedIdx] : "(geen keuze)";
+      const correctIdx = answer.correct_index ?? 0;
+      expectedAnswer = part.options[correctIdx] || "";
+      isCorrect = selectedIdx === correctIdx;
+      break;
+    }
+
+    case "multi_select": {
+      const checkboxes = $$$(`input[data-part="${idx}"].wiskunde-checkbox`);
+      const selectedIndices = checkboxes
+        .filter((cb) => cb.checked)
+        .map((cb) => parseInt(cb.value, 10));
+      const correctIndices = answer.correct_indices || [];
+
+      userAnswer = selectedIndices.map((i) => part.options[i]).join(", ") || "(geen keuze)";
+      expectedAnswer = correctIndices.map((i) => part.options[i]).join(", ");
+
+      // Check if selected matches correct (order doesn't matter)
+      isCorrect =
+        selectedIndices.length === correctIndices.length &&
+        selectedIndices.every((i) => correctIndices.includes(i));
+      break;
+    }
+
+    case "point": {
+      const xInput = $(`part-${idx}-x`);
+      const yInput = $(`part-${idx}-y`);
+      const userX = parseFloat(xInput?.value) || 0;
+      const userY = parseFloat(yInput?.value) || 0;
+      userAnswer = `(${userX}, ${userY})`;
+      expectedAnswer = `(${answer.x}, ${answer.y})`;
+      isCorrect = userX === answer.x && userY === answer.y;
+      break;
+    }
+
+    case "table_fill": {
+      const cells = part.cells || [];
+      let cellsCorrect = 0;
+      cells.forEach((cell, cellIdx) => {
+        const cellInput = $(`part-${idx}-cell-${cellIdx}`);
+        const cellValue = cellInput?.value?.trim() || "";
+        const cellAccept = [cell.value, ...(cell.accept || [])].filter(Boolean);
+        const cellCorrect = cellAccept.some(
+          (acc) => cellValue.toLowerCase() === String(acc).toLowerCase(),
+        );
+        if (cellCorrect) cellsCorrect++;
+      });
+      userAnswer = `${cellsCorrect}/${cells.length} cellen`;
+      expectedAnswer = "alle cellen correct";
+      isCorrect = cellsCorrect === cells.length;
+      break;
+    }
+
+    default:
+      userAnswer = "(onbekend type)";
+      isCorrect = false;
+  }
+
+  return {
+    partId: part.id || String.fromCharCode(97 + idx),
+    prompt: part.prompt || "",
+    type,
+    userAnswer,
+    expectedAnswer,
+    correct: isCorrect,
+    earnedPoints: isCorrect ? points : 0,
+    maxPoints: points,
+  };
+}
+
+/**
+ * Mark part input as correct or wrong
+ */
+function markPartResult(part, idx, isCorrect) {
+  const type = part.type || "text";
+  const className = isCorrect ? "input-correct" : "input-wrong";
+
+  switch (type) {
+    case "text": {
+      const input = $(`part-${idx}`);
+      input?.classList.add(className);
+      break;
+    }
+    case "mcq":
+    case "multi_select": {
+      const container = $$(`.wiskunde-part[data-part-idx="${idx}"]`);
+      container?.classList.add(isCorrect ? "part-correct" : "part-wrong");
+      break;
+    }
+    case "point": {
+      $(`part-${idx}-x`)?.classList.add(className);
+      $(`part-${idx}-y`)?.classList.add(className);
+      break;
+    }
+    case "table_fill": {
+      const cellInputs = $$$(`input[data-part="${idx}"].wiskunde-cell`);
+      cellInputs.forEach((input) => {
+        input.classList.add(className);
+      });
+      break;
+    }
+  }
+}
+
+/**
+ * Show feedback for wiskunde questions
+ */
+function showWiskundeFeedback(correctCount, totalCount, results, totalPoints, maxPoints) {
+  const feedbackEl = $("feedback");
+  if (!feedbackEl) return;
+
+  const isFullyCorrect = correctCount === totalCount;
+  const isPartial = correctCount > 0 && !isFullyCorrect;
+
+  let className = "feedback-error";
+  let icon = "✗";
+  let title = "Niet goed";
+
+  if (isFullyCorrect) {
+    className = "feedback-success";
+    icon = "✓";
+    title = "Alles goed!";
+  } else if (isPartial) {
+    className = "feedback-partial";
+    icon = "◐";
+    title = "Gedeeltelijk goed";
+  }
+
+  const wrongResults = results.filter((r) => !r.correct);
+  const wrongHtml =
+    wrongResults.length > 0
+      ? `
+    <div class="feedback-results">
+      <div class="feedback-results-title">Verbeteringen:</div>
+      <div class="feedback-results-list">
+        ${wrongResults
+          .map(
+            (r) => `
+          <div class="feedback-result-item wrong">
+            <span class="feedback-icon">✗</span>
+            <span><strong>${r.partId})</strong> ${r.userAnswer || "(leeg)"} → <strong>${r.expectedAnswer}</strong></span>
+          </div>
+        `,
+          )
+          .join("")}
+      </div>
+    </div>
+  `
+      : "";
+
+  feedbackEl.className = `feedback ${className}`;
+  feedbackEl.innerHTML = `
+    <div class="feedback-header">
+      <span>${icon}</span>
+      <span>${title}</span>
+    </div>
+    <div class="feedback-score">${correctCount} / ${totalCount} goed (${totalPoints.toFixed(1)} / ${maxPoints.toFixed(1)} punten)</div>
+    ${wrongHtml}
+  `;
+  feedbackEl.style.display = "block";
 }
 
 /* ===========================================

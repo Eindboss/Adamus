@@ -1172,3 +1172,414 @@ textarea.open-input {
   width: 16px;
   text-align: center;
 }
+
+/* ===========================================
+   Wiskunde Multi-Part Questions
+   =========================================== */
+.wiskunde-question {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.wiskunde-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--brand-light);
+}
+
+/* Graph containers */
+.wiskunde-graph {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-4);
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.wiskunde-graph svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.wiskunde-graph-global {
+  padding: var(--space-3);
+}
+
+/* Math table */
+.wiskunde-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--space-3) 0;
+}
+
+.wiskunde-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid var(--brand);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--card);
+}
+
+.wiskunde-table th {
+  background: var(--brand-light);
+  color: var(--brand-dark);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: var(--space-3) var(--space-4);
+  text-align: center;
+  border-bottom: 2px solid var(--brand);
+}
+
+.wiskunde-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+}
+
+.wiskunde-table tr:last-child td {
+  border-bottom: none;
+}
+
+.wiskunde-table tr:nth-child(even) {
+  background: var(--bg-alt);
+}
+
+/* Text blocks */
+.wiskunde-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--brand);
+}
+
+.wiskunde-formula {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 1.125rem;
+  padding: var(--space-4);
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+  text-align: center;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.wiskunde-instruction {
+  font-size: 0.9375rem;
+  color: var(--text-light);
+  font-style: italic;
+  padding: var(--space-2) 0;
+}
+
+/* Parts container */
+.wiskunde-parts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.wiskunde-part {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease);
+}
+
+.wiskunde-part:hover {
+  border-color: var(--brand-light);
+}
+
+.wiskunde-part:focus-within {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.1);
+}
+
+.part-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--brand-dark);
+  background: var(--brand-light);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.part-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.part-prompt {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.part-answer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Wiskunde inputs */
+.wiskunde-input {
+  width: 100%;
+  max-width: 300px;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    box-shadow var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease);
+}
+
+.wiskunde-input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
+}
+
+.wiskunde-input::placeholder {
+  color: var(--muted);
+  font-family: var(--font-sans);
+}
+
+/* Coordinate point input */
+.wiskunde-point-input {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.wiskunde-coord {
+  width: 80px;
+  text-align: center;
+}
+
+.point-label {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+/* MCQ options in wiskunde */
+.wiskunde-mcq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.wiskunde-mcq-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease);
+}
+
+.wiskunde-mcq-option:hover {
+  border-color: var(--brand-light);
+  background: var(--brand-light);
+}
+
+.wiskunde-mcq-option:has(input:checked) {
+  border-color: var(--brand);
+  background: var(--brand-light);
+}
+
+.wiskunde-radio {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--brand);
+  cursor: pointer;
+}
+
+/* Multi-select in wiskunde */
+.wiskunde-multi-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.wiskunde-ms-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.9375rem;
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease);
+}
+
+.wiskunde-ms-option:hover {
+  border-color: var(--brand-light);
+}
+
+.wiskunde-ms-option:has(input:checked) {
+  border-color: var(--brand);
+  background: var(--brand-light);
+}
+
+.wiskunde-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand);
+  cursor: pointer;
+}
+
+/* Table fill inputs */
+.wiskunde-table-fill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.table-fill-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cell-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-light);
+  min-width: 40px;
+}
+
+.wiskunde-cell {
+  width: 80px;
+  text-align: center;
+}
+
+/* Wiskunde progress */
+.wiskunde-progress {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+}
+
+/* Part result states */
+.wiskunde-part.part-correct {
+  border-color: var(--success);
+  background: var(--success-light);
+}
+
+.wiskunde-part.part-wrong {
+  border-color: var(--error);
+  background: var(--error-light);
+}
+
+.wiskunde-input.input-correct {
+  border-color: var(--success) !important;
+  background: var(--success-light) !important;
+}
+
+.wiskunde-input.input-wrong {
+  border-color: var(--error) !important;
+  background: var(--error-light) !important;
+}
+
+/* Responsive adjustments for wiskunde */
+@media (max-width: 640px) {
+  .wiskunde-part {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .part-label {
+    width: 28px;
+    height: 28px;
+    font-size: 0.875rem;
+  }
+
+  .wiskunde-input {
+    max-width: 100%;
+  }
+
+  .wiskunde-point-input {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wiskunde-coord {
+    width: 100%;
+    max-width: 120px;
+  }
+
+  .wiskunde-table th,
+  .wiskunde-table td {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.875rem;
+  }
+
+  .wiskunde-graph svg {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wiskunde-title {
+    font-size: 1rem;
+  }
+
+  .wiskunde-graph {
+    padding: var(--space-2);
+  }
+
+  .wiskunde-graph svg {
+    max-width: 240px;
+  }
+
+  .part-prompt {
+    font-size: 0.9375rem;
+  }
+
+  .wiskunde-mcq-option,
+  .wiskunde-ms-option {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.875rem;
+  }
+}

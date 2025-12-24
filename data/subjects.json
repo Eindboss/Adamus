@@ -75,10 +75,11 @@
       "subject": "Wiskunde",
       "label": "Wiskunde – H3: Grafieken en formules",
       "title": "Wiskunde – Hoofdstuk 3: Grafieken en formules",
-      "file": "data/wiskunde/hoofdstuk3.json",
+      "file": "data/wiskunde/hoofdstuk3-quiz.json",
       "flashcardFile": "data/wiskunde/hoofdstuk3-flashcards.json",
       "schema": "toets",
-      "week": "2e toetsweek"
+      "week": "2e toetsweek",
+      "questionsPerSession": 10
     },
     {
       "id": "geschiedenis-jagers-en-boeren",
