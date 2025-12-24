@@ -298,13 +298,24 @@ main.wrap {
   animation-delay: 200ms;
 }
 
-/* Card change animation */
-.flashcard.card-exit {
-  animation: slideInLeft 250ms var(--ease-in) reverse forwards;
+/* Card change animation - "picking a new card from the deck" */
+@keyframes cardDraw {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.flashcard.card-enter {
-  animation: slideInRight 300ms var(--ease-out) forwards;
+.flashcard.card-draw {
+  animation: cardDraw 350ms var(--ease-out) forwards;
 }
 
 /* ===========================================

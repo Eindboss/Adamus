@@ -200,6 +200,14 @@ function renderCard() {
     flashcardInner.style.transition = "";
   }
 
+  // Trigger card draw animation (only after first card)
+  if (state.currentIndex > 0 && flashcard) {
+    flashcard.classList.remove("card-draw");
+    // Force reflow to restart animation
+    flashcard.offsetHeight;
+    flashcard.classList.add("card-draw");
+  }
+
   // Add/remove has-graph class
   if (card.graph) {
     flashcard?.classList.add("has-graph");
