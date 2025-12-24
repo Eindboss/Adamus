@@ -9,7 +9,7 @@
       "flashcardFile": "data/latijn/spqr-h1-h2-h3-flashcards.json",
       "schema": "toets",
       "week": "2e toetsweek",
-      "questionsPerSession": 10
+      "questionsPerSession": 15
     },
     {
       "id": "latijn-flumen-toets",

@@ -417,8 +417,8 @@ function convertV2ToV1(q) {
 
 /**
  * Select questions for a session using quiz_group rotation
- * Questions are grouped by quiz_group (1-5) and rotated through sessions
- * This ensures variety across study sessions
+ * Ensures each session includes questions from ALL groups for variety
+ * This guarantees students see vocabulary, grammar, AND story questions each session
  */
 function selectQuestionsForSession(questions, perSession, subjectId) {
   // Get current session number from localStorage
@@ -462,27 +462,34 @@ function selectQuestionsForSession(questions, perSession, subjectId) {
     return questions.slice(0, perSession);
   }
 
-  // Determine which groups to use this session
-  // Rotate through groups based on session number
+  // Strategy: take 1 question from each group first (round-robin),
+  // then fill remaining slots with rotating priority
   const result = [];
 
-  // Calculate questions per group (distribute evenly)
-  const questionsPerGroup = Math.ceil(perSession / numGroups);
+  // Shuffle each group and use session number to vary starting position
+  const shuffledGroups = {};
+  groupKeys.forEach((key) => {
+    shuffledGroups[key] = [...grouped[key]];
+    shuffle(shuffledGroups[key]);
+  });
 
-  // Start from a rotating group based on session
+  // Round 1: Take 1 from each group (ensures all topics represented)
+  const basePerGroup = Math.max(1, Math.floor(perSession / numGroups));
+  const extraSlots = perSession - basePerGroup * numGroups;
+
+  // Rotate starting group based on session
   const startGroupIdx = (sessionNum - 1) % numGroups;
 
-  for (let i = 0; i < numGroups && result.length < perSession; i++) {
+  for (let i = 0; i < numGroups; i++) {
     const groupIdx = (startGroupIdx + i) % numGroups;
     const groupKey = groupKeys[groupIdx];
-    const groupQuestions = [...grouped[groupKey]];
+    const groupQuestions = shuffledGroups[groupKey];
 
-    // Shuffle within group
-    shuffle(groupQuestions);
+    // Take base amount, plus 1 extra for first 'extraSlots' groups
+    const toTake = basePerGroup + (i < extraSlots ? 1 : 0);
+    const available = Math.min(toTake, groupQuestions.length);
 
-    // Take up to questionsPerGroup from this group
-    const toTake = Math.min(questionsPerGroup, perSession - result.length, groupQuestions.length);
-    result.push(...groupQuestions.slice(0, toTake));
+    result.push(...groupQuestions.slice(0, available));
   }
 
   // If we still need more questions, add from ungrouped
