@@ -1216,6 +1216,45 @@ function renderPart(part, partId, idx) {
       `;
       break;
 
+    case "table_coords":
+      // Table with coordinate inputs per row
+      const tableData = part.table || {};
+      const columns = tableData.columns || ["x", "y"];
+      const rows = tableData.rows || [];
+      inputHtml = `
+        <div class="wiskunde-table-coords" data-part="${idx}">
+          <table class="wiskunde-table wiskunde-table-input">
+            <thead>
+              <tr>
+                ${columns.map((col) => `<th>${col}</th>`).join("")}
+                <th>Coördinaat</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows
+                .map(
+                  (row, rowIdx) => `
+                <tr>
+                  ${row.map((cell) => `<td>${cell}</td>`).join("")}
+                  <td class="coord-input-cell">
+                    <input type="text"
+                           id="part-${idx}-coord-${rowIdx}"
+                           class="wiskunde-input wiskunde-coord-input"
+                           data-part="${idx}"
+                           data-row="${rowIdx}"
+                           placeholder="(${row[0]},${row[1]})"
+                           autocomplete="off">
+                  </td>
+                </tr>
+              `,
+                )
+                .join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+      break;
+
     default:
       inputHtml = `
         <input type="text"
@@ -2177,6 +2216,36 @@ function checkWiskundePart(part, idx) {
       break;
     }
 
+    case "table_coords": {
+      const tableData = part.table || {};
+      const rows = tableData.rows || [];
+      const expectedCoords = answer.coords || [];
+      let coordsCorrect = 0;
+      const userCoords = [];
+
+      rows.forEach((row, rowIdx) => {
+        const coordInput = $(`part-${idx}-coord-${rowIdx}`);
+        const coordValue = coordInput?.value?.trim() || "";
+        userCoords.push(coordValue);
+
+        // Normalize coordinate: remove spaces, handle parentheses
+        const normalizedUser = coordValue.replace(/\s+/g, "").toLowerCase();
+        const expectedCoord = expectedCoords[rowIdx] || `(${row[0]},${row[1]})`;
+        const normalizedExpected = expectedCoord.replace(/\s+/g, "").toLowerCase();
+
+        // Check against expected and also allow the auto-generated format
+        const autoFormat = `(${row[0]},${row[1]})`;
+        if (normalizedUser === normalizedExpected || normalizedUser === autoFormat) {
+          coordsCorrect++;
+        }
+      });
+
+      userAnswer = `${coordsCorrect}/${rows.length} coördinaten`;
+      expectedAnswer = expectedCoords.join(", ") || rows.map((r) => `(${r[0]},${r[1]})`).join(", ");
+      isCorrect = coordsCorrect === rows.length;
+      break;
+    }
+
     default:
       userAnswer = "(onbekend type)";
       isCorrect = false;
@@ -2221,6 +2290,13 @@ function markPartResult(part, idx, isCorrect) {
     case "table_fill": {
       const cellInputs = $$$(`input[data-part="${idx}"].wiskunde-cell`);
       cellInputs.forEach((input) => {
+        input.classList.add(className);
+      });
+      break;
+    }
+    case "table_coords": {
+      const coordInputs = $$$(`input[data-part="${idx}"].wiskunde-coord-input`);
+      coordInputs.forEach((input) => {
         input.classList.add(className);
       });
       break;

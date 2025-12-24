@@ -1492,6 +1492,43 @@ textarea.open-input {
   text-align: center;
 }
 
+/* Table with coordinate inputs */
+.wiskunde-table-coords {
+  margin: var(--space-3) 0;
+}
+
+.wiskunde-table-input {
+  max-width: 400px;
+}
+
+.wiskunde-table-input th:last-child,
+.wiskunde-table-input td.coord-input-cell {
+  min-width: 100px;
+}
+
+.wiskunde-coord-input {
+  width: 90px;
+  text-align: center;
+  padding: var(--space-2);
+  font-size: 0.9rem;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--input-bg, var(--bg));
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.wiskunde-coord-input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-glow, rgba(31, 74, 56, 0.15));
+}
+
+.wiskunde-coord-input::placeholder {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
 /* Wiskunde progress */
 .wiskunde-progress {
   text-align: center;
