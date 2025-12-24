@@ -6587,7 +6587,8 @@
             "Mars"
           ],
           "c": 0,
-          "e": "Numitor was de rechtmatige koning, maar zijn broer Amulius nam de macht over."
+          "e": "Numitor was de rechtmatige koning, maar zijn broer Amulius nam de macht over.",
+          "image": "assets/images/latijn/flumen.jpg"
         }
       }
     },
@@ -6648,7 +6649,8 @@
             "om haar te straffen"
           ],
           "c": 0,
-          "e": "Vestaalse Maagden moesten kuis blijven, zo kon Rhea Silvia geen troonopvolger krijgen."
+          "e": "Vestaalse Maagden moesten kuis blijven, zo kon Rhea Silvia geen troonopvolger krijgen.",
+          "image": "assets/images/latijn/flumen.jpg"
         }
       }
     },
@@ -6709,7 +6711,8 @@
             "Amulius"
           ],
           "c": 0,
-          "e": "De god Mars verwekte de tweeling bij Rhea Silvia."
+          "e": "De god Mars verwekte de tweeling bij Rhea Silvia.",
+          "image": "assets/images/latijn/flumen.jpg"
         }
       }
     },
@@ -6770,7 +6773,8 @@
             "ze aan de goden offeren"
           ],
           "c": 0,
-          "e": "Amulius beval een slaaf om de baby's te verdrinken in de Tiber."
+          "e": "Amulius beval een slaaf om de baby's te verdrinken in de Tiber.",
+          "image": "assets/images/latijn/flumen.jpg"
         }
       }
     },
@@ -6819,7 +6823,8 @@
             "in mandje gelegd",
             "op de rivier gezet"
           ],
-          "e": "De slaaf weigerde de baby's te doden en zette ze in een mandje op de rivier."
+          "e": "De slaaf weigerde de baby's te doden en zette ze in een mandje op de rivier.",
+          "image": "assets/images/latijn/flumen.jpg"
         }
       }
     },
@@ -6880,7 +6885,8 @@
             "in de stad Rome"
           ],
           "c": 0,
-          "e": "Het mandje bleef haken aan de wortels van een vijgenboom bij de oever."
+          "e": "Het mandje bleef haken aan de wortels van een vijgenboom bij de oever.",
+          "image": "assets/images/latijn/lupa.jpg"
         }
       }
     },
@@ -6941,7 +6947,8 @@
             "een adelaar"
           ],
           "c": 0,
-          "e": "Een wolvin (lupa) vond de baby's en gaf ze te drinken."
+          "e": "Een wolvin (lupa) vond de baby's en gaf ze te drinken.",
+          "image": "assets/images/latijn/lupa.jpg"
         }
       }
     },
@@ -6984,7 +6991,8 @@
           "accepted": [
             "Faustulus"
           ],
-          "e": "Faustulus was de herder die de tweeling vond bij de wolvin."
+          "e": "Faustulus was de herder die de tweeling vond bij de wolvin.",
+          "image": "assets/images/latijn/lupa.jpg"
         }
       }
     },
@@ -7045,7 +7053,8 @@
             "de wolvin"
           ],
           "c": 0,
-          "e": "De herder Faustulus en zijn vrouw Larentia voedden de tweeling op."
+          "e": "De herder Faustulus en zijn vrouw Larentia voedden de tweeling op.",
+          "image": "assets/images/latijn/lupa.jpg"
         }
       }
     },
@@ -7106,7 +7115,8 @@
             "ze verzoenden zich met Amulius"
           ],
           "c": 0,
-          "e": "De broers doodden de usurpator Amulius en herstelden hun grootvader Numitor op de troon."
+          "e": "De broers doodden de usurpator Amulius en herstelden hun grootvader Numitor op de troon.",
+          "image": "assets/images/latijn/regnum.jpg"
         }
       }
     },
@@ -7167,7 +7177,8 @@
             "hoeveel inwoners er mochten komen"
           ],
           "c": 0,
-          "e": "De broers kregen ruzie over waar de nieuwe stad gebouwd moest worden."
+          "e": "De broers kregen ruzie over waar de nieuwe stad gebouwd moest worden.",
+          "image": "assets/images/latijn/regnum.jpg"
         }
       }
     },
@@ -7228,7 +7239,8 @@
             "hij stierf aan een ziekte"
           ],
           "c": 0,
-          "e": "Remus sprong spottend over de muur van Romulus, waarop Romulus hem doodde."
+          "e": "Remus sprong spottend over de muur van Romulus, waarop Romulus hem doodde.",
+          "image": "assets/images/latijn/regnum.jpg"
         }
       }
     },
@@ -7271,7 +7283,8 @@
           "accepted": [
             "Romulus"
           ],
-          "e": "Rome (Roma) is vernoemd naar Romulus, de eerste koning."
+          "e": "Rome (Roma) is vernoemd naar Romulus, de eerste koning.",
+          "image": "assets/images/latijn/regnum.jpg"
         }
       }
     },
@@ -7332,7 +7345,8 @@
             "Faustulus"
           ],
           "c": 0,
-          "e": "Romulus werd de eerste koning van Rome na de dood van zijn broer."
+          "e": "Romulus werd de eerste koning van Rome na de dood van zijn broer.",
+          "image": "assets/images/latijn/regnum.jpg"
         }
       }
     }
