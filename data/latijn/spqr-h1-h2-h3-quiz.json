@@ -479,45 +479,6 @@
     },
     {
       "id": "q021",
-      "type": "grouped_short_text",
-      "quiz_group": 3,
-      "prompt_html": "Vertaal de volgende woorden naar het Latijn (Regnum):",
-      "items": [
-        {
-          "vraag": "vriend",
-          "accepted": [
-            "amicus"
-          ]
-        },
-        {
-          "vraag": "berg",
-          "accepted": [
-            "mons",
-            "montes"
-          ]
-        },
-        {
-          "vraag": "afdalen",
-          "accepted": [
-            "descendere"
-          ]
-        },
-        {
-          "vraag": "samenkomen",
-          "accepted": [
-            "convenire"
-          ]
-        },
-        {
-          "vraag": "volk",
-          "accepted": [
-            "populus"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q022",
       "type": "mc",
       "quiz_group": 3,
       "q": "Welk voorzetsel betekent 'van(af)' en gaat met de ablativus?",
@@ -531,7 +492,7 @@
       "e": "de + abl = van(af)"
     },
     {
-      "id": "q023",
+      "id": "q022",
       "type": "mc",
       "quiz_group": 3,
       "q": "Welk voorzetsel betekent 'met' en gaat met de ablativus?",
@@ -545,45 +506,7 @@
       "e": "cum + abl = met"
     },
     {
-      "id": "q024",
-      "type": "grouped_short_text",
-      "quiz_group": 3,
-      "prompt_html": "Vertaal de volgende werkwoorden naar het Nederlands:",
-      "items": [
-        {
-          "vraag": "tacere",
-          "accepted": [
-            "zwijgen"
-          ]
-        },
-        {
-          "vraag": "aspicere",
-          "accepted": [
-            "bekijken"
-          ]
-        },
-        {
-          "vraag": "dividere",
-          "accepted": [
-            "verdelen"
-          ]
-        },
-        {
-          "vraag": "aedificare",
-          "accepted": [
-            "bouwen"
-          ]
-        },
-        {
-          "vraag": "facere",
-          "accepted": [
-            "maken"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q025",
+      "id": "q023",
       "type": "mc",
       "quiz_group": 3,
       "q": "Wat betekent 'quoque'?",
@@ -597,7 +520,7 @@
       "e": "quoque = ook"
     },
     {
-      "id": "q026",
+      "id": "q024",
       "type": "open",
       "quiz_group": 3,
       "q": "Vertaal naar het Latijn: eindelijk",
@@ -607,7 +530,7 @@
       "e": "tandem = eindelijk"
     },
     {
-      "id": "q027",
+      "id": "q025",
       "type": "mc",
       "quiz_group": 3,
       "q": "Wat betekent 'et...et'?",
@@ -621,46 +544,7 @@
       "e": "et...et = zowel... als"
     },
     {
-      "id": "q028",
-      "type": "grouped_short_text",
-      "quiz_group": 3,
-      "prompt_html": "Vertaal de volgende bouwwoorden naar het Latijn:",
-      "items": [
-        {
-          "vraag": "stad",
-          "accepted": [
-            "urbs",
-            "urbes"
-          ]
-        },
-        {
-          "vraag": "muur",
-          "accepted": [
-            "murus"
-          ]
-        },
-        {
-          "vraag": "huis",
-          "accepted": [
-            "casa"
-          ]
-        },
-        {
-          "vraag": "rots",
-          "accepted": [
-            "saxum"
-          ]
-        },
-        {
-          "vraag": "boomstam",
-          "accepted": [
-            "truncus"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q029",
+      "id": "q026",
       "type": "mc",
       "quiz_group": 3,
       "q": "Wat betekent 'primum'?",
@@ -674,7 +558,7 @@
       "e": "primum = eerst"
     },
     {
-      "id": "q030",
+      "id": "q027",
       "type": "open",
       "quiz_group": 3,
       "q": "Vertaal naar het Nederlands: vir, viri",
@@ -684,45 +568,7 @@
       "e": "vir, viri = man"
     },
     {
-      "id": "q031",
-      "type": "grouped_short_text",
-      "quiz_group": 4,
-      "prompt_html": "Vertaal de volgende werkwoorden naar het Latijn:",
-      "items": [
-        {
-          "vraag": "verzamelen",
-          "accepted": [
-            "colligere"
-          ]
-        },
-        {
-          "vraag": "ontvangen",
-          "accepted": [
-            "accipere"
-          ]
-        },
-        {
-          "vraag": "staan",
-          "accepted": [
-            "stare"
-          ]
-        },
-        {
-          "vraag": "binnenkomen",
-          "accepted": [
-            "intrare"
-          ]
-        },
-        {
-          "vraag": "oversteken",
-          "accepted": [
-            "transire"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q032",
+      "id": "q028",
       "type": "mc",
       "quiz_group": 4,
       "q": "Welk werkwoord gaat met de DATIVUS en betekent 'bevallen'?",
@@ -736,7 +582,7 @@
       "e": "placere + dat = bevallen"
     },
     {
-      "id": "q033",
+      "id": "q029",
       "type": "open",
       "quiz_group": 4,
       "q": "Vertaal naar het Nederlands: cur",
@@ -746,7 +592,7 @@
       "e": "cur = waarom"
     },
     {
-      "id": "q034",
+      "id": "q030",
       "type": "mc",
       "quiz_group": 4,
       "q": "Wat betekent 'licet'?",
@@ -760,45 +606,7 @@
       "e": "licet = het is toegestaan"
     },
     {
-      "id": "q035",
-      "type": "grouped_short_text",
-      "quiz_group": 4,
-      "prompt_html": "Vertaal de volgende bijwoorden naar het Latijn:",
-      "items": [
-        {
-          "vraag": "'s avonds",
-          "accepted": [
-            "vesperi"
-          ]
-        },
-        {
-          "vraag": "al / reeds",
-          "accepted": [
-            "iam"
-          ]
-        },
-        {
-          "vraag": "eerst",
-          "accepted": [
-            "primum"
-          ]
-        },
-        {
-          "vraag": "eindelijk",
-          "accepted": [
-            "tandem"
-          ]
-        },
-        {
-          "vraag": "ook",
-          "accepted": [
-            "quoque"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q036",
+      "id": "q031",
       "type": "mc",
       "quiz_group": 4,
       "q": "Welk werkwoord gaat met de DATIVUS en betekent 'belachelijk maken'?",
@@ -812,7 +620,7 @@
       "e": "illudere + dat = belachelijk maken"
     },
     {
-      "id": "q037",
+      "id": "q032",
       "type": "open",
       "quiz_group": 4,
       "q": "Vertaal naar het Latijn: vijand",
@@ -823,45 +631,7 @@
       "e": "hostis, hostes = vijand"
     },
     {
-      "id": "q038",
-      "type": "grouped_short_text",
-      "quiz_group": 4,
-      "prompt_html": "Vertaal de volgende woorden naar het Nederlands:",
-      "items": [
-        {
-          "vraag": "civis",
-          "accepted": [
-            "burger"
-          ]
-        },
-        {
-          "vraag": "gladius",
-          "accepted": [
-            "zwaard"
-          ]
-        },
-        {
-          "vraag": "arundo",
-          "accepted": [
-            "riet"
-          ]
-        },
-        {
-          "vraag": "sed",
-          "accepted": [
-            "maar"
-          ]
-        },
-        {
-          "vraag": "nam",
-          "accepted": [
-            "want"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q039",
+      "id": "q033",
       "type": "mc",
       "quiz_group": 4,
       "q": "Wat betekent 'facile est'?",
@@ -875,7 +645,7 @@
       "e": "facile est = het is gemakkelijk"
     },
     {
-      "id": "q040",
+      "id": "q034",
       "type": "open",
       "quiz_group": 4,
       "q": "Vertaal naar het Latijn: zoals",
@@ -885,7 +655,7 @@
       "e": "sicut = zoals"
     },
     {
-      "id": "q041",
+      "id": "q035",
       "type": "mc",
       "quiz_group": 5,
       "q": "In welke naamval staat het ONDERWERP van een zin?",
@@ -899,7 +669,7 @@
       "e": "Het onderwerp staat in de nominativus"
     },
     {
-      "id": "q042",
+      "id": "q036",
       "type": "mc",
       "quiz_group": 5,
       "q": "In welke naamval staat het LIJDEND VOORWERP?",
@@ -913,7 +683,7 @@
       "e": "Het lijdend voorwerp staat in de accusativus"
     },
     {
-      "id": "q043",
+      "id": "q037",
       "type": "mc",
       "quiz_group": 5,
       "q": "In welke naamval staat het MEEWERKEND VOORWERP?",
@@ -927,7 +697,7 @@
       "e": "Het meewerkend voorwerp staat in de dativus"
     },
     {
-      "id": "q044",
+      "id": "q038",
       "type": "mc",
       "quiz_group": 5,
       "q": "Welke naamval gebruik je voor BIJWOORDELIJKE BEPALINGEN (waar? waarmee?)?",
@@ -941,7 +711,7 @@
       "e": "De ablativus wordt gebruikt voor bijwoordelijke bepalingen"
     },
     {
-      "id": "q045",
+      "id": "q039",
       "type": "mc",
       "quiz_group": 5,
       "q": "Wat is de nominativus enkelvoud van 'femina' (vrouw)?",
@@ -955,7 +725,7 @@
       "e": "femina is de nominativus enkelvoud"
     },
     {
-      "id": "q046",
+      "id": "q040",
       "type": "mc",
       "quiz_group": 5,
       "q": "Wat is de accusativus enkelvoud van 'servus' (slaaf)?",
@@ -969,7 +739,7 @@
       "e": "servum is de accusativus enkelvoud (groep 2)"
     },
     {
-      "id": "q047",
+      "id": "q041",
       "type": "mc",
       "quiz_group": 5,
       "q": "Wat is de dativus enkelvoud van 'rex' (koning)?",
@@ -983,7 +753,7 @@
       "e": "regi is de dativus enkelvoud (groep 3)"
     },
     {
-      "id": "q048",
+      "id": "q042",
       "type": "open",
       "quiz_group": 5,
       "q": "Zet in de accusativus enkelvoud: femina",
@@ -993,7 +763,7 @@
       "e": "femina → feminam (accusativus ev)"
     },
     {
-      "id": "q049",
+      "id": "q043",
       "type": "open",
       "quiz_group": 5,
       "q": "Zet in de nominativus meervoud: servus",
@@ -1003,7 +773,7 @@
       "e": "servus → servi (nominativus mv)"
     },
     {
-      "id": "q050",
+      "id": "q044",
       "type": "mc",
       "quiz_group": 5,
       "q": "Tot welke verbuigingsgroep behoort 'aqua' (water)?",
@@ -1017,7 +787,7 @@
       "e": "aqua behoort tot groep 1 (a-stam): aqua, aquae"
     },
     {
-      "id": "q051",
+      "id": "q045",
       "type": "mc",
       "quiz_group": 6,
       "q": "Tot welke verbuigingsgroep behoort 'donum' (geschenk)?",
@@ -1031,7 +801,7 @@
       "e": "donum behoort tot groep 2 (o-stam): donum, doni"
     },
     {
-      "id": "q052",
+      "id": "q046",
       "type": "mc",
       "quiz_group": 6,
       "q": "Tot welke verbuigingsgroep behoort 'nomen' (naam)?",
@@ -1045,45 +815,7 @@
       "e": "nomen behoort tot groep 3: nomen, nominis"
     },
     {
-      "id": "q053",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vul de persoonsvorm van 'esse' (zijn) in:",
-      "items": [
-        {
-          "vraag": "ik ben",
-          "accepted": [
-            "sum"
-          ]
-        },
-        {
-          "vraag": "jij bent",
-          "accepted": [
-            "es"
-          ]
-        },
-        {
-          "vraag": "hij/zij is",
-          "accepted": [
-            "est"
-          ]
-        },
-        {
-          "vraag": "wij zijn",
-          "accepted": [
-            "sumus"
-          ]
-        },
-        {
-          "vraag": "zij zijn (mv)",
-          "accepted": [
-            "sunt"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q054",
+      "id": "q047",
       "type": "mc",
       "quiz_group": 6,
       "q": "Wat is 'jullie zijn' in het Latijn?",
@@ -1097,7 +829,7 @@
       "e": "estis = jullie zijn"
     },
     {
-      "id": "q055",
+      "id": "q048",
       "type": "open",
       "quiz_group": 6,
       "q": "Vertaal: De slaaf roept.",
@@ -1108,7 +840,7 @@
       "e": "De slaaf roept = Servus vocat/clamat"
     },
     {
-      "id": "q056",
+      "id": "q049",
       "type": "open",
       "quiz_group": 6,
       "q": "Vertaal: De vrouw ziet de slaaf.",
@@ -1118,7 +850,7 @@
       "e": "De vrouw (nom) ziet de slaaf (acc) = Femina servum videt"
     },
     {
-      "id": "q057",
+      "id": "q050",
       "type": "mc",
       "quiz_group": 6,
       "q": "In de zin 'Pater servo mandatum dat', wat is de functie van 'servo'?",
@@ -1132,7 +864,7 @@
       "e": "servo is dativus = meewerkend voorwerp (aan de slaaf)"
     },
     {
-      "id": "q058",
+      "id": "q051",
       "type": "mc",
       "quiz_group": 6,
       "q": "Wat is het persoonlijk voornaamwoord 'ik' in de nominativus?",
@@ -1146,7 +878,7 @@
       "e": "ego = ik (nominativus)"
     },
     {
-      "id": "q059",
+      "id": "q052",
       "type": "mc",
       "quiz_group": 6,
       "q": "Wat is 'aan/voor mij' in het Latijn (dativus)?",
@@ -1160,7 +892,7 @@
       "e": "mihi = aan/voor mij (dativus)"
     },
     {
-      "id": "q060",
+      "id": "q053",
       "type": "mc",
       "quiz_group": 6,
       "q": "Wat is 'aan/voor jou' in het Latijn (dativus)?",
@@ -1174,45 +906,7 @@
       "e": "tibi = aan/voor jou (dativus)"
     },
     {
-      "id": "q061",
-      "type": "grouped_short_text",
-      "quiz_group": 7,
-      "prompt_html": "Vertaal de volgende zinnen naar het Nederlands:",
-      "items": [
-        {
-          "vraag": "Servus bibit.",
-          "accepted": [
-            "de slaaf drinkt"
-          ]
-        },
-        {
-          "vraag": "Femina ridet.",
-          "accepted": [
-            "de vrouw lacht"
-          ]
-        },
-        {
-          "vraag": "Puer clamat.",
-          "accepted": [
-            "de jongen schreeuwt"
-          ]
-        },
-        {
-          "vraag": "Rex iubet.",
-          "accepted": [
-            "de koning beveelt"
-          ]
-        },
-        {
-          "vraag": "Pastor custodiat.",
-          "accepted": [
-            "de herder bewaakt"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q062",
+      "id": "q054",
       "type": "mc",
       "quiz_group": 7,
       "q": "Welke uitgang krijgt een werkwoord in de 3e persoon enkelvoud?",
@@ -1226,7 +920,7 @@
       "e": "De 3e persoon enkelvoud eindigt op -t (bijv. vocat, videt)"
     },
     {
-      "id": "q063",
+      "id": "q055",
       "type": "mc",
       "quiz_group": 7,
       "q": "Welke uitgang krijgt een werkwoord in de 3e persoon meervoud?",
@@ -1240,7 +934,7 @@
       "e": "De 3e persoon meervoud eindigt op -nt (bijv. vocant, vident)"
     },
     {
-      "id": "q064",
+      "id": "q056",
       "type": "open",
       "quiz_group": 7,
       "q": "Zet in de ablativus enkelvoud: aqua",
@@ -1250,7 +944,7 @@
       "e": "aqua → aqua (ablativus ev, groep 1)"
     },
     {
-      "id": "q065",
+      "id": "q057",
       "type": "open",
       "quiz_group": 7,
       "q": "Zet in de ablativus enkelvoud: servus",
@@ -1260,7 +954,7 @@
       "e": "servus → servo (ablativus ev, groep 2)"
     },
     {
-      "id": "q066",
+      "id": "q058",
       "type": "mc",
       "quiz_group": 7,
       "q": "Wat is de ablativus enkelvoud van 'rex'?",
@@ -1274,50 +968,7 @@
       "e": "rex → rege (ablativus ev, groep 3)"
     },
     {
-      "id": "q067",
-      "type": "grouped_short_text",
-      "quiz_group": 7,
-      "prompt_html": "Geef de stam van deze zelfstandige naamwoorden:",
-      "items": [
-        {
-          "vraag": "femina, feminae",
-          "accepted": [
-            "femin-",
-            "femin"
-          ]
-        },
-        {
-          "vraag": "servus, servi",
-          "accepted": [
-            "serv-",
-            "serv"
-          ]
-        },
-        {
-          "vraag": "rex, regis",
-          "accepted": [
-            "reg-",
-            "reg"
-          ]
-        },
-        {
-          "vraag": "nomen, nominis",
-          "accepted": [
-            "nomin-",
-            "nomin"
-          ]
-        },
-        {
-          "vraag": "flumen, fluminis",
-          "accepted": [
-            "flumin-",
-            "flumin"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q068",
+      "id": "q059",
       "type": "mc",
       "quiz_group": 7,
       "q": "In + accusativus betekent...",
@@ -1331,7 +982,7 @@
       "e": "in + acc = in, naar (richting/beweging)"
     },
     {
-      "id": "q069",
+      "id": "q060",
       "type": "mc",
       "quiz_group": 7,
       "q": "In + ablativus betekent...",
@@ -1345,7 +996,7 @@
       "e": "in + abl = in, op (plaats, geen beweging)"
     },
     {
-      "id": "q070",
+      "id": "q061",
       "type": "open",
       "quiz_group": 7,
       "q": "Vertaal naar het Latijn: De vader geeft aan de zoon.",
@@ -1355,45 +1006,7 @@
       "e": "Pater (nom) filio (dat) dat = De vader geeft aan de zoon"
     },
     {
-      "id": "q071",
-      "type": "grouped_short_text",
-      "quiz_group": 8,
-      "prompt_html": "Vertaal de volgende werkwoorden naar het Latijn:",
-      "items": [
-        {
-          "vraag": "zeggen",
-          "accepted": [
-            "dicere"
-          ]
-        },
-        {
-          "vraag": "geven",
-          "accepted": [
-            "dare"
-          ]
-        },
-        {
-          "vraag": "lachen",
-          "accepted": [
-            "ridere"
-          ]
-        },
-        {
-          "vraag": "weigeren",
-          "accepted": [
-            "recusare"
-          ]
-        },
-        {
-          "vraag": "optillen",
-          "accepted": [
-            "tollere"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q072",
+      "id": "q062",
       "type": "mc",
       "quiz_group": 8,
       "q": "Wat is de nominativus meervoud van 'urbs' (stad)?",
@@ -1407,7 +1020,7 @@
       "e": "urbs → urbes (nominativus mv, groep 3)"
     },
     {
-      "id": "q073",
+      "id": "q063",
       "type": "open",
       "quiz_group": 8,
       "q": "Vertaal naar het Nederlands: Servi gregem custodiunt.",
@@ -1417,7 +1030,7 @@
       "e": "Servi (nom mv) gregem (acc) custodiunt = De slaven bewaken de kudde"
     },
     {
-      "id": "q074",
+      "id": "q064",
       "type": "mc",
       "quiz_group": 8,
       "q": "Hoe herken je een infinitivus in het Latijn?",
@@ -1431,46 +1044,7 @@
       "e": "De infinitivus eindigt op -re of -ere (vocare, videre, esse)"
     },
     {
-      "id": "q075",
-      "type": "grouped_short_text",
-      "quiz_group": 8,
-      "prompt_html": "Vertaal de volgende zinnen naar het Latijn:",
-      "items": [
-        {
-          "vraag": "De koning ziet.",
-          "accepted": [
-            "rex videt"
-          ]
-        },
-        {
-          "vraag": "De slaven komen.",
-          "accepted": [
-            "servi veniunt"
-          ]
-        },
-        {
-          "vraag": "De vrouw roept.",
-          "accepted": [
-            "femina vocat",
-            "femina clamat"
-          ]
-        },
-        {
-          "vraag": "De herders bewaken.",
-          "accepted": [
-            "pastores custodiunt"
-          ]
-        },
-        {
-          "vraag": "De jongens huilen.",
-          "accepted": [
-            "pueri lacrimant"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q076",
+      "id": "q065",
       "type": "table_parse",
       "quiz_group": 5,
       "prompt_html": "Vul de ontbrekende vormen in van <b>servus</b> (slaaf, groep 2).",
@@ -1534,7 +1108,7 @@
       }
     },
     {
-      "id": "q077",
+      "id": "q066",
       "type": "table_parse",
       "quiz_group": 5,
       "prompt_html": "Vul de ontbrekende vormen in van <b>femina</b> (vrouw, groep 1).",
@@ -1598,7 +1172,7 @@
       }
     },
     {
-      "id": "q078",
+      "id": "q067",
       "type": "table_parse",
       "quiz_group": 6,
       "prompt_html": "Vul de ontbrekende vormen in van <b>rex</b> (koning, groep 3).",
@@ -1662,7 +1236,7 @@
       }
     },
     {
-      "id": "q079",
+      "id": "q068",
       "type": "table_parse",
       "quiz_group": 6,
       "prompt_html": "Vul de ontbrekende vormen in van <b>nomen</b> (naam, groep 3).",
@@ -1726,7 +1300,7 @@
       }
     },
     {
-      "id": "q080",
+      "id": "q069",
       "type": "grouped_translation",
       "quiz_group": 7,
       "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin.",
@@ -1772,7 +1346,7 @@
       "points": 5
     },
     {
-      "id": "q081",
+      "id": "q070",
       "type": "grouped_translation",
       "quiz_group": 7,
       "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin.",
@@ -1819,7 +1393,7 @@
       "points": 5
     },
     {
-      "id": "q082",
+      "id": "q071",
       "type": "grouped_select",
       "quiz_group": 8,
       "prompt_html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het onderstreepte woord.",
@@ -1896,104 +1470,7 @@
       "points": 5
     },
     {
-      "id": "q083",
-      "type": "grouped_short_text",
-      "quiz_group": 1,
-      "prompt_html": "Beantwoord de vragen over het verhaal van <b>Flumen</b> (Romulus en Remus).",
-      "items": [
-        {
-          "vraag": "Hoe heet de rivier waar de tweeling in wordt gelegd?",
-          "accepted": [
-            "Tiber",
-            "Tiberis",
-            "de Tiber"
-          ]
-        },
-        {
-          "vraag": "Wie is de vader van de tweeling volgens de mythe?",
-          "accepted": [
-            "Mars"
-          ]
-        },
-        {
-          "vraag": "Welk dier voedt de tweeling op?",
-          "accepted": [
-            "wolf",
-            "wolvin",
-            "lupa",
-            "een wolvin",
-            "een wolf"
-          ]
-        },
-        {
-          "vraag": "Wie vindt de tweeling en neemt hen mee naar huis?",
-          "accepted": [
-            "Faustulus",
-            "een herder",
-            "herder"
-          ]
-        },
-        {
-          "vraag": "Hoe heet de vrouw van Faustulus?",
-          "accepted": [
-            "Acca Larentia",
-            "Larentia",
-            "Acca"
-          ]
-        }
-      ],
-      "points": 5
-    },
-    {
-      "id": "q084",
-      "type": "grouped_short_text",
-      "quiz_group": 3,
-      "prompt_html": "Beantwoord de vragen over het verhaal van <b>Regnum</b> (de stichting van Rome).",
-      "items": [
-        {
-          "vraag": "Wie van de tweeling wordt de eerste koning van Rome?",
-          "accepted": [
-            "Romulus"
-          ]
-        },
-        {
-          "vraag": "Waarom doodt Romulus zijn broer Remus?",
-          "accepted": [
-            "Remus springt over de muur",
-            "hij springt over de muur",
-            "over de muur springen",
-            "belediging",
-            "spot"
-          ]
-        },
-        {
-          "vraag": "Op welke heuvel sticht Romulus zijn stad?",
-          "accepted": [
-            "Palatijn",
-            "Palatinus",
-            "de Palatijn"
-          ]
-        },
-        {
-          "vraag": "Hoe noemt Romulus zijn nieuwe stad?",
-          "accepted": [
-            "Roma",
-            "Rome"
-          ]
-        },
-        {
-          "vraag": "Waarmee doodt Romulus zijn broer?",
-          "accepted": [
-            "zwaard",
-            "gladius",
-            "een zwaard"
-          ]
-        }
-      ],
-      "points": 5
-    },
-    {
-      "id": "q085",
+      "id": "q072",
       "type": "table_parse",
       "quiz_group": 2,
       "prompt_html": "Vul de ontbrekende vormen in van <b>donum</b> (geschenk, groep 2 onzijdig).",
@@ -2057,2385 +1534,514 @@
       }
     },
     {
-      "id": "q086",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
+      "id": "q073",
+      "type": "grouped_translation",
+      "quiz_group": 7,
+      "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin.",
       "items": [
         {
-          "vraag": "de",
+          "latijn_html": "Pastor gregem <u>custodit</u>.",
           "accepted": [
-            "van(af)",
-            "over"
-          ]
+            "bewaakt",
+            "houdt de wacht over"
+          ],
+          "points": 1
         },
         {
-          "vraag": "quoque",
+          "latijn_html": "<u>Lupa</u> ad pueros accedit.",
           "accepted": [
-            "ook"
-          ]
+            "de wolvin",
+            "wolvin",
+            "een wolvin"
+          ],
+          "points": 1
         },
         {
-          "vraag": "arbor",
+          "latijn_html": "Pueri ubera <u>bibunt</u>.",
           "accepted": [
-            "boom"
-          ]
+            "drinken",
+            "zuigen"
+          ],
+          "points": 1
         },
         {
-          "vraag": "saxum",
+          "latijn_html": "Rex pueros <u>necare</u> iubet.",
           "accepted": [
-            "rots / rotsblok"
-          ]
+            "doden",
+            "om te doden"
+          ],
+          "points": 1
         },
         {
-          "vraag": "in",
+          "latijn_html": "Servus mandatum <u>non recusat</u>.",
           "accepted": [
-            "in / naar",
-            "in",
-            "op"
-          ]
+            "weigert niet",
+            "wijst niet af"
+          ],
+          "points": 1
         }
-      ]
+      ],
+      "points": 5
     },
     {
-      "id": "q087",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
+      "id": "q074",
+      "type": "grouped_translation",
+      "quiz_group": 7,
+      "prompt_html": "Vertaal het <u>onderstreepte</u> woord. Let op de naamval!",
       "items": [
         {
-          "vraag": "nomen",
+          "latijn_html": "<u>Rex</u> servum vocat.",
           "accepted": [
-            "naam"
-          ]
-        },
-        {
-          "vraag": "custodire",
-          "accepted": [
-            "bewaken"
-          ]
-        },
-        {
-          "vraag": "recusare",
-          "accepted": [
-            "weigeren"
-          ]
-        },
-        {
-          "vraag": "murus",
-          "accepted": [
-            "muur"
-          ]
-        },
-        {
-          "vraag": "frater",
-          "accepted": [
-            "broer"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q088",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "in corbe",
-          "accepted": [
-            "in het mandje"
-          ]
-        },
-        {
-          "vraag": "truncus",
-          "accepted": [
-            "boomstam"
-          ]
-        },
-        {
-          "vraag": "iubere",
-          "accepted": [
-            "bevelen"
-          ]
-        },
-        {
-          "vraag": "aqua",
-          "accepted": [
-            "water"
-          ]
-        },
-        {
-          "vraag": "sic",
-          "accepted": [
-            "zo"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q089",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "et ... et",
-          "accepted": [
-            "zowel ... als"
-          ]
-        },
-        {
-          "vraag": "deus",
-          "accepted": [
-            "god"
-          ]
-        },
-        {
-          "vraag": "rex",
-          "accepted": [
+            "de koning",
             "koning"
-          ]
+          ],
+          "points": 1
         },
         {
-          "vraag": "intrare",
+          "latijn_html": "Rex <u>servum</u> vocat.",
           "accepted": [
-            "binnenkomen"
-          ]
+            "de slaaf",
+            "slaaf",
+            "een slaaf"
+          ],
+          "points": 1
+        },
+        {
+          "latijn_html": "<u>Pueri</u> lacrimant.",
+          "accepted": [
+            "de jongens",
+            "jongens"
+          ],
+          "points": 1
+        },
+        {
+          "latijn_html": "Femina <u>pueros</u> videt.",
+          "accepted": [
+            "de jongens",
+            "jongens"
+          ],
+          "points": 1
+        },
+        {
+          "latijn_html": "Servus ad <u>flumen</u> venit.",
+          "accepted": [
+            "de rivier",
+            "rivier"
+          ],
+          "points": 1
         }
-      ]
+      ],
+      "points": 5
     },
     {
-      "id": "q090",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
+      "id": "q075",
+      "type": "grouped_translation",
+      "quiz_group": 7,
+      "prompt_html": "Vertaal het <u>onderstreepte</u> werkwoord.",
       "items": [
         {
-          "vraag": "urbs",
+          "latijn_html": "Romulus urbem <u>aedificat</u>.",
           "accepted": [
-            "stad"
-          ]
+            "bouwt",
+            "sticht"
+          ],
+          "points": 1
         },
         {
-          "vraag": "locus",
+          "latijn_html": "Remus murum <u>transilit</u>.",
           "accepted": [
-            "plaats"
-          ]
+            "springt over",
+            "overspringt"
+          ],
+          "points": 1
+        },
+        {
+          "latijn_html": "Romulus fratrem <u>necat</u>.",
+          "accepted": [
+            "doodt",
+            "vermoordt"
+          ],
+          "points": 1
+        },
+        {
+          "latijn_html": "Cives <u>conveniunt</u>.",
+          "accepted": [
+            "komen samen",
+            "verzamelen zich"
+          ],
+          "points": 1
+        },
+        {
+          "latijn_html": "Pastor pueros <u>tollit</u>.",
+          "accepted": [
+            "tilt op",
+            "pakt op",
+            "neemt mee"
+          ],
+          "points": 1
         }
-      ]
+      ],
+      "points": 5
     },
     {
-      "id": "q091",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
+      "id": "q076",
+      "type": "grouped_select",
+      "quiz_group": 8,
+      "prompt_html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het onderstreepte woord.",
+      "legend": {
+        "naamval_options": [
+          "nominativus",
+          "accusativus",
+          "dativus",
+          "ablativus"
+        ],
+        "getal_options": [
+          "enkelvoud",
+          "meervoud"
+        ],
+        "verklaring_options": [
+          "onderwerp",
+          "lijdend voorwerp",
+          "meewerkend voorwerp",
+          "aanvulling bij voorzetsel"
+        ]
+      },
       "items": [
         {
-          "vraag": "cum",
-          "accepted": [
-            "met"
-          ]
+          "latijn_html": "<u>Pastor</u> gregem custodit.",
+          "correct": {
+            "naamval": "nominativus",
+            "getal": "enkelvoud",
+            "verklaring": "onderwerp"
+          },
+          "points": 1
         },
         {
-          "vraag": "sicut",
-          "accepted": [
-            "zoals"
-          ]
+          "latijn_html": "Pastor <u>gregem</u> custodit.",
+          "correct": {
+            "naamval": "accusativus",
+            "getal": "enkelvoud",
+            "verklaring": "lijdend voorwerp"
+          },
+          "points": 1
         },
         {
-          "vraag": "corbis",
-          "accepted": [
-            "mandje"
-          ]
+          "latijn_html": "Lupa <u>pueris</u> ubera praebet.",
+          "correct": {
+            "naamval": "dativus",
+            "getal": "meervoud",
+            "verklaring": "meewerkend voorwerp"
+          },
+          "points": 1
+        },
+        {
+          "latijn_html": "Servus cum <u>cane</u> venit.",
+          "correct": {
+            "naamval": "ablativus",
+            "getal": "enkelvoud",
+            "verklaring": "aanvulling bij voorzetsel"
+          },
+          "points": 1
+        },
+        {
+          "latijn_html": "<u>Pueri</u> non lacrimant.",
+          "correct": {
+            "naamval": "nominativus",
+            "getal": "meervoud",
+            "verklaring": "onderwerp"
+          },
+          "points": 1
         }
-      ]
+      ],
+      "points": 5
     },
     {
-      "id": "q092",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
+      "id": "q077",
+      "type": "grouped_select",
+      "quiz_group": 8,
+      "prompt_html": "Bepaal de <b>naamval</b> en <b>functie</b> van het onderstreepte woord.",
+      "legend": {
+        "naamval_options": [
+          "nominativus",
+          "accusativus",
+          "dativus",
+          "ablativus"
+        ],
+        "getal_options": [
+          "enkelvoud",
+          "meervoud"
+        ],
+        "verklaring_options": [
+          "onderwerp",
+          "lijdend voorwerp",
+          "meewerkend voorwerp",
+          "aanvulling bij voorzetsel"
+        ]
+      },
       "items": [
         {
-          "vraag": "mater",
-          "accepted": [
-            "moeder"
-          ]
+          "latijn_html": "Rex <u>servo</u> mandatum dat.",
+          "correct": {
+            "naamval": "dativus",
+            "getal": "enkelvoud",
+            "verklaring": "meewerkend voorwerp"
+          },
+          "points": 1
         },
         {
-          "vraag": "haerere",
-          "accepted": [
-            "blijven steken"
-          ]
+          "latijn_html": "Servus pueros in <u>flumen</u> ponit.",
+          "correct": {
+            "naamval": "accusativus",
+            "getal": "enkelvoud",
+            "verklaring": "aanvulling bij voorzetsel"
+          },
+          "points": 1
         },
         {
-          "vraag": "domum",
-          "accepted": [
-            "naar huis"
-          ]
+          "latijn_html": "Corbis ad <u>arborem</u> haeret.",
+          "correct": {
+            "naamval": "accusativus",
+            "getal": "enkelvoud",
+            "verklaring": "aanvulling bij voorzetsel"
+          },
+          "points": 1
         },
         {
-          "vraag": "descendere",
-          "accepted": [
-            "afdalen"
-          ]
+          "latijn_html": "<u>Femina</u> pueros videt.",
+          "correct": {
+            "naamval": "nominativus",
+            "getal": "enkelvoud",
+            "verklaring": "onderwerp"
+          },
+          "points": 1
+        },
+        {
+          "latijn_html": "Pastor <u>uxori</u> pueros tradit.",
+          "correct": {
+            "naamval": "dativus",
+            "getal": "enkelvoud",
+            "verklaring": "meewerkend voorwerp"
+          },
+          "points": 1
         }
-      ]
+      ],
+      "points": 5
     },
     {
-      "id": "q093",
+      "id": "q078",
+      "type": "table_parse",
+      "quiz_group": 9,
+      "prompt_html": "Vul de ontbrekende vormen in van <b>esse</b> (zijn).",
+      "blocks": [
+        {
+          "lemma": "esse",
+          "rows": [
+            {
+              "veld": "1e pers. ev (ik)",
+              "invulbaar": true,
+              "accepted": [
+                "sum"
+              ]
+            },
+            {
+              "veld": "2e pers. ev (jij)",
+              "invulbaar": true,
+              "accepted": [
+                "es"
+              ]
+            },
+            {
+              "veld": "3e pers. ev (hij/zij)",
+              "invulbaar": false,
+              "given": "est"
+            },
+            {
+              "veld": "1e pers. mv (wij)",
+              "invulbaar": true,
+              "accepted": [
+                "sumus"
+              ]
+            },
+            {
+              "veld": "2e pers. mv (jullie)",
+              "invulbaar": true,
+              "accepted": [
+                "estis"
+              ]
+            },
+            {
+              "veld": "3e pers. mv (zij)",
+              "invulbaar": false,
+              "given": "sunt"
+            }
+          ]
+        }
+      ],
+      "points": 4,
+      "grading": {
+        "per_cell_points": 1
+      }
+    },
+    {
+      "id": "q079",
+      "type": "table_parse",
+      "quiz_group": 9,
+      "prompt_html": "Vul de ontbrekende vormen in van <b>laudare</b> (prijzen, groep 1).",
+      "blocks": [
+        {
+          "lemma": "laudare",
+          "rows": [
+            {
+              "veld": "1e pers. ev",
+              "invulbaar": true,
+              "accepted": [
+                "laudo"
+              ]
+            },
+            {
+              "veld": "2e pers. ev",
+              "invulbaar": false,
+              "given": "laudas"
+            },
+            {
+              "veld": "3e pers. ev",
+              "invulbaar": true,
+              "accepted": [
+                "laudat"
+              ]
+            },
+            {
+              "veld": "1e pers. mv",
+              "invulbaar": true,
+              "accepted": [
+                "laudamus"
+              ]
+            },
+            {
+              "veld": "2e pers. mv",
+              "invulbaar": false,
+              "given": "laudatis"
+            },
+            {
+              "veld": "3e pers. mv",
+              "invulbaar": true,
+              "accepted": [
+                "laudant"
+              ]
+            }
+          ]
+        }
+      ],
+      "points": 4,
+      "grading": {
+        "per_cell_points": 1
+      }
+    },
+    {
+      "id": "q080",
       "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
+      "quiz_group": 10,
+      "prompt_html": "Geef <b>beide betekenissen</b> van de volgende woorden.",
       "items": [
         {
-          "vraag": "tamen",
-          "accepted": [
-            "toch"
+          "vraag": "et",
+          "subfields": [
+            {
+              "label": "1e betekenis",
+              "accepted": [
+                "en"
+              ],
+              "points": 0.5
+            },
+            {
+              "label": "2e betekenis",
+              "accepted": [
+                "ook"
+              ],
+              "points": 0.5
+            }
           ]
         },
         {
-          "vraag": "pastor",
-          "accepted": [
-            "herder"
-          ]
-        },
-        {
-          "vraag": "puer",
-          "accepted": [
-            "jongen"
-          ]
-        },
-        {
-          "vraag": "uxor",
-          "accepted": [
-            "echtgenote"
+          "vraag": "in + accusativus",
+          "subfields": [
+            {
+              "label": "1e betekenis",
+              "accepted": [
+                "in",
+                "naar"
+              ],
+              "points": 0.5
+            },
+            {
+              "label": "2e betekenis",
+              "accepted": [
+                "op",
+                "naar"
+              ],
+              "points": 0.5
+            }
           ]
         },
         {
           "vraag": "dum",
-          "accepted": [
-            "terwijl",
-            "zolang als"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q094",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "facile est",
-          "accepted": [
-            "het is gemakkelijk"
-          ]
-        },
-        {
-          "vraag": "filius",
-          "accepted": [
-            "zoon"
-          ]
-        },
-        {
-          "vraag": "praebere",
-          "accepted": [
-            "(aan)bieden"
-          ]
-        },
-        {
-          "vraag": "femina",
-          "accepted": [
-            "vrouw"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q095",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "vir",
-          "accepted": [
-            "man"
-          ]
-        },
-        {
-          "vraag": "subito",
-          "accepted": [
-            "plotseling"
-          ]
-        },
-        {
-          "vraag": "servus",
-          "accepted": [
-            "slaaf"
-          ]
-        },
-        {
-          "vraag": "placere",
-          "accepted": [
-            "bevallen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q096",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "pater",
-          "accepted": [
-            "vader"
-          ]
-        },
-        {
-          "vraag": "iam",
-          "accepted": [
-            "al / reeds"
-          ]
-        },
-        {
-          "vraag": "ibi",
-          "accepted": [
-            "daar"
-          ]
-        },
-        {
-          "vraag": "tollere",
-          "accepted": [
-            "optillen"
-          ]
-        },
-        {
-          "vraag": "esse",
-          "accepted": [
-            "zijn"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q097",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "grex",
-          "accepted": [
-            "kudde"
-          ]
-        },
-        {
-          "vraag": "ideo",
-          "accepted": [
-            "daarom"
-          ]
-        },
-        {
-          "vraag": "populus",
-          "accepted": [
-            "volk"
-          ]
-        },
-        {
-          "vraag": "alter",
-          "accepted": [
-            "de een",
-            "de ander"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q098",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "ad",
-          "accepted": [
-            "naar / tot",
-            "bij"
-          ]
-        },
-        {
-          "vraag": "favere",
-          "accepted": [
-            "steun geven aan"
-          ]
-        },
-        {
-          "vraag": "ridere",
-          "accepted": [
-            "lachen"
-          ]
-        },
-        {
-          "vraag": "dicere",
-          "accepted": [
-            "zeggen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q099",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "infans",
-          "accepted": [
-            "baby"
-          ]
-        },
-        {
-          "vraag": "inter",
-          "accepted": [
-            "tussen",
-            "tijdens"
-          ]
-        },
-        {
-          "vraag": "haud",
-          "accepted": [
-            "helemaal niet"
-          ]
-        },
-        {
-          "vraag": "ubera",
-          "accepted": [
-            "tepels"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q100",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "colligere",
-          "accepted": [
-            "verzamelen"
-          ]
-        },
-        {
-          "vraag": "stare",
-          "accepted": [
-            "staan"
-          ]
-        },
-        {
-          "vraag": "casa",
-          "accepted": [
-            "hut"
-          ]
-        },
-        {
-          "vraag": "partim",
-          "accepted": [
-            "voor een deel / deels"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q101",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "mandatum",
-          "accepted": [
-            "opdracht"
-          ]
-        },
-        {
-          "vraag": "accedere",
-          "accepted": [
-            "gaan naar",
-            "naderen"
-          ]
-        },
-        {
-          "vraag": "cur",
-          "accepted": [
-            "waarom"
-          ]
-        },
-        {
-          "vraag": "non",
-          "accepted": [
-            "niet"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q102",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "flumen",
-          "accepted": [
-            "rivier"
-          ]
-        },
-        {
-          "vraag": "transilire",
-          "accepted": [
-            "springen over"
-          ]
-        },
-        {
-          "vraag": "licet",
-          "accepted": [
-            "het is toegestaan"
-          ]
-        },
-        {
-          "vraag": "hostis",
-          "accepted": [
-            "vijand"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q103",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "revenire",
-          "accepted": [
-            "terugkomen"
-          ]
-        },
-        {
-          "vraag": "mons",
-          "accepted": [
-            "berg / heuvel"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q104",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "tectum",
-          "accepted": [
-            "dak"
-          ]
-        },
-        {
-          "vraag": "omnes",
-          "accepted": [
-            "allen"
-          ]
-        },
-        {
-          "vraag": "dare",
-          "accepted": [
-            "geven"
-          ]
-        },
-        {
-          "vraag": "imponere in",
-          "accepted": [
-            "plaatsen in"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q105",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "vesperi",
-          "accepted": [
-            "'s avonds"
-          ]
-        },
-        {
-          "vraag": "venire",
-          "accepted": [
-            "komen"
-          ]
-        },
-        {
-          "vraag": "nocere",
-          "accepted": [
-            "kwaad doen"
-          ]
-        },
-        {
-          "vraag": "convenire",
-          "accepted": [
-            "samenkomen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q106",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "iacere",
-          "accepted": [
-            "liggen"
-          ]
-        },
-        {
-          "vraag": "amicus",
-          "accepted": [
-            "vriend"
-          ]
-        },
-        {
-          "vraag": "illudere",
-          "accepted": [
-            "belachelijk maken"
-          ]
-        },
-        {
-          "vraag": "primum",
-          "accepted": [
-            "eerst"
-          ]
-        },
-        {
-          "vraag": "et",
-          "accepted": [
-            "en",
-            "ook"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q107",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "qui",
-          "accepted": [
-            "iemand die"
-          ]
-        },
-        {
-          "vraag": "timere",
-          "accepted": [
-            "vrezen / bang zijn voor"
-          ]
-        },
-        {
-          "vraag": "ubi",
-          "accepted": [
-            "waar"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q108",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "vocare",
-          "accepted": [
-            "roepen",
-            "noemen"
-          ]
-        },
-        {
-          "vraag": "tandem",
-          "accepted": [
-            "eindelijk"
-          ]
-        },
-        {
-          "vraag": "de",
-          "accepted": [
-            "van(af)",
-            "over"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q109",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "quoque",
-          "accepted": [
-            "ook"
-          ]
-        },
-        {
-          "vraag": "arbor",
-          "accepted": [
-            "boom"
-          ]
-        },
-        {
-          "vraag": "saxum",
-          "accepted": [
-            "rots / rotsblok"
-          ]
-        },
-        {
-          "vraag": "in",
-          "accepted": [
-            "in / naar",
-            "in",
-            "op"
-          ]
-        },
-        {
-          "vraag": "nomen",
-          "accepted": [
-            "naam"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q110",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "custodire",
-          "accepted": [
-            "bewaken"
-          ]
-        },
-        {
-          "vraag": "recusare",
-          "accepted": [
-            "weigeren"
-          ]
-        },
-        {
-          "vraag": "murus",
-          "accepted": [
-            "muur"
-          ]
-        },
-        {
-          "vraag": "frater",
-          "accepted": [
-            "broer"
-          ]
-        },
-        {
-          "vraag": "in corbe",
-          "accepted": [
-            "in het mandje"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q111",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "truncus",
-          "accepted": [
-            "boomstam"
-          ]
-        },
-        {
-          "vraag": "iubere",
-          "accepted": [
-            "bevelen"
-          ]
-        },
-        {
-          "vraag": "aqua",
-          "accepted": [
-            "water"
-          ]
-        },
-        {
-          "vraag": "sic",
-          "accepted": [
-            "zo"
-          ]
-        },
-        {
-          "vraag": "et ... et",
-          "accepted": [
-            "zowel ... als"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q112",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "deus",
-          "accepted": [
-            "god"
-          ]
-        },
-        {
-          "vraag": "rex",
-          "accepted": [
-            "koning"
-          ]
-        },
-        {
-          "vraag": "intrare",
-          "accepted": [
-            "binnenkomen"
-          ]
-        },
-        {
-          "vraag": "urbs",
-          "accepted": [
-            "stad"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q113",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "cum",
-          "accepted": [
-            "met"
-          ]
-        },
-        {
-          "vraag": "sicut",
-          "accepted": [
-            "zoals"
-          ]
-        },
-        {
-          "vraag": "corbis",
-          "accepted": [
-            "mandje"
-          ]
-        },
-        {
-          "vraag": "mater",
-          "accepted": [
-            "moeder"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q114",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "haerere",
-          "accepted": [
-            "blijven steken"
-          ]
-        },
-        {
-          "vraag": "domum",
-          "accepted": [
-            "naar huis"
-          ]
-        },
-        {
-          "vraag": "descendere",
-          "accepted": [
-            "afdalen"
-          ]
-        },
-        {
-          "vraag": "tamen",
-          "accepted": [
-            "toch"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q115",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "pastor",
-          "accepted": [
-            "herder"
-          ]
-        },
-        {
-          "vraag": "puer",
-          "accepted": [
-            "jongen"
-          ]
-        },
-        {
-          "vraag": "uxor",
-          "accepted": [
-            "echtgenote"
-          ]
-        },
-        {
-          "vraag": "dum",
-          "accepted": [
-            "terwijl",
-            "zolang als"
-          ]
-        },
-        {
-          "vraag": "facile est",
-          "accepted": [
-            "het is gemakkelijk"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q116",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "filius",
-          "accepted": [
-            "zoon"
-          ]
-        },
-        {
-          "vraag": "praebere",
-          "accepted": [
-            "(aan)bieden"
-          ]
-        },
-        {
-          "vraag": "femina",
-          "accepted": [
-            "vrouw"
-          ]
-        },
-        {
-          "vraag": "vir",
-          "accepted": [
-            "man"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q117",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "subito",
-          "accepted": [
-            "plotseling"
-          ]
-        },
-        {
-          "vraag": "servus",
-          "accepted": [
-            "slaaf"
-          ]
-        },
-        {
-          "vraag": "placere",
-          "accepted": [
-            "bevallen"
-          ]
-        },
-        {
-          "vraag": "pater",
-          "accepted": [
-            "vader"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q118",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "iam",
-          "accepted": [
-            "al / reeds"
-          ]
-        },
-        {
-          "vraag": "ibi",
-          "accepted": [
-            "daar"
-          ]
-        },
-        {
-          "vraag": "tollere",
-          "accepted": [
-            "optillen"
-          ]
-        },
-        {
-          "vraag": "esse",
-          "accepted": [
-            "zijn"
-          ]
-        },
-        {
-          "vraag": "grex",
-          "accepted": [
-            "kudde"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q119",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "ideo",
-          "accepted": [
-            "daarom"
-          ]
-        },
-        {
-          "vraag": "populus",
-          "accepted": [
-            "volk"
-          ]
-        },
-        {
-          "vraag": "alter",
-          "accepted": [
-            "de een",
-            "de ander"
-          ]
-        },
-        {
-          "vraag": "ad",
-          "accepted": [
-            "naar / tot",
-            "bij"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q120",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "favere",
-          "accepted": [
-            "steun geven aan"
-          ]
-        },
-        {
-          "vraag": "ridere",
-          "accepted": [
-            "lachen"
-          ]
-        },
-        {
-          "vraag": "dicere",
-          "accepted": [
-            "zeggen"
-          ]
-        },
-        {
-          "vraag": "infans",
-          "accepted": [
-            "baby"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q121",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "inter",
-          "accepted": [
-            "tussen",
-            "tijdens"
-          ]
-        },
-        {
-          "vraag": "haud",
-          "accepted": [
-            "helemaal niet"
-          ]
-        },
-        {
-          "vraag": "ubera",
-          "accepted": [
-            "tepels"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q122",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "colligere",
-          "accepted": [
-            "verzamelen"
-          ]
-        },
-        {
-          "vraag": "stare",
-          "accepted": [
-            "staan"
-          ]
-        },
-        {
-          "vraag": "casa",
-          "accepted": [
-            "hut"
-          ]
-        },
-        {
-          "vraag": "partim",
-          "accepted": [
-            "voor een deel / deels"
-          ]
-        },
-        {
-          "vraag": "mandatum",
-          "accepted": [
-            "opdracht"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q123",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "accedere",
-          "accepted": [
-            "gaan naar",
-            "naderen"
-          ]
-        },
-        {
-          "vraag": "cur",
-          "accepted": [
-            "waarom"
-          ]
-        },
-        {
-          "vraag": "non",
-          "accepted": [
-            "niet"
-          ]
-        },
-        {
-          "vraag": "flumen",
-          "accepted": [
-            "rivier"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q124",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "transilire",
-          "accepted": [
-            "springen over"
-          ]
-        },
-        {
-          "vraag": "licet",
-          "accepted": [
-            "het is toegestaan"
-          ]
-        },
-        {
-          "vraag": "hostis",
-          "accepted": [
-            "vijand"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q125",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "revenire",
-          "accepted": [
-            "terugkomen"
-          ]
-        },
-        {
-          "vraag": "mons",
-          "accepted": [
-            "berg / heuvel"
-          ]
-        },
-        {
-          "vraag": "tectum",
-          "accepted": [
-            "dak"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q126",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "omnes",
-          "accepted": [
-            "allen"
-          ]
-        },
-        {
-          "vraag": "dare",
-          "accepted": [
-            "geven"
-          ]
-        },
-        {
-          "vraag": "imponere in",
-          "accepted": [
-            "plaatsen in"
-          ]
-        },
-        {
-          "vraag": "vesperi",
-          "accepted": [
-            "'s avonds"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q127",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "venire",
-          "accepted": [
-            "komen"
-          ]
-        },
-        {
-          "vraag": "nocere",
-          "accepted": [
-            "kwaad doen"
-          ]
-        },
-        {
-          "vraag": "convenire",
-          "accepted": [
-            "samenkomen"
-          ]
-        },
-        {
-          "vraag": "iacere",
-          "accepted": [
-            "liggen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q128",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "amicus",
-          "accepted": [
-            "vriend"
-          ]
-        },
-        {
-          "vraag": "illudere",
-          "accepted": [
-            "belachelijk maken"
-          ]
-        },
-        {
-          "vraag": "primum",
-          "accepted": [
-            "eerst"
-          ]
-        },
-        {
-          "vraag": "et",
-          "accepted": [
-            "en",
-            "ook"
-          ]
-        },
-        {
-          "vraag": "qui",
-          "accepted": [
-            "iemand die"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q129",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "timere",
-          "accepted": [
-            "vrezen / bang zijn voor"
-          ]
-        },
-        {
-          "vraag": "ubi",
-          "accepted": [
-            "waar"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q130",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "vocare",
-          "accepted": [
-            "roepen",
-            "noemen"
-          ]
-        },
-        {
-          "vraag": "tandem",
-          "accepted": [
-            "eindelijk"
-          ]
-        },
-        {
-          "vraag": "de",
-          "accepted": [
-            "van(af)",
-            "over"
-          ]
-        },
-        {
-          "vraag": "quoque",
-          "accepted": [
-            "ook"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q131",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "arbor",
-          "accepted": [
-            "boom"
-          ]
-        },
-        {
-          "vraag": "saxum",
-          "accepted": [
-            "rots / rotsblok"
-          ]
-        },
-        {
-          "vraag": "in",
-          "accepted": [
-            "in / naar",
-            "in",
-            "op"
-          ]
-        },
-        {
-          "vraag": "nomen",
-          "accepted": [
-            "naam"
-          ]
-        },
-        {
-          "vraag": "custodire",
-          "accepted": [
-            "bewaken"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q132",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "recusare",
-          "accepted": [
-            "weigeren"
-          ]
-        },
-        {
-          "vraag": "murus",
-          "accepted": [
-            "muur"
-          ]
-        },
-        {
-          "vraag": "frater",
-          "accepted": [
-            "broer"
-          ]
-        },
-        {
-          "vraag": "in corbe",
-          "accepted": [
-            "in het mandje"
-          ]
-        },
-        {
-          "vraag": "truncus",
-          "accepted": [
-            "boomstam"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q133",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "iubere",
-          "accepted": [
-            "bevelen"
-          ]
-        },
-        {
-          "vraag": "aqua",
-          "accepted": [
-            "water"
-          ]
-        },
-        {
-          "vraag": "sic",
-          "accepted": [
-            "zo"
-          ]
-        },
-        {
-          "vraag": "et ... et",
-          "accepted": [
-            "zowel ... als"
-          ]
-        },
-        {
-          "vraag": "deus",
-          "accepted": [
-            "god"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q134",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "rex",
-          "accepted": [
-            "koning"
-          ]
-        },
-        {
-          "vraag": "intrare",
-          "accepted": [
-            "binnenkomen"
-          ]
-        },
-        {
-          "vraag": "urbs",
-          "accepted": [
-            "stad"
-          ]
-        },
-        {
-          "vraag": "locus",
-          "accepted": [
-            "plaats"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q135",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "sicut",
-          "accepted": [
-            "zoals"
-          ]
-        },
-        {
-          "vraag": "corbis",
-          "accepted": [
-            "mandje"
-          ]
-        },
-        {
-          "vraag": "mater",
-          "accepted": [
-            "moeder"
-          ]
-        },
-        {
-          "vraag": "haerere",
-          "accepted": [
-            "blijven steken"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q136",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "domum",
-          "accepted": [
-            "naar huis"
-          ]
-        },
-        {
-          "vraag": "descendere",
-          "accepted": [
-            "afdalen"
-          ]
-        },
-        {
-          "vraag": "tamen",
-          "accepted": [
-            "toch"
-          ]
-        },
-        {
-          "vraag": "pastor",
-          "accepted": [
-            "herder"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q137",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "puer",
-          "accepted": [
-            "jongen"
-          ]
-        },
-        {
-          "vraag": "uxor",
-          "accepted": [
-            "echtgenote"
-          ]
-        },
-        {
-          "vraag": "dum",
-          "accepted": [
-            "terwijl",
-            "zolang als"
-          ]
-        },
-        {
-          "vraag": "facile est",
-          "accepted": [
-            "het is gemakkelijk"
-          ]
-        },
-        {
-          "vraag": "filius",
-          "accepted": [
-            "zoon"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q138",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "praebere",
-          "accepted": [
-            "(aan)bieden"
-          ]
-        },
-        {
-          "vraag": "femina",
-          "accepted": [
-            "vrouw"
-          ]
-        },
-        {
-          "vraag": "vir",
-          "accepted": [
-            "man"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q139",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "subito",
-          "accepted": [
-            "plotseling"
-          ]
-        },
-        {
-          "vraag": "servus",
-          "accepted": [
-            "slaaf"
-          ]
-        },
-        {
-          "vraag": "placere",
-          "accepted": [
-            "bevallen"
-          ]
-        },
-        {
-          "vraag": "pater",
-          "accepted": [
-            "vader"
-          ]
-        },
-        {
-          "vraag": "iam",
-          "accepted": [
-            "al / reeds"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q140",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "ibi",
-          "accepted": [
-            "daar"
-          ]
-        },
-        {
-          "vraag": "tollere",
-          "accepted": [
-            "optillen"
-          ]
-        },
-        {
-          "vraag": "esse",
-          "accepted": [
-            "zijn"
-          ]
-        },
-        {
-          "vraag": "grex",
-          "accepted": [
-            "kudde"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q141",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "ideo",
-          "accepted": [
-            "daarom"
-          ]
-        },
-        {
-          "vraag": "populus",
-          "accepted": [
-            "volk"
-          ]
-        },
-        {
-          "vraag": "alter",
-          "accepted": [
-            "de een",
-            "de ander"
-          ]
-        },
-        {
-          "vraag": "ad",
-          "accepted": [
-            "naar / tot",
-            "bij"
-          ]
-        },
-        {
-          "vraag": "favere",
-          "accepted": [
-            "steun geven aan"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q142",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "ridere",
-          "accepted": [
-            "lachen"
-          ]
-        },
-        {
-          "vraag": "dicere",
-          "accepted": [
-            "zeggen"
-          ]
-        },
-        {
-          "vraag": "infans",
-          "accepted": [
-            "baby"
-          ]
-        },
-        {
-          "vraag": "inter",
-          "accepted": [
-            "tussen",
-            "tijdens"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q143",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "haud",
-          "accepted": [
-            "helemaal niet"
-          ]
-        },
-        {
-          "vraag": "ubera",
-          "accepted": [
-            "tepels"
-          ]
-        },
-        {
-          "vraag": "colligere",
-          "accepted": [
-            "verzamelen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q144",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "stare",
-          "accepted": [
-            "staan"
-          ]
-        },
-        {
-          "vraag": "casa",
-          "accepted": [
-            "hut"
-          ]
-        },
-        {
-          "vraag": "partim",
-          "accepted": [
-            "voor een deel / deels"
-          ]
-        },
-        {
-          "vraag": "mandatum",
-          "accepted": [
-            "opdracht"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q145",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "accedere",
-          "accepted": [
-            "gaan naar",
-            "naderen"
-          ]
-        },
-        {
-          "vraag": "cur",
-          "accepted": [
-            "waarom"
-          ]
-        },
-        {
-          "vraag": "non",
-          "accepted": [
-            "niet"
-          ]
-        },
-        {
-          "vraag": "flumen",
-          "accepted": [
-            "rivier"
-          ]
-        },
-        {
-          "vraag": "transilire",
-          "accepted": [
-            "springen over"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q146",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "licet",
-          "accepted": [
-            "het is toegestaan"
-          ]
-        },
-        {
-          "vraag": "hostis",
-          "accepted": [
-            "vijand"
-          ]
-        },
-        {
-          "vraag": "revenire",
-          "accepted": [
-            "terugkomen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q147",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "mons",
-          "accepted": [
-            "berg / heuvel"
-          ]
-        },
-        {
-          "vraag": "tectum",
-          "accepted": [
-            "dak"
-          ]
-        },
-        {
-          "vraag": "omnes",
-          "accepted": [
-            "allen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q148",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "dare",
-          "accepted": [
-            "geven"
-          ]
-        },
-        {
-          "vraag": "imponere in",
-          "accepted": [
-            "plaatsen in"
-          ]
-        },
-        {
-          "vraag": "vesperi",
-          "accepted": [
-            "'s avonds"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q149",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "venire",
-          "accepted": [
-            "komen"
-          ]
-        },
-        {
-          "vraag": "nocere",
-          "accepted": [
-            "kwaad doen"
-          ]
-        },
-        {
-          "vraag": "convenire",
-          "accepted": [
-            "samenkomen"
-          ]
-        },
-        {
-          "vraag": "iacere",
-          "accepted": [
-            "liggen"
-          ]
-        },
-        {
-          "vraag": "amicus",
-          "accepted": [
-            "vriend"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q150",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "illudere",
-          "accepted": [
-            "belachelijk maken"
-          ]
-        },
-        {
-          "vraag": "primum",
-          "accepted": [
-            "eerst"
-          ]
-        },
-        {
-          "vraag": "et",
-          "accepted": [
-            "en",
-            "ook"
-          ]
-        },
-        {
-          "vraag": "qui",
-          "accepted": [
-            "iemand die"
-          ]
-        },
-        {
-          "vraag": "timere",
-          "accepted": [
-            "vrezen / bang zijn voor"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q151",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "ubi",
-          "accepted": [
-            "waar"
-          ]
-        },
-        {
-          "vraag": "vocare",
-          "accepted": [
-            "roepen",
-            "noemen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q152",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "tandem",
-          "accepted": [
-            "eindelijk"
-          ]
-        },
-        {
-          "vraag": "de",
-          "accepted": [
-            "van(af)",
-            "over"
-          ]
-        },
-        {
-          "vraag": "quoque",
-          "accepted": [
-            "ook"
-          ]
-        },
-        {
-          "vraag": "arbor",
-          "accepted": [
-            "boom"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q153",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "saxum",
-          "accepted": [
-            "rots / rotsblok"
-          ]
-        },
-        {
-          "vraag": "in",
-          "accepted": [
-            "in / naar",
-            "in",
-            "op"
-          ]
-        },
-        {
-          "vraag": "nomen",
-          "accepted": [
-            "naam"
-          ]
-        },
-        {
-          "vraag": "custodire",
-          "accepted": [
-            "bewaken"
-          ]
-        },
-        {
-          "vraag": "recusare",
-          "accepted": [
-            "weigeren"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q154",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "murus",
-          "accepted": [
-            "muur"
-          ]
-        },
-        {
-          "vraag": "frater",
-          "accepted": [
-            "broer"
-          ]
-        },
-        {
-          "vraag": "in corbe",
-          "accepted": [
-            "in het mandje"
-          ]
-        },
-        {
-          "vraag": "truncus",
-          "accepted": [
-            "boomstam"
-          ]
-        },
-        {
-          "vraag": "iubere",
-          "accepted": [
-            "bevelen"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q155",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "aqua",
-          "accepted": [
-            "water"
-          ]
-        },
-        {
-          "vraag": "sic",
-          "accepted": [
-            "zo"
-          ]
-        },
-        {
-          "vraag": "et ... et",
-          "accepted": [
-            "zowel ... als"
-          ]
-        },
-        {
-          "vraag": "deus",
-          "accepted": [
-            "god"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q156",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "rex",
-          "accepted": [
-            "koning"
-          ]
-        },
-        {
-          "vraag": "intrare",
-          "accepted": [
-            "binnenkomen"
-          ]
-        },
-        {
-          "vraag": "urbs",
-          "accepted": [
-            "stad"
-          ]
-        },
-        {
-          "vraag": "locus",
-          "accepted": [
-            "plaats"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q157",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "cum",
-          "accepted": [
-            "met"
-          ]
-        },
-        {
-          "vraag": "sicut",
-          "accepted": [
-            "zoals"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q158",
-      "type": "grouped_short_text",
-      "quiz_group": 6,
-      "prompt_html": "Vertaal de woorden naar het Nederlands.",
-      "items": [
-        {
-          "vraag": "corbis",
-          "accepted": [
-            "mandje"
-          ]
-        },
-        {
-          "vraag": "mater",
-          "accepted": [
-            "moeder"
-          ]
-        },
-        {
-          "vraag": "haerere",
-          "accepted": [
-            "blijven steken"
-          ]
-        }
-      ]
+          "subfields": [
+            {
+              "label": "1e betekenis",
+              "accepted": [
+                "terwijl"
+              ],
+              "points": 0.5
+            },
+            {
+              "label": "2e betekenis",
+              "accepted": [
+                "zolang als",
+                "zolang"
+              ],
+              "points": 0.5
+            }
+          ]
+        }
+      ],
+      "points": 3
+    },
+    {
+      "id": "q081",
+      "type": "translation_open",
+      "quiz_group": 10,
+      "prompt_html": "Vertaal de volgende zin naar het Nederlands:<br><br><i>Rex servum iubet pueros necare. Servus tamen mandatum recusat.</i>",
+      "answer": {
+        "model_answer": "De koning beveelt de slaaf de jongens te doden. Maar de slaaf weigert de opdracht.",
+        "keywords": [
+          "koning",
+          "beveelt",
+          "slaaf",
+          "jongens",
+          "doden",
+          "weigert",
+          "opdracht"
+        ]
+      },
+      "points": 4
+    },
+    {
+      "id": "q082",
+      "type": "translation_open",
+      "quiz_group": 10,
+      "prompt_html": "Vertaal naar het Nederlands:<br><br><i>Lupa pueros videt et ad eos accedit. Pueris ubera praebet.</i>",
+      "answer": {
+        "model_answer": "De wolvin ziet de jongens en gaat naar hen toe. Zij biedt de jongens haar tepels aan.",
+        "keywords": [
+          "wolvin",
+          "ziet",
+          "jongens",
+          "gaat",
+          "biedt",
+          "tepels"
+        ]
+      },
+      "points": 4
     }
   ]
 }
