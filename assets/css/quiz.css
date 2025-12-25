@@ -507,6 +507,63 @@ textarea.open-input {
   font-size: 1rem;
   color: var(--text);
 }
+/* Timer Toggle Switch */
+.timer-toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: var(--space-3);
+}
+
+.timer-toggle-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.timer-toggle {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background: var(--border-strong);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease);
+}
+
+.timer-toggle:hover {
+  background: var(--muted);
+}
+
+.timer-toggle::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: var(--radius-full);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+.timer-toggle.active {
+  background: var(--brand);
+}
+
+.timer-toggle.active::after {
+  transform: translateX(16px);
+}
+
+/* Hide timer display when disabled */
+.quiz-meta .timer.timer-disabled {
+  opacity: 0.4;
+}
+
+.quiz-meta .timer.timer-disabled strong {
+  text-decoration: line-through;
+}
 
 /* ===========================================
    Quiz Progress

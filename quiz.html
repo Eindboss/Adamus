@@ -30,7 +30,11 @@
     <div class="quiz-meta">
       <div id="timerDot" class="stat-dot"></div>
       <div id="stat">0 goed / 0 fout / 0 overgeslagen • vraag 0 van 0</div>
-      <div class="timer">Resterend: <strong id="countdown">90</strong> s</div>
+      <div class="timer" id="timerDisplay">Resterend: <strong id="countdown">90</strong> s</div>
+      <div class="timer-toggle-wrap">
+        <span class="timer-toggle-label">Timer</span>
+        <div class="timer-toggle" id="timerToggle" role="switch" aria-checked="true" tabindex="0"></div>
+      </div>
     </div>
 
     <!-- Progress Bar -->

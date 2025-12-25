@@ -70,6 +70,8 @@ let state = {
   groupAnswers: {}, // grouped question values
   partialScore: 0, // partial points earned
   maxPartialScore: 0, // max possible partial points
+  // Timer toggle
+  timerEnabled: true,
 };
 
 let subjects = [];
@@ -532,7 +534,7 @@ function renderQuestion() {
                       q.type === "grouped_short_text" || q.type === "grouped_select" ||
                       q.type === "ratio_table" || q.type === "ordering";
   resetTimer(isMultiPart ? QUESTION_SECONDS_MULTIPART : QUESTION_SECONDS);
-  startTimer();
+  if (state.timerEnabled) startTimer();
 
   // Render based on type
   switch (q.type) {
@@ -3429,6 +3431,8 @@ function setupEventListeners() {
   const pauseBtn = $("pauseBtn");
   const resumeBtn = $("resumeBtn");
   const restartBtn = $("btn-restart");
+  const timerToggle = $("timerToggle");
+  const timerDisplay = $("timerDisplay");
 
   if (checkBtn) checkBtn.addEventListener("click", checkAnswer);
   if (nextBtn) nextBtn.addEventListener("click", nextQuestion);
@@ -3441,6 +3445,51 @@ function setupEventListeners() {
         location.reload();
       }
     });
+
+  // Timer toggle
+  if (timerToggle) {
+    // Load saved preference
+    const savedTimerEnabled = localStorage.getItem("adamus-timer-enabled");
+    state.timerEnabled = savedTimerEnabled !== "false"; // Default to true
+
+    // Apply initial state
+    updateTimerToggleUI(timerToggle, timerDisplay);
+
+    // Handle click
+    timerToggle.addEventListener("click", () => {
+      state.timerEnabled = !state.timerEnabled;
+      localStorage.setItem("adamus-timer-enabled", state.timerEnabled);
+      updateTimerToggleUI(timerToggle, timerDisplay);
+
+      // Start or stop timer based on new state
+      if (state.timerEnabled && state.phase === "question" && !state.answered) {
+        startTimer();
+      } else if (!state.timerEnabled) {
+        stopTimer();
+      }
+    });
+
+    // Handle keyboard
+    timerToggle.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        timerToggle.click();
+      }
+    });
+  }
+}
+
+/**
+ * Update timer toggle UI
+ */
+function updateTimerToggleUI(toggle, display) {
+  if (toggle) {
+    toggle.classList.toggle("active", state.timerEnabled);
+    toggle.setAttribute("aria-checked", state.timerEnabled);
+  }
+  if (display) {
+    display.classList.toggle("timer-disabled", !state.timerEnabled);
+  }
 }
 
 // Export state for debugging

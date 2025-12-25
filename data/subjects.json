@@ -22,6 +22,17 @@
       "week": "1e toetsweek"
     },
     {
+      "id": "aardrijkskunde-h2-de-wereld",
+      "subject": "Aardrijkskunde",
+      "label": "Aardrijkskunde – H2: De Wereld (§2,3,4,5,7,8)",
+      "title": "Aardrijkskunde – Hoofdstuk 2: De Wereld",
+      "file": "data/aardrijkskunde/h2-de-wereld-quiz.json",
+      "schema": "toets",
+      "hideFlashcards": true,
+      "week": "2e toetsweek",
+      "questionsPerSession": 15
+    },
+    {
       "id": "aardrijkskunde-p1",
       "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – Paragraaf 1: Waar wil je wonen?",

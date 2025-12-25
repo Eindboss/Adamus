@@ -1,0 +1,799 @@
+{
+  "meta": {
+    "subject": "Aardrijkskunde – H2: De Wereld (§2,3,4,5,7,8)",
+    "themeColor": "#6d5bd0"
+  },
+  "questions": [
+    {
+      "id": "h2-001",
+      "quiz_group": 2,
+      "q": "Het weer kan van dag tot dag veranderen, maar het klimaat niet. Wat is het verschil tussen weer en klimaat?",
+      "a": [
+        "Weer is de toestand van de atmosfeer op een bepaald moment, klimaat is het gemiddelde weer over 30 jaar",
+        "Weer gaat over temperatuur, klimaat over neerslag",
+        "Weer is lokaal, klimaat is wereldwijd",
+        "Er is geen verschil, het zijn synoniemen"
+      ],
+      "c": 0,
+      "e": "Weer beschrijft de actuele toestand (temperatuur, neerslag, wind), terwijl klimaat het gemiddelde weer over een periode van minimaal 30 jaar beschrijft."
+    },
+    {
+      "id": "h2-002",
+      "quiz_group": 2,
+      "q": "De aarde draait in 24 uur om haar eigen as. Wat veroorzaakt dit voor de mens?",
+      "a": [
+        "De seizoenen",
+        "Dag en nacht",
+        "De getijden",
+        "Klimaatzones"
+      ],
+      "c": 1,
+      "e": "Door de rotatie van de aarde om haar as is het aan de kant die naar de zon wijst dag, en aan de andere kant nacht."
+    },
+    {
+      "id": "h2-003",
+      "quiz_group": 2,
+      "q": "Stel je voor: het is 21 juni en je staat in Nederland. De zon staat hoog aan de hemel en het is de langste dag van het jaar. Waarom is dit zo?",
+      "a": [
+        "De aarde staat dan het dichtst bij de zon",
+        "De aardas staat schuin, waardoor het noordelijk halfrond naar de zon gekeerd is",
+        "Er zijn meer wolken op het zuidelijk halfrond",
+        "De aarde draait sneller in de zomer"
+      ],
+      "c": 1,
+      "e": "Door de schuine stand van de aardas (23,5°) is het noordelijk halfrond in juni naar de zon gekeerd. Dit zorgt voor langere dagen en meer directe zonnestralen."
+    },
+    {
+      "id": "h2-004",
+      "quiz_group": 2,
+      "q": "De evenaar ligt op 0° breedte. Hoe noemen we de denkbeeldige lijn op 23,5° noorderbreedte?",
+      "a": [
+        "De Steenbokskeerkring",
+        "De Kreeftskeerkring",
+        "De Noordpoolcirkel",
+        "De evenaar"
+      ],
+      "c": 1,
+      "e": "De Kreeftskeerkring ligt op 23,5° NB. Dit is de meest noordelijke breedtegraad waar de zon op 21 juni recht boven je hoofd kan staan."
+    },
+    {
+      "id": "h2-005",
+      "quiz_group": 2,
+      "q": "Op aarde onderscheiden we drie luchtstreken. Welke luchtstreek ligt tussen de keerkringen?",
+      "a": [
+        "De gematigde luchtstreek",
+        "De polaire luchtstreek",
+        "De tropische luchtstreek",
+        "De subtropische luchtstreek"
+      ],
+      "c": 2,
+      "e": "De tropische luchtstreek ligt tussen de Kreeftskeerkring (23,5° NB) en de Steenbokskeerkring (23,5° ZB). Hier is het het hele jaar warm."
+    },
+    {
+      "id": "h2-006",
+      "quiz_group": 2,
+      "q": "Familie Jansen verhuist van Amsterdam naar een stad op de evenaar. Wat zullen ze merken aan de temperatuur gedurende het jaar?",
+      "a": [
+        "Grote temperatuurverschillen tussen zomer en winter",
+        "De temperatuur is het hele jaar door ongeveer gelijk",
+        "Koude winters maar warme zomers",
+        "De temperatuur wisselt sterk per dag"
+      ],
+      "c": 1,
+      "e": "Op de evenaar staat de zon het hele jaar hoog aan de hemel. Daardoor is er weinig verschil tussen seizoenen en blijft de temperatuur vrij constant (rond 25-30°C)."
+    },
+    {
+      "id": "h2-007",
+      "quiz_group": 2,
+      "q": "Waarom is de invalshoek van de zonnestralen belangrijker dan de afstand tot de zon voor de temperatuur op aarde?",
+      "a": [
+        "Omdat de aarde heel dicht bij de zon staat",
+        "Omdat directe stralen meer energie per oppervlakte geven dan schuine stralen",
+        "Omdat de zon 's zomers groter is",
+        "Omdat wolken de stralen tegenhouden"
+      ],
+      "c": 1,
+      "e": "Bij een grote invalshoek (zon hoog) vallen de stralen recht op een klein oppervlak en geven veel warmte. Bij een kleine invalshoek (zon laag) verspreiden dezelfde stralen zich over een groter oppervlak."
+    },
+    {
+      "id": "h2-008",
+      "quiz_group": 3,
+      "q": "Je gaat op skivakantie naar de Alpen. Op 2000 meter hoogte is het flink kouder dan in het dal. Hoeveel graden kouder is het gemiddeld per 1000 meter hoogte?",
+      "a": [
+        "Ongeveer 3°C",
+        "Ongeveer 6°C",
+        "Ongeveer 10°C",
+        "Ongeveer 1°C"
+      ],
+      "c": 1,
+      "e": "Per 1000 meter hoogte daalt de temperatuur gemiddeld met 6°C. Op 2000 meter is het dus ongeveer 12°C kouder dan op zeeniveau.",
+      "image": "assets/images/aardrijkskunde/bergen-sneeuw.jpg"
+    },
+    {
+      "id": "h2-009",
+      "quiz_group": 3,
+      "q": "Londen en Moskou liggen ongeveer op dezelfde breedtegraad. Toch heeft Londen veel zachtere winters. Wat is hiervan de belangrijkste oorzaak?",
+      "a": [
+        "Londen ligt dichter bij de evenaar",
+        "De warme Golfstroom en de nabijheid van de zee",
+        "Londen heeft meer industrie",
+        "Er zijn meer bergen rond Moskou"
+      ],
+      "c": 1,
+      "e": "De warme Golfstroom brengt warm water naar West-Europa. Bovendien warmt de zee in de zomer langzamer op en koelt in de winter langzamer af, wat zorgt voor een gematigder klimaat.",
+      "image": "assets/images/aardrijkskunde/kust-zee.jpg"
+    },
+    {
+      "id": "h2-010",
+      "quiz_group": 3,
+      "q": "In een kustplaats waait overdag vaak wind vanaf zee naar land. Hoe noemen we deze wind?",
+      "a": [
+        "Aflandige wind",
+        "Aanlandige wind",
+        "Passaatwind",
+        "Westenwind"
+      ],
+      "c": 1,
+      "e": "Aanlandige wind waait vanaf zee naar het land. Dit gebeurt overdag omdat het land sneller opwarmt dan de zee, waardoor boven land lagedruk ontstaat."
+    },
+    {
+      "id": "h2-011",
+      "quiz_group": 3,
+      "q": "Wind ontstaat door drukverschillen in de atmosfeer. Vanuit welk gebied stroomt lucht altijd weg?",
+      "a": [
+        "Vanuit een lagedrukgebied",
+        "Vanuit een hogedrukgebied",
+        "Vanuit het zuiden",
+        "Vanuit de bergen"
+      ],
+      "c": 1,
+      "e": "In een hogedrukgebied is de luchtdruk hoog doordat er veel luchtdeeltjes dicht op elkaar zitten. Deze lucht stroomt naar lagedrukgebieden waar minder luchtdeeltjes zijn."
+    },
+    {
+      "id": "h2-012",
+      "quiz_group": 3,
+      "q": "Het is een warme zomerdag aan de Nederlandse kust. Waarom voelt het aan zee vaak koeler dan een paar kilometer landinwaarts?",
+      "a": [
+        "De zee reflecteert de zonnestralen",
+        "De aanlandige wind brengt koelere lucht van zee",
+        "Er zijn meer wolken boven zee",
+        "Zand warmt sneller op dan water"
+      ],
+      "c": 1,
+      "e": "Water warmt langzamer op dan land. Overdag is de zee dus koeler. De aanlandige wind brengt deze koelere zeelucht naar de kust, waardoor het daar verkoelend aanvoelt.",
+      "image": "assets/images/aardrijkskunde/kust-zee.jpg"
+    },
+    {
+      "id": "h2-013",
+      "quiz_group": 4,
+      "q": "Wolken ontstaan wanneer waterdamp in de lucht verandert in kleine waterdruppeltjes. Hoe heet dit proces?",
+      "a": [
+        "Verdamping",
+        "Condensatie",
+        "Precipitatie",
+        "Evaporatie"
+      ],
+      "c": 1,
+      "e": "Condensatie is het proces waarbij waterdamp (gas) overgaat in vloeibare waterdruppeltjes. Dit gebeurt wanneer warme, vochtige lucht afkoelt."
+    },
+    {
+      "id": "h2-014",
+      "quiz_group": 4,
+      "q": "Een vliegtuig vliegt over een bergketen. Aan de ene kant van de bergen regent het veel, aan de andere kant is het droog. Welk type neerslag veroorzaakt dit?",
+      "a": [
+        "Frontale neerslag",
+        "Stijgingsneerslag",
+        "Convectieneerslag",
+        "Moessonneerslag"
+      ],
+      "c": 1,
+      "e": "Stijgingsneerslag ontstaat wanneer lucht tegen een berg omhoog wordt gedwongen, afkoelt en condenseert. De andere kant van de berg (de schaduwzijde) blijft vaak droog."
+    },
+    {
+      "id": "h2-015",
+      "quiz_group": 4,
+      "q": "In Nederland krijgen we vaak neerslag doordat koude en warme lucht elkaar ontmoeten. Hoe heet dit type neerslag?",
+      "a": [
+        "Stijgingsneerslag",
+        "Frontale neerslag",
+        "Tropische neerslag",
+        "Orografische neerslag"
+      ],
+      "c": 1,
+      "e": "Frontale neerslag ontstaat waar een front van koude en warme lucht elkaar ontmoeten. De warmere lucht wordt omhoog gedrukt, koelt af en vormt wolken en neerslag."
+    },
+    {
+      "id": "h2-016",
+      "quiz_group": 4,
+      "q": "De Sahara is een van de droogste gebieden op aarde. Wat is de belangrijkste reden dat er zo weinig neerslag valt?",
+      "a": [
+        "Er zijn geen bergen",
+        "Het ligt te ver van de zee",
+        "Er heerst permanent hoge luchtdruk met dalende lucht",
+        "De wind waait altijd van het land"
+      ],
+      "c": 2,
+      "e": "In subtropische gebieden rond 30° breedte daalt lucht. Dalende lucht warmt op en kan daardoor veel vocht vasthouden, waardoor er geen wolken en neerslag ontstaan.",
+      "image": "assets/images/aardrijkskunde/woestijn.jpg"
+    },
+    {
+      "id": "h2-017",
+      "quiz_group": 4,
+      "q": "Je staat in een tropisch regenwoud bij de evenaar. Elke middag komt er een flinke regenbui. Hoe ontstaat deze dagelijkse regen?",
+      "a": [
+        "Door koude zeestromingen",
+        "Door bergen die de lucht omhoog dwingen",
+        "Door sterke opwarming waardoor lucht stijgt en condenseert",
+        "Door fronten van koude en warme lucht"
+      ],
+      "c": 2,
+      "e": "Bij de evenaar warmt de grond sterk op. De warme, vochtige lucht stijgt snel, koelt af en vormt hoge stapelwolken die dagelijks zware buien geven. Dit heet convectieneerslag.",
+      "image": "assets/images/aardrijkskunde/tropisch-regenwoud.jpg"
+    },
+    {
+      "id": "h2-018",
+      "quiz_group": 5,
+      "q": "De Duitse wetenschapper Köppen maakte een indeling van klimaten. Met welke letter duiden we het tropische klimaat aan?",
+      "a": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "c": 3,
+      "e": "Köppen gebruikte letters: A = tropisch, B = droog, C = gematigd, D = koud (continentaal), E = poolklimaat. Het A-klimaat heeft het hele jaar hoge temperaturen."
+    },
+    {
+      "id": "h2-019",
+      "quiz_group": 5,
+      "q": "Een klimaat met de letter B in het Köppen-systeem is kenmerkend voor gebieden zoals de Sahara. Wat voor type klimaat is dit?",
+      "a": [
+        "Tropisch klimaat",
+        "Gematigd klimaat",
+        "Droog klimaat (woestijn/steppe)",
+        "Poolklimaat"
+      ],
+      "c": 2,
+      "e": "B-klimaten zijn droge klimaten, zoals woestijnen (BWh) en steppen (BSh). Er valt weinig neerslag en de verdamping is groter dan de neerslag."
+    },
+    {
+      "id": "h2-020",
+      "quiz_group": 5,
+      "q": "Nederland heeft een Cfb-klimaat volgens Köppen. Wat betekent de 'f' in deze code?",
+      "a": [
+        "Koude winters",
+        "Droge zomers",
+        "Neerslag in alle seizoenen",
+        "Warme zomers"
+      ],
+      "c": 2,
+      "e": "De 'f' staat voor 'feucht' (Duits voor vochtig) en betekent dat er het hele jaar door neerslag valt, zonder duidelijk droog seizoen."
+    },
+    {
+      "id": "h2-021",
+      "quiz_group": 5,
+      "q": "Het Middellandse Zeegebied heeft droge, warme zomers en milde, natte winters. Welke klimaatcode past hierbij?",
+      "a": [
+        "Af",
+        "Cs",
+        "Df",
+        "ET"
+      ],
+      "c": 1,
+      "e": "Cs staat voor gematigd klimaat (C) met droge zomers (s). Dit mediterrane klimaat is typisch voor landen rond de Middellandse Zee."
+    },
+    {
+      "id": "h2-022",
+      "quiz_group": 5,
+      "q": "Een bergbeklimmer op de Kilimanjaro in Tanzania ervaart sneeuw op de top, hoewel de berg bij de evenaar ligt. Hoe kan dit?",
+      "a": [
+        "De zon schijnt daar nooit",
+        "Per 1000 meter hoogte daalt de temperatuur met 6°C",
+        "Er zijn koude zeestromingen in de buurt",
+        "De wind komt van de Noordpool"
+      ],
+      "c": 1,
+      "e": "De Kilimanjaro is bijna 6000 meter hoog. Ondanks de tropische ligging is het op de top door de hoogte zo koud dat er permanent sneeuw en ijs ligt."
+    },
+    {
+      "id": "h2-023",
+      "quiz_group": 7,
+      "q": "In een klimaatgrafiek zie je blauwe balken en een rode lijn. Wat geven deze weer?",
+      "a": [
+        "Balken = temperatuur, lijn = neerslag",
+        "Balken = neerslag, lijn = temperatuur",
+        "Balken = luchtdruk, lijn = wind",
+        "Balken = zonuren, lijn = bewolking"
+      ],
+      "c": 1,
+      "e": "In een klimaatgrafiek geven de blauwe balken de maandelijkse neerslag (in mm) weer en de rode lijn de gemiddelde temperatuur (in °C)."
+    },
+    {
+      "id": "h2-024",
+      "quiz_group": 7,
+      "q": "Je bekijkt een klimaatgrafiek van een plaats op het zuidelijk halfrond. In welke maanden verwacht je de hoogste temperaturen?",
+      "a": [
+        "Juni, juli, augustus",
+        "December, januari, februari",
+        "Maart, april, mei",
+        "September, oktober, november"
+      ],
+      "c": 1,
+      "e": "Op het zuidelijk halfrond zijn de seizoenen omgekeerd. December, januari en februari zijn daar de zomermaanden met de hoogste temperaturen."
+    },
+    {
+      "id": "h2-025",
+      "quiz_group": 7,
+      "q": "De gemiddelde jaartemperatuur van Nederland is ongeveer 10°C. Hoeveel graden Fahrenheit is dat ongeveer?",
+      "a": [
+        "32°F",
+        "50°F",
+        "68°F",
+        "100°F"
+      ],
+      "c": 1,
+      "e": "De formule is: °F = (°C × 1,8) + 32. Dus 10°C = (10 × 1,8) + 32 = 18 + 32 = 50°F."
+    },
+    {
+      "id": "h2-026",
+      "quiz_group": 7,
+      "q": "Een klimaatgrafiek toont een plaats waar de temperatuur het hele jaar tussen 25°C en 30°C blijft en elke maand meer dan 100mm neerslag valt. Welk klimaat is dit waarschijnlijk?",
+      "a": [
+        "Gematigd zeeklimaat (Cfb)",
+        "Tropisch regenwoudklimaat (Af)",
+        "Woestijnklimaat (BWh)",
+        "Middellands zeeklimaat (Cs)"
+      ],
+      "c": 1,
+      "e": "Constante hoge temperaturen en veel neerslag het hele jaar door zijn typisch voor het tropisch regenwoudklimaat (Af) bij de evenaar."
+    },
+    {
+      "id": "h2-027",
+      "quiz_group": 8,
+      "q": "Op een kaart staat 'schaal 1:50.000'. Dit betekent dat 1 centimeter op de kaart gelijk is aan hoeveel meter in werkelijkheid?",
+      "a": [
+        "50 meter",
+        "500 meter",
+        "5000 meter",
+        "50.000 meter"
+      ],
+      "c": 1,
+      "e": "Bij schaal 1:50.000 is 1 cm op de kaart = 50.000 cm in werkelijkheid = 500 meter."
+    },
+    {
+      "id": "h2-028",
+      "quiz_group": 8,
+      "q": "Je wilt twee kaarten vergelijken. Kaart A heeft schaal 1:25.000 en kaart B heeft schaal 1:100.000. Welke kaart toont meer detail?",
+      "a": [
+        "Kaart B",
+        "Kaart A",
+        "Beide evenveel",
+        "Hangt af van het onderwerp"
+      ],
+      "c": 1,
+      "e": "Kaart A (1:25.000) is een grotere schaal. Hoe kleiner het getal achter de 1:, hoe meer details je ziet omdat een groter gebied verkleind is tot dezelfde kaart."
+    },
+    {
+      "id": "h2-029",
+      "quiz_group": 8,
+      "q": "Op een kaart staat geen noordpijl. In welke richting wijst de bovenkant van de kaart standaard?",
+      "a": [
+        "Naar het oosten",
+        "Naar het zuiden",
+        "Naar het noorden",
+        "Naar het westen"
+      ],
+      "c": 2,
+      "e": "Volgens afspraak wijst de bovenkant van een kaart naar het noorden, tenzij anders aangegeven met een noordpijl."
+    },
+    {
+      "id": "h2-030",
+      "quiz_group": 8,
+      "q": "Een thematische kaart toont alleen informatie over één onderwerp, zoals bevolkingsdichtheid of klimaat. Wat is het verschil met een topografische kaart?",
+      "a": [
+        "Topografische kaarten zijn altijd groter",
+        "Topografische kaarten tonen het landschap met hoogte, wegen en plaatsen",
+        "Thematische kaarten hebben geen schaal",
+        "Er is geen verschil"
+      ],
+      "c": 1,
+      "e": "Een topografische kaart geeft een algemeen beeld van het landschap (hoogte, water, wegen, bebouwing). Een thematische kaart is gespecialiseerd in één onderwerp."
+    },
+    {
+      "id": "h2-031",
+      "quiz_group": 2,
+      "q": "Verhaal: Lisa woont in Finland. In december merkt ze dat de zon helemaal niet opkomt en het 24 uur donker blijft. Hoe heet dit verschijnsel en waarom gebeurt dit?",
+      "a": [
+        "Middernachtzon, door de schuine aardas staat de zon nooit onder",
+        "Poolnacht, door de schuine aardas bereiken de zonnestralen het poolgebied niet",
+        "Zonsverduistering, de maan staat voor de zon",
+        "Winterdepressie, er zijn veel wolken"
+      ],
+      "c": 1,
+      "e": "Door de schuine stand van de aardas is het noordpoolgebied in de winter van de zon afgekeerd. Boven de poolcirkel komt de zon dan niet op: de poolnacht."
+    },
+    {
+      "id": "h2-032",
+      "quiz_group": 3,
+      "q": "Verhaal: Ahmed woont in Marokko aan de voet van het Atlasgebergte. Aan zijn kant van de bergen valt veel regen, maar als hij over de bergen rijdt, ziet hij woestijn. Welk geografisch verschijnsel verklaart dit?",
+      "a": [
+        "De Golfstroom",
+        "Het regenschaduw-effect",
+        "De passaatwinden",
+        "De moesson"
+      ],
+      "c": 1,
+      "e": "Dit is het regenschaduw-effect. Vochtige lucht stijgt tegen de berg, koelt af en regent uit. Aan de andere kant daalt droge lucht, waardoor daar weinig neerslag valt."
+    },
+    {
+      "id": "h2-033",
+      "quiz_group": 4,
+      "q": "Verhaal: In Mumbai (India) valt van juni tot september extreem veel regen, maar van december tot maart is het kurkdroog. Hoe heet dit neerslagsysteem?",
+      "a": [
+        "Passaatwind",
+        "Moesson",
+        "Westenwind",
+        "Orkaan"
+      ],
+      "c": 1,
+      "e": "De moesson is een seizoensgebonden windsysteem. In de zomer waait vochtige wind vanaf de oceaan en brengt zware regens. In de winter waait droge wind vanaf het land."
+    },
+    {
+      "id": "h2-034",
+      "quiz_group": 5,
+      "q": "Verhaal: Een reiziger vertrekt uit Nederland (Cfb) en reist naar Spanje (Cs). Wat zal het grootste verschil zijn dat hij merkt in het klimaat?",
+      "a": [
+        "Spanje heeft koudere winters",
+        "Spanje heeft droge, hete zomers",
+        "Nederland heeft meer zon",
+        "Er is geen noemenswaardig verschil"
+      ],
+      "c": 1,
+      "e": "Het belangrijkste verschil is dat Spanje (Cs = mediterraan klimaat) droge, hete zomers heeft, terwijl Nederland (Cfb) het hele jaar neerslag kent."
+    },
+    {
+      "id": "h2-035",
+      "quiz_group": 8,
+      "q": "Verhaal: Een cartograaf maakt een kaart van Vlieland met schaal 1:25.000. Ze wil er ook eentje maken met schaal 1:100.000. Wat verandert er?",
+      "a": [
+        "Het eiland wordt 4x zo groot op de kaart",
+        "Het eiland wordt 4x zo klein op de kaart",
+        "De kleuren veranderen",
+        "Er komt meer detail"
+      ],
+      "c": 1,
+      "e": "Bij 1:100.000 is alles 4x zo klein als bij 1:25.000 (100.000 / 25.000 = 4). Een kleinere schaal betekent minder detail maar meer gebied op dezelfde kaart."
+    },
+    {
+      "id": "h2-036",
+      "quiz_group": 2,
+      "q": "Inzichtvraag: Waarom hebben landen op dezelfde breedtegraad niet automatisch hetzelfde klimaat?",
+      "a": [
+        "Omdat de breedtegraad niet klopt",
+        "Door verschillen in hoogte, afstand tot zee, zeestromingen en wind",
+        "Omdat klimaat niet bestaat",
+        "Door verschillen in taal en cultuur"
+      ],
+      "c": 1,
+      "e": "Naast breedteligging bepalen ook hoogte, nabijheid van de zee, warme/koude zeestromingen en overheersende windrichting het klimaat."
+    },
+    {
+      "id": "h2-037",
+      "quiz_group": 3,
+      "q": "Inzichtvraag: Waarom is de Golfstroom zo belangrijk voor het klimaat van West-Europa?",
+      "a": [
+        "Hij brengt koud water dat de zomers koeler maakt",
+        "Hij brengt warm water dat de winters zachter maakt",
+        "Hij veroorzaakt orkanen",
+        "Hij zorgt voor meer neerslag in de zomer"
+      ],
+      "c": 1,
+      "e": "De Golfstroom transporteert warm water van de Golf van Mexico naar West-Europa. Dit zorgt ervoor dat West-Europa veel zachtere winters heeft dan gebieden op dezelfde breedtegraad elders."
+    },
+    {
+      "id": "h2-038",
+      "quiz_group": 4,
+      "q": "Inzichtvraag: Waarom valt er bij de evenaar veel neerslag, maar rond 30° breedte weinig?",
+      "a": [
+        "Bij de evenaar stijgt warme lucht en condenseert; bij 30° daalt lucht en houdt vocht vast",
+        "Bij 30° breedte zijn er geen oceanen",
+        "De zon schijnt niet bij 30° breedte",
+        "Bij de evenaar zijn meer rivieren"
+      ],
+      "c": 0,
+      "e": "Bij de evenaar stijgt warme lucht, koelt af en vormt neerslag. Deze lucht verplaatst zich op grote hoogte naar 30° breedte waar het daalt. Dalende lucht warmt op en houdt vocht vast, waardoor woestijnen ontstaan."
+    },
+    {
+      "id": "h2-039",
+      "quiz_group": 5,
+      "q": "Inzichtvraag: Waarom is het Köppen-systeem nuttig voor geografen en reizigers?",
+      "a": [
+        "Het voorspelt exact het weer van morgen",
+        "Het geeft een snelle indicatie van temperatuur en neerslag in een gebied",
+        "Het toont de politieke grenzen",
+        "Het meet de luchtkwaliteit"
+      ],
+      "c": 1,
+      "e": "Het Köppen-systeem deelt de wereld in op basis van temperatuur en neerslag. Met één code (zoals Cfb of BWh) weet je direct wat voor soort klimaat je kunt verwachten."
+    },
+    {
+      "id": "h2-040",
+      "quiz_group": 8,
+      "q": "Inzichtvraag: Waarom is de legenda het belangrijkste onderdeel van een thematische kaart?",
+      "a": [
+        "Zonder legenda weet je niet wat de kleuren en symbolen betekenen",
+        "De legenda bepaalt de schaal",
+        "De legenda toont de windrichting",
+        "De legenda is alleen decoratie"
+      ],
+      "c": 0,
+      "e": "Een thematische kaart gebruikt kleuren en symbolen om informatie te tonen. Zonder de legenda kun je niet aflezen wat deze kleuren en symbolen betekenen."
+    },
+    {
+      "id": "h2-mp-001",
+      "quiz_group": 2,
+      "type": "multipart",
+      "intro": "Bekijk de volgende situatie: Het is 21 december. De aarde staat in haar baan om de zon op een punt waar het noordelijk halfrond van de zon is afgekeerd.",
+      "image": "assets/images/aardrijkskunde/bergen-sneeuw.jpg",
+      "parts": [
+        {
+          "id": "h2-mp-001a",
+          "q": "Welk seizoen is het nu in Nederland?",
+          "a": [
+            "Lente",
+            "Zomer",
+            "Herfst",
+            "Winter"
+          ],
+          "c": 3,
+          "e": "Op 21 december begint de astronomische winter op het noordelijk halfrond."
+        },
+        {
+          "id": "h2-mp-001b",
+          "q": "Welk seizoen is het nu in Australië?",
+          "a": [
+            "Lente",
+            "Zomer",
+            "Herfst",
+            "Winter"
+          ],
+          "c": 1,
+          "e": "Op het zuidelijk halfrond zijn de seizoenen omgekeerd: als het bij ons winter is, is het daar zomer."
+        },
+        {
+          "id": "h2-mp-001c",
+          "q": "Waar staat de zon op deze dag loodrecht boven?",
+          "a": [
+            "De evenaar",
+            "De Kreeftskeerkring",
+            "De Steenbokskeerkring",
+            "De Noordpool"
+          ],
+          "c": 2,
+          "e": "Op 21 december staat de zon loodrecht boven de Steenbokskeerkring (23,5° ZB)."
+        }
+      ]
+    },
+    {
+      "id": "h2-mp-002",
+      "quiz_group": 3,
+      "type": "multipart",
+      "intro": "Je maakt een reis van de Nederlandse kust naar de top van de Mont Blanc (4.808 meter). In Nederland is het 24°C.",
+      "image": "assets/images/aardrijkskunde/bergen-sneeuw.jpg",
+      "parts": [
+        {
+          "id": "h2-mp-002a",
+          "q": "Hoeveel graden kouder is het ongeveer op de top van de Mont Blanc?",
+          "a": [
+            "Ongeveer 12°C kouder",
+            "Ongeveer 24°C kouder",
+            "Ongeveer 29°C kouder",
+            "Ongeveer 48°C kouder"
+          ],
+          "c": 2,
+          "e": "Per 1000 meter daalt de temperatuur 6°C. Bij 4808 meter: 4,8 × 6 ≈ 29°C kouder."
+        },
+        {
+          "id": "h2-mp-002b",
+          "q": "Wat is dan ongeveer de temperatuur op de top?",
+          "a": [
+            "Ongeveer 12°C",
+            "Ongeveer 0°C",
+            "Ongeveer -5°C",
+            "Ongeveer -10°C"
+          ],
+          "c": 2,
+          "e": "24°C - 29°C = -5°C op de top."
+        },
+        {
+          "id": "h2-mp-002c",
+          "q": "Waarom daalt de temperatuur met de hoogte?",
+          "a": [
+            "De luchtdruk is lager, waardoor de lucht uitzet en afkoelt",
+            "De zon schijnt minder op grote hoogte",
+            "Er waait meer wind op bergen",
+            "De aarde straalt minder warmte uit"
+          ],
+          "c": 0,
+          "e": "Op grote hoogte is de luchtdruk lager. Lucht zet uit bij lagere druk en koelt daarbij af."
+        }
+      ]
+    },
+    {
+      "id": "h2-mp-003",
+      "quiz_group": 4,
+      "type": "multipart",
+      "intro": "Een vochtige luchtmassa komt vanaf de Atlantische Oceaan aanwaaien en stuit op de Pyreneeën (bergketen tussen Frankrijk en Spanje).",
+      "parts": [
+        {
+          "id": "h2-mp-003a",
+          "q": "Wat gebeurt er met de lucht als die tegen de berg opstijgt?",
+          "a": [
+            "De lucht warmt op",
+            "De lucht koelt af",
+            "De lucht blijft gelijk",
+            "De lucht verdwijnt"
+          ],
+          "c": 1,
+          "e": "Stijgende lucht zet uit door de lagere luchtdruk en koelt daardoor af."
+        },
+        {
+          "id": "h2-mp-003b",
+          "q": "Waarom regent het aan de Franse kant (loefzijde) van de Pyreneeën?",
+          "a": [
+            "Omdat het er altijd bewolkt is",
+            "Omdat de afkoelende lucht zijn vocht niet meer kan vasthouden",
+            "Omdat er veel rivieren zijn",
+            "Omdat de zee dichtbij is"
+          ],
+          "c": 1,
+          "e": "Koude lucht kan minder vocht vasthouden. Het vocht condenseert en valt als neerslag."
+        },
+        {
+          "id": "h2-mp-003c",
+          "q": "Waarom is het aan de Spaanse kant (lijzijde) veel droger?",
+          "a": [
+            "De zon schijnt er meer",
+            "De lucht daalt, warmt op en houdt vocht vast",
+            "Er zijn geen wolken",
+            "De wind waait er niet"
+          ],
+          "c": 1,
+          "e": "Aan de andere kant van de berg daalt de lucht, warmt op en kan weer meer vocht vasthouden. Dit heet het regenschaduw-effect."
+        }
+      ]
+    },
+    {
+      "id": "h2-mp-004",
+      "quiz_group": 5,
+      "type": "multipart",
+      "intro": "Je bent een reisagent en moet klanten adviseren over het klimaat van verschillende bestemmingen. Je hebt de Köppen-klimaatcodes ter beschikking.",
+      "parts": [
+        {
+          "id": "h2-mp-004a",
+          "q": "Een klant wil een strandvakantie met gegarandeerd droog weer in juli. Welk klimaattype raad je aan?",
+          "a": [
+            "Af (tropisch regenwoud)",
+            "Cfb (gematigd zeeklimaat)",
+            "Cs (mediterraan klimaat)",
+            "Df (koud klimaat)"
+          ],
+          "c": 2,
+          "e": "Cs-klimaat (mediterraan) heeft droge zomers, ideaal voor een zomerse strandvakantie."
+        },
+        {
+          "id": "h2-mp-004b",
+          "q": "Een andere klant wil naar de tropen maar houdt niet van veel regen. Welk klimaat is NIET geschikt?",
+          "a": [
+            "BWh (hete woestijn)",
+            "BSh (hete steppe)",
+            "Af (tropisch regenwoud)",
+            "Aw (tropische savanne)"
+          ],
+          "c": 2,
+          "e": "Af (tropisch regenwoud) heeft het hele jaar door veel neerslag - niet geschikt voor iemand die droog weer wil."
+        },
+        {
+          "id": "h2-mp-004c",
+          "q": "Wat betekent de 'h' in BWh?",
+          "a": [
+            "Hoge luchtdruk",
+            "Heet (hot)",
+            "Hoge neerslag",
+            "Heuvelachtig"
+          ],
+          "c": 1,
+          "e": "De 'h' staat voor 'hot' (heet). BWh is een hete woestijn, in tegenstelling tot BWk (koude woestijn)."
+        }
+      ]
+    },
+    {
+      "id": "h2-mp-005",
+      "quiz_group": 7,
+      "type": "multipart",
+      "intro": "Je bekijkt een klimaatgrafiek van Sint-Petersburg (Rusland). De temperatuur varieert van -8°C in januari tot +19°C in juli. De neerslag is vrij gelijkmatig verdeeld over het jaar (40-70 mm per maand).",
+      "parts": [
+        {
+          "id": "h2-mp-005a",
+          "q": "Hoeveel bedraagt de jaarlijkse temperatuuramplitude (verschil tussen warmste en koudste maand)?",
+          "a": [
+            "11°C",
+            "19°C",
+            "27°C",
+            "8°C"
+          ],
+          "c": 2,
+          "e": "Amplitude = 19°C - (-8°C) = 19 + 8 = 27°C."
+        },
+        {
+          "id": "h2-mp-005b",
+          "q": "Welk type klimaat heeft Sint-Petersburg volgens Köppen?",
+          "a": [
+            "Cs (mediterraan)",
+            "Cfb (gematigd zeeklimaat)",
+            "Dfb (koud klimaat met neerslag hele jaar)",
+            "BWh (hete woestijn)"
+          ],
+          "c": 2,
+          "e": "D-klimaat (koud) omdat de koudste maand onder -3°C is. De 'f' betekent neerslag het hele jaar, 'b' betekent warme zomer."
+        },
+        {
+          "id": "h2-mp-005c",
+          "q": "Waarom heeft Sint-Petersburg zo'n groot temperatuurverschil tussen zomer en winter?",
+          "a": [
+            "Het ligt aan zee",
+            "Het ligt ver van de oceaan (continentaal)",
+            "Er zijn veel bergen",
+            "De Golfstroom bereikt de stad niet"
+          ],
+          "c": 1,
+          "e": "Sint-Petersburg ligt ver van de matigende invloed van de Atlantische Oceaan. Het continentale klimaat zorgt voor koude winters en warme zomers."
+        }
+      ]
+    },
+    {
+      "id": "h2-mp-006",
+      "quiz_group": 8,
+      "type": "multipart",
+      "intro": "Je hebt twee kaarten van Amsterdam. Kaart A heeft schaal 1:10.000, kaart B heeft schaal 1:50.000. Op kaart A meet je dat het Vondelpark 3 cm lang is.",
+      "parts": [
+        {
+          "id": "h2-mp-006a",
+          "q": "Hoe lang is het Vondelpark in werkelijkheid?",
+          "a": [
+            "30 meter",
+            "300 meter",
+            "3000 meter",
+            "150 meter"
+          ],
+          "c": 1,
+          "e": "Schaal 1:10.000 betekent: 1 cm = 10.000 cm = 100 m. Dus 3 cm = 300 meter."
+        },
+        {
+          "id": "h2-mp-006b",
+          "q": "Hoe lang is het Vondelpark op kaart B (schaal 1:50.000)?",
+          "a": [
+            "0,6 cm",
+            "6 cm",
+            "15 cm",
+            "1,5 cm"
+          ],
+          "c": 0,
+          "e": "Bij 1:50.000 is 1 cm = 500 m. Het park is 300 m, dus 300/500 = 0,6 cm op de kaart."
+        },
+        {
+          "id": "h2-mp-006c",
+          "q": "Welke kaart is geschikter om de weg te vinden binnen het Vondelpark?",
+          "a": [
+            "Kaart A (1:10.000)",
+            "Kaart B (1:50.000)",
+            "Beide even geschikt",
+            "Geen van beide"
+          ],
+          "c": 0,
+          "e": "Kaart A heeft een grotere schaal en toont dus meer detail, wat handig is voor navigatie in een klein gebied."
+        }
+      ]
+    }
+  ]
+}
