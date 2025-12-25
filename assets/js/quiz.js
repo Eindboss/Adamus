@@ -47,6 +47,22 @@ import {
   createLineGraph,
   createGlobalGraph,
 } from "./graph.js";
+import {
+  initV2QuestionTypes,
+  renderFillBlank,
+  renderShortAnswer,
+  renderMatching,
+  renderNumeric,
+  renderDataTable,
+  renderMultipart,
+  checkFillBlank,
+  checkShortAnswer,
+  checkMatching,
+  checkNumeric,
+  checkDataTable,
+  checkMultipart,
+  checkOrderingV2,
+} from "./question-types-v2.js";
 
 // Constants
 const QUESTION_SECONDS = 90;
@@ -111,6 +127,9 @@ export async function initQuiz() {
   initTimer({
     onTimeUp: handleTimeUp,
   });
+
+  // Initialize v2 question types module
+  initV2QuestionTypes(state, showFeedback);
 
   // Setup event listeners
   setupEventListeners();
@@ -278,6 +297,13 @@ function normalizeQuestion(raw, preferMC = false) {
     "ordering", // Ordering/sequence questions
     "ratio_table", // Verhoudingstabel questions
     "info_card", // Info display (no answer required)
+    // ChatGPT v2 question types
+    "fill_blank", // Fill in the blank questions
+    "short_answer", // Open questions with keywords
+    "matching", // Match left/right items
+    "numeric", // Numeric answers with tolerance
+    "data_table", // Table calculations
+    "multipart", // Multi-part questions with sub-questions
   ];
   if (richTypes.includes(raw.type)) {
     return raw;
@@ -532,7 +558,8 @@ function renderQuestion() {
   // Reset timer - more time for multi-part questions
   const isMultiPart = q.type === "wiskunde_multi_part" || q.type === "table_parse" ||
                       q.type === "grouped_short_text" || q.type === "grouped_select" ||
-                      q.type === "ratio_table" || q.type === "ordering";
+                      q.type === "ratio_table" || q.type === "ordering" ||
+                      q.type === "multipart" || q.type === "matching" || q.type === "data_table";
   resetTimer(isMultiPart ? QUESTION_SECONDS_MULTIPART : QUESTION_SECONDS);
   if (state.timerEnabled) startTimer();
 
@@ -573,6 +600,25 @@ function renderQuestion() {
       break;
     case "info_card":
       renderInfoCard(container, q);
+      break;
+    // ChatGPT v2 question types
+    case "fill_blank":
+      renderFillBlank(container, q);
+      break;
+    case "short_answer":
+      renderShortAnswer(container, q);
+      break;
+    case "matching":
+      renderMatching(container, q);
+      break;
+    case "numeric":
+      renderNumeric(container, q);
+      break;
+    case "data_table":
+      renderDataTable(container, q);
+      break;
+    case "multipart":
+      renderMultipart(container, q);
       break;
     default:
       // Fallback for unknown types
@@ -1272,7 +1318,8 @@ function updateOrderingProgress() {
  */
 function checkOrdering(q) {
   const items = q.items || [];
-  const correctOrder = q.answer?.order || items.map((_, i) => i); // Default: original order is correct
+  // Support both v1 (answer.order) and v2 (correct_order) formats
+  const correctOrder = q.correct_order || q.answer?.order || items.map((_, i) => i);
   const list = $("orderingList");
 
   // Get current order from DOM (after any drag operations)
@@ -1308,9 +1355,9 @@ function checkOrdering(q) {
   });
 
   // Build correct order for feedback
-  const correctOrderText = correctOrder.map((idx) => `${correctOrder.indexOf(idx) + 1}. ${items[idx]}`).join("<br>");
+  const correctOrderText = correctOrder.map((origIdx, pos) => `${pos + 1}. ${items[origIdx]}`).join("<br>");
 
-  showFeedback(isCorrect, "", isCorrect ? "" : `Juiste volgorde:<br>${correctOrderText}`);
+  showFeedback(isCorrect, q.e || "", isCorrect ? "" : `Juiste volgorde:<br>${correctOrderText}`);
 }
 
 /* ===========================================
@@ -2121,6 +2168,25 @@ export function checkAnswer() {
       break;
     case "info_card":
       checkInfoCard(q);
+      break;
+    // ChatGPT v2 question types
+    case "fill_blank":
+      checkFillBlank(q);
+      break;
+    case "short_answer":
+      checkShortAnswer(q);
+      break;
+    case "matching":
+      checkMatching(q);
+      break;
+    case "numeric":
+      checkNumeric(q);
+      break;
+    case "data_table":
+      checkDataTable(q);
+      break;
+    case "multipart":
+      checkMultipart(q);
       break;
     default:
       checkOpenAnswer(q);

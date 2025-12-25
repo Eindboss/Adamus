@@ -1927,3 +1927,394 @@ textarea.open-input {
     font-size: 1.125rem;
   }
 }
+
+/* ===========================================
+   ChatGPT V2 Question Types
+   Fill Blank, Short Answer, Matching, Numeric, Data Table, Multipart
+   =========================================== */
+
+/* ===========================================
+   Fill Blank Questions
+   =========================================== */
+.question-instruction {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: var(--space-2);
+}
+
+.fill-blank-text {
+  font-size: 1.125rem;
+  line-height: 2;
+  color: var(--text);
+  padding: var(--space-4);
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.fill-blank-input {
+  display: inline-block;
+  width: 120px;
+  padding: var(--space-1) var(--space-2);
+  margin: 0 var(--space-1);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  vertical-align: middle;
+  transition: border-color 0.2s ease;
+}
+
+.fill-blank-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.fill-blank-input.input-correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+
+.fill-blank-input.input-wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+/* ===========================================
+   Short Answer Questions
+   =========================================== */
+.short-answer-wrap {
+  margin: var(--space-4) 0;
+}
+
+.short-answer-input {
+  width: 100%;
+  padding: var(--space-3);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.2s ease;
+}
+
+.short-answer-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.short-answer-input.input-correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+
+.short-answer-input.input-wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+.rubric-hint {
+  font-size: 0.875rem;
+  color: var(--muted);
+  background: var(--bg);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  margin-top: var(--space-2);
+}
+
+/* ===========================================
+   Matching Questions
+   =========================================== */
+.matching-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.matching-header {
+  font-weight: 600;
+  color: var(--muted);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-2);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.matching-left-item,
+.matching-right-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-2);
+}
+
+.matching-label {
+  font-weight: 600;
+  color: var(--primary);
+  min-width: 24px;
+}
+
+.matching-text {
+  flex: 1;
+  color: var(--text);
+}
+
+.matching-select {
+  width: 60px;
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.matching-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.matching-right-item.matching-correct {
+  background: var(--success-bg);
+  border-left: 3px solid var(--success);
+}
+
+.matching-right-item.matching-wrong {
+  background: var(--error-bg);
+  border-left: 3px solid var(--error);
+}
+
+.matching-progress {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: var(--space-2);
+}
+
+/* ===========================================
+   Numeric Questions
+   =========================================== */
+.numeric-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+
+.numeric-input {
+  width: 150px;
+  padding: var(--space-3);
+  font-size: 1.25rem;
+  font-family: inherit;
+  text-align: center;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease;
+}
+
+.numeric-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.numeric-input.input-correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+
+.numeric-input.input-wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+.numeric-unit {
+  font-size: 1.125rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.rounding-hint {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: var(--space-1);
+}
+
+/* ===========================================
+   Data Table Questions
+   =========================================== */
+.data-table-wrap {
+  overflow-x: auto;
+  margin: var(--space-4) 0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.data-table th {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  padding: var(--space-3);
+  text-align: center;
+}
+
+.data-table th:first-child {
+  border-top-left-radius: var(--radius-sm);
+}
+
+.data-table th:last-child {
+  border-top-right-radius: var(--radius-sm);
+}
+
+.data-cell {
+  padding: var(--space-2);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.data-cell-given {
+  background: var(--bg);
+  font-weight: 500;
+}
+
+.data-cell-input {
+  background: var(--card);
+}
+
+.data-input {
+  width: 80px;
+  padding: var(--space-2);
+  font-size: 0.9375rem;
+  text-align: center;
+  color: var(--text);
+  background: transparent;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease;
+}
+
+.data-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.data-input.input-correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+
+.data-input.input-wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+.data-hint {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--success);
+  margin-top: var(--space-1);
+}
+
+.data-progress {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: var(--space-2);
+}
+
+/* ===========================================
+   Multipart Questions
+   =========================================== */
+.multipart-intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  padding: var(--space-4);
+  background: linear-gradient(135deg, var(--primary-bg), var(--bg));
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary);
+  margin-bottom: var(--space-4);
+}
+
+.multipart-progress {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--muted);
+  background: var(--bg);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-3);
+}
+
+.multipart-progress #currentPart {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.multipart-content {
+  padding: var(--space-4);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.part-question {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: var(--space-3);
+}
+
+.part-option {
+  cursor: pointer;
+}
+
+#nextPartBtn {
+  margin-top: var(--space-3);
+}
+
+/* ===========================================
+   V2 Question Types - Responsive
+   =========================================== */
+@media (max-width: 640px) {
+  .matching-container {
+    grid-template-columns: 1fr;
+  }
+
+  .fill-blank-input {
+    width: 100px;
+  }
+
+  .numeric-input {
+    width: 120px;
+    font-size: 1rem;
+  }
+
+  .data-input {
+    width: 60px;
+    font-size: 0.875rem;
+  }
+
+  .multipart-intro {
+    padding: var(--space-3);
+    font-size: 0.9375rem;
+  }
+}
