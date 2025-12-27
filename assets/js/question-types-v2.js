@@ -148,10 +148,10 @@ export function checkFillBlank(q) {
     details: `${correctCount}/${blanks.length} correct`,
   });
 
-  const wrongBlanks = results.filter(r => !r.correct);
-  const correctAnswers = wrongBlanks.map(r => `${r.blankId}: ${r.expected}`).join(", ");
+  // Don't give away answers - just show count
+  const hint = allCorrect ? "" : `${correctCount} van ${blanks.length} goed ingevuld.`;
 
-  showFeedbackFn(allCorrect, q.e || "", allCorrect ? "" : correctAnswers);
+  showFeedbackFn(allCorrect, q.explanation || q.e || "", hint);
 }
 
 /* ===========================================
@@ -613,8 +613,8 @@ export function checkNumeric(q) {
     correct: isCorrect,
   });
 
-  const toleranceInfo = tolerance > 0 ? ` (±${tolerance})` : "";
-  showFeedbackFn(isCorrect, q.e || "", `${expectedValue} ${unit}${toleranceInfo}`);
+  // Don't give away the answer
+  showFeedbackFn(isCorrect, q.explanation || q.e || "", "");
 }
 
 /* ===========================================
@@ -1067,10 +1067,6 @@ export function checkOrderingV2(q) {
     correct: isCorrect,
   });
 
-  // Build correct order for feedback
-  const correctOrderText = correctOrder.map((origIdx, pos) =>
-    `${pos + 1}. ${items[origIdx]}`
-  ).join("<br>");
-
-  showFeedbackFn(isCorrect, q.e || "", isCorrect ? "" : `Juiste volgorde:<br>${correctOrderText}`);
+  // Don't give away the correct order
+  showFeedbackFn(isCorrect, q.explanation || q.e || "", "");
 }

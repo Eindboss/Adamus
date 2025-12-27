@@ -1420,10 +1420,8 @@ function checkOrdering(q) {
     correct: isCorrect,
   });
 
-  // Build correct order for feedback
-  const correctOrderText = correctOrderIndices.map((origIdx, pos) => `${pos + 1}. ${items[origIdx]}`).join("<br>");
-
-  showFeedback(isCorrect, q.explanation || q.e || "", isCorrect ? "" : `Juiste volgorde:<br>${correctOrderText}`);
+  // Don't give away the correct order
+  showFeedback(isCorrect, q.explanation || q.e || "", "");
 }
 
 /* ===========================================
