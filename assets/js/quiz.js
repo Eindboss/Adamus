@@ -309,8 +309,8 @@ function normalizeQuestion(raw, preferMC = false) {
     return raw;
   }
 
-  // Detect new wiskunde format (has render and parts)
-  if (raw.render && Array.isArray(raw.parts)) {
+  // Detect new wiskunde format (has render and/or parts)
+  if (Array.isArray(raw.parts)) {
     return {
       ...raw,
       type: "wiskunde_multi_part",
