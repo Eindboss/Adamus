@@ -46,8 +46,9 @@ async function init() {
     const data = await loadJSON("data/subjects.json");
     const subjects = data.subjects || data || [];
 
-    // Filter quizzes for this subject
+    // Filter quizzes for this subject (exclude hidden)
     const quizzes = subjects.filter((meta) => {
+      if (meta.hidden) return false;
       const subject = extractSubject(meta).toLowerCase();
       return subject === subjectKey || subject.startsWith(subjectKey);
     });

@@ -47,6 +47,7 @@ import {
   createLineGraph,
   createGlobalGraph,
 } from "./graph.js";
+import { loadQuestionImage, preloadQuestionImages } from "./wikimedia.js";
 import {
   initV2QuestionTypes,
   renderFillBlank,
@@ -347,6 +348,7 @@ function normalizeQuestion(raw, preferMC = false) {
       explanation: raw.explanation || raw.why || raw.e || "",
       graph: raw.graph || null,
       image: raw.image || null,
+      media: raw.media || null,
     };
   }
 
@@ -361,6 +363,7 @@ function normalizeQuestion(raw, preferMC = false) {
     explanation: raw.explanation || raw.e || "",
     graph: raw.graph || null,
     image: raw.image || null,
+    media: raw.media || null,
   };
 }
 
@@ -537,7 +540,7 @@ function selectQuestionsForSession(questions, perSession, subjectId) {
 /**
  * Render current question
  */
-function renderQuestion() {
+async function renderQuestion() {
   const q = state.questions[state.currentIndex];
   if (!q) {
     renderSummary();
@@ -554,6 +557,19 @@ function renderQuestion() {
   state.groupAnswers = {};
   state.partialScore = 0;
   state.maxPartialScore = 0;
+
+  // Load Wikimedia image if media spec is present and no image yet
+  if (q.media?.query && !q.image) {
+    try {
+      const imageUrl = await loadQuestionImage(q.media);
+      if (imageUrl) {
+        q.image = imageUrl;
+        q.imageAlt = q.media.alt || "Afbeelding bij vraag";
+      }
+    } catch (err) {
+      console.warn("Failed to load Wikimedia image:", err);
+    }
+  }
 
   // Reset timer - more time for multi-part questions
   const isMultiPart = q.type === "wiskunde_multi_part" || q.type === "table_parse" ||
@@ -648,14 +664,25 @@ function renderMC(container, q) {
     )
     .join("");
 
-  container.innerHTML = `
+  const contentHtml = `
     <div class="question-title">${q.q}</div>
-    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ""}
     <div class="options-list" role="radiogroup">
       ${optionsHtml}
     </div>
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  if (q.image) {
+    const altText = q.imageAlt || q.media?.alt || "Afbeelding bij vraag";
+    container.innerHTML = `
+      <div class="question-layout">
+        <div class="question-image"><img src="${q.image}" alt="${altText}"></div>
+        <div class="question-content">${contentHtml}</div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = contentHtml;
+  }
 
   // Add click handlers to options
   $$$(".option", container).forEach((el) => {
@@ -677,15 +704,26 @@ function renderMC(container, q) {
  * Render open question
  */
 function renderOpen(container, q) {
-  container.innerHTML = `
+  const contentHtml = `
     <div class="question-title">${q.q}</div>
     ${q.graph ? '<div id="graphContainer" class="graph-container"></div>' : ""}
-    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ""}
     <div class="open-input-wrap">
       <input type="text" id="openInput" class="open-input" placeholder="Typ je antwoord..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  if (q.image) {
+    const altText = q.imageAlt || q.media?.alt || "Afbeelding bij vraag";
+    container.innerHTML = `
+      <div class="question-layout">
+        <div class="question-image"><img src="${q.image}" alt="${altText}"></div>
+        <div class="question-content">${contentHtml}</div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = contentHtml;
+  }
 
   // Render graph if present
   if (q.graph) {
@@ -1215,7 +1253,7 @@ function updateSelectProgress() {
  */
 function renderOrdering(container, q) {
   const items = q.items || [];
-  const prompt = q.prompt_html || q.prompt || "Zet de items in de juiste volgorde.";
+  const prompt = q.instruction || q.prompt_html || q.prompt || "Zet de items in de juiste volgorde.";
 
   // Shuffle items for display (store original indices)
   const shuffledItems = items.map((item, idx) => ({ text: item, originalIdx: idx }));
@@ -1234,7 +1272,7 @@ function renderOrdering(container, q) {
     )
     .join("");
 
-  container.innerHTML = `
+  const contentHtml = `
     <div class="question-title">${prompt}</div>
     <div class="ordering-instructions">Sleep de items of vul nummers in (1 = eerste)</div>
     <div class="ordering-list" id="orderingList">
@@ -1242,6 +1280,18 @@ function renderOrdering(container, q) {
     </div>
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  if (q.image) {
+    const altText = q.imageAlt || q.media?.alt || "Afbeelding bij vraag";
+    container.innerHTML = `
+      <div class="question-layout">
+        <div class="question-image"><img src="${q.image}" alt="${altText}"></div>
+        <div class="question-content">${contentHtml}</div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = contentHtml;
+  }
 
   // Setup drag and drop
   setupOrderingDragDrop();
@@ -1318,8 +1368,24 @@ function updateOrderingProgress() {
  */
 function checkOrdering(q) {
   const items = q.items || [];
-  // Support both v1 (answer.order) and v2 (correct_order) formats
-  const correctOrder = q.correct_order || q.answer?.order || items.map((_, i) => i);
+
+  // Support both index-based (v1) and text-based (v2/ChatGPT) correct_order formats
+  let correctOrderIndices;
+
+  if (q.correct_order && typeof q.correct_order[0] === "string") {
+    // Text-based format: ["Eerste item", "Tweede item", ...]
+    // Convert to indices
+    correctOrderIndices = q.correct_order.map((text) => items.indexOf(text));
+  } else if (q.correct_order) {
+    // Index-based format: [0, 2, 1, 3]
+    correctOrderIndices = q.correct_order;
+  } else if (q.answer?.order) {
+    correctOrderIndices = q.answer.order;
+  } else {
+    // Default: items are already in correct order
+    correctOrderIndices = items.map((_, i) => i);
+  }
+
   const list = $("orderingList");
 
   // Get current order from DOM (after any drag operations)
@@ -1327,12 +1393,12 @@ function checkOrdering(q) {
   const userOrder = currentItems.map((item) => parseInt(item.dataset.original, 10));
 
   // Check if order matches
-  const isCorrect = userOrder.every((val, idx) => val === correctOrder[idx]);
+  const isCorrect = userOrder.every((val, idx) => val === correctOrderIndices[idx]);
 
   // Mark items as correct/wrong
   currentItems.forEach((item, idx) => {
     const userIdx = parseInt(item.dataset.original, 10);
-    const expectedIdx = correctOrder[idx];
+    const expectedIdx = correctOrderIndices[idx];
     if (userIdx === expectedIdx) {
       item.classList.add("ordering-correct");
     } else {
@@ -1349,15 +1415,15 @@ function checkOrdering(q) {
   if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
   state.history.add({
-    question: htmlToText(q.prompt_html || q.prompt),
+    question: htmlToText(q.instruction || q.prompt_html || q.prompt || "Ordering"),
     type: "ordering",
     correct: isCorrect,
   });
 
   // Build correct order for feedback
-  const correctOrderText = correctOrder.map((origIdx, pos) => `${pos + 1}. ${items[origIdx]}`).join("<br>");
+  const correctOrderText = correctOrderIndices.map((origIdx, pos) => `${pos + 1}. ${items[origIdx]}`).join("<br>");
 
-  showFeedback(isCorrect, q.e || "", isCorrect ? "" : `Juiste volgorde:<br>${correctOrderText}`);
+  showFeedback(isCorrect, q.explanation || q.e || "", isCorrect ? "" : `Juiste volgorde:<br>${correctOrderText}`);
 }
 
 /* ===========================================

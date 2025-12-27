@@ -47,12 +47,23 @@ export function renderFillBlank(container, q) {
     text = text.replace(placeholder, inputHtml);
   });
 
-  container.innerHTML = `
+  const contentHtml = `
     <div class="question-instruction">${instruction}</div>
     <div class="fill-blank-text">${text}</div>
-    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ""}
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  if (q.image) {
+    const altText = q.imageAlt || q.media?.alt || "Afbeelding bij vraag";
+    container.innerHTML = `
+      <div class="question-layout">
+        <div class="question-image"><img src="${q.image}" alt="${altText}"></div>
+        <div class="question-content">${contentHtml}</div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = contentHtml;
+  }
 
   // Setup input listeners
   const inputs = $$$(".fill-blank-input", container);
@@ -153,9 +164,8 @@ export function checkFillBlank(q) {
 export function renderShortAnswer(container, q) {
   const question = q.q || q.prompt || "";
 
-  container.innerHTML = `
+  const contentHtml = `
     <div class="question-title">${question}</div>
-    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ""}
     <div class="short-answer-wrap">
       <textarea id="shortAnswerInput"
         class="short-answer-input"
@@ -167,6 +177,18 @@ export function renderShortAnswer(container, q) {
     ${q.rubric ? `<div class="rubric-hint"><strong>Tip:</strong> ${q.rubric}</div>` : ""}
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  if (q.image) {
+    const altText = q.imageAlt || q.media?.alt || "Afbeelding bij vraag";
+    container.innerHTML = `
+      <div class="question-layout">
+        <div class="question-image"><img src="${q.image}" alt="${altText}"></div>
+        <div class="question-content">${contentHtml}</div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = contentHtml;
+  }
 
   const input = $("shortAnswerInput");
   if (input) {
@@ -233,7 +255,7 @@ export function checkShortAnswer(q) {
  * Render matching question (connect left items to right items)
  */
 export function renderMatching(container, q) {
-  const prompt = q.prompt || "Koppel de begrippen aan elkaar.";
+  const prompt = q.instruction || q.prompt || "Koppel de begrippen aan elkaar.";
   const leftItems = q.left || [];
   const rightItems = q.right || [];
 
@@ -258,7 +280,7 @@ export function renderMatching(container, q) {
     </div>
   `).join("");
 
-  container.innerHTML = `
+  const contentHtml = `
     <div class="question-title">${prompt}</div>
     <div class="matching-container">
       <div class="matching-left">
@@ -275,6 +297,18 @@ export function renderMatching(container, q) {
     </div>
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  if (q.image) {
+    const altText = q.imageAlt || q.media?.alt || "Afbeelding bij vraag";
+    container.innerHTML = `
+      <div class="question-layout">
+        <div class="question-image"><img src="${q.image}" alt="${altText}"></div>
+        <div class="question-content">${contentHtml}</div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = contentHtml;
+  }
 
   // Store shuffled order for checking
   container.dataset.shuffledOrder = JSON.stringify(shuffledRight.map(r => r.originalIdx));
@@ -301,11 +335,31 @@ function updateMatchingProgress() {
 
 /**
  * Check matching answer
+ * Supports both index-based pairs ({0: 0, 1: 1}) and text-based correct_pairs ({"Zeus": "hemel"})
  */
 export function checkMatching(q) {
-  const pairs = q.pairs || {};
+  const leftItems = q.left || [];
+  const rightItems = q.right || [];
+
+  // Support both pairs (index-based) and correct_pairs (text-based)
+  let correctPairsMap = {}; // leftIdx -> rightIdx
+
+  if (q.correct_pairs) {
+    // Text-based format: {"Zeus": "hemel, bliksem, oppergod"}
+    for (const [leftText, rightText] of Object.entries(q.correct_pairs)) {
+      const leftIdx = leftItems.findIndex(item => item === leftText);
+      const rightIdx = rightItems.findIndex(item => item === rightText);
+      if (leftIdx !== -1 && rightIdx !== -1) {
+        correctPairsMap[leftIdx] = rightIdx;
+      }
+    }
+  } else if (q.pairs) {
+    // Index-based format: {0: 0, 1: 1}
+    correctPairsMap = q.pairs;
+  }
+
   let correctCount = 0;
-  const totalPairs = Object.keys(pairs).length;
+  const totalPairs = leftItems.length;
 
   const container = $("quizArea");
   const shuffledOrder = JSON.parse(container.dataset.shuffledOrder || "[]");
@@ -313,13 +367,13 @@ export function checkMatching(q) {
   $$$(".matching-right-item").forEach((item, displayIdx) => {
     const select = $$(".matching-select", item);
     const originalRightIdx = shuffledOrder[displayIdx];
-    const userLeftIdx = select.value;
+    const userLeftIdx = parseInt(select.value);
 
     // Find which left index should match this right index
     let expectedLeftIdx = null;
-    for (const [leftIdx, rightIdx] of Object.entries(pairs)) {
+    for (const [leftIdx, rightIdx] of Object.entries(correctPairsMap)) {
       if (parseInt(rightIdx) === originalRightIdx) {
-        expectedLeftIdx = leftIdx;
+        expectedLeftIdx = parseInt(leftIdx);
         break;
       }
     }
@@ -345,13 +399,13 @@ export function checkMatching(q) {
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
 
   state.history.add({
-    question: htmlToText(q.prompt),
+    question: htmlToText(q.instruction || q.prompt || "Matching"),
     type: "matching",
     correct: allCorrect,
     details: `${correctCount}/${totalPairs} correct`,
   });
 
-  showFeedbackFn(allCorrect, q.e || "", allCorrect ? "" : `${correctCount}/${totalPairs} juist gekoppeld`);
+  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${totalPairs} juist gekoppeld`);
 }
 
 /* ===========================================
@@ -365,9 +419,8 @@ export function renderNumeric(container, q) {
   const question = q.q || q.prompt || "";
   const unit = q.unit || "";
 
-  container.innerHTML = `
+  const contentHtml = `
     <div class="question-title">${question}</div>
-    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ""}
     <div class="numeric-input-wrap">
       <input type="text"
         id="numericInput"
@@ -380,6 +433,18 @@ export function renderNumeric(container, q) {
     ${q.rounding ? `<div class="rounding-hint">Afronden: ${q.rounding}</div>` : ""}
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  if (q.image) {
+    const altText = q.imageAlt || q.media?.alt || "Afbeelding bij vraag";
+    container.innerHTML = `
+      <div class="question-layout">
+        <div class="question-image"><img src="${q.image}" alt="${altText}"></div>
+        <div class="question-content">${contentHtml}</div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = contentHtml;
+  }
 
   const input = $("numericInput");
   if (input) {
@@ -611,7 +676,7 @@ let multipartState = {
  * Render multipart question (multiple sub-questions)
  */
 export function renderMultipart(container, q) {
-  const intro = q.intro || "";
+  const intro = q.context || q.intro || q.instruction || "";
   const parts = q.parts || [];
 
   // Initialize multipart state
@@ -621,15 +686,26 @@ export function renderMultipart(container, q) {
     partResults: [],
   };
 
-  container.innerHTML = `
+  const contentHtml = `
     <div class="multipart-intro">${intro}</div>
-    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Afbeelding bij vraag"></div>` : ""}
     <div class="multipart-progress">
       Deelvraag <span id="currentPart">1</span> van <span>${parts.length}</span>
     </div>
     <div id="multipartContent" class="multipart-content"></div>
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
+
+  if (q.image) {
+    const altText = q.imageAlt || q.media?.alt || "Afbeelding bij vraag";
+    container.innerHTML = `
+      <div class="question-layout">
+        <div class="question-image"><img src="${q.image}" alt="${altText}"></div>
+        <div class="question-content">${contentHtml}</div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = contentHtml;
+  }
 
   // Render first part
   renderMultipartPart(0);
@@ -662,8 +738,10 @@ function renderMultipartPart(partIdx) {
         ${part.unit ? `<span class="numeric-unit">${part.unit}</span>` : ""}
       </div>
     `;
-  } else if (part.type === "mc" && part.a) {
-    const optionsHtml = part.a.map((answer, idx) => `
+  } else if (part.type === "mc" && (part.a || part.options)) {
+    // Support both part.a (v1) and part.options (ChatGPT format)
+    const options = part.a || part.options || [];
+    const optionsHtml = options.map((answer, idx) => `
       <div class="option part-option" data-idx="${idx}" tabindex="0" role="radio" aria-checked="false">
         <span class="option-marker">${String.fromCharCode(65 + idx)}</span>
         <span class="option-text">${answer}</span>

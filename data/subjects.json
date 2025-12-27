@@ -131,6 +131,17 @@
       "hideFlashcards": true,
       "week": "1e toetsweek",
       "hidden": true
+    },
+    {
+      "id": "geschiedenis-h2p2-h3",
+      "subject": "Geschiedenis",
+      "label": "Geschiedenis – Egypte & Grieken (H2§2 + H3)",
+      "title": "Geschiedenis – Het oude Egypte & De Grieken",
+      "file": "data/geschiedenis/h2p2-h3-quiz.json",
+      "schema": "toets",
+      "hideFlashcards": true,
+      "week": "2e toetsweek",
+      "questionsPerSession": 15
     }
   ]
 }
