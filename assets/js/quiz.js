@@ -3818,6 +3818,7 @@ function updateUI() {
   updateMeta();
   updateProgress();
   updateTimerVisibility();
+  updateControls();
 }
 
 function updateTimerVisibility() {
