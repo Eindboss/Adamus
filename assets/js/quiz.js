@@ -205,7 +205,8 @@ export async function initQuiz() {
  * Check if current subject supports exam mode
  */
 function supportsExamMode() {
-  return state.subjectId === "geschiedenis";
+  // Support exam mode for geschiedenis subjects
+  return state.subjectId?.startsWith("geschiedenis");
 }
 
 /**
