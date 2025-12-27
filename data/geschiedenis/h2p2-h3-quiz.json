@@ -24,7 +24,7 @@
       ],
       "explanation": "Narmer (~3100 v.C.) → piramides (~2600–2500 v.C.) → Olympische Spelen (776 v.C.) → Marathon (490 v.C.) → Alexander (334–330 v.C. veroveringen).",
       "media": {
-        "query": "Wikimedia: Narmer Palette + Great Pyramid of Giza + ancient Olympics Olympia",
+        "query": "Wikimedia: Narmer Palette",
         "kind": "image",
         "use": "stimulus",
         "alt": "Collage: Narmerpalet, piramide van Gizeh, Olympia",
@@ -37,7 +37,13 @@
       "quiz_group": 1,
       "difficulty": 2,
       "instruction": "Koppel elke Griekse god aan zijn/haar domein (precies).",
-      "left": ["Zeus", "Poseidon", "Athena", "Apollo", "Hera"],
+      "left": [
+        "Zeus",
+        "Poseidon",
+        "Athena",
+        "Apollo",
+        "Hera"
+      ],
       "right": [
         "hemel, bliksem, oppergod",
         "zee, aardbevingen",
@@ -69,10 +75,35 @@
       "instruction": "Vul de ontbrekende woorden in (spellingvarianten goed).",
       "text": "Rond 3100 v.C. werd Egypte verenigd door {{blank1}}. Hij werd de eerste {{blank2}}. Voor bestuur en administratie gebruikten Egyptenaren onder andere {{blank3}} op {{blank4}}.",
       "blanks": [
-        { "id": "blank1", "answers": ["Narmer", "narmer"] },
-        { "id": "blank2", "answers": ["farao", "Farao"] },
-        { "id": "blank3", "answers": ["hiërogliefen", "hierogliefen", "Hiërogliefen"] },
-        { "id": "blank4", "answers": ["papyrus", "Papyrus"] }
+        {
+          "id": "blank1",
+          "answers": [
+            "Narmer",
+            "narmer"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "farao",
+            "Farao"
+          ]
+        },
+        {
+          "id": "blank3",
+          "answers": [
+            "hiërogliefen",
+            "hierogliefen",
+            "Hiërogliefen"
+          ]
+        },
+        {
+          "id": "blank4",
+          "answers": [
+            "papyrus",
+            "Papyrus"
+          ]
+        }
       ],
       "explanation": "Schrift + administratie is essentieel voor een staat: belasting, voorraden, bevelen.",
       "media": {
@@ -111,7 +142,14 @@
       "difficulty": 4,
       "instruction": "Antwoord in 2 zinnen. Gebruik minstens 2 kernwoorden.",
       "prompt": "Leg uit waarom historici zeggen dat de Atheense democratie ‘beperkt’ was.",
-      "keywords": ["vrouwen", "slaven", "metoiken", "uitsluiting", "burgerrecht", "geen stemrecht"],
+      "keywords": [
+        "vrouwen",
+        "slaven",
+        "metoiken",
+        "uitsluiting",
+        "burgerrecht",
+        "geen stemrecht"
+      ],
       "min_keywords": 2,
       "rubric": "Noem minimaal twee uitgesloten groepen en verbind dat aan het begrip burgerrecht/stemrecht.",
       "example_answer": "De democratie was beperkt omdat alleen mannelijke burgers mochten stemmen. Vrouwen, slaven en metoiken waren uitgesloten van burgerrecht en stemrecht.",
@@ -123,7 +161,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-006",
       "quiz_group": 2,
@@ -151,7 +188,12 @@
       "quiz_group": 2,
       "difficulty": 3,
       "instruction": "Koppel begrip → rol/functie (precies).",
-      "left": ["orakel", "altaar", "offer", "tempel"],
+      "left": [
+        "orakel",
+        "altaar",
+        "offer",
+        "tempel"
+      ],
       "right": [
         "plek waar men goddelijke raad/antwoord verwacht",
         "plaats waar men aan de godheid schenkt/brandt/slacht",
@@ -180,19 +222,25 @@
       "difficulty": 5,
       "instruction": "Antwoord in 2 zinnen: oorzaak → gevolg.",
       "prompt": "Waarom konden mythen én beginnende wetenschap naast elkaar bestaan in Griekenland?",
-      "keywords": ["wereldbeeld", "verklaren", "observatie", "logica", "traditie", "vragen"],
+      "keywords": [
+        "wereldbeeld",
+        "verklaren",
+        "observatie",
+        "logica",
+        "traditie",
+        "vragen"
+      ],
       "min_keywords": 2,
       "rubric": "Laat zien dat oude religieuze verklaringen (traditie) bleven, terwijl sommige denkers ook met observatie/logica gingen verklaren.",
       "example_answer": "Mythen bleven belangrijk als traditioneel wereldbeeld en religie. Tegelijk gingen sommige denkers natuurverschijnselen verklaren met observatie en logica, zonder dat iedereen meteen het oude geloof losliet.",
       "media": {
-        "query": "Wikimedia: statue of Aristotle bust + Greek temple ruins",
+        "query": "Wikimedia: Aristotle bust",
         "kind": "image",
         "use": "context",
         "alt": "Buste van Aristoteles naast Griekse tempelruïnes",
         "credit_required": true
       }
     },
-
     {
       "id": "g-009",
       "type": "numeric",
@@ -236,7 +284,15 @@
           "id": "b",
           "type": "text",
           "prompt": "Noem één algemene methode die historici/taalkundigen hier gebruiken (1–5 woorden).",
-          "answer": { "value": "vergelijking", "accept": ["vergelijking", "vergelijken", "comparatie", "paralleltekst"] }
+          "answer": {
+            "value": "vergelijking",
+            "accept": [
+              "vergelijking",
+              "vergelijken",
+              "comparatie",
+              "paralleltekst"
+            ]
+          }
         }
       ],
       "explanation": "Gymnasium-skill: begrijpen hoe ‘ontcijferen’ werkt via parallelteksten.",
@@ -262,7 +318,7 @@
       "c": 1,
       "e": "Athene: politiek debat, handel/cultuur. Sparta: krijgersstaat met strenge opvoeding (agoge).",
       "media": {
-        "query": "Wikimedia: Sparta warriors statue + Athens Acropolis",
+        "query": "Wikimedia: Athens Acropolis Parthenon",
         "kind": "image",
         "use": "context",
         "alt": "Sparta (krijgers) en Athene (Akropolis) als contrast",
@@ -277,9 +333,28 @@
       "instruction": "Vul de sociale opbouw van Athene in (hoog → laag).",
       "text": "Volledige politieke rechten hadden de mannelijke {{blank1}}. Vrije vreemdelingen zonder burgerrecht heetten {{blank2}}. Helemaal onderaan stonden {{blank3}}.",
       "blanks": [
-        { "id": "blank1", "answers": ["burgers", "Burgers", "Atheense burgers"] },
-        { "id": "blank2", "answers": ["metoiken", "Metoiken"] },
-        { "id": "blank3", "answers": ["slaven", "Slaven"] }
+        {
+          "id": "blank1",
+          "answers": [
+            "burgers",
+            "Burgers",
+            "Atheense burgers"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "metoiken",
+            "Metoiken"
+          ]
+        },
+        {
+          "id": "blank3",
+          "answers": [
+            "slaven",
+            "Slaven"
+          ]
+        }
       ],
       "explanation": "Kern: ‘vrij’ ≠ ‘burger’. Burgerrecht bepaalt politieke deelname.",
       "media": {
@@ -290,7 +365,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-013",
       "quiz_group": 4,
@@ -318,7 +392,12 @@
       "quiz_group": 4,
       "difficulty": 3,
       "instruction": "Koppel filosoof/geleerde aan kernidee (gymnasium-precisie).",
-      "left": ["Socrates", "Plato", "Aristoteles", "Hippocrates"],
+      "left": [
+        "Socrates",
+        "Plato",
+        "Aristoteles",
+        "Hippocrates"
+      ],
       "right": [
         "kritische vraagmethode; zelfkennis",
         "Academie; ideeënwereld (theorie van vormen)",
@@ -347,7 +426,14 @@
       "difficulty": 4,
       "instruction": "Antwoord in 2 zinnen. Noem 1 voordeel én 1 nadeel van loting.",
       "prompt": "Waarom gebruikten Atheners loting voor veel functies, en wat is een risico van loting?",
-      "keywords": ["gelijke kans", "macht", "elite", "corruptie", "deskundigheid", "toeval"],
+      "keywords": [
+        "gelijke kans",
+        "macht",
+        "elite",
+        "corruptie",
+        "deskundigheid",
+        "toeval"
+      ],
       "min_keywords": 2,
       "rubric": "Voordeel: machtspreiding/gelijke kans; risico: ondeskundigheid/toeval of manipulatie rond selectie.",
       "example_answer": "Loting gaf burgers een gelijke kans en beperkte de macht van een rijke elite. Een risico is dat iemand weinig deskundig kan zijn, omdat toeval meespeelt.",
@@ -359,7 +445,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-016",
       "quiz_group": 5,
@@ -388,7 +473,14 @@
       "difficulty": 5,
       "instruction": "Antwoord in 2 zinnen: leg uit + geef 1 gevolg.",
       "prompt": "Wat was de functie van een ‘heilige wapenstilstand’ tijdens de Olympische Spelen, en welk praktisch gevolg had dat?",
-      "keywords": ["veilig", "reizen", "atleten", "pelgrims", "tijdelijk", "oorlog"],
+      "keywords": [
+        "veilig",
+        "reizen",
+        "atleten",
+        "pelgrims",
+        "tijdelijk",
+        "oorlog"
+      ],
       "min_keywords": 2,
       "rubric": "Functie: veilige reis/toegang; gevolg: partijen staakten tijdelijk of respecteerden doorgang.",
       "example_answer": "De wapenstilstand moest reizen naar Olympia veilig maken voor atleten en bezoekers. Daardoor konden mensen door vijandig gebied trekken zonder aangevallen te worden (in elk geval in principe).",
@@ -421,14 +513,17 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-019",
       "type": "matching",
       "quiz_group": 6,
       "difficulty": 3,
       "instruction": "Koppel oorlog → kernomschrijving (let op nuance).",
-      "left": ["Perzische Oorlogen", "Peloponnesische Oorlog", "Veroveringen van Alexander"],
+      "left": [
+        "Perzische Oorlogen",
+        "Peloponnesische Oorlog",
+        "Veroveringen van Alexander"
+      ],
       "right": [
         "Griekse stadstaten (soms) samen tegen Perzische expansie",
         "Machtsstrijd in Griekenland: Athene vs Sparta en bondgenoten",
@@ -441,7 +536,7 @@
       },
       "explanation": "Gymnasium-detail: ‘samen’ is niet altijd harmonie; er is ook rivaliteit, maar extern gevaar dwingt samenwerking.",
       "media": {
-        "query": "Wikimedia: map Persian Wars + Peloponnesian War + Alexander Empire map",
+        "query": "Wikimedia: Persian Wars map",
         "kind": "image",
         "use": "context",
         "alt": "Kaarten van Perzische oorlogen, Peloponnesische oorlog en rijk van Alexander",
@@ -477,9 +572,29 @@
       "instruction": "Vul de ontbrekende informatie in over Alexander (accept hoofdlettervarianten).",
       "text": "Alexander was koning van {{blank1}}. Hij versloeg het {{blank2}} Rijk. Zijn veroveringen leidden tot {{blank3}}: een mengcultuur van Griekse en oosterse elementen.",
       "blanks": [
-        { "id": "blank1", "answers": ["Macedonië", "macedonië", "Macedonie"] },
-        { "id": "blank2", "answers": ["Perzische", "perzische", "Perzisch"] },
-        { "id": "blank3", "answers": ["hellenisme", "Hellenisme"] }
+        {
+          "id": "blank1",
+          "answers": [
+            "Macedonië",
+            "macedonië",
+            "Macedonie"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "Perzische",
+            "perzische",
+            "Perzisch"
+          ]
+        },
+        {
+          "id": "blank3",
+          "answers": [
+            "hellenisme",
+            "Hellenisme"
+          ]
+        }
       ],
       "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet ‘iedereen werd Grieks hetzelfde’.",
       "media": {
@@ -497,19 +612,25 @@
       "difficulty": 5,
       "instruction": "Antwoord in 2 zinnen: definieer + plaats in context.",
       "prompt": "Wat is ‘hellenisme’ en waarom is dat een gevolg van Alexanders veroveringen?",
-      "keywords": ["mengkultuur", "verspreiding", "Grieks", "Oosters", "steden", "taal"],
+      "keywords": [
+        "mengkultuur",
+        "verspreiding",
+        "Grieks",
+        "Oosters",
+        "steden",
+        "taal"
+      ],
       "min_keywords": 2,
       "rubric": "Definitie (mengkultuur/verspreiding) + causaliteit (door veroveringen, stichting steden, bestuur/handel).",
       "example_answer": "Hellenisme is de verspreiding en vermenging van Griekse cultuur met oosterse culturen. Dat ontstond doordat Alexander gebieden veroverde, steden stichtte en Griekse taal en gebruiken in bestuur en handel meebracht.",
       "media": {
-        "query": "Wikimedia: Alexandria Egypt ancient reconstruction + Hellenistic art",
+        "query": "Wikimedia: Ancient Alexandria",
         "kind": "image",
         "use": "context",
         "alt": "Impressie van Alexandrië of hellenistische kunst",
         "credit_required": true
       }
     },
-
     {
       "id": "g-023",
       "type": "short_answer",
@@ -517,7 +638,14 @@
       "difficulty": 4,
       "instruction": "Antwoord in 2 zinnen met 2 kernwoorden.",
       "prompt": "Waarom bouwden Egyptenaren piramides? Noem ook één politieke reden naast religie.",
-      "keywords": ["graf", "farao", "hiernamaals", "macht", "status", "organisatie"],
+      "keywords": [
+        "graf",
+        "farao",
+        "hiernamaals",
+        "macht",
+        "status",
+        "organisatie"
+      ],
       "min_keywords": 2,
       "rubric": "Religie (graf/hiernamaals) + politiek (macht/legitimatie/organisatie van arbeid).",
       "example_answer": "Piramides waren graven voor farao’s en hoorden bij het geloof in het hiernamaals. Ze lieten ook de macht en organisatiekracht van de farao zien (controle over arbeid en middelen).",
@@ -556,8 +684,18 @@
       "quiz_group": 7,
       "difficulty": 2,
       "instruction": "Koppel begrip → betekenis (basisbegrippen, maar precies).",
-      "left": ["hiërogliefen", "papyrus", "kanopen", "sarcofaag"],
-      "right": ["beeldschrift", "schrijfmateriaal van riet", "vaten voor organen", "stenen doodskist"],
+      "left": [
+        "hiërogliefen",
+        "papyrus",
+        "kanopen",
+        "sarcofaag"
+      ],
+      "right": [
+        "beeldschrift",
+        "schrijfmateriaal van riet",
+        "vaten voor organen",
+        "stenen doodskist"
+      ],
       "correct_pairs": {
         "hiërogliefen": "beeldschrift",
         "papyrus": "schrijfmateriaal van riet",
@@ -566,7 +704,7 @@
       },
       "explanation": "Let op: kanopen horen bij mummificatie (organen apart bewaard).",
       "media": {
-        "query": "Wikimedia: canopic jars set + sarcophagus Egyptian",
+        "query": "Wikimedia: Egyptian canopic jars",
         "kind": "image",
         "use": "context",
         "alt": "Kanopen en Egyptische sarcofaag",
@@ -600,7 +738,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-027",
       "type": "numeric",
@@ -649,9 +786,29 @@
       "instruction": "Vul de begrippen in.",
       "text": "De Olympische goden woonden volgens mythen op de berg {{blank1}}. In Delphi raadpleegde men het {{blank2}}. Apollo werd o.a. verbonden aan {{blank3}} en muziek.",
       "blanks": [
-        { "id": "blank1", "answers": ["Olympus", "olympus"] },
-        { "id": "blank2", "answers": ["orakel", "Orakel"] },
-        { "id": "blank3", "answers": ["verstand", "rede", "kennis", "geneeskunde"] }
+        {
+          "id": "blank1",
+          "answers": [
+            "Olympus",
+            "olympus"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "orakel",
+            "Orakel"
+          ]
+        },
+        {
+          "id": "blank3",
+          "answers": [
+            "verstand",
+            "rede",
+            "kennis",
+            "geneeskunde"
+          ]
+        }
       ],
       "explanation": "Delphi is hét voorbeeld van religieus ‘advies’ in politieke beslissingen.",
       "media": {
@@ -688,7 +845,13 @@
           "prompt": "Noem één reden waarom deze verschillen later tot conflict konden leiden (max 8 woorden).",
           "answer": {
             "value": "machtsstrijd",
-            "accept": ["machtsstrijd", "macht", "hegemonie", "bondgenootschappen", "belangen botsen"]
+            "accept": [
+              "machtsstrijd",
+              "macht",
+              "hegemonie",
+              "bondgenootschappen",
+              "belangen botsen"
+            ]
           }
         }
       ],
@@ -701,7 +864,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-031",
       "quiz_group": 9,
@@ -723,7 +885,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-032",
       "type": "numeric",
@@ -771,7 +932,14 @@
       "difficulty": 5,
       "instruction": "Antwoord in 2 zinnen. Gebruik minstens 2 kernwoorden.",
       "prompt": "Leg uit waarom het begrip ‘barbaren’ iets zegt over Griekse culturele eenheid.",
-      "keywords": ["taal", "wij-zij", "identiteit", "Grieks", "niet-Grieks", "dialect"],
+      "keywords": [
+        "taal",
+        "wij-zij",
+        "identiteit",
+        "Grieks",
+        "niet-Grieks",
+        "dialect"
+      ],
       "min_keywords": 2,
       "rubric": "Laat zien dat ‘barbaren’ een wij/zij-label is op basis van taal/cultuur en dat dat een gedeelde identiteit veronderstelt.",
       "example_answer": "Grieken noemden niet-Grieken ‘barbaren’ omdat hun taal onbegrijpelijk klonk. Dat wijst erop dat Grieken zichzelf als één cultuur herkenden, ondanks verschillende poleis en dialecten.",
@@ -804,7 +972,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-036",
       "type": "short_answer",
@@ -812,7 +979,15 @@
       "difficulty": 5,
       "instruction": "Bronkritiek (2 zinnen).",
       "prompt": "Noem één reden waarom een reliëf of vaasafbeelding niet ‘1-op-1’ de werkelijkheid is, en één reden waarom het toch bruikbaar is.",
-      "keywords": ["propaganda", "stijl", "symboliek", "ideaal", "informatie", "cultuur", "waarden"],
+      "keywords": [
+        "propaganda",
+        "stijl",
+        "symboliek",
+        "ideaal",
+        "informatie",
+        "cultuur",
+        "waarden"
+      ],
       "min_keywords": 2,
       "rubric": "Beperking: idealisering/symboliek; bruikbaar: laat waarden, kleding, wapens, rituelen of zelfbeeld zien.",
       "example_answer": "Beelden kunnen idealiseren of symbolisch zijn, dus ze tonen niet altijd precies wat er gebeurde. Maar ze zijn bruikbaar omdat ze laten zien wat mensen belangrijk vonden en hoe ze zichzelf wilden afbeelden.",
@@ -831,7 +1006,13 @@
       "difficulty": 4,
       "instruction": "Antwoord in 1–2 zinnen.",
       "prompt": "Wat is het symbool van Asklepios in de geneeskunde, en hoe heet het?",
-      "keywords": ["staf", "slang", "Asklepios", "esculaap", "esculaapstaf"],
+      "keywords": [
+        "staf",
+        "slang",
+        "Asklepios",
+        "esculaap",
+        "esculaapstaf"
+      ],
       "min_keywords": 2,
       "rubric": "Noem staf met slang + (esculaap)staf/Asklepiusstaf. Geen verwarring met caduceus (twee slangen).",
       "example_answer": "Het symbool is een staf met één slang eromheen: de (A)esculaapstaf, verbonden aan Asklepios.",
@@ -843,7 +1024,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-038",
       "type": "short_answer",
@@ -851,7 +1031,15 @@
       "difficulty": 5,
       "instruction": "Thermopylai bronvaardigheid: 3 voorbeelden.",
       "prompt": "Geef 1 voorbeeld van objectieve info en 1 voorbeeld van subjectieve (waarderende) info die je vaak in een oorlogsverslag tegenkomt. (Geen citaten nodig; beschrijf.)",
-      "keywords": ["aantal", "plaats", "datum", "dapper", "beter", "gemakkelijk", "mening"],
+      "keywords": [
+        "aantal",
+        "plaats",
+        "datum",
+        "dapper",
+        "beter",
+        "gemakkelijk",
+        "mening"
+      ],
       "min_keywords": 2,
       "rubric": "Objectief = controleerbaar feit (plaats/datum/aantallen); subjectief = oordeel/waardering (dapper, beter, slecht).",
       "example_answer": "Objectief: datum/plaats of aantallen soldaten. Subjectief: woorden als ‘dapper’, ‘superieur’, ‘gemakkelijk gewonnen’.",
@@ -863,7 +1051,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-039",
       "quiz_group": 12,
@@ -885,13 +1072,17 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-040",
       "quiz_group": 13,
       "difficulty": 3,
       "q": "Welke sport staat het duidelijkst afgebeeld op een vierspan-vaas (bron 37-achtig)?",
-      "a": ["Hardlopen", "Boksen", "Wagenrennen (vierspan)", "Speerwerpen"],
+      "a": [
+        "Hardlopen",
+        "Boksen",
+        "Wagenrennen (vierspan)",
+        "Speerwerpen"
+      ],
       "c": 2,
       "e": "Vierspan = vierspan-wagenrace, een prestigieuze discipline.",
       "media": {
@@ -930,19 +1121,26 @@
       "difficulty": 5,
       "instruction": "Continuïteit/verandering: noem 2 overeenkomsten.",
       "prompt": "Noem twee overeenkomsten tussen klassieke en moderne Olympische Spelen.",
-      "keywords": ["vier jaar", "wedstrijd", "eer", "winnaar", "sport", "internationaal", "publiek"],
+      "keywords": [
+        "vier jaar",
+        "wedstrijd",
+        "eer",
+        "winnaar",
+        "sport",
+        "internationaal",
+        "publiek"
+      ],
       "min_keywords": 2,
       "rubric": "Bijv. competitie om eer/prijs, periodiek karakter, internationale aandacht (nu breder), sport als prestige.",
       "example_answer": "In beide gevallen draait het om sportwedstrijden met veel prestige voor winnaars. Ook worden de Spelen periodiek georganiseerd (klassiek en modern in een vaste cyclus).",
       "media": {
-        "query": "Wikimedia: Olympic rings + ancient olive wreath",
+        "query": "Wikimedia: ancient Olympic wreath",
         "kind": "image",
         "use": "stimulus",
         "alt": "Olympische ringen en olijfkrans als symbool van winnen",
         "credit_required": true
       }
     },
-
     {
       "id": "g-043",
       "type": "ordering",
@@ -977,7 +1175,14 @@
       "difficulty": 5,
       "instruction": "Computervraag: 2 zinnen.",
       "prompt": "Waarom heet kwaadaardige software soms een ‘Trojan horse’? Leg de metafoor uit.",
-      "keywords": ["verborgen", "binnenlaten", "onzichtbaar", "schadelijk", "vertrouwen", "misleiding"],
+      "keywords": [
+        "verborgen",
+        "binnenlaten",
+        "onzichtbaar",
+        "schadelijk",
+        "vertrouwen",
+        "misleiding"
+      ],
       "min_keywords": 2,
       "rubric": "Metafoor: lijkt onschuldig → wordt binnengelaten → verborgen ‘aanval’ van binnenuit.",
       "example_answer": "Een trojan lijkt onschuldig (zoals een cadeau), waardoor je hem binnenlaat. Daarna voert hij verborgen schadelijke acties uit vanuit je systeem, net als soldaten die uit het paard kwamen.",
@@ -989,13 +1194,17 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-045",
       "quiz_group": 15,
       "difficulty": 3,
       "q": "Wat betekent ‘democratie’ letterlijk (Grieks)?",
-      "a": ["macht van de koning", "macht van het volk", "macht van de goden", "macht van de adel"],
+      "a": [
+        "macht van de koning",
+        "macht van het volk",
+        "macht van de goden",
+        "macht van de adel"
+      ],
       "c": 1,
       "e": "demos = volk, kratos = macht/heerschappij.",
       "media": {
@@ -1013,7 +1222,14 @@
       "difficulty": 5,
       "instruction": "Gymnasium: vergelijk met nu in 2 zinnen.",
       "prompt": "Noem één belangrijk verschil tussen directe democratie (Athene) en representatieve democratie (Nederland).",
-      "keywords": ["direct", "vertegenwoordigers", "stemmen", "zelf", "parlement", "kiezen"],
+      "keywords": [
+        "direct",
+        "vertegenwoordigers",
+        "stemmen",
+        "zelf",
+        "parlement",
+        "kiezen"
+      ],
       "min_keywords": 2,
       "rubric": "Athene: burgers stemmen zelf over besluiten; NL: burgers kiezen vertegenwoordigers die besluiten nemen.",
       "example_answer": "In Athene stemden burgers direct zelf over besluiten. In Nederland kiezen burgers vertegenwoordigers die namens hen beslissen in parlement en raden.",
@@ -1025,7 +1241,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-047",
       "type": "fill_blank",
@@ -1034,10 +1249,34 @@
       "instruction": "Architectuurbegrippen (zuilenordes).",
       "text": "Drie Griekse zuilenstijlen: {{blank1}} (eenvoudig), {{blank2}} (krullen/voluten), {{blank3}} (bladversiering). Het beroemde tempelcomplex in Athene is de {{blank4}} op de Akropolis.",
       "blanks": [
-        { "id": "blank1", "answers": ["Dorisch", "dorisch"] },
-        { "id": "blank2", "answers": ["Ionisch", "ionisch"] },
-        { "id": "blank3", "answers": ["Korinthisch", "korinthisch"] },
-        { "id": "blank4", "answers": ["Parthenon", "parthenon"] }
+        {
+          "id": "blank1",
+          "answers": [
+            "Dorisch",
+            "dorisch"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "Ionisch",
+            "ionisch"
+          ]
+        },
+        {
+          "id": "blank3",
+          "answers": [
+            "Korinthisch",
+            "korinthisch"
+          ]
+        },
+        {
+          "id": "blank4",
+          "answers": [
+            "Parthenon",
+            "parthenon"
+          ]
+        }
       ],
       "explanation": "Gymnasium: herken stijlen visueel; koppel aan bouwcultuur en religie.",
       "media": {
@@ -1048,7 +1287,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-048",
       "type": "numeric",
@@ -1068,7 +1306,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-049",
       "quiz_group": 16,
@@ -1090,7 +1327,6 @@
         "credit_required": true
       }
     },
-
     {
       "id": "g-050",
       "type": "multipart",
@@ -1103,14 +1339,24 @@
           "id": "a",
           "type": "mc",
           "prompt": "Hoe vaak werden de Olympische Spelen gehouden?",
-          "options": ["elk jaar", "elke twee jaar", "elke vier jaar", "elke tien jaar"],
+          "options": [
+            "elk jaar",
+            "elke twee jaar",
+            "elke vier jaar",
+            "elke tien jaar"
+          ],
           "correct": 2
         },
         {
           "id": "b",
           "type": "mc",
           "prompt": "Wie waren in de oudheid doorgaans uitgesloten van deelname?",
-          "options": ["vrije Griekse mannen", "vrouwen en slaven", "Spartanen", "rijke Atheners"],
+          "options": [
+            "vrije Griekse mannen",
+            "vrouwen en slaven",
+            "Spartanen",
+            "rijke Atheners"
+          ],
           "correct": 1
         },
         {
@@ -1119,7 +1365,13 @@
           "prompt": "Noem één reden waarom winnen zoveel status gaf (max 8 woorden).",
           "answer": {
             "value": "eer",
-            "accept": ["eer", "prestige", "roem", "status", "faam"]
+            "accept": [
+              "eer",
+              "prestige",
+              "roem",
+              "status",
+              "faam"
+            ]
           }
         }
       ],

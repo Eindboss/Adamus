@@ -55,7 +55,8 @@ export async function getMediaForQuery(query, opts = {}) {
 
   const q = normalizeQuery(query)
     .replace(/^wikimedia:\s*/i, "")
-    .replace(/^wikipedia:\s*/i, "");
+    .replace(/^wikipedia:\s*/i, "")
+    .replace(/\+/g, " "); // Treat '+' as space in search queries
 
   // 1) Wikipedia search (best page match)
   const searchUrl =
@@ -112,6 +113,16 @@ export async function getMediaForQuery(query, opts = {}) {
   };
 
   cache[key] = { ts: Date.now(), query: q, result };
+
+  // Prune cache: keep max 200 entries to prevent localStorage bloat
+  const entries = Object.entries(cache);
+  if (entries.length > 200) {
+    entries
+      .sort((a, b) => a[1].ts - b[1].ts) // oldest first
+      .slice(0, entries.length - 200)
+      .forEach(([k]) => delete cache[k]);
+  }
+
   writeCache(cache);
 
   return result;
