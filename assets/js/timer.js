@@ -89,6 +89,23 @@ export function getIsPaused() {
   return isPaused;
 }
 
+// Mode: 'question' (per-question timer) or 'exam' (total exam timer)
+let timerMode = "question";
+
+/**
+ * Set timer mode
+ */
+export function setTimerMode(mode) {
+  timerMode = mode;
+}
+
+/**
+ * Get timer mode
+ */
+export function getTimerMode() {
+  return timerMode;
+}
+
 /**
  * Update timer UI elements
  */
@@ -96,18 +113,37 @@ function updateTimerUI() {
   const countdownEl = $("countdown");
   const dotEl = $("timerDot");
   const metaEl = $("timerMeta");
+  const timerDisplayEl = $("timerDisplay");
 
   if (countdownEl) {
-    countdownEl.textContent = String(remaining);
+    // Format based on mode
+    if (timerMode === "exam") {
+      // Show mm:ss format for exam mode
+      countdownEl.textContent = formatTime(remaining);
+    } else {
+      // Show seconds only for question mode
+      countdownEl.textContent = String(remaining);
+    }
 
     // Apply warning animations
     updateTimerWarning(countdownEl, metaEl, remaining, totalSeconds);
   }
 
+  // Update display label for exam mode
+  if (timerDisplayEl && timerMode === "exam") {
+    const label = timerDisplayEl.childNodes[0];
+    if (label && label.nodeType === Node.TEXT_NODE) {
+      label.textContent = "Tijd: ";
+    }
+  }
+
   if (dotEl) {
     if (isPaused) {
       dotEl.className = "stat-dot paused";
-    } else if (remaining <= 10) {
+    } else if (timerMode === "exam" && remaining <= 300) {
+      // 5 minutes warning for exam
+      dotEl.className = "stat-dot danger";
+    } else if (timerMode === "question" && remaining <= 10) {
       dotEl.className = "stat-dot danger";
     } else {
       dotEl.className = "stat-dot";

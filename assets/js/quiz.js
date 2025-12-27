@@ -31,6 +31,8 @@ import {
   pauseTimer,
   resumeTimer,
   initTimer,
+  setTimerMode,
+  getRemaining,
 } from "./timer.js";
 import {
   readStats,
@@ -68,6 +70,8 @@ import {
 // Constants
 const QUESTION_SECONDS = 90;
 const QUESTION_SECONDS_MULTIPART = 120;
+const EXAM_DURATION_MINUTES = 45;
+const EXAM_DURATION_SECONDS = EXAM_DURATION_MINUTES * 60; // 2700 seconds
 
 // Points per question for exam mode (total: 90 points)
 const EXAM_POINTS = {
@@ -202,11 +206,24 @@ export async function initQuiz() {
 }
 
 /**
+ * Check if current subject supports exam mode
+ */
+function supportsExamMode() {
+  return state.subjectId === "geschiedenis";
+}
+
+/**
  * Show mode selection screen (Practice vs Exam)
  */
 function showModeSelection() {
   const container = $("quizArea");
   if (!container) return;
+
+  // If subject doesn't support exam mode, start practice directly
+  if (!supportsExamMode()) {
+    startQuiz("practice");
+    return;
+  }
 
   state.phase = "mode-select";
   updateControls();
@@ -236,9 +253,9 @@ function showModeSelection() {
           <h3>Volledige toets</h3>
           <ul class="mode-features">
             <li>Alle ${totalQuestions} vragen</li>
-            <li>Vaste volgorde (makkelijk → moeilijk)</li>
-            <li>Geen overslaan</li>
-            <li>Eindcijfer</li>
+            <li>${EXAM_DURATION_MINUTES} minuten totaal</li>
+            <li>Pauzeren mogelijk</li>
+            <li>Eindcijfer (1-10)</li>
           </ul>
           <button class="btn">Start toets</button>
         </div>
@@ -256,6 +273,14 @@ function showModeSelection() {
  */
 async function startQuiz(mode) {
   state.mode = mode;
+
+  // Set timer mode based on quiz mode
+  if (mode === "exam") {
+    setTimerMode("exam");
+  } else {
+    setTimerMode("question");
+  }
+
   await loadQuestions();
 }
 
@@ -438,6 +463,12 @@ async function loadQuestions(savedProgress = null) {
 
     state.phase = "question";
     state.history.clear();
+
+    // For exam mode: start the total timer once at the beginning
+    if (state.mode === "exam") {
+      resetTimer(EXAM_DURATION_SECONDS);
+      startTimer();
+    }
 
     // Render current question
     renderQuestion();
@@ -736,13 +767,17 @@ async function renderQuestion() {
     }
   }
 
-  // Reset timer - more time for multi-part questions
-  const isMultiPart = q.type === "wiskunde_multi_part" || q.type === "table_parse" ||
-                      q.type === "grouped_short_text" || q.type === "grouped_select" ||
-                      q.type === "ratio_table" || q.type === "ordering" ||
-                      q.type === "multipart" || q.type === "matching" || q.type === "data_table";
-  resetTimer(isMultiPart ? QUESTION_SECONDS_MULTIPART : QUESTION_SECONDS);
-  if (state.timerEnabled) startTimer();
+  // Timer handling: exam mode uses total timer, practice mode uses per-question timer
+  if (state.mode !== "exam") {
+    // Practice mode: reset timer per question
+    const isMultiPart = q.type === "wiskunde_multi_part" || q.type === "table_parse" ||
+                        q.type === "grouped_short_text" || q.type === "grouped_select" ||
+                        q.type === "ratio_table" || q.type === "ordering" ||
+                        q.type === "multipart" || q.type === "matching" || q.type === "data_table";
+    resetTimer(isMultiPart ? QUESTION_SECONDS_MULTIPART : QUESTION_SECONDS);
+    if (state.timerEnabled) startTimer();
+  }
+  // Exam mode: timer keeps running from loadQuestions()
 
   // Render based on type
   switch (q.type) {
@@ -3423,6 +3458,13 @@ function showFeedback(isCorrect, explanation, correctAnswer) {
 function handleTimeUp() {
   if (state.answered) return;
 
+  // Exam mode: time is up for entire exam
+  if (state.mode === "exam") {
+    handleExamTimeUp();
+    return;
+  }
+
+  // Practice mode: time up for single question
   const q = state.questions[state.currentIndex];
 
   state.wrong++;
@@ -3456,6 +3498,29 @@ function handleTimeUp() {
   }
 
   updateControls();
+}
+
+/**
+ * Handle exam time up - end the entire exam
+ */
+function handleExamTimeUp() {
+  // Mark all remaining questions as wrong (0 points)
+  for (let i = state.currentIndex; i < state.questions.length; i++) {
+    const q = state.questions[i];
+    if (!q._revisited) { // Don't double-count skipped questions
+      state.wrong++;
+      state.history.add({
+        question: q.q || q.title || htmlToText(q.prompt_html) || "Vraag",
+        type: q.type,
+        userAnswer: "(tijd op)",
+        correct: false,
+        timedOut: true,
+      });
+    }
+  }
+
+  // Show summary
+  renderSummary();
 }
 
 /**
@@ -3517,18 +3582,24 @@ export function skipQuestion() {
 
 /**
  * Give up on current question (show answer without points)
- * Used in practice mode when user doesn't know the answer
+ * In practice mode: question is tracked for retry
+ * In exam mode: 0 points, question does NOT return, timer keeps running
  */
 export function giveUp() {
   if (state.answered) return;
 
   const q = state.questions[state.currentIndex];
-  stopTimer();
+
+  // Practice mode: stop timer for this question
+  // Exam mode: keep timer running (total exam time)
+  if (state.mode !== "exam") {
+    stopTimer();
+  }
 
   // Mark as wrong
   state.wrong++;
 
-  // Track wrong questions for retry
+  // Track wrong questions for retry (practice mode only)
   if (state.mode === "practice" && q.id) {
     state.wrongQuestions.push(q);
   }
@@ -3763,6 +3834,28 @@ export function hidePause() {
 function updateUI() {
   updateMeta();
   updateProgress();
+  updateTimerVisibility();
+}
+
+function updateTimerVisibility() {
+  const timerToggleWrap = document.querySelector(".timer-toggle-wrap");
+  const timerDisplay = $("timerDisplay");
+
+  if (state.mode === "exam") {
+    // Exam mode: hide timer toggle (always on), update label
+    if (timerToggleWrap) timerToggleWrap.style.display = "none";
+    if (timerDisplay) {
+      timerDisplay.style.display = "";
+      // Update label to show "Tijd:" instead of "Resterend:"
+      const labelNode = timerDisplay.childNodes[0];
+      if (labelNode && labelNode.nodeType === Node.TEXT_NODE) {
+        labelNode.textContent = "Tijd: ";
+      }
+    }
+  } else {
+    // Practice mode: show timer toggle
+    if (timerToggleWrap) timerToggleWrap.style.display = "";
+  }
 }
 
 function updateMeta() {
@@ -3808,15 +3901,11 @@ function updateControls() {
   }
 
   // Update button visibility based on mode
-  if (state.mode === "exam") {
-    // Exam mode: no skip, no give up
-    if (skipBtn) skipBtn.style.display = "none";
-    if (giveUpBtn) giveUpBtn.style.display = "none";
-  } else {
-    // Practice mode: show skip and give up
-    if (skipBtn) skipBtn.style.display = "";
-    if (giveUpBtn) giveUpBtn.style.display = "";
-  }
+  // Both modes: skip and give up are available
+  // Exam mode: skip = returns at end, give up = 0 points, no return
+  // Practice mode: skip = returns at end, give up = 0 points, tracks for retry
+  if (skipBtn) skipBtn.style.display = "";
+  if (giveUpBtn) giveUpBtn.style.display = "";
 
   // Update next button text
   if (nextBtn) {
