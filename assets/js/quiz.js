@@ -6,7 +6,6 @@
 import {
   $,
   $$,
-  $$$,
   shuffle,
   loadJSON,
   htmlToText,
@@ -32,11 +31,8 @@ import {
   resumeTimer,
   initTimer,
   setTimerMode,
-  getRemaining,
 } from "./timer.js";
 import {
-  readStats,
-  writeStats,
   updateStats,
   createSessionHistory,
   updateQuestionBox,
@@ -49,7 +45,7 @@ import {
   createLineGraph,
   createGlobalGraph,
 } from "./graph.js";
-import { loadQuestionImage, preloadQuestionImages } from "./wikimedia.js";
+import { loadQuestionImage } from "./wikimedia.js";
 import {
   initV2QuestionTypes,
   renderFillBlank,
