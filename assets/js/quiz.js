@@ -324,19 +324,19 @@ function showResumePrompt(savedProgress) {
  * Didactically structured: confidence → understanding → application → challenge
  */
 function orderQuestionsForExam(questions) {
-  // Fase 1: Instap (warm-up, basic MC)
-  // Fase 2: Kernbegrip (understanding)
-  // Fase 3: Toepassen (application)
-  // Fase 4: Uitdaging (challenge)
+  // Nieuwe didactische volgorde: rustige start, zware vragen naar achteren
   const examOrder = [
-    // FASE 1 - Instap & zelfvertrouwen
-    "g-001", "g-002", "g-003", "g-004", "g-005", "g-006", "g-007", "g-009", "g-010", "g-017", "g-023", "g-022",
-    // FASE 2 - Kernbegrip & inzicht
-    "g-008", "g-011", "g-012", "g-013", "g-014", "g-015", "g-016", "g-018", "g-019", "g-020", "g-021", "g-024", "g-025", "g-026",
-    // FASE 3 - Toepassen & verbanden
-    "g-027", "g-028", "g-029", "g-030", "g-031", "g-032", "g-033", "g-034", "g-035", "g-036", "g-037", "g-038", "g-039", "g-040",
-    // FASE 4 - Uitdaging & afronding
-    "g-041", "g-042", "g-043", "g-044", "g-045", "g-046", "g-047", "g-048", "g-049", "g-050"
+    // FASE 1 - Instap & rust (vraag 1-8): vertrouwen opbouwen, geen overload
+    "g-045", "g-005", "g-006", "g-016", "g-009", "g-027", "g-031", "g-049",
+    // FASE 2 - Kernkennis & inzicht (vraag 9-22)
+    "g-002", "g-007", "g-012", "g-013", "g-014", "g-015", "g-017", "g-018",
+    "g-020", "g-021", "g-022", "g-023", "g-025", "g-026",
+    // FASE 3 - Toepassen & verbanden (vraag 23-36)
+    "g-011", "g-019", "g-028", "g-029", "g-030", "g-032", "g-033", "g-034",
+    "g-035", "g-036", "g-037", "g-039", "g-040", "g-041",
+    // FASE 4 - Uitdaging & afronding (vraag 37-50): zware chronologie/bronvragen
+    "g-001", "g-003", "g-004", "g-008", "g-010", "g-024", "g-038", "g-042",
+    "g-043", "g-044", "g-046", "g-047", "g-048", "g-050"
   ];
 
   const questionMap = new Map(questions.map(q => [q.id, q]));
