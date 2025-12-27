@@ -2394,7 +2394,12 @@ export function checkAnswer() {
   if (state.answered) return;
 
   const q = state.questions[state.currentIndex];
-  stopTimer();
+
+  // Practice mode: stop timer for this question
+  // Exam mode: keep timer running
+  if (state.mode !== "exam") {
+    stopTimer();
+  }
 
   switch (q.type) {
     case "mc":
@@ -3559,7 +3564,12 @@ function getCorrectAnswer(q) {
  */
 export function skipQuestion() {
   const q = state.questions[state.currentIndex];
-  stopTimer();
+
+  // Practice mode: stop timer for this question
+  // Exam mode: keep timer running
+  if (state.mode !== "exam") {
+    stopTimer();
+  }
 
   state.skipped++;
 
