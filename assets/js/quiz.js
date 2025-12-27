@@ -1229,7 +1229,11 @@ function renderGroupedShortText(container, q) {
       `;
       }
 
+      // Check if this item has a subheader (for grouping items under a sentence)
+      const subheaderHtml = item.subheader ? `<div class="grouped-subheader">${item.subheader}</div>` : '';
+
       return `
+      ${subheaderHtml}
       <div class="grouped-item" data-idx="${idx}">
         <label class="grouped-latin">${latinText}</label>
         <input type="text"

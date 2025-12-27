@@ -184,23 +184,23 @@
       "skills": ["zinsanalyse"],
       "mode": "practice",
       "payload": {
-        "instruction_html": "Geef voor elk woord: naamval, getal, verklaring. Voorbeeld: Remus (zin 16) = nom, ev, onderwerp<br><br>Zinnen:<br>16. De monte Aventino descendit Remus.<br>17. Romulus tacet, dum frater accedit.<br>18. Feminae et viri in urbe sunt.<br>19. Cur mihi non licet?<br>20. Qui murum transilit, civis non est.",
+        "instruction_html": "Geef voor elk woord: naamval, getal, verklaring. Voorbeeld: Remus (zin 16) = nom, ev, onderwerp",
         "items": [
-          { "id": "item21", "question": "monte (zin 16) - naamval", "accepted_answers": ["abl", "ablativus"], "points": 0.33 },
-          { "id": "item21b", "question": "monte (zin 16) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item21c", "question": "monte (zin 16) - verklaring", "accepted_answers": ["afhankelijk van voorzetsel", "bij voorzetsel", "voorzetsel"], "points": 0.34 },
-          { "id": "item22", "question": "urbe (zin 18) - naamval", "accepted_answers": ["abl", "ablativus"], "points": 0.33 },
-          { "id": "item22b", "question": "urbe (zin 18) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item22c", "question": "urbe (zin 18) - verklaring", "accepted_answers": ["afhankelijk van voorzetsel", "bij voorzetsel", "voorzetsel"], "points": 0.34 },
-          { "id": "item23", "question": "mihi (zin 19) - naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33 },
-          { "id": "item23b", "question": "mihi (zin 19) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item23c", "question": "mihi (zin 19) - verklaring", "accepted_answers": ["afhankelijk van werkwoord", "bij werkwoord"], "points": 0.34 },
-          { "id": "item24", "question": "murum (zin 20) - naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33 },
-          { "id": "item24b", "question": "murum (zin 20) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item24c", "question": "murum (zin 20) - verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
-          { "id": "item25", "question": "civis (zin 20) - naamval", "accepted_answers": ["nom", "nominativus"], "points": 0.33 },
-          { "id": "item25b", "question": "civis (zin 20) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item25c", "question": "civis (zin 20) - verklaring", "accepted_answers": ["onderwerp", "ow", "o.w."], "points": 0.34 }
+          { "id": "item21", "question": "naamval", "accepted_answers": ["abl", "ablativus"], "points": 0.33, "subheader": "Zin 16: De <strong>monte</strong> Aventino descendit Remus." },
+          { "id": "item21b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item21c", "question": "verklaring", "accepted_answers": ["afhankelijk van voorzetsel", "bij voorzetsel", "voorzetsel"], "points": 0.34 },
+          { "id": "item22", "question": "naamval", "accepted_answers": ["abl", "ablativus"], "points": 0.33, "subheader": "Zin 18: Feminae et viri in <strong>urbe</strong> sunt." },
+          { "id": "item22b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item22c", "question": "verklaring", "accepted_answers": ["afhankelijk van voorzetsel", "bij voorzetsel", "voorzetsel"], "points": 0.34 },
+          { "id": "item23", "question": "naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33, "subheader": "Zin 19: Cur <strong>mihi</strong> non licet?" },
+          { "id": "item23b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item23c", "question": "verklaring", "accepted_answers": ["afhankelijk van werkwoord", "bij werkwoord"], "points": 0.34 },
+          { "id": "item24", "question": "naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33, "subheader": "Zin 20: Qui <strong>murum</strong> transilit, civis non est." },
+          { "id": "item24b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item24c", "question": "verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
+          { "id": "item25", "question": "naamval", "accepted_answers": ["nom", "nominativus"], "points": 0.33, "subheader": "Zin 20: Qui murum transilit, <strong>civis</strong> non est." },
+          { "id": "item25b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item25c", "question": "verklaring", "accepted_answers": ["onderwerp", "ow", "o.w."], "points": 0.34 }
         ],
         "grading": { "rule": "per_item" }
       },
@@ -332,7 +332,7 @@
       "type": "open",
       "prompt": {
         "text": "Noteer een bijwoordelijke bepaling uit regel 1.",
-        "html": "Noteer een bijwoordelijke bepaling uit regel 1.<br><br><em>Marcus cum amico Quinto in monte Palatino ludit.</em>"
+        "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br><em>Marcus cum amico Quinto in monte Palatino ludit.</em> <small>(Palatinus = Palatijn, ludere = spelen)</small><br><em>Primum saxis murum aedificant.</em><br><em>Quintus mandata dividit, sed Marcus</em><br><em>nihil facit. Tandem Quintus de muro clamat:</em> <small>(nihil = niets)</small><br><em>'Cur tibi non placet domum aedificare?'</em> <small>(domus = huis)</small></div>Noteer een bijwoordelijke bepaling uit regel 1."
       },
       "points": 1,
       "skills": ["tekstbegrip", "zinsanalyse"],
@@ -357,7 +357,7 @@
       "type": "open",
       "prompt": {
         "text": "Noteer de twee tekstelementen die aangeven wat de volgorde van de handelingen is.",
-        "html": "Noteer de twee tekstelementen die aangeven wat de volgorde van de handelingen is."
+        "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br><em>Marcus cum amico Quinto in monte Palatino ludit.</em> <small>(Palatinus = Palatijn, ludere = spelen)</small><br><em>Primum saxis murum aedificant.</em><br><em>Quintus mandata dividit, sed Marcus</em><br><em>nihil facit. Tandem Quintus de muro clamat:</em> <small>(nihil = niets)</small><br><em>'Cur tibi non placet domum aedificare?'</em> <small>(domus = huis)</small></div>Noteer de twee tekstelementen die aangeven wat de volgorde van de handelingen is."
       },
       "points": 2,
       "skills": ["tekstbegrip"],
@@ -382,7 +382,7 @@
       "type": "open",
       "prompt": {
         "text": "Hoe is de rolverdeling tussen Quintus en Marcus?",
-        "html": "Hoe is de rolverdeling tussen Quintus en Marcus?"
+        "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br><em>Marcus cum amico Quinto in monte Palatino ludit.</em> <small>(Palatinus = Palatijn, ludere = spelen)</small><br><em>Primum saxis murum aedificant.</em><br><em>Quintus mandata dividit, sed Marcus</em><br><em>nihil facit. Tandem Quintus de muro clamat:</em> <small>(nihil = niets)</small><br><em>'Cur tibi non placet domum aedificare?'</em> <small>(domus = huis)</small></div>Hoe is de rolverdeling tussen Quintus en Marcus?"
       },
       "points": 1,
       "skills": ["tekstbegrip"],
@@ -406,7 +406,7 @@
       "type": "open",
       "prompt": {
         "text": "In regel 3-4 zit een tegenstelling. Noteer het tekstelement dat deze tegenstelling aangeeft.",
-        "html": "In regel 3-4 zit een tegenstelling. Noteer het tekstelement dat deze tegenstelling aangeeft.<br><br><em>Quintus mandata dividit, sed Marcus nihil facit.</em>"
+        "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br><em>Marcus cum amico Quinto in monte Palatino ludit.</em> <small>(Palatinus = Palatijn, ludere = spelen)</small><br><em>Primum saxis murum aedificant.</em><br><em>Quintus mandata dividit, sed Marcus</em><br><em>nihil facit. Tandem Quintus de muro clamat:</em> <small>(nihil = niets)</small><br><em>'Cur tibi non placet domum aedificare?'</em> <small>(domus = huis)</small></div>In regel 3-4 zit een tegenstelling. Noteer het tekstelement dat deze tegenstelling aangeeft."
       },
       "points": 1,
       "skills": ["tekstbegrip"],

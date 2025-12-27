@@ -184,23 +184,23 @@
       "skills": ["zinsanalyse"],
       "mode": "practice",
       "payload": {
-        "instruction_html": "Geef voor elk woord: naamval, getal, verklaring. Voorbeeld: mater (zin 16) = nom, ev, onderwerp<br><br>Zinnen:<br>16. Mater ei nomen dat.<br>17. Lupa ad gregem accedit.<br>18. Feminae haud rident.<br>19. Subito uxor infantes audit.<br>20. Sic deus regibus favet.",
+        "instruction_html": "Geef voor elk woord: naamval, getal, verklaring. Voorbeeld: mater (zin 16) = nom, ev, onderwerp",
         "items": [
-          { "id": "item21", "question": "ei (zin 16) - naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33 },
-          { "id": "item21b", "question": "ei (zin 16) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item21c", "question": "ei (zin 16) - verklaring", "accepted_answers": ["meewerkend voorwerp", "mvo", "m.v."], "points": 0.34 },
-          { "id": "item22", "question": "gregem (zin 17) - naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33 },
-          { "id": "item22b", "question": "gregem (zin 17) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item22c", "question": "gregem (zin 17) - verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
-          { "id": "item23", "question": "feminae (zin 18) - naamval", "accepted_answers": ["nom", "nominativus"], "points": 0.33 },
-          { "id": "item23b", "question": "feminae (zin 18) - getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
-          { "id": "item23c", "question": "feminae (zin 18) - verklaring", "accepted_answers": ["onderwerp", "ow", "o.w."], "points": 0.34 },
-          { "id": "item24", "question": "infantes (zin 19) - naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33 },
-          { "id": "item24b", "question": "infantes (zin 19) - getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
-          { "id": "item24c", "question": "infantes (zin 19) - verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
-          { "id": "item25", "question": "regibus (zin 20) - naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33 },
-          { "id": "item25b", "question": "regibus (zin 20) - getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
-          { "id": "item25c", "question": "regibus (zin 20) - verklaring", "accepted_answers": ["aanvulling bij werkwoord", "afhankelijk van werkwoord"], "points": 0.34 }
+          { "id": "item21", "question": "naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33, "subheader": "Zin 16: Mater <strong>ei</strong> nomen dat." },
+          { "id": "item21b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item21c", "question": "verklaring", "accepted_answers": ["meewerkend voorwerp", "mvo", "m.v."], "points": 0.34 },
+          { "id": "item22", "question": "naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33, "subheader": "Zin 17: Lupa ad <strong>gregem</strong> accedit." },
+          { "id": "item22b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item22c", "question": "verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
+          { "id": "item23", "question": "naamval", "accepted_answers": ["nom", "nominativus"], "points": 0.33, "subheader": "Zin 18: <strong>Feminae</strong> haud rident." },
+          { "id": "item23b", "question": "getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
+          { "id": "item23c", "question": "verklaring", "accepted_answers": ["onderwerp", "ow", "o.w."], "points": 0.34 },
+          { "id": "item24", "question": "naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33, "subheader": "Zin 19: Subito uxor <strong>infantes</strong> audit." },
+          { "id": "item24b", "question": "getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
+          { "id": "item24c", "question": "verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
+          { "id": "item25", "question": "naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33, "subheader": "Zin 20: Sic deus <strong>regibus</strong> favet." },
+          { "id": "item25b", "question": "getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
+          { "id": "item25c", "question": "verklaring", "accepted_answers": ["aanvulling bij werkwoord", "afhankelijk van werkwoord"], "points": 0.34 }
         ],
         "grading": { "rule": "per_item" }
       },
@@ -330,7 +330,7 @@
       "type": "open",
       "prompt": {
         "text": "r.3 'Balant' - Leg uit waarom ze dit doen.",
-        "html": "r.3 <em>Balant</em> - Leg uit waarom ze dit doen."
+        "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br>1 <em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br>  <em>Subito oves lupam vident.</em><br>  <em>Balant.</em> <small>(balare = blaten)</small><br>  <em>Eam timent sed pater ridet et ovibus dicit:</em><br>5 <em>'Nos dei protegunt!'</em></div><br>r.3 <em>Balant</em> - Leg uit waarom ze dit doen."
       },
       "points": 1,
       "skills": ["tekstbegrip"],
@@ -354,7 +354,7 @@
       "type": "open",
       "prompt": {
         "text": "r.4 'Eam' - Wie wordt/worden bedoeld met 'eam'?",
-        "html": "r.4 <em>Eam</em> - Wie wordt/worden bedoeld met <em>eam</em>?"
+        "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br>1 <em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br>  <em>Subito oves lupam vident.</em><br>  <em>Balant.</em> <small>(balare = blaten)</small><br>  <em>Eam timent sed pater ridet et ovibus dicit:</em><br>5 <em>'Nos dei protegunt!'</em></div><br>r.4 <em>Eam</em> - Wie wordt/worden bedoeld met <em>eam</em>?"
       },
       "points": 1,
       "skills": ["tekstbegrip"],
@@ -374,7 +374,7 @@
       "type": "open",
       "prompt": {
         "text": "r.4 'ovibus' - Wat is de functie van het woord 'ovibus'? Leg je antwoord uit.",
-        "html": "r.4 <em>ovibus</em> - Wat is de functie van het woord <em>ovibus</em>? Leg je antwoord uit."
+        "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br>1 <em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br>  <em>Subito oves lupam vident.</em><br>  <em>Balant.</em> <small>(balare = blaten)</small><br>  <em>Eam timent sed pater ridet et ovibus dicit:</em><br>5 <em>'Nos dei protegunt!'</em></div><br>r.4 <em>ovibus</em> - Wat is de functie van het woord <em>ovibus</em>? Leg je antwoord uit."
       },
       "points": 1,
       "skills": ["tekstbegrip", "zinsanalyse"],
@@ -398,7 +398,7 @@
       "type": "open",
       "prompt": {
         "text": "r.3-5 De verhaalfiguren reageren tegengesteld. Noteer het Latijnse tekstelement dat deze tegenstelling aangeeft.",
-        "html": "r.3-5 De verhaalfiguren in de tekst reageren tegengesteld op de gebeurtenis. Noteer het Latijnse tekstelement dat deze tegenstelling aangeeft."
+        "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br>1 <em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br>  <em>Subito oves lupam vident.</em><br>  <em>Balant.</em> <small>(balare = blaten)</small><br>  <em>Eam timent sed pater ridet et ovibus dicit:</em><br>5 <em>'Nos dei protegunt!'</em></div><br>r.3-5 De verhaalfiguren in de tekst reageren tegengesteld op de gebeurtenis. Noteer het Latijnse tekstelement dat deze tegenstelling aangeeft."
       },
       "points": 1,
       "skills": ["tekstbegrip"],
