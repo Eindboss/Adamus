@@ -1606,11 +1606,7 @@ function checkOrdering(q) {
     }
   });
 
-  if (isCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  awardPoints(q.id, isCorrect);
   updateStats(state.subjectId, isCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
@@ -1761,11 +1757,8 @@ function checkRatioTable(q) {
   });
 
   const isFullyCorrect = correctCount === totalCount;
-  if (correctCount >= totalCount / 2) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  const isPassingScore = correctCount >= totalCount / 2;
+  awardPoints(q.id, isPassingScore);
   updateStats(state.subjectId, isFullyCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, isFullyCorrect);
 
@@ -2583,11 +2576,10 @@ function checkShortText(q) {
 
   const isCorrect = matchesAcceptList(value, accepted, {}, opts);
 
+  awardPoints(q.id, isCorrect);
   if (isCorrect) {
-    state.score++;
     input?.classList.add("input-correct");
   } else {
-    state.wrong++;
     input?.classList.add("input-wrong");
   }
   updateStats(state.subjectId, isCorrect);
@@ -2652,11 +2644,8 @@ function checkTableParse(q) {
   const isFullyCorrect = correctCount === totalFillable;
 
   // Update score (count as correct if > 50%)
-  if (correctCount >= totalFillable / 2) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  const isPassingScore = correctCount >= totalFillable / 2;
+  awardPoints(q.id, isPassingScore);
   updateStats(state.subjectId, isFullyCorrect);
 
   state.partialScore = earnedPoints;
@@ -2737,11 +2726,8 @@ function checkGroupedShortText(q) {
   });
 
   const isFullyCorrect = totalCorrect === totalItems;
-  if (totalCorrect >= totalItems / 2) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  const isPassingScore = totalCorrect >= totalItems / 2;
+  awardPoints(q.id, isPassingScore);
   updateStats(state.subjectId, isFullyCorrect);
 
   state.history.add({
@@ -2785,11 +2771,8 @@ function checkGroupedTranslation(q) {
   });
 
   const isFullyCorrect = correctCount === items.length;
-  if (correctCount >= items.length / 2) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  const isPassingScore = correctCount >= items.length / 2;
+  awardPoints(q.id, isPassingScore);
   updateStats(state.subjectId, isFullyCorrect);
 
   state.history.add({
@@ -2868,11 +2851,8 @@ function checkGroupedSelect(q) {
   });
 
   const isFullyCorrect = totalPoints === maxPoints;
-  if (totalPoints >= maxPoints / 2) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  const isPassingScore = totalPoints >= maxPoints / 2;
+  awardPoints(q.id, isPassingScore);
   updateStats(state.subjectId, isFullyCorrect);
 
   state.history.add({
@@ -2920,11 +2900,10 @@ function checkTranslationOpen(q) {
     if (isCorrect) break;
   }
 
+  awardPoints(q.id, isCorrect);
   if (isCorrect) {
-    state.score++;
     input?.classList.add("input-correct");
   } else {
-    state.wrong++;
     input?.classList.add("input-wrong");
   }
   updateStats(state.subjectId, isCorrect);
@@ -2967,11 +2946,8 @@ function checkWiskundeMultiPart(q) {
   const isFullyCorrect = correctCount === parts.length;
 
   // Update score (count as correct if > 50% of parts correct)
-  if (correctCount >= parts.length / 2) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  const isPassingScore = correctCount >= parts.length / 2;
+  awardPoints(q.id, isPassingScore);
   updateStats(state.subjectId, isFullyCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, isFullyCorrect);
 
