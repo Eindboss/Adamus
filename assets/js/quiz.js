@@ -217,6 +217,14 @@ function showModeSelection() {
   const container = $("quizArea");
   if (!container) return;
 
+  const meta = state.subjectMeta;
+
+  // If subject is exam-only, skip mode selection and start exam directly
+  if (meta?.examOnly) {
+    startQuiz("exam");
+    return;
+  }
+
   // If subject doesn't support exam mode, start practice directly
   if (!supportsExamMode()) {
     startQuiz("practice");
@@ -227,11 +235,12 @@ function showModeSelection() {
   updateControls();
 
   const totalQuestions = 50; // For geschiedenis quiz
+  const examMinutes = meta?.examDurationMinutes || EXAM_DURATION_MINUTES;
 
   container.innerHTML = `
     <div class="mode-selection">
       <h2 class="mode-title">Kies je modus</h2>
-      <p class="mode-subtitle">${state.subjectMeta?.title || "Quiz"}</p>
+      <p class="mode-subtitle">${meta?.title || "Quiz"}</p>
 
       <div class="mode-cards">
         <div class="mode-card" id="practiceMode" tabindex="0">
@@ -251,7 +260,7 @@ function showModeSelection() {
           <h3>Volledige toets</h3>
           <ul class="mode-features">
             <li>Alle ${totalQuestions} vragen</li>
-            <li>${EXAM_DURATION_MINUTES} minuten totaal</li>
+            <li>${examMinutes} minuten totaal</li>
             <li>Pauzeren mogelijk</li>
             <li>Eindcijfer (1-10)</li>
           </ul>
@@ -321,11 +330,20 @@ function showResumePrompt(savedProgress) {
 }
 
 /**
- * Order questions for full exam mode (easy → hard)
- * Didactically structured: confidence → understanding → application → challenge
+ * Order questions for full exam mode
+ * - For geschiedenis: didactic order (easy → hard)
+ * - For other subjects with preserveOrder: keep original JSON order
+ * - Default: keep original order
  */
 function orderQuestionsForExam(questions) {
-  // Nieuwe didactische volgorde: rustige start, zware vragen naar achteren
+  // Check if subject has preserveOrder flag or is not geschiedenis
+  const meta = state.subjectMeta;
+  if (meta?.preserveOrder || !state.subjectId?.startsWith("geschiedenis")) {
+    // Keep original order from JSON file
+    return questions;
+  }
+
+  // Geschiedenis: didactische volgorde (rustige start, zware vragen naar achteren)
   const examOrder = [
     // FASE 1 - Instap & rust (vraag 1-8): vertrouwen opbouwen, geen overload
     "g-045", "g-005", "g-006", "g-016", "g-009", "g-027", "g-031", "g-049",
@@ -464,7 +482,10 @@ async function loadQuestions(savedProgress = null) {
 
     // For exam mode: start the total timer once at the beginning
     if (state.mode === "exam") {
-      resetTimer(EXAM_DURATION_SECONDS);
+      // Use custom exam duration if specified, otherwise default
+      const examMinutes = meta?.examDurationMinutes || EXAM_DURATION_MINUTES;
+      const examSeconds = examMinutes * 60;
+      resetTimer(examSeconds);
       startTimer();
     }
 

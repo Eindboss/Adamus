@@ -20,7 +20,9 @@
       "schema": "toets",
       "hideFlashcards": true,
       "week": "2e toetsweek",
-      "questionsPerSession": 15
+      "examOnly": true,
+      "examDurationMinutes": 60,
+      "preserveOrder": true
     },
     {
       "id": "latijn-proeftoets-regnum",
@@ -31,7 +33,9 @@
       "schema": "toets",
       "hideFlashcards": true,
       "week": "2e toetsweek",
-      "questionsPerSession": 15
+      "examOnly": true,
+      "examDurationMinutes": 60,
+      "preserveOrder": true
     },
     {
       "id": "latijn-flumen-toets",
