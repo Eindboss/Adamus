@@ -12,6 +12,28 @@
       "questionsPerSession": 15
     },
     {
+      "id": "latijn-proeftoets-lupa",
+      "subject": "Latijn",
+      "label": "Latijn – Proeftoets Lupa (Les 2)",
+      "title": "Latijn – Proeftoets Les 2 Lupa",
+      "file": "data/latijn/proeftoets-lupa.json",
+      "schema": "toets",
+      "hideFlashcards": true,
+      "week": "2e toetsweek",
+      "questionsPerSession": 15
+    },
+    {
+      "id": "latijn-proeftoets-regnum",
+      "subject": "Latijn",
+      "label": "Latijn – Proeftoets Regnum (Les 3)",
+      "title": "Latijn – Proeftoets Les 3 Regnum",
+      "file": "data/latijn/proeftoets-regnum.json",
+      "schema": "toets",
+      "hideFlashcards": true,
+      "week": "2e toetsweek",
+      "questionsPerSession": 15
+    },
+    {
       "id": "latijn-flumen-toets",
       "subject": "Latijn",
       "label": "Latijn – Proeftoets (Flumen)",

@@ -1,0 +1,424 @@
+{
+  "schema_version": "2.0.0",
+  "id": "latijn-proeftoets-regnum",
+  "title": "Proeftoets Les 3 Regnum",
+  "subject": "Latijn",
+  "description": "Leertoets les 3 Regnum - Ablativus, verbuigingen, woordenschat en cultuur. 34 vragen, 46 punten.",
+  "created_at": "2025-12-27T12:00:00Z",
+  "settings": {
+    "questions_per_session_default": 34,
+    "answer_policy_default": {
+      "case_insensitive": true,
+      "trim_whitespace": true,
+      "strip_punctuation": true,
+      "normalize_diacritics": true,
+      "collapse_internal_spaces": true,
+      "allow_synonyms": true,
+      "min_answer_length": 1
+    },
+    "ui_hints_default": {
+      "show_points": true,
+      "show_feedback_on_incorrect": true,
+      "show_model_answer_after_attempts": 2,
+      "max_attempts_practice": 3,
+      "max_attempts_test": 1
+    }
+  },
+  "taxonomy": {
+    "groups": {
+      "I": { "id": "I", "title": "I - Invulvraag", "description": "Naamval bijwoordelijke bepaling" },
+      "II": { "id": "II", "title": "II - Verbuigingen", "description": "Verbuigingstabellen femina en urbs" },
+      "III": { "id": "III", "title": "III - Woordenschat", "description": "Vertaling Latijn-Nederlands" },
+      "IV": { "id": "IV", "title": "IV - Contextvertaling", "description": "Vertaal in context" },
+      "V": { "id": "V", "title": "V - Grammaticale analyse", "description": "Naamval, getal, verklaring" },
+      "VI": { "id": "VI", "title": "VI - Cultuur", "description": "Cultuurvragen les 3" },
+      "VII": { "id": "VII", "title": "VII - Vertaling", "description": "Tekst vertalen" },
+      "VIII": { "id": "VIII", "title": "VIII - Tekstbegrip", "description": "Vragen over de tekst" }
+    },
+    "skills": [
+      "grammatica_naamvallen",
+      "verbuigingen",
+      "woordenschat_la_nl",
+      "vertalen_context",
+      "zinsanalyse",
+      "cultuur",
+      "vertalen_tekst",
+      "tekstbegrip"
+    ]
+  },
+  "question_bank": [
+    {
+      "id": "regnum-001",
+      "group_id": "I",
+      "type": "open",
+      "prompt": {
+        "text": "Vul de zin aan: Het zelfstandig naamwoord dat in een Latijnse zin de functie bijwoordelijke bepaling heeft, staat in de naamval ...",
+        "html": "Vul de zin aan:<br><br>Het zelfstandig naamwoord dat in een Latijnse zin de functie <strong>bijwoordelijke bepaling</strong> heeft, staat in de naamval ..."
+      },
+      "points": 1,
+      "skills": ["grammatica_naamvallen"],
+      "mode": "practice",
+      "payload": {
+        "question": "Het zelfstandig naamwoord dat in een Latijnse zin de functie bijwoordelijke bepaling heeft, staat in de naamval ...",
+        "accepted_answers": ["ablativus", "de ablativus", "ablatief"],
+        "grading": { "rule": "any_accepted" }
+      },
+      "feedback": {
+        "explanation": "De bijwoordelijke bepaling staat in de ablativus.",
+        "default": "De bijwoordelijke bepaling staat in de ablativus."
+      }
+    },
+    {
+      "id": "regnum-002",
+      "group_id": "II",
+      "type": "grouped_short_text",
+      "prompt": {
+        "text": "Vul de ontbrekende vormen in van 'femina' (vrouw):",
+        "html": "Vul de ontbrekende vormen in van <strong>femina</strong> (vrouw):"
+      },
+      "points": 5,
+      "skills": ["verbuigingen"],
+      "mode": "practice",
+      "payload": {
+        "instruction_html": "Vul de ontbrekende vormen in van <strong>femina</strong> (vrouw). Gegeven: nom ev = femina, acc ev = feminam, nom mv = feminae, acc mv = urbes",
+        "items": [
+          { "id": "item01", "question": "dativus enkelvoud", "accepted_answers": ["feminae"], "points": 1 },
+          { "id": "item02", "question": "ablativus enkelvoud", "accepted_answers": ["femina"], "points": 1 },
+          { "id": "item03", "question": "dativus meervoud", "accepted_answers": ["feminis"], "points": 1 },
+          { "id": "item04", "question": "accusativus meervoud", "accepted_answers": ["feminas"], "points": 1 },
+          { "id": "item05", "question": "ablativus meervoud", "accepted_answers": ["feminis"], "points": 1 }
+        ],
+        "grading": { "rule": "per_item" }
+      },
+      "feedback": {
+        "explanation": "femina: nom ev femina, dat ev feminae, acc ev feminam, abl ev femina, nom mv feminae, dat mv feminis, acc mv feminas, abl mv feminis"
+      }
+    },
+    {
+      "id": "regnum-003",
+      "group_id": "II",
+      "type": "grouped_short_text",
+      "prompt": {
+        "text": "Vul de ontbrekende vormen in van 'urbs' (stad):",
+        "html": "Vul de ontbrekende vormen in van <strong>urbs</strong> (stad):"
+      },
+      "points": 5,
+      "skills": ["verbuigingen"],
+      "mode": "practice",
+      "payload": {
+        "instruction_html": "Vul de ontbrekende vormen in van <strong>urbs</strong> (stad). Gegeven: nom ev = urbs, nom mv = urbes, acc mv = urbes",
+        "items": [
+          { "id": "item01", "question": "dativus enkelvoud", "accepted_answers": ["urbi"], "points": 1 },
+          { "id": "item02", "question": "accusativus enkelvoud", "accepted_answers": ["urbem"], "points": 1 },
+          { "id": "item03", "question": "ablativus enkelvoud", "accepted_answers": ["urbe"], "points": 1 },
+          { "id": "item04", "question": "dativus meervoud", "accepted_answers": ["urbibus"], "points": 1 },
+          { "id": "item05", "question": "ablativus meervoud", "accepted_answers": ["urbibus"], "points": 1 }
+        ],
+        "grading": { "rule": "per_item" }
+      },
+      "feedback": {
+        "explanation": "urbs: nom ev urbs, dat ev urbi, acc ev urbem, abl ev urbe, nom mv urbes, dat mv urbibus, acc mv urbes, abl mv urbibus"
+      }
+    },
+    {
+      "id": "regnum-004",
+      "group_id": "III",
+      "type": "grouped_short_text",
+      "prompt": {
+        "text": "Noteer de vertaling van de onderstaande woorden:",
+        "html": "Noteer de vertaling van de onderstaande woorden:"
+      },
+      "points": 5,
+      "skills": ["woordenschat_la_nl"],
+      "mode": "practice",
+      "payload": {
+        "instruction_html": "Vertaal de volgende Latijnse woorden naar het Nederlands:",
+        "items": [
+          { "id": "item11", "question": "stare", "accepted_answers": ["staan"], "points": 1 },
+          { "id": "item12", "question": "quoque", "accepted_answers": ["ook"], "points": 1 },
+          { "id": "item13", "question": "facere", "accepted_answers": ["doen", "maken"], "points": 1 },
+          { "id": "item14", "question": "amicus", "accepted_answers": ["vriend"], "points": 1 },
+          { "id": "item15", "question": "sed", "accepted_answers": ["maar"], "points": 1 }
+        ],
+        "grading": { "rule": "per_item" }
+      },
+      "feedback": {
+        "explanation": "stare = staan, quoque = ook, facere = doen/maken, amicus = vriend, sed = maar"
+      }
+    },
+    {
+      "id": "regnum-005",
+      "group_id": "IV",
+      "type": "grouped_short_text",
+      "prompt": {
+        "text": "Vertaal het onderstreepte woord in de context van de zin (let op naamval, getal en persoon):",
+        "html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin (let op naamval, getal en persoon):"
+      },
+      "points": 5,
+      "skills": ["vertalen_context"],
+      "mode": "practice",
+      "payload": {
+        "instruction_html": "Vertaal het onderstreepte woord in de context van de zin:",
+        "items": [
+          { "id": "item16", "question": "DE monte Aventino descendit Remus.", "accepted_answers": ["van", "vanaf", "van af"], "points": 1 },
+          { "id": "item17", "question": "Romulus tacet, DUM frater accedit.", "accepted_answers": ["terwijl"], "points": 1 },
+          { "id": "item18", "question": "Feminae et VIRI in urbe sunt.", "accepted_answers": ["mannen"], "points": 1 },
+          { "id": "item19", "question": "Cur mihi non LICET?", "accepted_answers": ["het is toegestaan", "is toegestaan", "mag"], "points": 1 },
+          { "id": "item20", "question": "Qui murum transilit, CIVIS non est.", "accepted_answers": ["burger"], "points": 1 }
+        ],
+        "grading": { "rule": "per_item" }
+      },
+      "feedback": {
+        "explanation": "de = van(af), dum = terwijl, viri = mannen, licet = het is toegestaan, civis = burger"
+      }
+    },
+    {
+      "id": "regnum-006",
+      "group_id": "V",
+      "type": "grouped_short_text",
+      "prompt": {
+        "text": "Noteer van de woorden naamval (nom/dat/acc/abl), getal (ev/mv) en verklaring:",
+        "html": "Noteer van de woorden uit de zinnen hierboven: <strong>naamval</strong> (nom/dat/acc/abl), <strong>getal</strong> (ev/mv) en <strong>verklaring</strong> voor de gebruikte naamval."
+      },
+      "points": 5,
+      "skills": ["zinsanalyse"],
+      "mode": "practice",
+      "payload": {
+        "instruction_html": "Geef voor elk woord: naamval, getal, verklaring. Voorbeeld: Remus (zin 16) = nom, ev, onderwerp<br><br>Zinnen:<br>16. De monte Aventino descendit Remus.<br>17. Romulus tacet, dum frater accedit.<br>18. Feminae et viri in urbe sunt.<br>19. Cur mihi non licet?<br>20. Qui murum transilit, civis non est.",
+        "items": [
+          { "id": "item21", "question": "monte (zin 16) - naamval", "accepted_answers": ["abl", "ablativus"], "points": 0.33 },
+          { "id": "item21b", "question": "monte (zin 16) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item21c", "question": "monte (zin 16) - verklaring", "accepted_answers": ["afhankelijk van voorzetsel", "bij voorzetsel", "voorzetsel"], "points": 0.34 },
+          { "id": "item22", "question": "urbe (zin 18) - naamval", "accepted_answers": ["abl", "ablativus"], "points": 0.33 },
+          { "id": "item22b", "question": "urbe (zin 18) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item22c", "question": "urbe (zin 18) - verklaring", "accepted_answers": ["afhankelijk van voorzetsel", "bij voorzetsel", "voorzetsel"], "points": 0.34 },
+          { "id": "item23", "question": "mihi (zin 19) - naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33 },
+          { "id": "item23b", "question": "mihi (zin 19) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item23c", "question": "mihi (zin 19) - verklaring", "accepted_answers": ["afhankelijk van werkwoord", "bij werkwoord"], "points": 0.34 },
+          { "id": "item24", "question": "murum (zin 20) - naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33 },
+          { "id": "item24b", "question": "murum (zin 20) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item24c", "question": "murum (zin 20) - verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
+          { "id": "item25", "question": "civis (zin 20) - naamval", "accepted_answers": ["nom", "nominativus"], "points": 0.33 },
+          { "id": "item25b", "question": "civis (zin 20) - getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
+          { "id": "item25c", "question": "civis (zin 20) - verklaring", "accepted_answers": ["onderwerp", "ow", "o.w."], "points": 0.34 }
+        ],
+        "grading": { "rule": "per_item" }
+      },
+      "feedback": {
+        "explanation": "monte = abl, ev, afhankelijk van voorzetsel; urbe = abl, ev, afhankelijk van voorzetsel; mihi = dat, ev, afhankelijk van werkwoord; murum = acc, ev, lijdend voorwerp; civis = nom, ev, onderwerp"
+      }
+    },
+    {
+      "id": "regnum-007",
+      "group_id": "VI",
+      "type": "open",
+      "prompt": {
+        "text": "Noteer de naam van de stad die in het stichtingsverhaal van Rome een belangrijke rol speelt.",
+        "html": "Noteer de naam van de stad die in het stichtingsverhaal van Rome een belangrijke rol speelt."
+      },
+      "points": 1,
+      "skills": ["cultuur"],
+      "mode": "practice",
+      "payload": {
+        "question": "Noteer de naam van de stad die in het stichtingsverhaal van Rome een belangrijke rol speelt.",
+        "accepted_answers": ["Alba Longa", "Alba-Longa"],
+        "grading": { "rule": "any_accepted" }
+      },
+      "feedback": {
+        "explanation": "Alba Longa"
+      }
+    },
+    {
+      "id": "regnum-008",
+      "group_id": "VI",
+      "type": "open",
+      "prompt": {
+        "text": "De goden geven beide broers een teken. Welk teken geven de goden aan Romulus?",
+        "html": "De goden geven beide broers een teken. Welk teken geven de goden aan Romulus?"
+      },
+      "points": 1,
+      "skills": ["cultuur"],
+      "mode": "practice",
+      "payload": {
+        "question": "De goden geven beide broers een teken. Welk teken geven de goden aan Romulus?",
+        "accepted_answers": [
+          "12 vogels vlogen boven zijn hoofd",
+          "er vlogen 12 vogels boven zijn hoofd",
+          "12 vogels",
+          "twaalf vogels"
+        ],
+        "grading": { "rule": "any_accepted" }
+      },
+      "feedback": {
+        "explanation": "Er vlogen 12 vogels boven zijn hoofd."
+      }
+    },
+    {
+      "id": "regnum-009",
+      "group_id": "VI",
+      "type": "mc",
+      "prompt": {
+        "text": "Op welke heuvel begint Remus zijn stad te bouwen?",
+        "html": "Op welke heuvel begint Remus zijn stad te bouwen?"
+      },
+      "points": 1,
+      "skills": ["cultuur"],
+      "mode": "practice",
+      "payload": {
+        "question": "Op welke heuvel begint Remus zijn stad te bouwen?",
+        "choices": [
+          { "id": "a", "text": "Aventinus" },
+          { "id": "b", "text": "Palatinus" }
+        ],
+        "correct_choice_id": "a",
+        "shuffle_choices": false
+      },
+      "feedback": {
+        "explanation": "Remus begint op de Aventinus, Romulus op de Palatinus."
+      }
+    },
+    {
+      "id": "regnum-010",
+      "group_id": "VI",
+      "type": "open",
+      "prompt": {
+        "text": "Beschrijf de twee gebeurtenissen die zorgen voor onenigheid tussen de broers over het koningschap. Geef voor beide aan waarover de onenigheid ontstond.",
+        "html": "Wanneer je de cultuurtekst vergelijkt met de Latijnse tekst van les 3, blijkt dat er twee gebeurtenissen zijn die zorgen voor onenigheid tussen de broers over het koningschap.<br><br>Beschrijf in eigen woorden <strong>beide gebeurtenissen</strong>. Geef voor beide gebeurtenissen aan waarover nu precies de onenigheid ontstond."
+      },
+      "points": 2,
+      "skills": ["cultuur"],
+      "mode": "practice",
+      "payload": {
+        "question": "Beschrijf de twee gebeurtenissen die zorgen voor onenigheid tussen Romulus en Remus.",
+        "accepted_answers": [
+          "ruzie over vogels en Remus springt over de muur",
+          "wie zag de vogels eerst vs wie zag de meeste; Remus springt over muur"
+        ],
+        "grading": { "rule": "manual_review" }
+      },
+      "feedback": {
+        "explanation": "Eerste gebeurtenis: Ze krijgen ruzie over wie de goden bevoordelen: Remus omdat hij de vogels het eerst zag, of Romulus omdat hij de meeste vogels zag.\n\nTweede gebeurtenis: Remus lacht zijn broer uit bij het zien van de lage muur en springt er overheen; hierop wordt Romulus zo boos dat hij Remus doodslaat."
+      }
+    },
+    {
+      "id": "regnum-011",
+      "group_id": "VII",
+      "type": "translation_open",
+      "prompt": {
+        "text": "Vertaal de volgende tekst in begrijpelijk Nederlands:",
+        "html": "Vertaal de volgende tekst in begrijpelijk Nederlands:<br><br><em>Marcus cum amico Quinto in monte Palatino ludit.</em> <small>(Palatinus = Palatijn, ludere = spelen)</small><br><em>Primum saxis murum aedificant.</em><br><em>Quintus mandata dividit, sed Marcus</em><br><em>nihil facit. Tandem Quintus de muro clamat:</em> <small>(nihil = niets)</small><br><em>'Cur tibi non placet domum aedificare?'</em> <small>(domus = huis)</small>"
+      },
+      "points": 10,
+      "skills": ["vertalen_tekst"],
+      "mode": "practice",
+      "payload": {
+        "latin_text": "Marcus cum amico Quinto in monte Palatino ludit.\nPrimum saxis murum aedificant.\nQuintus mandata dividit, sed Marcus\nnihil facit. Tandem Quintus de muro clamat:\n'Cur tibi non placet domum aedificare?'",
+        "vocabulary": [
+          { "latin": "Palatinus", "dutch": "Palatijn" },
+          { "latin": "ludere", "dutch": "spelen" },
+          { "latin": "nihil", "dutch": "niets (acc.)" },
+          { "latin": "domus", "dutch": "huis" }
+        ],
+        "model_answer": "Marcus speelt met zijn vriend Quintus op de berg Palatinus (Palatijn).\nEerst bouwen zij met rotsblokken een muur.\nQuintus verdeelt de opdrachten, maar Marcus\ndoet niets. Eindelijk/ten slotte schreeuwt Quintus vanaf de muur:\n'Waarom bevalt het je niet een huis te bouwen?'",
+        "grading": { "rule": "manual_review" }
+      },
+      "feedback": {
+        "explanation": "Modelvertaling: Marcus speelt met zijn vriend Quintus op de berg Palatijn. Eerst bouwen zij met rotsblokken een muur. Quintus verdeelt de opdrachten, maar Marcus doet niets. Eindelijk schreeuwt Quintus vanaf de muur: 'Waarom bevalt het je niet een huis te bouwen?'"
+      }
+    },
+    {
+      "id": "regnum-012",
+      "group_id": "VIII",
+      "type": "open",
+      "prompt": {
+        "text": "Noteer een bijwoordelijke bepaling uit regel 1.",
+        "html": "Noteer een bijwoordelijke bepaling uit regel 1.<br><br><em>Marcus cum amico Quinto in monte Palatino ludit.</em>"
+      },
+      "points": 1,
+      "skills": ["tekstbegrip", "zinsanalyse"],
+      "mode": "practice",
+      "payload": {
+        "question": "Noteer een bijwoordelijke bepaling uit regel 1.",
+        "accepted_answers": [
+          "in monte Palatino",
+          "op de berg Palatijn",
+          "cum amico Quinto",
+          "met zijn vriend Quintus"
+        ],
+        "grading": { "rule": "any_accepted" }
+      },
+      "feedback": {
+        "explanation": "in monte Palatino / op de berg Palatijn"
+      }
+    },
+    {
+      "id": "regnum-013",
+      "group_id": "VIII",
+      "type": "open",
+      "prompt": {
+        "text": "Noteer de twee tekstelementen die aangeven wat de volgorde van de handelingen is.",
+        "html": "Noteer de twee tekstelementen die aangeven wat de volgorde van de handelingen is."
+      },
+      "points": 2,
+      "skills": ["tekstbegrip"],
+      "mode": "practice",
+      "payload": {
+        "question": "Noteer de twee tekstelementen die aangeven wat de volgorde van de handelingen is.",
+        "accepted_answers": [
+          "primum en tandem",
+          "primum, tandem",
+          "eerst en eindelijk",
+          "primum (eerst); tandem (eindelijk)"
+        ],
+        "grading": { "rule": "any_accepted" }
+      },
+      "feedback": {
+        "explanation": "primum (eerst); tandem (eindelijk/ten slotte)"
+      }
+    },
+    {
+      "id": "regnum-014",
+      "group_id": "VIII",
+      "type": "open",
+      "prompt": {
+        "text": "Hoe is de rolverdeling tussen Quintus en Marcus?",
+        "html": "Hoe is de rolverdeling tussen Quintus en Marcus?"
+      },
+      "points": 1,
+      "skills": ["tekstbegrip"],
+      "mode": "practice",
+      "payload": {
+        "question": "Hoe is de rolverdeling tussen Quintus en Marcus?",
+        "accepted_answers": [
+          "Quintus speelt de baas, Marcus speelt een knecht",
+          "Quintus is de baas, Marcus de knecht",
+          "Quintus geeft opdrachten, Marcus doet niets"
+        ],
+        "grading": { "rule": "any_accepted" }
+      },
+      "feedback": {
+        "explanation": "Quintus speelt de baas, Marcus speelt een knecht/slaaf."
+      }
+    },
+    {
+      "id": "regnum-015",
+      "group_id": "VIII",
+      "type": "open",
+      "prompt": {
+        "text": "In regel 3-4 zit een tegenstelling. Noteer het tekstelement dat deze tegenstelling aangeeft.",
+        "html": "In regel 3-4 zit een tegenstelling. Noteer het tekstelement dat deze tegenstelling aangeeft.<br><br><em>Quintus mandata dividit, sed Marcus nihil facit.</em>"
+      },
+      "points": 1,
+      "skills": ["tekstbegrip"],
+      "mode": "practice",
+      "payload": {
+        "question": "Noteer het tekstelement dat de tegenstelling in regel 3-4 aangeeft.",
+        "accepted_answers": ["sed", "het woordje sed", "sed (maar)"],
+        "grading": { "rule": "any_accepted" }
+      },
+      "feedback": {
+        "explanation": "sed (maar): Quintus verdeelt de opdrachten, MAAR Marcus doet niets."
+      }
+    }
+  ]
+}
