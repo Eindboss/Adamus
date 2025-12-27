@@ -3830,6 +3830,8 @@ function updateTimerVisibility() {
     if (timerToggleWrap) timerToggleWrap.style.display = "none";
     if (timerDisplay) {
       timerDisplay.style.display = "";
+      // Remove disabled styling - timer is always on in exam mode
+      timerDisplay.classList.remove("timer-disabled");
       // Update label to show "Tijd:" instead of "Resterend:"
       const labelNode = timerDisplay.childNodes[0];
       if (labelNode && labelNode.nodeType === Node.TEXT_NODE) {
