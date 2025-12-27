@@ -254,6 +254,14 @@ export function checkShortAnswer(q) {
 /**
  * Render matching question (connect left items to right items)
  */
+// Store matching state for drag-drop
+let matchingState = {
+  pairs: {}, // leftIdx -> rightOriginalIdx
+  leftItems: [],
+  rightItems: [],
+  shuffledRight: []
+};
+
 export function renderMatching(container, q) {
   const prompt = q.instruction || q.prompt || "Koppel de begrippen aan elkaar.";
   const leftItems = q.left || [];
@@ -263,37 +271,48 @@ export function renderMatching(container, q) {
   const shuffledRight = rightItems.map((item, idx) => ({ text: item, originalIdx: idx }));
   shuffle(shuffledRight);
 
+  // Store state for checking
+  matchingState = {
+    pairs: {},
+    leftItems,
+    rightItems,
+    shuffledRight
+  };
+
+  // Left side: begrippen with drop zones
   const leftHtml = leftItems.map((item, idx) => `
-    <div class="matching-left-item" data-idx="${idx}">
-      <span class="matching-label">${idx + 1}.</span>
-      <span class="matching-text">${item}</span>
+    <div class="match-pair" data-left-idx="${idx}">
+      <div class="match-begrip">
+        <span class="match-label">${idx + 1}.</span>
+        <span class="match-text">${item}</span>
+      </div>
+      <div class="match-dropzone" data-left-idx="${idx}">
+        <span class="dropzone-hint">Sleep hier</span>
+      </div>
     </div>
   `).join("");
 
+  // Right side: draggable betekenissen
   const rightHtml = shuffledRight.map((item, displayIdx) => `
-    <div class="matching-right-item" data-original="${item.originalIdx}">
-      <select class="matching-select" data-left-idx="${displayIdx}" id="match-${displayIdx}">
-        <option value="">Kies...</option>
-        ${leftItems.map((_, leftIdx) => `<option value="${leftIdx}">${leftIdx + 1}</option>`).join("")}
-      </select>
-      <span class="matching-text">${item.text}</span>
+    <div class="match-betekenis" draggable="true" data-original-idx="${item.originalIdx}" data-display-idx="${displayIdx}">
+      <span class="match-drag-handle">⋮⋮</span>
+      <span class="match-text">${item.text}</span>
     </div>
   `).join("");
 
   const contentHtml = `
     <div class="question-title">${prompt}</div>
-    <div class="matching-container">
-      <div class="matching-left">
-        <div class="matching-header">Begrippen</div>
+    <div class="matching-drag-container">
+      <div class="matching-pairs">
         ${leftHtml}
       </div>
-      <div class="matching-right">
-        <div class="matching-header">Betekenis</div>
+      <div class="matching-pool">
+        <div class="matching-pool-header">Sleep naar begrip</div>
         ${rightHtml}
       </div>
     </div>
     <div class="matching-progress">
-      <span id="matchingFilled">0</span> / <span>${rightItems.length}</span> gekoppeld
+      <span id="matchingFilled">0</span> / <span>${leftItems.length}</span> gekoppeld
     </div>
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
@@ -310,21 +329,113 @@ export function renderMatching(container, q) {
     container.innerHTML = contentHtml;
   }
 
-  // Store shuffled order for checking
-  container.dataset.shuffledOrder = JSON.stringify(shuffledRight.map(r => r.originalIdx));
-
-  // Setup select listeners
-  $$$(".matching-select", container).forEach((select) => {
-    select.addEventListener("change", updateMatchingProgress);
-  });
+  // Setup drag and drop
+  setupMatchingDragDrop();
 
   const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
 }
 
+function setupMatchingDragDrop() {
+  let draggedEl = null;
+
+  // Draggable items (betekenissen)
+  $$$(".match-betekenis").forEach(el => {
+    el.addEventListener("dragstart", (e) => {
+      draggedEl = el;
+      el.classList.add("dragging");
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", el.dataset.originalIdx);
+    });
+
+    el.addEventListener("dragend", () => {
+      el.classList.remove("dragging");
+      draggedEl = null;
+      $$$(".match-dropzone").forEach(dz => dz.classList.remove("drag-over"));
+    });
+
+    // Click to remove from paired state
+    el.addEventListener("click", () => {
+      if (el.closest(".match-dropzone")) {
+        returnToPool(el);
+      }
+    });
+  });
+
+  // Drop zones
+  $$$(".match-dropzone").forEach(dropzone => {
+    dropzone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+      dropzone.classList.add("drag-over");
+    });
+
+    dropzone.addEventListener("dragleave", () => {
+      dropzone.classList.remove("drag-over");
+    });
+
+    dropzone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      dropzone.classList.remove("drag-over");
+
+      if (!draggedEl) return;
+
+      const leftIdx = parseInt(dropzone.dataset.leftIdx);
+      const rightOriginalIdx = parseInt(draggedEl.dataset.originalIdx);
+
+      // If dropzone already has an item, return it to pool
+      const existing = dropzone.querySelector(".match-betekenis");
+      if (existing) {
+        returnToPool(existing);
+      }
+
+      // Move dragged item to dropzone
+      dropzone.innerHTML = "";
+      dropzone.appendChild(draggedEl);
+      draggedEl.classList.add("paired");
+
+      // Store pairing
+      matchingState.pairs[leftIdx] = rightOriginalIdx;
+
+      updateMatchingProgress();
+    });
+
+    // Click on dropzone to return item
+    dropzone.addEventListener("click", (e) => {
+      if (e.target === dropzone || e.target.classList.contains("dropzone-hint")) {
+        const item = dropzone.querySelector(".match-betekenis");
+        if (item) returnToPool(item);
+      }
+    });
+  });
+}
+
+function returnToPool(el) {
+  const pool = $$(".matching-pool");
+  if (!pool) return;
+
+  // Find which left it was paired with and remove
+  const leftIdx = el.closest(".match-dropzone")?.dataset.leftIdx;
+  if (leftIdx !== undefined) {
+    delete matchingState.pairs[parseInt(leftIdx)];
+  }
+
+  // Restore dropzone hint
+  const dropzone = el.closest(".match-dropzone");
+  if (dropzone) {
+    dropzone.innerHTML = '<span class="dropzone-hint">Sleep hier</span>';
+  }
+
+  // Return to pool
+  el.classList.remove("paired");
+  pool.appendChild(el);
+
+  updateMatchingProgress();
+}
+
 function updateMatchingProgress() {
-  const filled = $$$(".matching-select").filter(s => s.value !== "").length;
-  const total = $$$(".matching-select").length;
+  const filled = Object.keys(matchingState.pairs).length;
+  const total = matchingState.leftItems.length;
 
   const progressEl = $("matchingFilled");
   if (progressEl) progressEl.textContent = filled;
@@ -341,8 +452,8 @@ export function checkMatching(q) {
   const leftItems = q.left || [];
   const rightItems = q.right || [];
 
-  // Support both pairs (index-based) and correct_pairs (text-based)
-  let correctPairsMap = {}; // leftIdx -> rightIdx
+  // Build correct pairs map: leftIdx -> rightIdx
+  let correctPairsMap = {};
 
   if (q.correct_pairs) {
     // Text-based format: {"Zeus": "hemel, bliksem, oppergod"}
@@ -361,30 +472,30 @@ export function checkMatching(q) {
   let correctCount = 0;
   const totalPairs = leftItems.length;
 
-  const container = $("quizArea");
-  const shuffledOrder = JSON.parse(container.dataset.shuffledOrder || "[]");
+  // Check each pairing using matchingState
+  $$$(".match-pair").forEach((pairEl) => {
+    const leftIdx = parseInt(pairEl.dataset.leftIdx);
+    const dropzone = pairEl.querySelector(".match-dropzone");
+    const droppedItem = dropzone?.querySelector(".match-betekenis");
 
-  $$$(".matching-right-item").forEach((item, displayIdx) => {
-    const select = $$(".matching-select", item);
-    const originalRightIdx = shuffledOrder[displayIdx];
-    const userLeftIdx = parseInt(select.value);
+    const userRightIdx = droppedItem ? parseInt(droppedItem.dataset.originalIdx) : null;
+    const expectedRightIdx = correctPairsMap[leftIdx];
 
-    // Find which left index should match this right index
-    let expectedLeftIdx = null;
-    for (const [leftIdx, rightIdx] of Object.entries(correctPairsMap)) {
-      if (parseInt(rightIdx) === originalRightIdx) {
-        expectedLeftIdx = parseInt(leftIdx);
-        break;
-      }
-    }
-
-    const isCorrect = userLeftIdx === expectedLeftIdx;
+    const isCorrect = userRightIdx === expectedRightIdx;
 
     if (isCorrect) {
       correctCount++;
-      item.classList.add("matching-correct");
+      pairEl.classList.add("match-correct");
     } else {
-      item.classList.add("matching-wrong");
+      pairEl.classList.add("match-wrong");
+      // Show correct answer
+      if (expectedRightIdx !== undefined) {
+        const correctText = rightItems[expectedRightIdx];
+        const hint = document.createElement("div");
+        hint.className = "match-hint";
+        hint.textContent = correctText;
+        dropzone.appendChild(hint);
+      }
     }
   });
 
