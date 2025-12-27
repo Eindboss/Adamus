@@ -66,8 +66,8 @@ import {
 // Constants
 const QUESTION_SECONDS = 90;
 const QUESTION_SECONDS_MULTIPART = 120;
-const EXAM_DURATION_MINUTES = 45;
-const EXAM_DURATION_SECONDS = EXAM_DURATION_MINUTES * 60; // 2700 seconds
+const EXAM_DURATION_MINUTES = 60;
+const EXAM_DURATION_SECONDS = EXAM_DURATION_MINUTES * 60; // 3600 seconds
 
 // Points per question for exam mode (total: 90 points)
 const EXAM_POINTS = {
@@ -3951,6 +3951,9 @@ function setupEventListeners() {
 
     // Handle click
     timerToggle.addEventListener("click", () => {
+      // Timer toggle only works in practice mode
+      if (state.mode === "exam") return;
+
       state.timerEnabled = !state.timerEnabled;
       localStorage.setItem("adamus-timer-enabled", state.timerEnabled);
       updateTimerToggleUI(timerToggle, timerDisplay);
@@ -3982,7 +3985,9 @@ function updateTimerToggleUI(toggle, display) {
     toggle.setAttribute("aria-checked", state.timerEnabled);
   }
   if (display) {
-    display.classList.toggle("timer-disabled", !state.timerEnabled);
+    // In exam mode, timer is always enabled (never show disabled state)
+    const isDisabled = state.mode !== "exam" && !state.timerEnabled;
+    display.classList.toggle("timer-disabled", isDisabled);
   }
 }
 
