@@ -2469,3 +2469,180 @@ textarea.open-input {
     font-size: 0.9375rem;
   }
 }
+
+/* ===========================================
+   Mode Selection (Practice vs Exam)
+   =========================================== */
+.mode-selection {
+  text-align: center;
+  padding: var(--space-4);
+}
+
+.mode-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+
+.mode-subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: var(--space-6);
+}
+
+.mode-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mode-card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease);
+  text-align: center;
+}
+
+.mode-card:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.mode-card:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.2);
+}
+
+.mode-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.mode-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: var(--space-3);
+}
+
+.mode-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4) 0;
+  text-align: left;
+}
+
+.mode-features li {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  padding: var(--space-1) 0;
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.mode-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: 600;
+}
+
+.mode-card .btn {
+  width: 100%;
+}
+
+/* ===========================================
+   Summary Grade Display (Exam Mode)
+   =========================================== */
+.summary-grade {
+  margin-bottom: var(--space-5);
+}
+
+.grade-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-2);
+  border: 4px solid;
+}
+
+.grade-circle.pass {
+  background: var(--success-light);
+  border-color: var(--success);
+}
+
+.grade-circle.fail {
+  background: var(--error-light);
+  border-color: var(--error);
+}
+
+.grade-value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.grade-circle.pass .grade-value {
+  color: var(--success);
+}
+
+.grade-circle.fail .grade-value {
+  color: var(--error);
+}
+
+.grade-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-1);
+}
+
+.grade-points {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Summary actions */
+.summary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 480px) {
+  .mode-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .mode-card {
+    padding: var(--space-4);
+  }
+
+  .mode-icon {
+    font-size: 2rem;
+  }
+
+  .grade-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .grade-value {
+    font-size: 1.5rem;
+  }
+}

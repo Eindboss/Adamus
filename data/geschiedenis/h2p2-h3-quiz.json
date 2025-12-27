@@ -137,22 +137,18 @@
     },
     {
       "id": "g-005",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 1,
-      "difficulty": 4,
-      "instruction": "Antwoord in 2 zinnen. Gebruik minstens 2 kernwoorden.",
-      "prompt": "Leg uit waarom historici zeggen dat de Atheense democratie ‘beperkt’ was.",
-      "keywords": [
-        "vrouwen",
-        "slaven",
-        "metoiken",
-        "uitsluiting",
-        "burgerrecht",
-        "geen stemrecht"
+      "difficulty": 3,
+      "q": "Waarom noemen historici de Atheense democratie 'beperkt'?",
+      "a": [
+        "Omdat alleen rijke mensen mochten stemmen",
+        "Omdat vrouwen, slaven en vreemdelingen geen burgerrechten hadden",
+        "Omdat Athene een koninkrijk was",
+        "Omdat er geen wetten bestonden"
       ],
-      "min_keywords": 2,
-      "rubric": "Noem minimaal twee uitgesloten groepen en verbind dat aan het begrip burgerrecht/stemrecht.",
-      "example_answer": "De democratie was beperkt omdat alleen mannelijke burgers mochten stemmen. Vrouwen, slaven en metoiken waren uitgesloten van burgerrecht en stemrecht.",
+      "c": 1,
+      "e": "De democratie gold alleen voor mannelijke burgers; grote groepen waren uitgesloten.",
       "media": {
         "query": "Wikimedia: ancient Athens agora people illustration",
         "kind": "image",
@@ -217,22 +213,18 @@
     },
     {
       "id": "g-008",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 2,
-      "difficulty": 5,
-      "instruction": "Antwoord in 2 zinnen: oorzaak → gevolg.",
-      "prompt": "Waarom konden mythen én beginnende wetenschap naast elkaar bestaan in Griekenland?",
-      "keywords": [
-        "wereldbeeld",
-        "verklaren",
-        "observatie",
-        "logica",
-        "traditie",
-        "vragen"
+      "difficulty": 4,
+      "q": "Waarom konden mythen en beginnende wetenschap naast elkaar bestaan in Griekenland?",
+      "a": [
+        "Omdat iedereen meteen stopte met geloven in goden",
+        "Omdat mythen traditie en betekenis boden, terwijl sommige denkers ook logisch gingen verklaren",
+        "Omdat wetenschap alleen in Egypte bestond",
+        "Omdat mythen wetenschappelijk bewezen waren"
       ],
-      "min_keywords": 2,
-      "rubric": "Laat zien dat oude religieuze verklaringen (traditie) bleven, terwijl sommige denkers ook met observatie/logica gingen verklaren.",
-      "example_answer": "Mythen bleven belangrijk als traditioneel wereldbeeld en religie. Tegelijk gingen sommige denkers natuurverschijnselen verklaren met observatie en logica, zonder dat iedereen meteen het oude geloof losliet.",
+      "c": 1,
+      "e": "Mythen bleven belangrijk als wereldbeeld, terwijl sommige Grieken ook met observatie en logica gingen verklaren.",
       "media": {
         "query": "Wikimedia: Aristotle bust",
         "kind": "image",
@@ -421,22 +413,18 @@
     },
     {
       "id": "g-015",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 4,
       "difficulty": 4,
-      "instruction": "Antwoord in 2 zinnen. Noem 1 voordeel én 1 nadeel van loting.",
-      "prompt": "Waarom gebruikten Atheners loting voor veel functies, en wat is een risico van loting?",
-      "keywords": [
-        "gelijke kans",
-        "macht",
-        "elite",
-        "corruptie",
-        "deskundigheid",
-        "toeval"
+      "q": "Wat was een voordeel én een nadeel van loting in Athene?",
+      "a": [
+        "Voordeel: alleen deskundigen kregen macht; nadeel: te weinig burgers",
+        "Voordeel: gelijke kansen voor burgers; nadeel: bestuurders konden onkundig zijn",
+        "Voordeel: snelle besluitvorming; nadeel: te weinig controle",
+        "Voordeel: rijkdom speelde geen rol; nadeel: alleen slaven deden mee"
       ],
-      "min_keywords": 2,
-      "rubric": "Voordeel: machtspreiding/gelijke kans; risico: ondeskundigheid/toeval of manipulatie rond selectie.",
-      "example_answer": "Loting gaf burgers een gelijke kans en beperkte de macht van een rijke elite. Een risico is dat iemand weinig deskundig kan zijn, omdat toeval meespeelt.",
+      "c": 1,
+      "e": "Loting beperkte de macht van een elite, maar kon ongeschikte bestuurders opleveren.",
       "media": {
         "query": "Wikimedia: kleroterion ancient Athens allotment machine",
         "kind": "image",
@@ -468,22 +456,18 @@
     },
     {
       "id": "g-017",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 5,
-      "difficulty": 5,
-      "instruction": "Antwoord in 2 zinnen: leg uit + geef 1 gevolg.",
-      "prompt": "Wat was de functie van een ‘heilige wapenstilstand’ tijdens de Olympische Spelen, en welk praktisch gevolg had dat?",
-      "keywords": [
-        "veilig",
-        "reizen",
-        "atleten",
-        "pelgrims",
-        "tijdelijk",
-        "oorlog"
+      "difficulty": 4,
+      "q": "Waarom was er een heilige wapenstilstand tijdens de Olympische Spelen?",
+      "a": [
+        "Om oorlogen definitief te beëindigen",
+        "Om atleten en bezoekers veilig naar Olympia te laten reizen",
+        "Omdat de Grieken geen legers hadden",
+        "Omdat sport belangrijker was dan religie"
       ],
-      "min_keywords": 2,
-      "rubric": "Functie: veilige reis/toegang; gevolg: partijen staakten tijdelijk of respecteerden doorgang.",
-      "example_answer": "De wapenstilstand moest reizen naar Olympia veilig maken voor atleten en bezoekers. Daardoor konden mensen door vijandig gebied trekken zonder aangevallen te worden (in elk geval in principe).",
+      "c": 1,
+      "e": "De wapenstilstand moest veilige deelname aan het religieuze sportfestival mogelijk maken.",
       "media": {
         "query": "Wikimedia: ancient Olympic Games athletes vase painting stadion Olympia",
         "kind": "image",
@@ -607,22 +591,18 @@
     },
     {
       "id": "g-022",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 6,
-      "difficulty": 5,
-      "instruction": "Antwoord in 2 zinnen: definieer + plaats in context.",
-      "prompt": "Wat is ‘hellenisme’ en waarom is dat een gevolg van Alexanders veroveringen?",
-      "keywords": [
-        "mengkultuur",
-        "verspreiding",
-        "Grieks",
-        "Oosters",
-        "steden",
-        "taal"
+      "difficulty": 4,
+      "q": "Wat wordt bedoeld met 'hellenisme'?",
+      "a": [
+        "De overheersing van Griekenland door Rome",
+        "De verspreiding en vermenging van Griekse en oosterse culturen",
+        "De ondergang van de Griekse cultuur",
+        "De Griekse godsdienst"
       ],
-      "min_keywords": 2,
-      "rubric": "Definitie (mengkultuur/verspreiding) + causaliteit (door veroveringen, stichting steden, bestuur/handel).",
-      "example_answer": "Hellenisme is de verspreiding en vermenging van Griekse cultuur met oosterse culturen. Dat ontstond doordat Alexander gebieden veroverde, steden stichtte en Griekse taal en gebruiken in bestuur en handel meebracht.",
+      "c": 1,
+      "e": "Door Alexanders veroveringen vermengde de Griekse cultuur zich met oosterse culturen.",
       "media": {
         "query": "Wikimedia: Ancient Alexandria",
         "kind": "image",
@@ -633,22 +613,18 @@
     },
     {
       "id": "g-023",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 7,
-      "difficulty": 4,
-      "instruction": "Antwoord in 2 zinnen met 2 kernwoorden.",
-      "prompt": "Waarom bouwden Egyptenaren piramides? Noem ook één politieke reden naast religie.",
-      "keywords": [
-        "graf",
-        "farao",
-        "hiernamaals",
-        "macht",
-        "status",
-        "organisatie"
+      "difficulty": 3,
+      "q": "Waarom bouwden Egyptenaren piramides?",
+      "a": [
+        "Als woonhuizen voor de farao",
+        "Als graven én om de macht van de farao te tonen",
+        "Om landbouw te beschermen",
+        "Voor handel met andere volken"
       ],
-      "min_keywords": 2,
-      "rubric": "Religie (graf/hiernamaals) + politiek (macht/legitimatie/organisatie van arbeid).",
-      "example_answer": "Piramides waren graven voor farao’s en hoorden bij het geloof in het hiernamaals. Ze lieten ook de macht en organisatiekracht van de farao zien (controle over arbeid en middelen).",
+      "c": 1,
+      "e": "Piramides waren religieuze graven en symbolen van macht en organisatie.",
       "media": {
         "query": "Wikimedia: Giza pyramids plateau wide shot",
         "kind": "image",
@@ -927,22 +903,18 @@
     },
     {
       "id": "g-034",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 9,
-      "difficulty": 5,
-      "instruction": "Antwoord in 2 zinnen. Gebruik minstens 2 kernwoorden.",
-      "prompt": "Leg uit waarom het begrip ‘barbaren’ iets zegt over Griekse culturele eenheid.",
-      "keywords": [
-        "taal",
-        "wij-zij",
-        "identiteit",
-        "Grieks",
-        "niet-Grieks",
-        "dialect"
+      "difficulty": 4,
+      "q": "Wat zegt het woord 'barbaren' over de Griekse cultuur?",
+      "a": [
+        "Dat Grieken geen contact hadden met andere volken",
+        "Dat Grieken zich cultureel één volk voelden tegenover niet-Grieken",
+        "Dat alle niet-Grieken vijanden waren",
+        "Dat Grieken alleen hun eigen dialect spraken"
       ],
-      "min_keywords": 2,
-      "rubric": "Laat zien dat ‘barbaren’ een wij/zij-label is op basis van taal/cultuur en dat dat een gedeelde identiteit veronderstelt.",
-      "example_answer": "Grieken noemden niet-Grieken ‘barbaren’ omdat hun taal onbegrijpelijk klonk. Dat wijst erop dat Grieken zichzelf als één cultuur herkenden, ondanks verschillende poleis en dialecten.",
+      "c": 1,
+      "e": "'Barbaren' laat zien dat Grieken een wij-zij-denken hadden op basis van taal en cultuur.",
       "media": {
         "query": "Wikimedia: Greek vase barbarians depiction",
         "kind": "image",
@@ -974,23 +946,18 @@
     },
     {
       "id": "g-036",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 10,
-      "difficulty": 5,
-      "instruction": "Bronkritiek (2 zinnen).",
-      "prompt": "Noem één reden waarom een reliëf of vaasafbeelding niet ‘1-op-1’ de werkelijkheid is, en één reden waarom het toch bruikbaar is.",
-      "keywords": [
-        "propaganda",
-        "stijl",
-        "symboliek",
-        "ideaal",
-        "informatie",
-        "cultuur",
-        "waarden"
+      "difficulty": 4,
+      "q": "Waarom is een vaasafbeelding geen perfecte weergave van de werkelijkheid, maar toch bruikbaar?",
+      "a": [
+        "Omdat vazen altijd liegen",
+        "Omdat ze idealiseren, maar wel laten zien wat mensen belangrijk vonden",
+        "Omdat ze alleen door kunstenaars werden gemaakt",
+        "Omdat ze altijd propaganda zijn"
       ],
-      "min_keywords": 2,
-      "rubric": "Beperking: idealisering/symboliek; bruikbaar: laat waarden, kleding, wapens, rituelen of zelfbeeld zien.",
-      "example_answer": "Beelden kunnen idealiseren of symbolisch zijn, dus ze tonen niet altijd precies wat er gebeurde. Maar ze zijn bruikbaar omdat ze laten zien wat mensen belangrijk vonden en hoe ze zichzelf wilden afbeelden.",
+      "c": 1,
+      "e": "Beelden zijn vaak symbolisch, maar geven inzicht in waarden en zelfbeeld.",
       "media": {
         "query": "Wikimedia: Greek vase hoplite battle scene",
         "kind": "image",

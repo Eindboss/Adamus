@@ -69,6 +69,55 @@ import {
 const QUESTION_SECONDS = 90;
 const QUESTION_SECONDS_MULTIPART = 120;
 
+// Points per question for exam mode (total: 90 points)
+const EXAM_POINTS = {
+  // FASE 1 - Instap
+  "g-001": 2, "g-002": 2, "g-003": 1, "g-004": 2, "g-005": 1, "g-006": 1, "g-007": 2, "g-009": 1, "g-010": 3, "g-017": 2, "g-023": 2, "g-022": 2,
+  // FASE 2 - Kern
+  "g-008": 2, "g-011": 2, "g-012": 1, "g-013": 1, "g-014": 2, "g-015": 2, "g-016": 1, "g-018": 2, "g-019": 2, "g-020": 2, "g-021": 1, "g-024": 1, "g-025": 2, "g-026": 2,
+  // FASE 3 - Toepassen
+  "g-027": 1, "g-028": 2, "g-029": 1, "g-030": 3, "g-031": 1, "g-032": 1, "g-033": 2, "g-034": 2, "g-035": 2, "g-036": 2, "g-037": 2, "g-038": 4, "g-039": 2, "g-040": 1,
+  // FASE 4 - Uitdaging
+  "g-041": 2, "g-042": 4, "g-043": 2, "g-044": 4, "g-045": 1, "g-046": 4, "g-047": 1, "g-048": 1, "g-049": 1, "g-050": 3
+};
+const EXAM_MAX_POINTS = Object.values(EXAM_POINTS).reduce((a, b) => a + b, 0); // 90
+
+/**
+ * Get points for a question (exam mode only)
+ */
+function getQuestionPoints(questionId) {
+  return EXAM_POINTS[questionId] || 1;
+}
+
+/**
+ * Award points for correct answer (updates both score and earnedPoints)
+ */
+function awardPoints(questionId, isCorrect) {
+  if (isCorrect) {
+    state.score++;
+    if (state.mode === "exam") {
+      state.earnedPoints += getQuestionPoints(questionId);
+    }
+  } else {
+    state.wrong++;
+    // Track wrong questions for retry in practice mode
+    const q = state.questions[state.currentIndex];
+    if (state.mode === "practice" && q?.id) {
+      state.wrongQuestions.push(q);
+    }
+  }
+}
+
+/**
+ * Calculate grade from score (1-10 scale)
+ */
+function calculateGrade(earnedPoints, maxPoints) {
+  if (maxPoints <= 0) return 1.0;
+  const ratio = earnedPoints / maxPoints;
+  const grade = 1 + 9 * ratio;
+  return Math.round(grade * 10) / 10; // Round to 1 decimal
+}
+
 // State
 let state = {
   subjectId: null,
@@ -78,7 +127,7 @@ let state = {
   score: 0,
   wrong: 0,
   skipped: 0,
-  phase: "question", // 'question' | 'feedback' | 'summary'
+  phase: "question", // 'question' | 'feedback' | 'summary' | 'mode-select'
   answered: false,
   selectedOption: null,
   history: null,
@@ -89,6 +138,13 @@ let state = {
   maxPartialScore: 0, // max possible partial points
   // Timer toggle
   timerEnabled: true,
+  // Quiz mode: 'practice' (default) or 'exam'
+  mode: "practice",
+  // For retry wrong questions
+  wrongQuestions: [],
+  // Points tracking for exam mode
+  earnedPoints: 0,
+  maxPoints: 0,
 };
 
 let subjects = [];
@@ -130,19 +186,77 @@ export async function initQuiz() {
   });
 
   // Initialize v2 question types module
-  initV2QuestionTypes(state, showFeedback);
+  initV2QuestionTypes(state, showFeedback, resetForNextPart);
 
   // Setup event listeners
   setupEventListeners();
 
-  // Check for saved progress
+  // Check for saved progress or show mode selection
   const savedProgress = loadQuizProgress(subjectId);
   if (savedProgress && savedProgress.currentIndex > 0) {
     showResumePrompt(savedProgress);
   } else {
-    // Load questions and start fresh
-    await loadQuestions();
+    // Show mode selection screen
+    showModeSelection();
   }
+}
+
+/**
+ * Show mode selection screen (Practice vs Exam)
+ */
+function showModeSelection() {
+  const container = $("quizArea");
+  if (!container) return;
+
+  state.phase = "mode-select";
+  updateControls();
+
+  const totalQuestions = 50; // For geschiedenis quiz
+
+  container.innerHTML = `
+    <div class="mode-selection">
+      <h2 class="mode-title">Kies je modus</h2>
+      <p class="mode-subtitle">${state.subjectMeta?.title || "Quiz"}</p>
+
+      <div class="mode-cards">
+        <div class="mode-card" id="practiceMode" tabindex="0">
+          <div class="mode-icon">📚</div>
+          <h3>Oefenen</h3>
+          <ul class="mode-features">
+            <li>10 willekeurige vragen</li>
+            <li>Overslaan mogelijk</li>
+            <li>Timer aan/uit</li>
+            <li>Direct feedback</li>
+          </ul>
+          <button class="btn btn-primary">Start oefenen</button>
+        </div>
+
+        <div class="mode-card" id="examMode" tabindex="0">
+          <div class="mode-icon">📝</div>
+          <h3>Volledige toets</h3>
+          <ul class="mode-features">
+            <li>Alle ${totalQuestions} vragen</li>
+            <li>Vaste volgorde (makkelijk → moeilijk)</li>
+            <li>Geen overslaan</li>
+            <li>Eindcijfer</li>
+          </ul>
+          <button class="btn">Start toets</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Add event listeners
+  $("practiceMode")?.addEventListener("click", () => startQuiz("practice"));
+  $("examMode")?.addEventListener("click", () => startQuiz("exam"));
+}
+
+/**
+ * Start quiz in selected mode
+ */
+async function startQuiz(mode) {
+  state.mode = mode;
+  await loadQuestions();
 }
 
 /**
@@ -181,6 +295,36 @@ function showResumePrompt(savedProgress) {
     clearQuizProgress(state.subjectId);
     await loadQuestions();
   });
+}
+
+/**
+ * Order questions for full exam mode (easy → hard)
+ * Didactically structured: confidence → understanding → application → challenge
+ */
+function orderQuestionsForExam(questions) {
+  // Fase 1: Instap (warm-up, basic MC)
+  // Fase 2: Kernbegrip (understanding)
+  // Fase 3: Toepassen (application)
+  // Fase 4: Uitdaging (challenge)
+  const examOrder = [
+    // FASE 1 - Instap & zelfvertrouwen
+    "g-001", "g-002", "g-003", "g-004", "g-005", "g-006", "g-007", "g-009", "g-010", "g-017", "g-023", "g-022",
+    // FASE 2 - Kernbegrip & inzicht
+    "g-008", "g-011", "g-012", "g-013", "g-014", "g-015", "g-016", "g-018", "g-019", "g-020", "g-021", "g-024", "g-025", "g-026",
+    // FASE 3 - Toepassen & verbanden
+    "g-027", "g-028", "g-029", "g-030", "g-031", "g-032", "g-033", "g-034", "g-035", "g-036", "g-037", "g-038", "g-039", "g-040",
+    // FASE 4 - Uitdaging & afronding
+    "g-041", "g-042", "g-043", "g-044", "g-045", "g-046", "g-047", "g-048", "g-049", "g-050"
+  ];
+
+  const questionMap = new Map(questions.map(q => [q.id, q]));
+  const ordered = examOrder.map(id => questionMap.get(id)).filter(Boolean);
+
+  // Add any questions not in the order (fallback)
+  const orderedIds = new Set(examOrder);
+  const remaining = questions.filter(q => !orderedIds.has(q.id));
+
+  return [...ordered, ...remaining];
 }
 
 /**
@@ -234,27 +378,38 @@ async function loadQuestions(savedProgress = null) {
       normalizeQuestion(q, meta.schema === "quiz"),
     );
 
-    // Apply quiz rotation if questionsPerSession is set
-    if (meta.questionsPerSession && normalized.length > meta.questionsPerSession) {
-      normalized = selectQuestionsForSession(normalized, meta.questionsPerSession, state.subjectId);
-    }
+    // Handle based on quiz mode
+    if (state.mode === "exam") {
+      // EXAM MODE: All questions in fixed didactic order
+      normalized = orderQuestionsForExam(normalized);
+      // Don't shuffle MC answers in exam mode - keep them predictable
+      state.questions = normalized;
+    } else {
+      // PRACTICE MODE: Subset with rotation and spaced repetition
 
-    // Increment session and apply spaced repetition
-    incrementSession(state.subjectId);
-    normalized = getSpacedQuestions(state.subjectId, normalized);
-
-    // Only shuffle for quizzes, not for toets (structured tests need fixed order)
-    if (meta.schema !== "toets") {
-      shuffle(normalized);
-    }
-
-    // Shuffle MC answers (only for quizzes)
-    state.questions = normalized.map((q) => {
-      if (q.type === "mc" && meta.schema !== "toets") {
-        return shuffleMCAnswers(q);
+      // Apply quiz rotation if questionsPerSession is set
+      if (meta.questionsPerSession && normalized.length > meta.questionsPerSession) {
+        normalized = selectQuestionsForSession(normalized, meta.questionsPerSession, state.subjectId);
       }
-      return q;
-    });
+
+      // Increment session and apply spaced repetition
+      incrementSession(state.subjectId);
+      normalized = getSpacedQuestions(state.subjectId, normalized);
+
+      // Shuffle for practice mode
+      shuffle(normalized);
+
+      // Limit to 10 questions for practice mode
+      normalized = normalized.slice(0, 10);
+
+      // Shuffle MC answers for practice mode
+      state.questions = normalized.map((q) => {
+        if (q.type === "mc") {
+          return shuffleMCAnswers(q);
+        }
+        return q;
+      });
+    }
 
     // Restore or reset state
     if (savedProgress && savedProgress.questions) {
@@ -270,7 +425,17 @@ async function loadQuestions(savedProgress = null) {
       state.score = 0;
       state.wrong = 0;
       state.skipped = 0;
+      state.earnedPoints = 0;
+      state.wrongQuestions = [];
     }
+
+    // Set max points for exam mode
+    if (state.mode === "exam") {
+      state.maxPoints = EXAM_MAX_POINTS;
+    } else {
+      state.maxPoints = state.questions.length; // 1 point per question in practice
+    }
+
     state.phase = "question";
     state.history.clear();
 
@@ -2279,11 +2444,7 @@ function checkMCAnswer(q) {
   });
 
   // Update stats and spaced repetition
-  if (isCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  awardPoints(q.id, isCorrect);
   updateStats(state.subjectId, isCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
@@ -2295,6 +2456,7 @@ function checkMCAnswer(q) {
     correctAnswer: q.answers[q.correctIndex],
     correct: isCorrect,
     explanation: q.explanation,
+    points: state.mode === "exam" ? getQuestionPoints(q.id) : 1,
   });
 
   // Show feedback
@@ -2309,11 +2471,7 @@ function checkOpenAnswer(q) {
   const value = input ? input.value.trim() : "";
   const isCorrect = checkAcceptList(q.accept || [], value, q.caseSensitive);
 
-  if (isCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  awardPoints(q.id, isCorrect);
   updateStats(state.subjectId, isCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
@@ -3219,6 +3377,16 @@ function showSelectFeedback(results, totalPoints, maxPoints) {
 }
 
 /**
+ * Reset state for next multipart sub-question
+ * Called when moving to next part within a multipart question
+ */
+function resetForNextPart() {
+  state.answered = false;
+  state.phase = "answering";
+  updateControls();
+}
+
+/**
  * Show feedback
  */
 function showFeedback(isCorrect, explanation, correctAnswer) {
@@ -3348,6 +3516,50 @@ export function skipQuestion() {
 }
 
 /**
+ * Give up on current question (show answer without points)
+ * Used in practice mode when user doesn't know the answer
+ */
+export function giveUp() {
+  if (state.answered) return;
+
+  const q = state.questions[state.currentIndex];
+  stopTimer();
+
+  // Mark as wrong
+  state.wrong++;
+
+  // Track wrong questions for retry
+  if (state.mode === "practice" && q.id) {
+    state.wrongQuestions.push(q);
+  }
+
+  // Get correct answer for display
+  let correctAnswer = "";
+  if (q.type === "mc") {
+    correctAnswer = q.answers[q.correctIndex] || "";
+  } else if (q.accept && q.accept.length > 0) {
+    correctAnswer = q.accept[0];
+  } else if (q.correct_answer !== undefined) {
+    correctAnswer = String(q.correct_answer);
+  }
+
+  state.history.add({
+    question: q.q || htmlToText(q.prompt_html) || "Vraag",
+    type: q.type,
+    userAnswer: "(wist het niet)",
+    correct: false,
+    skipped: false,
+  });
+
+  // Show the answer
+  showFeedback(false, q.e || q.explanation || "", correctAnswer);
+
+  state.answered = true;
+  state.phase = "feedback";
+  updateControls();
+}
+
+/**
  * Go to next question
  */
 export function nextQuestion() {
@@ -3390,12 +3602,16 @@ function renderSummary() {
   const skipped = state.history.getSkippedCount();
   const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
 
-  // Show confetti for good scores (70%+)
-  if (percentage >= 70) {
+  // Calculate grade for exam mode
+  const isExam = state.mode === "exam";
+  const grade = isExam ? calculateGrade(state.earnedPoints, state.maxPoints) : null;
+
+  // Show confetti for good scores (70%+ or grade >= 7)
+  if (percentage >= 70 || (grade && grade >= 7)) {
     showConfetti(4000);
   }
 
-  // Build history table
+  // Build history table with points column for exam mode
   const historyRows = state.history
     .getAll()
     .map(
@@ -3403,7 +3619,7 @@ function renderSummary() {
     <tr>
       <td>${i + 1}</td>
       <td>${h.question.substring(0, 50)}${h.question.length > 50 ? "..." : ""}</td>
-      <td>${h.userAnswer}</td>
+      <td>${h.userAnswer || "-"}</td>
       <td>
         ${h.correct ? '<span class="badge badge-success">Goed</span>' : ""}
         ${h.skipped ? '<span class="badge">Overgeslagen</span>' : ""}
@@ -3414,9 +3630,33 @@ function renderSummary() {
     )
     .join("");
 
+  // Different titles for exam vs practice
+  const title = isExam ? "Toets voltooid!" : "Oefenronde voltooid!";
+
+  // Grade display for exam mode
+  const gradeHtml = isExam ? `
+    <div class="summary-grade">
+      <div class="grade-circle ${grade >= 5.5 ? "pass" : "fail"}">
+        <span class="grade-value">${grade.toFixed(1)}</span>
+      </div>
+      <div class="grade-label">Cijfer</div>
+      <div class="grade-points">${state.earnedPoints} / ${state.maxPoints} punten</div>
+    </div>
+  ` : "";
+
+  // Retry wrong questions button (practice mode only)
+  const hasWrongQuestions = state.wrongQuestions.length > 0;
+  const retryButton = !isExam && hasWrongQuestions ? `
+    <button class="btn btn-block" id="retryWrongBtn">
+      Herhaal ${state.wrongQuestions.length} foute ${state.wrongQuestions.length === 1 ? "vraag" : "vragen"}
+    </button>
+  ` : "";
+
   container.innerHTML = `
     <div class="summary-card">
-      <h2 class="summary-title">Ronde voltooid!</h2>
+      <h2 class="summary-title">${title}</h2>
+
+      ${gradeHtml}
 
       <div class="summary-score">
         <div class="summary-stat correct">
@@ -3453,13 +3693,49 @@ function renderSummary() {
           : ""
       }
 
-      <div class="mt-5">
-        <button class="btn btn-primary btn-block" onclick="location.reload()">Opnieuw</button>
+      <div class="summary-actions">
+        ${retryButton}
+        <button class="btn btn-primary btn-block" onclick="location.reload()">Opnieuw beginnen</button>
       </div>
     </div>
   `;
 
+  // Add event listener for retry button
+  const retryBtn = $("retryWrongBtn");
+  if (retryBtn) {
+    retryBtn.addEventListener("click", retryWrongQuestions);
+  }
+
   updateControls();
+}
+
+/**
+ * Retry wrong questions (practice mode)
+ */
+function retryWrongQuestions() {
+  if (state.wrongQuestions.length === 0) return;
+
+  // Reset state with wrong questions
+  state.questions = state.wrongQuestions.map(q => ({ ...q }));
+  state.wrongQuestions = [];
+  state.currentIndex = 0;
+  state.score = 0;
+  state.wrong = 0;
+  state.skipped = 0;
+  state.phase = "question";
+  state.history.clear();
+
+  // Shuffle questions and answers
+  shuffle(state.questions);
+  state.questions = state.questions.map(q => {
+    if (q.type === "mc") {
+      return shuffleMCAnswers(q);
+    }
+    return q;
+  });
+
+  renderQuestion();
+  updateUI();
 }
 
 /**
@@ -3511,11 +3787,13 @@ function updateControls() {
   const checkBtn = $("checkBtn");
   const nextBtn = $("nextBtn");
   const skipBtn = $("skipBtn");
+  const giveUpBtn = $("giveUpBtn");
   const pauseBtn = $("pauseBtn");
   const rowMain = $("rowMain");
   const rowNext = $("rowNext");
 
-  if (state.phase === "summary") {
+  // Hide controls during mode selection or summary
+  if (state.phase === "summary" || state.phase === "mode-select") {
     if (rowMain) rowMain.style.display = "none";
     if (rowNext) rowNext.style.display = "none";
     return;
@@ -3527,6 +3805,17 @@ function updateControls() {
   } else {
     if (rowMain) rowMain.style.display = "grid";
     if (rowNext) rowNext.style.display = "none";
+  }
+
+  // Update button visibility based on mode
+  if (state.mode === "exam") {
+    // Exam mode: no skip, no give up
+    if (skipBtn) skipBtn.style.display = "none";
+    if (giveUpBtn) giveUpBtn.style.display = "none";
+  } else {
+    // Practice mode: show skip and give up
+    if (skipBtn) skipBtn.style.display = "";
+    if (giveUpBtn) giveUpBtn.style.display = "";
   }
 
   // Update next button text
@@ -3558,6 +3847,7 @@ function setupEventListeners() {
   const checkBtn = $("checkBtn");
   const nextBtn = $("nextBtn");
   const skipBtn = $("skipBtn");
+  const giveUpBtn = $("giveUpBtn");
   const pauseBtn = $("pauseBtn");
   const resumeBtn = $("resumeBtn");
   const restartBtn = $("btn-restart");
@@ -3567,6 +3857,7 @@ function setupEventListeners() {
   if (checkBtn) checkBtn.addEventListener("click", checkAnswer);
   if (nextBtn) nextBtn.addEventListener("click", nextQuestion);
   if (skipBtn) skipBtn.addEventListener("click", skipQuestion);
+  if (giveUpBtn) giveUpBtn.addEventListener("click", giveUp);
   if (pauseBtn) pauseBtn.addEventListener("click", showPause);
   if (resumeBtn) resumeBtn.addEventListener("click", hidePause);
   if (restartBtn)

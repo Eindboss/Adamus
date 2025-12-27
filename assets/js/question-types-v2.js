@@ -12,13 +12,15 @@ import { smartCheck, checkShortAnswerWithKeywords, isAIAvailable } from "./answe
  */
 let state = null;
 let showFeedbackFn = null;
+let resetForNextPartFn = null;
 
 /**
  * Initialize the module with quiz state
  */
-export function initV2QuestionTypes(quizState, showFeedback) {
+export function initV2QuestionTypes(quizState, showFeedback, resetForNextPart) {
   state = quizState;
   showFeedbackFn = showFeedback;
+  resetForNextPartFn = resetForNextPart;
 }
 
 /* ===========================================
@@ -1012,6 +1014,10 @@ export function checkMultipart(q) {
       multipartState.selectedOption = null;
       const feedbackEl = $("feedback");
       if (feedbackEl) feedbackEl.style.display = "none";
+
+      // Reset state for next part so controls work correctly
+      if (resetForNextPartFn) resetForNextPartFn();
+
       renderMultipartPart(multipartState.currentPart);
     });
 
