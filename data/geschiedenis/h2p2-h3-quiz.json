@@ -7,7 +7,7 @@
       "type": "ordering",
       "quiz_group": 1,
       "difficulty": 2,
-      "instruction": "Zet deze gebeurtenissen in chronologische volgorde (oudste eerst).",
+      "instruction": "Zet deze gebeurtenissen in chronologische volgorde (oudste eerst). Tip: Egypte is ouder dan Griekenland, en de Olympische Spelen begonnen vóór de Perzische Oorlogen.",
       "items": [
         "Vereniging van Egypte onder Narmer",
         "Bouw (hoogtepunt) piramides van Gizeh",
@@ -692,7 +692,7 @@
       "type": "ordering",
       "quiz_group": 7,
       "difficulty": 3,
-      "instruction": "Zet de stappen van mummificatie in logische volgorde.",
+      "instruction": "Zet de stappen van mummificatie in logische volgorde. Tip: denk na over wat je eerst moet doen voordat je iets kunt drogen.",
       "items": [
         "Lichaam drogen in natron",
         "Organen verwijderen en bewaren (kanopen)",
@@ -1113,11 +1113,11 @@
       "type": "ordering",
       "quiz_group": 14,
       "difficulty": 3,
-      "instruction": "Zet oorzaak → verloop → gevolg van ‘paard van Troje’ in logische volgorde.",
+      "instruction": "Zet het verhaal van het 'Paard van Troje' in de juiste volgorde. Tip: begin met de list van de Grieken.",
       "items": [
         "Grieken doen alsof ze vertrekken",
         "Trojanen halen het houten paard binnen",
-        "Soldaten komen ’s nachts uit het paard",
+        "Soldaten komen 's nachts uit het paard",
         "Poorten worden geopend voor het Griekse leger"
       ],
       "correct_order": [
