@@ -5,6 +5,7 @@
 
 import { $, $$, $$$, shuffle, htmlToText } from "./utils.js";
 import { updateStats, updateQuestionBox } from "./stats.js";
+import { smartCheck, checkShortAnswerWithKeywords, isAIAvailable } from "./answer-checker.js";
 
 /**
  * State reference - will be set by quiz.js
@@ -204,25 +205,42 @@ export function renderShortAnswer(container, q) {
 }
 
 /**
- * Check short_answer answer
+ * Check short_answer answer using smart checker (fuzzy + AI)
  */
-export function checkShortAnswer(q) {
+export async function checkShortAnswer(q) {
   const input = $("shortAnswerInput");
-  const userAnswer = input ? input.value.trim().toLowerCase() : "";
+  const userAnswer = input ? input.value.trim() : "";
   const keywords = q.keywords || [];
-  const modelAnswer = q.answer || "";
+  const modelAnswer = q.example_answer || q.answer || "";
+  const minKeywords = q.min_keywords || Math.ceil(keywords.length / 2);
 
-  // Count how many keywords are present in the answer
-  let keywordMatches = 0;
-  keywords.forEach((keyword) => {
-    if (userAnswer.includes(keyword.toLowerCase())) {
-      keywordMatches++;
-    }
+  // Use smart keyword checking with fuzzy matching + synonyms
+  const keywordResult = checkShortAnswerWithKeywords(userAnswer, keywords, {
+    minKeywords,
+    fuzzyThreshold: 0.75,
   });
 
-  // Consider correct if at least half of keywords are present
-  const requiredMatches = Math.ceil(keywords.length / 2);
-  const isCorrect = keywordMatches >= requiredMatches;
+  let isCorrect = keywordResult.match;
+  let feedbackExtra = "";
+  let aiUsed = false;
+
+  // If keyword check fails but AI is available, try semantic check
+  if (!isCorrect && isAIAvailable() && modelAnswer) {
+    const aiResult = await smartCheck(
+      userAnswer,
+      modelAnswer,
+      { question: q.prompt || q.instruction || "" },
+      { useAI: true }
+    );
+
+    if (aiResult.match) {
+      isCorrect = true;
+      aiUsed = true;
+      if (aiResult.feedback) {
+        feedbackExtra = `<br><em>${aiResult.feedback}</em>`;
+      }
+    }
+  }
 
   if (isCorrect) {
     state.score++;
@@ -235,16 +253,17 @@ export function checkShortAnswer(q) {
   if (q.id) updateQuestionBox(state.subjectId, q.id, isCorrect);
 
   state.history.add({
-    question: htmlToText(q.q || q.prompt),
+    question: htmlToText(q.prompt || q.instruction || ""),
     type: "short_answer",
     userAnswer: userAnswer,
     correctAnswer: modelAnswer,
     correct: isCorrect,
-    keywordMatches: `${keywordMatches}/${keywords.length}`,
+    keywordMatches: `${keywordResult.matchedKeywords.length}/${keywords.length}`,
+    aiUsed,
   });
 
-  const feedbackExtra = `<br><strong>Modelantwoord:</strong> ${modelAnswer}<br><strong>Trefwoorden:</strong> ${keywords.join(", ")} (${keywordMatches}/${keywords.length} gevonden)`;
-  showFeedbackFn(isCorrect, q.e || "", feedbackExtra);
+  // Don't give away any hints - only show AI feedback if available
+  showFeedbackFn(isCorrect, q.explanation || q.e || "", feedbackExtra);
 }
 
 /* ===========================================
