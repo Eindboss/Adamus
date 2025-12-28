@@ -1,0 +1,24 @@
+/* ===========================================
+   Adamus - Question Types CSS Index
+   Import all question type styles
+
+   HOW TO ADD CSS FOR A NEW QUESTION TYPE:
+   1. Create a new file: your-type.css
+   2. Add @import below
+   3. The main quiz.css still contains shared styles
+   =========================================== */
+
+/* Individual question type styles */
+@import "mc.css";
+@import "grouped.css";
+@import "table.css";
+
+/*
+   TODO: Extract these from quiz.css when migrating:
+   - open.css (open question inputs)
+   - matching.css (drag-drop matching)
+   - ordering.css (ordering questions)
+   - wiskunde.css (math multi-part)
+   - numeric.css (numeric inputs)
+   - fill-blank.css (fill in the blank)
+*/

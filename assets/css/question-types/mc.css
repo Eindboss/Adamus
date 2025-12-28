@@ -1,0 +1,155 @@
+/* ===========================================
+   Adamus - Multiple Choice Question CSS
+   =========================================== */
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease),
+    box-shadow var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-out);
+}
+
+.option:hover {
+  border-color: var(--brand);
+  background: var(--brand-light);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Selected State */
+.option.selected {
+  border-color: var(--brand);
+  background: var(--brand-light);
+  box-shadow:
+    0 0 0 3px rgba(201, 162, 39, 0.15),
+    0 2px 6px rgba(201, 162, 39, 0.2);
+  transform: scale(1.01);
+}
+
+/* Correct State */
+.option.correct {
+  border-color: var(--success);
+  background: var(--success-light);
+  box-shadow: 0 0 0 3px rgba(46, 125, 82, 0.15);
+}
+
+/* Wrong State */
+.option.wrong {
+  border-color: var(--error);
+  background: var(--error-light);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* Disabled State (after answer) */
+.option.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.option-marker {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease),
+    color var(--duration-fast) var(--ease);
+}
+
+.option.selected .option-marker {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: white;
+}
+
+.option.correct .option-marker {
+  border-color: var(--success);
+  background: var(--success);
+  color: white;
+}
+
+.option.wrong .option-marker {
+  border-color: var(--error);
+  background: var(--error);
+  color: white;
+}
+
+.option-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* Status badge on option */
+.option .status-badge {
+  font-size: 0.75rem;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.option.wrong .status-badge {
+  background: var(--error);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .option {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .option-marker {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .option-text {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .option {
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .option-marker {
+    width: 22px;
+    height: 22px;
+  }
+}

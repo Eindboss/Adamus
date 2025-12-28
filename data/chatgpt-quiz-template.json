@@ -1,0 +1,382 @@
+{
+  "_README": {
+    "doel": "Dit bestand is een template/prompt voor ChatGPT om nieuwe toetsen te maken voor Adamus",
+    "doelgroep": "1e klas gymnasium (12-13 jaar)",
+    "website": "https://eindboss.github.io/Adamus/ - Interactief leerplatform voor toetsen oefenen",
+    "laatste_update": "2024-12-28",
+    "vakken": ["Latijn", "Aardrijkskunde", "Wiskunde", "Geschiedenis"]
+  },
+
+  "instructies_voor_chatgpt": {
+    "algemeen": [
+      "Maak vragen die passen bij 1e klas gymnasium niveau",
+      "Gebruik gevarieerde vraagtypen (zie available_question_types)",
+      "Voeg waar mogelijk afbeeldingen toe via Wikimedia Commons",
+      "Geef altijd meerdere geaccepteerde antwoorden waar relevant",
+      "Schrijf duidelijke feedback/uitleg bij elk antwoord",
+      "Houd de taal eenvoudig maar correct Nederlands"
+    ],
+    "aantal_vragen": {
+      "oefentoets": "15-25 vragen",
+      "proeftoets": "30-50 vragen",
+      "flashcards": "20-40 kaarten"
+    },
+    "afbeeldingen": {
+      "bron": "Wikimedia Commons (gratis, geen copyright issues)",
+      "zoeken": "https://commons.wikimedia.org/",
+      "format": "Voeg 'media' object toe met 'query' voor automatisch laden",
+      "wanneer": "Bij geschiedenis, aardrijkskunde, cultuur vragen"
+    }
+  },
+
+  "schema_versie": "2.0.0",
+
+  "quiz_structuur": {
+    "schema_version": "2.0.0",
+    "id": "vak-onderwerp-type",
+    "title": "Titel van de toets",
+    "subject": "Vaknaam",
+    "description": "Korte beschrijving met aantal vragen en punten",
+    "created_at": "ISO timestamp",
+    "settings": {
+      "questions_per_session_default": 15,
+      "answer_policy_default": {
+        "case_insensitive": true,
+        "trim_whitespace": true,
+        "strip_punctuation": true,
+        "normalize_diacritics": true,
+        "collapse_internal_spaces": true,
+        "allow_synonyms": true
+      }
+    },
+    "taxonomy": {
+      "groups": {
+        "I": { "id": "I", "title": "Groepstitel", "description": "Beschrijving" }
+      },
+      "skills": ["skill1", "skill2"]
+    },
+    "question_bank": []
+  },
+
+  "available_question_types": {
+    "mc": {
+      "naam": "Multiple Choice",
+      "beschrijving": "Kies uit 2-4 opties",
+      "gebruik": "Feitelijke vragen, definities, herkenning",
+      "voorbeeld": {
+        "id": "q001",
+        "type": "mc",
+        "q": "Wat is de hoofdstad van Nederland?",
+        "answers": ["Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
+        "correctIndex": 0,
+        "explanation": "Amsterdam is de officiële hoofdstad van Nederland.",
+        "image": "optioneel: URL naar afbeelding",
+        "media": {
+          "query": "Amsterdam canal houses",
+          "alt": "Grachtenpanden in Amsterdam"
+        }
+      }
+    },
+
+    "open": {
+      "naam": "Open vraag",
+      "beschrijving": "Typ een kort antwoord",
+      "gebruik": "Woordenschat, vertalingen, korte antwoorden",
+      "voorbeeld": {
+        "id": "q002",
+        "type": "open",
+        "q": "Vertaal: domus",
+        "accept": ["huis", "het huis", "woning"],
+        "explanation": "Domus betekent 'huis' in het Latijn."
+      }
+    },
+
+    "grouped_short_text": {
+      "naam": "Gegroepeerde invulvragen",
+      "beschrijving": "Meerdere korte antwoorden bij één vraag",
+      "gebruik": "Woordenlijsten, verbuigingen, rijtjes",
+      "voorbeeld": {
+        "id": "q003",
+        "type": "grouped_short_text",
+        "prompt_html": "Vertaal de volgende Latijnse woorden:",
+        "items": [
+          {
+            "latijn": "aqua",
+            "accepted": ["water", "het water"]
+          },
+          {
+            "latijn": "terra",
+            "accepted": ["aarde", "land", "de aarde"]
+          },
+          {
+            "latijn": "ignis",
+            "accepted": ["vuur", "het vuur"]
+          }
+        ]
+      },
+      "met_subheaders": {
+        "beschrijving": "Items groeperen onder een zin (bijv. grammatica-analyse)",
+        "voorbeeld_item": {
+          "subheader": "Zin 1: Puella <strong>rosam</strong> dat.",
+          "question": "naamval",
+          "accepted_answers": ["acc", "accusativus"]
+        }
+      }
+    },
+
+    "table_parse": {
+      "naam": "Verbuigingstabel",
+      "beschrijving": "Invultabel voor verbuigingen/vervoegingen",
+      "gebruik": "Latijnse naamvallen, werkwoordsvervoegingen",
+      "voorbeeld": {
+        "id": "q004",
+        "type": "table_parse",
+        "prompt_html": "Vul de verbuiging van 'puella' in:",
+        "blocks": [
+          {
+            "type": "table",
+            "lemma": "puella (v.) - meisje",
+            "columns": ["Enkelvoud", "Meervoud"],
+            "rows": [
+              { "label": "nom.", "cells": [{ "given": "puella" }, { "input": true, "accept": ["puellae"] }] },
+              { "label": "gen.", "cells": [{ "input": true, "accept": ["puellae"] }, { "input": true, "accept": ["puellarum"] }] }
+            ]
+          }
+        ]
+      }
+    },
+
+    "translation_open": {
+      "naam": "Vertaling (lang)",
+      "beschrijving": "Vertaal een langere tekst",
+      "gebruik": "Latijnse zinnen, teksten vertalen",
+      "voorbeeld": {
+        "id": "q005",
+        "type": "translation_open",
+        "prompt": {
+          "html": "Vertaal de volgende tekst:<br><em>Puella rosam pulchram amat.</em>"
+        },
+        "payload": {
+          "latin_text": "Puella rosam pulchram amat.",
+          "vocabulary": [
+            { "latin": "pulcher", "dutch": "mooi" }
+          ],
+          "model_answer": "Het meisje houdt van de mooie roos."
+        }
+      }
+    },
+
+    "grouped_select": {
+      "naam": "Gegroepeerde dropdowns",
+      "beschrijving": "Meerdere keuzelijsten per zin",
+      "gebruik": "Grammatica-analyse (naamval, getal, functie)",
+      "voorbeeld": {
+        "id": "q006",
+        "type": "grouped_select",
+        "prompt_html": "Analyseer de onderstreepte woorden:",
+        "items": [
+          {
+            "sentence_html": "Puella <u>rosam</u> dat.",
+            "fields": [
+              { "label": "naamval", "options": ["nom", "gen", "dat", "acc", "abl"], "correct": "acc" },
+              { "label": "getal", "options": ["ev", "mv"], "correct": "ev" },
+              { "label": "functie", "options": ["onderwerp", "lijdend voorwerp", "meewerkend voorwerp"], "correct": "lijdend voorwerp" }
+            ]
+          }
+        ]
+      }
+    },
+
+    "ordering": {
+      "naam": "Volgorde",
+      "beschrijving": "Zet items in de juiste volgorde",
+      "gebruik": "Historische gebeurtenissen, processen, stappen",
+      "voorbeeld": {
+        "id": "q007",
+        "type": "ordering",
+        "prompt_html": "Zet de gebeurtenissen in chronologische volgorde:",
+        "items": [
+          { "text": "Romulus sticht Rome", "correct_position": 1 },
+          { "text": "De Republiek begint", "correct_position": 2 },
+          { "text": "Caesar wordt vermoord", "correct_position": 3 }
+        ]
+      }
+    },
+
+    "matching": {
+      "naam": "Koppelen",
+      "beschrijving": "Verbind begrippen met betekenissen",
+      "gebruik": "Woordenschat, definities, oorzaak-gevolg",
+      "voorbeeld": {
+        "id": "q008",
+        "type": "matching",
+        "prompt_html": "Verbind de Latijnse woorden met hun betekenis:",
+        "pairs": [
+          { "left": "aqua", "right": "water" },
+          { "left": "terra", "right": "aarde" },
+          { "left": "ignis", "right": "vuur" }
+        ]
+      }
+    },
+
+    "numeric": {
+      "naam": "Numeriek",
+      "beschrijving": "Geef een getal als antwoord",
+      "gebruik": "Rekenvragen, aardrijkskunde (inwoners, afstanden)",
+      "voorbeeld": {
+        "id": "q009",
+        "type": "numeric",
+        "prompt_html": "Hoeveel inwoners heeft Nederland (in miljoenen)?",
+        "correct_answer": 17.5,
+        "tolerance": 0.5,
+        "unit": "miljoen"
+      }
+    },
+
+    "fill_blank": {
+      "naam": "Invullen in tekst",
+      "beschrijving": "Vul woorden in binnen een tekst",
+      "gebruik": "Cloze-test, grammatica in context",
+      "voorbeeld": {
+        "id": "q010",
+        "type": "fill_blank",
+        "instruction": "Vul de ontbrekende woorden in:",
+        "text": "De Romeinen spraken {{blank1}}. Hun hoofdstad was {{blank2}}.",
+        "blanks": [
+          { "id": "blank1", "accepted": ["Latijn", "latijn"] },
+          { "id": "blank2", "accepted": ["Rome", "roma"] }
+        ]
+      }
+    },
+
+    "ratio_table": {
+      "naam": "Verhoudingstabel",
+      "beschrijving": "Vul ontbrekende waarden in een verhoudingstabel",
+      "gebruik": "Wiskunde verhoudingen, schaalberekeningen",
+      "voorbeeld": {
+        "id": "q011",
+        "type": "ratio_table",
+        "prompt_html": "Vul de tabel aan:",
+        "headers": ["A", "B"],
+        "rows": [
+          { "cells": [{ "given": 2 }, { "given": 6 }] },
+          { "cells": [{ "given": 4 }, { "input": true, "accept": ["12"] }] },
+          { "cells": [{ "input": true, "accept": ["6"] }, { "given": 18 }] }
+        ]
+      }
+    },
+
+    "wiskunde_multi_part": {
+      "naam": "Wiskunde meerdelige vraag",
+      "beschrijving": "Meerdere deelvragen (a, b, c) met optioneel een grafiek",
+      "gebruik": "Complexe wiskundevragen, grafieken analyseren",
+      "voorbeeld": {
+        "id": "q012",
+        "type": "wiskunde_multi_part",
+        "title": "Lineaire functie",
+        "render": {
+          "type": "line_graph",
+          "formula": "y = 2x + 1",
+          "xRange": [-5, 5],
+          "yRange": [-5, 10]
+        },
+        "parts": [
+          {
+            "id": "a",
+            "prompt": "Wat is de richtingscoëfficiënt?",
+            "type": "numeric",
+            "answer": { "value": 2 }
+          },
+          {
+            "id": "b",
+            "prompt": "Wat is het snijpunt met de y-as?",
+            "type": "point",
+            "answer": { "x": 0, "y": 1 }
+          }
+        ]
+      }
+    },
+
+    "info_card": {
+      "naam": "Informatiekaart",
+      "beschrijving": "Informatieve tekst zonder vraag (alleen 'begrepen' knop)",
+      "gebruik": "Context geven, uitleg tussen vragen door",
+      "voorbeeld": {
+        "id": "q013",
+        "type": "info_card",
+        "title": "Achtergrondinformatie",
+        "content_html": "<p>De Romeinse Republiek duurde van 509 v.Chr. tot 27 v.Chr.</p>",
+        "image": "optioneel: URL"
+      }
+    }
+  },
+
+  "afbeeldingen_toevoegen": {
+    "methode_1_directe_url": {
+      "beschrijving": "Direct een Wikimedia Commons URL gebruiken",
+      "voorbeeld": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Netherlands.svg/800px-Flag_of_the_Netherlands.svg.png"
+      }
+    },
+    "methode_2_automatisch_laden": {
+      "beschrijving": "Laat Adamus de afbeelding zoeken via Wikimedia API",
+      "voorbeeld": {
+        "media": {
+          "query": "Colosseum Rome",
+          "alt": "Het Colosseum in Rome"
+        }
+      },
+      "tips": [
+        "Gebruik Engelse zoektermen voor betere resultaten",
+        "Wees specifiek: 'Amsterdam canal houses' i.p.v. 'Amsterdam'",
+        "Voeg altijd een alt-tekst toe voor toegankelijkheid"
+      ]
+    }
+  },
+
+  "feedback_en_uitleg": {
+    "belangrijk": "Elke vraag moet feedback hebben voor leereffect",
+    "formaat": {
+      "explanation": "Korte uitleg waarom dit het antwoord is",
+      "feedback": {
+        "explanation": "Uitgebreidere uitleg (schema 2.0)"
+      }
+    },
+    "tips": [
+      "Leg uit WAAROM iets goed/fout is, niet alleen WAT",
+      "Verwijs naar de lesstof waar relevant",
+      "Houd het kort en begrijpelijk voor 12-jarigen"
+    ]
+  },
+
+  "voorbeeld_complete_toets": {
+    "_comment": "Zie data/latijn/proeftoets-lupa.json voor een volledig voorbeeld",
+    "bestandsnaam_conventie": "{vak}/{onderwerp}-{type}.json",
+    "voorbeelden": [
+      "latijn/h1-woordenschat-quiz.json",
+      "aardrijkskunde/europa-landen-quiz.json",
+      "geschiedenis/romeinse-rijk-toets.json"
+    ]
+  },
+
+  "registratie_in_subjects_json": {
+    "beschrijving": "Na het maken van een toets moet deze geregistreerd worden in data/subjects.json",
+    "voorbeeld_entry": {
+      "id": "latijn-h1-woordenschat",
+      "subject": "Latijn",
+      "label": "H1 Woordenschat",
+      "title": "Hoofdstuk 1 - Basiswoordenschat",
+      "file": "data/latijn/h1-woordenschat-quiz.json",
+      "schema": "quiz",
+      "questionsPerSession": 15,
+      "week": "1e toetsweek"
+    },
+    "opties": {
+      "examOnly": "true = alleen examenmodus (geen oefenmodus)",
+      "examDurationMinutes": "Tijd in minuten voor examen (standaard: 45)",
+      "preserveOrder": "true = vragen niet shuffelen",
+      "hidden": "true = niet tonen in lijst",
+      "hideFlashcards": "true = geen flashcards knop"
+    }
+  }
+}
