@@ -786,6 +786,12 @@ async function renderQuestion() {
     }
   }
 
+  // Toggle wider layout for questions with images
+  const quizPage = document.querySelector(".quiz-page");
+  if (quizPage) {
+    quizPage.classList.toggle("has-image", !!q.image);
+  }
+
   // Timer handling: exam mode uses total timer, practice mode uses per-question timer
   if (state.mode !== "exam") {
     // Practice mode: reset timer per question

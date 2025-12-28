@@ -11,6 +11,15 @@
   margin: 0 auto;
 }
 
+/* Wider quiz for questions with images */
+.quiz-page.has-image {
+  max-width: 960px;
+}
+
+.quiz-page.has-image .question-card {
+  max-width: none;
+}
+
 /* ===========================================
    Question Card
    =========================================== */
@@ -431,7 +440,7 @@ textarea.open-input {
    =========================================== */
 .quiz-controls {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--space-3);
   margin-top: var(--space-5);
 }
@@ -482,6 +491,11 @@ textarea.open-input {
   .quiz-controls {
     grid-template-columns: 1fr;
     gap: var(--space-2);
+  }
+
+  /* Controleer knop bovenaan op mobiel */
+  .quiz-controls #checkBtn {
+    order: -1;
   }
 
   .quiz-controls .btn {
