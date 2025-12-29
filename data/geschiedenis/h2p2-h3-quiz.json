@@ -986,30 +986,21 @@
     },
     {
       "id": "g-038",
-      "type": "short_answer",
+      "type": "matching",
       "quiz_group": 11,
-      "difficulty": 5,
-      "instruction": "Thermopylai bronvaardigheid: 3 voorbeelden.",
-      "prompt": "Geef 1 voorbeeld van objectieve info en 1 voorbeeld van subjectieve (waarderende) info die je vaak in een oorlogsverslag tegenkomt. (Geen citaten nodig; beschrijf.)",
-      "keywords": [
-        "aantal",
-        "plaats",
-        "datum",
-        "dapper",
-        "beter",
-        "gemakkelijk",
-        "mening"
+      "difficulty": 4,
+      "prompt": "Sleep elk voorbeeld naar de juiste categorie: objectief (feitelijk) of subjectief (mening/waardering).",
+      "pairs": [
+        { "left": "De slag vond plaats in 480 v.Chr.", "right": "Objectief" },
+        { "left": "Er vochten 300 Spartanen", "right": "Objectief" },
+        { "left": "De Perzen hadden 100.000 soldaten", "right": "Objectief" },
+        { "left": "De pas van Thermopylai was smal", "right": "Objectief" },
+        { "left": "De Spartanen vochten heldhaftig", "right": "Subjectief" },
+        { "left": "De Grieken waren dapperder dan de Perzen", "right": "Subjectief" },
+        { "left": "De Perzische overwinning was makkelijk", "right": "Subjectief" },
+        { "left": "Leonidas was een geweldige koning", "right": "Subjectief" }
       ],
-      "min_keywords": 2,
-      "rubric": "Objectief = controleerbaar feit (plaats/datum/aantallen); subjectief = oordeel/waardering (dapper, beter, slecht).",
-      "example_answer": "Objectief: datum/plaats of aantallen soldaten. Subjectief: woorden als ‘dapper’, ‘superieur’, ‘gemakkelijk gewonnen’.",
-      "media": {
-        "query": "Wikimedia: Thermopylae battlefield monument",
-        "kind": "image",
-        "use": "context",
-        "alt": "Monument bij Thermopylai",
-        "credit_required": true
-      }
+      "explanation": "Objectief = controleerbaar feit (datum, aantal, plaats). Subjectief = oordeel of waardering (heldhaftig, dapper, makkelijk, geweldig)."
     },
     {
       "id": "g-039",
