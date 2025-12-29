@@ -1,0 +1,691 @@
+{
+  "schema_version": "2.0.0",
+  "id": "biologie-h4-stevigheid-beweging-proef",
+  "title": "Hoofdstuk 4 – Stevigheid en beweging (Proeftoets, 50 vragen)",
+  "subject": "Biologie",
+  "description": "Proeftoets (1e klas gymnasium) over skelet, botten, beenverbindingen/gewrichten, spieren, houding, motorisch geheugen, warming-up/cooling-down, spierpijn en RSI. Inclusief penguin-casus en sport-casus.",
+  "questions": [
+    {
+      "id": "q001",
+      "q": "Welke functie heeft het skelet NIET?",
+      "a": [
+        "Stevigheid geven",
+        "Beweging mogelijk maken",
+        "Bescherming van kwetsbare organen",
+        "Afvalstoffen afvoeren"
+      ],
+      "c": 3,
+      "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd."
+    },
+    {
+      "id": "q002",
+      "q": "Welke botten horen bij de ROMP?",
+      "a": [
+        "Ribben en borstbeen",
+        "Spaakbeen en ellepijp",
+        "Dijbeen en kuitbeen",
+        "Sleutelbeen en schouderblad"
+      ],
+      "c": 0,
+      "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel."
+    },
+    {
+      "id": "q003",
+      "q": "Welke stof geeft botten vooral HARDHEID?",
+      "a": [
+        "Collageen",
+        "Kalkzouten",
+        "Spiervezels",
+        "Huidvet"
+      ],
+      "c": 1,
+      "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam."
+    },
+    {
+      "id": "q004",
+      "q": "Waarom zijn botten van kinderen meestal buigzamer dan die van ouderen?",
+      "a": [
+        "Meer kalkzouten",
+        "Meer collageen (lijmstof)",
+        "Geen botweefsel",
+        "Meer water in de gewrichtskom"
+      ],
+      "c": 1,
+      "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer."
+    },
+    {
+      "id": "q005",
+      "q": "Waar komt kraakbeen bij volwassenen o.a. voor?",
+      "a": [
+        "In de longen",
+        "In de oorschelp en neus",
+        "In de lever",
+        "In de hersenen"
+      ],
+      "c": 1,
+      "e": "Kraakbeen zit bij volwassenen o.a. in oorschelp en neus, en ook tussen ribben en borstbeen en in tussenwervelschijven."
+    },
+    {
+      "id": "q006",
+      "q": "Wat gebeurt er met fontanellen (open plekken in de schedel) als een baby ouder wordt?",
+      "a": [
+        "Ze worden groter",
+        "Ze veranderen in spierweefsel",
+        "Ze groeien dicht",
+        "Ze blijven altijd open"
+      ],
+      "c": 2,
+      "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien."
+    },
+    {
+      "id": "q007",
+      "q": "Welke beenverbinding laat GEEN beweging toe?",
+      "a": [
+        "Gewricht tussen handbotjes",
+        "Kraakbeen tussen rib en borstbeen",
+        "Naad tussen schedelbeenderen",
+        "Kogelgewricht in de heup"
+      ],
+      "c": 2,
+      "e": "Een naad is onbeweeglijk. Kraakbeenverbindingen laten een beetje beweging toe; gewrichten veel."
+    },
+    {
+      "id": "q008",
+      "q": "Welke beenverbinding laat een BEETJE beweging toe?",
+      "a": [
+        "Vergroeiing",
+        "Naad",
+        "Kraakbeenverbinding",
+        "Geen van deze"
+      ],
+      "c": 2,
+      "e": "Kraakbeenverbindingen (bijv. tussen ribben en borstbeen) laten een beperkte beweging toe."
+    },
+    {
+      "id": "q009",
+      "q": "Welke uitspraak over botcellen is het best passend bij de methode?",
+      "a": [
+        "Botcellen liggen in kringen rond kanaaltjes",
+        "Botcellen liggen los in een grote holte",
+        "Botcellen zitten alleen aan de buitenkant van bot",
+        "Botcellen zitten alleen in kraakbeen"
+      ],
+      "c": 0,
+      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten)."
+    },
+    {
+      "id": "q010",
+      "q": "Collageen (lijmstof) in botweefsel zorgt vooral voor…",
+      "a": [
+        "hardheid",
+        "buigzaamheid",
+        "kleur",
+        "warmteproductie"
+      ],
+      "c": 1,
+      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten."
+    },
+    {
+      "id": "q011",
+      "type": "info_card",
+      "title": "Kernbegrippen gewrichten",
+      "content_html": "<ul><li><strong>Gewricht</strong>: verbinding tussen botten met veel beweging.</li><li><strong>Kraakbeenlaagjes</strong>: verminderen slijtage en maken beweging soepeler.</li><li><strong>Gewrichtskapsel</strong>: houdt botten op hun plaats en maakt gewrichtssmeer.</li><li><strong>Kapselbanden</strong>: verstevigen het gewricht.</li></ul>"
+    },
+    {
+      "id": "q012",
+      "q": "Reminder: wat is de functie van kraakbeenlaagjes in een gewricht?",
+      "a": [
+        "Ze maken het bot langer",
+        "Ze zorgen voor soepelere beweging en minder slijtage",
+        "Ze trekken samen als een spier",
+        "Ze produceren bloed"
+      ],
+      "c": 1,
+      "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen."
+    },
+    {
+      "id": "q013",
+      "q": "Wat is de belangrijkste functie van het gewrichtskapsel volgens de samenvatting?",
+      "a": [
+        "Maakt botten steviger door kalk",
+        "Houdt botten op hun plaats en geeft gewrichtssmeer af",
+        "Zorgt dat spieren kunnen samentrekken",
+        "Vormt nieuwe botten"
+      ],
+      "c": 1,
+      "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat."
+    },
+    {
+      "id": "q014",
+      "q": "Een kogelgewricht vind je o.a. bij…",
+      "a": [
+        "elleboog",
+        "knie",
+        "schouder",
+        "tussen twee wervels"
+      ],
+      "c": 2,
+      "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk."
+    },
+    {
+      "id": "q015",
+      "q": "Welke beweging past het best bij een ROLgewricht?",
+      "a": [
+        "Heen-en-weer buigen van de knie",
+        "Draaien van het hoofd",
+        "Draaien van spaakbeen om ellepijp",
+        "Open- en dichtklappen van een deur"
+      ],
+      "c": 2,
+      "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp)."
+    },
+    {
+      "id": "q016",
+      "q": "Welke combinatie is juist?",
+      "a": [
+        "Knie = kogelgewricht; schouder = scharniergewricht",
+        "Knie = scharniergewricht; schouder = kogelgewricht",
+        "Knie = rolgewricht; schouder = scharniergewricht",
+        "Knie = kraakbeenverbinding; schouder = naad"
+      ],
+      "c": 1,
+      "e": "De knie is een scharniergewricht (heen en weer). De schouder is een kogelgewricht (veel richtingen)."
+    },
+    {
+      "id": "q017",
+      "q": "Wat gebeurt er bij een gewricht als gewrichtssmeer minder wordt (bijv. door beschadiging)?",
+      "a": [
+        "Beweging wordt soepeler",
+        "Wrijving en slijtage nemen toe",
+        "Botten worden langer",
+        "Spieren worden dikker"
+      ],
+      "c": 1,
+      "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen."
+    },
+    {
+      "id": "q018",
+      "q": "Welke structuur verstevigt een gewricht EXTRA?",
+      "a": [
+        "kapselbanden",
+        "kraakbeenlaagjes",
+        "spiervezels",
+        "fontanellen"
+      ],
+      "c": 0,
+      "e": "Kapselbanden zijn extra versteviging om het gewricht."
+    },
+    {
+      "id": "q019",
+      "q": "Welke uitspraak over tussenwervelschijven past bij de samenvatting?",
+      "a": [
+        "Ze bestaan uit botweefsel en geven hardheid",
+        "Ze verbinden wervels en werken als een soort schokdemper",
+        "Ze zijn dezelfde als kapselbanden",
+        "Ze zorgen voor bloedtransport"
+      ],
+      "c": 1,
+      "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering)."
+    },
+    {
+      "id": "q020",
+      "q": "Wat is het best passende gevolg van een dubbele-S-vorm van de wervelkolom?",
+      "a": [
+        "Je wordt langer",
+        "Je rug kan krachten beter opvangen",
+        "Je kunt niet meer buigen",
+        "Je botten worden zachter"
+      ],
+      "c": 1,
+      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen."
+    },
+    {
+      "id": "q021",
+      "q": "Skeletspieren zitten met … vast aan botten.",
+      "a": [
+        "kraakbeen",
+        "pezen",
+        "kapselbanden",
+        "tussencelstof"
+      ],
+      "c": 1,
+      "e": "Spieren zitten met pezen aan botten vast."
+    },
+    {
+      "id": "q022",
+      "q": "Een spier kan een bot bewegen doordat de spier…",
+      "a": [
+        "duwt tegen het bot",
+        "samentrekt en aan het bot trekt",
+        "het bot oplost",
+        "kraakbeen vormt"
+      ],
+      "c": 1,
+      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe."
+    },
+    {
+      "id": "q023",
+      "q": "Wat gebeurt er met een spier als die samentrekt?",
+      "a": [
+        "Wordt langer en dunner",
+        "Wordt korter en dikker",
+        "Wordt harder door kalk",
+        "Wordt vloeibaar"
+      ],
+      "c": 1,
+      "e": "Bij samentrekking wordt de spier korter en dikker."
+    },
+    {
+      "id": "q024",
+      "q": "Waarom heb je bij veel bewegingen een antagonistisch paar nodig?",
+      "a": [
+        "Omdat één spier altijd te zwak is",
+        "Omdat spieren alleen kunnen trekken, niet duwen",
+        "Omdat botten anders niet groeien",
+        "Omdat pezen anders niet bestaan"
+      ],
+      "c": 1,
+      "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken."
+    },
+    {
+      "id": "q025",
+      "q": "Biceps en triceps vormen een antagonistisch paar. Welke beweging hoort het best bij de biceps?",
+      "a": [
+        "Arm strekken",
+        "Arm buigen",
+        "Pols draaien",
+        "Schouder optrekken"
+      ],
+      "c": 1,
+      "e": "De biceps is een armbuigspier. De triceps is een armstrekspier."
+    },
+    {
+      "id": "q026",
+      "q": "Welke spierbeweging is onbewust (automatisch)?",
+      "a": [
+        "Je hand opsteken",
+        "Je darmen laten kneden",
+        "Je voet optillen",
+        "Je knieën buigen"
+      ],
+      "c": 1,
+      "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust."
+    },
+    {
+      "id": "q027",
+      "q": "Een lesstof-voorbeeld van een klein spiertje dat je NIET kunt trainen is…",
+      "a": [
+        "dijspier",
+        "biceps",
+        "spiertje dat een haar rechtop zet",
+        "kuitspier"
+      ],
+      "c": 2,
+      "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen."
+    },
+    {
+      "id": "q028",
+      "q": "Wat is het beste voorbeeld van een geautomatiseerde beweging (motorisch geheugen uitleg)?",
+      "a": [
+        "Voor het eerst leren schaatsen",
+        "Een woord uit je hoofd leren",
+        "Fietsen zonder erbij na te denken",
+        "Een nieuwe formule ontdekken"
+      ],
+      "c": 2,
+      "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren."
+    },
+    {
+      "id": "q029",
+      "q": "Wat is coördinatie (in de context van bewegen) het best?",
+      "a": [
+        "Hoe hard je botten zijn",
+        "Hoe goed je spieren samenwerken bij een beweging",
+        "Hoe groot je longinhoud is",
+        "Hoeveel vet je hebt"
+      ],
+      "c": 1,
+      "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen."
+    },
+    {
+      "id": "q030",
+      "q": "Welke combinatie past het best bij 'lichaamsbeweging is goed voor je gezondheid'?",
+      "a": [
+        "Alleen meer botgroei",
+        "Ontspanning, betere conditie, klachten voorkomen",
+        "Meer RSI-klachten, minder conditie",
+        "Altijd meer spierpijn"
+      ],
+      "c": 1,
+      "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen."
+    },
+    {
+      "id": "q031",
+      "q": "Waarom doe je een warming-up?",
+      "a": [
+        "Spieren worden kouder",
+        "Meer bloed naar spieren; spieren worden warmer en krijgen meer zuurstof",
+        "Je krijgt sneller spierpijn",
+        "Je botten worden harder"
+      ],
+      "c": 1,
+      "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid."
+    },
+    {
+      "id": "q032",
+      "q": "Hoe lang mag er volgens de tekst maximaal zitten tussen warming-up en wedstrijd/training voordat spieren weer afkoelen?",
+      "a": [
+        "Ongeveer 5 minuten",
+        "Ongeveer 15 minuten",
+        "Ongeveer 30 minuten",
+        "Ongeveer 60 minuten"
+      ],
+      "c": 1,
+      "e": "In de tekst: maximaal een kwartier; anders zijn de spieren weer koud reminder."
+    },
+    {
+      "id": "q033",
+      "q": "Wat is het beste kenmerk van goede rekoefeningen volgens de tekst?",
+      "a": [
+        "Snel en verend rekken tot het pijn doet",
+        "Rustig en langzaam rekken tot je lichte spanning voelt, zonder pijn",
+        "Alleen rekken na een wedstrijd, nooit ervoor",
+        "Rukken aan de spier om sneller te rekken"
+      ],
+      "c": 1,
+      "e": "Rekoefeningen: rustig, langzaam, tot spanning maar geen pijn; veren vergroot juist kans op blessure."
+    },
+    {
+      "id": "q034",
+      "q": "Wat is de belangrijkste reden voor een cooling-down?",
+      "a": [
+        "Afvalstoffen worden sneller afgevoerd zodat ze zich minder ophopen",
+        "Je hartslag gaat juist omhoog",
+        "Spieren worden kouder en stijver",
+        "Je botten herstellen sneller"
+      ],
+      "c": 0,
+      "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd."
+    },
+    {
+      "id": "q035",
+      "q": "Spierpijn ontstaat volgens de tekst vooral door…",
+      "a": [
+        "botbreuken",
+        "afvalstoffen die achterblijven in spieren",
+        "lucht in de longen",
+        "een te snelle hartslag"
+      ],
+      "c": 1,
+      "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen."
+    },
+    {
+      "id": "q036",
+      "q": "Wat is een blessure?",
+      "a": [
+        "Een kleine spierpijn na training",
+        "Een beschadiging van een spier, bot of gewricht",
+        "Een betere conditie krijgen",
+        "Een automatisch leerproces"
+      ],
+      "c": 1,
+      "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders."
+    },
+    {
+      "id": "q037",
+      "q": "RSI ontstaat vooral door…",
+      "a": [
+        "één keer heel hard trainen",
+        "steeds dezelfde beweging herhalen terwijl je lichaam weinig beweegt",
+        "kalkzouten in botten",
+        "een warming-up"
+      ],
+      "c": 1,
+      "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning."
+    },
+    {
+      "id": "q038",
+      "q": "Welke klacht past het meest bij beginnende RSI volgens de tekst?",
+      "a": [
+        "Tintelingen en vermoeidheid",
+        "Altijd hoge koorts",
+        "Bloedneus",
+        "Sneller kunnen rennen"
+      ],
+      "c": 0,
+      "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm)."
+    },
+    {
+      "id": "q039",
+      "q": "Wat is volgens de tekst een goede gewoonte om RSI te voorkomen als je lang achter een scherm zit?",
+      "a": [
+        "Elk uur 20 minuten stil blijven zitten reminder",
+        "Regelmatig bewegen tussendoor, bijvoorbeeld even lopen of schouders draaien",
+        "Alleen je vingers trainen",
+        "Altijd in dezelfde houding blijven"
+      ],
+      "c": 1,
+      "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI."
+    },
+    {
+      "id": "q040",
+      "q": "Welke houding-tip hoort bij 'goed gebruik van beeldschermen' in de samenvatting?",
+      "a": [
+        "Hoofd schuin omlaag houden",
+        "Scherm zo laag mogelijk zetten",
+        "Hoofd rechtop houden",
+        "Altijd op één voet staan"
+      ],
+      "c": 2,
+      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken."
+    },
+    {
+      "id": "q041",
+      "q": "Wat is een correcte uitspraak over een goede zithouding volgens de samenvatting?",
+      "a": [
+        "Armen en benen maken een rechte hoek",
+        "Altijd onderuitgezakt zitten",
+        "Met twee voeten op de stoel zitten",
+        "Met ronde schouders naar voren leunen"
+      ],
+      "c": 0,
+      "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden)."
+    },
+    {
+      "id": "q042",
+      "q": "Welke keuze vermindert RSI na 20 minuten appen het meest?",
+      "a": [
+        "5 minuten telefoon wegleggen en iets anders doen (lopen/lezen)",
+        "5 minuten doorgaan met gamen op je telefoon",
+        "5 minuten extra harder typen",
+        "5 minuten je schouders aanspannen"
+      ],
+      "c": 0,
+      "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging."
+    },
+    {
+      "id": "q043",
+      "q": "In de tekst over pinguïns: waarvoor gebruiken pinguïns hun 'vleugels' in het water?",
+      "a": [
+        "Om te zweven zonder bewegen",
+        "Om op hoge snelheid te zwemmen, als flippers",
+        "Om hun botten te koelen",
+        "Om te ademen onder water"
+      ],
+      "c": 1,
+      "e": "Pinguïns vliegen niet; ze zwemmen snel en gebruiken vleugels als flippers."
+    },
+    {
+      "id": "q044",
+      "q": "Waarom hebben pinguïns een typische waggelende gang volgens de tekst?",
+      "a": [
+        "Door hun lange staartveren",
+        "Omdat ze op hun hurken lopen en hun evenwicht bewaren met gespreide vleugels",
+        "Omdat hun knieën boven hun heupen zitten",
+        "Omdat ze geen heupbeen hebben"
+      ],
+      "c": 1,
+      "e": "De tekst: pinguïns lopen op hun hurken; vleugels helpen bij evenwicht, wat leidt tot waggelende gang."
+    },
+    {
+      "id": "q045",
+      "q": "Pinguïns kunnen hun vleugels vooral vanuit hun schouder bewegen en elleboog/pols zijn (bijna) vergroeit. Wat past daar het best bij?",
+      "a": [
+        "Ze hebben veel losse gewrichten in de vleugel nodig",
+        "Ze hebben juist een stijve 'peddel' nodig voor zwemmen",
+        "Het maakt zwemmen onmogelijk",
+        "Het zorgt dat ze kunnen draaien met hun vleugels als rolgewricht"
+      ],
+      "c": 1,
+      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten."
+    },
+    {
+      "id": "q046",
+      "q": "De kiel (groot borstbeenuitsteeksel) bij pinguïns is vooral een aanhechtingsplaats voor…",
+      "a": [
+        "beenspieren",
+        "borstspieren",
+        "nekspieren",
+        "handspieren"
+      ],
+      "c": 1,
+      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk."
+    },
+    {
+      "id": "q047",
+      "type": "matching",
+      "instruction": "Koppel het bot aan de juiste plek (mens).",
+      "left": [
+        "sleutelbeen",
+        "spaakbeen",
+        "ellepijp",
+        "kuitbeen",
+        "scheenbeen",
+        "schouderblad"
+      ],
+      "right": [
+        "onderarm (duimzijde)",
+        "onderarm (pinkzijde)",
+        "onderbeen (dun, zijkant)",
+        "onderbeen (dik, voorkant)",
+        "schoudergordel (voorzijde)",
+        "schoudergordel (achterzijde)"
+      ],
+      "correct_pairs": {
+        "sleutelbeen": "schoudergordel (voorzijde)",
+        "schouderblad": "schoudergordel (achterzijde)",
+        "spaakbeen": "onderarm (duimzijde)",
+        "ellepijp": "onderarm (pinkzijde)",
+        "kuitbeen": "onderbeen (dun, zijkant)",
+        "scheenbeen": "onderbeen (dik, voorkant)"
+      },
+      "explanation": "Deze botten hebben vaste plaatsen: spaakbeen ligt aan de duimzijde, ellepijp aan de pinkzijde; scheenbeen is het dikke bot vooraan, kuitbeen het dunnere bot aan de zijkant.",
+      "media": {
+        "query": "human skeleton labeled bones",
+        "alt": "Skelet met gelabelde botten"
+      }
+    },
+    {
+      "id": "q048",
+      "type": "ordering",
+      "instruction": "Zet de onderdelen van een training in de meest logische volgorde.",
+      "items": [
+        "Cooling-down",
+        "Warming-up",
+        "Rekoefeningen",
+        "Sporten (wedstrijd/training)"
+      ],
+      "correct_order": [
+        "Warming-up",
+        "Rekoefeningen",
+        "Sporten (wedstrijd/training)",
+        "Cooling-down"
+      ],
+      "explanation": "Je begint met een warming-up om spieren warm te maken, daarna kun je (sportafhankelijk) rekoefeningen doen, vervolgens sport je, en je eindigt met een cooling-down om afvalstoffen af te voeren."
+    },
+    {
+      "id": "q049",
+      "type": "fill_blank",
+      "instruction": "Vul de ontbrekende woorden in.",
+      "text": "RSI is een afkorting van {{blank1}} en ontstaat vaak door {{blank2}} bewegingen en een langdurig gespannen houding.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "Repetitive Strain Injury"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "herhaalde",
+            "steeds dezelfde",
+            "repetitieve"
+          ]
+        }
+      ],
+      "explanation": "RSI betekent Repetitive Strain Injury en komt door herhaalde bewegingen en langdurige spierspanning in eenzelfde houding."
+    },
+    {
+      "id": "q050",
+      "type": "multipart",
+      "instruction": "Beantwoord alle deelvragen.",
+      "context": "Casus: Sprintster herhaalt start en krachttraining. In de tekst over Dafne Schippers wordt beschreven dat ze hard traint in het krachthonk en dat haar start na jaren trainen automatisch gaat.",
+      "parts": [
+        {
+          "id": "a",
+          "type": "mc",
+          "prompt": "Wat is het meest waarschijnlijke effect van zware squats op haar beenspieren?",
+          "options": [
+            "Ze worden dunner en zwakker",
+            "Ze worden dikker en kunnen meer kracht leveren",
+            "Ze veranderen in botweefsel",
+            "Ze gaan minder zuurstof gebruiken"
+          ],
+          "correct": 1
+        },
+        {
+          "id": "b",
+          "type": "mc",
+          "prompt": "Welke volgorde past het best bij een goede training?",
+          "options": [
+            "Cooling-down → warming-up → trainen",
+            "Warming-up → (sportafhankelijk) rekoefeningen → trainen → cooling-down",
+            "Trainen → warming-up → cooling-down",
+            "Rekoefeningen → trainen → warming-up → cooling-down"
+          ],
+          "correct": 1
+        },
+        {
+          "id": "c",
+          "type": "mc",
+          "prompt": "Waarom heb je bij de sprintstart goede coördinatie nodig?",
+          "options": [
+            "Omdat botten dan harder worden",
+            "Omdat verschillende spieren precies op tijd moeten samenwerken",
+            "Omdat gewrichten dan niet slijten",
+            "Omdat je dan geen zuurstof nodig hebt"
+          ],
+          "correct": 1
+        },
+        {
+          "id": "d",
+          "type": "mc",
+          "prompt": "Waarom kan de sprintstart een geautomatiseerde beweging worden?",
+          "options": [
+            "Omdat je er juist steeds langer over nadenkt",
+            "Omdat herhaling zorgt voor motorisch geheugen",
+            "Omdat spieren alleen onbewust werken",
+            "Omdat gewrichten vergroeien"
+          ],
+          "correct": 1
+        }
+      ],
+      "e": "Krachttraining maakt spieren sterker (dikker). Een verstandige trainingsopbouw is warming-up → (rekoefeningen) → trainen → cooling-down. Coördinatie is samenwerking/timing van spieren. Door herhaling sla je bewegingen op in het motorisch geheugen, waardoor ze automatisch gaan.",
+      "media": {
+        "query": "Dafne Schippers sprint start",
+        "alt": "Atlete bij een sprintstart in het stadion"
+      }
+    }
+  ]
+}
