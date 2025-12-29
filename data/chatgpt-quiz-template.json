@@ -22,9 +22,17 @@
       "flashcards": "20-40 kaarten"
     },
     "afbeeldingen": {
-      "automatisch": "Adamus genereert automatisch afbeeldingen van Wikipedia voor elke vraag",
-      "niet_nodig": "Je hoeft GEEN image of media velden toe te voegen - dit gebeurt automatisch",
-      "uitzonderingen": "matching, table_parse, ratio_table en data_table vragen krijgen geen afbeeldingen"
+      "wanneer": "Voeg ALLEEN een media.query toe als de afbeelding echt waarde toevoegt aan de vraag",
+      "formaat": "Gebruik Engelse zoektermen die specifiek genoeg zijn voor Wikipedia",
+      "voorbeeld_goed": "ancient Greek democracy voting",
+      "voorbeeld_slecht": "democratie (te vaag, geeft onvoorspelbare resultaten)",
+      "geen_afbeelding_bij": ["matching vragen", "table_parse vragen", "wiskundevragen", "taalkunde/grammatica"],
+      "tips": [
+        "Wees zo specifiek mogelijk: 'Colosseum Rome exterior' i.p.v. 'Rome'",
+        "Gebruik historische context: 'ancient Egypt pyramid construction'",
+        "Vermijd abstracte begrippen die geen goede afbeelding opleveren",
+        "Test de zoekterm eerst op Wikipedia om te zien wat je krijgt"
+      ]
     }
   },
 
@@ -306,13 +314,34 @@
   },
 
   "afbeeldingen_toevoegen": {
-    "_info": "Afbeeldingen worden AUTOMATISCH gegenereerd - je hoeft niets te doen!",
-    "hoe_het_werkt": "Adamus haalt automatisch een relevante afbeelding op van Wikipedia gebaseerd op de vraagtekst",
-    "uitzonderingen": [
-      "matching vragen - geen afbeeldingen",
-      "table_parse vragen - geen afbeeldingen",
-      "ratio_table vragen - geen afbeeldingen",
-      "data_table vragen - geen afbeeldingen"
+    "methode": "Voeg een 'media' object toe met een Engelse zoekterm",
+    "wanneer_toevoegen": [
+      "Geschiedenis: bij vragen over specifieke gebouwen, kunstwerken, historische figuren",
+      "Aardrijkskunde: bij vragen over landen, landschappen, natuurverschijnselen",
+      "Biologie: bij vragen over organen, dieren, planten"
+    ],
+    "wanneer_NIET_toevoegen": [
+      "Grammatica/taalkundige vragen",
+      "Wiskundevragen",
+      "Abstracte begrippen (bijv. 'democratie', 'vrijheid')",
+      "Matching/tabel vragen"
+    ],
+    "voorbeeld": {
+      "id": "q001",
+      "type": "mc",
+      "q": "Welk beroemd gebouw staat in Rome?",
+      "answers": ["Colosseum", "Eiffeltoren", "Big Ben"],
+      "correctIndex": 0,
+      "media": {
+        "query": "Colosseum Rome amphitheater",
+        "alt": "Het Colosseum in Rome"
+      }
+    },
+    "tips": [
+      "Gebruik Engelse zoektermen - Wikipedia EN heeft de beste afbeeldingen",
+      "Wees specifiek: 'Colosseum Rome exterior' i.p.v. alleen 'Rome'",
+      "Test je zoekterm op Wikipedia om te zien welke afbeelding je krijgt",
+      "Voeg 'ancient', 'historical', 'diagram' toe voor betere resultaten"
     ]
   },
 

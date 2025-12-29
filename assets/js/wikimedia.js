@@ -129,95 +129,23 @@ export async function getMediaForQuery(query, opts = {}) {
 }
 
 /**
- * Question types that should NOT get auto-generated images
+ * Load image for a question - ONLY from explicit media.query
+ * Auto-generation is disabled because it produces unpredictable results
+ * @param {object} question - The full question object
+ * @returns {Promise<string|null>} - The image URL or null if no explicit query
  */
-const SKIP_IMAGE_TYPES = [
-  "matching",
-  "table_parse",
-  "ratio_table",
-  "data_table",
-  "wiskunde_multi_part",
-];
-
-/**
- * Extract key terms from question text for image search
- * @param {object} question - The question object
- * @returns {string|null} - Search query or null if not suitable
- */
-export function generateSearchQuery(question) {
-  // Skip types that don't benefit from images
-  if (SKIP_IMAGE_TYPES.includes(question.type)) {
+export async function loadQuestionImage(question) {
+  // Only load images if explicitly specified in the quiz data
+  // Auto-generation is disabled - too risky for unpredictable/inappropriate results
+  if (!question.media?.query) {
     return null;
   }
 
-  // Get the question text
-  let text = question.q || question.question || question.prompt_html ||
-             question.instruction || question.title || "";
-
-  // Strip HTML tags
-  text = text.replace(/<[^>]+>/g, " ");
-
-  // Skip very short questions
-  if (text.length < 10) return null;
-
-  // Extract key nouns/terms - remove common Dutch/Latin/English question words
-  const stopWords = new Set([
-    // Dutch question/function words
-    "wat", "wie", "waar", "wanneer", "waarom", "hoe", "welke", "welk", "hoeveel",
-    "is", "zijn", "was", "waren", "heeft", "hebben", "had", "hadden", "wordt", "worden",
-    "een", "de", "het", "van", "voor", "met", "bij", "naar", "door", "over", "uit", "aan", "tot",
-    "deze", "dit", "die", "dat", "er", "hier", "daar", "ook", "nog", "al", "zo", "dan",
-    "niet", "geen", "wel", "dan", "als", "maar", "want", "dus", "toch", "omdat", "indien",
-    "je", "jij", "jouw", "jullie", "we", "wij", "ze", "zij", "hun", "ons", "onze",
-    "volgens", "vooral", "best", "meest", "juist", "goed", "fout", "vaak", "soms",
-    "antwoord", "vraag", "vragen", "tekst", "samenvatting", "methode", "betekent", "betekenis",
-    "letterlijk", "letterlijke", "noemen", "noemt", "heet", "heten", "ander", "andere",
-    "zou", "kunnen", "kan", "mag", "moet", "moeten", "willen", "wil", "zal", "zullen",
-    "heel", "zeer", "meer", "minder", "veel", "weinig", "groot", "grote", "klein", "kleine",
-    "pas", "past", "passen", "passend", "passende", "combinatie",
-    // Latin common
-    "est", "sunt", "esse", "quid", "quod", "qui", "quae",
-    // English common (for mixed queries)
-    "the", "and", "or", "is", "are", "was", "were", "what", "which", "who", "how", "why",
-    // Question/quiz markers
-    "reminder", "uitleg", "voorbeeld", "functie", "belangrijkste", "volgende",
-  ]);
-
-  // Tokenize and filter
-  const words = text
-    .toLowerCase()
-    .replace(/[.,?!;:()""''«»„"]/g, " ")
-    .replace(/[']/g, "") // Remove apostrophes within words
-    .split(/\s+/)
-    .filter(w => w.length > 2 && !stopWords.has(w) && !/^\d+$/.test(w));
-
-  // If we have very few words, this question might not be suitable for image search
-  if (words.length < 1) return null;
-
-  // Take first 2-3 meaningful words (fewer = more specific search)
-  const keywords = words.slice(0, 3);
-
-  if (keywords.length < 1) return null;
-
-  // Join for search query
-  return keywords.join(" ");
-}
-
-/**
- * Load image for a question - either from media spec or auto-generated
- * @param {object} question - The full question object
- * @returns {Promise<string|null>} - The image URL or null if failed
- */
-export async function loadQuestionImage(question) {
-  // Auto-generate a search query from question text
-  const autoQuery = generateSearchQuery(question);
-  if (!autoQuery) return null;
-
   try {
-    const result = await getMediaForQuery(autoQuery);
+    const result = await getMediaForQuery(question.media.query);
     return result.imageUrl;
   } catch (err) {
-    // Silently fail - not all queries will find images
+    console.warn("Failed to load media:", question.media.query, err);
     return null;
   }
 }
