@@ -773,13 +773,13 @@ async function renderQuestion() {
   state.partialScore = 0;
   state.maxPartialScore = 0;
 
-  // Load Wikimedia image if media spec is present and no image yet
-  if (q.media?.query && !q.image) {
+  // Auto-load Wikimedia image if no image yet
+  if (!q.image) {
     try {
-      const imageUrl = await loadQuestionImage(q.media);
+      const imageUrl = await loadQuestionImage(q);
       if (imageUrl) {
         q.image = imageUrl;
-        q.imageAlt = q.media.alt || "Afbeelding bij vraag";
+        q.imageAlt = q.media?.alt || "Afbeelding bij vraag";
       }
     } catch (err) {
       console.warn("Failed to load Wikimedia image:", err);

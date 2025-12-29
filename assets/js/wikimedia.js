@@ -129,33 +129,112 @@ export async function getMediaForQuery(query, opts = {}) {
 }
 
 /**
- * Load image for a question's media spec
- * @param {object} mediaSpec - The media specification from the question
+ * Question types that should NOT get auto-generated images
+ */
+const SKIP_IMAGE_TYPES = [
+  "matching",
+  "table_parse",
+  "ratio_table",
+  "data_table",
+  "wiskunde_multi_part",
+];
+
+/**
+ * Extract key terms from question text for image search
+ * @param {object} question - The question object
+ * @returns {string|null} - Search query or null if not suitable
+ */
+export function generateSearchQuery(question) {
+  // Skip types that don't benefit from images
+  if (SKIP_IMAGE_TYPES.includes(question.type)) {
+    return null;
+  }
+
+  // Get the question text
+  let text = question.q || question.question || question.prompt_html ||
+             question.instruction || question.title || "";
+
+  // Strip HTML tags
+  text = text.replace(/<[^>]+>/g, " ");
+
+  // Skip very short questions
+  if (text.length < 10) return null;
+
+  // Extract key nouns/terms - remove common Dutch/Latin question words
+  const stopWords = new Set([
+    // Dutch
+    "wat", "wie", "waar", "wanneer", "waarom", "hoe", "welke", "welk", "hoeveel",
+    "is", "zijn", "was", "waren", "heeft", "hebben", "had", "hadden",
+    "een", "de", "het", "van", "voor", "met", "bij", "naar", "door", "over",
+    "deze", "dit", "die", "dat", "er", "hier", "daar", "ook", "nog", "al",
+    "niet", "geen", "wel", "dan", "als", "maar", "want", "dus", "toch",
+    "je", "jij", "jouw", "jullie", "we", "wij", "ze", "zij", "hun",
+    "volgens", "vooral", "best", "meest", "juist", "goed", "fout",
+    "antwoord", "vraag", "vragen", "tekst", "samenvatting", "methode",
+    // Latin common
+    "est", "sunt", "esse",
+    // Question markers
+    "reminder", "uitleg", "voorbeeld",
+  ]);
+
+  // Tokenize and filter
+  const words = text
+    .toLowerCase()
+    .replace(/[.,?!;:()""'']/g, " ")
+    .split(/\s+/)
+    .filter(w => w.length > 2 && !stopWords.has(w) && !/^\d+$/.test(w));
+
+  // Take first 3-4 meaningful words
+  const keywords = words.slice(0, 4);
+
+  if (keywords.length < 2) return null;
+
+  // Join for search query
+  return keywords.join(" ");
+}
+
+/**
+ * Load image for a question - either from media spec or auto-generated
+ * @param {object} question - The full question object
  * @returns {Promise<string|null>} - The image URL or null if failed
  */
-export async function loadQuestionImage(mediaSpec) {
-  if (!mediaSpec || !mediaSpec.query) return null;
+export async function loadQuestionImage(question) {
+  // If question has explicit media.query, use that
+  if (question.media?.query) {
+    try {
+      const result = await getMediaForQuery(question.media.query);
+      return result.imageUrl;
+    } catch (err) {
+      console.warn("Failed to load media:", question.media.query, err);
+      return null;
+    }
+  }
+
+  // Otherwise, try to auto-generate a search query
+  const autoQuery = generateSearchQuery(question);
+  if (!autoQuery) return null;
 
   try {
-    const result = await getMediaForQuery(mediaSpec.query);
+    const result = await getMediaForQuery(autoQuery);
     return result.imageUrl;
   } catch (err) {
-    console.warn("Failed to load media:", mediaSpec.query, err);
+    // Silently fail for auto-generated queries - not all will find images
     return null;
   }
 }
 
 /**
  * Preload images for multiple questions
- * @param {Array} questions - Array of questions with media specs
+ * @param {Array} questions - Array of questions
  */
 export async function preloadQuestionImages(questions) {
-  const mediaQuestions = questions.filter(q => q.media?.query);
+  // Filter questions that don't have images yet and aren't skip types
+  const needsImage = questions.filter(q => !q.image && !SKIP_IMAGE_TYPES.includes(q.type));
 
   // Load in parallel with a concurrency limit
   const concurrency = 3;
-  for (let i = 0; i < mediaQuestions.length; i += concurrency) {
-    const batch = mediaQuestions.slice(i, i + concurrency);
-    await Promise.all(batch.map(q => loadQuestionImage(q.media)));
+  for (let i = 0; i < needsImage.length; i += concurrency) {
+    const batch = needsImage.slice(i, i + concurrency);
+    await Promise.all(batch.map(q => loadQuestionImage(q)));
   }
 }
