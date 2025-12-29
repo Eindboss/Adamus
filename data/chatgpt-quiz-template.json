@@ -207,6 +207,7 @@
       "naam": "Koppelen",
       "beschrijving": "Verbind begrippen met betekenissen",
       "gebruik": "Woordenschat, definities, oorzaak-gevolg",
+      "BELANGRIJK": "Voeg GEEN afbeeldingen toe aan matching vragen - deze worden automatisch verborgen",
       "voorbeeld": {
         "id": "q008",
         "type": "matching",

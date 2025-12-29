@@ -2171,6 +2171,12 @@ textarea.open-input {
   margin: var(--space-4) 0;
 }
 
+/* Hide images for matching questions - they take up space without adding value */
+.matching-drag-container ~ .question-image,
+.question-card:has(.matching-drag-container) .question-image {
+  display: none;
+}
+
 .matching-pairs {
   flex: 1;
   display: flex;
@@ -2179,7 +2185,7 @@ textarea.open-input {
 }
 
 .matching-pool {
-  width: 200px;
+  width: 280px;
   flex-shrink: 0;
   background: var(--bg);
   border-radius: var(--radius);
