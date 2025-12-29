@@ -160,34 +160,44 @@ export function generateSearchQuery(question) {
   // Skip very short questions
   if (text.length < 10) return null;
 
-  // Extract key nouns/terms - remove common Dutch/Latin question words
+  // Extract key nouns/terms - remove common Dutch/Latin/English question words
   const stopWords = new Set([
-    // Dutch
+    // Dutch question/function words
     "wat", "wie", "waar", "wanneer", "waarom", "hoe", "welke", "welk", "hoeveel",
-    "is", "zijn", "was", "waren", "heeft", "hebben", "had", "hadden",
-    "een", "de", "het", "van", "voor", "met", "bij", "naar", "door", "over",
-    "deze", "dit", "die", "dat", "er", "hier", "daar", "ook", "nog", "al",
-    "niet", "geen", "wel", "dan", "als", "maar", "want", "dus", "toch",
-    "je", "jij", "jouw", "jullie", "we", "wij", "ze", "zij", "hun",
-    "volgens", "vooral", "best", "meest", "juist", "goed", "fout",
-    "antwoord", "vraag", "vragen", "tekst", "samenvatting", "methode",
+    "is", "zijn", "was", "waren", "heeft", "hebben", "had", "hadden", "wordt", "worden",
+    "een", "de", "het", "van", "voor", "met", "bij", "naar", "door", "over", "uit", "aan", "tot",
+    "deze", "dit", "die", "dat", "er", "hier", "daar", "ook", "nog", "al", "zo", "dan",
+    "niet", "geen", "wel", "dan", "als", "maar", "want", "dus", "toch", "omdat", "indien",
+    "je", "jij", "jouw", "jullie", "we", "wij", "ze", "zij", "hun", "ons", "onze",
+    "volgens", "vooral", "best", "meest", "juist", "goed", "fout", "vaak", "soms",
+    "antwoord", "vraag", "vragen", "tekst", "samenvatting", "methode", "betekent", "betekenis",
+    "letterlijk", "letterlijke", "noemen", "noemt", "heet", "heten", "ander", "andere",
+    "zou", "kunnen", "kan", "mag", "moet", "moeten", "willen", "wil", "zal", "zullen",
+    "heel", "zeer", "meer", "minder", "veel", "weinig", "groot", "grote", "klein", "kleine",
+    "pas", "past", "passen", "passend", "passende", "combinatie",
     // Latin common
-    "est", "sunt", "esse",
-    // Question markers
-    "reminder", "uitleg", "voorbeeld",
+    "est", "sunt", "esse", "quid", "quod", "qui", "quae",
+    // English common (for mixed queries)
+    "the", "and", "or", "is", "are", "was", "were", "what", "which", "who", "how", "why",
+    // Question/quiz markers
+    "reminder", "uitleg", "voorbeeld", "functie", "belangrijkste", "volgende",
   ]);
 
   // Tokenize and filter
   const words = text
     .toLowerCase()
-    .replace(/[.,?!;:()""'']/g, " ")
+    .replace(/[.,?!;:()""''«»„"]/g, " ")
+    .replace(/[']/g, "") // Remove apostrophes within words
     .split(/\s+/)
     .filter(w => w.length > 2 && !stopWords.has(w) && !/^\d+$/.test(w));
 
-  // Take first 3-4 meaningful words
-  const keywords = words.slice(0, 4);
+  // If we have very few words, this question might not be suitable for image search
+  if (words.length < 1) return null;
 
-  if (keywords.length < 2) return null;
+  // Take first 2-3 meaningful words (fewer = more specific search)
+  const keywords = words.slice(0, 3);
+
+  if (keywords.length < 1) return null;
 
   // Join for search query
   return keywords.join(" ");
