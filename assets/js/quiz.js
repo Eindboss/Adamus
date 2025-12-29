@@ -879,6 +879,11 @@ async function renderQuestion() {
  * Render multiple choice question
  */
 function renderMC(container, q) {
+  // Check if all options are short (for 2-column grid layout)
+  const maxLength = 20;
+  const allShort = q.answers.every((a) => a.length <= maxLength);
+  const gridClass = allShort ? "options-grid" : "";
+
   const optionsHtml = q.answers
     .map(
       (answer, idx) => `
@@ -892,7 +897,7 @@ function renderMC(container, q) {
 
   const contentHtml = `
     <div class="question-title">${q.q}</div>
-    <div class="options-list" role="radiogroup">
+    <div class="options-list ${gridClass}" role="radiogroup">
       ${optionsHtml}
     </div>
     <div id="feedback" class="feedback" style="display: none;"></div>
