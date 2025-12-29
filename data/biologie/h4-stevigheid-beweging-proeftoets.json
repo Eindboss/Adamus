@@ -17,7 +17,10 @@
       ],
       "c": 3,
       "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "human skeleton anatomy",
+        "alt": "Menselijk skelet"
+      }
     },
     {
       "id": "q002",
@@ -31,7 +34,10 @@
       ],
       "c": 0,
       "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "human ribcage sternum",
+        "alt": "Ribbenkast en borstbeen"
+      }
     },
     {
       "id": "q003",
@@ -45,7 +51,10 @@
       ],
       "c": 1,
       "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "bone tissue calcium",
+        "alt": "Botweefsel met kalkzouten"
+      }
     },
     {
       "id": "q004",
@@ -59,7 +68,10 @@
       ],
       "c": 1,
       "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "child bone flexibility collagen",
+        "alt": "Botopbouw bij kinderen"
+      }
     },
     {
       "id": "q005",
@@ -73,7 +85,10 @@
       ],
       "c": 1,
       "e": "Kraakbeen zit bij volwassenen o.a. in oorschelp en neus, en ook tussen ribben en borstbeen en in tussenwervelschijven.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cartilagine.jpg?width=900"
+      "media": {
+        "query": "human ear cartilage",
+        "alt": "Kraakbeen in het oor"
+      }
     },
     {
       "id": "q006",
@@ -87,7 +102,10 @@
       ],
       "c": 2,
       "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "baby fontanelle skull",
+        "alt": "Fontanellen bij baby"
+      }
     },
     {
       "id": "q007",
@@ -101,7 +119,10 @@
       ],
       "c": 2,
       "e": "Een naad is onbeweeglijk. Kraakbeenverbindingen laten een beetje beweging toe; gewrichten veel.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "skull sutures cranial",
+        "alt": "Schedelnaden"
+      }
     },
     {
       "id": "q008",
@@ -115,7 +136,10 @@
       ],
       "c": 2,
       "e": "Kraakbeenverbindingen (bijv. tussen ribben en borstbeen) laten een beperkte beweging toe.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "rib cartilage connection",
+        "alt": "Kraakbeenverbinding ribben"
+      }
     },
     {
       "id": "q009",
@@ -129,7 +153,10 @@
       ],
       "c": 0,
       "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten).",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "bone cell osteon haversian",
+        "alt": "Botcellen in kringen"
+      }
     },
     {
       "id": "q010",
@@ -143,14 +170,20 @@
       ],
       "c": 1,
       "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "collagen bone flexibility",
+        "alt": "Collageen in botweefsel"
+      }
     },
     {
       "id": "q011",
       "type": "info_card",
       "title": "Kernbegrippen gewrichten",
       "content_html": "<ul><li><strong>Gewricht</strong>: verbinding tussen botten met veel beweging.</li><li><strong>Kraakbeenlaagjes</strong>: verminderen slijtage en maken beweging soepeler.</li><li><strong>Gewrichtskapsel</strong>: houdt botten op hun plaats en maakt gewrichtssmeer.</li><li><strong>Kapselbanden</strong>: verstevigen het gewricht.</li></ul>",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "synovial joint anatomy",
+        "alt": "Gewricht doorsnede"
+      }
     },
     {
       "id": "q012",
@@ -164,7 +197,10 @@
       ],
       "c": 1,
       "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schematic%20overview%20of%20a%20synovial%20joint%20structure.png?width=900"
+      "media": {
+        "query": "articular cartilage joint",
+        "alt": "Kraakbeenlaag in gewricht"
+      }
     },
     {
       "id": "q013",
@@ -178,7 +214,10 @@
       ],
       "c": 1,
       "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schematic%20overview%20of%20a%20synovial%20joint%20structure.png?width=900"
+      "media": {
+        "query": "joint capsule synovial fluid",
+        "alt": "Gewrichtskapsel"
+      }
     },
     {
       "id": "q014",
@@ -192,7 +231,10 @@
       ],
       "c": 2,
       "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schematic%20overview%20of%20a%20synovial%20joint%20structure.png?width=900"
+      "media": {
+        "query": "shoulder ball socket joint",
+        "alt": "Kogelgewricht schouder"
+      }
     },
     {
       "id": "q015",
@@ -206,7 +248,10 @@
       ],
       "c": 2,
       "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp).",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schematic%20overview%20of%20a%20synovial%20joint%20structure.png?width=900"
+      "media": {
+        "query": "radius ulna rotation",
+        "alt": "Rolgewricht onderarm"
+      }
     },
     {
       "id": "q016",
@@ -220,7 +265,10 @@
       ],
       "c": 1,
       "e": "De knie is een scharniergewricht (heen en weer). De schouder is een kogelgewricht (veel richtingen).",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "knee hinge joint anatomy",
+        "alt": "Scharniergewricht knie"
+      }
     },
     {
       "id": "q017",
@@ -234,7 +282,10 @@
       ],
       "c": 1,
       "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schematic%20overview%20of%20a%20synovial%20joint%20structure.png?width=900"
+      "media": {
+        "query": "synovial fluid joint lubrication",
+        "alt": "Gewrichtssmeer"
+      }
     },
     {
       "id": "q018",
@@ -248,7 +299,10 @@
       ],
       "c": 0,
       "e": "Kapselbanden zijn extra versteviging om het gewricht.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schematic%20overview%20of%20a%20synovial%20joint%20structure.png?width=900"
+      "media": {
+        "query": "ligament joint stability",
+        "alt": "Kapselbanden"
+      }
     },
     {
       "id": "q019",
@@ -262,7 +316,10 @@
       ],
       "c": 1,
       "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering).",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Intervertebral_disc_diagram.svg?width=900"
+      "media": {
+        "query": "intervertebral disc spine",
+        "alt": "Tussenwervelschijf"
+      }
     },
     {
       "id": "q020",
@@ -276,7 +333,10 @@
       ],
       "c": 1,
       "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Intervertebral_disc_diagram.svg?width=900"
+      "media": {
+        "query": "spine S curve vertebral column",
+        "alt": "Wervelkolom S-vorm"
+      }
     },
     {
       "id": "q021",
@@ -290,7 +350,10 @@
       ],
       "c": 1,
       "e": "Spieren zitten met pezen aan botten vast.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "muscle tendon attachment bone",
+        "alt": "Spier en pees"
+      }
     },
     {
       "id": "q022",
@@ -304,7 +367,10 @@
       ],
       "c": 1,
       "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "muscle contraction movement",
+        "alt": "Spiercontractie"
+      }
     },
     {
       "id": "q023",
@@ -318,7 +384,10 @@
       ],
       "c": 1,
       "e": "Bij samentrekking wordt de spier korter en dikker.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "muscle fiber contraction",
+        "alt": "Spiervezels"
+      }
     },
     {
       "id": "q024",
@@ -332,7 +401,10 @@
       ],
       "c": 1,
       "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "biceps triceps antagonist muscles",
+        "alt": "Biceps en triceps"
+      }
     },
     {
       "id": "q025",
@@ -346,7 +418,10 @@
       ],
       "c": 1,
       "e": "De biceps is een armbuigspier. De triceps is een armstrekspier.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "biceps arm flexion",
+        "alt": "Biceps armbuiging"
+      }
     },
     {
       "id": "q026",
@@ -360,7 +435,10 @@
       ],
       "c": 1,
       "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "smooth muscle intestine",
+        "alt": "Gladde spieren darmen"
+      }
     },
     {
       "id": "q027",
@@ -374,7 +452,10 @@
       ],
       "c": 2,
       "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "arrector pili muscle hair",
+        "alt": "Haarspiertje"
+      }
     },
     {
       "id": "q028",
@@ -388,7 +469,10 @@
       ],
       "c": 2,
       "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "motor memory cycling",
+        "alt": "Fietsen motorisch geheugen"
+      }
     },
     {
       "id": "q029",
@@ -402,7 +486,10 @@
       ],
       "c": 1,
       "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "muscle coordination movement",
+        "alt": "Spiercoordinatie"
+      }
     },
     {
       "id": "q030",
@@ -416,7 +503,10 @@
       ],
       "c": 1,
       "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "exercise physical health",
+        "alt": "Lichaamsbeweging gezondheid"
+      }
     },
     {
       "id": "q031",
@@ -430,7 +520,10 @@
       ],
       "c": 1,
       "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "warm up exercise stretching",
+        "alt": "Warming-up oefeningen"
+      }
     },
     {
       "id": "q032",
@@ -444,7 +537,10 @@
       ],
       "c": 1,
       "e": "In de tekst: maximaal een kwartier; anders zijn de spieren weer koud reminder.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "muscle warm up blood flow",
+        "alt": "Bloedtoevoer spieren"
+      }
     },
     {
       "id": "q033",
@@ -458,7 +554,10 @@
       ],
       "c": 1,
       "e": "Rekoefeningen: rustig, langzaam, tot spanning maar geen pijn; veren vergroot juist kans op blessure.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "stretching exercise proper form",
+        "alt": "Rekoefeningen"
+      }
     },
     {
       "id": "q034",
@@ -472,7 +571,10 @@
       ],
       "c": 0,
       "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "cool down exercise recovery",
+        "alt": "Cooling-down"
+      }
     },
     {
       "id": "q035",
@@ -486,7 +588,10 @@
       ],
       "c": 1,
       "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biceps_brachii.svg?width=900"
+      "media": {
+        "query": "muscle soreness lactic acid",
+        "alt": "Spierpijn"
+      }
     },
     {
       "id": "q036",
@@ -500,7 +605,10 @@
       ],
       "c": 1,
       "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "sports injury muscle",
+        "alt": "Sportblessure"
+      }
     },
     {
       "id": "q037",
@@ -514,7 +622,10 @@
       ],
       "c": 1,
       "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stretching_exercise.jpg?width=900"
+      "media": {
+        "query": "RSI repetitive strain injury",
+        "alt": "RSI klachten"
+      }
     },
     {
       "id": "q038",
@@ -528,7 +639,10 @@
       ],
       "c": 0,
       "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm).",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stretching_exercise.jpg?width=900"
+      "media": {
+        "query": "RSI symptoms tingling",
+        "alt": "RSI symptomen"
+      }
     },
     {
       "id": "q039",
@@ -542,7 +656,10 @@
       ],
       "c": 1,
       "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stretching_exercise.jpg?width=900"
+      "media": {
+        "query": "ergonomic workspace posture",
+        "alt": "Ergonomische werkplek"
+      }
     },
     {
       "id": "q040",
@@ -556,7 +673,10 @@
       ],
       "c": 2,
       "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stretching_exercise.jpg?width=900"
+      "media": {
+        "query": "computer ergonomics posture",
+        "alt": "Goede houding beeldscherm"
+      }
     },
     {
       "id": "q041",
@@ -570,7 +690,10 @@
       ],
       "c": 0,
       "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden).",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stretching_exercise.jpg?width=900"
+      "media": {
+        "query": "proper sitting posture ergonomic",
+        "alt": "Goede zithouding"
+      }
     },
     {
       "id": "q042",
@@ -584,7 +707,10 @@
       ],
       "c": 0,
       "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stretching_exercise.jpg?width=900"
+      "media": {
+        "query": "smartphone break RSI prevention",
+        "alt": "Pauze van telefoon"
+      }
     },
     {
       "id": "q043",
@@ -598,7 +724,10 @@
       ],
       "c": 1,
       "e": "Pinguïns vliegen niet; ze zwemmen snel en gebruiken vleugels als flippers.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pygoscelis_adeliae.jpg?width=900"
+      "media": {
+        "query": "penguin swimming flipper",
+        "alt": "Zwemmende pinguin"
+      }
     },
     {
       "id": "q044",
@@ -612,7 +741,10 @@
       ],
       "c": 1,
       "e": "De tekst: pinguïns lopen op hun hurken; vleugels helpen bij evenwicht, wat leidt tot waggelende gang.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pygoscelis_adeliae.jpg?width=900"
+      "media": {
+        "query": "penguin walking waddle",
+        "alt": "Lopende pinguin"
+      }
     },
     {
       "id": "q045",
@@ -626,7 +758,10 @@
       ],
       "c": 1,
       "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pygoscelis_adeliae.jpg?width=900"
+      "media": {
+        "query": "penguin flipper anatomy",
+        "alt": "Pinguinvleugel"
+      }
     },
     {
       "id": "q046",
@@ -640,7 +775,10 @@
       ],
       "c": 1,
       "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pygoscelis_adeliae.jpg?width=900"
+      "media": {
+        "query": "bird keel sternum breast muscle",
+        "alt": "Borstbeen vogel"
+      }
     },
     {
       "id": "q047",
@@ -670,8 +808,7 @@
         "kuitbeen": "onderbeen (dun, zijkant)",
         "scheenbeen": "onderbeen (dik, voorkant)"
       },
-      "explanation": "Deze botten hebben vaste plaatsen: spaakbeen ligt aan de duimzijde, ellepijp aan de pinkzijde; scheenbeen is het dikke bot vooraan, kuitbeen het dunnere bot aan de zijkant.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "explanation": "Deze botten hebben vaste plaatsen: spaakbeen ligt aan de duimzijde, ellepijp aan de pinkzijde; scheenbeen is het dikke bot vooraan, kuitbeen het dunnere bot aan de zijkant."
     },
     {
       "id": "q048",
@@ -689,8 +826,7 @@
         "Sporten (wedstrijd/training)",
         "Cooling-down"
       ],
-      "explanation": "Je begint met een warming-up om spieren warm te maken, daarna kun je (sportafhankelijk) rekoefeningen doen, vervolgens sport je, en je eindigt met een cooling-down om afvalstoffen af te voeren.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "explanation": "Je begint met een warming-up om spieren warm te maken, daarna kun je (sportafhankelijk) rekoefeningen doen, vervolgens sport je, en je eindigt met een cooling-down om afvalstoffen af te voeren."
     },
     {
       "id": "q049",
@@ -714,7 +850,10 @@
         }
       ],
       "explanation": "RSI betekent Repetitive Strain Injury en komt door herhaalde bewegingen en langdurige spierspanning in eenzelfde houding.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "RSI keyboard computer",
+        "alt": "RSI preventie"
+      }
     },
     {
       "id": "q050",
@@ -772,7 +911,10 @@
         }
       ],
       "e": "Krachttraining maakt spieren sterker (dikker). Een verstandige trainingsopbouw is warming-up → (rekoefeningen) → trainen → cooling-down. Coördinatie is samenwerking/timing van spieren. Door herhaling sla je bewegingen op in het motorisch geheugen, waardoor ze automatisch gaan.",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Human_skeleton_front_en.svg?width=900"
+      "media": {
+        "query": "sprinter training athletics",
+        "alt": "Sprinter training"
+      }
     }
   ]
 }
