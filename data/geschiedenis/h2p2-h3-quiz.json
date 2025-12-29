@@ -982,14 +982,7 @@
       ],
       "min_keywords": 2,
       "rubric": "Noem staf met slang + (esculaap)staf/Asklepiusstaf. Geen verwarring met caduceus (twee slangen).",
-      "example_answer": "Het symbool is een staf met één slang eromheen: de (A)esculaapstaf, verbonden aan Asklepios.",
-      "media": {
-        "query": "Wikimedia: Rod of Asclepius single snake symbol",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "De esculaapstaf (staf met één slang)",
-        "credit_required": true
-      }
+      "example_answer": "Het symbool is een staf met één slang eromheen: de (A)esculaapstaf, verbonden aan Asklepios."
     },
     {
       "id": "g-038",
