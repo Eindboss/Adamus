@@ -21,10 +21,17 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 - **Variatie**: Gebruik verschillende vraagtypen (zie hieronder)
 - **Feedback**: Elke vraag moet uitleg hebben waarom het antwoord goed/fout is
 
+### BELANGRIJKE REGELS
+1. **GEEN open vragen met tips/rubrics** die het antwoord weggeven
+2. **Gebruik MC met 4-6 opties** in plaats van open/numeric vragen waar mogelijk
+3. **Moeilijke afleidende antwoorden**: Maak MC-opties die dicht bij elkaar liggen
+4. **Geen tips veld** - dit toont antwoorden aan de gebruiker
+
 ### AFBEELDINGEN
 - Voeg waar mogelijk afbeeldingen toe (vooral bij geschiedenis, aardrijkskunde, cultuur)
 - Gebruik Wikimedia Commons als bron
 - Voeg een `media` object toe: `{"query": "zoekterm in Engels", "alt": "beschrijving"}`
+- **GEEN afbeeldingen** bij jaartalvragen (past beter in de breedte)
 
 ### JSON STRUCTUUR
 ```json
@@ -34,7 +41,7 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
   "title": "Titel van de toets",
   "subject": "Vaknaam",
   "description": "Korte beschrijving",
-  "question_bank": [
+  "questions": [
     // vragen hier
   ]
 }
@@ -42,16 +49,26 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 
 ### BESCHIKBARE VRAAGTYPEN
 
-#### 1. `mc` - Multiple Choice
+#### 1. `mc` - Multiple Choice (VOORKEUR)
 ```json
 {
   "id": "q001",
-  "type": "mc",
   "q": "Wat is de hoofdstad van Nederland?",
-  "answers": ["Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
-  "correctIndex": 0,
-  "explanation": "Amsterdam is de officiële hoofdstad.",
+  "a": ["Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
+  "c": 0,
+  "e": "Amsterdam is de officiële hoofdstad.",
   "media": {"query": "Amsterdam canal", "alt": "Grachten in Amsterdam"}
+}
+```
+
+**MC met 6 opties** (voor jaartallen en precieze vragen):
+```json
+{
+  "id": "q002",
+  "q": "In welk jaar vond de Slag bij Marathon plaats?",
+  "a": ["490 v.C.", "480 v.C.", "500 v.C.", "479 v.C.", "492 v.C.", "486 v.C."],
+  "c": 0,
+  "e": "Marathon (490 v.C.) was de eerste Perzische expeditie."
 }
 ```
 
@@ -62,14 +79,41 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
   "type": "open",
   "q": "Vertaal: aqua",
   "accept": ["water", "het water"],
-  "explanation": "Aqua betekent water in het Latijn."
+  "e": "Aqua betekent water in het Latijn."
 }
 ```
 
-#### 3. `grouped_short_text` - Meerdere invulvragen
+#### 3. `multipart` - Meerdere deelvragen
 ```json
 {
   "id": "q003",
+  "type": "multipart",
+  "instruction": "Beantwoord beide vragen.",
+  "context": "Uitleg of achtergrond voor de vraag.",
+  "parts": [
+    {
+      "id": "a",
+      "type": "mc",
+      "prompt": "Eerste deelvraag?",
+      "options": ["Optie A", "Optie B", "Optie C", "Optie D"],
+      "correct": 0
+    },
+    {
+      "id": "b",
+      "type": "mc",
+      "prompt": "Tweede deelvraag?",
+      "options": ["Optie A", "Optie B"],
+      "correct": 1
+    }
+  ],
+  "e": "Uitleg voor het geheel."
+}
+```
+
+#### 4. `grouped_short_text` - Meerdere invulvragen
+```json
+{
+  "id": "q004",
   "type": "grouped_short_text",
   "prompt_html": "Vertaal de volgende woorden:",
   "items": [
@@ -91,10 +135,10 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 }
 ```
 
-#### 4. `table_parse` - Verbuigingstabel
+#### 5. `table_parse` - Verbuigingstabel
 ```json
 {
-  "id": "q004",
+  "id": "q005",
   "type": "table_parse",
   "prompt_html": "Vul de verbuiging van 'puella' in:",
   "blocks": [{
@@ -109,50 +153,69 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 }
 ```
 
-#### 5. `ordering` - Volgorde bepalen
-```json
-{
-  "id": "q005",
-  "type": "ordering",
-  "prompt_html": "Zet in chronologische volgorde:",
-  "items": [
-    {"text": "Romulus sticht Rome", "correct_position": 1},
-    {"text": "Caesar wordt vermoord", "correct_position": 2},
-    {"text": "Val van Rome", "correct_position": 3}
-  ]
-}
-```
-
-#### 6. `matching` - Koppelen
+#### 6. `ordering` - Volgorde bepalen
 ```json
 {
   "id": "q006",
-  "type": "matching",
-  "prompt_html": "Verbind de woorden met hun betekenis:",
-  "pairs": [
-    {"left": "aqua", "right": "water"},
-    {"left": "terra", "right": "aarde"},
-    {"left": "ignis", "right": "vuur"}
-  ]
+  "type": "ordering",
+  "instruction": "Zet in chronologische volgorde:",
+  "items": ["Romulus sticht Rome", "Caesar wordt vermoord", "Val van Rome"],
+  "correct_order": ["Romulus sticht Rome", "Caesar wordt vermoord", "Val van Rome"],
+  "explanation": "Dit is de juiste chronologische volgorde."
 }
 ```
 
-#### 7. `numeric` - Numeriek antwoord
+#### 7. `matching` - Koppelen
 ```json
 {
   "id": "q007",
-  "type": "numeric",
-  "prompt_html": "Hoeveel inwoners heeft Nederland (in miljoenen)?",
-  "correct_answer": 17.5,
-  "tolerance": 0.5,
-  "unit": "miljoen"
+  "type": "matching",
+  "instruction": "Verbind de woorden met hun betekenis:",
+  "left": ["aqua", "terra", "ignis"],
+  "right": ["water", "aarde", "vuur"],
+  "correct_pairs": {
+    "aqua": "water",
+    "terra": "aarde",
+    "ignis": "vuur"
+  },
+  "explanation": "Dit zijn de juiste koppelingen."
 }
 ```
 
-#### 8. `translation_open` - Vertaling (lang)
+#### 8. `fill_blank` - Invullen in tekst
 ```json
 {
   "id": "q008",
+  "type": "fill_blank",
+  "instruction": "Vul de ontbrekende woorden in.",
+  "text": "De Romeinen spraken {{blank1}}. Hun hoofdstad was {{blank2}}.",
+  "blanks": [
+    {"id": "blank1", "answers": ["Latijn"]},
+    {"id": "blank2", "answers": ["Rome"]}
+  ],
+  "explanation": "De Romeinen spraken Latijn en woonden in Rome."
+}
+```
+
+#### 9. `fill_blank_dropdown` - Invullen met dropdown
+```json
+{
+  "id": "q009",
+  "type": "fill_blank_dropdown",
+  "instruction": "Kies de juiste woorden.",
+  "text": "De {{blank1}} zuilenstijl is eenvoudig. De {{blank2}} heeft voluten.",
+  "blanks": [
+    {"id": "blank1", "correct": "Dorische", "options": ["Dorische", "Ionische", "Korinthische", "Toscaanse"]},
+    {"id": "blank2", "correct": "Ionische", "options": ["Dorische", "Ionische", "Korinthische", "Composiet"]}
+  ],
+  "explanation": "Dorisch is eenvoudig, Ionisch heeft voluten (krullen)."
+}
+```
+
+#### 10. `translation_open` - Vertaling (lang)
+```json
+{
+  "id": "q010",
   "type": "translation_open",
   "prompt": {"html": "Vertaal:<br><em>Puella rosam amat.</em>"},
   "payload": {
@@ -163,23 +226,10 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 }
 ```
 
-#### 9. `fill_blank` - Invullen in tekst
+#### 11. `info_card` - Informatiekaart (geen vraag)
 ```json
 {
-  "id": "q009",
-  "type": "fill_blank",
-  "text": "De Romeinen spraken {{blank1}}. Hun hoofdstad was {{blank2}}.",
-  "blanks": [
-    {"id": "blank1", "accepted": ["Latijn"]},
-    {"id": "blank2", "accepted": ["Rome"]}
-  ]
-}
-```
-
-#### 10. `info_card` - Informatiekaart (geen vraag)
-```json
-{
-  "id": "q010",
+  "id": "q011",
   "type": "info_card",
   "title": "Achtergrondinformatie",
   "content_html": "<p>De Romeinse Republiek duurde van 509-27 v.Chr.</p>"
@@ -187,11 +237,25 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 ```
 
 ### TIPS
-1. **Variatie**: Mix verschillende vraagtypen in één toets
-2. **Meerdere antwoorden**: Geef bij `accept` arrays alle mogelijke goede antwoorden
-3. **Feedback**: Leg altijd uit WAAROM iets goed/fout is
-4. **Moeilijkheid**: Begin makkelijk, bouw op naar moeilijker
-5. **Afbeeldingen**: Zoek op Wikimedia Commons naar relevante plaatjes
+1. **Voorkeur MC**: Gebruik MC met 4-6 opties boven open/numeric vragen
+2. **Moeilijke opties**: Maak afleidende antwoorden die plausibel zijn
+3. **Geen tips/rubrics**: Geef geen hints die het antwoord weggeven
+4. **Feedback**: Leg in `e` uit WAAROM iets goed/fout is (NA het antwoorden)
+5. **Variatie**: Mix verschillende vraagtypen in één toets
+6. **Moeilijkheid**: Begin makkelijk, bouw op naar moeilijker
+7. **Afbeeldingen**: Zoek op Wikimedia Commons, maar niet bij jaartalvragen
+
+### VRAAGTYPE KEUZE
+| Situatie | Gebruik |
+|----------|---------|
+| Jaartal vragen | MC met 6 dicht bij elkaar liggende opties |
+| Feiten/begrippen | MC met 4 opties |
+| Categoriseren | multipart met MC deelvragen |
+| Latijn vertalen | open of grouped_short_text |
+| Grammatica analyse | grouped_short_text met subheaders |
+| Volgorde | ordering |
+| Koppelen (unieke paren) | matching |
+| Tekst met gaten | fill_blank of fill_blank_dropdown |
 
 ### NA HET MAKEN
 De toets moet geregistreerd worden in `data/subjects.json`:
@@ -214,5 +278,5 @@ De toets moet geregistreerd worden in `data/subjects.json`:
 
 ---
 
-*Laatste update: 2024-12-28*
-*Vraagtypen: mc, open, grouped_short_text, table_parse, ordering, matching, numeric, translation_open, fill_blank, info_card, grouped_select, ratio_table, wiskunde_multi_part*
+*Laatste update: 2024-12-29*
+*Vraagtypen: mc, open, multipart, grouped_short_text, table_parse, ordering, matching, fill_blank, fill_blank_dropdown, translation_open, info_card*
