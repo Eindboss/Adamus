@@ -16,7 +16,22 @@
         "Afvalstoffen afvoeren"
       ],
       "c": 3,
-      "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd."
+      "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd.",
+      "media": {
+        "query": "human skeleton full body anatomy",
+        "alt": "volledig skelet (hele lichaam), duidelijk herkenbaar",
+        "negativeTerms": [
+          "dinosaur",
+          "museum",
+          "statue"
+        ],
+        "_intent": {
+          "primaryConcept": "menselijk skelet – functies",
+          "specificFocus": "volledig skelet (hele lichaam), duidelijk herkenbaar",
+          "representation": "photo of labeled diagram",
+          "uniquenessKey": "skeleton-full-body"
+        }
+      }
     },
     {
       "id": "q002",
@@ -29,7 +44,21 @@
         "Sleutelbeen en schouderblad"
       ],
       "c": 0,
-      "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel."
+      "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel.",
+      "media": {
+        "query": "rib cage sternum human anatomy",
+        "alt": "ribbenkast + borstbeen (sternum)",
+        "negativeTerms": [
+          "dinosaur",
+          "armor"
+        ],
+        "_intent": {
+          "primaryConcept": "romp van het skelet",
+          "specificFocus": "ribbenkast + borstbeen (sternum)",
+          "representation": "labeled diagram of clear photo of skeletal thorax",
+          "uniquenessKey": "thorax-ribcage-sternum"
+        }
+      }
     },
     {
       "id": "q003",
@@ -42,7 +71,21 @@
         "Huidvet"
       ],
       "c": 1,
-      "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam."
+      "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam.",
+      "media": {
+        "query": "compact bone osteon haversian system",
+        "alt": "compact bot / botstructuur (doorsnede of microscopie)",
+        "negativeTerms": [
+          "cartoon",
+          "abstract"
+        ],
+        "_intent": {
+          "primaryConcept": "botweefsel – hardheid",
+          "specificFocus": "compact bot / botstructuur (doorsnede of microscopie)",
+          "representation": "diagram or microscope image (osteon/Havers-systeem)",
+          "uniquenessKey": "bone-osteon"
+        }
+      }
     },
     {
       "id": "q004",
@@ -55,7 +98,21 @@
         "Meer water in de gewrichtskom"
       ],
       "c": 1,
-      "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer."
+      "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer.",
+      "media": {
+        "query": "bone composition collagen mineral diagram",
+        "alt": "vergelijking buigzaamheid/brosheid (bijv. schema collageen vs kalk)",
+        "negativeTerms": [
+          "fracture x-ray",
+          "surgery"
+        ],
+        "_intent": {
+          "primaryConcept": "botten kinderen vs ouderen",
+          "specificFocus": "vergelijking buigzaamheid/brosheid (bijv. schema collageen vs kalk)",
+          "representation": "simple educational diagram (not meme)",
+          "uniquenessKey": "bone-collagen-vs-mineral"
+        }
+      }
     },
     {
       "id": "q005",
@@ -68,7 +125,21 @@
         "In de hersenen"
       ],
       "c": 1,
-      "e": "Kraakbeen zit bij volwassenen o.a. in oorschelp en neus, en ook tussen ribben en borstbeen en in tussenwervelschijven."
+      "e": "Kraakbeen zit bij volwassenen o.a. in oorschelp en neus, en ook tussen ribben en borstbeen en in tussenwervelschijven.",
+      "media": {
+        "query": "human ear auricle cartilage",
+        "alt": "oorschelp of neus (kraakbeen duidelijk zichtbaar)",
+        "negativeTerms": [
+          "piercing close-up",
+          "cosmetic"
+        ],
+        "_intent": {
+          "primaryConcept": "kraakbeen bij volwassenen",
+          "specificFocus": "oorschelp of neus (kraakbeen duidelijk zichtbaar)",
+          "representation": "photo (close-up) of labeled diagram",
+          "uniquenessKey": "cartilage-ear-or-nose"
+        }
+      }
     },
     {
       "id": "q006",
@@ -81,7 +152,21 @@
         "Ze blijven altijd open"
       ],
       "c": 2,
-      "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien."
+      "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien.",
+      "media": {
+        "query": "infant skull fontanelle diagram",
+        "alt": "babyschedel met fontanellen gemarkeerd",
+        "negativeTerms": [
+          "surgery",
+          "trauma"
+        ],
+        "_intent": {
+          "primaryConcept": "fontanellen schedel baby",
+          "specificFocus": "babyschedel met fontanellen gemarkeerd",
+          "representation": "labeled diagram preferred",
+          "uniquenessKey": "infant-fontanelle"
+        }
+      }
     },
     {
       "id": "q007",
@@ -94,7 +179,20 @@
         "Kogelgewricht in de heup"
       ],
       "c": 2,
-      "e": "Een naad is onbeweeglijk. Kraakbeenverbindingen laten een beetje beweging toe; gewrichten veel."
+      "e": "Een naad is onbeweeglijk. Kraakbeenverbindingen laten een beetje beweging toe; gewrichten veel.",
+      "media": {
+        "query": "human skull sutures",
+        "alt": "schedelnaden (sutures) duidelijk zichtbaar",
+        "negativeTerms": [
+          "dinosaur"
+        ],
+        "_intent": {
+          "primaryConcept": "onbeweeglijke beenverbinding",
+          "specificFocus": "schedelnaden (sutures) duidelijk zichtbaar",
+          "representation": "photo of skull with sutures / labeled diagram",
+          "uniquenessKey": "skull-sutures"
+        }
+      }
     },
     {
       "id": "q008",
@@ -107,7 +205,20 @@
         "Geen van deze"
       ],
       "c": 2,
-      "e": "Kraakbeenverbindingen (bijv. tussen ribben en borstbeen) laten een beperkte beweging toe."
+      "e": "Kraakbeenverbindingen (bijv. tussen ribben en borstbeen) laten een beperkte beweging toe.",
+      "media": {
+        "query": "costal cartilage sternum diagram",
+        "alt": "rib-kraakbeen bij borstbeen (costal cartilage) óf tussenwervelschijf als kraakbeenverbinding",
+        "negativeTerms": [
+          "cartoon"
+        ],
+        "_intent": {
+          "primaryConcept": "kraakbeenverbinding – beetje beweging",
+          "specificFocus": "rib-kraakbeen bij borstbeen (costal cartilage) óf tussenwervelschijf als kraakbeenverbinding",
+          "representation": "diagram preferred",
+          "uniquenessKey": "cartilage-connection"
+        }
+      }
     },
     {
       "id": "q009",
@@ -120,7 +231,21 @@
         "Botcellen zitten alleen in kraakbeen"
       ],
       "c": 0,
-      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten)."
+      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten).",
+      "media": {
+        "query": "haversian system osteon labeled",
+        "alt": "osteon (Havers-systeem) met concentrische lamellen",
+        "negativeTerms": [
+          "unclear",
+          "low resolution"
+        ],
+        "_intent": {
+          "primaryConcept": "botcellen in kringen rond kanaaltjes",
+          "specificFocus": "osteon (Havers-systeem) met concentrische lamellen",
+          "representation": "microscope image or labeled diagram",
+          "uniquenessKey": "haversian-system"
+        }
+      }
     },
     {
       "id": "q010",
@@ -133,7 +258,20 @@
         "warmteproductie"
       ],
       "c": 1,
-      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten."
+      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten.",
+      "media": {
+        "query": "collagen fibers bone matrix diagram",
+        "alt": "schema van collageenvezels in botmatrix (conceptueel)",
+        "negativeTerms": [
+          "skin collagen cosmetic"
+        ],
+        "_intent": {
+          "primaryConcept": "collageen in botweefsel – buigzaamheid",
+          "specificFocus": "schema van collageenvezels in botmatrix (conceptueel)",
+          "representation": "educational diagram",
+          "uniquenessKey": "bone-collagen-fibers"
+        }
+      }
     },
     {
       "id": "q011",
@@ -152,7 +290,20 @@
         "Ze produceren bloed"
       ],
       "c": 1,
-      "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen."
+      "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen.",
+      "media": {
+        "query": "articular cartilage diagram",
+        "alt": "gewrichtskraakbeen op botuiteinden (articular cartilage)",
+        "negativeTerms": [
+          "x-ray"
+        ],
+        "_intent": {
+          "primaryConcept": "kraakbeenlaagjes in gewricht",
+          "specificFocus": "gewrichtskraakbeen op botuiteinden (articular cartilage)",
+          "representation": "diagram or anatomical model photo",
+          "uniquenessKey": "articular-cartilage"
+        }
+      }
     },
     {
       "id": "q013",
@@ -165,7 +316,20 @@
         "Vormt nieuwe botten"
       ],
       "c": 1,
-      "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat."
+      "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat.",
+      "media": {
+        "query": "joint capsule synovium diagram",
+        "alt": "kapsel rondom gewricht + synovium",
+        "negativeTerms": [
+          "surgery"
+        ],
+        "_intent": {
+          "primaryConcept": "gewrichtskapsel",
+          "specificFocus": "kapsel rondom gewricht + synovium",
+          "representation": "labeled diagram",
+          "uniquenessKey": "joint-capsule"
+        }
+      }
     },
     {
       "id": "q014",
@@ -178,7 +342,20 @@
         "tussen twee wervels"
       ],
       "c": 2,
-      "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk."
+      "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk.",
+      "media": {
+        "query": "ball and socket joint shoulder anatomy",
+        "alt": "schoudergewricht (glenohumeral) of heupgewricht",
+        "negativeTerms": [
+          "door hinge"
+        ],
+        "_intent": {
+          "primaryConcept": "kogelgewricht",
+          "specificFocus": "schoudergewricht (glenohumeral) of heupgewricht",
+          "representation": "photo of anatomical model or labeled diagram",
+          "uniquenessKey": "ball-socket-joint"
+        }
+      }
     },
     {
       "id": "q015",
@@ -191,7 +368,20 @@
         "Open- en dichtklappen van een deur"
       ],
       "c": 2,
-      "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp)."
+      "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp).",
+      "media": {
+        "query": "radioulnar joint rotation diagram",
+        "alt": "spaakbeen/ellepijp (radius/ulna) rotatie (pronatie/supinatie)",
+        "negativeTerms": [
+          "hinge door"
+        ],
+        "_intent": {
+          "primaryConcept": "rolgewricht",
+          "specificFocus": "spaakbeen/ellepijp (radius/ulna) rotatie (pronatie/supinatie)",
+          "representation": "diagram preferred",
+          "uniquenessKey": "pivot-joint-radius-ulna"
+        }
+      }
     },
     {
       "id": "q016",
@@ -204,7 +394,20 @@
         "Knie = kraakbeenverbinding; schouder = naad"
       ],
       "c": 1,
-      "e": "De knie is een scharniergewricht (heen en weer). De schouder is een kogelgewricht (veel richtingen)."
+      "e": "De knie is een scharniergewricht (heen en weer). De schouder is een kogelgewricht (veel richtingen).",
+      "media": {
+        "query": "hinge joint knee vs ball socket shoulder diagram",
+        "alt": "knie (scharnier) én schouder (kogel) in één overzicht (split diagram)",
+        "negativeTerms": [
+          "cartoon"
+        ],
+        "_intent": {
+          "primaryConcept": "scharnier vs kogel – vergelijking",
+          "specificFocus": "knie (scharnier) én schouder (kogel) in één overzicht (split diagram)",
+          "representation": "comparison diagram (two panels) preferred",
+          "uniquenessKey": "joint-types-comparison"
+        }
+      }
     },
     {
       "id": "q017",
@@ -217,7 +420,21 @@
         "Spieren worden dikker"
       ],
       "c": 1,
-      "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen."
+      "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen.",
+      "media": {
+        "query": "synovial fluid lubrication diagram",
+        "alt": "synoviaal gewricht met synovial fluid (glijlaag) concept",
+        "negativeTerms": [
+          "arthritis",
+          "disease"
+        ],
+        "_intent": {
+          "primaryConcept": "gewrichtssmeer/wrijving",
+          "specificFocus": "synoviaal gewricht met synovial fluid (glijlaag) concept",
+          "representation": "diagram with friction concept",
+          "uniquenessKey": "joint-lubrication"
+        }
+      }
     },
     {
       "id": "q018",
@@ -230,7 +447,20 @@
         "fontanellen"
       ],
       "c": 0,
-      "e": "Kapselbanden zijn extra versteviging om het gewricht."
+      "e": "Kapselbanden zijn extra versteviging om het gewricht.",
+      "media": {
+        "query": "knee ligaments diagram",
+        "alt": "gewricht met ligamenten zichtbaar (bijv. kniebanden)",
+        "negativeTerms": [
+          "surgery"
+        ],
+        "_intent": {
+          "primaryConcept": "kapselbanden (ligaments) verstevigen",
+          "specificFocus": "gewricht met ligamenten zichtbaar (bijv. kniebanden)",
+          "representation": "labeled diagram or anatomical model",
+          "uniquenessKey": "ligaments-knee"
+        }
+      }
     },
     {
       "id": "q019",
@@ -243,7 +473,21 @@
         "Ze zorgen voor bloedtransport"
       ],
       "c": 1,
-      "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering)."
+      "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering).",
+      "media": {
+        "query": "intervertebral disc diagram",
+        "alt": "wervelkolom met discus als schokdemper",
+        "negativeTerms": [
+          "hernia",
+          "MRI"
+        ],
+        "_intent": {
+          "primaryConcept": "tussenwervelschijven",
+          "specificFocus": "wervelkolom met discus als schokdemper",
+          "representation": "diagram preferred",
+          "uniquenessKey": "intervertebral-disc"
+        }
+      }
     },
     {
       "id": "q020",
@@ -256,7 +500,21 @@
         "Je botten worden zachter"
       ],
       "c": 1,
-      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen."
+      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen.",
+      "media": {
+        "query": "human spine double S curve diagram",
+        "alt": "S-curve in zijaanzicht + vering/absorptie concept",
+        "negativeTerms": [
+          "scoliosis",
+          "disease"
+        ],
+        "_intent": {
+          "primaryConcept": "dubbele-S-vorm wervelkolom",
+          "specificFocus": "S-curve in zijaanzicht + vering/absorptie concept",
+          "representation": "educational diagram",
+          "uniquenessKey": "spine-s-curve"
+        }
+      }
     },
     {
       "id": "q021",
@@ -269,7 +527,21 @@
         "tussencelstof"
       ],
       "c": 1,
-      "e": "Spieren zitten met pezen aan botten vast."
+      "e": "Spieren zitten met pezen aan botten vast.",
+      "media": {
+        "query": "tendon attachment to bone diagram",
+        "alt": "pees aan bot (bijv. achillespees of bicepspees)",
+        "negativeTerms": [
+          "surgery",
+          "injury"
+        ],
+        "_intent": {
+          "primaryConcept": "pees verbindt spier aan bot",
+          "specificFocus": "pees aan bot (bijv. achillespees of bicepspees)",
+          "representation": "photo or labeled diagram",
+          "uniquenessKey": "tendon-attachment"
+        }
+      }
     },
     {
       "id": "q022",
@@ -282,7 +554,20 @@
         "kraakbeen vormt"
       ],
       "c": 1,
-      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe."
+      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe.",
+      "media": {
+        "query": "muscle contraction pulls bone lever diagram",
+        "alt": "schema hefboom: spier trekt via pees aan bot (armvoorbeeld)",
+        "negativeTerms": [
+          "cartoon"
+        ],
+        "_intent": {
+          "primaryConcept": "spier trekt bot (geen duwen)",
+          "specificFocus": "schema hefboom: spier trekt via pees aan bot (armvoorbeeld)",
+          "representation": "simple diagram with arrows",
+          "uniquenessKey": "muscle-pulls-bone"
+        }
+      }
     },
     {
       "id": "q023",
@@ -295,7 +580,20 @@
         "Wordt vloeibaar"
       ],
       "c": 1,
-      "e": "Bij samentrekking wordt de spier korter en dikker."
+      "e": "Bij samentrekking wordt de spier korter en dikker.",
+      "media": {
+        "query": "muscle contraction shorter thicker diagram",
+        "alt": "voor/na van spiervezel of spierbundel",
+        "negativeTerms": [
+          "advanced sarcomere"
+        ],
+        "_intent": {
+          "primaryConcept": "spiercontractie: korter en dikker",
+          "specificFocus": "voor/na van spiervezel of spierbundel",
+          "representation": "comparison diagram (relaxed vs contracted)",
+          "uniquenessKey": "muscle-contraction-macro"
+        }
+      }
     },
     {
       "id": "q024",
@@ -308,7 +606,20 @@
         "Omdat pezen anders niet bestaan"
       ],
       "c": 1,
-      "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken."
+      "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken.",
+      "media": {
+        "query": "biceps triceps antagonistic pair diagram",
+        "alt": "biceps vs triceps met tegengestelde werking",
+        "negativeTerms": [
+          "bodybuilding photo only"
+        ],
+        "_intent": {
+          "primaryConcept": "antagonistisch paar",
+          "specificFocus": "biceps vs triceps met tegengestelde werking",
+          "representation": "labeled diagram",
+          "uniquenessKey": "antagonistic-biceps-triceps"
+        }
+      }
     },
     {
       "id": "q025",
@@ -321,7 +632,20 @@
         "Schouder optrekken"
       ],
       "c": 1,
-      "e": "De biceps is een armbuigspier. De triceps is een armstrekspier."
+      "e": "De biceps is een armbuigspier. De triceps is een armstrekspier.",
+      "media": {
+        "query": "biceps elbow flexion diagram",
+        "alt": "elleboog buigen (flexie) door biceps",
+        "negativeTerms": [
+          "cartoon"
+        ],
+        "_intent": {
+          "primaryConcept": "biceps beweging",
+          "specificFocus": "elleboog buigen (flexie) door biceps",
+          "representation": "diagram or annotated photo",
+          "uniquenessKey": "biceps-flexion"
+        }
+      }
     },
     {
       "id": "q026",
@@ -334,7 +658,20 @@
         "Je knieën buigen"
       ],
       "c": 1,
-      "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust."
+      "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust.",
+      "media": {
+        "query": "intestinal peristalsis diagram",
+        "alt": "darmperistaltiek / gladde spier in darmwand",
+        "negativeTerms": [
+          "surgery photo"
+        ],
+        "_intent": {
+          "primaryConcept": "onbewuste spierbeweging (orgaanspieren)",
+          "specificFocus": "darmperistaltiek / gladde spier in darmwand",
+          "representation": "diagram preferred",
+          "uniquenessKey": "peristalsis"
+        }
+      }
     },
     {
       "id": "q027",
@@ -347,7 +684,20 @@
         "kuitspier"
       ],
       "c": 2,
-      "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen."
+      "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen.",
+      "media": {
+        "query": "arrector pili muscle diagram",
+        "alt": "arrector pili muscle + haarfollikel (goosebumps)",
+        "negativeTerms": [
+          "cosmetic"
+        ],
+        "_intent": {
+          "primaryConcept": "huidspiertje dat haar rechtop zet",
+          "specificFocus": "arrector pili muscle + haarfollikel (goosebumps)",
+          "representation": "labeled diagram",
+          "uniquenessKey": "arrector-pili"
+        }
+      }
     },
     {
       "id": "q028",
@@ -360,7 +710,21 @@
         "Een nieuwe formule ontdekken"
       ],
       "c": 2,
-      "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren."
+      "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren.",
+      "media": {
+        "query": "person riding bicycle everyday",
+        "alt": "fietsen als automatisch voorbeeld",
+        "negativeTerms": [
+          "race",
+          "logo"
+        ],
+        "_intent": {
+          "primaryConcept": "motorisch geheugen – geautomatiseerde beweging",
+          "specificFocus": "fietsen als automatisch voorbeeld",
+          "representation": "photo (clear, simple) preferred",
+          "uniquenessKey": "bicycle-automatic-movement"
+        }
+      }
     },
     {
       "id": "q029",
@@ -373,7 +737,21 @@
         "Hoeveel vet je hebt"
       ],
       "c": 1,
-      "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen."
+      "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen.",
+      "media": {
+        "query": "coordination movement example juggling",
+        "alt": "beweging met meerdere spiergroepen (bijv. jongleur, turnen, sprintstart-achtige houding)",
+        "negativeTerms": [
+          "stunt",
+          "accident"
+        ],
+        "_intent": {
+          "primaryConcept": "coördinatie = samenwerking spieren",
+          "specificFocus": "beweging met meerdere spiergroepen (bijv. jongleur, turnen, sprintstart-achtige houding)",
+          "representation": "photo preferred",
+          "uniquenessKey": "coordination-example"
+        }
+      }
     },
     {
       "id": "q030",
@@ -386,7 +764,20 @@
         "Altijd meer spierpijn"
       ],
       "c": 1,
-      "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen."
+      "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen.",
+      "media": {
+        "query": "people jogging park",
+        "alt": "algemene sport/actieve beweging (wandelen/joggen) neutraal",
+        "negativeTerms": [
+          "marathon branding"
+        ],
+        "_intent": {
+          "primaryConcept": "lichaamsbeweging is gezond",
+          "specificFocus": "algemene sport/actieve beweging (wandelen/joggen) neutraal",
+          "representation": "photo",
+          "uniquenessKey": "exercise-health-general"
+        }
+      }
     },
     {
       "id": "q031",
@@ -399,7 +790,20 @@
         "Je botten worden harder"
       ],
       "c": 1,
-      "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid."
+      "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid.",
+      "media": {
+        "query": "warm up running drills photo",
+        "alt": "warming-up oefening (licht rennen, dynamische warming-up)",
+        "negativeTerms": [
+          "stretching static only"
+        ],
+        "_intent": {
+          "primaryConcept": "warming-up (spieren warm, meer bloed)",
+          "specificFocus": "warming-up oefening (licht rennen, dynamische warming-up)",
+          "representation": "photo",
+          "uniquenessKey": "warm-up"
+        }
+      }
     },
     {
       "id": "q032",
@@ -412,7 +816,20 @@
         "Ongeveer 60 minuten"
       ],
       "c": 1,
-      "e": "In de tekst: maximaal een kwartier; anders zijn de spieren weer koud reminder."
+      "e": "In de tekst: maximaal een kwartier; anders zijn de spieren weer koud reminder.",
+      "media": {
+        "query": "stopwatch sports training",
+        "alt": "tijd/klok + sportcontext (max 15 min) zonder tekstdominantie",
+        "negativeTerms": [
+          "infographic"
+        ],
+        "_intent": {
+          "primaryConcept": "afkoelen na warming-up (tijd tussenin)",
+          "specificFocus": "tijd/klok + sportcontext (max 15 min) zonder tekstdominantie",
+          "representation": "photo or simple diagram",
+          "uniquenessKey": "stopwatch-training"
+        }
+      }
     },
     {
       "id": "q033",
@@ -425,7 +842,21 @@
         "Rukken aan de spier om sneller te rekken"
       ],
       "c": 1,
-      "e": "Rekoefeningen: rustig, langzaam, tot spanning maar geen pijn; veren vergroot juist kans op blessure."
+      "e": "Rekoefeningen: rustig, langzaam, tot spanning maar geen pijn; veren vergroot juist kans op blessure.",
+      "media": {
+        "query": "stretching exercise calm",
+        "alt": "rustig, langzaam rekken (geen veren) – statisch rekbeeld",
+        "negativeTerms": [
+          "extreme",
+          "yoga advanced"
+        ],
+        "_intent": {
+          "primaryConcept": "goede rekoefeningen",
+          "specificFocus": "rustig, langzaam rekken (geen veren) – statisch rekbeeld",
+          "representation": "photo",
+          "uniquenessKey": "stretching-safe"
+        }
+      }
     },
     {
       "id": "q034",
@@ -438,7 +869,20 @@
         "Je botten herstellen sneller"
       ],
       "c": 0,
-      "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd."
+      "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd.",
+      "media": {
+        "query": "cool down jogging after workout",
+        "alt": "uitlopen/uitfietsen na sport (lage intensiteit)",
+        "negativeTerms": [
+          "finish line"
+        ],
+        "_intent": {
+          "primaryConcept": "cooling-down (afvalstoffen afvoeren)",
+          "specificFocus": "uitlopen/uitfietsen na sport (lage intensiteit)",
+          "representation": "photo",
+          "uniquenessKey": "cooling-down"
+        }
+      }
     },
     {
       "id": "q035",
@@ -451,7 +895,21 @@
         "een te snelle hartslag"
       ],
       "c": 1,
-      "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen."
+      "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen.",
+      "media": {
+        "query": "muscle soreness after exercise photo",
+        "alt": "spier met 'burning' concept zonder medische pathologie (bijv. sporter met bovenbeen vasthouden)",
+        "negativeTerms": [
+          "injury",
+          "blood"
+        ],
+        "_intent": {
+          "primaryConcept": "spierpijn (leerboekuitleg: afvalstoffen/overbelasting)",
+          "specificFocus": "spier met 'burning' concept zonder medische pathologie (bijv. sporter met bovenbeen vasthouden)",
+          "representation": "photo",
+          "uniquenessKey": "muscle-soreness"
+        }
+      }
     },
     {
       "id": "q036",
@@ -464,7 +922,21 @@
         "Een automatisch leerproces"
       ],
       "c": 1,
-      "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders."
+      "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders.",
+      "media": {
+        "query": "ankle sprain brace photo",
+        "alt": "enkelverstuiking-achtige situatie (neutraal) of kniebrace (algemeen)",
+        "negativeTerms": [
+          "blood",
+          "surgery"
+        ],
+        "_intent": {
+          "primaryConcept": "blessure = beschadiging spier/bot/gewricht",
+          "specificFocus": "enkelverstuiking-achtige situatie (neutraal) of kniebrace (algemeen)",
+          "representation": "photo",
+          "uniquenessKey": "sports-injury-general"
+        }
+      }
     },
     {
       "id": "q037",
@@ -477,7 +949,21 @@
         "een warming-up"
       ],
       "c": 1,
-      "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning."
+      "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning.",
+      "media": {
+        "query": "repetitive strain typing hands keyboard",
+        "alt": "hand/arm bij toetsenbord of smartphone, overbelasting context",
+        "negativeTerms": [
+          "x-ray",
+          "surgery"
+        ],
+        "_intent": {
+          "primaryConcept": "RSI door herhaling + statische houding",
+          "specificFocus": "hand/arm bij toetsenbord of smartphone, overbelasting context",
+          "representation": "photo",
+          "uniquenessKey": "rsi-typing"
+        }
+      }
     },
     {
       "id": "q038",
@@ -490,7 +976,20 @@
         "Sneller kunnen rennen"
       ],
       "c": 0,
-      "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm)."
+      "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm).",
+      "media": {
+        "query": "wrist pain from typing photo",
+        "alt": "persoon die pols/onderarm masseert of hand schudt (subtiel)",
+        "negativeTerms": [
+          "hospital"
+        ],
+        "_intent": {
+          "primaryConcept": "beginnende RSI-klachten (tintelingen/vermoeidheid)",
+          "specificFocus": "persoon die pols/onderarm masseert of hand schudt (subtiel)",
+          "representation": "photo",
+          "uniquenessKey": "rsi-symptom-wrist"
+        }
+      }
     },
     {
       "id": "q039",
@@ -503,7 +1002,20 @@
         "Altijd in dezelfde houding blijven"
       ],
       "c": 1,
-      "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI."
+      "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI.",
+      "media": {
+        "query": "taking break from computer desk photo",
+        "alt": "werkplek met pauze-moment (bijv. opstaan van bureau, stretchen bij bureau)",
+        "negativeTerms": [
+          "infographic"
+        ],
+        "_intent": {
+          "primaryConcept": "RSI voorkomen: pauzes/afwisseling",
+          "specificFocus": "werkplek met pauze-moment (bijv. opstaan van bureau, stretchen bij bureau)",
+          "representation": "photo",
+          "uniquenessKey": "rsi-prevention-break"
+        }
+      }
     },
     {
       "id": "q040",
@@ -516,7 +1028,20 @@
         "Altijd op één voet staan"
       ],
       "c": 2,
-      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken."
+      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken.",
+      "media": {
+        "query": "ergonomic posture monitor eye level diagram",
+        "alt": "ergonomische werkplek met monitor op ooghoogte",
+        "negativeTerms": [
+          "gaming setup neon"
+        ],
+        "_intent": {
+          "primaryConcept": "beeldschermhouding: hoofd rechtop",
+          "specificFocus": "ergonomische werkplek met monitor op ooghoogte",
+          "representation": "photo or simple diagram",
+          "uniquenessKey": "ergonomics-head-upright"
+        }
+      }
     },
     {
       "id": "q041",
@@ -529,7 +1054,20 @@
         "Met ronde schouders naar voren leunen"
       ],
       "c": 0,
-      "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden)."
+      "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden).",
+      "media": {
+        "query": "ergonomic sitting posture 90 degrees diagram",
+        "alt": "ergonomie diagram met 90° hoeken",
+        "negativeTerms": [
+          "cartoon"
+        ],
+        "_intent": {
+          "primaryConcept": "goede zithouding: armen/benen 90 graden",
+          "specificFocus": "ergonomie diagram met 90° hoeken",
+          "representation": "diagram preferred",
+          "uniquenessKey": "ergonomics-90-degrees"
+        }
+      }
     },
     {
       "id": "q042",
@@ -542,7 +1080,20 @@
         "5 minuten je schouders aanspannen"
       ],
       "c": 0,
-      "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging."
+      "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging.",
+      "media": {
+        "query": "putting smartphone away break",
+        "alt": "telefoon wegleggen / wandelen / afwisseling",
+        "negativeTerms": [
+          "gaming"
+        ],
+        "_intent": {
+          "primaryConcept": "RSI verminderen: wisselen van activiteit",
+          "specificFocus": "telefoon wegleggen / wandelen / afwisseling",
+          "representation": "photo",
+          "uniquenessKey": "phone-break"
+        }
+      }
     },
     {
       "id": "q043",
@@ -555,7 +1106,20 @@
         "Om te ademen onder water"
       ],
       "c": 1,
-      "e": "Pinguïns vliegen niet; ze zwemmen snel en gebruiken vleugels als flippers."
+      "e": "Pinguïns vliegen niet; ze zwemmen snel en gebruiken vleugels als flippers.",
+      "media": {
+        "query": "penguin swimming underwater",
+        "alt": "pinguïn onder water zwemmend",
+        "negativeTerms": [
+          "cartoon"
+        ],
+        "_intent": {
+          "primaryConcept": "pinguïn-vleugels als flippers (zwemmen)",
+          "specificFocus": "pinguïn onder water zwemmend",
+          "representation": "photo",
+          "uniquenessKey": "penguin-underwater"
+        }
+      }
     },
     {
       "id": "q044",
@@ -568,7 +1132,20 @@
         "Omdat ze geen heupbeen hebben"
       ],
       "c": 1,
-      "e": "De tekst: pinguïns lopen op hun hurken; vleugels helpen bij evenwicht, wat leidt tot waggelende gang."
+      "e": "De tekst: pinguïns lopen op hun hurken; vleugels helpen bij evenwicht, wat leidt tot waggelende gang.",
+      "media": {
+        "query": "penguin walking waddle",
+        "alt": "pinguïn lopend op land met gespreide vleugels (balans)",
+        "negativeTerms": [
+          "cartoon"
+        ],
+        "_intent": {
+          "primaryConcept": "waggelende gang / hurkhouding pinguïn",
+          "specificFocus": "pinguïn lopend op land met gespreide vleugels (balans)",
+          "representation": "photo",
+          "uniquenessKey": "penguin-waddle"
+        }
+      }
     },
     {
       "id": "q045",
@@ -581,7 +1158,20 @@
         "Het zorgt dat ze kunnen draaien met hun vleugels als rolgewricht"
       ],
       "c": 1,
-      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten."
+      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten.",
+      "media": {
+        "query": "penguin flipper skeleton bones",
+        "alt": "pinguïn-skelet of vleugelbotten (flipper) met vergroeiing zichtbaar",
+        "negativeTerms": [
+          "cartoon"
+        ],
+        "_intent": {
+          "primaryConcept": "skeletaanpassing pinguïn: schouder beweeglijk, elleboog/pols (bijna) vergroeid",
+          "specificFocus": "pinguïn-skelet of vleugelbotten (flipper) met vergroeiing zichtbaar",
+          "representation": "labeled diagram or museum specimen photo (maar informatief)",
+          "uniquenessKey": "penguin-flipper-skeleton"
+        }
+      }
     },
     {
       "id": "q046",
@@ -594,7 +1184,21 @@
         "handspieren"
       ],
       "c": 1,
-      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk."
+      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk.",
+      "media": {
+        "query": "bird sternum keel diagram",
+        "alt": "borstbeen met kiel bij vogel/pinguïn of diagram borstspieren-aanhechting",
+        "negativeTerms": [
+          "cooking",
+          "food"
+        ],
+        "_intent": {
+          "primaryConcept": "kiel (borstbeenuitsteeksel) aanhechting borstspieren",
+          "specificFocus": "borstbeen met kiel bij vogel/pinguïn of diagram borstspieren-aanhechting",
+          "representation": "labeled diagram preferred",
+          "uniquenessKey": "keel-sternum"
+        }
+      }
     },
     {
       "id": "q047",
@@ -642,7 +1246,21 @@
         "Sporten (wedstrijd/training)",
         "Cooling-down"
       ],
-      "explanation": "Je begint met een warming-up om spieren warm te maken, daarna kun je (sportafhankelijk) rekoefeningen doen, vervolgens sport je, en je eindigt met een cooling-down om afvalstoffen af te voeren."
+      "explanation": "Je begint met een warming-up om spieren warm te maken, daarna kun je (sportafhankelijk) rekoefeningen doen, vervolgens sport je, en je eindigt met een cooling-down om afvalstoffen af te voeren.",
+      "media": {
+        "query": "training session phases warm up cool down diagram",
+        "alt": "visueel stappenplan zonder veel tekst (warming-up → rek → sport → cooling-down)",
+        "negativeTerms": [
+          "cartoon",
+          "infographic text-heavy"
+        ],
+        "_intent": {
+          "primaryConcept": "opbouw training (volgorde)",
+          "specificFocus": "visueel stappenplan zonder veel tekst (warming-up → rek → sport → cooling-down)",
+          "representation": "simple diagram or sequence photo",
+          "uniquenessKey": "training-sequence"
+        }
+      }
     },
     {
       "id": "q049",
@@ -665,7 +1283,21 @@
           ]
         }
       ],
-      "explanation": "RSI betekent Repetitive Strain Injury en komt door herhaalde bewegingen en langdurige spierspanning in eenzelfde houding."
+      "explanation": "RSI betekent Repetitive Strain Injury en komt door herhaalde bewegingen en langdurige spierspanning in eenzelfde houding.",
+      "media": {
+        "query": "office workstation typing repetitive strain",
+        "alt": "herhaalde beweging + statische houding (bureauwerk)",
+        "negativeTerms": [
+          "icon",
+          "x-ray"
+        ],
+        "_intent": {
+          "primaryConcept": "RSI (definitie + oorzaak)",
+          "specificFocus": "herhaalde beweging + statische houding (bureauwerk)",
+          "representation": "photo",
+          "uniquenessKey": "rsi-workstation"
+        }
+      }
     },
     {
       "id": "q050",
@@ -722,7 +1354,21 @@
           "correct": 1
         }
       ],
-      "e": "Krachttraining maakt spieren sterker (dikker). Een verstandige trainingsopbouw is warming-up → (rekoefeningen) → trainen → cooling-down. Coördinatie is samenwerking/timing van spieren. Door herhaling sla je bewegingen op in het motorisch geheugen, waardoor ze automatisch gaan."
+      "e": "Krachttraining maakt spieren sterker (dikker). Een verstandige trainingsopbouw is warming-up → (rekoefeningen) → trainen → cooling-down. Coördinatie is samenwerking/timing van spieren. Door herhaling sla je bewegingen op in het motorisch geheugen, waardoor ze automatisch gaan.",
+      "media": {
+        "query": "sprinter starting blocks photo",
+        "alt": "sprintstart of krachttraining (squat) in sportsetting",
+        "negativeTerms": [
+          "podium",
+          "brand"
+        ],
+        "_intent": {
+          "primaryConcept": "casus sprintster: krachttraining + motorisch geheugen + trainingsopbouw",
+          "specificFocus": "sprintstart of krachttraining (squat) in sportsetting",
+          "representation": "photo",
+          "uniquenessKey": "sprinter-training-casus"
+        }
+      }
     }
   ]
 }
