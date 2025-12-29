@@ -29,24 +29,45 @@ export function initV2QuestionTypes(quizState, showFeedback, resetForNextPart) {
 
 /**
  * Render fill_blank question
- * Text with {{blank1}}, {{blank2}} placeholders replaced by input fields
+ * Text with {{blank1}}, {{blank2}} placeholders replaced by input fields or dropdowns
  */
 export function renderFillBlank(container, q) {
   const instruction = q.instruction || "Vul de ontbrekende woorden in.";
   let text = q.text || "";
   const blanks = q.blanks || [];
+  const isDropdown = q.type === "fill_blank_dropdown" || blanks.some(b => b.options);
 
-  // Replace {{blankX}} with input fields
+  // Replace {{blankX}} with input fields or dropdowns
   blanks.forEach((blank, idx) => {
     const placeholder = `{{${blank.id}}}`;
-    const inputHtml = `<input type="text"
-      class="fill-blank-input"
-      id="blank-${blank.id}"
-      data-blank-id="${blank.id}"
-      placeholder="..."
-      autocomplete="off"
-      autocorrect="off"
-      spellcheck="false">`;
+    let inputHtml;
+
+    if (blank.options) {
+      // Dropdown mode
+      const shuffledOptions = [...blank.options];
+      shuffle(shuffledOptions);
+      const optionsHtml = shuffledOptions.map(opt =>
+        `<option value="${opt}">${opt}</option>`
+      ).join("");
+
+      inputHtml = `<select
+        class="fill-blank-dropdown"
+        id="blank-${blank.id}"
+        data-blank-id="${blank.id}">
+        <option value="">Kies...</option>
+        ${optionsHtml}
+      </select>`;
+    } else {
+      // Text input mode
+      inputHtml = `<input type="text"
+        class="fill-blank-input"
+        id="blank-${blank.id}"
+        data-blank-id="${blank.id}"
+        placeholder="..."
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false">`;
+    }
     text = text.replace(placeholder, inputHtml);
   });
 
@@ -68,10 +89,13 @@ export function renderFillBlank(container, q) {
     container.innerHTML = contentHtml;
   }
 
-  // Setup input listeners
+  // Setup input/dropdown listeners
   const inputs = $$$(".fill-blank-input", container);
+  const dropdowns = $$$(".fill-blank-dropdown", container);
+  const allFields = [...inputs, ...dropdowns];
+
   inputs.forEach((input, idx) => {
-    input.addEventListener("input", () => updateFillBlankProgress(inputs));
+    input.addEventListener("input", () => updateFillBlankProgress(allFields));
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -82,8 +106,12 @@ export function renderFillBlank(container, q) {
     });
   });
 
-  // Focus first input
-  if (inputs.length > 0) inputs[0].focus();
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("change", () => updateFillBlankProgress(allFields));
+  });
+
+  // Focus first field
+  if (allFields.length > 0) allFields[0].focus();
 
   const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = true;
@@ -96,7 +124,7 @@ function updateFillBlankProgress(inputs) {
 }
 
 /**
- * Check fill_blank answer
+ * Check fill_blank answer (supports both text inputs and dropdowns)
  */
 export function checkFillBlank(q) {
   const blanks = q.blanks || [];
@@ -104,32 +132,41 @@ export function checkFillBlank(q) {
   const results = [];
 
   blanks.forEach((blank) => {
-    const input = $(`blank-${blank.id}`);
-    if (!input) return;
+    const field = $(`blank-${blank.id}`);
+    if (!field) return;
 
-    const userValue = input.value.trim();
-    const acceptedAnswers = blank.answers || [];
-    const caseSensitive = blank.case_sensitive !== false;
+    const userValue = field.value.trim();
+    const isDropdown = blank.options !== undefined;
 
-    // Check if answer matches any accepted answer
-    const isCorrect = acceptedAnswers.some(accepted => {
-      if (caseSensitive) {
-        return userValue === accepted;
-      }
-      return userValue.toLowerCase() === accepted.toLowerCase();
-    });
+    let isCorrect = false;
+
+    if (isDropdown) {
+      // Dropdown mode: check against correct value
+      isCorrect = userValue === blank.correct;
+    } else {
+      // Text input mode: check against accepted answers
+      const acceptedAnswers = blank.answers || [];
+      const caseSensitive = blank.case_sensitive !== false;
+
+      isCorrect = acceptedAnswers.some(accepted => {
+        if (caseSensitive) {
+          return userValue === accepted;
+        }
+        return userValue.toLowerCase() === accepted.toLowerCase();
+      });
+    }
 
     if (isCorrect) {
       correctCount++;
-      input.classList.add("input-correct");
+      field.classList.add(isDropdown ? "dropdown-correct" : "input-correct");
     } else {
-      input.classList.add("input-wrong");
+      field.classList.add(isDropdown ? "dropdown-wrong" : "input-wrong");
     }
 
     results.push({
       blankId: blank.id,
       userValue,
-      expected: acceptedAnswers[0],
+      expected: isDropdown ? blank.correct : (blank.answers?.[0] || ""),
       correct: isCorrect,
     });
   });

@@ -235,22 +235,19 @@
     },
     {
       "id": "g-009",
-      "type": "numeric",
       "quiz_group": 3,
       "difficulty": 2,
-      "instruction": "Vul het juiste jaartal in.",
-      "prompt": "In welk jaar vond de Slag bij Marathon plaats?",
-      "correct_answer": 490,
-      "tolerance": 0,
-      "unit": "v.C.",
-      "explanation": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene.",
-      "media": {
-        "query": "Wikimedia: Battle of Marathon painting",
-        "kind": "image",
-        "use": "context",
-        "alt": "Schildering/illustratie van de Slag bij Marathon",
-        "credit_required": true
-      }
+      "q": "In welk jaar vond de Slag bij Marathon plaats?",
+      "a": [
+        "490 v.C.",
+        "480 v.C.",
+        "500 v.C.",
+        "479 v.C.",
+        "492 v.C.",
+        "486 v.C."
+      ],
+      "c": 0,
+      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie."
     },
     {
       "id": "g-010",
@@ -716,22 +713,19 @@
     },
     {
       "id": "g-027",
-      "type": "numeric",
       "quiz_group": 8,
       "difficulty": 2,
-      "instruction": "Vul het juiste jaartal in.",
-      "prompt": "In welk jaar begonnen traditioneel de eerste Olympische Spelen (Olympia)?",
-      "correct_answer": 776,
-      "tolerance": 0,
-      "unit": "v.C.",
-      "explanation": "776 v.C. geldt traditioneel als startjaar in veel handboeken.",
-      "media": {
-        "query": "Wikimedia: Ancient Olympia stadion",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Het stadion van Olympia",
-        "credit_required": true
-      }
+      "q": "In welk jaar begonnen traditioneel de eerste Olympische Spelen (Olympia)?",
+      "a": [
+        "776 v.C.",
+        "780 v.C.",
+        "770 v.C.",
+        "756 v.C.",
+        "800 v.C.",
+        "764 v.C."
+      ],
+      "c": 0,
+      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum."
     },
     {
       "id": "g-028",
@@ -863,22 +857,19 @@
     },
     {
       "id": "g-032",
-      "type": "numeric",
       "quiz_group": 9,
       "difficulty": 3,
-      "instruction": "Vul het juiste jaartal in.",
-      "prompt": "In welk jaar vond de zeeslag bij Salamis plaats?",
-      "correct_answer": 480,
-      "tolerance": 0,
-      "unit": "v.C.",
-      "explanation": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes’ vloot.",
-      "media": {
-        "query": "Wikimedia: Battle of Salamis map strait",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Kaart van de zeeslag bij Salamis",
-        "credit_required": true
-      }
+      "q": "In welk jaar vond de zeeslag bij Salamis plaats?",
+      "a": [
+        "480 v.C.",
+        "490 v.C.",
+        "479 v.C.",
+        "481 v.C.",
+        "478 v.C.",
+        "485 v.C."
+      ],
+      "c": 0,
+      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond."
     },
     {
       "id": "g-033",
@@ -968,39 +959,77 @@
     },
     {
       "id": "g-037",
-      "type": "short_answer",
+      "type": "multipart",
       "quiz_group": 10,
       "difficulty": 4,
-      "instruction": "Antwoord in 1–2 zinnen.",
-      "prompt": "Wat is het symbool van Asklepios in de geneeskunde, en hoe heet het?",
-      "keywords": [
-        "staf",
-        "slang",
-        "Asklepios",
-        "esculaap",
-        "esculaapstaf"
+      "instruction": "Beantwoord beide vragen over het symbool van Asklepios.",
+      "context": "Asklepios was de Griekse god van de geneeskunde. Zijn symbool wordt nog steeds gebruikt in de medische wereld.",
+      "parts": [
+        {
+          "id": "a",
+          "type": "mc",
+          "prompt": "Wat is het symbool van Asklepios?",
+          "options": [
+            "Een staf met één slang",
+            "Een staf met twee slangen",
+            "Een slang die in zijn staart bijt",
+            "Een adelaar met een slang"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "b",
+          "type": "mc",
+          "prompt": "Hoe heet dit symbool?",
+          "options": [
+            "Esculaapstaf",
+            "Caduceus",
+            "Ouroboros",
+            "Hermesstaf"
+          ],
+          "correct": 0
+        }
       ],
-      "min_keywords": 2,
-      "rubric": "Noem staf met slang + (esculaap)staf/Asklepiusstaf. Geen verwarring met caduceus (twee slangen).",
-      "example_answer": "Het symbool is een staf met één slang eromheen: de (A)esculaapstaf, verbonden aan Asklepios."
+      "e": "Het symbool van Asklepios is een staf met één slang, de esculaapstaf. De caduceus (twee slangen) hoort bij Hermes, niet bij geneeskunde."
     },
     {
       "id": "g-038",
-      "type": "matching",
+      "type": "multipart",
       "quiz_group": 11,
       "difficulty": 4,
-      "prompt": "Sleep elk voorbeeld naar de juiste categorie: objectief (feitelijk) of subjectief (mening/waardering).",
-      "pairs": [
-        { "left": "De slag vond plaats in 480 v.Chr.", "right": "Objectief" },
-        { "left": "Er vochten 300 Spartanen", "right": "Objectief" },
-        { "left": "De Perzen hadden 100.000 soldaten", "right": "Objectief" },
-        { "left": "De pas van Thermopylai was smal", "right": "Objectief" },
-        { "left": "De Spartanen vochten heldhaftig", "right": "Subjectief" },
-        { "left": "De Grieken waren dapperder dan de Perzen", "right": "Subjectief" },
-        { "left": "De Perzische overwinning was makkelijk", "right": "Subjectief" },
-        { "left": "Leonidas was een geweldige koning", "right": "Subjectief" }
+      "instruction": "Is dit voorbeeld objectief (feitelijk) of subjectief (mening/waardering)?",
+      "context": "Objectief = controleerbaar feit. Subjectief = oordeel of waardering.",
+      "parts": [
+        {
+          "id": "a",
+          "type": "mc",
+          "prompt": "\"De slag vond plaats in 480 v.Chr.\"",
+          "options": ["Objectief", "Subjectief"],
+          "correct": 0
+        },
+        {
+          "id": "b",
+          "type": "mc",
+          "prompt": "\"Er vochten 300 Spartanen\"",
+          "options": ["Objectief", "Subjectief"],
+          "correct": 0
+        },
+        {
+          "id": "c",
+          "type": "mc",
+          "prompt": "\"De Spartanen vochten heldhaftig\"",
+          "options": ["Objectief", "Subjectief"],
+          "correct": 1
+        },
+        {
+          "id": "d",
+          "type": "mc",
+          "prompt": "\"Leonidas was een geweldige koning\"",
+          "options": ["Objectief", "Subjectief"],
+          "correct": 1
+        }
       ],
-      "explanation": "Objectief = controleerbaar feit (datum, aantal, plaats). Subjectief = oordeel of waardering (heldhaftig, dapper, makkelijk, geweldig)."
+      "e": "Objectief = controleerbaar feit (datum, aantal). Subjectief = oordeel of waardering (heldhaftig, geweldig)."
     },
     {
       "id": "g-039",
@@ -1067,30 +1096,17 @@
     },
     {
       "id": "g-042",
-      "type": "short_answer",
       "quiz_group": 13,
-      "difficulty": 5,
-      "instruction": "Continuïteit/verandering: noem 2 overeenkomsten.",
-      "prompt": "Noem twee overeenkomsten tussen klassieke en moderne Olympische Spelen.",
-      "keywords": [
-        "vier jaar",
-        "wedstrijd",
-        "eer",
-        "winnaar",
-        "sport",
-        "internationaal",
-        "publiek"
+      "difficulty": 3,
+      "q": "Welk kenmerk geldt voor ZOWEL de klassieke als de moderne Olympische Spelen?",
+      "a": [
+        "Ze worden elke vier jaar gehouden",
+        "Vrouwen mogen aan alle onderdelen meedoen",
+        "Atleten strijden voornamelijk om geldprijzen",
+        "De spelen vinden altijd in Griekenland plaats"
       ],
-      "min_keywords": 2,
-      "rubric": "Bijv. competitie om eer/prijs, periodiek karakter, internationale aandacht (nu breder), sport als prestige.",
-      "example_answer": "In beide gevallen draait het om sportwedstrijden met veel prestige voor winnaars. Ook worden de Spelen periodiek georganiseerd (klassiek en modern in een vaste cyclus).",
-      "media": {
-        "query": "Wikimedia: ancient Olympic wreath",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Olympische ringen en olijfkrans als symbool van winnen",
-        "credit_required": true
-      }
+      "c": 0,
+      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats."
     },
     {
       "id": "g-043",
@@ -1194,7 +1210,7 @@
     },
     {
       "id": "g-047",
-      "type": "fill_blank",
+      "type": "fill_blank_dropdown",
       "quiz_group": 16,
       "difficulty": 3,
       "instruction": "Architectuurbegrippen (zuilenordes).",
@@ -1202,31 +1218,23 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": [
-            "Dorisch",
-            "dorisch"
-          ]
+          "correct": "Dorisch",
+          "options": ["Dorisch", "Ionisch", "Korinthisch", "Toscaans"]
         },
         {
           "id": "blank2",
-          "answers": [
-            "Ionisch",
-            "ionisch"
-          ]
+          "correct": "Ionisch",
+          "options": ["Dorisch", "Ionisch", "Korinthisch", "Composiet"]
         },
         {
           "id": "blank3",
-          "answers": [
-            "Korinthisch",
-            "korinthisch"
-          ]
+          "correct": "Korinthisch",
+          "options": ["Dorisch", "Ionisch", "Korinthisch", "Etruskisch"]
         },
         {
           "id": "blank4",
-          "answers": [
-            "Parthenon",
-            "parthenon"
-          ]
+          "correct": "Parthenon",
+          "options": ["Parthenon", "Akropolis", "Agora", "Erechtheion"]
         }
       ],
       "explanation": "Gymnasium: herken stijlen visueel; koppel aan bouwcultuur en religie.",
@@ -1240,22 +1248,19 @@
     },
     {
       "id": "g-048",
-      "type": "numeric",
       "quiz_group": 16,
       "difficulty": 2,
-      "instruction": "Vul het juiste jaartal in (schatting toegestaan).",
-      "prompt": "Rond welk jaar werd Egypte verenigd onder Narmer?",
-      "correct_answer": 3100,
-      "tolerance": 100,
-      "unit": "v.C.",
-      "explanation": "3100 v.C. is een gangbare datering (schatting).",
-      "media": {
-        "query": "Wikimedia: Narmer Palette museum label",
-        "kind": "image",
-        "use": "context",
-        "alt": "Narmer-palet met datering (museumcontext)",
-        "credit_required": true
-      }
+      "q": "Rond welk jaar werd Egypte verenigd onder Narmer?",
+      "a": [
+        "3100 v.C.",
+        "3000 v.C.",
+        "3200 v.C.",
+        "2900 v.C.",
+        "3500 v.C.",
+        "2800 v.C."
+      ],
+      "c": 0,
+      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes."
     },
     {
       "id": "g-049",

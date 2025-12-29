@@ -2068,6 +2068,38 @@ textarea.open-input {
   background: var(--error-bg);
 }
 
+/* Fill Blank Dropdown */
+.fill-blank-dropdown {
+  display: inline-block;
+  min-width: 140px;
+  padding: var(--space-1) var(--space-2);
+  margin: 0 var(--space-1);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  vertical-align: middle;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.fill-blank-dropdown:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.fill-blank-dropdown.dropdown-correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+
+.fill-blank-dropdown.dropdown-wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
 /* ===========================================
    Short Answer Questions
    =========================================== */

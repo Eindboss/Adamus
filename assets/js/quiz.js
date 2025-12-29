@@ -844,6 +844,7 @@ async function renderQuestion() {
       break;
     // ChatGPT v2 question types
     case "fill_blank":
+    case "fill_blank_dropdown":
       renderFillBlank(container, q);
       break;
     case "short_answer":
@@ -2462,6 +2463,7 @@ export function checkAnswer() {
       break;
     // ChatGPT v2 question types
     case "fill_blank":
+    case "fill_blank_dropdown":
       checkFillBlank(q);
       break;
     case "short_answer":
