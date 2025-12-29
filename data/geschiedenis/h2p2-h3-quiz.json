@@ -247,7 +247,8 @@
         "486 v.C."
       ],
       "c": 0,
-      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie."
+      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Stele_of_Aristion.jpg/330px-Stele_of_Aristion.jpg"
     },
     {
       "id": "g-010",
@@ -725,7 +726,8 @@
         "764 v.C."
       ],
       "c": 0,
-      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum."
+      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/NAMA_Discophore.jpg/330px-NAMA_Discophore.jpg"
     },
     {
       "id": "g-028",
@@ -869,7 +871,8 @@
         "485 v.C."
       ],
       "c": 0,
-      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond."
+      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Themistocles_Bust.jpg/330px-Themistocles_Bust.jpg"
     },
     {
       "id": "g-033",
@@ -964,6 +967,7 @@
       "difficulty": 4,
       "instruction": "Beantwoord beide vragen over het symbool van Asklepios.",
       "context": "Asklepios was de Griekse god van de geneeskunde. Zijn symbool wordt nog steeds gebruikt in de medische wereld.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Asklepios_-_Epidauros.jpg/330px-Asklepios_-_Epidauros.jpg",
       "parts": [
         {
           "id": "a",
@@ -999,6 +1003,7 @@
       "difficulty": 4,
       "instruction": "Is dit voorbeeld objectief (feitelijk) of subjectief (mening/waardering)?",
       "context": "Objectief = controleerbaar feit. Subjectief = oordeel of waardering.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Leonidas_I_of_Sparta.jpg/330px-Leonidas_I_of_Sparta.jpg",
       "parts": [
         {
           "id": "a",
@@ -1106,7 +1111,8 @@
         "De spelen vinden altijd in Griekenland plaats"
       ],
       "c": 0,
-      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats."
+      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Discobolus_Lancelotti_Massimo.jpg/330px-Discobolus_Lancelotti_Massimo.jpg"
     },
     {
       "id": "g-043",
@@ -1260,7 +1266,8 @@
         "2800 v.C."
       ],
       "c": 0,
-      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes."
+      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/NarsmerPalette-ROM-back.jpg/330px-NarmerPalette-ROM-back.jpg"
     },
     {
       "id": "g-049",
