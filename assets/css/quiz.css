@@ -2040,7 +2040,9 @@ textarea.open-input {
 
 .fill-blank-input {
   display: inline-block;
-  width: 120px;
+  width: auto;
+  min-width: 80px;
+  max-width: 200px;
   padding: var(--space-1) var(--space-2);
   margin: 0 var(--space-1);
   font-size: 1rem;
@@ -2071,7 +2073,9 @@ textarea.open-input {
 /* Fill Blank Dropdown */
 .fill-blank-dropdown {
   display: inline-block;
-  min-width: 140px;
+  width: auto;
+  min-width: 100px;
+  max-width: 250px;
   padding: var(--space-1) var(--space-2);
   margin: 0 var(--space-1);
   font-size: 1rem;
