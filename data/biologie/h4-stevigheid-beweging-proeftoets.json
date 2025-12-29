@@ -16,11 +16,7 @@
         "Afvalstoffen afvoeren"
       ],
       "c": 3,
-      "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd.",
-      "media": {
-        "query": "human skeleton anatomy",
-        "alt": "Menselijk skelet"
-      }
+      "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd."
     },
     {
       "id": "q002",
@@ -33,11 +29,7 @@
         "Sleutelbeen en schouderblad"
       ],
       "c": 0,
-      "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel.",
-      "media": {
-        "query": "human ribcage sternum",
-        "alt": "Ribbenkast en borstbeen"
-      }
+      "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel."
     },
     {
       "id": "q003",
@@ -50,11 +42,7 @@
         "Huidvet"
       ],
       "c": 1,
-      "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam.",
-      "media": {
-        "query": "bone tissue calcium",
-        "alt": "Botweefsel met kalkzouten"
-      }
+      "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam."
     },
     {
       "id": "q004",
@@ -67,11 +55,7 @@
         "Meer water in de gewrichtskom"
       ],
       "c": 1,
-      "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer.",
-      "media": {
-        "query": "child bone flexibility collagen",
-        "alt": "Botopbouw bij kinderen"
-      }
+      "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer."
     },
     {
       "id": "q005",
@@ -84,11 +68,7 @@
         "In de hersenen"
       ],
       "c": 1,
-      "e": "Kraakbeen zit bij volwassenen o.a. in oorschelp en neus, en ook tussen ribben en borstbeen en in tussenwervelschijven.",
-      "media": {
-        "query": "human ear cartilage",
-        "alt": "Kraakbeen in het oor"
-      }
+      "e": "Kraakbeen zit bij volwassenen o.a. in oorschelp en neus, en ook tussen ribben en borstbeen en in tussenwervelschijven."
     },
     {
       "id": "q006",
@@ -101,11 +81,7 @@
         "Ze blijven altijd open"
       ],
       "c": 2,
-      "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien.",
-      "media": {
-        "query": "baby fontanelle skull",
-        "alt": "Fontanellen bij baby"
-      }
+      "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien."
     },
     {
       "id": "q007",
@@ -118,11 +94,7 @@
         "Kogelgewricht in de heup"
       ],
       "c": 2,
-      "e": "Een naad is onbeweeglijk. Kraakbeenverbindingen laten een beetje beweging toe; gewrichten veel.",
-      "media": {
-        "query": "skull sutures cranial",
-        "alt": "Schedelnaden"
-      }
+      "e": "Een naad is onbeweeglijk. Kraakbeenverbindingen laten een beetje beweging toe; gewrichten veel."
     },
     {
       "id": "q008",
@@ -135,11 +107,7 @@
         "Geen van deze"
       ],
       "c": 2,
-      "e": "Kraakbeenverbindingen (bijv. tussen ribben en borstbeen) laten een beperkte beweging toe.",
-      "media": {
-        "query": "rib cartilage connection",
-        "alt": "Kraakbeenverbinding ribben"
-      }
+      "e": "Kraakbeenverbindingen (bijv. tussen ribben en borstbeen) laten een beperkte beweging toe."
     },
     {
       "id": "q009",
@@ -152,11 +120,7 @@
         "Botcellen zitten alleen in kraakbeen"
       ],
       "c": 0,
-      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten).",
-      "media": {
-        "query": "bone cell osteon haversian",
-        "alt": "Botcellen in kringen"
-      }
+      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten)."
     },
     {
       "id": "q010",
@@ -169,21 +133,13 @@
         "warmteproductie"
       ],
       "c": 1,
-      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten.",
-      "media": {
-        "query": "collagen bone flexibility",
-        "alt": "Collageen in botweefsel"
-      }
+      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten."
     },
     {
       "id": "q011",
       "type": "info_card",
       "title": "Kernbegrippen gewrichten",
-      "content_html": "<ul><li><strong>Gewricht</strong>: verbinding tussen botten met veel beweging.</li><li><strong>Kraakbeenlaagjes</strong>: verminderen slijtage en maken beweging soepeler.</li><li><strong>Gewrichtskapsel</strong>: houdt botten op hun plaats en maakt gewrichtssmeer.</li><li><strong>Kapselbanden</strong>: verstevigen het gewricht.</li></ul>",
-      "media": {
-        "query": "synovial joint anatomy",
-        "alt": "Gewricht doorsnede"
-      }
+      "content_html": "<ul><li><strong>Gewricht</strong>: verbinding tussen botten met veel beweging.</li><li><strong>Kraakbeenlaagjes</strong>: verminderen slijtage en maken beweging soepeler.</li><li><strong>Gewrichtskapsel</strong>: houdt botten op hun plaats en maakt gewrichtssmeer.</li><li><strong>Kapselbanden</strong>: verstevigen het gewricht.</li></ul>"
     },
     {
       "id": "q012",
@@ -196,11 +152,7 @@
         "Ze produceren bloed"
       ],
       "c": 1,
-      "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen.",
-      "media": {
-        "query": "articular cartilage joint",
-        "alt": "Kraakbeenlaag in gewricht"
-      }
+      "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen."
     },
     {
       "id": "q013",
@@ -213,11 +165,7 @@
         "Vormt nieuwe botten"
       ],
       "c": 1,
-      "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat.",
-      "media": {
-        "query": "joint capsule synovial fluid",
-        "alt": "Gewrichtskapsel"
-      }
+      "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat."
     },
     {
       "id": "q014",
@@ -230,11 +178,7 @@
         "tussen twee wervels"
       ],
       "c": 2,
-      "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk.",
-      "media": {
-        "query": "shoulder ball socket joint",
-        "alt": "Kogelgewricht schouder"
-      }
+      "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk."
     },
     {
       "id": "q015",
@@ -247,11 +191,7 @@
         "Open- en dichtklappen van een deur"
       ],
       "c": 2,
-      "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp).",
-      "media": {
-        "query": "radius ulna rotation",
-        "alt": "Rolgewricht onderarm"
-      }
+      "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp)."
     },
     {
       "id": "q016",
@@ -264,11 +204,7 @@
         "Knie = kraakbeenverbinding; schouder = naad"
       ],
       "c": 1,
-      "e": "De knie is een scharniergewricht (heen en weer). De schouder is een kogelgewricht (veel richtingen).",
-      "media": {
-        "query": "knee hinge joint anatomy",
-        "alt": "Scharniergewricht knie"
-      }
+      "e": "De knie is een scharniergewricht (heen en weer). De schouder is een kogelgewricht (veel richtingen)."
     },
     {
       "id": "q017",
@@ -281,11 +217,7 @@
         "Spieren worden dikker"
       ],
       "c": 1,
-      "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen.",
-      "media": {
-        "query": "synovial fluid joint lubrication",
-        "alt": "Gewrichtssmeer"
-      }
+      "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen."
     },
     {
       "id": "q018",
@@ -298,11 +230,7 @@
         "fontanellen"
       ],
       "c": 0,
-      "e": "Kapselbanden zijn extra versteviging om het gewricht.",
-      "media": {
-        "query": "ligament joint stability",
-        "alt": "Kapselbanden"
-      }
+      "e": "Kapselbanden zijn extra versteviging om het gewricht."
     },
     {
       "id": "q019",
@@ -315,11 +243,7 @@
         "Ze zorgen voor bloedtransport"
       ],
       "c": 1,
-      "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering).",
-      "media": {
-        "query": "intervertebral disc spine",
-        "alt": "Tussenwervelschijf"
-      }
+      "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering)."
     },
     {
       "id": "q020",
@@ -332,11 +256,7 @@
         "Je botten worden zachter"
       ],
       "c": 1,
-      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen.",
-      "media": {
-        "query": "spine S curve vertebral column",
-        "alt": "Wervelkolom S-vorm"
-      }
+      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen."
     },
     {
       "id": "q021",
@@ -349,11 +269,7 @@
         "tussencelstof"
       ],
       "c": 1,
-      "e": "Spieren zitten met pezen aan botten vast.",
-      "media": {
-        "query": "muscle tendon attachment bone",
-        "alt": "Spier en pees"
-      }
+      "e": "Spieren zitten met pezen aan botten vast."
     },
     {
       "id": "q022",
@@ -366,11 +282,7 @@
         "kraakbeen vormt"
       ],
       "c": 1,
-      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe.",
-      "media": {
-        "query": "muscle contraction movement",
-        "alt": "Spiercontractie"
-      }
+      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe."
     },
     {
       "id": "q023",
@@ -383,11 +295,7 @@
         "Wordt vloeibaar"
       ],
       "c": 1,
-      "e": "Bij samentrekking wordt de spier korter en dikker.",
-      "media": {
-        "query": "muscle fiber contraction",
-        "alt": "Spiervezels"
-      }
+      "e": "Bij samentrekking wordt de spier korter en dikker."
     },
     {
       "id": "q024",
@@ -400,11 +308,7 @@
         "Omdat pezen anders niet bestaan"
       ],
       "c": 1,
-      "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken.",
-      "media": {
-        "query": "biceps triceps antagonist muscles",
-        "alt": "Biceps en triceps"
-      }
+      "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken."
     },
     {
       "id": "q025",
@@ -417,11 +321,7 @@
         "Schouder optrekken"
       ],
       "c": 1,
-      "e": "De biceps is een armbuigspier. De triceps is een armstrekspier.",
-      "media": {
-        "query": "biceps arm flexion",
-        "alt": "Biceps armbuiging"
-      }
+      "e": "De biceps is een armbuigspier. De triceps is een armstrekspier."
     },
     {
       "id": "q026",
@@ -434,11 +334,7 @@
         "Je knieën buigen"
       ],
       "c": 1,
-      "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust.",
-      "media": {
-        "query": "smooth muscle intestine",
-        "alt": "Gladde spieren darmen"
-      }
+      "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust."
     },
     {
       "id": "q027",
@@ -451,11 +347,7 @@
         "kuitspier"
       ],
       "c": 2,
-      "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen.",
-      "media": {
-        "query": "arrector pili muscle hair",
-        "alt": "Haarspiertje"
-      }
+      "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen."
     },
     {
       "id": "q028",
@@ -468,11 +360,7 @@
         "Een nieuwe formule ontdekken"
       ],
       "c": 2,
-      "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren.",
-      "media": {
-        "query": "motor memory cycling",
-        "alt": "Fietsen motorisch geheugen"
-      }
+      "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren."
     },
     {
       "id": "q029",
@@ -485,11 +373,7 @@
         "Hoeveel vet je hebt"
       ],
       "c": 1,
-      "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen.",
-      "media": {
-        "query": "muscle coordination movement",
-        "alt": "Spiercoordinatie"
-      }
+      "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen."
     },
     {
       "id": "q030",
@@ -502,11 +386,7 @@
         "Altijd meer spierpijn"
       ],
       "c": 1,
-      "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen.",
-      "media": {
-        "query": "exercise physical health",
-        "alt": "Lichaamsbeweging gezondheid"
-      }
+      "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen."
     },
     {
       "id": "q031",
@@ -519,11 +399,7 @@
         "Je botten worden harder"
       ],
       "c": 1,
-      "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid.",
-      "media": {
-        "query": "warm up exercise stretching",
-        "alt": "Warming-up oefeningen"
-      }
+      "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid."
     },
     {
       "id": "q032",
@@ -536,11 +412,7 @@
         "Ongeveer 60 minuten"
       ],
       "c": 1,
-      "e": "In de tekst: maximaal een kwartier; anders zijn de spieren weer koud reminder.",
-      "media": {
-        "query": "muscle warm up blood flow",
-        "alt": "Bloedtoevoer spieren"
-      }
+      "e": "In de tekst: maximaal een kwartier; anders zijn de spieren weer koud reminder."
     },
     {
       "id": "q033",
@@ -553,11 +425,7 @@
         "Rukken aan de spier om sneller te rekken"
       ],
       "c": 1,
-      "e": "Rekoefeningen: rustig, langzaam, tot spanning maar geen pijn; veren vergroot juist kans op blessure.",
-      "media": {
-        "query": "stretching exercise proper form",
-        "alt": "Rekoefeningen"
-      }
+      "e": "Rekoefeningen: rustig, langzaam, tot spanning maar geen pijn; veren vergroot juist kans op blessure."
     },
     {
       "id": "q034",
@@ -570,11 +438,7 @@
         "Je botten herstellen sneller"
       ],
       "c": 0,
-      "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd.",
-      "media": {
-        "query": "cool down exercise recovery",
-        "alt": "Cooling-down"
-      }
+      "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd."
     },
     {
       "id": "q035",
@@ -587,11 +451,7 @@
         "een te snelle hartslag"
       ],
       "c": 1,
-      "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen.",
-      "media": {
-        "query": "muscle soreness lactic acid",
-        "alt": "Spierpijn"
-      }
+      "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen."
     },
     {
       "id": "q036",
@@ -604,11 +464,7 @@
         "Een automatisch leerproces"
       ],
       "c": 1,
-      "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders.",
-      "media": {
-        "query": "sports injury muscle",
-        "alt": "Sportblessure"
-      }
+      "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders."
     },
     {
       "id": "q037",
@@ -621,11 +477,7 @@
         "een warming-up"
       ],
       "c": 1,
-      "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning.",
-      "media": {
-        "query": "RSI repetitive strain injury",
-        "alt": "RSI klachten"
-      }
+      "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning."
     },
     {
       "id": "q038",
@@ -638,11 +490,7 @@
         "Sneller kunnen rennen"
       ],
       "c": 0,
-      "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm).",
-      "media": {
-        "query": "RSI symptoms tingling",
-        "alt": "RSI symptomen"
-      }
+      "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm)."
     },
     {
       "id": "q039",
@@ -655,11 +503,7 @@
         "Altijd in dezelfde houding blijven"
       ],
       "c": 1,
-      "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI.",
-      "media": {
-        "query": "ergonomic workspace posture",
-        "alt": "Ergonomische werkplek"
-      }
+      "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI."
     },
     {
       "id": "q040",
@@ -672,11 +516,7 @@
         "Altijd op één voet staan"
       ],
       "c": 2,
-      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken.",
-      "media": {
-        "query": "computer ergonomics posture",
-        "alt": "Goede houding beeldscherm"
-      }
+      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken."
     },
     {
       "id": "q041",
@@ -689,11 +529,7 @@
         "Met ronde schouders naar voren leunen"
       ],
       "c": 0,
-      "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden).",
-      "media": {
-        "query": "proper sitting posture ergonomic",
-        "alt": "Goede zithouding"
-      }
+      "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden)."
     },
     {
       "id": "q042",
@@ -706,11 +542,7 @@
         "5 minuten je schouders aanspannen"
       ],
       "c": 0,
-      "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging.",
-      "media": {
-        "query": "smartphone break RSI prevention",
-        "alt": "Pauze van telefoon"
-      }
+      "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging."
     },
     {
       "id": "q043",
@@ -723,11 +555,7 @@
         "Om te ademen onder water"
       ],
       "c": 1,
-      "e": "Pinguïns vliegen niet; ze zwemmen snel en gebruiken vleugels als flippers.",
-      "media": {
-        "query": "penguin swimming flipper",
-        "alt": "Zwemmende pinguin"
-      }
+      "e": "Pinguïns vliegen niet; ze zwemmen snel en gebruiken vleugels als flippers."
     },
     {
       "id": "q044",
@@ -740,11 +568,7 @@
         "Omdat ze geen heupbeen hebben"
       ],
       "c": 1,
-      "e": "De tekst: pinguïns lopen op hun hurken; vleugels helpen bij evenwicht, wat leidt tot waggelende gang.",
-      "media": {
-        "query": "penguin walking waddle",
-        "alt": "Lopende pinguin"
-      }
+      "e": "De tekst: pinguïns lopen op hun hurken; vleugels helpen bij evenwicht, wat leidt tot waggelende gang."
     },
     {
       "id": "q045",
@@ -757,11 +581,7 @@
         "Het zorgt dat ze kunnen draaien met hun vleugels als rolgewricht"
       ],
       "c": 1,
-      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten.",
-      "media": {
-        "query": "penguin flipper anatomy",
-        "alt": "Pinguinvleugel"
-      }
+      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten."
     },
     {
       "id": "q046",
@@ -774,11 +594,7 @@
         "handspieren"
       ],
       "c": 1,
-      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk.",
-      "media": {
-        "query": "bird keel sternum breast muscle",
-        "alt": "Borstbeen vogel"
-      }
+      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk."
     },
     {
       "id": "q047",
@@ -849,11 +665,7 @@
           ]
         }
       ],
-      "explanation": "RSI betekent Repetitive Strain Injury en komt door herhaalde bewegingen en langdurige spierspanning in eenzelfde houding.",
-      "media": {
-        "query": "RSI keyboard computer",
-        "alt": "RSI preventie"
-      }
+      "explanation": "RSI betekent Repetitive Strain Injury en komt door herhaalde bewegingen en langdurige spierspanning in eenzelfde houding."
     },
     {
       "id": "q050",
@@ -910,11 +722,7 @@
           "correct": 1
         }
       ],
-      "e": "Krachttraining maakt spieren sterker (dikker). Een verstandige trainingsopbouw is warming-up → (rekoefeningen) → trainen → cooling-down. Coördinatie is samenwerking/timing van spieren. Door herhaling sla je bewegingen op in het motorisch geheugen, waardoor ze automatisch gaan.",
-      "media": {
-        "query": "sprinter training athletics",
-        "alt": "Sprinter training"
-      }
+      "e": "Krachttraining maakt spieren sterker (dikker). Een verstandige trainingsopbouw is warming-up → (rekoefeningen) → trainen → cooling-down. Coördinatie is samenwerking/timing van spieren. Door herhaling sla je bewegingen op in het motorisch geheugen, waardoor ze automatisch gaan."
     }
   ]
 }

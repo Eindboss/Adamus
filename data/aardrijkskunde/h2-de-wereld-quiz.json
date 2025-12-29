@@ -130,7 +130,6 @@
       ],
       "c": 1,
       "e": "Per 1000 meter hoogte daalt de temperatuur gemiddeld met 6°C. Op 2000 meter is het dus ongeveer 12°C kouder dan op zeeniveau.",
-      "image": "assets/images/aardrijkskunde/bergen-sneeuw.jpg",
       "points": 1
     },
     {
@@ -145,7 +144,6 @@
       ],
       "c": 0,
       "e": "De warme Golfstroom brengt warm water naar West-Europa. Bovendien warmt de zee in de zomer langzamer op en koelt in de winter langzamer af, wat zorgt voor een gematigder klimaat in Londen.",
-      "image": "assets/images/aardrijkskunde/kust-zee.jpg",
       "points": 1
     },
     {
@@ -160,7 +158,6 @@
       ],
       "c": 1,
       "e": "Aanlandige wind waait vanaf zee naar het land. Dit gebeurt overdag omdat het land sneller opwarmt dan de zee, waardoor boven land lagedruk ontstaat.",
-      "image": "assets/images/aardrijkskunde/kust-zee.jpg",
       "points": 1
     },
     {
@@ -189,7 +186,6 @@
       ],
       "c": 0,
       "e": "Water warmt langzamer op dan land. Overdag is de zee dus koeler. De aanlandige wind brengt deze koelere zeelucht naar de kust, waardoor het daar verkoelend aanvoelt.",
-      "image": "assets/images/aardrijkskunde/kust-zee.jpg",
       "points": 1
     },
     {
@@ -226,7 +222,6 @@
         4
       ],
       "e": "Stuwingsregen ontstaat doordat lucht tegen een gebergte opstijgt, afkoelt en condenseert; aan de lijzijde warmt dalende lucht op en droogt uit.",
-      "image": "assets/images/aardrijkskunde/bergen-sneeuw.jpg",
       "points": 3
     },
     {
@@ -255,7 +250,6 @@
       ],
       "c": 2,
       "e": "In subtropische gebieden rond 30° breedte daalt lucht. Dalende lucht warmt op en kan daardoor veel vocht vasthouden, waardoor er geen wolken en neerslag ontstaan.",
-      "image": "assets/images/aardrijkskunde/woestijn.jpg",
       "points": 1
     },
     {
@@ -313,7 +307,6 @@
       ],
       "c": 2,
       "e": "B-klimaten zijn droge klimaten, zoals woestijnen (BWh) en steppen (BSh). Er valt weinig neerslag en de verdamping is groter dan de neerslag.",
-      "image": "assets/images/aardrijkskunde/woestijn.jpg",
       "points": 1
     },
     {
@@ -360,7 +353,6 @@
       ],
       "c": 0,
       "e": "De Kilimanjaro is bijna 6000 meter hoog. Per 1000 meter daalt de temperatuur met ongeveer 6°C. Op de top is het dus circa 36°C kouder dan aan de voet, waardoor er permanent sneeuw ligt.",
-      "image": "assets/images/aardrijkskunde/bergen-sneeuw.jpg",
       "points": 1
     },
     {
@@ -375,7 +367,6 @@
       ],
       "c": 1,
       "e": "In een klimaatgrafiek geven de blauwe balken de maandelijkse neerslag (in mm) weer en de rode lijn de gemiddelde temperatuur (in °C).",
-      "image": "assets/images/aardrijkskunde/klimaatgrafiek.jpg",
       "points": 1
     },
     {
@@ -390,7 +381,6 @@
       ],
       "c": 1,
       "e": "Op het zuidelijk halfrond zijn de seizoenen omgekeerd. December, januari en februari zijn daar de zomermaanden met de hoogste temperaturen.",
-      "image": "assets/images/aardrijkskunde/klimaatgrafiek.jpg",
       "points": 1
     },
     {
@@ -419,7 +409,6 @@
       ],
       "c": 1,
       "e": "Constante hoge temperaturen en veel neerslag het hele jaar door zijn typisch voor het tropisch regenwoudklimaat (Af) bij de evenaar.",
-      "image": "assets/images/aardrijkskunde/tropisch-regenwoud.jpg",
       "points": 1
     },
     {
@@ -434,7 +423,6 @@
       ],
       "c": 1,
       "e": "Bij schaal 1:50.000 is 1 cm op de kaart = 50.000 cm in werkelijkheid = 500 meter.",
-      "image": "assets/images/aardrijkskunde/wereldkaart.jpg",
       "points": 1
     },
     {
@@ -477,7 +465,6 @@
       ],
       "c": 0,
       "e": "Een topografische kaart geeft een algemeen beeld van het landschap (hoogte, water, wegen, bebouwing). Een thematische kaart is gespecialiseerd in één onderwerp zoals klimaat of bevolking.",
-      "image": "assets/images/aardrijkskunde/wereldkaart.jpg",
       "points": 1
     },
     {
@@ -492,7 +479,6 @@
       ],
       "c": 1,
       "e": "Door de schuine stand van de aardas is het noordpoolgebied in de winter van de zon afgekeerd. Boven de poolcirkel komt de zon dan niet op: de poolnacht.",
-      "image": "assets/images/aardrijkskunde/poolgebied.jpg",
       "points": 1
     },
     {
@@ -573,7 +559,6 @@
       ],
       "c": 1,
       "e": "Bij 1:100.000 is alles 4x zo klein als bij 1:25.000 (100.000 / 25.000 = 4). Een kleinere schaal betekent minder detail maar meer gebied op dezelfde kaart.",
-      "image": "assets/images/aardrijkskunde/wereldkaart.jpg",
       "points": 1
     },
     {
@@ -588,7 +573,6 @@
       ],
       "c": 0,
       "e": "Naast breedteligging bepalen ook hoogte, nabijheid van de zee, warme/koude zeestromingen en overheersende windrichting het klimaat. Denk aan Londen vs. Moskou op dezelfde breedtegraad.",
-      "image": "assets/images/aardrijkskunde/wereldkaart.jpg",
       "points": 1
     },
     {
@@ -603,7 +587,6 @@
       ],
       "c": 0,
       "e": "De Golfstroom transporteert warm water van de Golf van Mexico naar West-Europa. Dit zorgt ervoor dat West-Europa veel zachtere winters heeft dan gebieden op dezelfde breedtegraad elders, zoals Canada.",
-      "image": "assets/images/aardrijkskunde/kust-zee.jpg",
       "points": 1
     },
     {
@@ -653,7 +636,6 @@
       "quiz_group": 2,
       "type": "multipart",
       "intro": "Bekijk de volgende situatie: Het is 21 december. De aarde staat in haar baan om de zon op een punt waar het noordelijk halfrond van de zon is afgekeerd.",
-      "image": "assets/images/aardrijkskunde/bergen-sneeuw.jpg",
       "parts": [
         {
           "id": "h2-mp-001a",
@@ -711,7 +693,6 @@
       "quiz_group": 3,
       "type": "multipart",
       "intro": "Je maakt een reis van de Nederlandse kust naar de top van de Mont Blanc (4.808 meter). In Nederland is het 24°C.",
-      "image": "assets/images/aardrijkskunde/bergen-sneeuw.jpg",
       "parts": [
         {
           "id": "h2-mp-002a",

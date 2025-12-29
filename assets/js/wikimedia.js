@@ -209,18 +209,7 @@ export function generateSearchQuery(question) {
  * @returns {Promise<string|null>} - The image URL or null if failed
  */
 export async function loadQuestionImage(question) {
-  // If question has explicit media.query, use that
-  if (question.media?.query) {
-    try {
-      const result = await getMediaForQuery(question.media.query);
-      return result.imageUrl;
-    } catch (err) {
-      console.warn("Failed to load media:", question.media.query, err);
-      return null;
-    }
-  }
-
-  // Otherwise, try to auto-generate a search query
+  // Auto-generate a search query from question text
   const autoQuery = generateSearchQuery(question);
   if (!autoQuery) return null;
 
@@ -228,7 +217,7 @@ export async function loadQuestionImage(question) {
     const result = await getMediaForQuery(autoQuery);
     return result.imageUrl;
   } catch (err) {
-    // Silently fail for auto-generated queries - not all will find images
+    // Silently fail - not all queries will find images
     return null;
   }
 }

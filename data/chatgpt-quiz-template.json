@@ -22,10 +22,9 @@
       "flashcards": "20-40 kaarten"
     },
     "afbeeldingen": {
-      "bron": "Wikimedia Commons (gratis, geen copyright issues)",
-      "zoeken": "https://commons.wikimedia.org/",
-      "format": "Voeg 'media' object toe met 'query' voor automatisch laden",
-      "wanneer": "Bij geschiedenis, aardrijkskunde, cultuur vragen"
+      "automatisch": "Adamus genereert automatisch afbeeldingen van Wikipedia voor elke vraag",
+      "niet_nodig": "Je hoeft GEEN image of media velden toe te voegen - dit gebeurt automatisch",
+      "uitzonderingen": "matching, table_parse, ratio_table en data_table vragen krijgen geen afbeeldingen"
     }
   },
 
@@ -69,12 +68,7 @@
         "q": "Wat is de hoofdstad van Nederland?",
         "answers": ["Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
         "correctIndex": 0,
-        "explanation": "Amsterdam is de officiële hoofdstad van Nederland.",
-        "image": "optioneel: URL naar afbeelding",
-        "media": {
-          "query": "Amsterdam canal houses",
-          "alt": "Grachtenpanden in Amsterdam"
-        }
+        "explanation": "Amsterdam is de officiële hoofdstad van Nederland."
       }
     },
 
@@ -306,33 +300,20 @@
         "id": "q013",
         "type": "info_card",
         "title": "Achtergrondinformatie",
-        "content_html": "<p>De Romeinse Republiek duurde van 509 v.Chr. tot 27 v.Chr.</p>",
-        "image": "optioneel: URL"
+        "content_html": "<p>De Romeinse Republiek duurde van 509 v.Chr. tot 27 v.Chr.</p>"
       }
     }
   },
 
   "afbeeldingen_toevoegen": {
-    "methode_1_directe_url": {
-      "beschrijving": "Direct een Wikimedia Commons URL gebruiken",
-      "voorbeeld": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Netherlands.svg/800px-Flag_of_the_Netherlands.svg.png"
-      }
-    },
-    "methode_2_automatisch_laden": {
-      "beschrijving": "Laat Adamus de afbeelding zoeken via Wikimedia API",
-      "voorbeeld": {
-        "media": {
-          "query": "Colosseum Rome",
-          "alt": "Het Colosseum in Rome"
-        }
-      },
-      "tips": [
-        "Gebruik Engelse zoektermen voor betere resultaten",
-        "Wees specifiek: 'Amsterdam canal houses' i.p.v. 'Amsterdam'",
-        "Voeg altijd een alt-tekst toe voor toegankelijkheid"
-      ]
-    }
+    "_info": "Afbeeldingen worden AUTOMATISCH gegenereerd - je hoeft niets te doen!",
+    "hoe_het_werkt": "Adamus haalt automatisch een relevante afbeelding op van Wikipedia gebaseerd op de vraagtekst",
+    "uitzonderingen": [
+      "matching vragen - geen afbeeldingen",
+      "table_parse vragen - geen afbeeldingen",
+      "ratio_table vragen - geen afbeeldingen",
+      "data_table vragen - geen afbeeldingen"
+    ]
   },
 
   "feedback_en_uitleg": {

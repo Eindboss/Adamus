@@ -22,14 +22,7 @@
         "Slag bij Marathon",
         "Alexander verovert het Perzische Rijk"
       ],
-      "explanation": "Narmer (~3100 v.C.) → piramides (~2600–2500 v.C.) → Olympische Spelen (776 v.C.) → Marathon (490 v.C.) → Alexander (334–330 v.C. veroveringen).",
-      "media": {
-        "query": "Wikimedia: Narmer Palette",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Collage: Narmerpalet, piramide van Gizeh, Olympia",
-        "credit_required": true
-      }
+      "explanation": "Narmer (~3100 v.C.) → piramides (~2600–2500 v.C.) → Olympische Spelen (776 v.C.) → Marathon (490 v.C.) → Alexander (334–330 v.C. veroveringen)."
     },
     {
       "id": "g-002",
@@ -58,14 +51,7 @@
         "Apollo": "verstand/kunst + orakel (Delphi)",
         "Hera": "huwelijk en vruchtbaarheid"
       },
-      "explanation": "Let op: Athena = strategie/wijsheid; Ares = brute oorlog (niet gevraagd). Apollo hangt o.a. aan Delphi.",
-      "media": {
-        "query": "Wikimedia: Greek gods vase painting Zeus Poseidon Athena Apollo Hera",
-        "kind": "image",
-        "use": "context",
-        "alt": "Griekse vaasschildering met godenfiguren",
-        "credit_required": true
-      }
+      "explanation": "Let op: Athena = strategie/wijsheid; Ares = brute oorlog (niet gevraagd). Apollo hangt o.a. aan Delphi."
     },
     {
       "id": "g-003",
@@ -105,14 +91,7 @@
           ]
         }
       ],
-      "explanation": "Schrift + administratie is essentieel voor een staat: belasting, voorraden, bevelen.",
-      "media": {
-        "query": "Wikimedia: papyrus hieroglyphs close-up",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Papyrus met hiërogliefen",
-        "credit_required": true
-      }
+      "explanation": "Schrift + administratie is essentieel voor een staat: belasting, voorraden, bevelen."
     },
     {
       "id": "g-004",
@@ -126,14 +105,7 @@
         "Je mag stemmen, maar alleen in oorlogstijd."
       ],
       "c": 1,
-      "e": "In deze periode gold (na hervormingen) dat burgerrecht aan strengere afstammingseisen gebonden kon zijn; de kern blijft: niet iedereen had politieke rechten.",
-      "media": {
-        "query": "Wikimedia: Pnyx Athens assembly site",
-        "kind": "image",
-        "use": "context",
-        "alt": "De Pnyx, plek van de volksvergadering in Athene",
-        "credit_required": true
-      }
+      "e": "In deze periode gold (na hervormingen) dat burgerrecht aan strengere afstammingseisen gebonden kon zijn; de kern blijft: niet iedereen had politieke rechten."
     },
     {
       "id": "g-005",
@@ -148,14 +120,7 @@
         "Omdat er geen wetten bestonden"
       ],
       "c": 1,
-      "e": "De democratie gold alleen voor mannelijke burgers; grote groepen waren uitgesloten.",
-      "media": {
-        "query": "Wikimedia: ancient Athens agora people illustration",
-        "kind": "image",
-        "use": "context",
-        "alt": "Impressie van het dagelijks leven in Athene",
-        "credit_required": true
-      }
+      "e": "De democratie gold alleen voor mannelijke burgers; grote groepen waren uitgesloten."
     },
     {
       "id": "g-006",
@@ -169,14 +134,7 @@
         "Mythen werden pas na de komst van de Romeinen bedacht."
       ],
       "c": 1,
-      "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als ‘wereldbeeld’ vóór wetenschappelijke verklaringen dominant worden.",
-      "media": {
-        "query": "Wikimedia: Birth of Athena from Zeus head vase painting",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Vaasschildering: geboorte van Athena uit het hoofd van Zeus",
-        "credit_required": true
-      }
+      "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als ‘wereldbeeld’ vóór wetenschappelijke verklaringen dominant worden."
     },
     {
       "id": "g-007",
@@ -202,14 +160,7 @@
         "offer": "handeling om goden gunstig te stemmen",
         "tempel": "gebouw gewijd aan een godheid met cultusbeeld"
       },
-      "explanation": "Gymnasium-detail: tempel ≠ altaar. Altaar staat vaak buiten; tempel is ‘huis’ van de god.",
-      "media": {
-        "query": "Wikimedia: Delphi oracle site ruins",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Ruïnes van Delphi (orakelplaats)",
-        "credit_required": true
-      }
+      "explanation": "Gymnasium-detail: tempel ≠ altaar. Altaar staat vaak buiten; tempel is ‘huis’ van de god."
     },
     {
       "id": "g-008",
@@ -224,14 +175,7 @@
         "Omdat mythen wetenschappelijk bewezen waren"
       ],
       "c": 1,
-      "e": "Mythen bleven belangrijk als wereldbeeld, terwijl sommige Grieken ook met observatie en logica gingen verklaren.",
-      "media": {
-        "query": "Wikimedia: Aristotle bust",
-        "kind": "image",
-        "use": "context",
-        "alt": "Buste van Aristoteles naast Griekse tempelruïnes",
-        "credit_required": true
-      }
+      "e": "Mythen bleven belangrijk als wereldbeeld, terwijl sommige Grieken ook met observatie en logica gingen verklaren."
     },
     {
       "id": "g-009",
@@ -247,8 +191,7 @@
         "486 v.C."
       ],
       "c": 0,
-      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Stele_of_Aristion.jpg/330px-Stele_of_Aristion.jpg"
+      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie."
     },
     {
       "id": "g-010",
@@ -285,14 +228,7 @@
           }
         }
       ],
-      "explanation": "Gymnasium-skill: begrijpen hoe ‘ontcijferen’ werkt via parallelteksten.",
-      "media": {
-        "query": "Wikimedia: Rosetta Stone British Museum",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "De Steen van Rosetta",
-        "credit_required": true
-      }
+      "explanation": "Gymnasium-skill: begrijpen hoe ‘ontcijferen’ werkt via parallelteksten."
     },
     {
       "id": "g-011",
@@ -306,14 +242,7 @@
         "Athene had geen slaven, Sparta wel."
       ],
       "c": 1,
-      "e": "Athene: politiek debat, handel/cultuur. Sparta: krijgersstaat met strenge opvoeding (agoge).",
-      "media": {
-        "query": "Wikimedia: Athens Acropolis Parthenon",
-        "kind": "image",
-        "use": "context",
-        "alt": "Sparta (krijgers) en Athene (Akropolis) als contrast",
-        "credit_required": true
-      }
+      "e": "Athene: politiek debat, handel/cultuur. Sparta: krijgersstaat met strenge opvoeding (agoge)."
     },
     {
       "id": "g-012",
@@ -346,14 +275,7 @@
           ]
         }
       ],
-      "explanation": "Kern: ‘vrij’ ≠ ‘burger’. Burgerrecht bepaalt politieke deelname.",
-      "media": {
-        "query": "Wikimedia: ancient Greek agora reconstruction metics slaves citizens",
-        "kind": "image",
-        "use": "context",
-        "alt": "Reconstructie/illustratie van het leven in Athene met verschillende groepen",
-        "credit_required": true
-      }
+      "explanation": "Kern: ‘vrij’ ≠ ‘burger’. Burgerrecht bepaalt politieke deelname."
     },
     {
       "id": "g-013",
@@ -367,14 +289,7 @@
         "Om belasting te vermijden."
       ],
       "c": 1,
-      "e": "Religieus wereldbeeld: het lichaam moest bewaard blijven voor voortbestaan na de dood.",
-      "media": {
-        "query": "Wikimedia: Egyptian mummy museum",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Egyptische mummie (museum)",
-        "credit_required": true
-      }
+      "e": "Religieus wereldbeeld: het lichaam moest bewaard blijven voor voortbestaan na de dood."
     },
     {
       "id": "g-014",
@@ -400,14 +315,7 @@
         "Aristoteles": "logica/empirie; brede natuurstudie",
         "Hippocrates": "ziekte verklaren zonder ‘straf van goden’ als uitgangspunt"
       },
-      "explanation": "Niet alles is ‘wetenschap’ zoals nu, maar de methode (vragen/argumenteren/observeren) is beslissend.",
-      "media": {
-        "query": "Wikimedia: Plato Aristotle Raphael School of Athens",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Detail van ‘De School van Athene’ met Plato en Aristoteles",
-        "credit_required": true
-      }
+      "explanation": "Niet alles is ‘wetenschap’ zoals nu, maar de methode (vragen/argumenteren/observeren) is beslissend."
     },
     {
       "id": "g-015",
@@ -422,14 +330,7 @@
         "Voordeel: rijkdom speelde geen rol; nadeel: alleen slaven deden mee"
       ],
       "c": 1,
-      "e": "Loting beperkte de macht van een elite, maar kon ongeschikte bestuurders opleveren.",
-      "media": {
-        "query": "Wikimedia: kleroterion ancient Athens allotment machine",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Kleroterion: Atheens lotingsapparaat (steen)",
-        "credit_required": true
-      }
+      "e": "Loting beperkte de macht van een elite, maar kon ongeschikte bestuurders opleveren."
     },
     {
       "id": "g-016",
@@ -443,14 +344,7 @@
         "Als verplichte legertraining"
       ],
       "c": 1,
-      "e": "Olympia was vooral religieus: offers, eer voor Zeus, en sport als onderdeel van het festival.",
-      "media": {
-        "query": "Wikimedia: Olympia ruins Temple of Zeus",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Ruïnes in Olympia (heiligdom van Zeus)",
-        "credit_required": true
-      }
+      "e": "Olympia was vooral religieus: offers, eer voor Zeus, en sport als onderdeel van het festival."
     },
     {
       "id": "g-017",
@@ -465,14 +359,7 @@
         "Omdat sport belangrijker was dan religie"
       ],
       "c": 1,
-      "e": "De wapenstilstand moest veilige deelname aan het religieuze sportfestival mogelijk maken.",
-      "media": {
-        "query": "Wikimedia: ancient Olympic Games athletes vase painting stadion Olympia",
-        "kind": "image",
-        "use": "context",
-        "alt": "Afbeelding van antieke sporters of stadion in Olympia",
-        "credit_required": true
-      }
+      "e": "De wapenstilstand moest veilige deelname aan het religieuze sportfestival mogelijk maken."
     },
     {
       "id": "g-018",
@@ -486,14 +373,7 @@
         "Noord-Afrika, omdat er geen havens waren"
       ],
       "c": 2,
-      "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotamië was moeilijk bereikbaar én politiek bezet door sterke rijken.",
-      "media": {
-        "query": "Wikimedia: map Greek colonies Mediterranean Black Sea",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Kaart van Griekse kolonies rond Middellandse Zee en Zwarte Zee",
-        "credit_required": true
-      }
+      "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotamië was moeilijk bereikbaar én politiek bezet door sterke rijken."
     },
     {
       "id": "g-019",
@@ -516,14 +396,7 @@
         "Peloponnesische Oorlog": "Machtsstrijd in Griekenland: Athene vs Sparta en bondgenoten",
         "Veroveringen van Alexander": "Macedonische expansie verspreidt Griekse cultuur (hellenisme)"
       },
-      "explanation": "Gymnasium-detail: ‘samen’ is niet altijd harmonie; er is ook rivaliteit, maar extern gevaar dwingt samenwerking.",
-      "media": {
-        "query": "Wikimedia: Persian Wars map",
-        "kind": "image",
-        "use": "context",
-        "alt": "Kaarten van Perzische oorlogen, Peloponnesische oorlog en rijk van Alexander",
-        "credit_required": true
-      }
+      "explanation": "Gymnasium-detail: ‘samen’ is niet altijd harmonie; er is ook rivaliteit, maar extern gevaar dwingt samenwerking."
     },
     {
       "id": "g-020",
@@ -537,14 +410,7 @@
         "Ambtenaren waren altijd slaven."
       ],
       "c": 1,
-      "e": "Een complexe staat heeft registratie nodig: graan, arbeid, belasting, handel. Schriftgeleerden vormen de ruggengraat.",
-      "media": {
-        "query": "Wikimedia: ancient Egyptian scribe statue Louvre",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Beeld van een Egyptische schrijver (scribe)",
-        "credit_required": true
-      }
+      "e": "Een complexe staat heeft registratie nodig: graan, arbeid, belasting, handel. Schriftgeleerden vormen de ruggengraat."
     },
     {
       "id": "g-021",
@@ -578,14 +444,7 @@
           ]
         }
       ],
-      "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet ‘iedereen werd Grieks hetzelfde’.",
-      "media": {
-        "query": "Wikimedia: Alexander mosaic Pompeii",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Mozaïek van Alexander de Grote (Pompeii)",
-        "credit_required": true
-      }
+      "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet ‘iedereen werd Grieks hetzelfde’."
     },
     {
       "id": "g-022",
@@ -600,14 +459,7 @@
         "De Griekse godsdienst"
       ],
       "c": 1,
-      "e": "Door Alexanders veroveringen vermengde de Griekse cultuur zich met oosterse culturen.",
-      "media": {
-        "query": "Wikimedia: Ancient Alexandria",
-        "kind": "image",
-        "use": "context",
-        "alt": "Impressie van Alexandrië of hellenistische kunst",
-        "credit_required": true
-      }
+      "e": "Door Alexanders veroveringen vermengde de Griekse cultuur zich met oosterse culturen."
     },
     {
       "id": "g-023",
@@ -622,14 +474,7 @@
         "Voor handel met andere volken"
       ],
       "c": 1,
-      "e": "Piramides waren religieuze graven en symbolen van macht en organisatie.",
-      "media": {
-        "query": "Wikimedia: Giza pyramids plateau wide shot",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "De piramides van Gizeh",
-        "credit_required": true
-      }
+      "e": "Piramides waren religieuze graven en symbolen van macht en organisatie."
     },
     {
       "id": "g-024",
@@ -643,14 +488,7 @@
         "Het gaat over Griekse mythologie."
       ],
       "c": 1,
-      "e": "Het palet toont machtssymboliek: legitimatie van een nieuwe politieke orde.",
-      "media": {
-        "query": "Wikimedia: Narmer Palette high resolution",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Het Narmer-palet",
-        "credit_required": true
-      }
+      "e": "Het palet toont machtssymboliek: legitimatie van een nieuwe politieke orde."
     },
     {
       "id": "g-025",
@@ -676,14 +514,7 @@
         "kanopen": "vaten voor organen",
         "sarcofaag": "stenen doodskist"
       },
-      "explanation": "Let op: kanopen horen bij mummificatie (organen apart bewaard).",
-      "media": {
-        "query": "Wikimedia: Egyptian canopic jars",
-        "kind": "image",
-        "use": "context",
-        "alt": "Kanopen en Egyptische sarcofaag",
-        "credit_required": true
-      }
+      "explanation": "Let op: kanopen horen bij mummificatie (organen apart bewaard)."
     },
     {
       "id": "g-026",
@@ -703,14 +534,7 @@
         "Linnen wikkelen en amuletten toevoegen",
         "Bijzetten in sarcofaag/graf"
       ],
-      "explanation": "Het drogen (natron) is pas zinvol nadat organen zijn verwijderd; daarna wikkelen en begraven.",
-      "media": {
-        "query": "Wikimedia: natron Egyptian mummification diagram",
-        "kind": "image",
-        "use": "context",
-        "alt": "Schema/illustratie van mummificatie",
-        "credit_required": true
-      }
+      "explanation": "Het drogen (natron) is pas zinvol nadat organen zijn verwijderd; daarna wikkelen en begraven."
     },
     {
       "id": "g-027",
@@ -726,8 +550,7 @@
         "764 v.C."
       ],
       "c": 0,
-      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/NAMA_Discophore.jpg/330px-NAMA_Discophore.jpg"
+      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum."
     },
     {
       "id": "g-028",
@@ -741,14 +564,7 @@
         "Het toont dat alle mythen onwaar zijn."
       ],
       "c": 1,
-      "e": "Het gaat om nieuwsgierigheid, navigatie en observatie—een brug naar wetenschappelijk denken.",
-      "media": {
-        "query": "Wikimedia: map Pytheas voyage Thule",
-        "kind": "image",
-        "use": "context",
-        "alt": "Kaart met mogelijke route van Pytheas naar Thule",
-        "credit_required": true
-      }
+      "e": "Het gaat om nieuwsgierigheid, navigatie en observatie—een brug naar wetenschappelijk denken."
     },
     {
       "id": "g-029",
@@ -782,14 +598,7 @@
           ]
         }
       ],
-      "explanation": "Delphi is hét voorbeeld van religieus ‘advies’ in politieke beslissingen.",
-      "media": {
-        "query": "Wikimedia: Delphi Temple of Apollo ruins",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Tempel van Apollo in Delphi",
-        "credit_required": true
-      }
+      "explanation": "Delphi is hét voorbeeld van religieus ‘advies’ in politieke beslissingen."
     },
     {
       "id": "g-030",
@@ -827,14 +636,7 @@
           }
         }
       ],
-      "explanation": "Gymnasium: leg verband tussen inrichting (instituties) en internationale politiek (hegemonie).",
-      "media": {
-        "query": "Wikimedia: map Peloponnesian War Athens Sparta alliances",
-        "kind": "image",
-        "use": "context",
-        "alt": "Kaart van bondgenootschappen tijdens de Peloponnesische oorlog",
-        "credit_required": true
-      }
+      "explanation": "Gymnasium: leg verband tussen inrichting (instituties) en internationale politiek (hegemonie)."
     },
     {
       "id": "g-031",
@@ -848,14 +650,7 @@
         "De Nijl was belangrijk voor transport en handel."
       ],
       "c": 2,
-      "e": "Vruchtbaar gebied = ‘zwarte land’ (kemet); woestijn = ‘rode land’ (deshret).",
-      "media": {
-        "query": "Wikimedia: Nile flood agriculture ancient Egypt illustration",
-        "kind": "image",
-        "use": "context",
-        "alt": "Illustratie van landbouw langs de Nijl",
-        "credit_required": true
-      }
+      "e": "Vruchtbaar gebied = ‘zwarte land’ (kemet); woestijn = ‘rode land’ (deshret)."
     },
     {
       "id": "g-032",
@@ -871,8 +666,7 @@
         "485 v.C."
       ],
       "c": 0,
-      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Themistocles_Bust.jpg/330px-Themistocles_Bust.jpg"
+      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond."
     },
     {
       "id": "g-033",
@@ -886,14 +680,7 @@
         "Grieken konden cavalerie inzetten."
       ],
       "c": 1,
-      "e": "Smalle zeestraat = manoeuvreerruimte beperkt → tactisch voordeel voor kleinere/behendigere vloot.",
-      "media": {
-        "query": "Wikimedia: Salamis strait aerial view",
-        "kind": "image",
-        "use": "context",
-        "alt": "Luchtfoto/kaart van de zeestraat bij Salamis",
-        "credit_required": true
-      }
+      "e": "Smalle zeestraat = manoeuvreerruimte beperkt → tactisch voordeel voor kleinere/behendigere vloot."
     },
     {
       "id": "g-034",
@@ -908,14 +695,7 @@
         "Dat Grieken alleen hun eigen dialect spraken"
       ],
       "c": 1,
-      "e": "'Barbaren' laat zien dat Grieken een wij-zij-denken hadden op basis van taal en cultuur.",
-      "media": {
-        "query": "Wikimedia: Greek vase barbarians depiction",
-        "kind": "image",
-        "use": "context",
-        "alt": "Griekse voorstelling van niet-Grieken (barbaren) op vaas/relief",
-        "credit_required": true
-      }
+      "e": "'Barbaren' laat zien dat Grieken een wij-zij-denken hadden op basis van taal en cultuur."
     },
     {
       "id": "g-035",
@@ -929,14 +709,7 @@
         "Bestuur door farao’s."
       ],
       "c": 1,
-      "e": "Een tiran greep macht; het woord is niet per se ‘modern moreel’ negatief in de oudheid.",
-      "media": {
-        "query": "Wikimedia: Peisistratos portrait bust",
-        "kind": "image",
-        "use": "context",
-        "alt": "Afbeelding/buste van Peisistratos (voorbeeld van tiran)",
-        "credit_required": true
-      }
+      "e": "Een tiran greep macht; het woord is niet per se ‘modern moreel’ negatief in de oudheid."
     },
     {
       "id": "g-036",
@@ -951,14 +724,7 @@
         "Omdat ze altijd propaganda zijn"
       ],
       "c": 1,
-      "e": "Beelden zijn vaak symbolisch, maar geven inzicht in waarden en zelfbeeld.",
-      "media": {
-        "query": "Wikimedia: Greek vase hoplite battle scene",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Griekse vaas met gevechtsscène (hoplieten)",
-        "credit_required": true
-      }
+      "e": "Beelden zijn vaak symbolisch, maar geven inzicht in waarden en zelfbeeld."
     },
     {
       "id": "g-037",
@@ -967,7 +733,6 @@
       "difficulty": 4,
       "instruction": "Beantwoord beide vragen over het symbool van Asklepios.",
       "context": "Asklepios was de Griekse god van de geneeskunde. Zijn symbool wordt nog steeds gebruikt in de medische wereld.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Asklepios_-_Epidauros.jpg/330px-Asklepios_-_Epidauros.jpg",
       "parts": [
         {
           "id": "a",
@@ -1003,34 +768,45 @@
       "difficulty": 4,
       "instruction": "Is dit voorbeeld objectief (feitelijk) of subjectief (mening/waardering)?",
       "context": "Objectief = controleerbaar feit. Subjectief = oordeel of waardering.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Leonidas_I_of_Sparta.jpg/330px-Leonidas_I_of_Sparta.jpg",
       "parts": [
         {
           "id": "a",
           "type": "mc",
           "prompt": "\"De slag vond plaats in 480 v.Chr.\"",
-          "options": ["Objectief", "Subjectief"],
+          "options": [
+            "Objectief",
+            "Subjectief"
+          ],
           "correct": 0
         },
         {
           "id": "b",
           "type": "mc",
           "prompt": "\"Er vochten 300 Spartanen\"",
-          "options": ["Objectief", "Subjectief"],
+          "options": [
+            "Objectief",
+            "Subjectief"
+          ],
           "correct": 0
         },
         {
           "id": "c",
           "type": "mc",
           "prompt": "\"De Spartanen vochten heldhaftig\"",
-          "options": ["Objectief", "Subjectief"],
+          "options": [
+            "Objectief",
+            "Subjectief"
+          ],
           "correct": 1
         },
         {
           "id": "d",
           "type": "mc",
           "prompt": "\"Leonidas was een geweldige koning\"",
-          "options": ["Objectief", "Subjectief"],
+          "options": [
+            "Objectief",
+            "Subjectief"
+          ],
           "correct": 1
         }
       ],
@@ -1048,14 +824,7 @@
         "De komst van de Romeinen."
       ],
       "c": 1,
-      "e": "Aanleiding = directe trigger; diepere oorzaak = structurele machtsbalans en angst voor groeiende macht van de ander.",
-      "media": {
-        "query": "Wikimedia: map Athens Sparta Peloponnesian League Delian League",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Kaart: Delisch-Atheense Zeebond en Peloponnesische Bond",
-        "credit_required": true
-      }
+      "e": "Aanleiding = directe trigger; diepere oorzaak = structurele machtsbalans en angst voor groeiende macht van de ander."
     },
     {
       "id": "g-040",
@@ -1069,14 +838,7 @@
         "Speerwerpen"
       ],
       "c": 2,
-      "e": "Vierspan = vierspan-wagenrace, een prestigieuze discipline.",
-      "media": {
-        "query": "Wikimedia: ancient Greek chariot race vase four-horse quadriga",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Griekse vaas met vierspan (quadriga)",
-        "credit_required": true
-      }
+      "e": "Vierspan = vierspan-wagenrace, een prestigieuze discipline."
     },
     {
       "id": "g-041",
@@ -1090,14 +852,7 @@
         "Toen waren vrouwen verplicht; nu verboden."
       ],
       "c": 1,
-      "e": "Belangrijk: religieuze context + uitsluiting in de oudheid versus inclusiever en mondialer nu.",
-      "media": {
-        "query": "Wikimedia: ancient Olympia athletes vs modern Olympics stadium comparison",
-        "kind": "image",
-        "use": "context",
-        "alt": "Vergelijking: antieke sport (vaas) en modern Olympisch stadion",
-        "credit_required": true
-      }
+      "e": "Belangrijk: religieuze context + uitsluiting in de oudheid versus inclusiever en mondialer nu."
     },
     {
       "id": "g-042",
@@ -1111,8 +866,7 @@
         "De spelen vinden altijd in Griekenland plaats"
       ],
       "c": 0,
-      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Discobolus_Lancelotti_Massimo.jpg/330px-Discobolus_Lancelotti_Massimo.jpg"
+      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats."
     },
     {
       "id": "g-043",
@@ -1132,14 +886,7 @@
         "Soldaten komen ’s nachts uit het paard",
         "Poorten worden geopend voor het Griekse leger"
       ],
-      "explanation": "Dit is een klassiek verhaal over misleiding en psychologie in oorlog.",
-      "media": {
-        "query": "Wikimedia: Trojan Horse illustration ancient art",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Illustratie van het paard van Troje",
-        "credit_required": true
-      }
+      "explanation": "Dit is een klassiek verhaal over misleiding en psychologie in oorlog."
     },
     {
       "id": "g-044",
@@ -1158,14 +905,7 @@
       ],
       "min_keywords": 2,
       "rubric": "Metafoor: lijkt onschuldig → wordt binnengelaten → verborgen ‘aanval’ van binnenuit.",
-      "example_answer": "Een trojan lijkt onschuldig (zoals een cadeau), waardoor je hem binnenlaat. Daarna voert hij verborgen schadelijke acties uit vanuit je systeem, net als soldaten die uit het paard kwamen.",
-      "media": {
-        "query": "Wikimedia: Trojan horse icon cybersecurity concept",
-        "kind": "image",
-        "use": "context",
-        "alt": "Symbolische afbeelding van een ‘trojan’ in cybersecurity",
-        "credit_required": true
-      }
+      "example_answer": "Een trojan lijkt onschuldig (zoals een cadeau), waardoor je hem binnenlaat. Daarna voert hij verborgen schadelijke acties uit vanuit je systeem, net als soldaten die uit het paard kwamen."
     },
     {
       "id": "g-045",
@@ -1179,14 +919,7 @@
         "macht van de adel"
       ],
       "c": 1,
-      "e": "demos = volk, kratos = macht/heerschappij.",
-      "media": {
-        "query": "Wikimedia: ancient Greek inscription demos kratos",
-        "kind": "image",
-        "use": "context",
-        "alt": "Griekse inscriptie/tekst met Griekse letters (symbolisch)",
-        "credit_required": true
-      }
+      "e": "demos = volk, kratos = macht/heerschappij."
     },
     {
       "id": "g-046",
@@ -1205,14 +938,7 @@
       ],
       "min_keywords": 2,
       "rubric": "Athene: burgers stemmen zelf over besluiten; NL: burgers kiezen vertegenwoordigers die besluiten nemen.",
-      "example_answer": "In Athene stemden burgers direct zelf over besluiten. In Nederland kiezen burgers vertegenwoordigers die namens hen beslissen in parlement en raden.",
-      "media": {
-        "query": "Wikimedia: Pnyx assembly vs Dutch parliament Binnenhof",
-        "kind": "image",
-        "use": "context",
-        "alt": "Pnyx (Athene) en het Nederlandse parlement (symbolisch contrast)",
-        "credit_required": true
-      }
+      "example_answer": "In Athene stemden burgers direct zelf over besluiten. In Nederland kiezen burgers vertegenwoordigers die namens hen beslissen in parlement en raden."
     },
     {
       "id": "g-047",
@@ -1225,32 +951,45 @@
         {
           "id": "blank1",
           "correct": "Dorisch",
-          "options": ["Dorisch", "Ionisch", "Korinthisch", "Toscaans"]
+          "options": [
+            "Dorisch",
+            "Ionisch",
+            "Korinthisch",
+            "Toscaans"
+          ]
         },
         {
           "id": "blank2",
           "correct": "Ionisch",
-          "options": ["Dorisch", "Ionisch", "Korinthisch", "Composiet"]
+          "options": [
+            "Dorisch",
+            "Ionisch",
+            "Korinthisch",
+            "Composiet"
+          ]
         },
         {
           "id": "blank3",
           "correct": "Korinthisch",
-          "options": ["Dorisch", "Ionisch", "Korinthisch", "Etruskisch"]
+          "options": [
+            "Dorisch",
+            "Ionisch",
+            "Korinthisch",
+            "Etruskisch"
+          ]
         },
         {
           "id": "blank4",
           "correct": "Parthenon",
-          "options": ["Parthenon", "Akropolis", "Agora", "Erechtheion"]
+          "options": [
+            "Parthenon",
+            "Akropolis",
+            "Agora",
+            "Erechtheion"
+          ]
         }
       ],
-      "explanation": "Gymnasium: herken stijlen visueel; koppel aan bouwcultuur en religie.",
-      "media": {
-        "query": "Wikimedia: Doric Ionic Corinthian columns comparison Parthenon",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Vergelijking Dorisch/Ionisch/Korinthisch en het Parthenon",
-        "credit_required": true
-      }
+      "explanation": "Gymnasium: herken stijlen visueel; koppel aan bouwcultuur en religie."
     },
     {
       "id": "g-048",
@@ -1266,8 +1005,7 @@
         "2800 v.C."
       ],
       "c": 0,
-      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/NarsmerPalette-ROM-back.jpg/330px-NarmerPalette-ROM-back.jpg"
+      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes."
     },
     {
       "id": "g-049",
@@ -1281,14 +1019,7 @@
         "wordt (oorspronkelijk) mondeling doorgegeven"
       ],
       "c": 2,
-      "e": "Mythen zijn betekenisvolle verklarende verhalen, maar niet gebaseerd op wetenschappelijk bewijs.",
-      "media": {
-        "query": "Wikimedia: Greek myth painting Prometheus fire",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Afbeelding van Prometheus (mythe) met vuur",
-        "credit_required": true
-      }
+      "e": "Mythen zijn betekenisvolle verklarende verhalen, maar niet gebaseerd op wetenschappelijk bewijs."
     },
     {
       "id": "g-050",
@@ -1338,14 +1069,7 @@
           }
         }
       ],
-      "explanation": "Gymnasium: sport als sociaal kapitaal; religie en politiek verweven.",
-      "media": {
-        "query": "Wikimedia: ancient Olympic victor olive wreath statue",
-        "kind": "image",
-        "use": "stimulus",
-        "alt": "Antieke sporter met olijfkrans (overwinning)",
-        "credit_required": true
-      }
+      "explanation": "Gymnasium: sport als sociaal kapitaal; religie en politiek verweven."
     }
   ]
 }
