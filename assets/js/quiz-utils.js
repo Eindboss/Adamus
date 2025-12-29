@@ -260,80 +260,96 @@ export function selectQuestionsForSession(questions, perSession, subjectId) {
 }
 
 /**
- * Order questions for exam mode (by difficulty phases)
+ * Order questions for exam mode
+ * @param {Array} questions - Questions to order
+ * @param {Object} subjectMeta - Subject metadata (optional)
+ * @param {string} subjectId - Subject ID (optional)
  */
-export function orderQuestionsForExam(questions) {
-  // Define phases with their quiz groups
-  const phases = {
-    1: [1, 2],      // Instap
-    2: [3, 4, 5],   // Kern
-    3: [6, 7, 8, 9, 10, 11], // Toepassen
-    4: [12, 13, 14, 15, 16], // Uitdaging
-  };
+export function orderQuestionsForExam(questions, subjectMeta = null, subjectId = null) {
+  // Check if subject has preserveOrder flag or is not geschiedenis
+  if (subjectMeta?.preserveOrder || !subjectId?.startsWith("geschiedenis")) {
+    // Keep original order from JSON file
+    return questions;
+  }
 
-  // Group questions by phase
-  const byPhase = { 1: [], 2: [], 3: [], 4: [], ungrouped: [] };
-
-  questions.forEach((q) => {
-    const group = q.quiz_group || 0;
-    let placed = false;
-
-    for (const [phase, groups] of Object.entries(phases)) {
-      if (groups.includes(group)) {
-        byPhase[phase].push(q);
-        placed = true;
-        break;
-      }
-    }
-
-    if (!placed) {
-      byPhase.ungrouped.push(q);
-    }
-  });
-
-  // Shuffle within each phase
-  Object.values(byPhase).forEach((phaseQuestions) => {
-    shuffle(phaseQuestions);
-  });
-
-  // Concatenate in phase order
-  return [
-    ...byPhase[1],
-    ...byPhase[2],
-    ...byPhase[3],
-    ...byPhase[4],
-    ...byPhase.ungrouped,
+  // Geschiedenis: didactische volgorde (rustige start, zware vragen naar achteren)
+  const examOrder = [
+    // FASE 1 - Instap & rust (vraag 1-8): vertrouwen opbouwen, geen overload
+    "g-045", "g-005", "g-006", "g-016", "g-009", "g-027", "g-031", "g-049",
+    // FASE 2 - Kernkennis & inzicht (vraag 9-22)
+    "g-002", "g-007", "g-012", "g-013", "g-014", "g-015", "g-017", "g-018",
+    "g-020", "g-021", "g-022", "g-023", "g-025", "g-026",
+    // FASE 3 - Toepassen & verbanden (vraag 23-36)
+    "g-011", "g-019", "g-028", "g-029", "g-030", "g-032", "g-033", "g-034",
+    "g-035", "g-036", "g-037", "g-039", "g-040", "g-041",
+    // FASE 4 - Uitdaging & afronding (vraag 37-50): zware chronologie/bronvragen
+    "g-001", "g-003", "g-004", "g-008", "g-010", "g-024", "g-038", "g-042",
+    "g-043", "g-044", "g-046", "g-047", "g-048", "g-050"
   ];
+
+  const questionMap = new Map(questions.map(q => [q.id, q]));
+  const ordered = examOrder.map(id => questionMap.get(id)).filter(Boolean);
+
+  // Add any questions not in the order (fallback)
+  const orderedIds = new Set(examOrder);
+  const remaining = questions.filter(q => !orderedIds.has(q.id));
+
+  return [...ordered, ...remaining];
 }
 
 /**
  * Expand case abbreviation to full name
  */
 export function expandCaseLabel(abbrev) {
-  const caseMap = {
-    nom: "nominativus",
-    gen: "genitivus",
-    dat: "dativus",
-    acc: "accusativus",
-    abl: "ablativus",
-    voc: "vocativus",
+  const expansions = {
+    "nom. ev": "nominativus ev",
+    "gen. ev": "genitivus ev",
+    "dat. ev": "dativus ev",
+    "acc. ev": "accusativus ev",
+    "abl. ev": "ablativus ev",
+    "nom. mv": "nominativus mv",
+    "gen. mv": "genitivus mv",
+    "dat. mv": "dativus mv",
+    "acc. mv": "accusativus mv",
+    "abl. mv": "ablativus mv",
+    // Also support short forms
+    "nom": "nominativus",
+    "gen": "genitivus",
+    "dat": "dativus",
+    "acc": "accusativus",
+    "abl": "ablativus",
+    "voc": "vocativus",
   };
-  const lower = abbrev.toLowerCase().trim();
-  return caseMap[lower] || abbrev;
+  return expansions[abbrev] || expansions[abbrev.toLowerCase().trim()] || abbrev;
 }
 
 /**
  * Get correct answer text for display
  */
 export function getCorrectAnswer(q) {
-  if (q.type === "mc") {
-    return q.answers?.[q.correctIndex] ?? "";
+  switch (q.type) {
+    case "mc":
+      return q.answers?.[q.correctIndex] || "";
+    case "open":
+      return q.accept?.[0] || "";
+    case "short_text":
+      return q.answer?.accepted?.[0] || q.payload?.accepted?.[0] || "";
+    case "wiskunde_multi_part":
+      // Show first part's answer as example
+      const firstPart = q.parts?.[0];
+      if (firstPart) {
+        const ans = firstPart.answer;
+        if (firstPart.type === "text") return `a) ${ans?.value || ""}`;
+        if (firstPart.type === "mcq") return `a) ${firstPart.options?.[ans?.correct_index] || ""}`;
+      }
+      return "";
+    case "ratio_table":
+      const vals = Object.values(q.answer?.values || {});
+      return vals.length > 0 ? vals.join(", ") : "";
+    case "ordering":
+      const order = q.answer?.order || [];
+      return order.map((idx, pos) => `${pos + 1}. ${q.items?.[idx] || ""}`).join(", ");
+    default:
+      return "";
   }
-  if (q.type === "open") {
-    return q.accept?.[0] ?? "";
-  }
-  if (q.type === "short_text") {
-    return q.payload?.accepted?.[0] ?? "";
-  }
-  return "";
 }
