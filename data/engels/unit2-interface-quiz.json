@@ -656,6 +656,146 @@
       ],
       "c": 1,
       "e": "Na 'can' gebruik je altijd het hele werkwoord zonder -s."
+    },
+    {
+      "id": "v01",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands:",
+      "items": [
+        { "en": "famous", "nl": ["beroemd"] },
+        { "en": "guest", "nl": ["gast"] },
+        { "en": "ticket", "nl": ["kaartje", "ticket"] },
+        { "en": "concert", "nl": ["concert"] },
+        { "en": "music", "nl": ["muziek"] }
+      ],
+      "explanation": "Dit zijn woorden uit Unit 2 over muziek en evenementen."
+    },
+    {
+      "id": "v02",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels:",
+      "items": [
+        { "nl": "uitnodigen", "en": ["invite", "to invite"] },
+        { "nl": "afspraak", "en": ["appointment", "meeting"] },
+        { "nl": "samen", "en": ["together"] },
+        { "nl": "beginnen", "en": ["start", "to start"] },
+        { "nl": "eindigen", "en": ["end", "to end"] }
+      ],
+      "explanation": "Werkwoorden mogen met of zonder 'to' worden gegeven."
+    },
+    {
+      "id": "v03",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands:",
+      "items": [
+        { "en": "tomorrow", "nl": ["morgen"] },
+        { "en": "tonight", "nl": ["vanavond"] },
+        { "en": "today", "nl": ["vandaag"] },
+        { "en": "weekend", "nl": ["weekend"] },
+        { "en": "holiday", "nl": ["vakantie"] }
+      ],
+      "explanation": "Tijdsaanduidingen komen vaak voor bij afspraken."
+    },
+    {
+      "id": "v04",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels:",
+      "items": [
+        { "nl": "beroemd", "en": ["famous"] },
+        { "nl": "muzikant", "en": ["musician"] },
+        { "nl": "podium", "en": ["stage"] },
+        { "nl": "publiek", "en": ["audience"] },
+        { "nl": "liedje", "en": ["song"] }
+      ],
+      "explanation": "Woorden rond muziek en optredens."
+    },
+    {
+      "id": "v05",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands:",
+      "items": [
+        { "en": "cheap", "nl": ["goedkoop"] },
+        { "en": "expensive", "nl": ["duur"] },
+        { "en": "free", "nl": ["gratis", "vrij"] },
+        { "en": "busy", "nl": ["druk"] },
+        { "en": "ready", "nl": ["klaar"] }
+      ],
+      "explanation": "Let op: sommige woorden hebben meerdere betekenissen."
+    },
+    {
+      "id": "v06",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels:",
+      "items": [
+        { "nl": "begrijpen", "en": ["understand", "to understand"] },
+        { "nl": "luisteren", "en": ["listen", "to listen"] },
+        { "nl": "kijken", "en": ["watch", "to watch"] },
+        { "nl": "praten", "en": ["talk", "to talk"] },
+        { "nl": "helpen", "en": ["help", "to help"] }
+      ],
+      "explanation": "Engelse werkwoorden hebben vaak dezelfde vorm zonder -en."
+    },
+    {
+      "id": "v07",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands:",
+      "items": [
+        { "en": "phone call", "nl": ["telefoontje"] },
+        { "en": "message", "nl": ["bericht"] },
+        { "en": "number", "nl": ["nummer"] },
+        { "en": "answer", "nl": ["antwoord", "antwoorden"] },
+        { "en": "question", "nl": ["vraag"] }
+      ],
+      "explanation": "Woorden die passen bij telefoongesprekken."
+    },
+    {
+      "id": "v08",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels:",
+      "items": [
+        { "nl": "verjaardag", "en": ["birthday"] },
+        { "nl": "maand", "en": ["month"] },
+        { "nl": "dag", "en": ["day"] },
+        { "nl": "jaar", "en": ["year"] },
+        { "nl": "datum", "en": ["date"] }
+      ],
+      "explanation": "Tijd en datum zijn een belangrijk onderdeel van Unit 2."
+    },
+    {
+      "id": "v09",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands:",
+      "items": [
+        { "en": "without", "nl": ["zonder"] },
+        { "en": "with", "nl": ["met"] },
+        { "en": "before", "nl": ["voor"] },
+        { "en": "after", "nl": ["na"] },
+        { "en": "during", "nl": ["tijdens"] }
+      ],
+      "explanation": "Dit zijn veelgebruikte voorzetsels."
+    },
+    {
+      "id": "v10",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels:",
+      "items": [
+        { "nl": "vriend", "en": ["friend"] },
+        { "nl": "ouders", "en": ["parents"] },
+        { "nl": "kind", "en": ["child"] },
+        { "nl": "mensen", "en": ["people"] },
+        { "nl": "gezin", "en": ["family"] }
+      ],
+      "explanation": "Let op: sommige meervouden zijn onregelmatig."
     }
   ]
 }
