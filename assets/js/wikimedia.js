@@ -1,5 +1,5 @@
 /* ===========================================
-   Adamus - Wikimedia Image Fetcher (v4)
+   Adamus - Wikimedia Image Fetcher (v4.1)
 
    Search strategy: Query-ladder with context-aware scoring
    1. Try specific queries first (concept + representation)
@@ -8,9 +8,19 @@
       - Representation fit (diagram vs photo)
       - Educational quality (labels, categories)
       - Domain/chapter fit (muscles, joints, etc.)
+   4. Parallel batch processing (3 queries at a time)
+   5. Margin-based early stopping (score >= 40, margin >= 8)
+   6. Domain-aware synonym expansion
+   7. Skip questions with embedded visual content
+
+   Supported domains:
+   - Biology: muscles, skeleton, joints, cells, health, animals, plants, penguins
+   - Geography: maps, climate, landscape, urbanization, population, wind, precipitation
+   - History: historical, archaeology
+   - Science: chemistry, physics
    =========================================== */
 
-const LS_KEY = "mediaCache:v4";
+const LS_KEY = "mediaCache:v4.1";
 
 // ============================================
 // DOMAIN PROFILES - Subject-agnostic priors
@@ -63,22 +73,46 @@ const CHAPTER_PROFILES = {
 
   // === GEOGRAPHY DOMAINS ===
   maps: {
-    prefer: ["map", "topographic", "geographic", "atlas", "relief"],
-    avoid: ["game", "fantasy", "fictional"],
-    preferCategories: ["Maps", "Geography", "Cartography"],
-    avoidCategories: ["Video games", "Fantasy"]
+    prefer: ["map", "topographic", "geographic", "atlas", "relief", "thematic", "climate map", "political map"],
+    avoid: ["game", "fantasy", "fictional", "board game", "video game"],
+    preferCategories: ["Maps", "Geography", "Cartography", "Thematic maps"],
+    avoidCategories: ["Video games", "Fantasy", "Board games"]
   },
   climate: {
-    prefer: ["climate", "weather", "diagram", "chart", "graph"],
-    avoid: ["news", "forecast", "app"],
-    preferCategories: ["Climatology", "Meteorology", "Diagrams"],
-    avoidCategories: ["Weather forecasts", "Apps"]
+    prefer: ["climate", "weather", "diagram", "chart", "graph", "Köppen", "climate zone", "precipitation"],
+    avoid: ["news", "forecast", "app", "screenshot"],
+    preferCategories: ["Climatology", "Meteorology", "Diagrams", "Climate diagrams", "Köppen climate"],
+    avoidCategories: ["Weather forecasts", "Apps", "Screenshots"]
   },
   landscape: {
-    prefer: ["landscape", "terrain", "nature", "geographic"],
-    avoid: ["painting", "art", "wallpaper"],
-    preferCategories: ["Landscapes", "Geography", "Physical geography"],
-    avoidCategories: ["Paintings", "Art"]
+    prefer: ["landscape", "terrain", "nature", "geographic", "relief", "landform"],
+    avoid: ["painting", "art", "wallpaper", "desktop"],
+    preferCategories: ["Landscapes", "Geography", "Physical geography", "Landforms"],
+    avoidCategories: ["Paintings", "Art", "Wallpapers"]
+  },
+  urbanization: {
+    prefer: ["city", "urban", "suburb", "agglomeration", "population density", "aerial view"],
+    avoid: ["game", "minecraft", "simcity"],
+    preferCategories: ["Cities", "Urban geography", "Urbanization", "Aerial photographs"],
+    avoidCategories: ["Video games", "Screenshots"]
+  },
+  population: {
+    prefer: ["population", "density", "demographic", "migration", "diagram", "chart"],
+    avoid: ["crowd", "concert", "protest"],
+    preferCategories: ["Demographics", "Population", "Diagrams", "Statistics"],
+    avoidCategories: ["Concerts", "Protests", "Events"]
+  },
+  wind: {
+    prefer: ["wind", "pressure", "isobar", "diagram", "atmospheric", "circulation"],
+    avoid: ["wind turbine", "windmill", "renewable"],
+    preferCategories: ["Meteorology", "Wind", "Atmospheric circulation", "Diagrams"],
+    avoidCategories: ["Wind turbines", "Renewable energy"]
+  },
+  precipitation: {
+    prefer: ["rain", "precipitation", "neerslag", "stuwingsregen", "orographic", "diagram"],
+    avoid: ["umbrella", "raincoat", "product"],
+    preferCategories: ["Precipitation", "Meteorology", "Diagrams", "Rain"],
+    avoidCategories: ["Products", "Fashion"]
   },
 
   // === HISTORY DOMAINS ===
@@ -132,6 +166,135 @@ const SPARQL_ENDPOINT = "https://query.wikidata.org/sparql";
 
 // Commons API
 const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
+
+// ============================================
+// REPRESENTATION TEMPLATES - Query patterns per type
+// ============================================
+const REPRESENTATION_TEMPLATES = {
+  diagram: [
+    "{concept} labelled diagram",
+    "{concept} anatomy diagram",
+    "{concept} schematic",
+    "{concept} educational diagram",
+    "{concept} illustration labeled"
+  ],
+  photo: [
+    "{concept} photo",
+    "{concept} photograph",
+    "{concept} wildlife photo"
+  ],
+  microscopy: [
+    "{concept} micrograph",
+    "{concept} histology",
+    "{concept} microscope image",
+    "{concept} light microscopy",
+    "{concept} stained section"
+  ],
+  "cross-section": [
+    "{concept} cross-section diagram",
+    "{concept} cross section anatomy",
+    "{concept} cutaway diagram",
+    "{concept} section labeled"
+  ],
+  map: [
+    "{concept} map",
+    "{concept} thematic map",
+    "{concept} geographic map"
+  ]
+};
+
+// ============================================
+// CURATED SYNONYMS - Domain-aware term expansion
+// ============================================
+const DOMAIN_SYNONYMS = {
+  muscles: {
+    "biceps": ["biceps brachii", "arm flexor"],
+    "triceps": ["triceps brachii", "arm extensor"],
+    "antagonist": ["antagonist muscles", "agonist antagonist pair"],
+    "flexion": ["arm flexion", "elbow flexion"],
+    "extension": ["arm extension", "elbow extension"],
+    "contraction": ["muscle contraction", "muscular contraction"],
+    "spier": ["muscle"],
+    "pees": ["tendon", "pees"]
+  },
+  skeleton: {
+    "osteon": ["Haversian system", "Haversian canal", "compact bone structure"],
+    "bone": ["bone tissue", "osseous tissue"],
+    "skull": ["cranium", "schedel"],
+    "vertebra": ["vertebrae", "spinal vertebra"],
+    "rib": ["rib bone", "costa"],
+    "sternum": ["breastbone", "borstbeen"],
+    "skelet": ["skeleton", "skeletal system"]
+  },
+  joints: {
+    "joint": ["articulation", "gewricht"],
+    "synovial": ["synovial joint", "synovial cavity"],
+    "cartilage": ["articular cartilage", "kraakbeen"],
+    "ligament": ["ligamentum", "kapselbanden"],
+    "capsule": ["joint capsule", "gewrichtskapsel"]
+  },
+  cells: {
+    "cell": ["biological cell", "cel"],
+    "mitochondria": ["mitochondrion", "mitochondria"],
+    "nucleus": ["cell nucleus", "celkern"],
+    "membrane": ["cell membrane", "plasma membrane"]
+  },
+  health: {
+    "rsi": ["repetitive strain injury", "RSI syndrome"],
+    "ergonomic": ["ergonomics", "workplace ergonomics"],
+    "posture": ["body posture", "sitting posture"]
+  },
+  maps: {
+    "climate": ["climate zones", "Köppen climate"],
+    "topographic": ["topography", "relief map"],
+    "kaart": ["map", "cartography"],
+    "schaal": ["scale", "map scale"]
+  },
+  climate: {
+    "klimaat": ["climate", "climate zone"],
+    "weer": ["weather", "meteorology"],
+    "neerslag": ["precipitation", "rainfall"],
+    "temperatuur": ["temperature"],
+    "Köppen": ["Köppen climate classification", "climate classification"],
+    "luchtdruk": ["air pressure", "atmospheric pressure"],
+    "hogedruk": ["high pressure", "anticyclone"],
+    "lagedruk": ["low pressure", "depression"],
+    "front": ["weather front", "cold front", "warm front"],
+    "stuwingsregen": ["orographic precipitation", "relief rainfall"],
+    "regenschaduw": ["rain shadow", "föhn"],
+    "moesson": ["monsoon", "monsoon climate"],
+    "passaat": ["trade winds", "trade wind"]
+  },
+  urbanization: {
+    "stad": ["city", "urban"],
+    "dorp": ["village", "rural"],
+    "urbanisatie": ["urbanization", "urban growth"],
+    "suburbanisatie": ["suburbanization", "suburban sprawl"],
+    "re-urbanisatie": ["re-urbanization", "urban renewal"],
+    "agglomeratie": ["agglomeration", "metropolitan area"],
+    "stadsgewest": ["urban region", "metropolitan region"],
+    "bevolkingsdichtheid": ["population density"],
+    "forens": ["commuter", "commuting"],
+    "Randstad": ["Randstad Holland", "Dutch Randstad"]
+  },
+  wind: {
+    "wind": ["wind", "air flow"],
+    "aanlandig": ["onshore wind", "sea breeze"],
+    "aflandig": ["offshore wind", "land breeze"],
+    "windrichting": ["wind direction", "compass direction"],
+    "westenwind": ["westerly wind", "westerlies"],
+    "passaat": ["trade winds"]
+  },
+  landscape: {
+    "landschap": ["landscape", "terrain"],
+    "reliëf": ["relief", "topography", "elevation"],
+    "berg": ["mountain", "mountains"],
+    "dal": ["valley"],
+    "rivier": ["river", "waterway"],
+    "kust": ["coast", "coastal"],
+    "zee": ["sea", "ocean"]
+  }
+};
 
 function readCache() {
   try {
@@ -193,9 +356,12 @@ function detectDomain(query, intent = {}) {
   if (containsAny(combined, ["animal", "dier", "species", "soort", "habitat", "wildlife", "mammal", "zoogdier"])) return "animals";
 
   // === GEOGRAPHY ===
-  if (containsAny(combined, ["map", "kaart", "topograph", "atlas", "cartograph"])) return "maps";
-  if (containsAny(combined, ["climate", "klimaat", "weather", "weer", "temperature", "precipitation", "neerslag"])) return "climate";
-  if (containsAny(combined, ["landscape", "landschap", "terrain", "mountain", "berg", "river", "rivier", "valley", "dal"])) return "landscape";
+  if (containsAny(combined, ["urbanisatie", "suburbanisatie", "re-urbanisatie", "agglomeratie", "stadsgewest", "forens", "randstad", "bevolkingsdichtheid", "dichtbevolkt", "dunbevolkt"])) return "urbanization";
+  if (containsAny(combined, ["wind", "aanlandig", "aflandig", "passaat", "westenwind", "luchtdruk", "hogedruk", "lagedruk", "isobar"])) return "wind";
+  if (containsAny(combined, ["neerslag", "regen", "stuwingsregen", "regenschaduw", "moesson", "precipitatie", "convectie"])) return "precipitation";
+  if (containsAny(combined, ["climate", "klimaat", "köppen", "klimaatzone", "temperatuur", "seizoen"])) return "climate";
+  if (containsAny(combined, ["map", "kaart", "topograph", "atlas", "cartograph", "schaal", "legenda", "noordpijl"])) return "maps";
+  if (containsAny(combined, ["landscape", "landschap", "terrain", "mountain", "berg", "river", "rivier", "valley", "dal", "kust", "reliëf"])) return "landscape";
 
   // === HISTORY ===
   if (containsAny(combined, ["archaeological", "excavation", "opgraving", "artifact", "ruins", "ruïne"])) return "archaeology";
@@ -216,10 +382,34 @@ function getProfile(domain) {
 }
 
 /**
+ * Expand query with domain-aware synonyms
+ */
+function expandWithSynonyms(query, domain) {
+  if (!domain || !DOMAIN_SYNONYMS[domain]) return [];
+
+  const synonyms = DOMAIN_SYNONYMS[domain];
+  const q = query.toLowerCase();
+  const expansions = [];
+
+  for (const [term, alts] of Object.entries(synonyms)) {
+    if (q.includes(term)) {
+      // Add first synonym as alternative query
+      const alt = alts[0];
+      if (alt && !q.includes(alt.toLowerCase())) {
+        expansions.push(query.replace(new RegExp(term, "i"), alt));
+      }
+    }
+  }
+
+  return expansions.slice(0, 2); // Max 2 synonym expansions
+}
+
+/**
  * Generate query ladder - from specific to broad
+ * Uses representation templates and synonym expansion
  * Returns array of { query, weight } objects
  */
-function generateQueryLadder(baseQuery, { representation = "diagram", concepts = [] } = {}) {
+function generateQueryLadder(baseQuery, { representation = "diagram", concepts = [], domain = null } = {}) {
   const ladder = [];
   const q = normalizeQuery(baseQuery);
 
@@ -228,42 +418,45 @@ function generateQueryLadder(baseQuery, { representation = "diagram", concepts =
   const coreWords = words.slice(0, 3).join(" ");
   const firstTwoWords = words.slice(0, 2).join(" ");
 
-  // Representation keywords to try
-  const repKeywords = {
-    "diagram": ["labelled diagram", "diagram", "anatomy"],
-    "photo": ["photo", ""],
-    "microscopy": ["micrograph", "histology", "microscope"],
-    "cross-section": ["cross-section", "cross section", "section"]
-  };
-  const repWords = repKeywords[representation] || repKeywords["diagram"];
+  // Get representation templates
+  const templates = REPRESENTATION_TEMPLATES[representation] || REPRESENTATION_TEMPLATES.diagram;
 
-  // Level 1: Most specific - full query + representation
-  ladder.push({ query: `${q} ${repWords[0]}`.trim(), weight: 1.0 });
+  // Level 1: Most specific - full query + best template
+  ladder.push({ query: templates[0].replace("{concept}", q), weight: 1.0 });
 
-  // Level 2: Full query + simpler representation
-  if (repWords[1]) {
-    ladder.push({ query: `${q} ${repWords[1]}`.trim(), weight: 0.9 });
+  // Level 2: Full query + second template
+  if (templates[1]) {
+    ladder.push({ query: templates[1].replace("{concept}", q), weight: 0.95 });
   }
 
-  // Level 3: Core words + representation
+  // Level 3: Synonym expansion (if domain known)
+  const synonymExpansions = expandWithSynonyms(q, domain);
+  for (const expanded of synonymExpansions) {
+    ladder.push({ query: templates[0].replace("{concept}", expanded), weight: 0.9 });
+  }
+
+  // Level 4: Core words + representation template
   if (coreWords !== q) {
-    ladder.push({ query: `${coreWords} ${repWords[0]}`.trim(), weight: 0.8 });
+    ladder.push({ query: templates[0].replace("{concept}", coreWords), weight: 0.85 });
   }
 
-  // Level 4: Core words only (high recall)
+  // Level 5: Full query without template (broader)
+  ladder.push({ query: q, weight: 0.8 });
+
+  // Level 6: Core words only
   ladder.push({ query: coreWords, weight: 0.7 });
 
-  // Level 5: First two words + anatomy (very broad)
+  // Level 7: First two words + anatomy (fallback)
   if (firstTwoWords !== coreWords) {
     ladder.push({ query: `${firstTwoWords} anatomy`, weight: 0.6 });
   }
 
-  // Level 6: Just first two words (last resort)
+  // Level 8: Just first two words (last resort)
   ladder.push({ query: firstTwoWords, weight: 0.5 });
 
   // Add concept-based queries if provided
   for (const concept of concepts.slice(0, 2)) {
-    ladder.push({ query: `${concept} ${repWords[0]}`.trim(), weight: 0.75 });
+    ladder.push({ query: templates[0].replace("{concept}", concept), weight: 0.75 });
   }
 
   // Deduplicate
@@ -777,14 +970,15 @@ function pruneCache(cache, maxEntries = 200) {
 }
 
 /**
- * Main entry point: Query-ladder with early stopping
+ * Main entry point: Query-ladder with parallel batches and margin-based early stopping
  *
- * Strategy:
+ * Strategy (v4.1):
  * 1. Detect domain from query/intent
- * 2. Generate query ladder (specific → broad)
- * 3. Try each query level, score candidates with 3-layer system
- * 4. Stop early if good candidate found (score >= threshold)
- * 5. Fall back to Wikipedia if nothing found
+ * 2. Generate query ladder with representation templates + synonyms
+ * 3. Run ladder in parallel batches (3 queries at a time)
+ * 4. Score with 3-layer system + representation gating
+ * 5. Stop early if (score >= threshold) AND (margin to #2 >= 8) AND (repFit >= minRep)
+ * 6. Fall back to Wikipedia if nothing found
  *
  * @param {string} query - Text search query
  * @param {object} opts - Options including:
@@ -820,50 +1014,100 @@ export async function getMediaForQuery(query, opts = {}) {
     }
   }
 
-  // Generate query ladder
+  // Generate query ladder with domain for synonym expansion
   const concepts = intent.primaryConcept ? [intent.primaryConcept] : [];
-  const ladder = generateQueryLadder(query, { representation, concepts });
+  const ladder = generateQueryLadder(query, { representation, concepts, domain });
 
   console.log(`[wikimedia] Domain: ${domain || "default"}, representation: ${representation}`);
   console.log(`[wikimedia] Query ladder:`, ladder.map(l => `"${l.query}" (w=${l.weight})`).join(" → "));
 
   let allCandidates = [];
-  const GOOD_SCORE_THRESHOLD = 40; // Stop early if we find something this good
+
+  // Thresholds for early stopping (v4.1: margin-based)
+  const GOOD_SCORE_THRESHOLD = 40;
+  const MARGIN_THRESHOLD = 8; // Must beat #2 by this much
+  const MIN_REP_FIT = 5; // Minimum representation layer score
 
   // Scoring options for all candidates
   const scoreOpts = { negativeTerms, domain, representation };
 
-  // 1) TRY QUERY LADDER - stop early on good results
-  for (const { query: ladderQuery, weight } of ladder) {
-    try {
-      const { candidates } = await commonsTextSearch(ladderQuery, {
-        limit: 15,
-        minWidth,
-        allowSvg,
-        negativeTerms
-      });
+  /**
+   * Score a batch of candidates and compute representation fit
+   */
+  function scoreBatch(candidates, ladderQuery, weight) {
+    for (const c of candidates) {
+      c.score = scoreCandidate(c, ladderQuery, { ...scoreOpts, queryWeight: weight });
+      c.ladderQuery = ladderQuery;
+      c.ladderWeight = weight;
 
-      // Re-score with full 3-layer scoring
-      for (const c of candidates) {
-        c.score = scoreCandidate(c, ladderQuery, { ...scoreOpts, queryWeight: weight });
-        c.ladderQuery = ladderQuery;
-        c.ladderWeight = weight;
-      }
+      // Calculate representation fit separately for gating
+      const t = (c.title || "").toLowerCase();
+      const repConfig = {
+        diagram: ["diagram", "labelled", "labeled", "schema", "illustration"],
+        photo: ["photo", "photograph"],
+        microscopy: ["micrograph", "histology", "microscope"],
+        "cross-section": ["cross-section", "section", "cutaway"]
+      }[representation] || ["diagram"];
+      c.repFit = repConfig.some(term => t.includes(term)) ? 15 : 0;
+    }
+    return candidates;
+  }
 
+  /**
+   * Check if we should early stop based on best candidate
+   */
+  function shouldEarlyStop(candidates) {
+    const unused = candidates
+      .filter(c => !usedFileTitles || !usedFileTitles.has(c.title))
+      .sort((a, b) => b.score - a.score);
+
+    if (unused.length === 0) return false;
+
+    const best = unused[0];
+    const second = unused[1];
+    const margin = second ? best.score - second.score : 100;
+
+    // Early stop if: good score AND clear margin AND representation fits
+    if (best.score >= GOOD_SCORE_THRESHOLD && margin >= MARGIN_THRESHOLD && best.repFit >= MIN_REP_FIT) {
+      console.log(`[wikimedia] Early stop: score=${best.score}, margin=${margin}, repFit=${best.repFit}`);
+      return true;
+    }
+    return false;
+  }
+
+  // 1) TRY QUERY LADDER IN PARALLEL BATCHES
+  const BATCH_SIZE = 3;
+  for (let i = 0; i < ladder.length; i += BATCH_SIZE) {
+    const batch = ladder.slice(i, i + BATCH_SIZE);
+
+    // Run batch in parallel
+    const batchResults = await Promise.all(
+      batch.map(async ({ query: ladderQuery, weight }) => {
+        try {
+          const { candidates } = await commonsTextSearch(ladderQuery, {
+            limit: 12,
+            minWidth,
+            allowSvg,
+            negativeTerms
+          });
+          return { ladderQuery, weight, candidates };
+        } catch (e) {
+          console.warn(`Text search failed for "${ladderQuery}":`, e);
+          return { ladderQuery, weight, candidates: [] };
+        }
+      })
+    );
+
+    // Score and collect all batch results
+    for (const { ladderQuery, weight, candidates } of batchResults) {
+      scoreBatch(candidates, ladderQuery, weight);
       allCandidates.push(...candidates);
       console.log(`[wikimedia] "${ladderQuery}" found ${candidates.length} candidates`);
+    }
 
-      // Early stopping: if we found a good unused candidate, stop climbing
-      const bestUnused = candidates
-        .filter(c => !usedFileTitles || !usedFileTitles.has(c.title))
-        .sort((a, b) => b.score - a.score)[0];
-
-      if (bestUnused && bestUnused.score >= GOOD_SCORE_THRESHOLD) {
-        console.log(`[wikimedia] Early stop: found good candidate (score=${bestUnused.score})`);
-        break;
-      }
-    } catch (e) {
-      console.warn(`Text search failed for "${ladderQuery}":`, e);
+    // Check for early stop after each batch
+    if (shouldEarlyStop(allCandidates)) {
+      break;
     }
   }
 
@@ -880,10 +1124,7 @@ export async function getMediaForQuery(query, opts = {}) {
       });
 
       // Re-score with depicts bonus
-      for (const c of candidates) {
-        c.score = scoreCandidate(c, query, { ...scoreOpts, queryWeight: 1.0 });
-        c.ladderQuery = "depicts:" + qids.join(",");
-      }
+      scoreBatch(candidates, "depicts:" + qids.join(","), 1.0);
 
       allCandidates.push(...candidates);
       console.log(`[wikimedia] Depicts search for ${qids.join(",")} found ${candidates.length} candidates`);
@@ -978,15 +1219,75 @@ export async function loadQuestionImage(question, opts = {}) {
 }
 
 /**
+ * Check if a question already has embedded visual content (diagrams, tables, graphs)
+ * These questions don't need additional images from Wikimedia
+ */
+function hasEmbeddedVisualContent(question) {
+  // Check if question has embedded image/diagram/table/graph references
+  const textToCheck = [
+    question.q || "",
+    question.text || "",
+    question.intro || "",
+    question.prompt || ""
+  ].join(" ").toLowerCase();
+
+  // Patterns that indicate embedded visual content
+  const embeddedPatterns = [
+    /\bafbeelding\s*\d*\b/i,     // "afbeelding 1", "afbeelding"
+    /\bfiguur\s*\d*\b/i,         // "figuur 1", "figuur"
+    /\bdiagram\s*\d*\b/i,        // "diagram 1", "diagram"
+    /\btabel\s*\d*\b/i,          // "tabel 1", "tabel"
+    /\bgrafiek\s*\d*\b/i,        // "grafiek 1", "grafiek"
+    /\btekening\s*\d*\b/i,       // "tekening 1", "tekening"
+    /\bschema\s*\d*\b/i,         // "schema 1", "schema"
+    /\bbron\s*\d+\b/i,           // "bron 1", "bron 2" (source references with numbers)
+    /\bkaart\s*\d+\b/i,          // "kaart 1", "kaart 2" (numbered maps)
+    /\bfoto\s*\d+\b/i,           // "foto 1", "foto 2"
+    /\bplaatje\s*\d*\b/i,        // "plaatje 1", "plaatje"
+    /bekijk\s+(de|het)\s+(afbeelding|figuur|diagram|tabel|grafiek)/i,  // "bekijk de afbeelding"
+    /in\s+(de|het)\s+(afbeelding|figuur|diagram|tabel|grafiek)/i,      // "in de afbeelding"
+    /zie\s+(de|het)?\s*(afbeelding|figuur|diagram|tabel|grafiek)/i,    // "zie figuur"
+  ];
+
+  for (const pattern of embeddedPatterns) {
+    if (pattern.test(textToCheck)) {
+      return true;
+    }
+  }
+
+  // Also check if question has table data structure (data_table type questions)
+  if (question.table && (question.table.rows || question.table.columns)) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
  * Preload images for multiple questions
  */
 export async function preloadQuestionImages(questions, opts = {}) {
-  const skipTypes = ["matching", "table_parse", "ratio_table", "data_table", "wiskunde_multi_part"];
-  const needsImage = questions.filter(q =>
-    (q.media?.query || q.media?.qids?.length) &&
-    !q.image &&
-    !skipTypes.includes(q.type)
-  );
+  // Skip these question types entirely
+  const skipTypes = ["matching", "table_parse", "ratio_table", "data_table", "wiskunde_multi_part", "ordering"];
+
+  const needsImage = questions.filter(q => {
+    // Must have media query or qids defined
+    if (!q.media?.query && !q.media?.qids?.length) return false;
+
+    // Skip if already has image
+    if (q.image) return false;
+
+    // Skip certain question types
+    if (skipTypes.includes(q.type)) return false;
+
+    // Skip if question has embedded visual content (diagrams, tables, graphs, etc.)
+    if (hasEmbeddedVisualContent(q)) {
+      console.log(`[wikimedia] Skipping image for q${q.id}: has embedded visual content`);
+      return false;
+    }
+
+    return true;
+  });
 
   const usedFileTitles = opts.usedFileTitles ?? new Set();
 

@@ -3640,12 +3640,42 @@ function setupEventListeners() {
   if (giveUpBtn) giveUpBtn.addEventListener("click", giveUp);
   if (pauseBtn) pauseBtn.addEventListener("click", showPause);
   if (resumeBtn) resumeBtn.addEventListener("click", hidePause);
-  if (restartBtn)
-    restartBtn.addEventListener("click", () => {
-      if (confirm("Weet je zeker dat je opnieuw wilt beginnen?")) {
-        location.reload();
+  // Restart dropdown toggle
+  const restartDropdown = $("restartDropdown");
+  const restartPractice = $("restartPractice");
+  const restartExam = $("restartExam");
+
+  if (restartBtn && restartDropdown) {
+    restartBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      restartDropdown.classList.toggle("open");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!restartDropdown.contains(e.target)) {
+        restartDropdown.classList.remove("open");
       }
     });
+  }
+
+  if (restartPractice) {
+    restartPractice.addEventListener("click", () => {
+      if (confirm("Begin een nieuwe oefenquiz?")) {
+        clearQuizProgress(state.subjectId);
+        startQuiz("practice");
+      }
+    });
+  }
+
+  if (restartExam) {
+    restartExam.addEventListener("click", () => {
+      if (confirm("Start de volledige toets? Je krijgt alle vragen met een timer.")) {
+        clearQuizProgress(state.subjectId);
+        startQuiz("exam");
+      }
+    });
+  }
 
   // Timer toggle
   if (timerToggle) {

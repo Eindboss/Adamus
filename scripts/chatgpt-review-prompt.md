@@ -1,10 +1,17 @@
-# ChatGPT Review: Wikimedia Image Selection System (v4)
+# ChatGPT Review: Wikimedia Image Selection System (v4.1)
 
 ## Context
 
-Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke vraag moet een relevante afbeelding krijgen van Wikimedia Commons. Het systeem is nu geüpgraded naar v4 met query-ladder en 3-laags scoring.
+Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke vraag moet een relevante afbeelding krijgen van Wikimedia Commons. Het systeem is geüpgraded naar v4.1 met verbeterde query-ladder, parallel batching, en margin-based early stopping.
 
-## Huidige Architectuur (v4)
+## Huidige Architectuur (v4.1)
+
+### Nieuwe Features in v4.1:
+- **Parallel batch processing**: 3 queries tegelijk voor snellere searches
+- **Margin-based early stopping**: Stop alleen als score >= 40 EN margin >= 8 EN repFit >= 5
+- **Domain-aware synonym expansion**: Nederlandse termen naar Engels
+- **Skip embedded visual content**: Vragen met "afbeelding 1", "tabel", "grafiek" krijgen geen extra afbeelding
+- **Multi-subject support**: Biology, Geography, History, Science domains
 
 ### Data structuur per vraag:
 ```json
@@ -28,21 +35,56 @@ Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke
 }
 ```
 
-### Query-Ladder Strategie:
+### Query-Ladder met Representation Templates:
 ```javascript
-// Genereer queries van specifiek naar breed
-function generateQueryLadder(baseQuery, { representation, concepts }) {
+const REPRESENTATION_TEMPLATES = {
+  diagram: [
+    "{concept} labelled diagram",
+    "{concept} anatomy diagram",
+    "{concept} schematic",
+    "{concept} educational diagram"
+  ],
+  photo: ["{concept} photo", "{concept} photograph"],
+  microscopy: ["{concept} micrograph", "{concept} histology"],
+  "cross-section": ["{concept} cross-section diagram", "{concept} cutaway"],
+  map: ["{concept} map", "{concept} thematic map"]
+};
+
+function generateQueryLadder(baseQuery, { representation, concepts, domain }) {
+  const templates = REPRESENTATION_TEMPLATES[representation] || REPRESENTATION_TEMPLATES.diagram;
+  const synonymExpansions = expandWithSynonyms(baseQuery, domain);
+
   return [
-    { query: "biceps elbow flexion labelled diagram", weight: 1.0 },  // Meest specifiek
-    { query: "biceps elbow flexion diagram", weight: 0.9 },
-    { query: "biceps elbow flexion", weight: 0.8 },
-    { query: "biceps elbow", weight: 0.7 },
-    { query: "biceps anatomy", weight: 0.6 },
-    { query: "biceps", weight: 0.5 }  // Meest breed (fallback)
+    { query: templates[0].replace("{concept}", baseQuery), weight: 1.0 },
+    { query: templates[1]?.replace("{concept}", baseQuery), weight: 0.95 },
+    ...synonymExpansions.map(q => ({ query: templates[0].replace("{concept}", q), weight: 0.9 })),
+    { query: baseQuery, weight: 0.8 },
+    // ... progressively broader queries
   ];
 }
+```
 
-// Early stopping: stop zodra score >= 40
+### Domain-Aware Synonym Expansion:
+```javascript
+const DOMAIN_SYNONYMS = {
+  muscles: {
+    "biceps": ["biceps brachii", "arm flexor"],
+    "pees": ["tendon"],
+    "spier": ["muscle"]
+  },
+  climate: {
+    "klimaat": ["climate", "climate zone"],
+    "neerslag": ["precipitation", "rainfall"],
+    "stuwingsregen": ["orographic precipitation", "relief rainfall"],
+    "moesson": ["monsoon", "monsoon climate"]
+  },
+  urbanization: {
+    "urbanisatie": ["urbanization", "urban growth"],
+    "agglomeratie": ["agglomeration", "metropolitan area"],
+    "bevolkingsdichtheid": ["population density"]
+  },
+  // ... more domains
+};
 ```
 
 ### 3-Laags Scoring Systeem:
@@ -67,153 +109,129 @@ function scoreCandidate(candidate, query, opts) {
 ```javascript
 const CHAPTER_PROFILES = {
   // BIOLOGY
-  muscles: {
-    prefer: ["diagram", "labelled", "anatomy", "muscle", "flexion"],
-    avoid: ["bodybuilder", "fitness", "gym"],
-    preferCategories: ["Diagrams", "Anatomy", "Muscles"],
-    avoidCategories: ["Bodybuilding", "Fitness models"]
-  },
-  skeleton: { ... },
-  joints: { ... },
-  cells: { ... },
-  plants: { ... },
-  animals: { ... },
+  muscles: { prefer: ["diagram", "labelled", "anatomy"], avoid: ["bodybuilder", "gym"] },
+  skeleton: { prefer: ["diagram", "labelled", "bone"], avoid: ["dinosaur", "museum"] },
+  joints: { prefer: ["diagram", "cross-section", "synovial"], avoid: ["x-ray", "surgery"] },
+  cells: { prefer: ["microscope", "micrograph", "diagram"], avoid: ["prison", "battery"] },
+  health: { prefer: ["ergonomic", "posture", "diagram"], avoid: ["advertisement", "product"] },
 
-  // GEOGRAPHY
-  maps: { ... },
-  climate: { ... },
-  landscape: { ... },
+  // GEOGRAPHY (NEW)
+  maps: { prefer: ["map", "topographic", "thematic"], avoid: ["game", "fantasy"] },
+  climate: { prefer: ["climate", "Köppen", "diagram", "chart"], avoid: ["forecast", "app"] },
+  urbanization: { prefer: ["city", "urban", "aerial view"], avoid: ["game", "minecraft"] },
+  wind: { prefer: ["wind", "pressure", "isobar", "diagram"], avoid: ["wind turbine"] },
+  precipitation: { prefer: ["rain", "orographic", "diagram"], avoid: ["umbrella", "product"] },
+  landscape: { prefer: ["landscape", "terrain", "relief"], avoid: ["painting", "wallpaper"] },
 
   // HISTORY
-  historical: { ... },
-  archaeology: { ... },
+  historical: { prefer: ["historical", "artifact"], avoid: ["movie", "reenactment"] },
+  archaeology: { prefer: ["archaeological", "excavation"], avoid: ["game", "movie"] },
 
   // SCIENCE
-  chemistry: { ... },
-  physics: { ... }
+  chemistry: { prefer: ["molecule", "structure", "diagram"], avoid: ["stock photo"] },
+  physics: { prefer: ["physics", "diagram", "force"], avoid: ["stock photo"] }
 };
+```
 
-// Automatische detectie op basis van keywords in query
-function detectDomain(query, intent) {
-  if (containsAny(combined, ["muscle", "biceps", "triceps"])) return "muscles";
-  if (containsAny(combined, ["map", "kaart", "atlas"])) return "maps";
-  // etc...
+### Parallel Batch Processing + Margin-Based Early Stop:
+```javascript
+async function getMediaForQuery(query, opts) {
+  const domain = detectDomain(query, intent);
+  const ladder = generateQueryLadder(query, { representation, domain });
+
+  const GOOD_SCORE_THRESHOLD = 40;
+  const MARGIN_THRESHOLD = 8;  // Must beat #2 by this much
+  const MIN_REP_FIT = 5;       // Minimum representation layer score
+  const BATCH_SIZE = 3;
+
+  for (let i = 0; i < ladder.length; i += BATCH_SIZE) {
+    const batch = ladder.slice(i, i + BATCH_SIZE);
+
+    // Run batch in parallel
+    const batchResults = await Promise.all(batch.map(({ query, weight }) =>
+      commonsTextSearch(query).then(candidates => ({ query, weight, candidates }))
+    ));
+
+    // Score all candidates
+    for (const { query, weight, candidates } of batchResults) {
+      scoreBatch(candidates, query, weight);
+      allCandidates.push(...candidates);
+    }
+
+    // Margin-based early stop
+    if (shouldEarlyStop(allCandidates)) break;
+  }
+
+  // Depicts boost if not enough good candidates
+  if (qids.length > 0 && topScore < GOOD_SCORE_THRESHOLD) {
+    const depictsCandidates = await commonsStructuredDataSearch(qids, { textQuery: query });
+    // ...
+  }
+}
+
+function shouldEarlyStop(candidates) {
+  const sorted = candidates.sort((a, b) => b.score - a.score);
+  const best = sorted[0];
+  const second = sorted[1];
+  const margin = second ? best.score - second.score : 100;
+
+  return best.score >= GOOD_SCORE_THRESHOLD &&
+         margin >= MARGIN_THRESHOLD &&
+         best.repFit >= MIN_REP_FIT;
 }
 ```
 
-### Zoekstrategie:
+### Skip Embedded Visual Content:
 ```javascript
-async function getMediaForQuery(query, opts) {
-  // 1. Detecteer domain voor context-aware scoring
-  const domain = detectDomain(query, intent);
+function hasEmbeddedVisualContent(question) {
+  const textToCheck = [question.q, question.text, question.intro, question.prompt].join(" ");
 
-  // 2. Genereer query ladder
-  const ladder = generateQueryLadder(query, { representation, concepts });
+  const patterns = [
+    /\bafbeelding\s*\d*\b/i,  // "afbeelding 1"
+    /\btabel\s*\d*\b/i,       // "tabel"
+    /\bgrafiek\s*\d*\b/i,     // "grafiek"
+    /\bbron\s*\d+\b/i,        // "bron 1" (numbered sources)
+    // ... more patterns
+  ];
 
-  // 3. Loop door ladder, stop early bij goede score
-  for (const { query, weight } of ladder) {
-    const candidates = await commonsTextSearch(query);
-    // Re-score met 3-laags systeem
-    for (const c of candidates) {
-      c.score = scoreCandidate(c, query, { domain, representation, queryWeight: weight });
-    }
-    // Early stop als score >= 40
-    if (bestCandidate.score >= 40) break;
-  }
-
-  // 4. Depicts boost als weinig resultaten
-  if (qids.length > 0 && candidates.length < 5) {
-    const depictsCandidates = await commonsStructuredDataSearch(qids);
-    // Depicts geeft +40 bonus in layer 2
-  }
-
-  // 5. Wikipedia fallback als laatste redmiddel
+  return patterns.some(p => p.test(textToCheck));
 }
+
+// Questions with embedded content don't get Wikimedia images
+const skipTypes = ["matching", "ordering", "data_table", "table_parse"];
 ```
 
 ## Huidige Resultaten
 
-**Verbeterd:**
-- Query "biceps elbow flexion diagram" → 0 resultaten, maar ladder relaxeert naar "biceps anatomy" → goede resultaten
-- Domain-aware scoring voorkomt bodybuilder foto's bij spiervragen
-- Depicts (P180) geeft semantische boost
+**Verbeterd in v4.1:**
+- Parallel batching: ~3x sneller dan sequential
+- Margin-based early stop voorkomt "net goed genoeg" afbeeldingen
+- Synonym expansion vindt betere resultaten voor Nederlandse queries
+- Skip embedded content: geen dubbele afbeeldingen
+- Geography domains werken goed voor aardrijkskunde vragen
 
 **Nog steeds problematisch:**
-- Sommige zeer specifieke concepten (bijv. "osteon haversian system labeled") vinden moeilijk educatieve diagrammen
-- Nederlands-specifieke termen worden niet altijd gevonden
+- Sommige zeer specifieke concepten vinden moeilijk educatieve diagrammen
+- Balans tussen snelheid (early stop) en kwaliteit (doorzoeken)
 
-## Vraag 1: Query Optimalisatie
+## Open Vragen
 
-De query-ladder werkt, maar kunnen we de initiële queries slimmer maken?
+### 1. Early Stop Tuning
+De margin-based early stop is conservatiever dan pure threshold. Is de huidige config optimaal?
+- `GOOD_SCORE_THRESHOLD = 40`
+- `MARGIN_THRESHOLD = 8`
+- `MIN_REP_FIT = 5`
 
-Ideeën:
-- Automatisch Engels/Nederlands synoniemen toevoegen?
-- Wikidata labels gebruiken voor betere zoektermen?
-- Query expansie met gerelateerde concepten?
+### 2. Synonym Coverage
+De DOMAIN_SYNONYMS zijn handmatig gecureerd. Moeten we:
+- Wikidata labels automatisch ophalen?
+- Meer synoniemen toevoegen voor specifieke vakgebieden?
+- Engels/Nederlands detectie automatiseren?
 
-## Vraag 2: Scoring Fine-tuning
-
-De 3-laags scoring werkt redelijk, maar:
-- Zijn de gewichten goed? (representation ±30, quality ±60, domain ±50)
-- Moeten we meer/andere categorieën detecteren?
-- Is de early-stop threshold (40) te hoog/laag?
-
-## Vraag 3: Depicts Coverage
-
-Wikidata depicts (P180) is krachtig maar sparse:
-- Veel educatieve afbeeldingen missen P180 tags
-- Moeten we een fallback naar SPARQL category queries bouwen?
-- Of is het beter om op text search te focussen?
-
-## Vraag 4: Edge Cases
-
-Hoe om te gaan met:
-- Microscopie beelden vs schema's (osteon, cellen)
-- Historische afbeeldingen (authenticiteit vs kwaliteit)
-- Kaarten (topografisch vs politiek vs thematisch)
-
-## Vraag 5: AI-Integratie (Gemini Vision)
-
-Ik heb toegang tot Google Cloud met Gemini Vision API. Mogelijke use cases:
-
-### A. Post-filtering met Vision:
-```javascript
-// Na Commons search, laat Gemini de top-5 beoordelen
-const candidates = await commonsSearch(query);
-const ratings = await Promise.all(candidates.slice(0, 5).map(c =>
-  geminiVision.analyze(c.thumbUrl, {
-    prompt: `Rate this image for educational use in a biology quiz about ${topic}.
-             Score 1-10 on: relevance, clarity, educational value, age-appropriateness.`
-  })
-));
-```
-
-### B. Query generation met AI:
-```javascript
-// Laat Gemini betere queries genereren op basis van vraag context
-const betterQuery = await gemini.generate({
-  prompt: `Given this quiz question about ${topic}: "${questionText}"
-           Generate 3 Wikimedia Commons search queries that would find
-           an educational diagram. Focus on scientific/anatomical terms.`
-});
-```
-
-### C. Fallback image description:
-```javascript
-// Als geen goede afbeelding gevonden, genereer beschrijving
-if (bestScore < 20) {
-  const description = await gemini.generate({
-    prompt: `Describe what an ideal educational image would show for: ${topic}`
-  });
-  // Gebruik beschrijving als alt-text of voor nieuwe search
-}
-```
-
-**Vragen over Gemini integratie:**
-1. Is post-filtering de moeite waard? (extra API calls, latency, kosten)
-2. Of is het beter om de metadata-based scoring eerst te perfectioneren?
-3. Welke use case zou de meeste impact hebben op kwaliteit?
-4. Hoe om te gaan met rate limits en caching?
+### 3. Batch Size vs Latency
+Met `BATCH_SIZE = 3` hebben we goede parallelisatie maar early stop werkt per batch.
+- Zou `BATCH_SIZE = 2` sneller stoppen bij goede eerste hit?
+- Of is 3 de sweet spot?
 
 ## Voorbeelden van Gewenste vs Ongewenste Afbeeldingen
 
@@ -222,22 +240,27 @@ if (bestScore < 20) {
 | Biceps beweging | Gelabeld anatomisch diagram arm | Bodybuilder, stock foto |
 | Osteon (Havers-systeem) | Microscoop beeld of schema met labels | Oude medische tekst |
 | RSI preventie | Ergonomische werkplek diagram | Kantoormeubel reclame |
-| Gewrichtskraakbeen | Doorsnede gewricht met labels | Röntgenfoto |
-| Klimaatzone's | Wereld klimaatkaart | Fantasy game map |
-| Middeleeuwen | Historische afbeelding/artifact | Film screenshot |
-
-## Gewenste Output
-
-1. **Feedback op huidige architectuur** - Is de 3-laags aanpak goed?
-2. **Query optimalisatie tips** - Hoe kunnen we queries verbeteren?
-3. **Scoring verbeteringen** - Welke gewichten/thresholds aanpassen?
-4. **Gemini strategie** - Wel of niet integreren, en zo ja, hoe?
-5. **Edge case handling** - Specifieke tips per type afbeelding
+| Köppen klimaatzones | Wereld klimaatkaart met zones | Fantasy game map |
+| Stuwingsregen | Diagram loef/lijzijde bergen | Foto regendruppels |
+| Urbanisatie Nederland | Luchtfoto Randstad of diagram | Minecraft screenshot |
 
 ## Technische Context
 
 - Platform: Browser-based quiz app
 - API: Wikimedia Commons API + Wikidata SPARQL
-- Caching: LocalStorage met 30 dagen TTL
-- Concurrency: 3 parallel fetches
+- Caching: LocalStorage met 30 dagen TTL (key: `mediaCache:v4.1`)
+- Concurrency: 3 parallel batches
 - Fallback: Wikipedia artikel thumbnail
+
+**Performance vereiste:** Afbeeldingen moeten snel laden. De quiz wordt live gebruikt door scholieren - lange laadtijden verstoren de flow. Daarom:
+- Early stopping om onnodige API calls te vermijden
+- Parallel batches voor snellere eerste resultaten
+- Caching voor herhaalde vragen
+- Thumbnail URLs (800px) in plaats van full-size afbeeldingen
+
+## Gewenste Output
+
+1. **Feedback op v4.1 verbeteringen** - Zijn parallel batching en margin-based early stop goed geïmplementeerd?
+2. **Threshold tuning** - Zijn de huidige waarden (40/8/5) optimaal?
+3. **Synonym expansion** - Hoe kunnen we dit verbeteren zonder handmatig werk?
+4. **Edge case handling** - Tips voor problematische query types?

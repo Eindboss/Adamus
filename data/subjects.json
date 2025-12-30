@@ -51,26 +51,14 @@
     {
       "id": "aardrijkskunde-h2-de-wereld",
       "subject": "Aardrijkskunde",
-      "label": "Aardrijkskunde – H2: De Wereld (Oefenen)",
+      "label": "Aardrijkskunde – H2: De Wereld",
       "title": "Aardrijkskunde – Hoofdstuk 2: De Wereld",
       "file": "data/aardrijkskunde/h2-de-wereld-quiz.json",
       "schema": "toets",
       "hideFlashcards": true,
       "week": "2e toetsweek",
-      "questionsPerSession": 15
-    },
-    {
-      "id": "aardrijkskunde-h2-de-wereld-exam",
-      "subject": "Aardrijkskunde",
-      "label": "Aardrijkskunde – H2: De Wereld (Proeftoets)",
-      "title": "Aardrijkskunde – Hoofdstuk 2: De Wereld (Proeftoets)",
-      "file": "data/aardrijkskunde/h2-de-wereld-quiz.json",
-      "schema": "toets",
-      "hideFlashcards": true,
-      "week": "2e toetsweek",
-      "examOnly": true,
-      "examDurationMinutes": 60,
-      "preserveOrder": true
+      "questionsPerSession": 15,
+      "examDurationMinutes": 60
     },
     {
       "id": "aardrijkskunde-p1",
