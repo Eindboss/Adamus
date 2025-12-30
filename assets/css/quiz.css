@@ -544,53 +544,6 @@ textarea.open-input {
 }
 
 /* ===========================================
-   Restart Dropdown
-   =========================================== */
-.restart-dropdown {
-  position: relative;
-}
-
-.restart-menu {
-  display: none;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  margin-bottom: var(--space-2);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  min-width: 220px;
-  z-index: 100;
-  overflow: hidden;
-}
-
-.restart-dropdown.open .restart-menu {
-  display: block;
-}
-
-.restart-option {
-  display: block;
-  width: 100%;
-  padding: var(--space-3) var(--space-4);
-  background: none;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  font-size: 0.9375rem;
-  color: var(--text);
-  transition: background-color 0.15s;
-}
-
-.restart-option:hover {
-  background: var(--surface-3);
-}
-
-.restart-option:first-child {
-  border-bottom: 1px solid var(--border);
-}
-
-/* ===========================================
    Quiz Meta / Stats Bar
    =========================================== */
 .quiz-meta {

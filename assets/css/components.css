@@ -190,6 +190,87 @@
   opacity: 0.5;
 }
 
+/* Quiz Row - For quizzes with mode selection */
+.quiz-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-row-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+  min-width: 0;
+}
+
+.quiz-row-info .icon-wrap {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent, var(--brand)) 0%, var(--accent-dark, var(--brand-dark)) 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-row-info .icon-wrap svg {
+  width: 22px;
+  height: 22px;
+  stroke: white;
+  fill: none;
+}
+
+.quiz-row-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--ease);
+  white-space: nowrap;
+}
+
+.mode-btn-practice {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.mode-btn-practice:hover {
+  background: var(--brand-light);
+  border-color: var(--brand);
+  color: var(--brand-dark);
+}
+
+.mode-btn-exam {
+  background: var(--brand);
+  color: white;
+  border: 1px solid var(--brand);
+}
+
+.mode-btn-exam:hover {
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+
 /* ===========================================
    Buttons
    =========================================== */
@@ -567,6 +648,32 @@
 
   .quiz-card .quiz-title {
     font-size: 1rem;
+  }
+
+  .quiz-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .quiz-row-info {
+    gap: var(--space-3);
+  }
+
+  .quiz-row-info .icon-wrap {
+    width: 40px;
+    height: 40px;
+  }
+
+  .quiz-row-actions {
+    justify-content: stretch;
+  }
+
+  .mode-btn {
+    flex: 1;
+    justify-content: center;
+    padding: var(--space-3);
   }
 
   .badge {

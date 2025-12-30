@@ -212,76 +212,39 @@ export async function initQuiz() {
 }
 
 /**
- * Check if current subject supports exam mode
+ * Determine quiz mode from URL or subject config
+ * Returns "practice", "exam", or null if mode selection should be shown
  */
-function supportsExamMode() {
-  // Support exam mode for geschiedenis subjects
-  return state.subjectId?.startsWith("geschiedenis");
+function determineQuizMode() {
+  const meta = state.subjectMeta;
+
+  // Check URL parameter first (from subject page mode buttons)
+  const urlMode = getUrlParam("mode");
+  if (urlMode === "practice" || urlMode === "exam") {
+    return urlMode;
+  }
+
+  // If subject is exam-only, always start exam
+  if (meta?.examOnly) {
+    return "exam";
+  }
+
+  // If subject supports both modes (has questionsPerSession AND examDurationMinutes),
+  // but no URL mode was specified, default to practice
+  if (meta?.questionsPerSession && meta?.examDurationMinutes) {
+    return "practice"; // Default to practice if accessed without mode param
+  }
+
+  // Otherwise default to practice
+  return "practice";
 }
 
 /**
- * Show mode selection screen (Practice vs Exam)
+ * Show mode selection or start quiz directly based on config
  */
 function showModeSelection() {
-  const container = $("quizArea");
-  if (!container) return;
-
-  const meta = state.subjectMeta;
-
-  // If subject is exam-only, skip mode selection and start exam directly
-  if (meta?.examOnly) {
-    startQuiz("exam");
-    return;
-  }
-
-  // If subject doesn't support exam mode, start practice directly
-  if (!supportsExamMode()) {
-    startQuiz("practice");
-    return;
-  }
-
-  state.phase = "mode-select";
-  updateControls();
-
-  const totalQuestions = 50; // For geschiedenis quiz
-  const examMinutes = meta?.examDurationMinutes || EXAM_DURATION_MINUTES;
-
-  container.innerHTML = `
-    <div class="mode-selection">
-      <h2 class="mode-title">Kies je modus</h2>
-      <p class="mode-subtitle">${meta?.title || "Quiz"}</p>
-
-      <div class="mode-cards">
-        <div class="mode-card" id="practiceMode" tabindex="0">
-          <div class="mode-icon">📚</div>
-          <h3>Oefenen</h3>
-          <ul class="mode-features">
-            <li>10 willekeurige vragen</li>
-            <li>Overslaan mogelijk</li>
-            <li>Timer aan/uit</li>
-            <li>Direct feedback</li>
-          </ul>
-          <button class="btn btn-primary">Start oefenen</button>
-        </div>
-
-        <div class="mode-card" id="examMode" tabindex="0">
-          <div class="mode-icon">📝</div>
-          <h3>Volledige toets</h3>
-          <ul class="mode-features">
-            <li>Alle ${totalQuestions} vragen</li>
-            <li>${examMinutes} minuten totaal</li>
-            <li>Pauzeren mogelijk</li>
-            <li>Eindcijfer (1-10)</li>
-          </ul>
-          <button class="btn">Start toets</button>
-        </div>
-      </div>
-    </div>
-  `;
-
-  // Add event listeners
-  $("practiceMode")?.addEventListener("click", () => startQuiz("practice"));
-  $("examMode")?.addEventListener("click", () => startQuiz("exam"));
+  const mode = determineQuizMode();
+  startQuiz(mode);
 }
 
 /**
@@ -3640,39 +3603,11 @@ function setupEventListeners() {
   if (giveUpBtn) giveUpBtn.addEventListener("click", giveUp);
   if (pauseBtn) pauseBtn.addEventListener("click", showPause);
   if (resumeBtn) resumeBtn.addEventListener("click", hidePause);
-  // Restart dropdown toggle
-  const restartDropdown = $("restartDropdown");
-  const restartPractice = $("restartPractice");
-  const restartExam = $("restartExam");
-
-  if (restartBtn && restartDropdown) {
-    restartBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      restartDropdown.classList.toggle("open");
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!restartDropdown.contains(e.target)) {
-        restartDropdown.classList.remove("open");
-      }
-    });
-  }
-
-  if (restartPractice) {
-    restartPractice.addEventListener("click", () => {
-      if (confirm("Begin een nieuwe oefenquiz?")) {
+  if (restartBtn) {
+    restartBtn.addEventListener("click", () => {
+      if (confirm("Weet je zeker dat je opnieuw wilt beginnen?")) {
         clearQuizProgress(state.subjectId);
-        startQuiz("practice");
-      }
-    });
-  }
-
-  if (restartExam) {
-    restartExam.addEventListener("click", () => {
-      if (confirm("Start de volledige toets? Je krijgt alle vragen met een timer.")) {
-        clearQuizProgress(state.subjectId);
-        startQuiz("exam");
+        location.reload();
       }
     });
   }

@@ -85,33 +85,71 @@ async function init() {
 
     quizzes.forEach((meta) => {
       const title = extractQuizTitle(meta, displayName);
-
-      // Quiz card
-      const card = document.createElement("a");
-      card.className = "quiz-card";
-      card.href = `quiz.html?subject=${encodeURIComponent(meta.id)}`;
-      card.style.setProperty("--accent", accent.color);
-      card.style.setProperty("--accent-light", accent.light);
-
       const weekBadge = meta.week
         ? `<span class="week-badge">${meta.week}</span>`
         : "";
 
-      card.innerHTML = `
-        <div class="icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 11l3 3L22 4"/>
-            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-          </svg>
-        </div>
-        <div class="quiz-info">
-          <div class="quiz-title">${title}</div>
-          <div class="quiz-meta">${meta.schema === "toets" ? "Toets" : "Quiz"}${weekBadge}</div>
-        </div>
-        <span class="arrow">→</span>
-      `;
+      // Check if quiz supports both modes (has questionsPerSession AND is not examOnly)
+      const supportsBothModes = meta.questionsPerSession && !meta.examOnly && meta.examDurationMinutes;
+      const isExamOnly = meta.examOnly;
 
-      listEl.appendChild(card);
+      if (supportsBothModes) {
+        // Render quiz row with two mode buttons
+        const row = document.createElement("div");
+        row.className = "quiz-row";
+        row.style.setProperty("--accent", accent.color);
+        row.style.setProperty("--accent-light", accent.light);
+
+        row.innerHTML = `
+          <div class="quiz-row-info">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <div class="quiz-info">
+              <div class="quiz-title">${title}</div>
+              <div class="quiz-meta">${meta.schema === "toets" ? "Toets" : "Quiz"}${weekBadge}</div>
+            </div>
+          </div>
+          <div class="quiz-row-actions">
+            <a class="mode-btn mode-btn-practice" href="quiz.html?subject=${encodeURIComponent(meta.id)}&mode=practice">
+              📚 Oefenen
+            </a>
+            <a class="mode-btn mode-btn-exam" href="quiz.html?subject=${encodeURIComponent(meta.id)}&mode=exam">
+              📝 Volledige toets
+            </a>
+          </div>
+        `;
+
+        listEl.appendChild(row);
+      } else {
+        // Standard single quiz card (exam only or practice only)
+        const card = document.createElement("a");
+        card.className = "quiz-card";
+        card.href = `quiz.html?subject=${encodeURIComponent(meta.id)}`;
+        card.style.setProperty("--accent", accent.color);
+        card.style.setProperty("--accent-light", accent.light);
+
+        const modeLabel = isExamOnly ? "Proeftoets" : (meta.schema === "toets" ? "Toets" : "Quiz");
+
+        card.innerHTML = `
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </div>
+          <div class="quiz-info">
+            <div class="quiz-title">${title}</div>
+            <div class="quiz-meta">${modeLabel}${weekBadge}</div>
+          </div>
+          <span class="arrow">→</span>
+        `;
+
+        listEl.appendChild(card);
+      }
 
       // Flashcard link (only if quiz has content and flashcards are not hidden)
       if (meta.file && !meta.hideFlashcards) {
