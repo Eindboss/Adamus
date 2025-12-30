@@ -1,5 +1,5 @@
 /* ===========================================
-   Adamus - Wikimedia Image Fetcher (v4.2)
+   Adamus - Wikimedia Image Fetcher (v4.3)
 
    Search strategy: Query-ladder with context-aware scoring
    1. Try specific queries first (concept + representation)
@@ -10,11 +10,14 @@
       - Domain/chapter fit (muscles, joints, etc.)
    4. Adaptive batch processing (2→3 queries based on results)
    5. Domain-specific early stopping with:
-      - Minimum candidates requirement
+      - Minimum candidates requirement (tuned per representation)
       - Educational score floor
-      - HARD_STOP for exceptional hits
+      - HARD_STOP with safety floors for repFit/eduScore
+      - Phase-based threshold relaxation
    6. Domain-aware synonym expansion
    7. Skip questions with embedded visual content
+   8. v4.3: Weighted feature scoring with negative penalties
+   9. v4.3: Required token check for specific focus
 
    Supported domains:
    - Biology: muscles, skeleton, joints, cells, health, animals, plants, penguins
@@ -23,19 +26,20 @@
    - Science: chemistry, physics
    =========================================== */
 
-const LS_KEY = "mediaCache:v4.2";
+const LS_KEY = "mediaCache:v4.3";
 
 // ============================================
 // THRESHOLD PROFILES - Domain/representation specific
+// v4.3: Tuned MIN_CANDIDATES and MARGIN per representation
 // ============================================
 const THRESHOLD_PROFILES = {
-  // Diagram-based (anatomy, biology)
+  // Diagram-based (anatomy, biology) - need more candidates to compare
   diagram: {
     GOOD_SCORE: 42,
-    MARGIN: 7,
+    MARGIN: 6,              // v4.3: lowered from 7 for diagrams
     MIN_REP_FIT: 8,
     MIN_EDU: 10,
-    MIN_CANDIDATES: 10,
+    MIN_CANDIDATES: 12,     // v4.3: raised from 10
     HARD_STOP: 55
   },
   // Maps often have similar scores, lower margin requirement
@@ -53,31 +57,31 @@ const THRESHOLD_PROFILES = {
     MARGIN: 6,
     MIN_REP_FIT: 5,
     MIN_EDU: 8,
-    MIN_CANDIDATES: 8,
+    MIN_CANDIDATES: 6,      // v4.3: lowered from 8 (rare images)
     HARD_STOP: 48
   },
   // Photos: easier to find, can be stricter
   photo: {
     GOOD_SCORE: 45,
-    MARGIN: 8,
+    MARGIN: 7,              // v4.3: lowered from 8
     MIN_REP_FIT: 5,
     MIN_EDU: 10,
     MIN_CANDIDATES: 12,
     HARD_STOP: 58
   },
-  // Cross-sections: similar to diagrams
+  // Cross-sections: similar to diagrams, need more candidates
   "cross-section": {
     GOOD_SCORE: 40,
-    MARGIN: 7,
+    MARGIN: 6,              // v4.3: lowered from 7
     MIN_REP_FIT: 8,
     MIN_EDU: 10,
-    MIN_CANDIDATES: 10,
+    MIN_CANDIDATES: 12,     // v4.3: raised from 10
     HARD_STOP: 52
   },
   // Default fallback
   default: {
     GOOD_SCORE: 40,
-    MARGIN: 8,
+    MARGIN: 7,              // v4.3: lowered from 8
     MIN_REP_FIT: 5,
     MIN_EDU: 8,
     MIN_CANDIDATES: 12,
@@ -1141,10 +1145,12 @@ export async function getMediaForQuery(query, opts = {}) {
   }
 
   /**
-   * v4.2: Check if we should early stop based on best candidate
+   * v4.3: Check if we should early stop based on best candidate
    * Uses domain-specific thresholds with min candidates, edu score, and hard stop
+   * Added: HARD_STOP safety floors to prevent premature stops on weak candidates
+   * Added: Phase-based threshold relaxation
    */
-  function shouldEarlyStop(candidates) {
+  function shouldEarlyStop(candidates, ladderPhase = 0) {
     const { GOOD_SCORE, MARGIN, MIN_REP_FIT, MIN_EDU, MIN_CANDIDATES, HARD_STOP } = thresholds;
 
     const unused = candidates
@@ -1162,15 +1168,23 @@ export async function getMediaForQuery(query, opts = {}) {
     if (best.repFit < MIN_REP_FIT) return false;
     if (best.eduScore < MIN_EDU) return false;
 
-    // HARD_STOP: exceptional hit, stop immediately
-    if (best.score >= HARD_STOP) {
+    // v4.3: Phase-based threshold relaxation
+    // Later in the ladder = harder to find good images, relax requirements
+    const phaseBonus = Math.min(ladderPhase * 2, 10); // Max 10 point relaxation
+    const adjustedGoodScore = GOOD_SCORE - phaseBonus;
+    const adjustedMargin = Math.max(MARGIN - Math.floor(ladderPhase / 2), 3); // Min margin 3
+
+    // v4.3: HARD_STOP with safety floors - prevent stopping on weak but high-scoring
+    if (best.score >= HARD_STOP &&
+        best.repFit >= MIN_REP_FIT + 2 &&  // Must exceed minimum by 2
+        best.eduScore >= MIN_EDU) {
       console.log(`[wikimedia] HARD STOP: score=${best.score} >= ${HARD_STOP}, repFit=${best.repFit}, edu=${best.eduScore}`);
       return true;
     }
 
-    // Regular early stop: good score AND clear margin
-    if (best.score >= GOOD_SCORE && margin >= MARGIN) {
-      console.log(`[wikimedia] Early stop: score=${best.score}, margin=${margin}, repFit=${best.repFit}, edu=${best.eduScore}`);
+    // Regular early stop: good score AND clear margin (phase-adjusted)
+    if (best.score >= adjustedGoodScore && margin >= adjustedMargin) {
+      console.log(`[wikimedia] Early stop (phase ${ladderPhase}): score=${best.score} >= ${adjustedGoodScore}, margin=${margin} >= ${adjustedMargin}, repFit=${best.repFit}, edu=${best.eduScore}`);
       return true;
     }
 
@@ -1182,6 +1196,7 @@ export async function getMediaForQuery(query, opts = {}) {
   const BATCH_SIZE_INITIAL = 2;
   const BATCH_SIZE_EXPANDED = 3;
   let batchSize = BATCH_SIZE_INITIAL;
+  let ladderPhase = 0; // v4.3: Track phase for threshold relaxation
 
   for (let i = 0; i < ladder.length; i += batchSize) {
     const batch = ladder.slice(i, i + batchSize);
@@ -1211,8 +1226,8 @@ export async function getMediaForQuery(query, opts = {}) {
       console.log(`[wikimedia] "${ladderQuery}" found ${candidates.length} candidates`);
     }
 
-    // Check for early stop after each batch
-    if (shouldEarlyStop(allCandidates)) {
+    // v4.3: Check for early stop with phase-based relaxation
+    if (shouldEarlyStop(allCandidates, ladderPhase)) {
       break;
     }
 
@@ -1222,6 +1237,8 @@ export async function getMediaForQuery(query, opts = {}) {
       batchSize = BATCH_SIZE_EXPANDED;
       console.log(`[wikimedia] Expanding batch size to ${batchSize} (best score: ${currentBest})`);
     }
+
+    ladderPhase++; // v4.3: Advance phase
   }
 
   // 2) DEPICTS BOOST: If we have QIDs and not enough good candidates
@@ -1297,16 +1314,64 @@ export async function getMediaForQuery(query, opts = {}) {
 }
 
 /**
+ * v4.3: Extract answer terms that should not appear in the image
+ * This prevents images from revealing the correct answer
+ */
+function extractAnswerTerms(question) {
+  const answerTerms = [];
+
+  // Get correct answer(s)
+  if (question.type === "mc" || question.type === "multiple_choice") {
+    const correctIdx = question.correct;
+    if (typeof correctIdx === "number" && question.options?.[correctIdx]) {
+      // Add the correct answer text
+      const answer = question.options[correctIdx];
+      // Extract significant terms (3+ chars)
+      const terms = (typeof answer === "string" ? answer : answer.text || "")
+        .toLowerCase()
+        .split(/[\s,;:]+/)
+        .filter(t => t.length >= 3);
+      answerTerms.push(...terms);
+    }
+  } else if (question.type === "short_answer" || question.type === "fill_blank") {
+    // Add expected answers
+    const answers = question.answers || question.acceptedAnswers || [];
+    for (const ans of answers) {
+      const terms = String(ans).toLowerCase().split(/[\s,;:]+/).filter(t => t.length >= 3);
+      answerTerms.push(...terms);
+    }
+  }
+
+  // Filter out common words that wouldn't give away answers
+  const commonWords = new Set([
+    "the", "een", "het", "de", "van", "voor", "met", "naar", "door", "uit",
+    "zijn", "worden", "hebben", "kunnen", "zal", "zou", "moet", "mag",
+    "and", "oder", "and", "but", "with", "from", "this", "that", "these"
+  ]);
+
+  return [...new Set(answerTerms.filter(t => !commonWords.has(t)))];
+}
+
+/**
  * Load image for a question
  * Supports both media.query (text) and media.qids (Wikidata depicts)
  * Passes _intent to scoring for context-aware selection
+ * v4.3: Adds answer terms to negative terms to prevent answer reveal
  */
 export async function loadQuestionImage(question, opts = {}) {
   const media = question.media;
   if (!media?.query && !media?.qids?.length) return null;
 
   try {
-    const negativeTerms = media.negativeTerms ?? opts.negativeTerms ?? [];
+    // v4.3: Extract answer terms to prevent answer reveal in images
+    const answerTerms = extractAnswerTerms(question);
+    const baseNegativeTerms = media.negativeTerms ?? opts.negativeTerms ?? [];
+    const negativeTerms = [...baseNegativeTerms, ...answerTerms];
+
+    if (answerTerms.length > 0) {
+      console.log(`[wikimedia] Anti-reveal: blocking terms ${answerTerms.join(", ")} for q${question.id}`);
+    }
+
     const qids = media.qids ?? [];
     const usedFileTitles = opts.usedFileTitles ?? null;
 

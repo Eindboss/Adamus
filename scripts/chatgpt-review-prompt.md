@@ -1,12 +1,19 @@
-# ChatGPT Review: Wikimedia Image Selection System (v4.2)
+# ChatGPT Review: Wikimedia Image Selection System (v4.3)
 
 ## Context
 
-Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke vraag moet een relevante afbeelding krijgen van Wikimedia Commons. Het systeem is geüpgraded naar v4.2 met domain-specifieke threshold profiles, adaptive batch sizing, en verbeterde early stopping.
+Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke vraag moet een relevante afbeelding krijgen van Wikimedia Commons. Het systeem is geüpgraded naar v4.3 met verbeterde early stopping, anti-answer-reveal filtering, en phase-based threshold relaxation.
 
-## Huidige Architectuur (v4.2)
+## Huidige Architectuur (v4.3)
 
-### Nieuwe Features in v4.2 (t.o.v. v4.1):
+### Nieuwe Features in v4.3 (t.o.v. v4.2):
+- **Anti-answer-reveal filtering**: Automatisch blokkeren van termen uit het correcte antwoord zodat afbeeldingen het antwoord niet onthullen
+- **HARD_STOP safety floors**: HARD_STOP vereist nu ook repFit >= MIN_REP_FIT + 2 om premature stops te voorkomen
+- **Phase-based threshold relaxation**: Later in de query ladder worden thresholds verlaagd (max 10 punten) omdat goede afbeeldingen zeldzamer zijn
+- **Getuned MIN_CANDIDATES**: diagram/cross-section → 12, microscopy → 6 (zeldzamer)
+- **Getuned MARGIN**: photo → 7, diagram → 6, default → 7
+
+### Features behouden van v4.2:
 - **Domain-specifieke threshold profiles**: Aparte drempels per afbeeldingstype (diagram, map, photo, microscopy)
 - **Adaptive batch sizing**: Start met 2 queries, breid uit naar 3 als geen goede resultaten
 - **MIN_CANDIDATES requirement**: Wacht op voldoende kandidaten voordat early stop beslist
@@ -43,16 +50,16 @@ Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke
 }
 ```
 
-### Domain-Specifieke Threshold Profiles:
+### Domain-Specifieke Threshold Profiles (v4.3 tuned):
 ```javascript
 const THRESHOLD_PROFILES = {
-  // Diagram-based (anatomy, biology) - stricter on rep fit
+  // Diagram-based (anatomy, biology) - need more candidates to compare
   diagram: {
     GOOD_SCORE: 42,
-    MARGIN: 7,
+    MARGIN: 6,              // v4.3: lowered from 7
     MIN_REP_FIT: 8,
     MIN_EDU: 10,
-    MIN_CANDIDATES: 10,
+    MIN_CANDIDATES: 12,     // v4.3: raised from 10
     HARD_STOP: 55
   },
   // Maps - lower margin (similar scores common)
@@ -64,37 +71,37 @@ const THRESHOLD_PROFILES = {
     MIN_CANDIDATES: 15,
     HARD_STOP: 52
   },
-  // Microscopy - good candidates are rare
+  // Microscopy - good candidates are rare, be less strict
   microscopy: {
     GOOD_SCORE: 35,
     MARGIN: 6,
     MIN_REP_FIT: 5,
     MIN_EDU: 8,
-    MIN_CANDIDATES: 8,
+    MIN_CANDIDATES: 6,      // v4.3: lowered from 8 (rare images)
     HARD_STOP: 48
   },
   // Photos - easier to find, can be stricter
   photo: {
     GOOD_SCORE: 45,
-    MARGIN: 8,
+    MARGIN: 7,              // v4.3: lowered from 8
     MIN_REP_FIT: 5,
     MIN_EDU: 10,
     MIN_CANDIDATES: 12,
     HARD_STOP: 58
   },
-  // Cross-sections - similar to diagrams
+  // Cross-sections - similar to diagrams, need more candidates
   "cross-section": {
     GOOD_SCORE: 40,
-    MARGIN: 7,
+    MARGIN: 6,              // v4.3: lowered from 7
     MIN_REP_FIT: 8,
     MIN_EDU: 10,
-    MIN_CANDIDATES: 10,
+    MIN_CANDIDATES: 12,     // v4.3: raised from 10
     HARD_STOP: 52
   },
   // Default fallback
   default: {
     GOOD_SCORE: 40,
-    MARGIN: 8,
+    MARGIN: 7,              // v4.3: lowered from 8
     MIN_REP_FIT: 5,
     MIN_EDU: 8,
     MIN_CANDIDATES: 12,
@@ -253,7 +260,8 @@ async function getMediaForQuery(query, opts) {
   }
 }
 
-function shouldEarlyStop(candidates) {
+// v4.3: Phase-based threshold relaxation
+function shouldEarlyStop(candidates, ladderPhase = 0) {
   const { GOOD_SCORE, MARGIN, MIN_REP_FIT, MIN_EDU, MIN_CANDIDATES, HARD_STOP } = thresholds;
 
   const unused = candidates
@@ -271,11 +279,73 @@ function shouldEarlyStop(candidates) {
   if (best.repFit < MIN_REP_FIT) return false;
   if (best.eduScore < MIN_EDU) return false;
 
-  // HARD_STOP: exceptional hit, stop immediately
-  if (best.score >= HARD_STOP) return true;
+  // v4.3: Phase-based threshold relaxation
+  // Later in the ladder = harder to find good images, relax requirements
+  const phaseBonus = Math.min(ladderPhase * 2, 10); // Max 10 point relaxation
+  const adjustedGoodScore = GOOD_SCORE - phaseBonus;
+  const adjustedMargin = Math.max(MARGIN - Math.floor(ladderPhase / 2), 3); // Min margin 3
 
-  // Regular early stop: good score AND clear margin
-  return best.score >= GOOD_SCORE && margin >= MARGIN;
+  // v4.3: HARD_STOP with safety floors - prevent stopping on weak but high-scoring
+  if (best.score >= HARD_STOP &&
+      best.repFit >= MIN_REP_FIT + 2 &&  // Must exceed minimum by 2
+      best.eduScore >= MIN_EDU) {
+    return true;
+  }
+
+  // Regular early stop: good score AND clear margin (phase-adjusted)
+  return best.score >= adjustedGoodScore && margin >= adjustedMargin;
+}
+```
+
+### Anti-Answer-Reveal Filtering (v4.3):
+```javascript
+/**
+ * v4.3: Extract answer terms that should not appear in the image
+ * This prevents images from revealing the correct answer
+ */
+function extractAnswerTerms(question) {
+  const answerTerms = [];
+
+  // Get correct answer(s)
+  if (question.type === "mc" || question.type === "multiple_choice") {
+    const correctIdx = question.correct;
+    if (typeof correctIdx === "number" && question.options?.[correctIdx]) {
+      const answer = question.options[correctIdx];
+      // Extract significant terms (3+ chars)
+      const terms = (typeof answer === "string" ? answer : answer.text || "")
+        .toLowerCase()
+        .split(/[\s,;:]+/)
+        .filter(t => t.length >= 3);
+      answerTerms.push(...terms);
+    }
+  } else if (question.type === "short_answer" || question.type === "fill_blank") {
+    const answers = question.answers || question.acceptedAnswers || [];
+    for (const ans of answers) {
+      const terms = String(ans).toLowerCase().split(/[\s,;:]+/).filter(t => t.length >= 3);
+      answerTerms.push(...terms);
+    }
+  }
+
+  // Filter out common words that wouldn't give away answers
+  const commonWords = new Set([
+    "the", "een", "het", "de", "van", "voor", "met", "naar", "door", "uit",
+    "zijn", "worden", "hebben", "kunnen", "zal", "zou", "moet", "mag"
+  ]);
+
+  return [...new Set(answerTerms.filter(t => !commonWords.has(t)))];
+}
+
+// In loadQuestionImage:
+async function loadQuestionImage(question, opts = {}) {
+  // v4.3: Extract answer terms to prevent answer reveal in images
+  const answerTerms = extractAnswerTerms(question);
+  const baseNegativeTerms = media.negativeTerms ?? [];
+  const negativeTerms = [...baseNegativeTerms, ...answerTerms];
+
+  if (answerTerms.length > 0) {
+    console.log(`[wikimedia] Anti-reveal: blocking terms ${answerTerms.join(", ")} for q${question.id}`);
+  }
+  // ...
 }
 ```
 
@@ -301,6 +371,13 @@ const skipTypes = ["matching", "ordering", "data_table", "table_parse"];
 
 ## Huidige Resultaten
 
+**Verbeterd in v4.3:**
+- Anti-answer-reveal filtering: afbeeldingen tonen niet meer het antwoord op de vraag
+- HARD_STOP safety floors: voorkomt premature stops op zwakke kandidaten met hoge scores
+- Phase-based relaxation: later in de ladder worden thresholds verlaagd voor moeilijke concepten
+- Getuned MIN_CANDIDATES: diagram/cross-section nu 12 (was 10), microscopy nu 6 (was 8)
+- Getuned MARGIN: photo nu 7, diagram nu 6, default nu 7
+
 **Verbeterd in v4.2:**
 - Domain-specifieke thresholds: betere afstemming per afbeeldingstype
 - MIN_CANDIDATES voorkomt te vroege beslissingen op kleine sample
@@ -317,21 +394,21 @@ const skipTypes = ["matching", "ordering", "data_table", "table_parse"];
 
 **Nog steeds problematisch:**
 - Sommige zeer specifieke concepten vinden moeilijk educatieve diagrammen
-- Threshold tuning per domain is grotendeels op intuïtie gebaseerd
+- Edge cases bij anti-answer-reveal (als antwoord hetzelfde concept is als de vraag)
 
 ## Open Vragen
 
-### 1. Threshold Profile Tuning
-De domain-specifieke thresholds zijn op intuïtie gekozen. Zijn deze waarden optimaal?
+### 1. Threshold Profile Tuning (v4.3 values)
+De domain-specifieke thresholds zijn getuned op basis van v4.2 ervaringen:
 
 | Type | GOOD_SCORE | MARGIN | MIN_REP_FIT | MIN_EDU | MIN_CANDIDATES | HARD_STOP |
 |------|------------|--------|-------------|---------|----------------|-----------|
-| diagram | 42 | 7 | 8 | 10 | 10 | 55 |
+| diagram | 42 | 6 | 8 | 10 | 12 | 55 |
 | map | 40 | 5 | 6 | 8 | 15 | 52 |
-| microscopy | 35 | 6 | 5 | 8 | 8 | 48 |
-| photo | 45 | 8 | 5 | 10 | 12 | 58 |
-| cross-section | 40 | 7 | 8 | 10 | 10 | 52 |
-| default | 40 | 8 | 5 | 8 | 12 | 55 |
+| microscopy | 35 | 6 | 5 | 8 | 6 | 48 |
+| photo | 45 | 7 | 5 | 10 | 12 | 58 |
+| cross-section | 40 | 6 | 8 | 10 | 12 | 52 |
+| default | 40 | 7 | 5 | 8 | 12 | 55 |
 
 ### 2. Adaptive Batch Sizing
 We starten met 2 queries en breiden uit naar 3 als beste score < 25.
@@ -430,19 +507,26 @@ seasons: {
 
 - Platform: Browser-based quiz app
 - API: Wikimedia Commons API + Wikidata SPARQL
-- Caching: LocalStorage met 30 dagen TTL (key: `mediaCache:v4.2`)
+- Caching: LocalStorage met 30 dagen TTL (key: `mediaCache:v4.3`)
 - Concurrency: 2-3 parallel batches (adaptive)
 - Fallback: Wikipedia artikel thumbnail
 
 **Performance vereiste:** Afbeeldingen moeten snel laden. De quiz wordt live gebruikt door scholieren - lange laadtijden verstoren de flow. Daarom:
 - Early stopping om onnodige API calls te vermijden
 - Adaptive batching: start klein (2), schaal op indien nodig (3)
+- Phase-based relaxation: verlaag thresholds na meerdere mislukte batches
 - Caching voor herhaalde vragen
 - Thumbnail URLs (800px) in plaats van full-size afbeeldingen
 
+**Antwoord-veiligheid:** Afbeeldingen mogen het antwoord niet onthullen:
+- Automatisch blokkeren van termen uit het correcte antwoord
+- negativeTerms uitgebreid met answer terms
+- Logging van geblokkeerde termen voor debugging
+
 ## Gewenste Output
 
-1. **Feedback op v4.2 verbeteringen** - Zijn domain-specifieke thresholds en adaptive batching goed geïmplementeerd?
-2. **Threshold profile tuning** - Zijn de waarden per type logisch? Welke zouden aangepast moeten worden?
-3. **repFit/eduScore verbetering** - Hoe kunnen we deze berekeningen verfijnen?
-4. **Edge case handling** - Tips voor problematische query types?
+1. **Feedback op v4.3 verbeteringen** - Is de anti-answer-reveal logica robuust? Zijn er edge cases?
+2. **Phase-based relaxation tuning** - Is phaseBonus = ladderPhase * 2 (max 10) optimaal? Is min margin 3 te laag?
+3. **HARD_STOP safety floors** - Is repFit >= MIN_REP_FIT + 2 een goede safety margin?
+4. **Anti-answer-reveal edge cases** - Wat als het antwoord hetzelfde concept is als waar de vraag over gaat? (bijv. "Wat is de biceps?" met antwoord "armbuigspier" - dan willen we geen afbeelding blokkeren omdat "armbuigspier" erin staat)
+5. **Threshold profile tuning** - Zijn de getuned waarden per type logisch? Welke zouden verder aangepast moeten worden?
