@@ -30,7 +30,10 @@
           "specificFocus": "volledig skelet (hele lichaam), duidelijk herkenbaar",
           "representation": "photo of labeled diagram",
           "uniquenessKey": "skeleton-full-body"
-        }
+        },
+        "qids": [
+          "Q12107251"
+        ]
       }
     },
     {
@@ -57,7 +60,11 @@
           "specificFocus": "ribbenkast + borstbeen (sternum)",
           "representation": "labeled diagram of clear photo of skeletal thorax",
           "uniquenessKey": "thorax-ribcage-sternum"
-        }
+        },
+        "qids": [
+          "Q193304",
+          "Q103148"
+        ]
       }
     },
     {
@@ -84,7 +91,10 @@
           "specificFocus": "compact bot / botstructuur (doorsnede of microscopie)",
           "representation": "diagram or microscope image (osteon/Havers-systeem)",
           "uniquenessKey": "bone-osteon"
-        }
+        },
+        "qids": [
+          "Q1115467"
+        ]
       }
     },
     {
@@ -111,7 +121,11 @@
           "specificFocus": "vergelijking buigzaamheid/brosheid (bijv. schema collageen vs kalk)",
           "representation": "simple educational diagram (not meme)",
           "uniquenessKey": "bone-collagen-vs-mineral"
-        }
+        },
+        "qids": [
+          "Q83375",
+          "Q271960"
+        ]
       }
     },
     {
@@ -138,7 +152,11 @@
           "specificFocus": "oorschelp of neus (kraakbeen duidelijk zichtbaar)",
           "representation": "photo (close-up) of labeled diagram",
           "uniquenessKey": "cartilage-ear-or-nose"
-        }
+        },
+        "qids": [
+          "Q181600",
+          "Q7362"
+        ]
       }
     },
     {
@@ -165,7 +183,10 @@
           "specificFocus": "babyschedel met fontanellen gemarkeerd",
           "representation": "labeled diagram preferred",
           "uniquenessKey": "infant-fontanelle"
-        }
+        },
+        "qids": [
+          "Q590684"
+        ]
       }
     },
     {
@@ -191,7 +212,10 @@
           "specificFocus": "schedelnaden (sutures) duidelijk zichtbaar",
           "representation": "photo of skull with sutures / labeled diagram",
           "uniquenessKey": "skull-sutures"
-        }
+        },
+        "qids": [
+          "Q1313458"
+        ]
       }
     },
     {
@@ -217,7 +241,10 @@
           "specificFocus": "rib-kraakbeen bij borstbeen (costal cartilage) óf tussenwervelschijf als kraakbeenverbinding",
           "representation": "diagram preferred",
           "uniquenessKey": "cartilage-connection"
-        }
+        },
+        "qids": [
+          "Q212808"
+        ]
       }
     },
     {
@@ -244,7 +271,10 @@
           "specificFocus": "osteon (Havers-systeem) met concentrische lamellen",
           "representation": "microscope image or labeled diagram",
           "uniquenessKey": "haversian-system"
-        }
+        },
+        "qids": [
+          "Q1115467"
+        ]
       }
     },
     {
@@ -270,7 +300,10 @@
           "specificFocus": "schema van collageenvezels in botmatrix (conceptueel)",
           "representation": "educational diagram",
           "uniquenessKey": "bone-collagen-fibers"
-        }
+        },
+        "qids": [
+          "Q83375"
+        ]
       }
     },
     {
@@ -302,7 +335,10 @@
           "specificFocus": "gewrichtskraakbeen op botuiteinden (articular cartilage)",
           "representation": "diagram or anatomical model photo",
           "uniquenessKey": "articular-cartilage"
-        }
+        },
+        "qids": [
+          "Q2432244"
+        ]
       }
     },
     {
@@ -328,7 +364,10 @@
           "specificFocus": "kapsel rondom gewricht + synovium",
           "representation": "labeled diagram",
           "uniquenessKey": "joint-capsule"
-        }
+        },
+        "qids": [
+          "Q847019"
+        ]
       }
     },
     {
@@ -354,7 +393,10 @@
           "specificFocus": "schoudergewricht (glenohumeral) of heupgewricht",
           "representation": "photo of anatomical model or labeled diagram",
           "uniquenessKey": "ball-socket-joint"
-        }
+        },
+        "qids": [
+          "Q1199023"
+        ]
       }
     },
     {
@@ -380,7 +422,11 @@
           "specificFocus": "spaakbeen/ellepijp (radius/ulna) rotatie (pronatie/supinatie)",
           "representation": "diagram preferred",
           "uniquenessKey": "pivot-joint-radius-ulna"
-        }
+        },
+        "qids": [
+          "Q1464028",
+          "Q181946"
+        ]
       }
     },
     {
@@ -406,7 +452,11 @@
           "specificFocus": "knie (scharnier) én schouder (kogel) in één overzicht (split diagram)",
           "representation": "comparison diagram (two panels) preferred",
           "uniquenessKey": "joint-types-comparison"
-        }
+        },
+        "qids": [
+          "Q1199023",
+          "Q1367188"
+        ]
       }
     },
     {
@@ -433,7 +483,10 @@
           "specificFocus": "synoviaal gewricht met synovial fluid (glijlaag) concept",
           "representation": "diagram with friction concept",
           "uniquenessKey": "joint-lubrication"
-        }
+        },
+        "qids": [
+          "Q192825"
+        ]
       }
     },
     {
@@ -459,7 +512,11 @@
           "specificFocus": "gewricht met ligamenten zichtbaar (bijv. kniebanden)",
           "representation": "labeled diagram or anatomical model",
           "uniquenessKey": "ligaments-knee"
-        }
+        },
+        "qids": [
+          "Q843885",
+          "Q187947"
+        ]
       }
     },
     {
@@ -486,7 +543,10 @@
           "specificFocus": "wervelkolom met discus als schokdemper",
           "representation": "diagram preferred",
           "uniquenessKey": "intervertebral-disc"
-        }
+        },
+        "qids": [
+          "Q212808"
+        ]
       }
     },
     {
@@ -513,7 +573,10 @@
           "specificFocus": "S-curve in zijaanzicht + vering/absorptie concept",
           "representation": "educational diagram",
           "uniquenessKey": "spine-s-curve"
-        }
+        },
+        "qids": [
+          "Q182524"
+        ]
       }
     },
     {
@@ -540,7 +603,10 @@
           "specificFocus": "pees aan bot (bijv. achillespees of bicepspees)",
           "representation": "photo or labeled diagram",
           "uniquenessKey": "tendon-attachment"
-        }
+        },
+        "qids": [
+          "Q82356"
+        ]
       }
     },
     {
@@ -566,7 +632,11 @@
           "specificFocus": "schema hefboom: spier trekt via pees aan bot (armvoorbeeld)",
           "representation": "simple diagram with arrows",
           "uniquenessKey": "muscle-pulls-bone"
-        }
+        },
+        "qids": [
+          "Q7365",
+          "Q82356"
+        ]
       }
     },
     {
@@ -592,7 +662,10 @@
           "specificFocus": "voor/na van spiervezel of spierbundel",
           "representation": "comparison diagram (relaxed vs contracted)",
           "uniquenessKey": "muscle-contraction-macro"
-        }
+        },
+        "qids": [
+          "Q1411410"
+        ]
       }
     },
     {
@@ -618,7 +691,11 @@
           "specificFocus": "biceps vs triceps met tegengestelde werking",
           "representation": "labeled diagram",
           "uniquenessKey": "antagonistic-biceps-triceps"
-        }
+        },
+        "qids": [
+          "Q182494",
+          "Q182614"
+        ]
       }
     },
     {
@@ -644,7 +721,10 @@
           "specificFocus": "elleboog buigen (flexie) door biceps",
           "representation": "diagram or annotated photo",
           "uniquenessKey": "biceps-flexion"
-        }
+        },
+        "qids": [
+          "Q182494"
+        ]
       }
     },
     {
@@ -670,7 +750,10 @@
           "specificFocus": "darmperistaltiek / gladde spier in darmwand",
           "representation": "diagram preferred",
           "uniquenessKey": "peristalsis"
-        }
+        },
+        "qids": [
+          "Q1056396"
+        ]
       }
     },
     {
@@ -696,7 +779,10 @@
           "specificFocus": "arrector pili muscle + haarfollikel (goosebumps)",
           "representation": "labeled diagram",
           "uniquenessKey": "arrector-pili"
-        }
+        },
+        "qids": [
+          "Q605686"
+        ]
       }
     },
     {
@@ -723,7 +809,10 @@
           "specificFocus": "fietsen als automatisch voorbeeld",
           "representation": "photo (clear, simple) preferred",
           "uniquenessKey": "bicycle-automatic-movement"
-        }
+        },
+        "qids": [
+          "Q11442"
+        ]
       }
     },
     {
@@ -750,7 +839,10 @@
           "specificFocus": "beweging met meerdere spiergroepen (bijv. jongleur, turnen, sprintstart-achtige houding)",
           "representation": "photo preferred",
           "uniquenessKey": "coordination-example"
-        }
+        },
+        "qids": [
+          "Q30953"
+        ]
       }
     },
     {
@@ -776,7 +868,10 @@
           "specificFocus": "algemene sport/actieve beweging (wandelen/joggen) neutraal",
           "representation": "photo",
           "uniquenessKey": "exercise-health-general"
-        }
+        },
+        "qids": [
+          "Q476028"
+        ]
       }
     },
     {
@@ -802,7 +897,10 @@
           "specificFocus": "warming-up oefening (licht rennen, dynamische warming-up)",
           "representation": "photo",
           "uniquenessKey": "warm-up"
-        }
+        },
+        "qids": [
+          "Q912831"
+        ]
       }
     },
     {
@@ -828,7 +926,10 @@
           "specificFocus": "tijd/klok + sportcontext (max 15 min) zonder tekstdominantie",
           "representation": "photo or simple diagram",
           "uniquenessKey": "stopwatch-training"
-        }
+        },
+        "qids": [
+          "Q178794"
+        ]
       }
     },
     {
@@ -855,7 +956,10 @@
           "specificFocus": "rustig, langzaam rekken (geen veren) – statisch rekbeeld",
           "representation": "photo",
           "uniquenessKey": "stretching-safe"
-        }
+        },
+        "qids": [
+          "Q622508"
+        ]
       }
     },
     {
@@ -881,7 +985,10 @@
           "specificFocus": "uitlopen/uitfietsen na sport (lage intensiteit)",
           "representation": "photo",
           "uniquenessKey": "cooling-down"
-        }
+        },
+        "qids": [
+          "Q1783697"
+        ]
       }
     },
     {
@@ -908,7 +1015,10 @@
           "specificFocus": "spier met 'burning' concept zonder medische pathologie (bijv. sporter met bovenbeen vasthouden)",
           "representation": "photo",
           "uniquenessKey": "muscle-soreness"
-        }
+        },
+        "qids": [
+          "Q1198311"
+        ]
       }
     },
     {
@@ -935,7 +1045,10 @@
           "specificFocus": "enkelverstuiking-achtige situatie (neutraal) of kniebrace (algemeen)",
           "representation": "photo",
           "uniquenessKey": "sports-injury-general"
-        }
+        },
+        "qids": [
+          "Q193078"
+        ]
       }
     },
     {
@@ -962,7 +1075,10 @@
           "specificFocus": "hand/arm bij toetsenbord of smartphone, overbelasting context",
           "representation": "photo",
           "uniquenessKey": "rsi-typing"
-        }
+        },
+        "qids": [
+          "Q831706"
+        ]
       }
     },
     {
@@ -988,7 +1104,10 @@
           "specificFocus": "persoon die pols/onderarm masseert of hand schudt (subtiel)",
           "representation": "photo",
           "uniquenessKey": "rsi-symptom-wrist"
-        }
+        },
+        "qids": [
+          "Q831706"
+        ]
       }
     },
     {
@@ -1014,7 +1133,10 @@
           "specificFocus": "werkplek met pauze-moment (bijv. opstaan van bureau, stretchen bij bureau)",
           "representation": "photo",
           "uniquenessKey": "rsi-prevention-break"
-        }
+        },
+        "qids": [
+          "Q831706"
+        ]
       }
     },
     {
@@ -1040,7 +1162,10 @@
           "specificFocus": "ergonomische werkplek met monitor op ooghoogte",
           "representation": "photo or simple diagram",
           "uniquenessKey": "ergonomics-head-upright"
-        }
+        },
+        "qids": [
+          "Q134574"
+        ]
       }
     },
     {
@@ -1066,7 +1191,10 @@
           "specificFocus": "ergonomie diagram met 90° hoeken",
           "representation": "diagram preferred",
           "uniquenessKey": "ergonomics-90-degrees"
-        }
+        },
+        "qids": [
+          "Q134574"
+        ]
       }
     },
     {
@@ -1092,7 +1220,10 @@
           "specificFocus": "telefoon wegleggen / wandelen / afwisseling",
           "representation": "photo",
           "uniquenessKey": "phone-break"
-        }
+        },
+        "qids": [
+          "Q22645"
+        ]
       }
     },
     {
@@ -1118,7 +1249,10 @@
           "specificFocus": "pinguïn onder water zwemmend",
           "representation": "photo",
           "uniquenessKey": "penguin-underwater"
-        }
+        },
+        "qids": [
+          "Q14943"
+        ]
       }
     },
     {
@@ -1144,7 +1278,10 @@
           "specificFocus": "pinguïn lopend op land met gespreide vleugels (balans)",
           "representation": "photo",
           "uniquenessKey": "penguin-waddle"
-        }
+        },
+        "qids": [
+          "Q14943"
+        ]
       }
     },
     {
@@ -1170,7 +1307,10 @@
           "specificFocus": "pinguïn-skelet of vleugelbotten (flipper) met vergroeiing zichtbaar",
           "representation": "labeled diagram or museum specimen photo (maar informatief)",
           "uniquenessKey": "penguin-flipper-skeleton"
-        }
+        },
+        "qids": [
+          "Q14943"
+        ]
       }
     },
     {
@@ -1197,7 +1337,11 @@
           "specificFocus": "borstbeen met kiel bij vogel/pinguïn of diagram borstspieren-aanhechting",
           "representation": "labeled diagram preferred",
           "uniquenessKey": "keel-sternum"
-        }
+        },
+        "qids": [
+          "Q1318814",
+          "Q103148"
+        ]
       }
     },
     {
@@ -1259,7 +1403,11 @@
           "specificFocus": "visueel stappenplan zonder veel tekst (warming-up → rek → sport → cooling-down)",
           "representation": "simple diagram or sequence photo",
           "uniquenessKey": "training-sequence"
-        }
+        },
+        "qids": [
+          "Q912831",
+          "Q1783697"
+        ]
       }
     },
     {
@@ -1296,7 +1444,11 @@
           "specificFocus": "herhaalde beweging + statische houding (bureauwerk)",
           "representation": "photo",
           "uniquenessKey": "rsi-workstation"
-        }
+        },
+        "qids": [
+          "Q831706",
+          "Q68"
+        ]
       }
     },
     {
@@ -1367,7 +1519,10 @@
           "specificFocus": "sprintstart of krachttraining (squat) in sportsetting",
           "representation": "photo",
           "uniquenessKey": "sprinter-training-casus"
-        }
+        },
+        "qids": [
+          "Q210393"
+        ]
       }
     }
   ]
