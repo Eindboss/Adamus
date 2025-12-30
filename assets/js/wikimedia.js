@@ -1,5 +1,5 @@
 /* ===========================================
-   Adamus - Wikimedia Image Fetcher (v4.1)
+   Adamus - Wikimedia Image Fetcher (v4.2)
 
    Search strategy: Query-ladder with context-aware scoring
    1. Try specific queries first (concept + representation)
@@ -8,8 +8,11 @@
       - Representation fit (diagram vs photo)
       - Educational quality (labels, categories)
       - Domain/chapter fit (muscles, joints, etc.)
-   4. Parallel batch processing (3 queries at a time)
-   5. Margin-based early stopping (score >= 40, margin >= 8)
+   4. Adaptive batch processing (2→3 queries based on results)
+   5. Domain-specific early stopping with:
+      - Minimum candidates requirement
+      - Educational score floor
+      - HARD_STOP for exceptional hits
    6. Domain-aware synonym expansion
    7. Skip questions with embedded visual content
 
@@ -20,7 +23,74 @@
    - Science: chemistry, physics
    =========================================== */
 
-const LS_KEY = "mediaCache:v4.1";
+const LS_KEY = "mediaCache:v4.2";
+
+// ============================================
+// THRESHOLD PROFILES - Domain/representation specific
+// ============================================
+const THRESHOLD_PROFILES = {
+  // Diagram-based (anatomy, biology)
+  diagram: {
+    GOOD_SCORE: 42,
+    MARGIN: 7,
+    MIN_REP_FIT: 8,
+    MIN_EDU: 10,
+    MIN_CANDIDATES: 10,
+    HARD_STOP: 55
+  },
+  // Maps often have similar scores, lower margin requirement
+  map: {
+    GOOD_SCORE: 40,
+    MARGIN: 5,
+    MIN_REP_FIT: 6,
+    MIN_EDU: 8,
+    MIN_CANDIDATES: 15,
+    HARD_STOP: 52
+  },
+  // Microscopy: good candidates are rare, be less strict
+  microscopy: {
+    GOOD_SCORE: 35,
+    MARGIN: 6,
+    MIN_REP_FIT: 5,
+    MIN_EDU: 8,
+    MIN_CANDIDATES: 8,
+    HARD_STOP: 48
+  },
+  // Photos: easier to find, can be stricter
+  photo: {
+    GOOD_SCORE: 45,
+    MARGIN: 8,
+    MIN_REP_FIT: 5,
+    MIN_EDU: 10,
+    MIN_CANDIDATES: 12,
+    HARD_STOP: 58
+  },
+  // Cross-sections: similar to diagrams
+  "cross-section": {
+    GOOD_SCORE: 40,
+    MARGIN: 7,
+    MIN_REP_FIT: 8,
+    MIN_EDU: 10,
+    MIN_CANDIDATES: 10,
+    HARD_STOP: 52
+  },
+  // Default fallback
+  default: {
+    GOOD_SCORE: 40,
+    MARGIN: 8,
+    MIN_REP_FIT: 5,
+    MIN_EDU: 8,
+    MIN_CANDIDATES: 12,
+    HARD_STOP: 55
+  }
+};
+
+/**
+ * Get threshold profile for representation type
+ */
+function getThresholds(representation) {
+  return THRESHOLD_PROFILES[representation] || THRESHOLD_PROFILES.default;
+}
 
 // ============================================
 // DOMAIN PROFILES - Subject-agnostic priors
@@ -1023,16 +1093,15 @@ export async function getMediaForQuery(query, opts = {}) {
 
   let allCandidates = [];
 
-  // Thresholds for early stopping (v4.1: margin-based)
-  const GOOD_SCORE_THRESHOLD = 40;
-  const MARGIN_THRESHOLD = 8; // Must beat #2 by this much
-  const MIN_REP_FIT = 5; // Minimum representation layer score
+  // v4.2: Get domain-specific thresholds
+  const thresholds = getThresholds(representation);
+  console.log(`[wikimedia] Thresholds for ${representation}:`, thresholds);
 
   // Scoring options for all candidates
   const scoreOpts = { negativeTerms, domain, representation };
 
   /**
-   * Score a batch of candidates and compute representation fit
+   * Score a batch of candidates and compute representation fit + educational score
    */
   function scoreBatch(candidates, ladderQuery, weight) {
     for (const c of candidates) {
@@ -1040,45 +1109,82 @@ export async function getMediaForQuery(query, opts = {}) {
       c.ladderQuery = ladderQuery;
       c.ladderWeight = weight;
 
-      // Calculate representation fit separately for gating
       const t = (c.title || "").toLowerCase();
+      const cats = (c.categories || []).join(" ").toLowerCase();
+      const combined = t + " " + cats;
+
+      // Calculate representation fit (how well it matches the desired type)
       const repConfig = {
-        diagram: ["diagram", "labelled", "labeled", "schema", "illustration"],
-        photo: ["photo", "photograph"],
-        microscopy: ["micrograph", "histology", "microscope"],
-        "cross-section": ["cross-section", "section", "cutaway"]
-      }[representation] || ["diagram"];
-      c.repFit = repConfig.some(term => t.includes(term)) ? 15 : 0;
+        diagram: ["diagram", "labelled", "labeled", "schema", "illustration", "schematic", "svg"],
+        photo: ["photo", "photograph", "image"],
+        microscopy: ["micrograph", "histology", "microscope", "microscopy", "stained"],
+        "cross-section": ["cross-section", "section", "cutaway", "cross section"],
+        map: ["map", "atlas", "cartograph", "topograph", "thematic"]
+      }[representation] || ["diagram", "labelled"];
+
+      // Score based on how many rep terms match
+      const repMatches = repConfig.filter(term => combined.includes(term)).length;
+      c.repFit = Math.min(repMatches * 5, 15); // Max 15 points
+
+      // Calculate educational score (labels, educational markers)
+      const eduTerms = ["labelled", "labeled", "annotated", "educational", "anatomy", "diagram", "legend", "key"];
+      const eduMatches = eduTerms.filter(term => combined.includes(term)).length;
+      c.eduScore = Math.min(eduMatches * 4, 16); // Max 16 points
+
+      // Bonus for SVG (usually cleaner diagrams)
+      if (c.mime === "image/svg+xml" || t.endsWith(".svg")) {
+        c.repFit += 3;
+        c.eduScore += 2;
+      }
     }
     return candidates;
   }
 
   /**
-   * Check if we should early stop based on best candidate
+   * v4.2: Check if we should early stop based on best candidate
+   * Uses domain-specific thresholds with min candidates, edu score, and hard stop
    */
   function shouldEarlyStop(candidates) {
+    const { GOOD_SCORE, MARGIN, MIN_REP_FIT, MIN_EDU, MIN_CANDIDATES, HARD_STOP } = thresholds;
+
     const unused = candidates
       .filter(c => !usedFileTitles || !usedFileTitles.has(c.title))
       .sort((a, b) => b.score - a.score);
 
-    if (unused.length === 0) return false;
+    // Need minimum candidates before making decisions
+    if (unused.length < MIN_CANDIDATES) return false;
 
     const best = unused[0];
     const second = unused[1];
     const margin = second ? best.score - second.score : 100;
 
-    // Early stop if: good score AND clear margin AND representation fits
-    if (best.score >= GOOD_SCORE_THRESHOLD && margin >= MARGIN_THRESHOLD && best.repFit >= MIN_REP_FIT) {
-      console.log(`[wikimedia] Early stop: score=${best.score}, margin=${margin}, repFit=${best.repFit}`);
+    // Check quality floors
+    if (best.repFit < MIN_REP_FIT) return false;
+    if (best.eduScore < MIN_EDU) return false;
+
+    // HARD_STOP: exceptional hit, stop immediately
+    if (best.score >= HARD_STOP) {
+      console.log(`[wikimedia] HARD STOP: score=${best.score} >= ${HARD_STOP}, repFit=${best.repFit}, edu=${best.eduScore}`);
       return true;
     }
+
+    // Regular early stop: good score AND clear margin
+    if (best.score >= GOOD_SCORE && margin >= MARGIN) {
+      console.log(`[wikimedia] Early stop: score=${best.score}, margin=${margin}, repFit=${best.repFit}, edu=${best.eduScore}`);
+      return true;
+    }
+
     return false;
   }
 
-  // 1) TRY QUERY LADDER IN PARALLEL BATCHES
-  const BATCH_SIZE = 3;
-  for (let i = 0; i < ladder.length; i += BATCH_SIZE) {
-    const batch = ladder.slice(i, i + BATCH_SIZE);
+  // v4.2: ADAPTIVE BATCH SIZING
+  // Start with smaller batches (2), expand to 3 if no good candidates found
+  const BATCH_SIZE_INITIAL = 2;
+  const BATCH_SIZE_EXPANDED = 3;
+  let batchSize = BATCH_SIZE_INITIAL;
+
+  for (let i = 0; i < ladder.length; i += batchSize) {
+    const batch = ladder.slice(i, i + batchSize);
 
     // Run batch in parallel
     const batchResults = await Promise.all(
@@ -1109,12 +1215,19 @@ export async function getMediaForQuery(query, opts = {}) {
     if (shouldEarlyStop(allCandidates)) {
       break;
     }
+
+    // v4.2: Adaptive batch sizing - expand if no good candidates yet
+    const currentBest = allCandidates.length > 0 ? Math.max(...allCandidates.map(c => c.score)) : 0;
+    if (currentBest < 25 && batchSize === BATCH_SIZE_INITIAL) {
+      batchSize = BATCH_SIZE_EXPANDED;
+      console.log(`[wikimedia] Expanding batch size to ${batchSize} (best score: ${currentBest})`);
+    }
   }
 
   // 2) DEPICTS BOOST: If we have QIDs and not enough good candidates
   const topScore = allCandidates.length > 0 ? Math.max(...allCandidates.map(c => c.score)) : 0;
 
-  if (qids.length > 0 && (allCandidates.length < 5 || topScore < GOOD_SCORE_THRESHOLD)) {
+  if (qids.length > 0 && (allCandidates.length < 5 || topScore < thresholds.GOOD_SCORE)) {
     try {
       const { candidates } = await commonsStructuredDataSearch(qids, {
         limit: 10,
