@@ -168,18 +168,19 @@
       "schema": "toets",
       "hideFlashcards": true,
       "week": "2e toetsweek",
-      "questionsPerSession": 15
+      "questionsPerSession": 15,
+      "examDurationMinutes": 60
     },
     {
       "id": "biologie-h4-stevigheid-beweging",
       "subject": "Biologie",
-      "label": "Biologie – H4: Stevigheid en beweging (Proeftoets)",
+      "label": "Biologie – H4: Stevigheid en beweging",
       "title": "Biologie – Hoofdstuk 4: Stevigheid en beweging",
       "file": "data/biologie/h4-stevigheid-beweging-proeftoets.json",
       "schema": "toets",
       "hideFlashcards": true,
       "week": "2e toetsweek",
-      "examOnly": true,
+      "questionsPerSession": 15,
       "examDurationMinutes": 60,
       "preserveOrder": true
     }
