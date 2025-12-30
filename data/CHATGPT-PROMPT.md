@@ -11,7 +11,7 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 ### OVER DE LEERLING
 - Naam: Adam
 - Niveau: 1e klas gymnasium
-- Vakken: Latijn, Aardrijkskunde, Wiskunde, Geschiedenis
+- Vakken: Latijn, Aardrijkskunde, Wiskunde, Geschiedenis, Biologie, Engels
 - Website: https://eindboss.github.io/Adamus/
 
 ### TOETS SPECIFICATIES
@@ -236,6 +236,271 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 }
 ```
 
+#### 12. `vocab_list` - Woordenlijst oefenen (Engels)
+Voor het oefenen van woordjes met rijtjes. Ondersteunt beide richtingen.
+
+**Nederlands → Engels:**
+```json
+{
+  "id": "q012",
+  "type": "vocab_list",
+  "direction": "nl-en",
+  "instruction": "Vertaal de Nederlandse woorden naar het Engels:",
+  "items": [
+    {"nl": "huis", "en": ["house", "home"]},
+    {"nl": "kat", "en": ["cat"]},
+    {"nl": "lopen", "en": ["to walk", "walk"]},
+    {"nl": "mooi", "en": ["beautiful", "pretty", "nice"]}
+  ],
+  "explanation": "Let op: sommige woorden hebben meerdere correcte vertalingen."
+}
+```
+
+**Engels → Nederlands:**
+```json
+{
+  "id": "q013",
+  "type": "vocab_list",
+  "direction": "en-nl",
+  "instruction": "Vertaal de Engelse woorden naar het Nederlands:",
+  "items": [
+    {"en": "dog", "nl": ["hond"]},
+    {"en": "to run", "nl": ["rennen", "hardlopen"]},
+    {"en": "happy", "nl": ["blij", "gelukkig", "vrolijk"]},
+    {"en": "school", "nl": ["school"]}
+  ],
+  "explanation": "Werkwoorden kunnen met of zonder 'to' worden gegeven."
+}
+```
+
+**Gemixte richting (voor toetsen):**
+```json
+{
+  "id": "q014",
+  "type": "vocab_list",
+  "direction": "mixed",
+  "instruction": "Vertaal de woorden:",
+  "items": [
+    {"prompt": "house", "direction": "en-nl", "accept": ["huis"]},
+    {"prompt": "fiets", "direction": "nl-en", "accept": ["bicycle", "bike"]},
+    {"prompt": "to eat", "direction": "en-nl", "accept": ["eten"]},
+    {"prompt": "moeder", "direction": "nl-en", "accept": ["mother", "mom", "mum"]}
+  ],
+  "explanation": "Bij gemixte oefeningen staat de richting per woord."
+}
+```
+
+#### 13. `grammar_transform` - Grammatica omzetting (Engels)
+Voor het oefenen van werkwoordvervoegingen, tijden, meervouden, etc.
+
+**Werkwoordstijden:**
+```json
+{
+  "id": "q015",
+  "type": "grammar_transform",
+  "category": "verb_tense",
+  "instruction": "Zet de werkwoorden in de gevraagde tijd:",
+  "items": [
+    {"base": "to walk", "tense": "past simple", "accept": ["walked"]},
+    {"base": "to go", "tense": "past simple", "accept": ["went"]},
+    {"base": "to eat", "tense": "present perfect", "accept": ["have eaten", "has eaten"]},
+    {"base": "to write", "tense": "past participle", "accept": ["written"]}
+  ],
+  "explanation": "Let op onregelmatige werkwoorden!"
+}
+```
+
+**Meervouden:**
+```json
+{
+  "id": "q016",
+  "type": "grammar_transform",
+  "category": "plural",
+  "instruction": "Geef het meervoud van deze woorden:",
+  "items": [
+    {"singular": "child", "accept": ["children"]},
+    {"singular": "mouse", "accept": ["mice"]},
+    {"singular": "box", "accept": ["boxes"]},
+    {"singular": "leaf", "accept": ["leaves"]}
+  ],
+  "explanation": "Onregelmatige meervouden moet je uit je hoofd leren."
+}
+```
+
+**Vergrotende/overtreffende trap:**
+```json
+{
+  "id": "q017",
+  "type": "grammar_transform",
+  "category": "comparison",
+  "instruction": "Geef de vergrotende en overtreffende trap:",
+  "items": [
+    {"base": "big", "comparative": ["bigger"], "superlative": ["biggest"]},
+    {"base": "good", "comparative": ["better"], "superlative": ["best"]},
+    {"base": "beautiful", "comparative": ["more beautiful"], "superlative": ["most beautiful"]}
+  ],
+  "explanation": "Korte woorden krijgen -er/-est, lange woorden more/most."
+}
+```
+
+#### 14. `sentence_correction` - Foutencorrectie (Engels)
+Voor het herkennen en verbeteren van grammaticafouten.
+
+```json
+{
+  "id": "q018",
+  "type": "sentence_correction",
+  "instruction": "Verbeter de fout in elke zin:",
+  "items": [
+    {
+      "sentence": "She don't like pizza.",
+      "error_type": "verb agreement",
+      "accept": ["She doesn't like pizza.", "She does not like pizza."]
+    },
+    {
+      "sentence": "I have went to school.",
+      "error_type": "verb tense",
+      "accept": ["I have gone to school.", "I went to school."]
+    },
+    {
+      "sentence": "He is more taller than me.",
+      "error_type": "comparison",
+      "accept": ["He is taller than me.", "He is taller than I."]
+    }
+  ],
+  "explanation": "Let op werkwoordsvervoeging, tijden en vergelijkingen."
+}
+```
+
+#### 15. `grammar_fill` - Grammatica invullen (Engels)
+Voor het oefenen van specifieke grammatica-constructies in context.
+
+```json
+{
+  "id": "q019",
+  "type": "grammar_fill",
+  "instruction": "Vul de juiste vorm in:",
+  "context": "Present Simple vs Present Continuous",
+  "items": [
+    {
+      "sentence": "She {{blank}} (to read) a book right now.",
+      "accept": ["is reading"]
+    },
+    {
+      "sentence": "He always {{blank}} (to wake up) at 7 o'clock.",
+      "accept": ["wakes up"]
+    },
+    {
+      "sentence": "Look! The children {{blank}} (to play) in the garden.",
+      "accept": ["are playing"]
+    }
+  ],
+  "explanation": "Present continuous voor nu, present simple voor gewoontes."
+}
+```
+
+**Met dropdown opties:**
+```json
+{
+  "id": "q020",
+  "type": "grammar_fill",
+  "instruction": "Kies de juiste optie:",
+  "context": "Some/Any/No",
+  "use_dropdown": true,
+  "items": [
+    {
+      "sentence": "There are {{blank}} apples in the basket.",
+      "options": ["some", "any", "no"],
+      "correct": "some"
+    },
+    {
+      "sentence": "Is there {{blank}} milk in the fridge?",
+      "options": ["some", "any", "no"],
+      "correct": "any"
+    },
+    {
+      "sentence": "There is {{blank}} sugar left. We need to buy more.",
+      "options": ["some", "any", "no"],
+      "correct": "no"
+    }
+  ],
+  "explanation": "Some in bevestigend, any in vragend/ontkennend, no voor 'geen'."
+}
+```
+
+#### 16. Grammatica met MC (Engels)
+Voor lastige grammatica-keuzes gebruik gewone MC vragen met dicht bij elkaar liggende opties.
+
+**Werkwoordstijden kiezen:**
+```json
+{
+  "id": "q021",
+  "type": "mc",
+  "q": "Kies de juiste vorm: 'I ___ to the cinema yesterday.'",
+  "a": ["go", "went", "have gone", "was going"],
+  "c": 1,
+  "e": "'Yesterday' duidt op een afgeronde actie in het verleden → Past Simple (went)."
+}
+```
+
+**Moeilijke grammatica MC:**
+```json
+{
+  "id": "q022",
+  "type": "mc",
+  "q": "Welke zin is grammaticaal correct?",
+  "a": [
+    "She has been living here since five years.",
+    "She has been living here for five years.",
+    "She is living here since five years.",
+    "She lives here for five years."
+  ],
+  "c": 1,
+  "e": "Present perfect continuous + 'for' (duur) of 'since' (beginpunt). 'Five years' is een duur, dus 'for'."
+}
+```
+
+**Dropdown in zin (fill_blank_dropdown):**
+```json
+{
+  "id": "q023",
+  "type": "fill_blank_dropdown",
+  "instruction": "Kies de juiste werkwoordsvorm.",
+  "text": "By the time we {{blank1}}, the movie {{blank2}}.",
+  "blanks": [
+    {"id": "blank1", "correct": "arrived", "options": ["arrive", "arrived", "have arrived", "will arrive"]},
+    {"id": "blank2", "correct": "had already started", "options": ["already started", "has already started", "had already started", "already starts"]}
+  ],
+  "explanation": "Past Perfect voor de eerdere actie (had started), Past Simple voor de latere (arrived)."
+}
+```
+
+**Multipart voor complexe grammatica:**
+```json
+{
+  "id": "q024",
+  "type": "multipart",
+  "instruction": "Analyseer de zin: 'If I had studied harder, I would have passed the test.'",
+  "parts": [
+    {
+      "id": "a",
+      "type": "mc",
+      "prompt": "Welk type conditional is dit?",
+      "options": ["First conditional", "Second conditional", "Third conditional", "Zero conditional"],
+      "correct": 2
+    },
+    {
+      "id": "b",
+      "type": "mc",
+      "prompt": "Gaat deze zin over iets dat echt is gebeurd?",
+      "options": ["Ja, het is echt gebeurd", "Nee, het is hypothetisch/onwerkelijk"],
+      "correct": 1
+    }
+  ],
+  "e": "Third conditional: hypothetische situatie in het verleden. De persoon heeft NIET hard gestudeerd en is NIET geslaagd."
+}
+```
+
 ### TIPS
 1. **Voorkeur MC**: Gebruik MC met 4-6 opties boven open/numeric vragen
 2. **Moeilijke opties**: Maak afleidende antwoorden die plausibel zijn
@@ -252,10 +517,18 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 | Feiten/begrippen | MC met 4 opties |
 | Categoriseren | multipart met MC deelvragen |
 | Latijn vertalen | open of grouped_short_text |
-| Grammatica analyse | grouped_short_text met subheaders |
+| Latijn grammatica analyse | grouped_short_text met subheaders |
 | Volgorde | ordering |
 | Koppelen (unieke paren) | matching |
 | Tekst met gaten | fill_blank of fill_blank_dropdown |
+| Engels woordjes NL→EN | vocab_list met direction "nl-en" |
+| Engels woordjes EN→NL | vocab_list met direction "en-nl" |
+| Engels woordjes mix | vocab_list met direction "mixed" |
+| Engels werkwoorden/tijden | grammar_transform met category "verb_tense" |
+| Engels meervouden | grammar_transform met category "plural" |
+| Engels vergelijkingen | grammar_transform met category "comparison" |
+| Engels foutencorrectie | sentence_correction |
+| Engels grammatica in context | grammar_fill (met of zonder dropdown) |
 
 ### NA HET MAKEN
 De toets moet geregistreerd worden in `data/subjects.json`:
@@ -272,11 +545,18 @@ De toets moet geregistreerd worden in `data/subjects.json`:
 
 ---
 
-## VOORBEELDOPDRACHT
+## VOORBEELDOPDRACHTEN
 
+**Latijn:**
 "Maak een Latijn woordenschat toets over hoofdstuk 3 (les Regnum). Focus op de ablativus naamval, met 20 vragen. Gebruik minimaal 4 verschillende vraagtypen."
+
+**Engels woordjes:**
+"Maak een Engels woordenlijst oefening voor Unit 3 met 30 woorden. Gebruik vocab_list met zowel NL→EN als EN→NL richtingen. Voeg ook 10 onregelmatige werkwoorden toe met grammar_transform."
+
+**Engels grammatica:**
+"Maak een Engels grammatica toets over Present Simple vs Present Continuous met 25 vragen. Mix grammar_fill (met zinnen invullen), sentence_correction (fouten verbeteren), en MC vragen over wanneer je welke tijd gebruikt."
 
 ---
 
-*Laatste update: 2024-12-29*
-*Vraagtypen: mc, open, multipart, grouped_short_text, table_parse, ordering, matching, fill_blank, fill_blank_dropdown, translation_open, info_card*
+*Laatste update: 2024-12-30*
+*Vraagtypen: mc, open, multipart, grouped_short_text, table_parse, ordering, matching, fill_blank, fill_blank_dropdown, translation_open, info_card, vocab_list, grammar_transform, sentence_correction, grammar_fill*
