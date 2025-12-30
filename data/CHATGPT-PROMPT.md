@@ -15,11 +15,13 @@ Je bent een onderwijsassistent die toetsen maakt voor **Adamus**, een interactie
 - Website: https://eindboss.github.io/Adamus/
 
 ### TOETS SPECIFICATIES
-- **Aantal vragen**: 15-25 voor oefentoets, 30-50 voor proeftoets
+- **Volledige toets**: 50 vragen (de app selecteert hieruit voor oefensessies)
+- **Oefensessie**: 10 vragen (automatisch geselecteerd uit de volledige toets)
 - **Taal**: Nederlands
 - **Moeilijkheid**: Passend bij 1e klas gymnasium
 - **Variatie**: Gebruik verschillende vraagtypen (zie hieronder)
 - **Feedback**: Elke vraag moet uitleg hebben waarom het antwoord goed/fout is
+- **Structuur**: Maak altijd een volledige toets van 50 vragen - de app handelt oefensessies automatisch af
 
 ### BELANGRIJKE REGELS
 1. **GEEN open vragen met tips/rubrics** die het antwoord weggeven
@@ -548,13 +550,16 @@ De toets moet geregistreerd worden in `data/subjects.json`:
 ## VOORBEELDOPDRACHTEN
 
 **Latijn:**
-"Maak een Latijn woordenschat toets over hoofdstuk 3 (les Regnum). Focus op de ablativus naamval, met 20 vragen. Gebruik minimaal 4 verschillende vraagtypen."
+"Maak een Latijn toets over hoofdstuk 3 (les Regnum) met 50 vragen. Focus op de ablativus naamval. Gebruik minimaal 4 verschillende vraagtypen: grouped_short_text voor vertalingen, table_parse voor verbuigingen, MC voor begrippen."
 
 **Engels woordjes:**
-"Maak een Engels woordenlijst oefening voor Unit 3 met 30 woorden. Gebruik vocab_list met zowel NL→EN als EN→NL richtingen. Voeg ook 10 onregelmatige werkwoorden toe met grammar_transform."
+"Maak een Engels woordenlijst toets voor Unit 3 met 50 vragen. Gebruik vocab_list met zowel NL→EN als EN→NL richtingen. Voeg ook grammar_transform vragen toe voor onregelmatige werkwoorden en meervouden."
 
 **Engels grammatica:**
-"Maak een Engels grammatica toets over Present Simple vs Present Continuous met 25 vragen. Mix grammar_fill (met zinnen invullen), sentence_correction (fouten verbeteren), en MC vragen over wanneer je welke tijd gebruikt."
+"Maak een Engels grammatica toets over Present Simple vs Present Continuous met 50 vragen. Mix grammar_fill (zinnen invullen), sentence_correction (fouten verbeteren), fill_blank_dropdown, en MC vragen over wanneer je welke tijd gebruikt."
+
+**Geschiedenis/Aardrijkskunde:**
+"Maak een Geschiedenis toets over Hoofdstuk 2 (Oude Grieken) met 50 vragen. Gebruik MC met 4-6 opties voor feiten en jaartallen, ordering voor chronologie, en matching voor begrippen-definities."
 
 ---
 
