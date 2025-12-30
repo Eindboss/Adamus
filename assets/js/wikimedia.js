@@ -1,13 +1,130 @@
 /* ===========================================
-   Adamus - Wikimedia Image Fetcher (v3)
+   Adamus - Wikimedia Image Fetcher (v4)
 
-   Search priority:
-   1. SPARQL depicts (P180) - most precise
-   2. Commons text search - fallback
-   3. Wikipedia page image - last resort
+   Search strategy: Query-ladder with context-aware scoring
+   1. Try specific queries first (concept + representation)
+   2. Progressively relax to broader queries
+   3. Score candidates with 3-layer system:
+      - Representation fit (diagram vs photo)
+      - Educational quality (labels, categories)
+      - Domain/chapter fit (muscles, joints, etc.)
    =========================================== */
 
-const LS_KEY = "mediaCache:v3";
+const LS_KEY = "mediaCache:v4";
+
+// ============================================
+// DOMAIN PROFILES - Subject-agnostic priors
+// Works for biology, geography, history, etc.
+// ============================================
+const CHAPTER_PROFILES = {
+  // === BIOLOGY DOMAINS ===
+  skeleton: {
+    prefer: ["diagram", "labelled", "labeled", "anatomy", "skeleton", "bone", "cross-section"],
+    avoid: ["dinosaur", "museum", "fossil", "statue", "archaeological"],
+    preferCategories: ["Diagrams", "Anatomy", "Human skeleton", "Bones"],
+    avoidCategories: ["Logos", "Advertisements", "Fossils"]
+  },
+  joints: {
+    prefer: ["diagram", "labelled", "cross-section", "synovial", "articular", "joint"],
+    avoid: ["x-ray", "radiograph", "MRI", "CT", "surgery", "arthritis"],
+    preferCategories: ["Diagrams", "Anatomy", "Joints"],
+    avoidCategories: ["Medical imaging", "X-rays"]
+  },
+  muscles: {
+    prefer: ["diagram", "labelled", "anatomy", "muscle", "flexion", "extension", "antagonist"],
+    avoid: ["bodybuilder", "bodybuilding", "fitness", "competition", "mr. olympia", "gym"],
+    preferCategories: ["Diagrams", "Anatomy", "Muscles"],
+    avoidCategories: ["Bodybuilding", "Fitness models"]
+  },
+  health: {
+    prefer: ["diagram", "ergonomic", "posture", "workstation", "exercise", "stretching"],
+    avoid: ["catalog", "advertisement", "product", "brand", "furniture", "store"],
+    preferCategories: ["Diagrams", "Educational", "Ergonomics"],
+    avoidCategories: ["Advertisements", "Products", "Promotional"]
+  },
+  animals: {
+    prefer: ["wildlife", "nature", "animal", "species", "habitat"],
+    avoid: ["cartoon", "logo", "mascot", "toy", "plush", "zoo"],
+    preferCategories: ["Animals", "Wildlife", "Nature"],
+    avoidCategories: ["Logos", "Cartoons", "Toys", "Zoos"]
+  },
+  plants: {
+    prefer: ["plant", "botanical", "flower", "leaf", "diagram", "cross-section"],
+    avoid: ["garden", "nursery", "store", "product"],
+    preferCategories: ["Plants", "Botany", "Botanical illustrations"],
+    avoidCategories: ["Advertisements", "Gardens"]
+  },
+  cells: {
+    prefer: ["cell", "microscope", "micrograph", "diagram", "organelle"],
+    avoid: ["prison", "battery", "phone"],
+    preferCategories: ["Cell biology", "Microscopy", "Diagrams"],
+    avoidCategories: ["Technology", "Prisons"]
+  },
+
+  // === GEOGRAPHY DOMAINS ===
+  maps: {
+    prefer: ["map", "topographic", "geographic", "atlas", "relief"],
+    avoid: ["game", "fantasy", "fictional"],
+    preferCategories: ["Maps", "Geography", "Cartography"],
+    avoidCategories: ["Video games", "Fantasy"]
+  },
+  climate: {
+    prefer: ["climate", "weather", "diagram", "chart", "graph"],
+    avoid: ["news", "forecast", "app"],
+    preferCategories: ["Climatology", "Meteorology", "Diagrams"],
+    avoidCategories: ["Weather forecasts", "Apps"]
+  },
+  landscape: {
+    prefer: ["landscape", "terrain", "nature", "geographic"],
+    avoid: ["painting", "art", "wallpaper"],
+    preferCategories: ["Landscapes", "Geography", "Physical geography"],
+    avoidCategories: ["Paintings", "Art"]
+  },
+
+  // === HISTORY DOMAINS ===
+  historical: {
+    prefer: ["historical", "century", "era", "period", "artifact"],
+    avoid: ["reenactment", "costume", "movie", "film"],
+    preferCategories: ["History", "Historical images", "Artifacts"],
+    avoidCategories: ["Movies", "Reenactments"]
+  },
+  archaeology: {
+    prefer: ["archaeological", "excavation", "artifact", "ruins"],
+    avoid: ["movie", "game", "indiana jones"],
+    preferCategories: ["Archaeology", "Artifacts", "Excavations"],
+    avoidCategories: ["Movies", "Video games"]
+  },
+
+  // === SCIENCE DOMAINS ===
+  chemistry: {
+    prefer: ["molecule", "chemical", "structure", "diagram", "reaction"],
+    avoid: ["lab coat", "stock photo", "business"],
+    preferCategories: ["Chemistry", "Molecules", "Chemical structures"],
+    avoidCategories: ["Stock photos", "Advertisements"]
+  },
+  physics: {
+    prefer: ["physics", "diagram", "force", "wave", "experiment"],
+    avoid: ["stock photo", "business"],
+    preferCategories: ["Physics", "Diagrams", "Experiments"],
+    avoidCategories: ["Stock photos"]
+  },
+
+  // === SPECIAL ===
+  penguins: {
+    prefer: ["penguin", "spheniscidae", "flipper", "skeleton", "anatomy"],
+    avoid: ["cartoon", "logo", "mascot", "toy", "plush"],
+    preferCategories: ["Penguins", "Bird anatomy"],
+    avoidCategories: ["Logos", "Cartoons", "Toys"]
+  }
+};
+
+// Default profile for unknown domains
+const DEFAULT_PROFILE = {
+  prefer: ["diagram", "labelled", "labeled", "anatomy", "educational"],
+  avoid: ["logo", "icon", "cartoon", "advertisement", "catalog"],
+  preferCategories: ["Diagrams", "Educational", "Anatomy"],
+  avoidCategories: ["Logos", "Advertisements"]
+};
 const DEFAULT_TTL = 1000 * 60 * 60 * 24 * 30; // 30 days
 
 // Wikidata SPARQL endpoint
@@ -57,6 +174,109 @@ function clamp(n, min, max) {
 }
 
 /**
+ * Detect domain from query or intent
+ * Works across all subjects (biology, geography, history, etc.)
+ */
+function detectDomain(query, intent = {}) {
+  const q = (query || "").toLowerCase();
+  const concept = (intent.primaryConcept || "").toLowerCase();
+  const combined = q + " " + concept;
+
+  // === BIOLOGY ===
+  if (containsAny(combined, ["penguin", "pinguïn", "spheniscidae", "flipper"])) return "penguins";
+  if (containsAny(combined, ["rsi", "ergonomic", "posture", "workstation", "warming-up", "cooling-down", "stretching", "blessure"])) return "health";
+  if (containsAny(combined, ["muscle", "spier", "biceps", "triceps", "antagonist", "flexion", "extension", "pees", "tendon", "contraction"])) return "muscles";
+  if (containsAny(combined, ["joint", "gewricht", "synovial", "capsule", "ligament", "articular", "cartilage", "kraakbeen"])) return "joints";
+  if (containsAny(combined, ["skeleton", "skelet", "bone", "bot", "skull", "schedel", "rib", "sternum", "vertebra", "osteon", "haversian"])) return "skeleton";
+  if (containsAny(combined, ["cell", "cel", "mitochondri", "nucleus", "organelle", "membrane", "cytoplasm"])) return "cells";
+  if (containsAny(combined, ["plant", "flower", "bloem", "leaf", "blad", "root", "wortel", "photosynthesis", "botanical"])) return "plants";
+  if (containsAny(combined, ["animal", "dier", "species", "soort", "habitat", "wildlife", "mammal", "zoogdier"])) return "animals";
+
+  // === GEOGRAPHY ===
+  if (containsAny(combined, ["map", "kaart", "topograph", "atlas", "cartograph"])) return "maps";
+  if (containsAny(combined, ["climate", "klimaat", "weather", "weer", "temperature", "precipitation", "neerslag"])) return "climate";
+  if (containsAny(combined, ["landscape", "landschap", "terrain", "mountain", "berg", "river", "rivier", "valley", "dal"])) return "landscape";
+
+  // === HISTORY ===
+  if (containsAny(combined, ["archaeological", "excavation", "opgraving", "artifact", "ruins", "ruïne"])) return "archaeology";
+  if (containsAny(combined, ["historical", "historisch", "century", "eeuw", "era", "tijdperk", "medieval", "middeleeuws", "ancient", "antiek"])) return "historical";
+
+  // === SCIENCE ===
+  if (containsAny(combined, ["molecule", "molecuul", "chemical", "chemisch", "reaction", "reactie", "atom", "atoom", "element"])) return "chemistry";
+  if (containsAny(combined, ["physics", "fysica", "force", "kracht", "wave", "golf", "energy", "energie", "velocity", "snelheid"])) return "physics";
+
+  return null; // Use default
+}
+
+/**
+ * Get chapter profile for a domain
+ */
+function getProfile(domain) {
+  return CHAPTER_PROFILES[domain] || DEFAULT_PROFILE;
+}
+
+/**
+ * Generate query ladder - from specific to broad
+ * Returns array of { query, weight } objects
+ */
+function generateQueryLadder(baseQuery, { representation = "diagram", concepts = [] } = {}) {
+  const ladder = [];
+  const q = normalizeQuery(baseQuery);
+
+  // Extract core concept (first significant words)
+  const words = q.split(/\s+/).filter(w => w.length >= 3);
+  const coreWords = words.slice(0, 3).join(" ");
+  const firstTwoWords = words.slice(0, 2).join(" ");
+
+  // Representation keywords to try
+  const repKeywords = {
+    "diagram": ["labelled diagram", "diagram", "anatomy"],
+    "photo": ["photo", ""],
+    "microscopy": ["micrograph", "histology", "microscope"],
+    "cross-section": ["cross-section", "cross section", "section"]
+  };
+  const repWords = repKeywords[representation] || repKeywords["diagram"];
+
+  // Level 1: Most specific - full query + representation
+  ladder.push({ query: `${q} ${repWords[0]}`.trim(), weight: 1.0 });
+
+  // Level 2: Full query + simpler representation
+  if (repWords[1]) {
+    ladder.push({ query: `${q} ${repWords[1]}`.trim(), weight: 0.9 });
+  }
+
+  // Level 3: Core words + representation
+  if (coreWords !== q) {
+    ladder.push({ query: `${coreWords} ${repWords[0]}`.trim(), weight: 0.8 });
+  }
+
+  // Level 4: Core words only (high recall)
+  ladder.push({ query: coreWords, weight: 0.7 });
+
+  // Level 5: First two words + anatomy (very broad)
+  if (firstTwoWords !== coreWords) {
+    ladder.push({ query: `${firstTwoWords} anatomy`, weight: 0.6 });
+  }
+
+  // Level 6: Just first two words (last resort)
+  ladder.push({ query: firstTwoWords, weight: 0.5 });
+
+  // Add concept-based queries if provided
+  for (const concept of concepts.slice(0, 2)) {
+    ladder.push({ query: `${concept} ${repWords[0]}`.trim(), weight: 0.75 });
+  }
+
+  // Deduplicate
+  const seen = new Set();
+  return ladder.filter(item => {
+    const key = item.query.toLowerCase();
+    if (seen.has(key) || key.length < 5) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+/**
  * Build a Special:FilePath URL with width param
  */
 function commonsFilePathUrl(fileTitle, width = 900) {
@@ -66,55 +286,146 @@ function commonsFilePathUrl(fileTitle, width = 900) {
 }
 
 /**
- * Score candidate file title against query
+ * Score candidate file - 3-LAYER SCORING SYSTEM
+ *
+ * Layer 1: Representation fit (diagram vs photo vs microscopy)
+ * Layer 2: Educational quality (labels, diagrams, categories)
+ * Layer 3: Domain/chapter fit (muscles, joints, skeleton, etc.)
+ *
+ * @param {object} candidate - File info
+ * @param {string} query - Search query
+ * @param {object} opts - Scoring options
  */
-function scoreCandidate({ title, categories = [], mime, width, height, depictsMatch = false }, query, negativeTerms = []) {
+function scoreCandidate(
+  { title, categories = [], mime, width, height, depictsMatch = false },
+  query,
+  {
+    negativeTerms = [],
+    domain = null,
+    representation = "diagram",
+    queryWeight = 1.0
+  } = {}
+) {
   const t = (title || "").toLowerCase();
   const q = (query || "").toLowerCase();
-
-  let score = 0;
-
-  // HUGE bonus for depicts match - this is semantic, not text-based
-  if (depictsMatch) score += 100;
-
-  // Positive match: query tokens in title
-  const tokens = q.split(/\s+/).filter(Boolean);
-  for (const tok of tokens) {
-    if (tok.length < 3) continue;
-    if (t.includes(tok)) score += 8;
-  }
-
-  // Category boost
   const catText = categories.join(" ").toLowerCase();
+  const profile = getProfile(domain);
+
+  let layer1 = 0; // Representation fit
+  let layer2 = 0; // Educational quality
+  let layer3 = 0; // Domain fit
+
+  // ============================================
+  // LAYER 1: Representation Fit (-30 to +30)
+  // ============================================
+  const repScores = {
+    diagram: {
+      positive: ["diagram", "labelled", "labeled", "schema", "illustration", "schematic", "anatomy"],
+      negative: ["photo", "photograph", "statue", "museum"]
+    },
+    photo: {
+      positive: ["photo", "photograph", "wildlife"],
+      negative: ["diagram", "illustration", "schematic"]
+    },
+    microscopy: {
+      positive: ["micrograph", "histology", "microscope", "microscopy", "histological", "section"],
+      negative: ["diagram", "illustration"]
+    },
+    "cross-section": {
+      positive: ["cross-section", "cross section", "section", "cutaway", "diagram"],
+      negative: ["photo", "photograph"]
+    }
+  };
+
+  const repConfig = repScores[representation] || repScores.diagram;
+
+  // Count positive representation matches
+  for (const term of repConfig.positive) {
+    if (t.includes(term)) layer1 += 10;
+    if (catText.includes(term)) layer1 += 5;
+  }
+  // Penalize wrong representation
+  for (const term of repConfig.negative) {
+    if (t.includes(term)) layer1 -= 10;
+  }
+  layer1 = clamp(layer1, -30, 30);
+
+  // ============================================
+  // LAYER 2: Educational Quality (-40 to +60)
+  // ============================================
+
+  // Depicts match is semantic quality indicator
+  if (depictsMatch) layer2 += 40;
+
+  // Educational category bonuses
+  const educationalCategories = ["educational", "diagrams", "anatomy", "biology", "histology", "physiology"];
+  for (const cat of educationalCategories) {
+    if (catText.includes(cat)) layer2 += 5;
+  }
+
+  // Query token match in title/categories
+  const tokens = q.split(/\s+/).filter(tok => tok.length >= 3);
   for (const tok of tokens) {
-    if (tok.length < 3) continue;
-    if (catText.includes(tok)) score += 4;
+    if (t.includes(tok)) layer2 += 6;
+    if (catText.includes(tok)) layer2 += 3;
   }
 
-  // Penalize negatives
-  if (containsAny(t, negativeTerms) || containsAny(catText, negativeTerms)) score -= 40;
+  // Penalize junk patterns heavily
+  if (containsAny(t, ["logo", "icon", "pictogram", "flag", "coat_of_arms", "stub"])) layer2 -= 40;
+  if (containsAny(t, ["map", "locator", "blank_map", "location"])) layer2 -= 30;
+  if (containsAny(t, ["book", "cover", "page", "screenshot"])) layer2 -= 35;
+  if (containsAny(catText, ["logos", "advertisements", "products"])) layer2 -= 30;
 
-  // Penalize common junk patterns
-  if (containsAny(t, ["logo", "icon", "pictogram", "flag", "coat_of_arms", "stub"])) score -= 30;
-  if (containsAny(t, ["map", "locator", "blank_map", "location"])) score -= 20;
-  if (containsAny(t, ["book", "cover", "page", "screenshot"])) score -= 25;
-
-  // Prefer diagrams/illustrations for anatomy
-  if (containsAny(q, ["anatomy", "diagram", "skeleton", "bone", "joint", "muscle"])) {
-    if (containsAny(t, ["diagram", "illustration", "anatomy", "labeled", "schema"])) score += 15;
-  }
-
-  // Prefer raster formats for maximum LMS compatibility
-  const isSvg = (mime || "").includes("svg");
-  if (isSvg) score -= 5; // Less penalty than before, SVGs can be good for diagrams
-
-  // Prefer larger images
+  // Image quality bonus (larger = better)
   if (width && height) {
     const megapixels = (width * height) / 1_000_000;
-    score += clamp(megapixels * 2, 0, 12);
+    layer2 += clamp(megapixels * 2, 0, 10);
   }
 
-  return score;
+  // SVG penalty for LMS compatibility
+  if ((mime || "").includes("svg")) layer2 -= 5;
+
+  layer2 = clamp(layer2, -40, 60);
+
+  // ============================================
+  // LAYER 3: Domain/Chapter Fit (-30 to +30)
+  // ============================================
+
+  // Domain-specific preferences from profile
+  for (const term of profile.prefer) {
+    if (t.includes(term)) layer3 += 8;
+    if (catText.includes(term)) layer3 += 4;
+  }
+
+  // Domain-specific avoidances
+  for (const term of profile.avoid) {
+    if (t.includes(term)) layer3 -= 15;
+    if (catText.includes(term)) layer3 -= 10;
+  }
+
+  // Category-level domain fit
+  for (const cat of profile.preferCategories) {
+    if (catText.includes(cat.toLowerCase())) layer3 += 6;
+  }
+  for (const cat of profile.avoidCategories) {
+    if (catText.includes(cat.toLowerCase())) layer3 -= 12;
+  }
+
+  // User-specified negative terms (highest priority)
+  if (containsAny(t, negativeTerms) || containsAny(catText, negativeTerms)) {
+    layer3 -= 50;
+  }
+
+  layer3 = clamp(layer3, -50, 30);
+
+  // ============================================
+  // FINAL SCORE
+  // ============================================
+  // Weight by query specificity (specific queries = higher weight)
+  const baseScore = layer1 + layer2 + layer3;
+  const finalScore = baseScore * queryWeight;
+
+  return Math.round(finalScore);
 }
 
 /**
@@ -298,8 +609,8 @@ async function commonsStructuredDataSearch(qids, { limit = 15, minWidth = 600, n
       if (containsAny(lowerTitle, ["logo", "icon", "pictogram", "flag", "coat_of_arms"])) continue;
       if (containsAny(lowerTitle, ["location", "locator", "map of", "blank map"])) continue;
 
-      // Filter non-image files
-      if (mime.includes("pdf") || mime.includes("djvu") || mime.includes("ogg") || mime.includes("webm")) continue;
+      // Filter non-image files (including animated GIFs)
+      if (mime.includes("pdf") || mime.includes("djvu") || mime.includes("ogg") || mime.includes("webm") || mime.includes("gif")) continue;
 
       candidates.push({
         title,
@@ -310,15 +621,11 @@ async function commonsStructuredDataSearch(qids, { limit = 15, minWidth = 600, n
         fileUrl: ii.url,
         categories,
         depictsMatch: true,
-        score: scoreCandidate(
-          { title, categories, mime, width, height, depictsMatch: true },
-          textQuery || qids.join(" "),
-          negativeTerms
-        )
+        score: 0 // Will be re-scored with full context in getMediaForQuery
       });
     }
 
-    candidates.sort((a, b) => b.score - a.score);
+    // No pre-sorting - will be re-scored with full context
     return { candidates };
   } catch (e) {
     console.warn("Commons SDC search failed:", e);
@@ -374,8 +681,8 @@ async function commonsTextSearch(query, {
     if (width < minWidth) continue;
     if (!allowSvg && mime.includes("svg")) continue;
 
-    // Filter non-image files
-    if (mime.includes("pdf") || mime.includes("djvu") || mime.includes("ogg") || mime.includes("webm")) continue;
+    // Filter non-image files (including animated GIFs)
+    if (mime.includes("pdf") || mime.includes("djvu") || mime.includes("ogg") || mime.includes("webm") || mime.includes("gif")) continue;
 
     const categories = (p?.categories || []).map(c => c.title.replace(/^Category:/, ""));
     const lowerTitle = title.toLowerCase();
@@ -394,11 +701,11 @@ async function commonsTextSearch(query, {
       fileUrl: ii.url,
       categories,
       depictsMatch: false,
-      score: scoreCandidate({ title, categories, mime, width, height, depictsMatch: false }, q, negativeTerms)
+      score: 0 // Will be re-scored with full context in getMediaForQuery
     });
   }
 
-  candidates.sort((a, b) => b.score - a.score);
+  // No pre-sorting - will be re-scored with full context
   return { normalizedQuery: q, candidates };
 }
 
@@ -470,13 +777,20 @@ function pruneCache(cache, maxEntries = 200) {
 }
 
 /**
- * Main entry point: Depicts-first, then text search, then Wikipedia fallback
+ * Main entry point: Query-ladder with early stopping
+ *
+ * Strategy:
+ * 1. Detect domain from query/intent
+ * 2. Generate query ladder (specific → broad)
+ * 3. Try each query level, score candidates with 3-layer system
+ * 4. Stop early if good candidate found (score >= threshold)
+ * 5. Fall back to Wikipedia if nothing found
  *
  * @param {string} query - Text search query
  * @param {object} opts - Options including:
- *   - qids: Array of Wikidata QIDs to search via depicts (e.g., ["Q12107251"])
+ *   - qids: Array of Wikidata QIDs to search via depicts
  *   - negativeTerms: Terms to avoid
- *   - negativeQids: QIDs to exclude from depicts results
+ *   - intent: Media intent object { primaryConcept, representation, ... }
  *   - usedFileTitles: Set to track uniqueness
  *   - minWidth, width, lang, allowSvg, ttlMs
  */
@@ -489,8 +803,13 @@ export async function getMediaForQuery(query, opts = {}) {
   const negativeTerms = opts.negativeTerms ?? [];
   const qids = opts.qids ?? [];
   const usedFileTitles = opts.usedFileTitles ?? null;
+  const intent = opts.intent ?? {};
 
-  const optsKey = JSON.stringify({ lang, minWidth, allowSvg, width, negativeTerms, qids });
+  // Detect domain for context-aware scoring
+  const domain = detectDomain(query, intent);
+  const representation = intent.representation || "diagram";
+
+  const optsKey = JSON.stringify({ lang, minWidth, allowSvg, width, negativeTerms, qids, domain });
   const key = cacheKey(query, optsKey);
 
   const cache = readCache();
@@ -501,41 +820,73 @@ export async function getMediaForQuery(query, opts = {}) {
     }
   }
 
-  let allCandidates = [];
+  // Generate query ladder
+  const concepts = intent.primaryConcept ? [intent.primaryConcept] : [];
+  const ladder = generateQueryLadder(query, { representation, concepts });
 
-  // 1) TEXT SEARCH FIRST: This is more reliable
-  try {
-    const { candidates } = await commonsTextSearch(query, {
-      limit: 20,
-      minWidth,
-      allowSvg,
-      negativeTerms
-    });
-    allCandidates.push(...candidates);
-    console.log(`[wikimedia] Text search for "${query}" found ${candidates.length} candidates`);
-  } catch (e) {
-    console.warn("Text search failed:", e);
+  console.log(`[wikimedia] Domain: ${domain || "default"}, representation: ${representation}`);
+  console.log(`[wikimedia] Query ladder:`, ladder.map(l => `"${l.query}" (w=${l.weight})`).join(" → "));
+
+  let allCandidates = [];
+  const GOOD_SCORE_THRESHOLD = 40; // Stop early if we find something this good
+
+  // Scoring options for all candidates
+  const scoreOpts = { negativeTerms, domain, representation };
+
+  // 1) TRY QUERY LADDER - stop early on good results
+  for (const { query: ladderQuery, weight } of ladder) {
+    try {
+      const { candidates } = await commonsTextSearch(ladderQuery, {
+        limit: 15,
+        minWidth,
+        allowSvg,
+        negativeTerms
+      });
+
+      // Re-score with full 3-layer scoring
+      for (const c of candidates) {
+        c.score = scoreCandidate(c, ladderQuery, { ...scoreOpts, queryWeight: weight });
+        c.ladderQuery = ladderQuery;
+        c.ladderWeight = weight;
+      }
+
+      allCandidates.push(...candidates);
+      console.log(`[wikimedia] "${ladderQuery}" found ${candidates.length} candidates`);
+
+      // Early stopping: if we found a good unused candidate, stop climbing
+      const bestUnused = candidates
+        .filter(c => !usedFileTitles || !usedFileTitles.has(c.title))
+        .sort((a, b) => b.score - a.score)[0];
+
+      if (bestUnused && bestUnused.score >= GOOD_SCORE_THRESHOLD) {
+        console.log(`[wikimedia] Early stop: found good candidate (score=${bestUnused.score})`);
+        break;
+      }
+    } catch (e) {
+      console.warn(`Text search failed for "${ladderQuery}":`, e);
+    }
   }
 
-  // 2) DEPICTS BOOST: If we have QIDs, try to find depicts-tagged images too
-  // These get a bonus in scoring but the depicts-only search is often empty
-  if (qids.length > 0 && allCandidates.length < 5) {
+  // 2) DEPICTS BOOST: If we have QIDs and not enough good candidates
+  const topScore = allCandidates.length > 0 ? Math.max(...allCandidates.map(c => c.score)) : 0;
+
+  if (qids.length > 0 && (allCandidates.length < 5 || topScore < GOOD_SCORE_THRESHOLD)) {
     try {
-      // Try depicts-only search as supplement
       const { candidates } = await commonsStructuredDataSearch(qids, {
         limit: 10,
         minWidth,
         negativeTerms,
-        textQuery: "" // Pure depicts search
+        textQuery: query
       });
-      // Only add if they seem relevant (filter by having some keywords in title)
-      const queryTerms = query.toLowerCase().split(/\s+/).filter(t => t.length >= 3);
-      const relevantCandidates = candidates.filter(c => {
-        const title = c.title.toLowerCase();
-        return queryTerms.some(t => title.includes(t));
-      });
-      allCandidates.push(...relevantCandidates);
-      console.log(`[wikimedia] Depicts search for ${qids.join(",")} found ${relevantCandidates.length} relevant candidates`);
+
+      // Re-score with depicts bonus
+      for (const c of candidates) {
+        c.score = scoreCandidate(c, query, { ...scoreOpts, queryWeight: 1.0 });
+        c.ladderQuery = "depicts:" + qids.join(",");
+      }
+
+      allCandidates.push(...candidates);
+      console.log(`[wikimedia] Depicts search for ${qids.join(",")} found ${candidates.length} candidates`);
     } catch (e) {
       console.warn("Depicts search failed:", e);
     }
@@ -557,13 +908,16 @@ export async function getMediaForQuery(query, opts = {}) {
     const result = {
       source: chosen.depictsMatch ? "commons-depicts" : "commons-text",
       query: query,
+      ladderQuery: chosen.ladderQuery,
       qids: qids,
+      domain: domain,
       commonsFileTitle: chosen.title,
       imageUrl: commonsFilePathUrl(chosen.title, width),
       fileUrl: chosen.fileUrl,
       title: chosen.title.replace(/^File:/, ""),
       debug: {
         score: chosen.score,
+        ladderWeight: chosen.ladderWeight,
         depictsMatch: chosen.depictsMatch,
         mime: chosen.mime,
         width: chosen.width,
@@ -591,6 +945,7 @@ export async function getMediaForQuery(query, opts = {}) {
 /**
  * Load image for a question
  * Supports both media.query (text) and media.qids (Wikidata depicts)
+ * Passes _intent to scoring for context-aware selection
  */
 export async function loadQuestionImage(question, opts = {}) {
   const media = question.media;
@@ -601,11 +956,15 @@ export async function loadQuestionImage(question, opts = {}) {
     const qids = media.qids ?? [];
     const usedFileTitles = opts.usedFileTitles ?? null;
 
+    // Pass intent for context-aware scoring
+    const intent = media._intent ?? {};
+
     const result = await getMediaForQuery(media.query || qids.join(" "), {
       ...opts,
       qids,
       negativeTerms,
-      usedFileTitles
+      usedFileTitles,
+      intent
     });
 
     // Write back so UI can use it

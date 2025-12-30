@@ -1,0 +1,847 @@
+{
+  "quizId": "biologie-h4-stevigheid-beweging-proef",
+  "subject": "biologie",
+  "briefs": [
+    {
+      "questionId": "q001",
+      "concepts": [
+        "skelet"
+      ],
+      "searchTerms": [
+        "human skeleton",
+        "skeletal system"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "human skeleton"
+    },
+    {
+      "questionId": "q002",
+      "concepts": [
+        "bot",
+        "botten"
+      ],
+      "searchTerms": [
+        "bone anatomy",
+        "bone structure",
+        "bones human",
+        "skeletal bones"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "bone anatomy"
+    },
+    {
+      "questionId": "q003",
+      "concepts": [
+        "bot",
+        "botten"
+      ],
+      "searchTerms": [
+        "bone anatomy",
+        "bone structure",
+        "bones human",
+        "skeletal bones"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "bone anatomy"
+    },
+    {
+      "questionId": "q004",
+      "concepts": [
+        "bot",
+        "botten"
+      ],
+      "searchTerms": [
+        "bone anatomy",
+        "bone structure",
+        "bones human",
+        "skeletal bones"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "bone anatomy"
+    },
+    {
+      "questionId": "q005",
+      "concepts": [
+        "kraakbeen"
+      ],
+      "searchTerms": [
+        "cartilage",
+        "articular cartilage"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "cartilage"
+    },
+    {
+      "questionId": "q006",
+      "concepts": [
+        "schedel",
+        "fontanel"
+      ],
+      "searchTerms": [
+        "human skull",
+        "cranium",
+        "fontanelle baby skull"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "human skull"
+    },
+    {
+      "questionId": "q009",
+      "concepts": [
+        "bot",
+        "botcel"
+      ],
+      "searchTerms": [
+        "bone anatomy",
+        "bone structure",
+        "osteocyte",
+        "bone cell"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "bone anatomy"
+    },
+    {
+      "questionId": "q010",
+      "concepts": [
+        "bot",
+        "botweefsel",
+        "collageen"
+      ],
+      "searchTerms": [
+        "bone anatomy",
+        "bone structure",
+        "bone tissue",
+        "osseous tissue",
+        "collagen bone"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "bone anatomy"
+    },
+    {
+      "questionId": "q011",
+      "concepts": [
+        "gewricht"
+      ],
+      "searchTerms": [
+        "joint anatomy",
+        "synovial joint"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "joint anatomy"
+    },
+    {
+      "questionId": "q012",
+      "concepts": [
+        "gewricht",
+        "kraakbeen"
+      ],
+      "searchTerms": [
+        "joint anatomy",
+        "synovial joint",
+        "cartilage",
+        "articular cartilage"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "joint anatomy"
+    },
+    {
+      "questionId": "q013",
+      "concepts": [
+        "gewricht",
+        "gewrichtskapsel"
+      ],
+      "searchTerms": [
+        "joint anatomy",
+        "synovial joint",
+        "joint capsule",
+        "synovial capsule"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "joint anatomy"
+    },
+    {
+      "questionId": "q014",
+      "concepts": [
+        "gewricht",
+        "kogelgewricht"
+      ],
+      "searchTerms": [
+        "joint anatomy",
+        "synovial joint",
+        "ball and socket joint"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "joint anatomy"
+    },
+    {
+      "questionId": "q015",
+      "concepts": [
+        "gewricht",
+        "rolgewricht"
+      ],
+      "searchTerms": [
+        "joint anatomy",
+        "synovial joint",
+        "pivot joint"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "joint anatomy"
+    },
+    {
+      "questionId": "q017",
+      "concepts": [
+        "gewricht",
+        "gewrichtssmeer"
+      ],
+      "searchTerms": [
+        "joint anatomy",
+        "synovial joint",
+        "synovial fluid"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "joint anatomy"
+    },
+    {
+      "questionId": "q018",
+      "concepts": [
+        "gewricht"
+      ],
+      "searchTerms": [
+        "joint anatomy",
+        "synovial joint"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "joint anatomy"
+    },
+    {
+      "questionId": "q019",
+      "concepts": [
+        "wervel"
+      ],
+      "searchTerms": [
+        "vertebra",
+        "spinal vertebra"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "vertebra"
+    },
+    {
+      "questionId": "q020",
+      "concepts": [
+        "wervelkolom",
+        "wervel"
+      ],
+      "searchTerms": [
+        "vertebral column",
+        "spine anatomy",
+        "vertebra",
+        "spinal vertebra"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "vertebral column"
+    },
+    {
+      "questionId": "q021",
+      "concepts": [
+        "skelet",
+        "bot",
+        "botten",
+        "spier"
+      ],
+      "searchTerms": [
+        "human skeleton",
+        "skeletal system",
+        "bone anatomy",
+        "bone structure",
+        "bones human"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "human skeleton"
+    },
+    {
+      "questionId": "q022",
+      "concepts": [
+        "bot",
+        "spier"
+      ],
+      "searchTerms": [
+        "bone anatomy",
+        "bone structure",
+        "muscle anatomy",
+        "skeletal muscle"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "bone anatomy"
+    },
+    {
+      "questionId": "q023",
+      "concepts": [
+        "spier"
+      ],
+      "searchTerms": [
+        "muscle anatomy",
+        "skeletal muscle"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "muscle anatomy"
+    },
+    {
+      "questionId": "q024",
+      "concepts": [
+        "antagonist"
+      ],
+      "searchTerms": [
+        "antagonist muscles",
+        "muscle pair"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "antagonist muscles"
+    },
+    {
+      "questionId": "q025",
+      "concepts": [
+        "biceps",
+        "triceps",
+        "antagonist"
+      ],
+      "searchTerms": [
+        "biceps brachii",
+        "arm flexor",
+        "triceps brachii",
+        "arm extensor",
+        "antagonist muscles"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "biceps brachii"
+    },
+    {
+      "questionId": "q026",
+      "concepts": [
+        "spier"
+      ],
+      "searchTerms": [
+        "muscle anatomy",
+        "skeletal muscle"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "muscle anatomy"
+    },
+    {
+      "questionId": "q027",
+      "concepts": [
+        "spier"
+      ],
+      "searchTerms": [
+        "muscle anatomy",
+        "skeletal muscle"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "muscle anatomy"
+    },
+    {
+      "questionId": "q028",
+      "concepts": [
+        "motorisch geheugen"
+      ],
+      "searchTerms": [
+        "motor memory",
+        "muscle memory"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "motor memory"
+    },
+    {
+      "questionId": "q031",
+      "concepts": [
+        "warming-up"
+      ],
+      "searchTerms": [
+        "warm up exercise",
+        "stretching exercise"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "warm up exercise"
+    },
+    {
+      "questionId": "q032",
+      "concepts": [
+        "spier",
+        "warming-up"
+      ],
+      "searchTerms": [
+        "muscle anatomy",
+        "skeletal muscle",
+        "warm up exercise",
+        "stretching exercise"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "muscle anatomy"
+    },
+    {
+      "questionId": "q034",
+      "concepts": [
+        "cooling-down"
+      ],
+      "searchTerms": [
+        "cool down exercise",
+        "recovery stretching"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "cool down exercise"
+    },
+    {
+      "questionId": "q035",
+      "concepts": [
+        "spier",
+        "spierpijn"
+      ],
+      "searchTerms": [
+        "muscle anatomy",
+        "skeletal muscle",
+        "muscle soreness",
+        "DOMS"
+      ],
+      "preferredType": "anatomical diagram or model",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "muscle anatomy"
+    },
+    {
+      "questionId": "q036",
+      "concepts": [
+        "blessure"
+      ],
+      "searchTerms": [
+        "sports injury",
+        "muscle injury"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "sports injury"
+    },
+    {
+      "questionId": "q037",
+      "concepts": [
+        "rsi"
+      ],
+      "searchTerms": [
+        "repetitive strain injury",
+        "RSI computer"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "repetitive strain injury"
+    },
+    {
+      "questionId": "q038",
+      "concepts": [
+        "rsi"
+      ],
+      "searchTerms": [
+        "repetitive strain injury",
+        "RSI computer"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "repetitive strain injury"
+    },
+    {
+      "questionId": "q039",
+      "concepts": [
+        "rsi"
+      ],
+      "searchTerms": [
+        "repetitive strain injury",
+        "RSI computer"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "repetitive strain injury"
+    },
+    {
+      "questionId": "q042",
+      "concepts": [
+        "rsi"
+      ],
+      "searchTerms": [
+        "repetitive strain injury",
+        "RSI computer"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "repetitive strain injury"
+    },
+    {
+      "questionId": "q046",
+      "concepts": [
+        "borstbeen"
+      ],
+      "searchTerms": [
+        "sternum",
+        "breastbone"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart",
+        "dinosaur",
+        "fossil",
+        "museum exhibit"
+      ],
+      "fallbackSearch": "sternum"
+    }
+  ],
+  "skipped": [
+    "q007",
+    "q008",
+    "q016",
+    "q029",
+    "q030",
+    "q033",
+    "q040",
+    "q041",
+    "q043",
+    "q044",
+    "q045",
+    "q047",
+    "q048",
+    "q049",
+    "q050"
+  ]
+}
