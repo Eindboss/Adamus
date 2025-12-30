@@ -1,14 +1,22 @@
-# ChatGPT Review: Wikimedia Image Selection System (v4.1)
+# ChatGPT Review: Wikimedia Image Selection System (v4.2)
 
 ## Context
 
-Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke vraag moet een relevante afbeelding krijgen van Wikimedia Commons. Het systeem is geüpgraded naar v4.1 met verbeterde query-ladder, parallel batching, en margin-based early stopping.
+Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke vraag moet een relevante afbeelding krijgen van Wikimedia Commons. Het systeem is geüpgraded naar v4.2 met domain-specifieke threshold profiles, adaptive batch sizing, en verbeterde early stopping.
 
-## Huidige Architectuur (v4.1)
+## Huidige Architectuur (v4.2)
 
-### Nieuwe Features in v4.1:
-- **Parallel batch processing**: 3 queries tegelijk voor snellere searches
-- **Margin-based early stopping**: Stop alleen als score >= 40 EN margin >= 8 EN repFit >= 5
+### Nieuwe Features in v4.2 (t.o.v. v4.1):
+- **Domain-specifieke threshold profiles**: Aparte drempels per afbeeldingstype (diagram, map, photo, microscopy)
+- **Adaptive batch sizing**: Start met 2 queries, breid uit naar 3 als geen goede resultaten
+- **MIN_CANDIDATES requirement**: Wacht op voldoende kandidaten voordat early stop beslist
+- **MIN_EDU floor**: Minimale educatieve score vereist voor early stop
+- **HARD_STOP score**: Bij uitzonderlijk goede match direct stoppen
+- **repFit en eduScore tracking**: Elke kandidaat krijgt expliciete scores voor representation fit en educational quality
+
+### Features behouden van v4.1:
+- **Parallel batch processing**: 2-3 queries tegelijk
+- **Margin-based early stopping**: Stop alleen als margin voldoende groot is
 - **Domain-aware synonym expansion**: Nederlandse termen naar Engels
 - **Skip embedded visual content**: Vragen met "afbeelding 1", "tabel", "grafiek" krijgen geen extra afbeelding
 - **Multi-subject support**: Biology, Geography, History, Science domains
@@ -33,6 +41,66 @@ Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Elke
     }
   }
 }
+```
+
+### Domain-Specifieke Threshold Profiles:
+```javascript
+const THRESHOLD_PROFILES = {
+  // Diagram-based (anatomy, biology) - stricter on rep fit
+  diagram: {
+    GOOD_SCORE: 42,
+    MARGIN: 7,
+    MIN_REP_FIT: 8,
+    MIN_EDU: 10,
+    MIN_CANDIDATES: 10,
+    HARD_STOP: 55
+  },
+  // Maps - lower margin (similar scores common)
+  map: {
+    GOOD_SCORE: 40,
+    MARGIN: 5,
+    MIN_REP_FIT: 6,
+    MIN_EDU: 8,
+    MIN_CANDIDATES: 15,
+    HARD_STOP: 52
+  },
+  // Microscopy - good candidates are rare
+  microscopy: {
+    GOOD_SCORE: 35,
+    MARGIN: 6,
+    MIN_REP_FIT: 5,
+    MIN_EDU: 8,
+    MIN_CANDIDATES: 8,
+    HARD_STOP: 48
+  },
+  // Photos - easier to find, can be stricter
+  photo: {
+    GOOD_SCORE: 45,
+    MARGIN: 8,
+    MIN_REP_FIT: 5,
+    MIN_EDU: 10,
+    MIN_CANDIDATES: 12,
+    HARD_STOP: 58
+  },
+  // Cross-sections - similar to diagrams
+  "cross-section": {
+    GOOD_SCORE: 40,
+    MARGIN: 7,
+    MIN_REP_FIT: 8,
+    MIN_EDU: 10,
+    MIN_CANDIDATES: 10,
+    HARD_STOP: 52
+  },
+  // Default fallback
+  default: {
+    GOOD_SCORE: 40,
+    MARGIN: 8,
+    MIN_REP_FIT: 5,
+    MIN_EDU: 8,
+    MIN_CANDIDATES: 12,
+    HARD_STOP: 55
+  }
+};
 ```
 
 ### Query-Ladder met Representation Templates:
@@ -105,79 +173,109 @@ function scoreCandidate(candidate, query, opts) {
 }
 ```
 
-### Domain Profiles (multi-vak):
+### Score Batch met repFit en eduScore:
 ```javascript
-const CHAPTER_PROFILES = {
-  // BIOLOGY
-  muscles: { prefer: ["diagram", "labelled", "anatomy"], avoid: ["bodybuilder", "gym"] },
-  skeleton: { prefer: ["diagram", "labelled", "bone"], avoid: ["dinosaur", "museum"] },
-  joints: { prefer: ["diagram", "cross-section", "synovial"], avoid: ["x-ray", "surgery"] },
-  cells: { prefer: ["microscope", "micrograph", "diagram"], avoid: ["prison", "battery"] },
-  health: { prefer: ["ergonomic", "posture", "diagram"], avoid: ["advertisement", "product"] },
+function scoreBatch(candidates, ladderQuery, weight) {
+  for (const c of candidates) {
+    c.score = scoreCandidate(c, ladderQuery, { ...scoreOpts, queryWeight: weight });
+    c.ladderQuery = ladderQuery;
+    c.ladderWeight = weight;
 
-  // GEOGRAPHY (NEW)
-  maps: { prefer: ["map", "topographic", "thematic"], avoid: ["game", "fantasy"] },
-  climate: { prefer: ["climate", "Köppen", "diagram", "chart"], avoid: ["forecast", "app"] },
-  urbanization: { prefer: ["city", "urban", "aerial view"], avoid: ["game", "minecraft"] },
-  wind: { prefer: ["wind", "pressure", "isobar", "diagram"], avoid: ["wind turbine"] },
-  precipitation: { prefer: ["rain", "orographic", "diagram"], avoid: ["umbrella", "product"] },
-  landscape: { prefer: ["landscape", "terrain", "relief"], avoid: ["painting", "wallpaper"] },
+    const combined = (c.title + " " + c.categories.join(" ")).toLowerCase();
 
-  // HISTORY
-  historical: { prefer: ["historical", "artifact"], avoid: ["movie", "reenactment"] },
-  archaeology: { prefer: ["archaeological", "excavation"], avoid: ["game", "movie"] },
+    // Calculate representation fit
+    const repConfig = {
+      diagram: ["diagram", "labelled", "labeled", "schema", "illustration"],
+      photo: ["photo", "photograph", "image"],
+      microscopy: ["micrograph", "histology", "microscope"],
+      // ...
+    }[representation];
+    const repMatches = repConfig.filter(term => combined.includes(term)).length;
+    c.repFit = Math.min(repMatches * 5, 15);
 
-  // SCIENCE
-  chemistry: { prefer: ["molecule", "structure", "diagram"], avoid: ["stock photo"] },
-  physics: { prefer: ["physics", "diagram", "force"], avoid: ["stock photo"] }
-};
+    // Calculate educational score
+    const eduTerms = ["labelled", "labeled", "annotated", "educational", "anatomy"];
+    const eduMatches = eduTerms.filter(term => combined.includes(term)).length;
+    c.eduScore = Math.min(eduMatches * 4, 16);
+
+    // SVG bonus (usually cleaner diagrams)
+    if (c.mime === "image/svg+xml") {
+      c.repFit += 3;
+      c.eduScore += 2;
+    }
+  }
+}
 ```
 
-### Parallel Batch Processing + Margin-Based Early Stop:
+### Adaptive Batch Processing + Domain-Based Early Stop:
 ```javascript
 async function getMediaForQuery(query, opts) {
   const domain = detectDomain(query, intent);
+  const representation = intent.representation || "diagram";
   const ladder = generateQueryLadder(query, { representation, domain });
 
-  const GOOD_SCORE_THRESHOLD = 40;
-  const MARGIN_THRESHOLD = 8;  // Must beat #2 by this much
-  const MIN_REP_FIT = 5;       // Minimum representation layer score
-  const BATCH_SIZE = 3;
+  // v4.2: Get domain-specific thresholds
+  const thresholds = getThresholds(representation);
 
-  for (let i = 0; i < ladder.length; i += BATCH_SIZE) {
-    const batch = ladder.slice(i, i + BATCH_SIZE);
+  // v4.2: Adaptive batch sizing
+  const BATCH_SIZE_INITIAL = 2;
+  const BATCH_SIZE_EXPANDED = 3;
+  let batchSize = BATCH_SIZE_INITIAL;
+
+  for (let i = 0; i < ladder.length; i += batchSize) {
+    const batch = ladder.slice(i, i + batchSize);
 
     // Run batch in parallel
     const batchResults = await Promise.all(batch.map(({ query, weight }) =>
       commonsTextSearch(query).then(candidates => ({ query, weight, candidates }))
     ));
 
-    // Score all candidates
+    // Score all candidates with repFit and eduScore
     for (const { query, weight, candidates } of batchResults) {
       scoreBatch(candidates, query, weight);
       allCandidates.push(...candidates);
     }
 
-    // Margin-based early stop
+    // v4.2: Domain-specific early stop
     if (shouldEarlyStop(allCandidates)) break;
+
+    // v4.2: Expand batch size if no good candidates
+    const currentBest = Math.max(...allCandidates.map(c => c.score));
+    if (currentBest < 25 && batchSize === BATCH_SIZE_INITIAL) {
+      batchSize = BATCH_SIZE_EXPANDED;
+    }
   }
 
   // Depicts boost if not enough good candidates
-  if (qids.length > 0 && topScore < GOOD_SCORE_THRESHOLD) {
+  if (qids.length > 0 && topScore < thresholds.GOOD_SCORE) {
     const depictsCandidates = await commonsStructuredDataSearch(qids, { textQuery: query });
     // ...
   }
 }
 
 function shouldEarlyStop(candidates) {
-  const sorted = candidates.sort((a, b) => b.score - a.score);
-  const best = sorted[0];
-  const second = sorted[1];
+  const { GOOD_SCORE, MARGIN, MIN_REP_FIT, MIN_EDU, MIN_CANDIDATES, HARD_STOP } = thresholds;
+
+  const unused = candidates
+    .filter(c => !usedFileTitles?.has(c.title))
+    .sort((a, b) => b.score - a.score);
+
+  // Need minimum candidates before deciding
+  if (unused.length < MIN_CANDIDATES) return false;
+
+  const best = unused[0];
+  const second = unused[1];
   const margin = second ? best.score - second.score : 100;
 
-  return best.score >= GOOD_SCORE_THRESHOLD &&
-         margin >= MARGIN_THRESHOLD &&
-         best.repFit >= MIN_REP_FIT;
+  // Check quality floors
+  if (best.repFit < MIN_REP_FIT) return false;
+  if (best.eduScore < MIN_EDU) return false;
+
+  // HARD_STOP: exceptional hit, stop immediately
+  if (best.score >= HARD_STOP) return true;
+
+  // Regular early stop: good score AND clear margin
+  return best.score >= GOOD_SCORE && margin >= MARGIN;
 }
 ```
 
@@ -203,6 +301,13 @@ const skipTypes = ["matching", "ordering", "data_table", "table_parse"];
 
 ## Huidige Resultaten
 
+**Verbeterd in v4.2:**
+- Domain-specifieke thresholds: betere afstemming per afbeeldingstype
+- MIN_CANDIDATES voorkomt te vroege beslissingen op kleine sample
+- MIN_EDU floor voorkomt niet-educatieve afbeeldingen
+- HARD_STOP zorgt voor snelle stops bij uitstekende matches
+- Adaptive batching: start efficiënt, schaal op indien nodig
+
 **Verbeterd in v4.1:**
 - Parallel batching: ~3x sneller dan sequential
 - Margin-based early stop voorkomt "net goed genoeg" afbeeldingen
@@ -212,26 +317,37 @@ const skipTypes = ["matching", "ordering", "data_table", "table_parse"];
 
 **Nog steeds problematisch:**
 - Sommige zeer specifieke concepten vinden moeilijk educatieve diagrammen
-- Balans tussen snelheid (early stop) en kwaliteit (doorzoeken)
+- Threshold tuning per domain is grotendeels op intuïtie gebaseerd
 
 ## Open Vragen
 
-### 1. Early Stop Tuning
-De margin-based early stop is conservatiever dan pure threshold. Is de huidige config optimaal?
-- `GOOD_SCORE_THRESHOLD = 40`
-- `MARGIN_THRESHOLD = 8`
-- `MIN_REP_FIT = 5`
+### 1. Threshold Profile Tuning
+De domain-specifieke thresholds zijn op intuïtie gekozen. Zijn deze waarden optimaal?
 
-### 2. Synonym Coverage
+| Type | GOOD_SCORE | MARGIN | MIN_REP_FIT | MIN_EDU | MIN_CANDIDATES | HARD_STOP |
+|------|------------|--------|-------------|---------|----------------|-----------|
+| diagram | 42 | 7 | 8 | 10 | 10 | 55 |
+| map | 40 | 5 | 6 | 8 | 15 | 52 |
+| microscopy | 35 | 6 | 5 | 8 | 8 | 48 |
+| photo | 45 | 8 | 5 | 10 | 12 | 58 |
+| cross-section | 40 | 7 | 8 | 10 | 10 | 52 |
+| default | 40 | 8 | 5 | 8 | 12 | 55 |
+
+### 2. Adaptive Batch Sizing
+We starten met 2 queries en breiden uit naar 3 als beste score < 25.
+- Is 25 de juiste threshold voor uitbreiding?
+- Zou 4 queries per batch zinvol zijn bij zeer slechte resultaten?
+
+### 3. repFit en eduScore Berekening
+De formules zijn simpel (tel matches * factor). Kunnen we dit verbeteren?
+- Moeten bepaalde termen zwaarder wegen?
+- Zou een gewogen systeem beter werken?
+
+### 4. Synonym Coverage
 De DOMAIN_SYNONYMS zijn handmatig gecureerd. Moeten we:
 - Wikidata labels automatisch ophalen?
 - Meer synoniemen toevoegen voor specifieke vakgebieden?
 - Engels/Nederlands detectie automatiseren?
-
-### 3. Batch Size vs Latency
-Met `BATCH_SIZE = 3` hebben we goede parallelisatie maar early stop werkt per batch.
-- Zou `BATCH_SIZE = 2` sneller stoppen bij goede eerste hit?
-- Of is 3 de sweet spot?
 
 ## Voorbeelden van Gewenste vs Ongewenste Afbeeldingen
 
@@ -248,19 +364,19 @@ Met `BATCH_SIZE = 3` hebben we goede parallelisatie maar early stop werkt per ba
 
 - Platform: Browser-based quiz app
 - API: Wikimedia Commons API + Wikidata SPARQL
-- Caching: LocalStorage met 30 dagen TTL (key: `mediaCache:v4.1`)
-- Concurrency: 3 parallel batches
+- Caching: LocalStorage met 30 dagen TTL (key: `mediaCache:v4.2`)
+- Concurrency: 2-3 parallel batches (adaptive)
 - Fallback: Wikipedia artikel thumbnail
 
 **Performance vereiste:** Afbeeldingen moeten snel laden. De quiz wordt live gebruikt door scholieren - lange laadtijden verstoren de flow. Daarom:
 - Early stopping om onnodige API calls te vermijden
-- Parallel batches voor snellere eerste resultaten
+- Adaptive batching: start klein (2), schaal op indien nodig (3)
 - Caching voor herhaalde vragen
 - Thumbnail URLs (800px) in plaats van full-size afbeeldingen
 
 ## Gewenste Output
 
-1. **Feedback op v4.1 verbeteringen** - Zijn parallel batching en margin-based early stop goed geïmplementeerd?
-2. **Threshold tuning** - Zijn de huidige waarden (40/8/5) optimaal?
-3. **Synonym expansion** - Hoe kunnen we dit verbeteren zonder handmatig werk?
+1. **Feedback op v4.2 verbeteringen** - Zijn domain-specifieke thresholds en adaptive batching goed geïmplementeerd?
+2. **Threshold profile tuning** - Zijn de waarden per type logisch? Welke zouden aangepast moeten worden?
+3. **repFit/eduScore verbetering** - Hoe kunnen we deze berekeningen verfijnen?
 4. **Edge case handling** - Tips voor problematische query types?
