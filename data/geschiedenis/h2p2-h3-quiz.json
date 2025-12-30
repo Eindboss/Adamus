@@ -91,7 +91,23 @@
           ]
         }
       ],
-      "explanation": "Schrift + administratie is essentieel voor een staat: belasting, voorraden, bevelen."
+      "explanation": "Schrift + administratie is essentieel voor een staat: belasting, voorraden, bevelen.",
+      "media": {
+        "query": "narmer palette ancient egypt unification",
+        "alt": "Narmer-palet Egypte vereniging",
+        "negativeTerms": [
+          "replica",
+          "modern"
+        ],
+        "qids": [
+          "Q208291"
+        ],
+        "_intent": {
+          "primaryConcept": "Narmer-palet Egypte vereniging",
+          "specificFocus": "Narmer-palet Egypte vereniging",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-004",
@@ -105,7 +121,22 @@
         "Je mag stemmen, maar alleen in oorlogstijd."
       ],
       "c": 1,
-      "e": "In deze periode gold (na hervormingen) dat burgerrecht aan strengere afstammingseisen gebonden kon zijn; de kern blijft: niet iedereen had politieke rechten."
+      "e": "In deze periode gold (na hervormingen) dat burgerrecht aan strengere afstammingseisen gebonden kon zijn; de kern blijft: niet iedereen had politieke rechten.",
+      "media": {
+        "query": "athenian democracy agora voting",
+        "alt": "Atheense democratie volksvergadering",
+        "negativeTerms": [
+          "modern"
+        ],
+        "qids": [
+          "Q145449"
+        ],
+        "_intent": {
+          "primaryConcept": "Atheense democratie volksvergadering",
+          "specificFocus": "Atheense democratie volksvergadering",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-005",
@@ -120,7 +151,20 @@
         "Omdat er geen wetten bestonden"
       ],
       "c": 1,
-      "e": "De democratie gold alleen voor mannelijke burgers; grote groepen waren uitgesloten."
+      "e": "De democratie gold alleen voor mannelijke burgers; grote groepen waren uitgesloten.",
+      "media": {
+        "query": "athenian democracy citizens slaves excluded",
+        "alt": "beperkte democratie Athene",
+        "negativeTerms": [],
+        "qids": [
+          "Q145449"
+        ],
+        "_intent": {
+          "primaryConcept": "beperkte democratie Athene",
+          "specificFocus": "beperkte democratie Athene",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-006",
@@ -134,7 +178,23 @@
         "Mythen werden pas na de komst van de Romeinen bedacht."
       ],
       "c": 1,
-      "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als ‘wereldbeeld’ vóór wetenschappelijke verklaringen dominant worden."
+      "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als ‘wereldbeeld’ vóór wetenschappelijke verklaringen dominant worden.",
+      "media": {
+        "query": "greek mythology olympus gods illustration",
+        "alt": "Griekse mythologie goden",
+        "negativeTerms": [
+          "disney",
+          "cartoon"
+        ],
+        "qids": [
+          "Q33927"
+        ],
+        "_intent": {
+          "primaryConcept": "Griekse mythologie goden",
+          "specificFocus": "Griekse mythologie goden",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-007",
@@ -175,7 +235,20 @@
         "Omdat mythen wetenschappelijk bewezen waren"
       ],
       "c": 1,
-      "e": "Mythen bleven belangrijk als wereldbeeld, terwijl sommige Grieken ook met observatie en logica gingen verklaren."
+      "e": "Mythen bleven belangrijk als wereldbeeld, terwijl sommige Grieken ook met observatie en logica gingen verklaren.",
+      "media": {
+        "query": "greek philosophy science thales natural explanation",
+        "alt": "Griekse filosofie wetenschap",
+        "negativeTerms": [],
+        "qids": [
+          "Q122393"
+        ],
+        "_intent": {
+          "primaryConcept": "Griekse filosofie wetenschap",
+          "specificFocus": "Griekse filosofie wetenschap",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-009",
@@ -191,7 +264,23 @@
         "486 v.C."
       ],
       "c": 0,
-      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie."
+      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie.",
+      "media": {
+        "query": "battle of marathon 490 BC map",
+        "alt": "Slag bij Marathon 490 v.C.",
+        "negativeTerms": [
+          "running",
+          "sport"
+        ],
+        "qids": [
+          "Q205588"
+        ],
+        "_intent": {
+          "primaryConcept": "Slag bij Marathon 490 v.C.",
+          "specificFocus": "Slag bij Marathon 490 v.C.",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-010",
@@ -242,7 +331,21 @@
         "Athene had geen slaven, Sparta wel."
       ],
       "c": 1,
-      "e": "Athene: politiek debat, handel/cultuur. Sparta: krijgersstaat met strenge opvoeding (agoge)."
+      "e": "Athene: politiek debat, handel/cultuur. Sparta: krijgersstaat met strenge opvoeding (agoge).",
+      "media": {
+        "query": "athens sparta comparison ancient greece map",
+        "alt": "Athene vs Sparta vergelijking",
+        "negativeTerms": [],
+        "qids": [
+          "Q1524",
+          "Q5765"
+        ],
+        "_intent": {
+          "primaryConcept": "Athene vs Sparta vergelijking",
+          "specificFocus": "Athene vs Sparta vergelijking",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-012",
@@ -275,7 +378,20 @@
           ]
         }
       ],
-      "explanation": "Kern: ‘vrij’ ≠ ‘burger’. Burgerrecht bepaalt politieke deelname."
+      "explanation": "Kern: ‘vrij’ ≠ ‘burger’. Burgerrecht bepaalt politieke deelname.",
+      "media": {
+        "query": "athenian social classes citizens metics slaves diagram",
+        "alt": "sociale klassen Athene burgers metoiken slaven",
+        "negativeTerms": [],
+        "qids": [
+          "Q1524"
+        ],
+        "_intent": {
+          "primaryConcept": "sociale klassen Athene burgers metoiken slaven",
+          "specificFocus": "sociale klassen Athene burgers metoiken slaven",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-013",
@@ -289,7 +405,23 @@
         "Om belasting te vermijden."
       ],
       "c": 1,
-      "e": "Religieus wereldbeeld: het lichaam moest bewaard blijven voor voortbestaan na de dood."
+      "e": "Religieus wereldbeeld: het lichaam moest bewaard blijven voor voortbestaan na de dood.",
+      "media": {
+        "query": "egyptian mummification afterlife ka ba",
+        "alt": "Egyptische mummificatie hiernamaals",
+        "negativeTerms": [
+          "horror",
+          "movie"
+        ],
+        "qids": [
+          "Q178885"
+        ],
+        "_intent": {
+          "primaryConcept": "Egyptische mummificatie hiernamaals",
+          "specificFocus": "Egyptische mummificatie hiernamaals",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-014",
@@ -330,7 +462,20 @@
         "Voordeel: rijkdom speelde geen rol; nadeel: alleen slaven deden mee"
       ],
       "c": 1,
-      "e": "Loting beperkte de macht van een elite, maar kon ongeschikte bestuurders opleveren."
+      "e": "Loting beperkte de macht van een elite, maar kon ongeschikte bestuurders opleveren.",
+      "media": {
+        "query": "athenian democracy sortition lottery kleroterion",
+        "alt": "loting Atheense democratie",
+        "negativeTerms": [],
+        "qids": [
+          "Q378174"
+        ],
+        "_intent": {
+          "primaryConcept": "loting Atheense democratie",
+          "specificFocus": "loting Atheense democratie",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-016",
@@ -344,7 +489,23 @@
         "Als verplichte legertraining"
       ],
       "c": 1,
-      "e": "Olympia was vooral religieus: offers, eer voor Zeus, en sport als onderdeel van het festival."
+      "e": "Olympia was vooral religieus: offers, eer voor Zeus, en sport als onderdeel van het festival.",
+      "media": {
+        "query": "ancient olympic games olympia zeus temple",
+        "alt": "antieke Olympische Spelen Olympia",
+        "negativeTerms": [
+          "modern",
+          "2024"
+        ],
+        "qids": [
+          "Q8447"
+        ],
+        "_intent": {
+          "primaryConcept": "antieke Olympische Spelen Olympia",
+          "specificFocus": "antieke Olympische Spelen Olympia",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-017",
@@ -359,7 +520,20 @@
         "Omdat sport belangrijker was dan religie"
       ],
       "c": 1,
-      "e": "De wapenstilstand moest veilige deelname aan het religieuze sportfestival mogelijk maken."
+      "e": "De wapenstilstand moest veilige deelname aan het religieuze sportfestival mogelijk maken.",
+      "media": {
+        "query": "ancient olympics sacred truce greece map",
+        "alt": "heilige wapenstilstand Olympische Spelen",
+        "negativeTerms": [],
+        "qids": [
+          "Q8447"
+        ],
+        "_intent": {
+          "primaryConcept": "heilige wapenstilstand Olympische Spelen",
+          "specificFocus": "heilige wapenstilstand Olympische Spelen",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-018",
@@ -373,7 +547,20 @@
         "Noord-Afrika, omdat er geen havens waren"
       ],
       "c": 2,
-      "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotamië was moeilijk bereikbaar én politiek bezet door sterke rijken."
+      "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotamië was moeilijk bereikbaar én politiek bezet door sterke rijken.",
+      "media": {
+        "query": "greek colonization mediterranean map colonies",
+        "alt": "Griekse kolonisatie Middellandse Zee",
+        "negativeTerms": [],
+        "qids": [
+          "Q9242711"
+        ],
+        "_intent": {
+          "primaryConcept": "Griekse kolonisatie Middellandse Zee",
+          "specificFocus": "Griekse kolonisatie Middellandse Zee",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-019",
@@ -410,7 +597,20 @@
         "Ambtenaren waren altijd slaven."
       ],
       "c": 1,
-      "e": "Een complexe staat heeft registratie nodig: graan, arbeid, belasting, handel. Schriftgeleerden vormen de ruggengraat."
+      "e": "Een complexe staat heeft registratie nodig: graan, arbeid, belasting, handel. Schriftgeleerden vormen de ruggengraat.",
+      "media": {
+        "query": "ancient egypt scribe administration hieroglyphics",
+        "alt": "Egyptische schrijvers administratie",
+        "negativeTerms": [],
+        "qids": [
+          "Q333573"
+        ],
+        "_intent": {
+          "primaryConcept": "Egyptische schrijvers administratie",
+          "specificFocus": "Egyptische schrijvers administratie",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-021",
@@ -444,7 +644,22 @@
           ]
         }
       ],
-      "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet ‘iedereen werd Grieks hetzelfde’."
+      "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet ‘iedereen werd Grieks hetzelfde’.",
+      "media": {
+        "query": "alexander the great empire map hellenism",
+        "alt": "Alexander de Grote rijk hellenisme",
+        "negativeTerms": [
+          "movie"
+        ],
+        "qids": [
+          "Q8409"
+        ],
+        "_intent": {
+          "primaryConcept": "Alexander de Grote rijk hellenisme",
+          "specificFocus": "Alexander de Grote rijk hellenisme",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-022",
@@ -459,7 +674,20 @@
         "De Griekse godsdienst"
       ],
       "c": 1,
-      "e": "Door Alexanders veroveringen vermengde de Griekse cultuur zich met oosterse culturen."
+      "e": "Door Alexanders veroveringen vermengde de Griekse cultuur zich met oosterse culturen.",
+      "media": {
+        "query": "hellenistic period greek culture spread map",
+        "alt": "hellenisme verspreiding Griekse cultuur",
+        "negativeTerms": [],
+        "qids": [
+          "Q102248"
+        ],
+        "_intent": {
+          "primaryConcept": "hellenisme verspreiding Griekse cultuur",
+          "specificFocus": "hellenisme verspreiding Griekse cultuur",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-023",
@@ -474,7 +702,22 @@
         "Voor handel met andere volken"
       ],
       "c": 1,
-      "e": "Piramides waren religieuze graven en symbolen van macht en organisatie."
+      "e": "Piramides waren religieuze graven en symbolen van macht en organisatie.",
+      "media": {
+        "query": "pyramids of giza ancient egypt pharaoh",
+        "alt": "piramides van Gizeh farao",
+        "negativeTerms": [
+          "modern"
+        ],
+        "qids": [
+          "Q37200"
+        ],
+        "_intent": {
+          "primaryConcept": "piramides van Gizeh farao",
+          "specificFocus": "piramides van Gizeh farao",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-024",
@@ -488,7 +731,20 @@
         "Het gaat over Griekse mythologie."
       ],
       "c": 1,
-      "e": "Het palet toont machtssymboliek: legitimatie van een nieuwe politieke orde."
+      "e": "Het palet toont machtssymboliek: legitimatie van een nieuwe politieke orde.",
+      "media": {
+        "query": "narmer palette upper lower egypt unification",
+        "alt": "Narmer-palet Boven- en Beneden-Egypte",
+        "negativeTerms": [],
+        "qids": [
+          "Q208291"
+        ],
+        "_intent": {
+          "primaryConcept": "Narmer-palet Boven- en Beneden-Egypte",
+          "specificFocus": "Narmer-palet Boven- en Beneden-Egypte",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-025",
@@ -550,7 +806,20 @@
         "764 v.C."
       ],
       "c": 0,
-      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum."
+      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum.",
+      "media": {
+        "query": "ancient olympia stadium 776 BC reconstruction",
+        "alt": "Olympia stadion 776 v.C.",
+        "negativeTerms": [],
+        "qids": [
+          "Q6100"
+        ],
+        "_intent": {
+          "primaryConcept": "Olympia stadion 776 v.C.",
+          "specificFocus": "Olympia stadion 776 v.C.",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-028",
@@ -564,7 +833,20 @@
         "Het toont dat alle mythen onwaar zijn."
       ],
       "c": 1,
-      "e": "Het gaat om nieuwsgierigheid, navigatie en observatie—een brug naar wetenschappelijk denken."
+      "e": "Het gaat om nieuwsgierigheid, navigatie en observatie—een brug naar wetenschappelijk denken.",
+      "media": {
+        "query": "pytheas voyage exploration thule map",
+        "alt": "Pytheas reis naar Thule",
+        "negativeTerms": [],
+        "qids": [
+          "Q310170"
+        ],
+        "_intent": {
+          "primaryConcept": "Pytheas reis naar Thule",
+          "specificFocus": "Pytheas reis naar Thule",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-029",
@@ -598,7 +880,21 @@
           ]
         }
       ],
-      "explanation": "Delphi is hét voorbeeld van religieus ‘advies’ in politieke beslissingen."
+      "explanation": "Delphi is hét voorbeeld van religieus ‘advies’ in politieke beslissingen.",
+      "media": {
+        "query": "mount olympus greece delphi oracle apollo",
+        "alt": "Olympus en Delphi orakel",
+        "negativeTerms": [],
+        "qids": [
+          "Q1941",
+          "Q26456"
+        ],
+        "_intent": {
+          "primaryConcept": "Olympus en Delphi orakel",
+          "specificFocus": "Olympus en Delphi orakel",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-030",
@@ -650,7 +946,20 @@
         "De Nijl was belangrijk voor transport en handel."
       ],
       "c": 2,
-      "e": "Vruchtbaar gebied = ‘zwarte land’ (kemet); woestijn = ‘rode land’ (deshret)."
+      "e": "Vruchtbaar gebied = ‘zwarte land’ (kemet); woestijn = ‘rode land’ (deshret).",
+      "media": {
+        "query": "nile river egypt flooding agriculture kemet",
+        "alt": "Nijl overstroming vruchtbaar land",
+        "negativeTerms": [],
+        "qids": [
+          "Q3392"
+        ],
+        "_intent": {
+          "primaryConcept": "Nijl overstroming vruchtbaar land",
+          "specificFocus": "Nijl overstroming vruchtbaar land",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-032",
@@ -666,7 +975,20 @@
         "485 v.C."
       ],
       "c": 0,
-      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond."
+      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond.",
+      "media": {
+        "query": "battle of salamis 480 BC map naval",
+        "alt": "zeeslag bij Salamis 480 v.C.",
+        "negativeTerms": [],
+        "qids": [
+          "Q131212"
+        ],
+        "_intent": {
+          "primaryConcept": "zeeslag bij Salamis 480 v.C.",
+          "specificFocus": "zeeslag bij Salamis 480 v.C.",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-033",
@@ -680,7 +1002,20 @@
         "Grieken konden cavalerie inzetten."
       ],
       "c": 1,
-      "e": "Smalle zeestraat = manoeuvreerruimte beperkt → tactisch voordeel voor kleinere/behendigere vloot."
+      "e": "Smalle zeestraat = manoeuvreerruimte beperkt → tactisch voordeel voor kleinere/behendigere vloot.",
+      "media": {
+        "query": "battle of salamis strait tactics trireme",
+        "alt": "Salamis zeestraat strategie",
+        "negativeTerms": [],
+        "qids": [
+          "Q131212"
+        ],
+        "_intent": {
+          "primaryConcept": "Salamis zeestraat strategie",
+          "specificFocus": "Salamis zeestraat strategie",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-034",
@@ -695,7 +1030,20 @@
         "Dat Grieken alleen hun eigen dialect spraken"
       ],
       "c": 1,
-      "e": "'Barbaren' laat zien dat Grieken een wij-zij-denken hadden op basis van taal en cultuur."
+      "e": "'Barbaren' laat zien dat Grieken een wij-zij-denken hadden op basis van taal en cultuur.",
+      "media": {
+        "query": "ancient greece barbarians concept map",
+        "alt": "Grieken en barbaren concept",
+        "negativeTerms": [],
+        "qids": [
+          "Q37956"
+        ],
+        "_intent": {
+          "primaryConcept": "Grieken en barbaren concept",
+          "specificFocus": "Grieken en barbaren concept",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-035",
@@ -709,7 +1057,20 @@
         "Bestuur door farao’s."
       ],
       "c": 1,
-      "e": "Een tiran greep macht; het woord is niet per se ‘modern moreel’ negatief in de oudheid."
+      "e": "Een tiran greep macht; het woord is niet per se ‘modern moreel’ negatief in de oudheid.",
+      "media": {
+        "query": "greek tyranny tyrant ancient greece",
+        "alt": "Griekse tirannie machthebber",
+        "negativeTerms": [],
+        "qids": [
+          "Q181138"
+        ],
+        "_intent": {
+          "primaryConcept": "Griekse tirannie machthebber",
+          "specificFocus": "Griekse tirannie machthebber",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-036",
@@ -724,7 +1085,20 @@
         "Omdat ze altijd propaganda zijn"
       ],
       "c": 1,
-      "e": "Beelden zijn vaak symbolisch, maar geven inzicht in waarden en zelfbeeld."
+      "e": "Beelden zijn vaak symbolisch, maar geven inzicht in waarden en zelfbeeld.",
+      "media": {
+        "query": "greek vase painting red figure black figure",
+        "alt": "Griekse vaasschildering",
+        "negativeTerms": [],
+        "qids": [
+          "Q738680"
+        ],
+        "_intent": {
+          "primaryConcept": "Griekse vaasschildering",
+          "specificFocus": "Griekse vaasschildering",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-037",
@@ -824,7 +1198,20 @@
         "De komst van de Romeinen."
       ],
       "c": 1,
-      "e": "Aanleiding = directe trigger; diepere oorzaak = structurele machtsbalans en angst voor groeiende macht van de ander."
+      "e": "Aanleiding = directe trigger; diepere oorzaak = structurele machtsbalans en angst voor groeiende macht van de ander.",
+      "media": {
+        "query": "peloponnesian war athens sparta map",
+        "alt": "Peloponnesische oorlog Athene Sparta",
+        "negativeTerms": [],
+        "qids": [
+          "Q165139"
+        ],
+        "_intent": {
+          "primaryConcept": "Peloponnesische oorlog Athene Sparta",
+          "specificFocus": "Peloponnesische oorlog Athene Sparta",
+          "representation": "map"
+        }
+      }
     },
     {
       "id": "g-040",
@@ -838,7 +1225,20 @@
         "Speerwerpen"
       ],
       "c": 2,
-      "e": "Vierspan = vierspan-wagenrace, een prestigieuze discipline."
+      "e": "Vierspan = vierspan-wagenrace, een prestigieuze discipline.",
+      "media": {
+        "query": "ancient greek chariot racing quadriga vase",
+        "alt": "Grieks wagenrennen vierspan",
+        "negativeTerms": [],
+        "qids": [
+          "Q36920"
+        ],
+        "_intent": {
+          "primaryConcept": "Grieks wagenrennen vierspan",
+          "specificFocus": "Grieks wagenrennen vierspan",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-041",
@@ -852,7 +1252,21 @@
         "Toen waren vrouwen verplicht; nu verboden."
       ],
       "c": 1,
-      "e": "Belangrijk: religieuze context + uitsluiting in de oudheid versus inclusiever en mondialer nu."
+      "e": "Belangrijk: religieuze context + uitsluiting in de oudheid versus inclusiever en mondialer nu.",
+      "media": {
+        "query": "ancient vs modern olympic games comparison",
+        "alt": "antieke vs moderne Olympische Spelen",
+        "negativeTerms": [],
+        "qids": [
+          "Q8447",
+          "Q5389"
+        ],
+        "_intent": {
+          "primaryConcept": "antieke vs moderne Olympische Spelen",
+          "specificFocus": "antieke vs moderne Olympische Spelen",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-042",
@@ -919,7 +1333,20 @@
         "macht van de adel"
       ],
       "c": 1,
-      "e": "demos = volk, kratos = macht/heerschappij."
+      "e": "demos = volk, kratos = macht/heerschappij.",
+      "media": {
+        "query": "athenian democracy pnyx assembly voting",
+        "alt": "Atheense democratie volksvergadering",
+        "negativeTerms": [],
+        "qids": [
+          "Q145449"
+        ],
+        "_intent": {
+          "primaryConcept": "Atheense democratie volksvergadering",
+          "specificFocus": "Atheense democratie volksvergadering",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-046",
@@ -1005,7 +1432,20 @@
         "2800 v.C."
       ],
       "c": 0,
-      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes."
+      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes.",
+      "media": {
+        "query": "narmer ancient egypt 3100 BC unification",
+        "alt": "Narmer 3100 v.C. Egypte",
+        "negativeTerms": [],
+        "qids": [
+          "Q183109"
+        ],
+        "_intent": {
+          "primaryConcept": "Narmer 3100 v.C. Egypte",
+          "specificFocus": "Narmer 3100 v.C. Egypte",
+          "representation": "photo"
+        }
+      }
     },
     {
       "id": "g-049",
@@ -1019,7 +1459,22 @@
         "wordt (oorspronkelijk) mondeling doorgegeven"
       ],
       "c": 2,
-      "e": "Mythen zijn betekenisvolle verklarende verhalen, maar niet gebaseerd op wetenschappelijk bewijs."
+      "e": "Mythen zijn betekenisvolle verklarende verhalen, maar niet gebaseerd op wetenschappelijk bewijs.",
+      "media": {
+        "query": "greek mythology characteristics oral tradition",
+        "alt": "Griekse mythologie kenmerken",
+        "negativeTerms": [
+          "disney"
+        ],
+        "qids": [
+          "Q33927"
+        ],
+        "_intent": {
+          "primaryConcept": "Griekse mythologie kenmerken",
+          "specificFocus": "Griekse mythologie kenmerken",
+          "representation": "diagram"
+        }
+      }
     },
     {
       "id": "g-050",

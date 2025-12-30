@@ -351,14 +351,80 @@ De DOMAIN_SYNONYMS zijn handmatig gecureerd. Moeten we:
 
 ## Voorbeelden van Gewenste vs Ongewenste Afbeeldingen
 
+### Biologie
 | Vraag | Gewenst | Ongewenst |
 |-------|---------|-----------|
 | Biceps beweging | Gelabeld anatomisch diagram arm | Bodybuilder, stock foto |
 | Osteon (Havers-systeem) | Microscoop beeld of schema met labels | Oude medische tekst |
 | RSI preventie | Ergonomische werkplek diagram | Kantoormeubel reclame |
+
+### Aardrijkskunde
+| Vraag | Gewenst | Ongewenst |
+|-------|---------|-----------|
 | Köppen klimaatzones | Wereld klimaatkaart met zones | Fantasy game map |
 | Stuwingsregen | Diagram loef/lijzijde bergen | Foto regendruppels |
 | Urbanisatie Nederland | Luchtfoto Randstad of diagram | Minecraft screenshot |
+| Golfstroom effect | Kaart met warme zeestroming naar Europa | Stockfoto golven |
+| Hoge/lage druk wind | Diagram luchtdruk en windrichting | Weerinstrumenten foto |
+| Dag en nacht rotatie | Diagram aarde draait om as | Cartoon/kids illustratie |
+
+### Geschiedenis
+| Vraag | Gewenst | Ongewenst |
+|-------|---------|-----------|
+| Slag bij Marathon | Historische kaart 490 v.C. | Marathon hardlopen foto |
+| Piramides van Gizeh | Foto piramides met context | Moderne toeristen |
+| Atheense democratie | Diagram/illustratie volksvergadering | Modern parlement |
+| Alexander de Grote rijk | Historische kaart veroveringen | Film screenshot |
+| Mummificatie | Educatief diagram/museum foto | Horror/movie beeld |
+| Paard van Troje | Historische illustratie/reconstructie | Computer virus icon |
+
+## Nieuwe Uitdagingen per Vakgebied
+
+### Aardrijkskunde-specifiek
+- **Kaarten vs diagrammen**: Veel vragen vereisen kaarten (klimaatzones, zeestromingen) maar ook conceptuele diagrammen (luchtdruk, seizoenen)
+- **Geografische ambiguïteit**: "Golfstroom" kan verward worden met "golf" (sport) - negativeTerms essentieel
+- **Schaalvragen**: Afbeeldingen over kaartschaal zijn lastig - vaak te abstract
+- **Nederlandse termen**: Köppen, stuwingsregen, loef/lijzijde - synoniemen naar Engels cruciaal
+
+### Geschiedenis-specifiek
+- **Historische context**: Modern recreaties vs authentieke artefacten - moeilijk te onderscheiden
+- **Film/entertainment vervuiling**: "Sparta", "Troje", "Alexander" geven vaak filmstills
+- **Jaartallen in queries**: "490 BC" helpt bij Marathon, maar niet altijd beschikbaar
+- **Artefacten vs reconstructies**: Narmer-palet (echt) vs Paard van Troje (altijd reconstructie)
+- **Religieuze/culturele gevoeligheid**: Mummificatie afbeeldingen kunnen te grafisch zijn
+
+## Aanbevolen Uitbreidingen
+
+### Nieuwe CHAPTER_PROFILES nodig
+```javascript
+// HISTORY
+ancient_egypt: { prefer: ["pharaoh", "pyramid", "hieroglyph", "mummy"], avoid: ["horror", "movie", "modern"] },
+ancient_greece: { prefer: ["ancient", "classical", "polis", "temple"], avoid: ["modern", "film", "reenactment"] },
+battles: { prefer: ["battle", "map", "ancient", "historical"], avoid: ["game", "movie", "sport"] },
+
+// GEOGRAPHY (aanvullingen)
+seasons: { prefer: ["earth", "axis", "tilt", "diagram"], avoid: ["cartoon", "kids"] },
+ocean_currents: { prefer: ["current", "stream", "atlantic", "map"], avoid: ["surfing", "waves"] },
+atmospheric: { prefer: ["pressure", "wind", "diagram", "circulation"], avoid: ["weather app", "forecast"] }
+```
+
+### Nieuwe DOMAIN_SYNONYMS nodig
+```javascript
+history: {
+  "farao": ["pharaoh", "Egyptian king"],
+  "hiërogliefen": ["hieroglyphics", "Egyptian writing"],
+  "mummificatie": ["mummification", "embalming"],
+  "polis": ["city-state", "Greek polis"],
+  "democratie": ["democracy", "Athenian democracy"],
+  "hellenisme": ["Hellenism", "Hellenistic period"]
+},
+seasons: {
+  "aardas": ["earth axis", "axial tilt"],
+  "seizoenen": ["seasons", "seasonal"],
+  "keerkring": ["tropic", "tropics"],
+  "poolcirkel": ["arctic circle", "polar circle"]
+}
+```
 
 ## Technische Context
 
