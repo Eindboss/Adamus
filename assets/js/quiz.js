@@ -62,6 +62,15 @@ import {
   checkDataTable,
   checkMultipart,
   checkOrderingV2,
+  // English question types
+  renderVocabList,
+  checkVocabList,
+  renderGrammarTransform,
+  checkGrammarTransform,
+  renderGrammarFill,
+  checkGrammarFill,
+  renderSentenceCorrection,
+  checkSentenceCorrection,
 } from "./question-types-v2.js";
 import {
   normalizeQuestion,
@@ -540,6 +549,19 @@ async function renderQuestion() {
       break;
     case "multipart":
       renderMultipart(container, q);
+      break;
+    // English question types
+    case "vocab_list":
+      renderVocabList(container, q);
+      break;
+    case "grammar_transform":
+      renderGrammarTransform(container, q);
+      break;
+    case "grammar_fill":
+      renderGrammarFill(container, q);
+      break;
+    case "sentence_correction":
+      renderSentenceCorrection(container, q);
       break;
     default:
       // Fallback for unknown types
@@ -2145,6 +2167,19 @@ export function checkAnswer() {
       break;
     case "multipart":
       checkMultipart(q);
+      break;
+    // English question types
+    case "vocab_list":
+      checkVocabList(q);
+      break;
+    case "grammar_transform":
+      checkGrammarTransform(q);
+      break;
+    case "grammar_fill":
+      checkGrammarFill(q);
+      break;
+    case "sentence_correction":
+      checkSentenceCorrection(q);
       break;
     default:
       checkOpenAnswer(q);

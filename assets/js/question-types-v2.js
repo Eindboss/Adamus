@@ -1132,3 +1132,637 @@ export function checkOrderingV2(q) {
   // Don't give away the correct order
   showFeedbackFn(isCorrect, q.explanation || q.e || "", "");
 }
+
+/* ===========================================
+   Vocab List Question Type (Engels)
+   For vocabulary practice with NL-EN / EN-NL
+   =========================================== */
+
+/**
+ * Render vocab_list question
+ * Supports direction: "nl-en", "en-nl", "mixed"
+ */
+export function renderVocabList(container, q) {
+  const instruction = q.instruction || "Vertaal de woorden:";
+  const direction = q.direction || "nl-en";
+  const items = q.items || [];
+
+  let itemsHtml = "";
+
+  items.forEach((item, idx) => {
+    let prompt, placeholder;
+
+    if (direction === "nl-en") {
+      prompt = item.nl;
+      placeholder = "Engels...";
+    } else if (direction === "en-nl") {
+      prompt = item.en;
+      placeholder = "Nederlands...";
+    } else {
+      // mixed
+      prompt = item.prompt;
+      placeholder = item.direction === "nl-en" ? "Engels..." : "Nederlands...";
+    }
+
+    itemsHtml += `
+      <div class="vocab-item" data-idx="${idx}">
+        <span class="vocab-prompt">${prompt}</span>
+        <input type="text"
+          class="vocab-input"
+          id="vocab-${idx}"
+          data-idx="${idx}"
+          placeholder="${placeholder}"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false">
+      </div>
+    `;
+  });
+
+  const contentHtml = `
+    <div class="question-instruction">${instruction}</div>
+    <div class="vocab-list">${itemsHtml}</div>
+    <div class="vocab-progress">
+      <span id="vocabFilled">0</span> / <span>${items.length}</span> ingevuld
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  container.innerHTML = contentHtml;
+
+  // Setup input listeners
+  const inputs = $$$(".vocab-input", container);
+  inputs.forEach((input, idx) => {
+    input.addEventListener("input", () => updateVocabProgress(inputs));
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (idx < inputs.length - 1) {
+          inputs[idx + 1].focus();
+        }
+      }
+    });
+  });
+
+  if (inputs.length > 0) inputs[0].focus();
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+function updateVocabProgress(inputs) {
+  const filled = inputs.filter(i => i.value.trim().length > 0).length;
+  const filledEl = $("vocabFilled");
+  if (filledEl) filledEl.textContent = filled;
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = filled === 0;
+}
+
+/**
+ * Check vocab_list answer
+ */
+export function checkVocabList(q) {
+  const direction = q.direction || "nl-en";
+  const items = q.items || [];
+  let correctCount = 0;
+
+  items.forEach((item, idx) => {
+    const input = $(`vocab-${idx}`);
+    if (!input) return;
+
+    const userAnswer = input.value.trim().toLowerCase();
+
+    // Get accepted answers based on direction
+    let acceptedAnswers;
+    if (direction === "nl-en") {
+      acceptedAnswers = item.en || [];
+    } else if (direction === "en-nl") {
+      acceptedAnswers = item.nl || [];
+    } else {
+      // mixed
+      acceptedAnswers = item.accept || [];
+    }
+
+    // Ensure array
+    if (!Array.isArray(acceptedAnswers)) {
+      acceptedAnswers = [acceptedAnswers];
+    }
+
+    // Check if user answer matches any accepted answer (case insensitive)
+    const isCorrect = acceptedAnswers.some(accepted =>
+      userAnswer === accepted.toLowerCase()
+    );
+
+    if (isCorrect) {
+      correctCount++;
+      input.classList.add("input-correct");
+    } else {
+      input.classList.add("input-wrong");
+      // Show one correct answer as hint
+      const hint = document.createElement("span");
+      hint.className = "vocab-hint";
+      hint.textContent = ` → ${acceptedAnswers[0]}`;
+      input.parentNode.appendChild(hint);
+    }
+  });
+
+  const allCorrect = correctCount === items.length;
+
+  if (allCorrect) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, allCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
+
+  state.history.add({
+    question: htmlToText(q.instruction || "Vocab list"),
+    type: "vocab_list",
+    correct: allCorrect,
+    details: `${correctCount}/${items.length} correct`,
+  });
+
+  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${items.length} goed`);
+}
+
+/* ===========================================
+   Grammar Transform Question Type (Engels)
+   For verb tenses, plurals, comparisons
+   =========================================== */
+
+/**
+ * Render grammar_transform question
+ * Supports category: "verb_tense", "plural", "comparison"
+ */
+export function renderGrammarTransform(container, q) {
+  const instruction = q.instruction || "Vul de juiste vorm in:";
+  const category = q.category || "verb_tense";
+  const items = q.items || [];
+
+  let itemsHtml = "";
+
+  items.forEach((item, idx) => {
+    let prompt, placeholder;
+
+    if (category === "verb_tense") {
+      prompt = `${item.base} → <em>${item.tense}</em>`;
+      placeholder = "...";
+    } else if (category === "plural") {
+      prompt = item.singular;
+      placeholder = "meervoud...";
+    } else if (category === "comparison") {
+      // Comparison has two fields
+      prompt = item.base;
+      itemsHtml += `
+        <div class="grammar-item grammar-comparison" data-idx="${idx}">
+          <span class="grammar-prompt">${prompt}</span>
+          <div class="comparison-inputs">
+            <input type="text"
+              class="grammar-input"
+              id="grammar-${idx}-comp"
+              data-idx="${idx}"
+              data-field="comparative"
+              placeholder="vergrotende trap..."
+              autocomplete="off">
+            <input type="text"
+              class="grammar-input"
+              id="grammar-${idx}-super"
+              data-idx="${idx}"
+              data-field="superlative"
+              placeholder="overtreffende trap..."
+              autocomplete="off">
+          </div>
+        </div>
+      `;
+      return;
+    }
+
+    itemsHtml += `
+      <div class="grammar-item" data-idx="${idx}">
+        <span class="grammar-prompt">${prompt}</span>
+        <input type="text"
+          class="grammar-input"
+          id="grammar-${idx}"
+          data-idx="${idx}"
+          placeholder="${placeholder}"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false">
+      </div>
+    `;
+  });
+
+  const contentHtml = `
+    <div class="question-instruction">${instruction}</div>
+    <div class="grammar-list">${itemsHtml}</div>
+    <div class="grammar-progress">
+      <span id="grammarFilled">0</span> / <span id="grammarTotal">${items.length}</span> ingevuld
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  container.innerHTML = contentHtml;
+
+  // Setup input listeners
+  const inputs = $$$(".grammar-input", container);
+  inputs.forEach((input, idx) => {
+    input.addEventListener("input", () => updateGrammarProgress(inputs, category, items.length));
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (idx < inputs.length - 1) {
+          inputs[idx + 1].focus();
+        }
+      }
+    });
+  });
+
+  if (inputs.length > 0) inputs[0].focus();
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+function updateGrammarProgress(inputs, category, itemCount) {
+  let filled;
+  if (category === "comparison") {
+    // For comparison, need both fields filled per item
+    const pairs = {};
+    inputs.forEach(input => {
+      const idx = input.dataset.idx;
+      if (!pairs[idx]) pairs[idx] = { comp: false, super: false };
+      if (input.dataset.field === "comparative" && input.value.trim()) pairs[idx].comp = true;
+      if (input.dataset.field === "superlative" && input.value.trim()) pairs[idx].super = true;
+    });
+    filled = Object.values(pairs).filter(p => p.comp && p.super).length;
+  } else {
+    filled = inputs.filter(i => i.value.trim().length > 0).length;
+  }
+
+  const filledEl = $("grammarFilled");
+  if (filledEl) filledEl.textContent = filled;
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = filled === 0;
+}
+
+/**
+ * Check grammar_transform answer
+ */
+export function checkGrammarTransform(q) {
+  const category = q.category || "verb_tense";
+  const items = q.items || [];
+  let correctCount = 0;
+
+  items.forEach((item, idx) => {
+    if (category === "comparison") {
+      // Two fields to check
+      const compInput = $(`grammar-${idx}-comp`);
+      const superInput = $(`grammar-${idx}-super`);
+
+      const userComp = compInput?.value.trim().toLowerCase() || "";
+      const userSuper = superInput?.value.trim().toLowerCase() || "";
+
+      const compCorrect = (item.comparative || []).some(a => userComp === a.toLowerCase());
+      const superCorrect = (item.superlative || []).some(a => userSuper === a.toLowerCase());
+
+      if (compCorrect && superCorrect) {
+        correctCount++;
+        compInput?.classList.add("input-correct");
+        superInput?.classList.add("input-correct");
+      } else {
+        if (compCorrect) {
+          compInput?.classList.add("input-correct");
+        } else {
+          compInput?.classList.add("input-wrong");
+          addHint(compInput, item.comparative?.[0]);
+        }
+        if (superCorrect) {
+          superInput?.classList.add("input-correct");
+        } else {
+          superInput?.classList.add("input-wrong");
+          addHint(superInput, item.superlative?.[0]);
+        }
+      }
+    } else {
+      const input = $(`grammar-${idx}`);
+      if (!input) return;
+
+      const userAnswer = input.value.trim().toLowerCase();
+      const acceptedAnswers = item.accept || [];
+
+      const isCorrect = acceptedAnswers.some(a => userAnswer === a.toLowerCase());
+
+      if (isCorrect) {
+        correctCount++;
+        input.classList.add("input-correct");
+      } else {
+        input.classList.add("input-wrong");
+        addHint(input, acceptedAnswers[0]);
+      }
+    }
+  });
+
+  const allCorrect = correctCount === items.length;
+
+  if (allCorrect) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, allCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
+
+  state.history.add({
+    question: htmlToText(q.instruction || "Grammar transform"),
+    type: "grammar_transform",
+    correct: allCorrect,
+    details: `${correctCount}/${items.length} correct`,
+  });
+
+  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${items.length} goed`);
+}
+
+function addHint(input, correctAnswer) {
+  if (!input || !correctAnswer) return;
+  const hint = document.createElement("span");
+  hint.className = "grammar-hint";
+  hint.textContent = ` → ${correctAnswer}`;
+  input.parentNode.appendChild(hint);
+}
+
+/* ===========================================
+   Grammar Fill Question Type (Engels)
+   For fill-in-the-blank grammar exercises
+   =========================================== */
+
+/**
+ * Render grammar_fill question
+ * Items contain sentences with {{blank}} placeholders
+ */
+export function renderGrammarFill(container, q) {
+  const instruction = q.instruction || "Vul de juiste vorm in:";
+  const context = q.context || "";
+  const items = q.items || [];
+  const useDropdown = q.use_dropdown || false;
+
+  let itemsHtml = "";
+
+  items.forEach((item, idx) => {
+    let sentence = item.sentence || "";
+
+    if (useDropdown && item.options) {
+      // Replace {{blank}} with dropdown
+      const options = item.options.map(opt =>
+        `<option value="${opt}">${opt}</option>`
+      ).join("");
+
+      sentence = sentence.replace(/\{\{blank\}\}/g, `
+        <select class="grammar-fill-dropdown" id="gfill-${idx}" data-idx="${idx}">
+          <option value="">Kies...</option>
+          ${options}
+        </select>
+      `);
+    } else {
+      // Replace {{blank}} with input
+      sentence = sentence.replace(/\{\{blank\}\}/g, `
+        <input type="text"
+          class="grammar-fill-input"
+          id="gfill-${idx}"
+          data-idx="${idx}"
+          placeholder="..."
+          autocomplete="off">
+      `);
+    }
+
+    itemsHtml += `<div class="grammar-fill-item" data-idx="${idx}">${sentence}</div>`;
+  });
+
+  const contentHtml = `
+    <div class="question-instruction">${instruction}</div>
+    ${context ? `<div class="grammar-context">${context}</div>` : ""}
+    <div class="grammar-fill-list">${itemsHtml}</div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  container.innerHTML = contentHtml;
+
+  // Setup listeners
+  const inputs = $$$(".grammar-fill-input", container);
+  const dropdowns = $$$(".grammar-fill-dropdown", container);
+  const allFields = [...inputs, ...dropdowns];
+
+  inputs.forEach((input, idx) => {
+    input.addEventListener("input", () => updateGrammarFillProgress(allFields));
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const nextInput = inputs[idx + 1] || dropdowns[0];
+        if (nextInput) nextInput.focus();
+      }
+    });
+  });
+
+  dropdowns.forEach((dd) => {
+    dd.addEventListener("change", () => updateGrammarFillProgress(allFields));
+  });
+
+  if (allFields.length > 0) allFields[0].focus();
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+function updateGrammarFillProgress(fields) {
+  const filled = fields.filter(f => f.value.trim().length > 0).length;
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = filled === 0;
+}
+
+/**
+ * Check grammar_fill answer
+ */
+export function checkGrammarFill(q) {
+  const items = q.items || [];
+  const useDropdown = q.use_dropdown || false;
+  let correctCount = 0;
+
+  items.forEach((item, idx) => {
+    const field = $(`gfill-${idx}`);
+    if (!field) return;
+
+    const userAnswer = field.value.trim().toLowerCase();
+    let isCorrect = false;
+
+    if (useDropdown) {
+      isCorrect = userAnswer === (item.correct || "").toLowerCase();
+    } else {
+      const accepted = item.accept || [];
+      isCorrect = accepted.some(a => userAnswer === a.toLowerCase());
+    }
+
+    if (isCorrect) {
+      correctCount++;
+      field.classList.add(useDropdown ? "dropdown-correct" : "input-correct");
+    } else {
+      field.classList.add(useDropdown ? "dropdown-wrong" : "input-wrong");
+      // Show correct answer
+      const correctAnswer = useDropdown ? item.correct : (item.accept?.[0] || "");
+      const hint = document.createElement("span");
+      hint.className = "grammar-fill-hint";
+      hint.textContent = ` → ${correctAnswer}`;
+      field.parentNode.insertBefore(hint, field.nextSibling);
+    }
+  });
+
+  const allCorrect = correctCount === items.length;
+
+  if (allCorrect) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, allCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
+
+  state.history.add({
+    question: htmlToText(q.instruction || "Grammar fill"),
+    type: "grammar_fill",
+    correct: allCorrect,
+    details: `${correctCount}/${items.length} correct`,
+  });
+
+  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${items.length} goed`);
+}
+
+/* ===========================================
+   Sentence Correction Question Type (Engels)
+   For identifying and correcting grammar errors
+   =========================================== */
+
+/**
+ * Render sentence_correction question
+ */
+export function renderSentenceCorrection(container, q) {
+  const instruction = q.instruction || "Verbeter de fout in elke zin:";
+  const items = q.items || [];
+
+  let itemsHtml = "";
+
+  items.forEach((item, idx) => {
+    itemsHtml += `
+      <div class="correction-item" data-idx="${idx}">
+        <div class="correction-original">
+          <span class="correction-label">Fout:</span>
+          <span class="correction-sentence">${item.sentence}</span>
+        </div>
+        <div class="correction-input-wrap">
+          <span class="correction-label">Correct:</span>
+          <input type="text"
+            class="correction-input"
+            id="correction-${idx}"
+            data-idx="${idx}"
+            placeholder="Typ de correcte zin..."
+            autocomplete="off"
+            spellcheck="true">
+        </div>
+      </div>
+    `;
+  });
+
+  const contentHtml = `
+    <div class="question-instruction">${instruction}</div>
+    <div class="correction-list">${itemsHtml}</div>
+    <div class="correction-progress">
+      <span id="correctionFilled">0</span> / <span>${items.length}</span> ingevuld
+    </div>
+    <div id="feedback" class="feedback" style="display: none;"></div>
+  `;
+
+  container.innerHTML = contentHtml;
+
+  // Setup listeners
+  const inputs = $$$(".correction-input", container);
+  inputs.forEach((input, idx) => {
+    input.addEventListener("input", () => updateCorrectionProgress(inputs));
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (idx < inputs.length - 1) {
+          inputs[idx + 1].focus();
+        }
+      }
+    });
+  });
+
+  if (inputs.length > 0) inputs[0].focus();
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = true;
+}
+
+function updateCorrectionProgress(inputs) {
+  const filled = inputs.filter(i => i.value.trim().length > 0).length;
+  const filledEl = $("correctionFilled");
+  if (filledEl) filledEl.textContent = filled;
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = filled === 0;
+}
+
+/**
+ * Check sentence_correction answer
+ */
+export function checkSentenceCorrection(q) {
+  const items = q.items || [];
+  let correctCount = 0;
+
+  items.forEach((item, idx) => {
+    const input = $(`correction-${idx}`);
+    if (!input) return;
+
+    const userAnswer = input.value.trim().toLowerCase();
+    const accepted = item.accept || [];
+
+    // Normalize answers for comparison (remove extra spaces, punctuation variations)
+    const normalize = (s) => s.toLowerCase()
+      .replace(/\s+/g, " ")
+      .replace(/['']/g, "'")
+      .trim();
+
+    const isCorrect = accepted.some(a => normalize(userAnswer) === normalize(a));
+
+    if (isCorrect) {
+      correctCount++;
+      input.classList.add("input-correct");
+    } else {
+      input.classList.add("input-wrong");
+      // Show one correct answer
+      const hint = document.createElement("div");
+      hint.className = "correction-hint";
+      hint.textContent = accepted[0];
+      input.parentNode.appendChild(hint);
+    }
+  });
+
+  const allCorrect = correctCount === items.length;
+
+  if (allCorrect) {
+    state.score++;
+  } else {
+    state.wrong++;
+  }
+  updateStats(state.subjectId, allCorrect);
+  if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
+
+  state.history.add({
+    question: htmlToText(q.instruction || "Sentence correction"),
+    type: "sentence_correction",
+    correct: allCorrect,
+    details: `${correctCount}/${items.length} correct`,
+  });
+
+  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${items.length} goed`);
+}

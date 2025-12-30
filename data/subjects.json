@@ -192,7 +192,8 @@
       "file": "data/engels/unit2-interface-quiz.json",
       "schema": "toets",
       "hideFlashcards": true,
-      "questionsPerSession": 10
+      "questionsPerSession": 10,
+      "examDurationMinutes": 60
     }
   ]
 }

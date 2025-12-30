@@ -2755,3 +2755,297 @@ textarea.open-input {
     font-size: 1.5rem;
   }
 }
+
+/* ===========================================
+   English Question Types
+   vocab_list, grammar_transform, grammar_fill, sentence_correction
+   =========================================== */
+
+/* Vocab List */
+.vocab-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.vocab-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.vocab-prompt {
+  font-weight: 600;
+  min-width: 120px;
+  color: var(--text);
+}
+
+.vocab-input {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: var(--bg);
+}
+
+.vocab-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.vocab-progress {
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.vocab-hint {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-left: var(--space-2);
+}
+
+/* Grammar Transform */
+.grammar-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.grammar-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.grammar-prompt {
+  font-weight: 500;
+  min-width: 200px;
+  color: var(--text);
+}
+
+.grammar-prompt em {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.grammar-input {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: var(--bg);
+}
+
+.grammar-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.grammar-comparison {
+  flex-wrap: wrap;
+}
+
+.comparison-inputs {
+  display: flex;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.comparison-inputs .grammar-input {
+  flex: 1;
+}
+
+.grammar-progress {
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.grammar-hint {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-left: var(--space-2);
+}
+
+/* Grammar Fill */
+.grammar-context {
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-subtle);
+  border-radius: var(--radius);
+}
+
+.grammar-fill-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.grammar-fill-item {
+  line-height: 2;
+  color: var(--text);
+}
+
+.grammar-fill-input {
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: var(--bg);
+  width: 120px;
+  text-align: center;
+}
+
+.grammar-fill-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.grammar-fill-dropdown {
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: var(--bg);
+  cursor: pointer;
+}
+
+.grammar-fill-dropdown:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.grammar-fill-hint {
+  color: var(--error);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Sentence Correction */
+.correction-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.correction-item {
+  padding: var(--space-3);
+  background: var(--bg-subtle);
+  border-radius: var(--radius);
+}
+
+.correction-original {
+  margin-bottom: var(--space-2);
+}
+
+.correction-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: var(--space-2);
+}
+
+.correction-sentence {
+  color: var(--error);
+  text-decoration: line-through;
+  text-decoration-color: var(--error);
+  text-decoration-thickness: 1px;
+}
+
+.correction-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.correction-input {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: var(--bg);
+}
+
+.correction-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.correction-progress {
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.correction-hint {
+  color: var(--success);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: var(--space-1);
+}
+
+/* Input states (shared) */
+.input-correct {
+  border-color: var(--success) !important;
+  background-color: rgba(34, 197, 94, 0.1) !important;
+}
+
+.input-wrong {
+  border-color: var(--error) !important;
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+.dropdown-correct {
+  border-color: var(--success) !important;
+  background-color: rgba(34, 197, 94, 0.1) !important;
+}
+
+.dropdown-wrong {
+  border-color: var(--error) !important;
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .vocab-item,
+  .grammar-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .vocab-prompt,
+  .grammar-prompt {
+    min-width: auto;
+    margin-bottom: var(--space-1);
+  }
+
+  .vocab-input,
+  .grammar-input {
+    width: 100%;
+  }
+
+  .comparison-inputs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .correction-input-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .correction-input {
+    width: 100%;
+  }
+}
