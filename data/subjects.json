@@ -183,6 +183,16 @@
       "questionsPerSession": 15,
       "examDurationMinutes": 60,
       "preserveOrder": true
+    },
+    {
+      "id": "engels-unit2-interface",
+      "subject": "Engels",
+      "label": "Engels – Unit 2: Interface",
+      "title": "Engels – Unit 2: Interface",
+      "file": "data/engels/unit2-interface-quiz.json",
+      "schema": "toets",
+      "hideFlashcards": true,
+      "questionsPerSession": 10
     }
   ]
 }
