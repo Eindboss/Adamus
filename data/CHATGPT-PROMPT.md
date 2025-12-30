@@ -66,6 +66,7 @@ De app haalt automatisch afbeeldingen van Wikimedia Commons op basis van het `me
 - `_intent`: Extra context voor de scoring (optioneel)
 
 **Wanneer GEEN afbeelding:**
+- **Engels** - geen afbeeldingen nodig bij woordjes/grammatica
 - Jaartalvragen (past beter in de breedte)
 - Vragen die al verwijzen naar "afbeelding 1", "tabel", "grafiek"
 - matching, ordering, table_parse vraagtypen
