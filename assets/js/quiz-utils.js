@@ -23,11 +23,17 @@ export function normalizeQuestion(raw, preferMC = false) {
     "info_card",
     // ChatGPT v2 question types
     "fill_blank",
+    "fill_blank_dropdown",
     "short_answer",
     "matching",
     "numeric",
     "data_table",
     "multipart",
+    // English question types
+    "vocab_list",
+    "grammar_transform",
+    "grammar_fill",
+    "sentence_correction",
   ];
   if (richTypes.includes(raw.type)) {
     return raw;

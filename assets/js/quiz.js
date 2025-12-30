@@ -486,7 +486,10 @@ async function renderQuestion() {
     const isMultiPart = q.type === "wiskunde_multi_part" || q.type === "table_parse" ||
                         q.type === "grouped_short_text" || q.type === "grouped_select" ||
                         q.type === "ratio_table" || q.type === "ordering" ||
-                        q.type === "multipart" || q.type === "matching" || q.type === "data_table";
+                        q.type === "multipart" || q.type === "matching" || q.type === "data_table" ||
+                        // English question types with multiple inputs
+                        q.type === "vocab_list" || q.type === "grammar_transform" ||
+                        q.type === "grammar_fill" || q.type === "sentence_correction";
     resetTimer(isMultiPart ? QUESTION_SECONDS_MULTIPART : QUESTION_SECONDS);
     if (state.timerEnabled) startTimer();
   }
