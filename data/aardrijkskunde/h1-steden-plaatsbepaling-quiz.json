@@ -35,7 +35,13 @@
         "Suburbane wijk"
       ],
       "c": 0,
-      "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan."
+      "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan.",
+      "media": {
+        "query": "dutch city aerial view mixed neighborhoods",
+        "alt": "Luchtfoto Nederlandse stad met wijken",
+        "representation": "photo",
+        "negativeTerms": ["historic center", "binnenstad", "old town"]
+      }
     },
     {
       "id": "q003",
@@ -48,7 +54,13 @@
         "Er reden al veel auto's"
       ],
       "c": 0,
-      "e": "Arbeiders woonden dicht bij hun werk omdat vervoer beperkt was."
+      "e": "Arbeiders woonden dicht bij hun werk omdat vervoer beperkt was.",
+      "media": {
+        "query": "industrial revolution factory chimney 19th century",
+        "alt": "Fabriek uit de industriële revolutie",
+        "representation": "photo",
+        "negativeTerms": ["housing", "workers homes", "neighborhood"]
+      }
     },
     {
       "id": "q004",
@@ -61,7 +73,13 @@
         "Grachten"
       ],
       "c": 0,
-      "e": "Naoorlogse wijken zijn ruim opgezet met flats en groen."
+      "e": "Naoorlogse wijken zijn ruim opgezet met flats en groen.",
+      "media": {
+        "query": "netherlands reconstruction after world war 2 building",
+        "alt": "Wederopbouw Nederland na WO2",
+        "representation": "photo",
+        "negativeTerms": ["apartment", "flat", "highrise", "green space"]
+      }
     },
     {
       "id": "q005",
@@ -74,7 +92,13 @@
         "Groei van landbouw"
       ],
       "c": 0,
-      "e": "Bij suburbanisatie trekken mensen vanuit de stad naar de rand."
+      "e": "Bij suburbanisatie trekken mensen vanuit de stad naar de rand.",
+      "media": {
+        "query": "moving truck family relocation netherlands",
+        "alt": "Verhuiswagen gezin verhuizing",
+        "representation": "photo",
+        "negativeTerms": ["suburb", "buitenwijk", "outskirts"]
+      }
     },
     {
       "id": "q006",
@@ -125,7 +149,13 @@
         "De datumgrens"
       ],
       "c": 0,
-      "e": "De nulmeridiaan is de lengtegraad van 0°."
+      "e": "De nulmeridiaan is de lengtegraad van 0°.",
+      "media": {
+        "query": "world globe longitude latitude lines",
+        "alt": "Wereldbol met graadnet",
+        "representation": "photo",
+        "negativeTerms": ["greenwich", "observatory", "prime meridian"]
+      }
     },
     {
       "id": "q009",
@@ -138,7 +168,13 @@
         "Tijdzones"
       ],
       "c": 0,
-      "e": "Breedtegraden meten afstand tot de evenaar."
+      "e": "Breedtegraden meten afstand tot de evenaar.",
+      "media": {
+        "query": "atlas book open world map",
+        "alt": "Open atlas met wereldkaart",
+        "representation": "photo",
+        "negativeTerms": ["latitude", "equator", "horizontal lines"]
+      }
     },
     {
       "id": "q010",
@@ -151,7 +187,13 @@
         "Hoog en laag"
       ],
       "c": 0,
-      "e": "Lengtegraden verdelen de aarde in oost en west."
+      "e": "Lengtegraden verdelen de aarde in oost en west.",
+      "media": {
+        "query": "compass navigation cardinal directions",
+        "alt": "Kompas met windrichtingen",
+        "representation": "photo",
+        "negativeTerms": ["east west", "longitude", "meridian"]
+      }
     },
     {
       "id": "q011",
