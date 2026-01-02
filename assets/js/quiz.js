@@ -3639,6 +3639,31 @@ function setupEventListeners() {
   if (nextBtn) nextBtn.addEventListener("click", nextQuestion);
   if (skipBtn) skipBtn.addEventListener("click", skipQuestion);
   if (giveUpBtn) giveUpBtn.addEventListener("click", giveUp);
+
+  // Global Enter key to check answer or go to next question
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      // Don't trigger if typing in an input field (those have their own handlers)
+      const activeEl = document.activeElement;
+      const isInputField = activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA");
+      if (isInputField) return;
+
+      // Don't trigger if paused
+      if (state.paused) return;
+
+      if (state.phase === "question" && !state.answered) {
+        // Check if there's a selection and the check button is enabled
+        if (checkBtn && !checkBtn.disabled) {
+          e.preventDefault();
+          checkAnswer();
+        }
+      } else if (state.phase === "feedback") {
+        // Go to next question
+        e.preventDefault();
+        nextQuestion();
+      }
+    }
+  });
   if (pauseBtn) pauseBtn.addEventListener("click", showPause);
   if (resumeBtn) resumeBtn.addEventListener("click", hidePause);
   if (restartBtn) {
