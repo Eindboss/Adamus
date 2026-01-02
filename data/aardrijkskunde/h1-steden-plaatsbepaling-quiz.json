@@ -35,13 +35,7 @@
         "Suburbane wijk"
       ],
       "c": 0,
-      "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan.",
-      "media": {
-        "query": "historic city center medieval old town aerial",
-        "alt": "Historische binnenstad luchtfoto",
-        "representation": "photo",
-        "negativeTerms": ["modern", "skyscraper"]
-      }
+      "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan."
     },
     {
       "id": "q003",
@@ -54,13 +48,7 @@
         "Er reden al veel auto's"
       ],
       "c": 0,
-      "e": "Arbeiders woonden dicht bij hun werk omdat vervoer beperkt was.",
-      "media": {
-        "query": "19th century industrial workers housing factory",
-        "alt": "19e-eeuwse arbeidershuizen bij fabriek",
-        "representation": "photo",
-        "negativeTerms": ["modern", "luxury"]
-      }
+      "e": "Arbeiders woonden dicht bij hun werk omdat vervoer beperkt was."
     },
     {
       "id": "q004",
@@ -73,13 +61,7 @@
         "Grachten"
       ],
       "c": 0,
-      "e": "Naoorlogse wijken zijn ruim opgezet met flats en groen.",
-      "media": {
-        "query": "postwar housing apartment blocks Netherlands 1960s",
-        "alt": "Naoorlogse flatgebouwen met groen",
-        "representation": "photo",
-        "negativeTerms": ["luxury", "skyscraper"]
-      }
+      "e": "Naoorlogse wijken zijn ruim opgezet met flats en groen."
     },
     {
       "id": "q005",
@@ -92,13 +74,7 @@
         "Groei van landbouw"
       ],
       "c": 0,
-      "e": "Bij suburbanisatie trekken mensen vanuit de stad naar de rand.",
-      "media": {
-        "query": "suburban neighborhood houses aerial view",
-        "alt": "Buitenwijk met eengezinswoningen",
-        "representation": "photo",
-        "negativeTerms": ["apartment", "highrise"]
-      }
+      "e": "Bij suburbanisatie trekken mensen vanuit de stad naar de rand."
     },
     {
       "id": "q006",
@@ -149,13 +125,7 @@
         "De datumgrens"
       ],
       "c": 0,
-      "e": "De nulmeridiaan is de lengtegraad van 0°.",
-      "media": {
-        "query": "prime meridian greenwich observatory line",
-        "alt": "Nulmeridiaan Greenwich",
-        "representation": "photo",
-        "negativeTerms": ["equator"]
-      }
+      "e": "De nulmeridiaan is de lengtegraad van 0°."
     },
     {
       "id": "q009",
@@ -168,13 +138,7 @@
         "Tijdzones"
       ],
       "c": 0,
-      "e": "Breedtegraden meten afstand tot de evenaar.",
-      "media": {
-        "query": "latitude lines globe diagram earth",
-        "alt": "Breedtegraden op wereldbol",
-        "representation": "diagram",
-        "negativeTerms": ["longitude", "meridian"]
-      }
+      "e": "Breedtegraden meten afstand tot de evenaar."
     },
     {
       "id": "q010",
@@ -187,13 +151,7 @@
         "Hoog en laag"
       ],
       "c": 0,
-      "e": "Lengtegraden verdelen de aarde in oost en west.",
-      "media": {
-        "query": "longitude lines globe diagram meridians",
-        "alt": "Lengtegraden meridianen op wereldbol",
-        "representation": "diagram",
-        "negativeTerms": ["latitude", "equator"]
-      }
+      "e": "Lengtegraden verdelen de aarde in oost en west."
     },
     {
       "id": "q011",
