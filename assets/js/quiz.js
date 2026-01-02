@@ -302,8 +302,8 @@ function showResumePrompt(savedProgress) {
       : 0;
 
   // Format scores for display (fractional scores from sub-questions)
-  const scoreDisplay = Number.isInteger(savedProgress.score) ? savedProgress.score : savedProgress.score.toFixed(1);
-  const wrongDisplay = Number.isInteger(savedProgress.wrong) ? savedProgress.wrong : savedProgress.wrong.toFixed(1);
+  const scoreDisplay = formatScore(savedProgress.score);
+  const wrongDisplay = formatScore(savedProgress.wrong);
 
   container.innerHTML = `
     <div class="card" style="text-align: center; padding: var(--space-6);">
@@ -3479,8 +3479,8 @@ function renderSummary() {
   const percentage = totalAnswered > 0 ? Math.round((correct / totalAnswered) * 100) : 0;
 
   // Format scores for display (show decimals only if needed)
-  const correctDisplay = Number.isInteger(correct) ? correct : correct.toFixed(1);
-  const wrongDisplay = Number.isInteger(wrong) ? wrong : wrong.toFixed(1);
+  const correctDisplay = formatScore(correct);
+  const wrongDisplay = formatScore(wrong);
 
   // Calculate grade for exam mode
   const isExam = state.mode === "exam";
@@ -3673,14 +3673,24 @@ function updateTimerVisibility() {
   }
 }
 
+/**
+ * Format a score for display (show decimals only if needed)
+ */
+function formatScore(score) {
+  // Round to 1 decimal to avoid floating point issues
+  const rounded = Math.round(score * 10) / 10;
+  // Check if it's effectively a whole number
+  return rounded % 1 === 0 ? rounded : rounded.toFixed(1);
+}
+
 function updateMeta() {
   const statEl = $("stat");
   if (statEl) {
     const total = state.questions.length;
     const current = Math.min(state.currentIndex + 1, total);
-    // Round scores to 1 decimal for display (fractional scoring for sub-questions)
-    const scoreDisplay = Number.isInteger(state.score) ? state.score : state.score.toFixed(1);
-    const wrongDisplay = Number.isInteger(state.wrong) ? state.wrong : state.wrong.toFixed(1);
+    // Format scores for display (fractional scoring for sub-questions)
+    const scoreDisplay = formatScore(state.score);
+    const wrongDisplay = formatScore(state.wrong);
     statEl.textContent = `${scoreDisplay} goed / ${wrongDisplay} fout / ${state.skipped} overgeslagen • vraag ${current} van ${total}`;
   }
 }
