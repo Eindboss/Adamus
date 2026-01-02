@@ -37,10 +37,10 @@
       "c": 0,
       "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan.",
       "media": {
-        "query": "dutch city aerial view mixed neighborhoods",
-        "alt": "Luchtfoto Nederlandse stad met wijken",
-        "representation": "photo",
-        "negativeTerms": ["historic center", "binnenstad", "old town"]
+        "query": "Netherlands city map urban planning zones",
+        "alt": "Stadsplattegrond met wijken",
+        "representation": "map",
+        "negativeTerms": ["historic", "centrum", "old"]
       }
     },
     {
