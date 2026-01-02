@@ -260,20 +260,15 @@
       "c": 0,
       "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie.",
       "media": {
-        "query": "battle of marathon 490 BC map",
-        "alt": "Slag bij Marathon 490 v.C.",
+        "query": "ancient greek hoplite soldier persian wars",
+        "alt": "Griekse hopliet tijdens Perzische oorlogen",
+        "representation": "photo",
         "negativeTerms": [
           "running",
-          "sport"
-        ],
-        "qids": [
-          "Q205588"
-        ],
-        "_intent": {
-          "primaryConcept": "Slag bij Marathon 490 v.C.",
-          "specificFocus": "Slag bij Marathon 490 v.C.",
-          "representation": "map"
-        }
+          "sport",
+          "490",
+          "marathon"
+        ]
       }
     },
     {
