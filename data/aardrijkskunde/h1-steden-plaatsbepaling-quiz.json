@@ -1,0 +1,689 @@
+{
+  "schema_version": "2.0.0",
+  "id": "aardrijkskunde-steden-en-plaatsbepaling",
+  "title": "Aardrijkskunde – Steden, Netwerken en Plaatsbepaling",
+  "subject": "Aardrijkskunde",
+  "description": "Toets voor 1e klas gymnasium over steden, verstedelijking, stedelijke netwerken, het graadnet, coördinaten en atlasvaardigheden.",
+  "questions": [
+    {
+      "id": "q001",
+      "type": "mc",
+      "q": "Wat is urbanisatie?",
+      "a": [
+        "Het groeien van steden door trek van mensen",
+        "Het leeglopen van steden",
+        "Het bouwen van dorpen",
+        "Het verdwijnen van industrie"
+      ],
+      "c": 0,
+      "e": "Urbanisatie betekent dat steeds meer mensen in steden gaan wonen."
+    },
+    {
+      "id": "q002",
+      "type": "mc",
+      "q": "Welke wijk is meestal het oudst?",
+      "a": [
+        "Binnenstad",
+        "Nieuwbouwwijk",
+        "Jaren-70-wijk",
+        "Suburbane wijk"
+      ],
+      "c": 0,
+      "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan."
+    },
+    {
+      "id": "q003",
+      "type": "mc",
+      "q": "Waarom lagen 19e-eeuwse arbeiderswijken dicht bij fabrieken?",
+      "a": [
+        "Mensen moesten dichtbij hun werk wonen",
+        "Grond was daar mooier",
+        "Er was veel natuur",
+        "Er reden al veel auto's"
+      ],
+      "c": 0,
+      "e": "Arbeiders woonden dicht bij hun werk omdat vervoer beperkt was."
+    },
+    {
+      "id": "q004",
+      "type": "mc",
+      "q": "Wat hoort vooral bij naoorlogse wijken?",
+      "a": [
+        "Hoogbouw en veel groen",
+        "Smalle straatjes",
+        "Stadsmuren",
+        "Grachten"
+      ],
+      "c": 0,
+      "e": "Naoorlogse wijken zijn ruim opgezet met flats en groen."
+    },
+    {
+      "id": "q005",
+      "type": "mc",
+      "q": "Wat betekent suburbanisatie?",
+      "a": [
+        "Verhuizen van stad naar rand/gemeente",
+        "Groei van binnensteden",
+        "Verdwijnen van dorpen",
+        "Groei van landbouw"
+      ],
+      "c": 0,
+      "e": "Bij suburbanisatie trekken mensen vanuit de stad naar de rand."
+    },
+    {
+      "id": "q006",
+      "type": "mc",
+      "q": "Wat is een agglomeratie?",
+      "a": [
+        "Een stad met vastgegroeide omliggende plaatsen",
+        "Een los dorp",
+        "Een landelijk gebied",
+        "Een wijktype"
+      ],
+      "c": 0,
+      "e": "Een agglomeratie is een stad met vastgegroeide omliggende plaatsen."
+    },
+    {
+      "id": "q007",
+      "type": "mc",
+      "q": "Waarom werken steden samen in een stedelijk netwerk?",
+      "a": [
+        "Niet elke stad heeft alle voorzieningen",
+        "Omdat ze hetzelfde bestuur hebben",
+        "Omdat ze even groot zijn",
+        "Omdat dorpen verdwijnen"
+      ],
+      "c": 0,
+      "e": "Steden vullen elkaar aan met voorzieningen."
+    },
+    {
+      "id": "q008",
+      "type": "mc",
+      "q": "Wat is de nulmeridiaan?",
+      "a": [
+        "Lengtegraad van 0° door Greenwich",
+        "De evenaar",
+        "De noordpool",
+        "De datumgrens"
+      ],
+      "c": 0,
+      "e": "De nulmeridiaan is de lengtegraad van 0°."
+    },
+    {
+      "id": "q009",
+      "type": "mc",
+      "q": "Wat geven breedtegraden aan?",
+      "a": [
+        "Afstand tot de evenaar",
+        "Afstand tot de nulmeridiaan",
+        "Hoogte boven zee",
+        "Tijdzones"
+      ],
+      "c": 0,
+      "e": "Breedtegraden meten afstand tot de evenaar."
+    },
+    {
+      "id": "q010",
+      "type": "mc",
+      "q": "Wat hoort bij lengtegraden?",
+      "a": [
+        "Oost en west",
+        "Noord en zuid",
+        "Warm en koud",
+        "Hoog en laag"
+      ],
+      "c": 0,
+      "e": "Lengtegraden verdelen de aarde in oost en west."
+    },
+    {
+      "id": "q011",
+      "type": "ordering",
+      "instruction": "Zet de bouwperioden van oud naar nieuw:",
+      "items": [
+        "Binnenstad",
+        "19e-eeuwse arbeiderswijk",
+        "Vooroorlogse wijk",
+        "Naoorlogse wijk",
+        "Nieuwbouwwijk"
+      ],
+      "correct_order": [
+        "Binnenstad",
+        "19e-eeuwse arbeiderswijk",
+        "Vooroorlogse wijk",
+        "Naoorlogse wijk",
+        "Nieuwbouwwijk"
+      ],
+      "explanation": "Steden groeiden van het centrum naar buiten."
+    },
+    {
+      "id": "q012",
+      "type": "matching",
+      "instruction": "Koppel begrip aan uitleg:",
+      "left": [
+        "Urbanisatie",
+        "Suburbanisatie",
+        "Agglomeratie"
+      ],
+      "right": [
+        "Groei van steden door trek naar stad",
+        "Verhuizen van stad naar rand",
+        "Stad met vastgegroeide plaatsen"
+      ],
+      "correct_pairs": {
+        "Urbanisatie": "Groei van steden door trek naar stad",
+        "Suburbanisatie": "Verhuizen van stad naar rand",
+        "Agglomeratie": "Stad met vastgegroeide plaatsen"
+      },
+      "explanation": "Dit zijn de juiste definities."
+    },
+    {
+      "id": "q013",
+      "type": "multipart",
+      "instruction": "Beantwoord beide vragen.",
+      "parts": [
+        {
+          "id": "a",
+          "type": "mc",
+          "prompt": "Op welk halfrond ligt Nederland?",
+          "options": [
+            "Noordelijk",
+            "Zuidelijk"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "b",
+          "type": "mc",
+          "prompt": "Op welk halfrond ligt Nederland nog meer?",
+          "options": [
+            "Oostelijk",
+            "Westelijk"
+          ],
+          "correct": 0
+        }
+      ],
+      "e": "Nederland ligt ten noorden van de evenaar en ten oosten van de nulmeridiaan."
+    },
+    {
+      "id": "q014",
+      "type": "mc",
+      "q": "Wat betekent 52° N.B.?",
+      "a": [
+        "52 graden ten noorden van de evenaar",
+        "52 graden ten westen van Greenwich",
+        "52 km ten noorden",
+        "52 graden lengte"
+      ],
+      "c": 0,
+      "e": "N.B. betekent noorderbreedte."
+    },
+    {
+      "id": "q015",
+      "type": "mc",
+      "q": "Welke plaats ligt dichter bij de evenaar?",
+      "a": [
+        "Accra",
+        "Amsterdam",
+        "Oslo",
+        "Reykjavik"
+      ],
+      "c": 0,
+      "e": "Accra ligt rond 5° N.B., dicht bij de evenaar."
+    },
+    {
+      "id": "q016",
+      "type": "mc",
+      "q": "Wat gebruik je om snel een kaart van Australië te vinden?",
+      "a": [
+        "Bladwijzers",
+        "Legenda",
+        "Schaal",
+        "Kompas"
+      ],
+      "c": 0,
+      "e": "Bladwijzers helpen bij het vinden van gebieden."
+    },
+    {
+      "id": "q017",
+      "type": "mc",
+      "q": "Waarvoor gebruik je het register van trefwoorden?",
+      "a": [
+        "Onderwerpen zoeken",
+        "Plaatsnamen zoeken",
+        "Schaal aflezen",
+        "Richting bepalen"
+      ],
+      "c": 0,
+      "e": "Trefwoordenregister gebruik je voor onderwerpen."
+    },
+    {
+      "id": "q018",
+      "type": "mc",
+      "q": "Waarom gebruikt GPS meerdere satellieten?",
+      "a": [
+        "Voor nauwkeurige plaatsbepaling",
+        "Voor internet",
+        "Voor foto's",
+        "Voor tijdzones"
+      ],
+      "c": 0,
+      "e": "Meerdere satellieten maken precieze berekening mogelijk."
+    },
+    {
+      "id": "q019",
+      "type": "mc",
+      "q": "Wat is re-urbanisatie?",
+      "a": [
+        "Terugkeer van mensen naar de stad",
+        "Groei van dorpen",
+        "Leeglopen van steden",
+        "Verdwijnen van wijken"
+      ],
+      "c": 0,
+      "e": "Re-urbanisatie betekent dat mensen weer terugverhuizen naar de stad."
+    },
+    {
+      "id": "q020",
+      "type": "mc",
+      "q": "Waarom zijn binnensteden vaak duur om te wonen?",
+      "a": [
+        "Veel voorzieningen en centrale ligging",
+        "Veel landbouw",
+        "Veel ruimte",
+        "Lage vraag"
+      ],
+      "c": 0,
+      "e": "Binnensteden zijn populair door hun voorzieningen en ligging."
+    },
+    {
+      "id": "q021",
+      "type": "mc",
+      "q": "Wat is een overgangsgebied?",
+      "a": [
+        "Gebied tussen stad en platteland",
+        "Oud stadscentrum",
+        "Industriegebied",
+        "Recreatiegebied"
+      ],
+      "c": 0,
+      "e": "Een overgangsgebied heeft zowel stedelijke als landelijke kenmerken."
+    },
+    {
+      "id": "q022",
+      "type": "mc",
+      "q": "Welke voorziening hoort vooral bij een stedelijk netwerk?",
+      "a": [
+        "Universiteit",
+        "Boerderij",
+        "Natuurgebied",
+        "Camping"
+      ],
+      "c": 0,
+      "e": "Universiteiten zijn vaak onderdeel van stedelijke netwerken."
+    },
+    {
+      "id": "q023",
+      "type": "mc",
+      "q": "Wat gebeurt er bij stadsuitbreiding?",
+      "a": [
+        "De stad groeit richting omliggende dorpen",
+        "De stad krimpt",
+        "Er ontstaan bergen",
+        "De stad verhuist"
+      ],
+      "c": 0,
+      "e": "Steden breiden zich vaak uit richting omliggende gebieden."
+    },
+    {
+      "id": "q024",
+      "type": "mc",
+      "q": "Wat geeft 4° O.L. aan?",
+      "a": [
+        "4 graden ten oosten van de nulmeridiaan",
+        "4 graden ten noorden van de evenaar",
+        "4 km naar het oosten",
+        "4 graden breedte"
+      ],
+      "c": 0,
+      "e": "O.L. betekent oosterlengte."
+    },
+    {
+      "id": "q025",
+      "type": "mc",
+      "q": "Welke breedtegraad ligt op 0°?",
+      "a": [
+        "Evenaar",
+        "Noordpool",
+        "Zuidpool",
+        "Kreeftskeerkring"
+      ],
+      "c": 0,
+      "e": "De evenaar ligt op 0° breedte."
+    },
+    {
+      "id": "q026",
+      "type": "mc",
+      "q": "Welke lijn ligt op 180° lengte?",
+      "a": [
+        "Datumgrens",
+        "Evenaar",
+        "Nulmeridiaan",
+        "Kreeftskeerkring"
+      ],
+      "c": 0,
+      "e": "De datumgrens ligt tegenover de nulmeridiaan op 180°."
+    },
+    {
+      "id": "q027",
+      "type": "mc",
+      "q": "Waarom worden minuten en seconden gebruikt bij coördinaten?",
+      "a": [
+        "Voor meer nauwkeurigheid",
+        "Voor tijdzones",
+        "Voor snelheid",
+        "Voor hoogte"
+      ],
+      "c": 0,
+      "e": "Met minuten en seconden kun je een plek preciezer bepalen."
+    },
+    {
+      "id": "q028",
+      "type": "mc",
+      "q": "Wat gebruik je om een plaatsnaam snel te vinden in de atlas?",
+      "a": [
+        "Register van topografische namen",
+        "Legenda",
+        "Schaal",
+        "Kompas"
+      ],
+      "c": 0,
+      "e": "Het register helpt bij het zoeken van plaatsnamen."
+    },
+    {
+      "id": "q029",
+      "type": "mc",
+      "q": "Welke stad hoort bij de Randstad?",
+      "a": [
+        "Utrecht",
+        "Groningen",
+        "Maastricht",
+        "Enschede"
+      ],
+      "c": 0,
+      "e": "Utrecht is onderdeel van de Randstad."
+    },
+    {
+      "id": "q030",
+      "type": "mc",
+      "q": "Waarom trekken bedrijven naar grote steden?",
+      "a": [
+        "Veel andere bedrijven en goede infrastructuur",
+        "Veel landbouwgrond",
+        "Weinig mensen",
+        "Lage bereikbaarheid"
+      ],
+      "c": 0,
+      "e": "Bedrijven profiteren van samenwerking en infrastructuur."
+    },
+    {
+      "id": "q031",
+      "type": "mc",
+      "q": "Wat betekent N.B.?",
+      "a": [
+        "Noorderbreedte",
+        "Nabij breedte",
+        "Noordelijk gebied",
+        "Nieuwe breedte"
+      ],
+      "c": 0,
+      "e": "N.B. staat voor noorderbreedte."
+    },
+    {
+      "id": "q032",
+      "type": "mc",
+      "q": "Welke plaats ligt het meest westelijk?",
+      "a": [
+        "New York",
+        "Rome",
+        "Istanbul",
+        "Beijing"
+      ],
+      "c": 0,
+      "e": "New York ligt ten westen van de nulmeridiaan."
+    },
+    {
+      "id": "q033",
+      "type": "mc",
+      "q": "Waarom is goede infrastructuur belangrijk in stedelijke netwerken?",
+      "a": [
+        "Voor snelle verplaatsing van mensen",
+        "Voor landbouw",
+        "Voor toerisme alleen",
+        "Voor natuurbeheer"
+      ],
+      "c": 0,
+      "e": "Goede infrastructuur zorgt voor verbinding tussen steden."
+    },
+    {
+      "id": "q034",
+      "type": "mc",
+      "q": "Wat is bevolkingsdichtheid?",
+      "a": [
+        "Aantal inwoners per km²",
+        "Aantal steden per land",
+        "Aantal huizen per wijk",
+        "Aantal mensen per stad"
+      ],
+      "c": 0,
+      "e": "Bevolkingsdichtheid is het aantal inwoners per vierkante kilometer."
+    },
+    {
+      "id": "q035",
+      "type": "mc",
+      "q": "Waarom groeiden steden snel tijdens de industriële revolutie?",
+      "a": [
+        "Door werk in fabrieken",
+        "Door landbouw",
+        "Door toerisme",
+        "Door natuurgebieden"
+      ],
+      "c": 0,
+      "e": "Fabrieken zorgden voor werk in steden."
+    },
+    {
+      "id": "q036",
+      "type": "mc",
+      "q": "Welke wijk heeft vaak portiekflats?",
+      "a": [
+        "Naoorlogse wijk",
+        "Binnenstad",
+        "Vooroorlogse wijk",
+        "Nieuwbouwwijk"
+      ],
+      "c": 0,
+      "e": "Naoorlogse wijken hebben vaak flats."
+    },
+    {
+      "id": "q037",
+      "type": "mc",
+      "q": "Wat is een stadsgewest?",
+      "a": [
+        "Een stad met verbonden omliggende steden en dorpen",
+        "Een enkele stad",
+        "Een provincie",
+        "Een wijk"
+      ],
+      "c": 0,
+      "e": "Een stadsgewest bestaat uit een stad met omliggende plaatsen."
+    },
+    {
+      "id": "q038",
+      "type": "mc",
+      "q": "Welke lijn verdeelt de aarde in noord en zuid?",
+      "a": [
+        "Evenaar",
+        "Nulmeridiaan",
+        "Datumgrens",
+        "Poolcirkel"
+      ],
+      "c": 0,
+      "e": "De evenaar verdeelt de aarde in een noordelijk en zuidelijk halfrond."
+    },
+    {
+      "id": "q039",
+      "type": "mc",
+      "q": "Welke lijn verdeelt de aarde in oost en west?",
+      "a": [
+        "Nulmeridiaan",
+        "Evenaar",
+        "Datumgrens",
+        "Poolcirkel"
+      ],
+      "c": 0,
+      "e": "De nulmeridiaan verdeelt de aarde in oost en west."
+    },
+    {
+      "id": "q040",
+      "type": "mc",
+      "q": "Wat betekent W.L.?",
+      "a": [
+        "Westerlengte",
+        "Wereldlengte",
+        "Westelijk land",
+        "Wijdtegraad"
+      ],
+      "c": 0,
+      "e": "W.L. staat voor westerlengte."
+    },
+    {
+      "id": "q041",
+      "type": "mc",
+      "q": "Welke stad ligt het dichtst bij 0°?",
+      "a": [
+        "Accra",
+        "Kaapstad",
+        "Oslo",
+        "Sydney"
+      ],
+      "c": 0,
+      "e": "Accra ligt vrijwel op de evenaar (0°)."
+    },
+    {
+      "id": "q042",
+      "type": "mc",
+      "q": "Waarom zijn jaartallen lastig bij coördinaten?",
+      "a": [
+        "Ze zeggen niets over plaats",
+        "Ze zijn onnauwkeurig",
+        "Ze horen bij GPS",
+        "Ze horen bij kaarten"
+      ],
+      "c": 0,
+      "e": "Coördinaten gaan over plaats, niet over tijd."
+    },
+    {
+      "id": "q043",
+      "type": "mc",
+      "q": "Wat is het voordeel van digitale kaarten?",
+      "a": [
+        "Inzoomen en actuele info",
+        "Altijd mooier",
+        "Geen legenda nodig",
+        "Geen schaal"
+      ],
+      "c": 0,
+      "e": "Digitale kaarten zijn interactief en actueel."
+    },
+    {
+      "id": "q044",
+      "type": "mc",
+      "q": "Welke voorziening vind je meestal niet in een dorp?",
+      "a": [
+        "Universiteit",
+        "Basisschool",
+        "Huisarts",
+        "Supermarkt"
+      ],
+      "c": 0,
+      "e": "Universiteiten liggen meestal in steden."
+    },
+    {
+      "id": "q045",
+      "type": "mc",
+      "q": "Waarom zijn stedelijke gebieden vaak druk?",
+      "a": [
+        "Veel mensen en functies",
+        "Veel natuur",
+        "Weinig werk",
+        "Weinig wegen"
+      ],
+      "c": 0,
+      "e": "In steden wonen en werken veel mensen."
+    },
+    {
+      "id": "q046",
+      "type": "mc",
+      "q": "Wat gebruik je om de afstand op een kaart te meten?",
+      "a": [
+        "Schaal",
+        "Legenda",
+        "Kompas",
+        "Register"
+      ],
+      "c": 0,
+      "e": "Met de schaal bereken je echte afstanden."
+    },
+    {
+      "id": "q047",
+      "type": "mc",
+      "q": "Wat betekent O.L.?",
+      "a": [
+        "Oosterlengte",
+        "Oostelijk land",
+        "Oppervlakte lengte",
+        "Oriëntatie lijn"
+      ],
+      "c": 0,
+      "e": "O.L. staat voor oosterlengte."
+    },
+    {
+      "id": "q048",
+      "type": "mc",
+      "q": "Waarom groeien steden soms aan elkaar vast?",
+      "a": [
+        "Door uitbreiding en groei",
+        "Door rivieren",
+        "Door bergen",
+        "Door klimaat"
+      ],
+      "c": 0,
+      "e": "Groeiende steden kunnen aan elkaar vastgroeien."
+    },
+    {
+      "id": "q049",
+      "type": "mc",
+      "q": "Wat is een kenmerk van nieuwbouwwijken?",
+      "a": [
+        "Ruim en modern opgezet",
+        "Smalle straatjes",
+        "Geen groen",
+        "Middeleeuwse bouw"
+      ],
+      "c": 0,
+      "e": "Nieuwbouwwijken zijn modern en ruim."
+    },
+    {
+      "id": "q050",
+      "type": "mc",
+      "q": "Wat betekent Z.B.?",
+      "a": [
+        "Zuiderbreedte",
+        "Zuidelijk gebied",
+        "Zijdebreedte",
+        "Zonbreedte"
+      ],
+      "c": 0,
+      "e": "Z.B. staat voor zuiderbreedte."
+    }
+  ]
+}

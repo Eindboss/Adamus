@@ -49,6 +49,17 @@
       "hidden": true
     },
     {
+      "id": "aardrijkskunde-h1-steden-plaatsbepaling",
+      "subject": "Aardrijkskunde",
+      "label": "Aardrijkskunde – H1: Steden & Plaatsbepaling",
+      "title": "Aardrijkskunde – Hoofdstuk 1: Steden, Netwerken en Plaatsbepaling",
+      "file": "data/aardrijkskunde/h1-steden-plaatsbepaling-quiz.json",
+      "schema": "toets",
+      "hideFlashcards": true,
+      "questionsPerSession": 15,
+      "examDurationMinutes": 60
+    },
+    {
       "id": "aardrijkskunde-h2-de-wereld",
       "subject": "Aardrijkskunde",
       "label": "Aardrijkskunde – H2: De Wereld",
