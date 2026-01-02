@@ -224,8 +224,18 @@
         "accepted_answers": [
           "de plaats waar het mandje met Romulus en Remus aanspoelde",
           "het mandje met de tweeling bleef steken tussen de wortels",
-          "Romulus en Remus spoelden daar aan"
+          "Romulus en Remus spoelden daar aan",
+          "waar het mandje aanspoelde",
+          "de tweeling aanspoelde",
+          "mandje met romulus en remus",
+          "romulus en remus gevonden",
+          "tweeling gevonden",
+          "wortels vijgenboom",
+          "mandje bleef steken",
+          "aanspoelen van de tweeling",
+          "plek waar romulus en remus aanspoelden"
         ],
+        "keywords": ["mandje", "tweeling", "aanspoelen", "aanspoelde", "wortels", "Romulus", "Remus", "gevonden"],
         "grading": { "rule": "any_accepted" }
       },
       "feedback": {

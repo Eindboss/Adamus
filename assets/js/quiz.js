@@ -2300,7 +2300,18 @@ function checkMCAnswer(q) {
 function checkOpenAnswer(q) {
   const input = $("openInput");
   const value = input ? input.value.trim() : "";
-  const isCorrect = checkAcceptList(q.accept || [], value, q.caseSensitive);
+
+  // First check exact matches
+  let isCorrect = checkAcceptList(q.accept || [], value, q.caseSensitive);
+
+  // If not exact match and keywords are defined, check if answer contains required keywords
+  if (!isCorrect && q.keywords && q.keywords.length > 0) {
+    const valueLower = value.toLowerCase();
+    // Count how many keywords are present
+    const matchedKeywords = q.keywords.filter(kw => valueLower.includes(kw.toLowerCase()));
+    // Accept if at least 2 keywords match (to avoid single-word guesses)
+    isCorrect = matchedKeywords.length >= 2;
+  }
 
   awardPoints(q.id, isCorrect);
   updateStats(state.subjectId, isCorrect);
