@@ -160,11 +160,11 @@
       "payload": {
         "instruction_html": "Vertaal het onderstreepte woord in de context van de zin:",
         "items": [
-          { "id": "item16", "question": "DE monte Aventino descendit Remus.", "accepted_answers": ["van", "vanaf", "van af"], "points": 1 },
-          { "id": "item17", "question": "Romulus tacet, DUM frater accedit.", "accepted_answers": ["terwijl"], "points": 1 },
-          { "id": "item18", "question": "Feminae et VIRI in urbe sunt.", "accepted_answers": ["mannen"], "points": 1 },
-          { "id": "item19", "question": "Cur mihi non LICET?", "accepted_answers": ["het is toegestaan", "is toegestaan", "mag"], "points": 1 },
-          { "id": "item20", "question": "Qui murum transilit, CIVIS non est.", "accepted_answers": ["burger"], "points": 1 }
+          { "id": "item16", "question": "<u>De</u> monte Aventino descendit Remus.", "accepted_answers": ["van", "vanaf", "van af"], "points": 1 },
+          { "id": "item17", "question": "Romulus tacet, <u>dum</u> frater accedit.", "accepted_answers": ["terwijl"], "points": 1 },
+          { "id": "item18", "question": "Feminae et <u>viri</u> in urbe sunt.", "accepted_answers": ["mannen"], "points": 1 },
+          { "id": "item19", "question": "Cur mihi non <u>licet</u>?", "accepted_answers": ["het is toegestaan", "is toegestaan", "mag"], "points": 1 },
+          { "id": "item20", "question": "Qui murum transilit, <u>civis</u> non est.", "accepted_answers": ["burger"], "points": 1 }
         ],
         "grading": { "rule": "per_item" }
       },

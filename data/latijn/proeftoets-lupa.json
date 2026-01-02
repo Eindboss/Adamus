@@ -160,11 +160,11 @@
       "payload": {
         "instruction_html": "Vertaal het onderstreepte woord in de context van de zin:",
         "items": [
-          { "id": "item16", "question": "Mater ei NOMEN dat.", "accepted_answers": ["naam"], "points": 1 },
-          { "id": "item17", "question": "Lupa ad gregem ACCEDIT.", "accepted_answers": ["nadert", "komt dichterbij", "komt naderbij"], "points": 1 },
-          { "id": "item18", "question": "Feminae HAUD rident.", "accepted_answers": ["helemaal niet", "niet"], "points": 1 },
-          { "id": "item19", "question": "SUBITO uxor infantes audit.", "accepted_answers": ["plotseling", "opeens", "ineens"], "points": 1 },
-          { "id": "item20", "question": "SIC deus regibus favet.", "accepted_answers": ["zo", "op die manier", "aldus"], "points": 1 }
+          { "id": "item16", "question": "Mater ei <u>nomen</u> dat.", "accepted_answers": ["naam"], "points": 1 },
+          { "id": "item17", "question": "Lupa ad gregem <u>accedit</u>.", "accepted_answers": ["nadert", "komt dichterbij", "komt naderbij"], "points": 1 },
+          { "id": "item18", "question": "Feminae <u>haud</u> rident.", "accepted_answers": ["helemaal niet", "niet"], "points": 1 },
+          { "id": "item19", "question": "<u>Subito</u> uxor infantes audit.", "accepted_answers": ["plotseling", "opeens", "ineens"], "points": 1 },
+          { "id": "item20", "question": "<u>Sic</u> deus regibus favet.", "accepted_answers": ["zo", "op die manier", "aldus"], "points": 1 }
         ],
         "grading": { "rule": "per_item" }
       },

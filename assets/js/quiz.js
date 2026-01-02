@@ -110,18 +110,33 @@ function getQuestionPoints(questionId) {
 
 /**
  * Award points for correct answer (updates both score and earnedPoints)
+ * @param {string} questionId - The question ID
+ * @param {boolean|number} correctAmount - true/false for simple questions, or fraction (0-1) for partial credit
+ * @param {number} totalParts - Total number of parts (default 1 for simple questions)
  */
-function awardPoints(questionId, isCorrect) {
-  if (isCorrect) {
-    state.score++;
-    if (state.mode === "exam") {
-      state.earnedPoints += getQuestionPoints(questionId);
-    }
+function awardPoints(questionId, correctAmount, totalParts = 1) {
+  // Convert boolean to number
+  let correctParts, wrongParts;
+  if (typeof correctAmount === "boolean") {
+    correctParts = correctAmount ? 1 : 0;
+    wrongParts = correctAmount ? 0 : 1;
   } else {
-    state.wrong++;
-    // Track wrong questions for retry in practice mode
+    // correctAmount is a fraction (0-1) representing portion correct
+    correctParts = correctAmount;
+    wrongParts = 1 - correctAmount;
+  }
+
+  state.score += correctParts;
+  state.wrong += wrongParts;
+
+  if (state.mode === "exam") {
+    state.earnedPoints += getQuestionPoints(questionId) * correctParts;
+  }
+
+  // Track wrong questions for retry in practice mode (if any part was wrong)
+  if (wrongParts > 0) {
     const q = state.questions[state.currentIndex];
-    if (state.mode === "practice" && q?.id) {
+    if (state.mode === "practice" && q?.id && !state.wrongQuestions.find(wq => wq.id === q.id)) {
       state.wrongQuestions.push(q);
     }
   }
@@ -301,11 +316,27 @@ function showResumePrompt(savedProgress) {
   `;
 
   $("resumeQuizBtn")?.addEventListener("click", async () => {
+    // Restore mode from saved progress, or determine from config
+    const mode = savedProgress.mode || determineQuizMode();
+    state.mode = mode;
+    if (mode === "exam") {
+      setTimerMode("exam");
+    } else {
+      setTimerMode("question");
+    }
     await loadQuestions(savedProgress);
   });
 
   $("restartQuizBtn")?.addEventListener("click", async () => {
     clearQuizProgress(state.subjectId);
+    // Always determine correct mode (respects examOnly flag)
+    const mode = determineQuizMode();
+    state.mode = mode;
+    if (mode === "exam") {
+      setTimerMode("exam");
+    } else {
+      setTimerMode("question");
+    }
     await loadQuestions();
   });
 }
@@ -3401,7 +3432,7 @@ export function nextQuestion() {
   if (state.currentIndex < state.questions.length - 1) {
     state.currentIndex++;
 
-    // Auto-save progress
+    // Auto-save progress (including mode for proper restoration)
     saveQuizProgress(state.subjectId, {
       currentIndex: state.currentIndex,
       totalQuestions: state.questions.length,
@@ -3409,6 +3440,7 @@ export function nextQuestion() {
       score: state.score,
       wrong: state.wrong,
       skipped: state.skipped,
+      mode: state.mode,
     });
 
     renderQuestion();

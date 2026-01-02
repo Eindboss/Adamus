@@ -1469,6 +1469,122 @@
         }
       ],
       "explanation": "Gymnasium: sport als sociaal kapitaal; religie en politiek verweven."
+    },
+    {
+      "id": "g-051",
+      "quiz_group": 17,
+      "difficulty": 2,
+      "q": "Rond welk jaar werden hiërogliefen uitgevonden in Egypte?",
+      "a": [
+        "3000 v.C.",
+        "3100 v.C.",
+        "2500 v.C.",
+        "3500 v.C.",
+        "2000 v.C.",
+        "4000 v.C."
+      ],
+      "c": 0,
+      "e": "Rond 3000 v.C. werden de eerste hiërogliefen gebruikt in Egypte. Dit was een beeldschrift dat door schrijvers werd gebruikt voor administratie en religieuze teksten."
+    },
+    {
+      "id": "g-052",
+      "quiz_group": 17,
+      "difficulty": 3,
+      "q": "In welke periode was Athene een democratie?",
+      "a": [
+        "508-338 v.C.",
+        "776-500 v.C.",
+        "490-400 v.C.",
+        "600-300 v.C.",
+        "450-350 v.C.",
+        "550-400 v.C."
+      ],
+      "c": 0,
+      "e": "De Atheense democratie duurde van 508 v.C. (hervormingen van Cleisthenes) tot 338 v.C. (verovering door Macedonië onder Philippus II)."
+    },
+    {
+      "id": "g-053",
+      "quiz_group": 17,
+      "difficulty": 3,
+      "q": "In welke periode vonden de Perzische Oorlogen plaats?",
+      "a": [
+        "490-479 v.C.",
+        "500-480 v.C.",
+        "480-470 v.C.",
+        "510-490 v.C.",
+        "495-475 v.C.",
+        "485-465 v.C."
+      ],
+      "c": 0,
+      "e": "De Perzische Oorlogen duurden van 490 tot 479 v.C. Belangrijke veldslagen waren Marathon (490 v.C.), Thermopylae (480 v.C.), Salamis (480 v.C.) en Plataeae (479 v.C.)."
+    },
+    {
+      "id": "g-054",
+      "quiz_group": 17,
+      "difficulty": 3,
+      "q": "In welke periode vond de Peloponnesische Oorlog plaats?",
+      "a": [
+        "431-404 v.C.",
+        "450-420 v.C.",
+        "440-410 v.C.",
+        "420-390 v.C.",
+        "460-430 v.C.",
+        "435-400 v.C."
+      ],
+      "c": 0,
+      "e": "De Peloponnesische Oorlog (431-404 v.C.) was een conflict tussen Athene en Sparta om de hegemonie over Griekenland. Sparta won uiteindelijk."
+    },
+    {
+      "id": "g-055",
+      "type": "matching",
+      "quiz_group": 17,
+      "difficulty": 3,
+      "instruction": "Koppel het jaartal aan de juiste gebeurtenis.",
+      "left": [
+        "3100 v.C.",
+        "3000 v.C.",
+        "776 v.C.",
+        "490 v.C.",
+        "480 v.C."
+      ],
+      "right": [
+        "Narmer verenigt Egypte",
+        "Uitvinding hiërogliefen",
+        "Eerste Olympische Spelen",
+        "Slag bij Marathon",
+        "Slag bij Salamis"
+      ],
+      "correct_pairs": {
+        "3100 v.C.": "Narmer verenigt Egypte",
+        "3000 v.C.": "Uitvinding hiërogliefen",
+        "776 v.C.": "Eerste Olympische Spelen",
+        "490 v.C.": "Slag bij Marathon",
+        "480 v.C.": "Slag bij Salamis"
+      },
+      "explanation": "Dit zijn de belangrijkste jaartallen uit H2 en H3 die je moet kennen."
+    },
+    {
+      "id": "g-056",
+      "type": "matching",
+      "quiz_group": 17,
+      "difficulty": 3,
+      "instruction": "Koppel de periode aan de juiste gebeurtenis.",
+      "left": [
+        "508-338 v.C.",
+        "490-479 v.C.",
+        "431-404 v.C."
+      ],
+      "right": [
+        "Democratie in Athene",
+        "Perzische Oorlogen",
+        "Peloponnesische Oorlog"
+      ],
+      "correct_pairs": {
+        "508-338 v.C.": "Democratie in Athene",
+        "490-479 v.C.": "Perzische Oorlogen",
+        "431-404 v.C.": "Peloponnesische Oorlog"
+      },
+      "explanation": "Dit zijn de belangrijkste periodes uit H3 die je moet kennen voor de Griekse geschiedenis."
     }
   ]
 }
