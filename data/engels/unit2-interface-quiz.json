@@ -76,10 +76,10 @@
       "direction": "en-nl",
       "instruction": "Vertaal de Engelse woorden naar het Nederlands:",
       "items": [
-        { "en": "exciting", "nl": ["spannend", "opwindend"] },
-        { "en": "trip", "nl": ["reis", "uitstapje", "trip"] },
-        { "en": "to perform", "nl": ["optreden"] },
-        { "en": "amazing", "nl": ["geweldig", "verbazingwekkend", "fantastisch"] }
+        { "en": "excited", "nl": ["opgewonden", "enthousiast"] },
+        { "en": "famous", "nl": ["beroemd"] },
+        { "en": "amazing", "nl": ["geweldig", "verbazingwekkend", "fantastisch"] },
+        { "en": "creative", "nl": ["creatief"] }
       ],
       "explanation": "Deze woorden komen uit Vocabulary 2.1."
     },
@@ -133,12 +133,12 @@
       "direction": "nl-en",
       "instruction": "Vertaal de Nederlandse woorden naar het Engels:",
       "items": [
-        { "nl": "zanger", "en": ["singer"] },
-        { "nl": "band", "en": ["band"] },
-        { "nl": "optreden", "en": ["to perform", "perform", "performance"] },
-        { "nl": "kaartje", "en": ["ticket"] }
+        { "nl": "muzikant", "en": ["musician"] },
+        { "nl": "gitaar", "en": ["guitar"] },
+        { "nl": "podium", "en": ["stage"] },
+        { "nl": "saxofoon", "en": ["saxophone", "sax"] }
       ],
-      "explanation": "Let op: 'optreden' als werkwoord is 'to perform'."
+      "explanation": "Woorden uit Vocabulary 2.2 en 2.4."
     },
     {
       "id": "q011",
@@ -202,11 +202,11 @@
       "direction": "en-nl",
       "instruction": "Vertaal naar het Nederlands:",
       "items": [
-        { "en": "audience", "nl": ["publiek"] },
-        { "en": "rehearsal", "nl": ["repetitie"] },
-        { "en": "sold out", "nl": ["uitverkocht"] }
+        { "en": "sold out", "nl": ["uitverkocht"] },
+        { "en": "wonderful", "nl": ["geweldig", "prachtig", "fantastisch"] },
+        { "en": "several", "nl": ["verschillende", "meerdere"] }
       ],
-      "explanation": "Deze woorden horen bij het thema concerten en optredens."
+      "explanation": "Woorden uit Vocabulary 2.2."
     },
     {
       "id": "q016",
@@ -266,11 +266,11 @@
       "direction": "nl-en",
       "instruction": "Vertaal naar het Engels:",
       "items": [
-        { "nl": "beginnen", "en": ["to start", "start", "to begin", "begin"] },
-        { "nl": "eindigen", "en": ["to end", "end", "to finish", "finish"] },
-        { "nl": "duren", "en": ["to last", "last", "to take"] }
+        { "nl": "uitnodigen", "en": ["to invite", "invite"] },
+        { "nl": "ophalen", "en": ["to pick up", "pick up"] },
+        { "nl": "zich herinneren", "en": ["to remember", "remember"] }
       ],
-      "explanation": "Let op: 'duren' is 'to last' (The concert lasts two hours)."
+      "explanation": "Werkwoorden uit Vocabulary 2.2."
     },
     {
       "id": "q021",
@@ -361,9 +361,9 @@
       "items": [
         { "prompt": "uitnodigen", "direction": "nl-en", "accept": ["invite", "to invite"] },
         { "prompt": "together", "direction": "en-nl", "accept": ["samen"] },
-        { "prompt": "cadeau", "direction": "nl-en", "accept": ["present"] }
+        { "prompt": "cadeau", "direction": "nl-en", "accept": ["present", "gift", "a present", "a gift"] }
       ],
-      "explanation": "Let goed op de richting per woord."
+      "explanation": "Woorden uit Vocabulary 2.2."
     },
     {
       "id": "q028",
@@ -427,11 +427,11 @@
       "direction": "en-nl",
       "instruction": "Vertaal naar het Nederlands:",
       "items": [
-        { "en": "concert hall", "nl": ["concertzaal"] },
+        { "en": "gig", "nl": ["optreden", "concert"] },
         { "en": "sold out", "nl": ["uitverkocht"] },
         { "en": "without", "nl": ["zonder"] }
       ],
-      "explanation": "Deze woorden komen uit Vocabulary 2.2."
+      "explanation": "Woorden uit Vocabulary 2.2."
     },
     {
       "id": "q033",
@@ -665,11 +665,11 @@
       "items": [
         { "en": "famous", "nl": ["beroemd"] },
         { "en": "guest", "nl": ["gast"] },
-        { "en": "ticket", "nl": ["kaartje", "ticket"] },
-        { "en": "concert", "nl": ["concert"] },
-        { "en": "music", "nl": ["muziek"] }
+        { "en": "example", "nl": ["voorbeeld"] },
+        { "en": "fun", "nl": ["leuk", "plezier", "lol"] },
+        { "en": "instrument", "nl": ["instrument", "muziekinstrument"] }
       ],
-      "explanation": "Dit zijn woorden uit Unit 2 over muziek en evenementen."
+      "explanation": "Woorden uit Vocabulary 2.1."
     },
     {
       "id": "v02",
@@ -678,12 +678,12 @@
       "instruction": "Vertaal naar het Engels:",
       "items": [
         { "nl": "uitnodigen", "en": ["invite", "to invite"] },
-        { "nl": "afspraak", "en": ["appointment", "meeting"] },
         { "nl": "samen", "en": ["together"] },
-        { "nl": "beginnen", "en": ["start", "to start"] },
-        { "nl": "eindigen", "en": ["end", "to end"] }
+        { "nl": "kiezen", "en": ["choose", "to choose"] },
+        { "nl": "verbeteren", "en": ["improve", "to improve"] },
+        { "nl": "leren", "en": ["learn", "to learn"] }
       ],
-      "explanation": "Werkwoorden mogen met of zonder 'to' worden gegeven."
+      "explanation": "Werkwoorden uit Vocabulary 2.1 en 2.2."
     },
     {
       "id": "v03",
@@ -693,11 +693,11 @@
       "items": [
         { "en": "tomorrow", "nl": ["morgen"] },
         { "en": "tonight", "nl": ["vanavond"] },
-        { "en": "today", "nl": ["vandaag"] },
-        { "en": "weekend", "nl": ["weekend"] },
-        { "en": "holiday", "nl": ["vakantie"] }
+        { "en": "soon", "nl": ["binnenkort", "snel"] },
+        { "en": "sometimes", "nl": ["soms"] },
+        { "en": "already", "nl": ["al", "reeds"] }
       ],
-      "explanation": "Tijdsaanduidingen komen vaak voor bij afspraken."
+      "explanation": "Woorden uit Vocabulary 2.2 en 2.4."
     },
     {
       "id": "v04",
@@ -708,10 +708,10 @@
         { "nl": "beroemd", "en": ["famous"] },
         { "nl": "muzikant", "en": ["musician"] },
         { "nl": "podium", "en": ["stage"] },
-        { "nl": "publiek", "en": ["audience"] },
-        { "nl": "liedje", "en": ["song"] }
+        { "nl": "drums", "en": ["drums"] },
+        { "nl": "gitaar", "en": ["guitar"] }
       ],
-      "explanation": "Woorden rond muziek en optredens."
+      "explanation": "Woorden uit Vocabulary 2.2 en 2.4."
     },
     {
       "id": "v05",
@@ -721,11 +721,11 @@
       "items": [
         { "en": "cheap", "nl": ["goedkoop"] },
         { "en": "expensive", "nl": ["duur"] },
-        { "en": "free", "nl": ["gratis", "vrij"] },
-        { "en": "busy", "nl": ["druk"] },
-        { "en": "ready", "nl": ["klaar"] }
+        { "en": "lazy", "nl": ["lui"] },
+        { "en": "disappointed", "nl": ["teleurgesteld"] },
+        { "en": "weird", "nl": ["vreemd", "raar"] }
       ],
-      "explanation": "Let op: sommige woorden hebben meerdere betekenissen."
+      "explanation": "Woorden uit Vocabulary 2.2 en 2.4."
     },
     {
       "id": "v06",
@@ -734,12 +734,12 @@
       "instruction": "Vertaal naar het Engels:",
       "items": [
         { "nl": "begrijpen", "en": ["understand", "to understand"] },
-        { "nl": "luisteren", "en": ["listen", "to listen"] },
-        { "nl": "kijken", "en": ["watch", "to watch"] },
-        { "nl": "praten", "en": ["talk", "to talk"] },
-        { "nl": "helpen", "en": ["help", "to help"] }
+        { "nl": "voelen", "en": ["feel", "to feel"] },
+        { "nl": "zeggen", "en": ["say", "to say"] },
+        { "nl": "sturen", "en": ["send", "to send"] },
+        { "nl": "delen", "en": ["share", "to share"] }
       ],
-      "explanation": "Engelse werkwoorden hebben vaak dezelfde vorm zonder -en."
+      "explanation": "Werkwoorden uit Vocabulary 2.1."
     },
     {
       "id": "v07",
@@ -747,13 +747,13 @@
       "direction": "en-nl",
       "instruction": "Vertaal naar het Nederlands:",
       "items": [
-        { "en": "phone call", "nl": ["telefoontje"] },
+        { "en": "phone call", "nl": ["telefoontje", "telefoongesprek"] },
         { "en": "message", "nl": ["bericht"] },
-        { "en": "number", "nl": ["nummer"] },
-        { "en": "answer", "nl": ["antwoord", "antwoorden"] },
-        { "en": "question", "nl": ["vraag"] }
+        { "en": "silence", "nl": ["stilte"] },
+        { "en": "language", "nl": ["taal"] },
+        { "en": "idea", "nl": ["idee"] }
       ],
-      "explanation": "Woorden die passen bij telefoongesprekken."
+      "explanation": "Woorden uit Vocabulary 2.3."
     },
     {
       "id": "v08",
@@ -761,13 +761,13 @@
       "direction": "nl-en",
       "instruction": "Vertaal naar het Engels:",
       "items": [
-        { "nl": "verjaardag", "en": ["birthday"] },
-        { "nl": "maand", "en": ["month"] },
-        { "nl": "dag", "en": ["day"] },
-        { "nl": "jaar", "en": ["year"] },
-        { "nl": "datum", "en": ["date"] }
+        { "nl": "vragen", "en": ["ask", "to ask"] },
+        { "nl": "mogen", "en": ["be allowed", "to be allowed"] },
+        { "nl": "geluk hebben", "en": ["be lucky", "to be lucky"] },
+        { "nl": "lachen", "en": ["laugh", "to laugh"] },
+        { "nl": "geloven", "en": ["believe", "to believe"] }
       ],
-      "explanation": "Tijd en datum zijn een belangrijk onderdeel van Unit 2."
+      "explanation": "Werkwoorden uit Vocabulary 2.2 en 2.3."
     },
     {
       "id": "v09",
@@ -776,12 +776,12 @@
       "instruction": "Vertaal naar het Nederlands:",
       "items": [
         { "en": "without", "nl": ["zonder"] },
-        { "en": "with", "nl": ["met"] },
-        { "en": "before", "nl": ["voor"] },
-        { "en": "after", "nl": ["na"] },
-        { "en": "during", "nl": ["tijdens"] }
+        { "en": "about", "nl": ["over"] },
+        { "en": "difficult", "nl": ["moeilijk"] },
+        { "en": "enough", "nl": ["genoeg", "voldoende"] },
+        { "en": "much", "nl": ["veel"] }
       ],
-      "explanation": "Dit zijn veelgebruikte voorzetsels."
+      "explanation": "Woorden uit Vocabulary 2.2, 2.3 en 2.4."
     },
     {
       "id": "v10",
@@ -789,13 +789,69 @@
       "direction": "nl-en",
       "instruction": "Vertaal naar het Engels:",
       "items": [
-        { "nl": "vriend", "en": ["friend"] },
-        { "nl": "ouders", "en": ["parents"] },
-        { "nl": "kind", "en": ["child"] },
-        { "nl": "mensen", "en": ["people"] },
-        { "nl": "gezin", "en": ["family"] }
+        { "nl": "betalen", "en": ["pay", "to pay"] },
+        { "nl": "uitgeven", "en": ["spend", "to spend"] },
+        { "nl": "bezoeken", "en": ["visit", "to visit"] },
+        { "nl": "kopen", "en": ["buy", "to buy"] },
+        { "nl": "uitkijken naar", "en": ["look forward to", "to look forward to"] }
       ],
-      "explanation": "Let op: sommige meervouden zijn onregelmatig."
+      "explanation": "Werkwoorden uit Vocabulary 2.4."
+    },
+    {
+      "id": "v11",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands:",
+      "items": [
+        { "en": "cousin", "nl": ["neef", "nicht"] },
+        { "en": "show", "nl": ["show", "voorstelling"] },
+        { "en": "sound", "nl": ["geluid", "klinken"] },
+        { "en": "way", "nl": ["manier", "weg"] },
+        { "en": "musical", "nl": ["muzikaal"] }
+      ],
+      "explanation": "Woorden uit Vocabulary 2.1."
+    },
+    {
+      "id": "v12",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels:",
+      "items": [
+        { "nl": "willen", "en": ["want", "to want"] },
+        { "nl": "reizen", "en": ["travel", "to travel"] },
+        { "nl": "winnen", "en": ["win", "to win"] },
+        { "nl": "dood", "en": ["dead"] },
+        { "nl": "vriendschap", "en": ["friendship"] }
+      ],
+      "explanation": "Woorden uit Vocabulary 2.1 en 2.3."
+    },
+    {
+      "id": "v13",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands:",
+      "items": [
+        { "en": "beach", "nl": ["strand"] },
+        { "en": "both", "nl": ["beide", "allebei"] },
+        { "en": "hard", "nl": ["hard", "luid"] },
+        { "en": "price", "nl": ["prijs"] },
+        { "en": "directions", "nl": ["routebeschrijving", "aanwijzingen"] }
+      ],
+      "explanation": "Woorden uit Vocabulary 2.3 en 2.4."
+    },
+    {
+      "id": "v14",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels:",
+      "items": [
+        { "nl": "elk", "en": ["each", "every"] },
+        { "nl": "niet meer", "en": ["not anymore", "not any more"] },
+        { "nl": "tot", "en": ["until", "till"] },
+        { "nl": "sms, berichtje", "en": ["text message", "text", "message"] },
+        { "nl": "geweldig", "en": ["amazing", "wonderful", "great"] }
+      ],
+      "explanation": "Woorden uit Vocabulary 2.3 en 2.4."
     }
   ]
 }
