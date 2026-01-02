@@ -106,8 +106,31 @@ export function renderFillBlank(container, q) {
     });
   });
 
-  dropdowns.forEach((dropdown) => {
+  dropdowns.forEach((dropdown, idx) => {
     dropdown.addEventListener("change", () => updateFillBlankProgress(allFields));
+    // Prevent page scroll when using arrow keys in dropdown
+    dropdown.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        e.preventDefault();
+        // Manually change selection
+        const options = dropdown.options;
+        const currentIdx = dropdown.selectedIndex;
+        if (e.key === "ArrowDown" && currentIdx < options.length - 1) {
+          dropdown.selectedIndex = currentIdx + 1;
+        } else if (e.key === "ArrowUp" && currentIdx > 0) {
+          dropdown.selectedIndex = currentIdx - 1;
+        }
+        // Trigger change event for progress update
+        dropdown.dispatchEvent(new Event("change"));
+      } else if (e.key === "Enter" || e.key === "Tab") {
+        // Move to next dropdown on Enter/Tab
+        if (e.key === "Enter") e.preventDefault();
+        const nextDropdown = dropdowns[idx + 1];
+        if (nextDropdown) {
+          nextDropdown.focus();
+        }
+      }
+    });
   });
 
   // Focus first field

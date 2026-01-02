@@ -63,32 +63,23 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": [
-            "Narmer",
-            "narmer"
-          ]
+          "answers": ["Narmer"],
+          "options": ["Narmer", "Ramses", "Toetanchamon", "Cleopatra"]
         },
         {
           "id": "blank2",
-          "answers": [
-            "farao",
-            "Farao"
-          ]
+          "answers": ["farao"],
+          "options": ["farao", "koning", "keizer", "consul"]
         },
         {
           "id": "blank3",
-          "answers": [
-            "hiërogliefen",
-            "hierogliefen",
-            "Hiërogliefen"
-          ]
+          "answers": ["hiërogliefen"],
+          "options": ["hiërogliefen", "spijkerschrift", "runen", "letters"]
         },
         {
           "id": "blank4",
-          "answers": [
-            "papyrus",
-            "Papyrus"
-          ]
+          "answers": ["papyrus"],
+          "options": ["papyrus", "perkament", "kleitabletten", "hout"]
         }
       ],
       "explanation": "Schrift + administratie is essentieel voor een staat: belasting, voorraden, bevelen.",
@@ -346,25 +337,18 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": [
-            "burgers",
-            "Burgers",
-            "Atheense burgers"
-          ]
+          "answers": ["burgers"],
+          "options": ["burgers", "metoiken", "slaven", "aristocraten"]
         },
         {
           "id": "blank2",
-          "answers": [
-            "metoiken",
-            "Metoiken"
-          ]
+          "answers": ["metoiken"],
+          "options": ["burgers", "metoiken", "slaven", "heloten"]
         },
         {
           "id": "blank3",
-          "answers": [
-            "slaven",
-            "Slaven"
-          ]
+          "answers": ["slaven"],
+          "options": ["burgers", "metoiken", "slaven", "vrouwen"]
         }
       ],
       "explanation": "Kern: ‘vrij’ ≠ ‘burger’. Burgerrecht bepaalt politieke deelname.",
@@ -611,26 +595,18 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": [
-            "Macedonië",
-            "macedonië",
-            "Macedonie"
-          ]
+          "answers": ["Macedonië"],
+          "options": ["Macedonië", "Athene", "Sparta", "Thebe"]
         },
         {
           "id": "blank2",
-          "answers": [
-            "Perzische",
-            "perzische",
-            "Perzisch"
-          ]
+          "answers": ["Perzische"],
+          "options": ["Perzische", "Egyptische", "Romeinse", "Griekse"]
         },
         {
           "id": "blank3",
-          "answers": [
-            "hellenisme",
-            "Hellenisme"
-          ]
+          "answers": ["hellenisme"],
+          "options": ["hellenisme", "democratie", "filosofie", "kolonisatie"]
         }
       ],
       "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet ‘iedereen werd Grieks hetzelfde’.",
@@ -847,26 +823,18 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": [
-            "Olympus",
-            "olympus"
-          ]
+          "answers": ["Olympus"],
+          "options": ["Olympus", "Parnassus", "Vesuvius", "Akropolis"]
         },
         {
           "id": "blank2",
-          "answers": [
-            "orakel",
-            "Orakel"
-          ]
+          "answers": ["orakel"],
+          "options": ["orakel", "theater", "gymnasium", "tempel"]
         },
         {
           "id": "blank3",
-          "answers": [
-            "verstand",
-            "rede",
-            "kennis",
-            "geneeskunde"
-          ]
+          "answers": ["verstand"],
+          "options": ["verstand", "oorlog", "liefde", "wijn"]
         }
       ],
       "explanation": "Delphi is hét voorbeeld van religieus ‘advies’ in politieke beslissingen.",
