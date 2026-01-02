@@ -894,68 +894,132 @@ function updateTableProgress() {
 function renderGroupedShortText(container, q) {
   const items = q.words || q.items || [];
 
-  const itemsHtml = items
-    .map((item, idx) => {
-      const hasSubfields =
-        Array.isArray(item.subfields) && item.subfields.length > 0;
-      const latinText = item.latijn || item.vraag || "";
+  // Check if this is a table-style question (items have subheaders and question labels like "naamval", "getal", "verklaring")
+  const isTableStyle = items.some(item => item.subheader) &&
+    items.some(item => ["naamval", "getal", "verklaring"].includes(item.question?.toLowerCase()));
 
-      if (hasSubfields) {
-        const subfieldsHtml = item.subfields
-          .map(
-            (sf, sfIdx) => `
-        <div class="subfield-row">
-          <label class="subfield-label">${sf.label}:</label>
+  if (isTableStyle) {
+    // Group items by subheader - items without subheader belong to the previous group
+    const groups = [];
+    let currentGroup = null;
+
+    items.forEach((item, idx) => {
+      if (item.subheader) {
+        // Start new group
+        currentGroup = { subheader: item.subheader, items: [{ ...item, originalIdx: idx }] };
+        groups.push(currentGroup);
+      } else if (currentGroup) {
+        // Add to current group
+        currentGroup.items.push({ ...item, originalIdx: idx });
+      }
+    });
+
+    // Build table HTML
+    const tableHtml = `
+      <table class="latin-analysis-table">
+        <thead>
+          <tr>
+            <th>Woord</th>
+            <th>naamval</th>
+            <th>getal</th>
+            <th>verklaring</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${groups.map((group, gIdx) => `
+            <tr>
+              <td class="latin-word-cell">${group.subheader}</td>
+              ${group.items.map((item, iIdx) => `
+                <td>
+                  <input type="text"
+                         id="word-${item.originalIdx}"
+                         class="grouped-input table-input"
+                         data-word="${item.originalIdx}"
+                         placeholder="..."
+                         autocomplete="off">
+                </td>
+              `).join('')}
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    `;
+
+    const totalInputs = countGroupedInputs(items);
+
+    container.innerHTML = `
+      <div class="question-title">${q.prompt_html || "Vul de tabel in."}</div>
+      ${tableHtml}
+      <div class="group-progress">
+        <span id="groupFilled">0</span> / <span>${totalInputs}</span> ingevuld
+      </div>
+      <div id="feedback" class="feedback" style="display: none;"></div>
+    `;
+  } else {
+    // Original rendering for non-table style
+    const itemsHtml = items
+      .map((item, idx) => {
+        const hasSubfields =
+          Array.isArray(item.subfields) && item.subfields.length > 0;
+        const latinText = item.latijn || item.vraag || "";
+
+        if (hasSubfields) {
+          const subfieldsHtml = item.subfields
+            .map(
+              (sf, sfIdx) => `
+          <div class="subfield-row">
+            <label class="subfield-label">${sf.label}:</label>
+            <input type="text"
+                   id="word-${idx}-sf-${sfIdx}"
+                   class="grouped-input subfield-input"
+                   data-word="${idx}"
+                   data-subfield="${sfIdx}"
+                   placeholder="..."
+                   autocomplete="off">
+          </div>
+        `,
+            )
+            .join("");
+
+          return `
+          <div class="grouped-item" data-idx="${idx}">
+            <div class="grouped-latin">${latinText}</div>
+            <div class="grouped-subfields">${subfieldsHtml}</div>
+          </div>
+        `;
+        }
+
+        // Check if this item has a subheader (for grouping items under a sentence)
+        const subheaderHtml = item.subheader ? `<div class="grouped-subheader">${item.subheader}</div>` : '';
+
+        return `
+        ${subheaderHtml}
+        <div class="grouped-item" data-idx="${idx}">
+          <label class="grouped-latin">${latinText}</label>
           <input type="text"
-                 id="word-${idx}-sf-${sfIdx}"
-                 class="grouped-input subfield-input"
+                 id="word-${idx}"
+                 class="grouped-input"
                  data-word="${idx}"
-                 data-subfield="${sfIdx}"
                  placeholder="..."
                  autocomplete="off">
         </div>
-      `,
-          )
-          .join("");
-
-        return `
-        <div class="grouped-item" data-idx="${idx}">
-          <div class="grouped-latin">${latinText}</div>
-          <div class="grouped-subfields">${subfieldsHtml}</div>
-        </div>
       `;
-      }
+      })
+      .join("");
 
-      // Check if this item has a subheader (for grouping items under a sentence)
-      const subheaderHtml = item.subheader ? `<div class="grouped-subheader">${item.subheader}</div>` : '';
+    const totalInputs = countGroupedInputs(items);
 
-      return `
-      ${subheaderHtml}
-      <div class="grouped-item" data-idx="${idx}">
-        <label class="grouped-latin">${latinText}</label>
-        <input type="text"
-               id="word-${idx}"
-               class="grouped-input"
-               data-word="${idx}"
-               placeholder="..."
-               autocomplete="off">
+    container.innerHTML = `
+      <div class="question-title">${q.prompt_html || "Vertaal de woorden."}</div>
+      <div class="grouped-list">
+        ${itemsHtml}
       </div>
+      <div class="group-progress">
+        <span id="groupFilled">0</span> / <span>${totalInputs}</span> ingevuld
+      </div>
+      <div id="feedback" class="feedback" style="display: none;"></div>
     `;
-    })
-    .join("");
-
-  const totalInputs = countGroupedInputs(items);
-
-  container.innerHTML = `
-    <div class="question-title">${q.prompt_html || "Vertaal de woorden."}</div>
-    <div class="grouped-list">
-      ${itemsHtml}
-    </div>
-    <div class="group-progress">
-      <span id="groupFilled">0</span> / <span>${totalInputs}</span> ingevuld
-    </div>
-    <div id="feedback" class="feedback" style="display: none;"></div>
-  `;
+  }
 
   // Track inputs
   $$$(".grouped-input", container).forEach((input) => {

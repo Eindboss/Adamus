@@ -156,7 +156,11 @@ export function convertV2ToV1(q) {
         prompt_html: q.payload?.instruction_html || q.prompt?.html || q.prompt?.text || "",
         items: q.payload?.items?.map((item) => ({
           vraag: item.question,
+          question: item.question,
           accepted: item.accepted_answers,
+          subheader: item.subheader,
+          id: item.id,
+          points: item.points,
         })) || [],
       };
 
