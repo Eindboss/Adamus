@@ -16,7 +16,13 @@
         "Het verdwijnen van industrie"
       ],
       "c": 0,
-      "e": "Urbanisatie betekent dat steeds meer mensen in steden gaan wonen."
+      "e": "Urbanisatie betekent dat steeds meer mensen in steden gaan wonen.",
+      "media": {
+        "query": "urbanization city growth aerial view",
+        "alt": "Luchtfoto stadsgroei urbanisatie",
+        "representation": "photo",
+        "negativeTerms": ["slum", "poverty"]
+      }
     },
     {
       "id": "q002",
@@ -29,7 +35,13 @@
         "Suburbane wijk"
       ],
       "c": 0,
-      "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan."
+      "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan.",
+      "media": {
+        "query": "historic city center medieval old town aerial",
+        "alt": "Historische binnenstad luchtfoto",
+        "representation": "photo",
+        "negativeTerms": ["modern", "skyscraper"]
+      }
     },
     {
       "id": "q003",
@@ -42,7 +54,13 @@
         "Er reden al veel auto's"
       ],
       "c": 0,
-      "e": "Arbeiders woonden dicht bij hun werk omdat vervoer beperkt was."
+      "e": "Arbeiders woonden dicht bij hun werk omdat vervoer beperkt was.",
+      "media": {
+        "query": "19th century industrial workers housing factory",
+        "alt": "19e-eeuwse arbeidershuizen bij fabriek",
+        "representation": "photo",
+        "negativeTerms": ["modern", "luxury"]
+      }
     },
     {
       "id": "q004",
@@ -55,7 +73,13 @@
         "Grachten"
       ],
       "c": 0,
-      "e": "Naoorlogse wijken zijn ruim opgezet met flats en groen."
+      "e": "Naoorlogse wijken zijn ruim opgezet met flats en groen.",
+      "media": {
+        "query": "postwar housing apartment blocks Netherlands 1960s",
+        "alt": "Naoorlogse flatgebouwen met groen",
+        "representation": "photo",
+        "negativeTerms": ["luxury", "skyscraper"]
+      }
     },
     {
       "id": "q005",
@@ -68,7 +92,13 @@
         "Groei van landbouw"
       ],
       "c": 0,
-      "e": "Bij suburbanisatie trekken mensen vanuit de stad naar de rand."
+      "e": "Bij suburbanisatie trekken mensen vanuit de stad naar de rand.",
+      "media": {
+        "query": "suburban neighborhood houses aerial view",
+        "alt": "Buitenwijk met eengezinswoningen",
+        "representation": "photo",
+        "negativeTerms": ["apartment", "highrise"]
+      }
     },
     {
       "id": "q006",
@@ -81,7 +111,13 @@
         "Een wijktype"
       ],
       "c": 0,
-      "e": "Een agglomeratie is een stad met vastgegroeide omliggende plaatsen."
+      "e": "Een agglomeratie is een stad met vastgegroeide omliggende plaatsen.",
+      "media": {
+        "query": "urban agglomeration metropolitan area satellite",
+        "alt": "Satellietbeeld agglomeratie",
+        "representation": "photo",
+        "negativeTerms": ["rural", "village"]
+      }
     },
     {
       "id": "q007",
@@ -94,7 +130,13 @@
         "Omdat dorpen verdwijnen"
       ],
       "c": 0,
-      "e": "Steden vullen elkaar aan met voorzieningen."
+      "e": "Steden vullen elkaar aan met voorzieningen.",
+      "media": {
+        "query": "urban network cities connection map diagram",
+        "alt": "Diagram stedelijk netwerk",
+        "representation": "diagram",
+        "negativeTerms": ["computer", "internet"]
+      }
     },
     {
       "id": "q008",
@@ -107,7 +149,13 @@
         "De datumgrens"
       ],
       "c": 0,
-      "e": "De nulmeridiaan is de lengtegraad van 0°."
+      "e": "De nulmeridiaan is de lengtegraad van 0°.",
+      "media": {
+        "query": "prime meridian greenwich observatory line",
+        "alt": "Nulmeridiaan Greenwich",
+        "representation": "photo",
+        "negativeTerms": ["equator"]
+      }
     },
     {
       "id": "q009",
@@ -120,7 +168,13 @@
         "Tijdzones"
       ],
       "c": 0,
-      "e": "Breedtegraden meten afstand tot de evenaar."
+      "e": "Breedtegraden meten afstand tot de evenaar.",
+      "media": {
+        "query": "latitude lines globe diagram earth",
+        "alt": "Breedtegraden op wereldbol",
+        "representation": "diagram",
+        "negativeTerms": ["longitude", "meridian"]
+      }
     },
     {
       "id": "q010",
@@ -133,7 +187,13 @@
         "Hoog en laag"
       ],
       "c": 0,
-      "e": "Lengtegraden verdelen de aarde in oost en west."
+      "e": "Lengtegraden verdelen de aarde in oost en west.",
+      "media": {
+        "query": "longitude lines globe diagram meridians",
+        "alt": "Lengtegraden meridianen op wereldbol",
+        "representation": "diagram",
+        "negativeTerms": ["latitude", "equator"]
+      }
     },
     {
       "id": "q011",
@@ -202,7 +262,13 @@
           "correct": 0
         }
       ],
-      "e": "Nederland ligt ten noorden van de evenaar en ten oosten van de nulmeridiaan."
+      "e": "Nederland ligt ten noorden van de evenaar en ten oosten van de nulmeridiaan.",
+      "media": {
+        "query": "world map hemispheres equator prime meridian",
+        "alt": "Wereldkaart met halfronden",
+        "representation": "map",
+        "negativeTerms": ["game", "fantasy"]
+      }
     },
     {
       "id": "q014",
@@ -215,7 +281,13 @@
         "52 graden lengte"
       ],
       "c": 0,
-      "e": "N.B. betekent noorderbreedte."
+      "e": "N.B. betekent noorderbreedte.",
+      "media": {
+        "query": "latitude coordinates globe north south diagram",
+        "alt": "Breedtegraad coördinaten diagram",
+        "representation": "diagram",
+        "negativeTerms": ["longitude"]
+      }
     },
     {
       "id": "q015",
@@ -228,7 +300,13 @@
         "Reykjavik"
       ],
       "c": 0,
-      "e": "Accra ligt rond 5° N.B., dicht bij de evenaar."
+      "e": "Accra ligt rond 5° N.B., dicht bij de evenaar.",
+      "media": {
+        "query": "Accra Ghana city skyline",
+        "alt": "Accra Ghana skyline",
+        "representation": "photo",
+        "negativeTerms": ["poverty", "slum"]
+      }
     },
     {
       "id": "q016",
@@ -267,7 +345,13 @@
         "Voor tijdzones"
       ],
       "c": 0,
-      "e": "Meerdere satellieten maken precieze berekening mogelijk."
+      "e": "Meerdere satellieten maken precieze berekening mogelijk.",
+      "media": {
+        "query": "GPS satellite navigation triangulation diagram",
+        "alt": "GPS satelliet navigatie diagram",
+        "representation": "diagram",
+        "negativeTerms": ["phone", "app"]
+      }
     },
     {
       "id": "q019",
@@ -280,7 +364,13 @@
         "Verdwijnen van wijken"
       ],
       "c": 0,
-      "e": "Re-urbanisatie betekent dat mensen weer terugverhuizen naar de stad."
+      "e": "Re-urbanisatie betekent dat mensen weer terugverhuizen naar de stad.",
+      "media": {
+        "query": "city center revitalization gentrification renovation",
+        "alt": "Stadsvernieuwing binnenstad",
+        "representation": "photo",
+        "negativeTerms": ["abandoned", "decay"]
+      }
     },
     {
       "id": "q020",
@@ -293,7 +383,13 @@
         "Lage vraag"
       ],
       "c": 0,
-      "e": "Binnensteden zijn populair door hun voorzieningen en ligging."
+      "e": "Binnensteden zijn populair door hun voorzieningen en ligging.",
+      "media": {
+        "query": "Amsterdam canal houses city center",
+        "alt": "Amsterdam grachtenpanden binnenstad",
+        "representation": "photo",
+        "negativeTerms": ["red light", "tourist"]
+      }
     },
     {
       "id": "q021",
@@ -306,7 +402,13 @@
         "Recreatiegebied"
       ],
       "c": 0,
-      "e": "Een overgangsgebied heeft zowel stedelijke als landelijke kenmerken."
+      "e": "Een overgangsgebied heeft zowel stedelijke als landelijke kenmerken.",
+      "media": {
+        "query": "urban rural transition zone peri-urban aerial",
+        "alt": "Overgangsgebied stad platteland",
+        "representation": "photo",
+        "negativeTerms": ["city center", "wilderness"]
+      }
     },
     {
       "id": "q022",
@@ -319,7 +421,13 @@
         "Camping"
       ],
       "c": 0,
-      "e": "Universiteiten zijn vaak onderdeel van stedelijke netwerken."
+      "e": "Universiteiten zijn vaak onderdeel van stedelijke netwerken.",
+      "media": {
+        "query": "university campus buildings aerial netherlands",
+        "alt": "Universiteitscampus Nederland",
+        "representation": "photo",
+        "negativeTerms": ["american", "usa"]
+      }
     },
     {
       "id": "q023",
@@ -332,7 +440,13 @@
         "De stad verhuist"
       ],
       "c": 0,
-      "e": "Steden breiden zich vaak uit richting omliggende gebieden."
+      "e": "Steden breiden zich vaak uit richting omliggende gebieden.",
+      "media": {
+        "query": "urban sprawl city expansion aerial development",
+        "alt": "Stadsuitbreiding luchtfoto",
+        "representation": "photo",
+        "negativeTerms": ["rural", "countryside"]
+      }
     },
     {
       "id": "q024",
@@ -345,7 +459,13 @@
         "4 graden breedte"
       ],
       "c": 0,
-      "e": "O.L. betekent oosterlengte."
+      "e": "O.L. betekent oosterlengte.",
+      "media": {
+        "query": "longitude coordinates globe east west diagram",
+        "alt": "Lengtegraad coördinaten diagram",
+        "representation": "diagram",
+        "negativeTerms": ["latitude"]
+      }
     },
     {
       "id": "q025",
@@ -358,7 +478,13 @@
         "Kreeftskeerkring"
       ],
       "c": 0,
-      "e": "De evenaar ligt op 0° breedte."
+      "e": "De evenaar ligt op 0° breedte.",
+      "media": {
+        "query": "equator line globe earth diagram",
+        "alt": "Evenaar op wereldbol",
+        "representation": "diagram",
+        "negativeTerms": ["tropics", "polar"]
+      }
     },
     {
       "id": "q026",
@@ -371,7 +497,13 @@
         "Kreeftskeerkring"
       ],
       "c": 0,
-      "e": "De datumgrens ligt tegenover de nulmeridiaan op 180°."
+      "e": "De datumgrens ligt tegenover de nulmeridiaan op 180°.",
+      "media": {
+        "query": "international date line pacific map",
+        "alt": "Internationale datumgrens kaart",
+        "representation": "map",
+        "negativeTerms": ["timezone", "clock"]
+      }
     },
     {
       "id": "q027",
@@ -384,7 +516,13 @@
         "Voor hoogte"
       ],
       "c": 0,
-      "e": "Met minuten en seconden kun je een plek preciezer bepalen."
+      "e": "Met minuten en seconden kun je een plek preciezer bepalen.",
+      "media": {
+        "query": "coordinates degrees minutes seconds DMS format",
+        "alt": "Coördinaten graden minuten seconden",
+        "representation": "diagram",
+        "negativeTerms": ["time", "clock"]
+      }
     },
     {
       "id": "q028",
@@ -410,7 +548,13 @@
         "Enschede"
       ],
       "c": 0,
-      "e": "Utrecht is onderdeel van de Randstad."
+      "e": "Utrecht is onderdeel van de Randstad.",
+      "media": {
+        "query": "Randstad Netherlands map Amsterdam Rotterdam Utrecht The Hague",
+        "alt": "Kaart Randstad Nederland",
+        "representation": "map",
+        "negativeTerms": ["europe", "world"]
+      }
     },
     {
       "id": "q030",
@@ -423,7 +567,13 @@
         "Lage bereikbaarheid"
       ],
       "c": 0,
-      "e": "Bedrijven profiteren van samenwerking en infrastructuur."
+      "e": "Bedrijven profiteren van samenwerking en infrastructuur.",
+      "media": {
+        "query": "business district office buildings city center",
+        "alt": "Zakenwijk kantoorgebouwen",
+        "representation": "photo",
+        "negativeTerms": ["rural", "factory"]
+      }
     },
     {
       "id": "q031",
@@ -449,7 +599,13 @@
         "Beijing"
       ],
       "c": 0,
-      "e": "New York ligt ten westen van de nulmeridiaan."
+      "e": "New York ligt ten westen van de nulmeridiaan.",
+      "media": {
+        "query": "world map cities longitude comparison",
+        "alt": "Wereldkaart met steden op lengtegraden",
+        "representation": "map",
+        "negativeTerms": ["fantasy", "game"]
+      }
     },
     {
       "id": "q033",
@@ -462,7 +618,13 @@
         "Voor natuurbeheer"
       ],
       "c": 0,
-      "e": "Goede infrastructuur zorgt voor verbinding tussen steden."
+      "e": "Goede infrastructuur zorgt voor verbinding tussen steden.",
+      "media": {
+        "query": "highway interchange infrastructure aerial Netherlands",
+        "alt": "Snelwegknooppunt infrastructuur",
+        "representation": "photo",
+        "negativeTerms": ["accident", "traffic jam"]
+      }
     },
     {
       "id": "q034",
@@ -475,7 +637,13 @@
         "Aantal mensen per stad"
       ],
       "c": 0,
-      "e": "Bevolkingsdichtheid is het aantal inwoners per vierkante kilometer."
+      "e": "Bevolkingsdichtheid is het aantal inwoners per vierkante kilometer.",
+      "media": {
+        "query": "population density map Netherlands europe",
+        "alt": "Bevolkingsdichtheid kaart",
+        "representation": "map",
+        "negativeTerms": ["usa", "china"]
+      }
     },
     {
       "id": "q035",
@@ -488,7 +656,13 @@
         "Door natuurgebieden"
       ],
       "c": 0,
-      "e": "Fabrieken zorgden voor werk in steden."
+      "e": "Fabrieken zorgden voor werk in steden.",
+      "media": {
+        "query": "industrial revolution factory 19th century city",
+        "alt": "Industriële revolutie fabrieken stad",
+        "representation": "photo",
+        "negativeTerms": ["modern", "robot"]
+      }
     },
     {
       "id": "q036",
@@ -501,7 +675,13 @@
         "Nieuwbouwwijk"
       ],
       "c": 0,
-      "e": "Naoorlogse wijken hebben vaak flats."
+      "e": "Naoorlogse wijken hebben vaak flats.",
+      "media": {
+        "query": "postwar apartment building Netherlands 1950s 1960s",
+        "alt": "Naoorlogse portiekflat Nederland",
+        "representation": "photo",
+        "negativeTerms": ["luxury", "modern"]
+      }
     },
     {
       "id": "q037",
@@ -514,7 +694,13 @@
         "Een wijk"
       ],
       "c": 0,
-      "e": "Een stadsgewest bestaat uit een stad met omliggende plaatsen."
+      "e": "Een stadsgewest bestaat uit een stad met omliggende plaatsen.",
+      "media": {
+        "query": "metropolitan area region map diagram",
+        "alt": "Stadsgewest diagram",
+        "representation": "diagram",
+        "negativeTerms": ["single city"]
+      }
     },
     {
       "id": "q038",
@@ -527,7 +713,13 @@
         "Poolcirkel"
       ],
       "c": 0,
-      "e": "De evenaar verdeelt de aarde in een noordelijk en zuidelijk halfrond."
+      "e": "De evenaar verdeelt de aarde in een noordelijk en zuidelijk halfrond.",
+      "media": {
+        "query": "equator earth globe north south hemisphere",
+        "alt": "Evenaar verdeelt aarde in halfronden",
+        "representation": "diagram",
+        "negativeTerms": ["meridian", "longitude"]
+      }
     },
     {
       "id": "q039",
@@ -540,7 +732,13 @@
         "Poolcirkel"
       ],
       "c": 0,
-      "e": "De nulmeridiaan verdeelt de aarde in oost en west."
+      "e": "De nulmeridiaan verdeelt de aarde in oost en west.",
+      "media": {
+        "query": "prime meridian earth globe east west hemisphere",
+        "alt": "Nulmeridiaan verdeelt aarde in halfronden",
+        "representation": "diagram",
+        "negativeTerms": ["equator", "latitude"]
+      }
     },
     {
       "id": "q040",
@@ -566,7 +764,13 @@
         "Sydney"
       ],
       "c": 0,
-      "e": "Accra ligt vrijwel op de evenaar (0°)."
+      "e": "Accra ligt vrijwel op de evenaar (0°).",
+      "media": {
+        "query": "world map equator cities latitude",
+        "alt": "Wereldkaart met steden bij evenaar",
+        "representation": "map",
+        "negativeTerms": ["fantasy", "game"]
+      }
     },
     {
       "id": "q042",
@@ -592,7 +796,13 @@
         "Geen schaal"
       ],
       "c": 0,
-      "e": "Digitale kaarten zijn interactief en actueel."
+      "e": "Digitale kaarten zijn interactief en actueel.",
+      "media": {
+        "query": "digital map smartphone navigation google maps",
+        "alt": "Digitale kaart op smartphone",
+        "representation": "photo",
+        "negativeTerms": ["paper", "atlas"]
+      }
     },
     {
       "id": "q044",
@@ -618,7 +828,13 @@
         "Weinig wegen"
       ],
       "c": 0,
-      "e": "In steden wonen en werken veel mensen."
+      "e": "In steden wonen en werken veel mensen.",
+      "media": {
+        "query": "busy city street crowd pedestrians urban",
+        "alt": "Drukke stadsstraat met mensen",
+        "representation": "photo",
+        "negativeTerms": ["protest", "riot"]
+      }
     },
     {
       "id": "q046",
@@ -631,7 +847,13 @@
         "Register"
       ],
       "c": 0,
-      "e": "Met de schaal bereken je echte afstanden."
+      "e": "Met de schaal bereken je echte afstanden.",
+      "media": {
+        "query": "map scale bar distance measurement",
+        "alt": "Schaal op kaart voor afstand",
+        "representation": "diagram",
+        "negativeTerms": ["music", "weight"]
+      }
     },
     {
       "id": "q047",
@@ -657,7 +879,13 @@
         "Door klimaat"
       ],
       "c": 0,
-      "e": "Groeiende steden kunnen aan elkaar vastgroeien."
+      "e": "Groeiende steden kunnen aan elkaar vastgroeien.",
+      "media": {
+        "query": "conurbation cities merged urban area aerial",
+        "alt": "Aan elkaar gegroeide steden luchtfoto",
+        "representation": "photo",
+        "negativeTerms": ["rural", "countryside"]
+      }
     },
     {
       "id": "q049",
@@ -670,7 +898,13 @@
         "Middeleeuwse bouw"
       ],
       "c": 0,
-      "e": "Nieuwbouwwijken zijn modern en ruim."
+      "e": "Nieuwbouwwijken zijn modern en ruim.",
+      "media": {
+        "query": "new housing development modern neighborhood Netherlands vinex",
+        "alt": "Moderne nieuwbouwwijk Nederland",
+        "representation": "photo",
+        "negativeTerms": ["old", "historic"]
+      }
     },
     {
       "id": "q050",
