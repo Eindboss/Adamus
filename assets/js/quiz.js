@@ -301,12 +301,16 @@ function showResumePrompt(savedProgress) {
         )
       : 0;
 
+  // Format scores for display (fractional scores from sub-questions)
+  const scoreDisplay = Number.isInteger(savedProgress.score) ? savedProgress.score : savedProgress.score.toFixed(1);
+  const wrongDisplay = Number.isInteger(savedProgress.wrong) ? savedProgress.wrong : savedProgress.wrong.toFixed(1);
+
   container.innerHTML = `
     <div class="card" style="text-align: center; padding: var(--space-6);">
       <h3 style="margin-bottom: var(--space-3);">Voortgang gevonden</h3>
       <p style="color: var(--muted); margin-bottom: var(--space-4);">
         Je was bij vraag ${savedProgress.currentIndex + 1} van ${savedProgress.totalQuestions} (${percentage}% voltooid).<br>
-        Score: ${savedProgress.score} goed, ${savedProgress.wrong} fout
+        Score: ${scoreDisplay} goed, ${wrongDisplay} fout
       </p>
       <div style="display: flex; gap: var(--space-3); justify-content: center;">
         <button class="btn btn-primary" id="resumeQuizBtn">Doorgaan</button>
@@ -1572,8 +1576,9 @@ function checkRatioTable(q) {
   });
 
   const isFullyCorrect = correctCount === totalCount;
-  const isPassingScore = correctCount >= totalCount / 2;
-  awardPoints(q.id, isPassingScore);
+  // Award fractional credit based on correct answers
+  const fractionCorrect = totalCount > 0 ? correctCount / totalCount : 0;
+  awardPoints(q.id, fractionCorrect);
   updateStats(state.subjectId, isFullyCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, isFullyCorrect);
 
@@ -2483,9 +2488,9 @@ function checkTableParse(q) {
   const maxPoints = totalFillable * (grading.per_cell_points || 0.5);
   const isFullyCorrect = correctCount === totalFillable;
 
-  // Update score (count as correct if > 50%)
-  const isPassingScore = correctCount >= totalFillable / 2;
-  awardPoints(q.id, isPassingScore);
+  // Update score with fractional credit based on correct answers
+  const fractionCorrect = totalFillable > 0 ? correctCount / totalFillable : 0;
+  awardPoints(q.id, fractionCorrect);
   updateStats(state.subjectId, isFullyCorrect);
 
   state.partialScore = earnedPoints;
@@ -2566,8 +2571,9 @@ function checkGroupedShortText(q) {
   });
 
   const isFullyCorrect = totalCorrect === totalItems;
-  const isPassingScore = totalCorrect >= totalItems / 2;
-  awardPoints(q.id, isPassingScore);
+  // Award fractional credit based on correct answers
+  const fractionCorrect = totalItems > 0 ? totalCorrect / totalItems : 0;
+  awardPoints(q.id, fractionCorrect);
   updateStats(state.subjectId, isFullyCorrect);
 
   state.history.add({
@@ -2611,8 +2617,9 @@ function checkGroupedTranslation(q) {
   });
 
   const isFullyCorrect = correctCount === items.length;
-  const isPassingScore = correctCount >= items.length / 2;
-  awardPoints(q.id, isPassingScore);
+  // Award fractional credit based on correct answers
+  const fractionCorrect = items.length > 0 ? correctCount / items.length : 0;
+  awardPoints(q.id, fractionCorrect);
   updateStats(state.subjectId, isFullyCorrect);
 
   state.history.add({
@@ -2691,8 +2698,9 @@ function checkGroupedSelect(q) {
   });
 
   const isFullyCorrect = totalPoints === maxPoints;
-  const isPassingScore = totalPoints >= maxPoints / 2;
-  awardPoints(q.id, isPassingScore);
+  // Award fractional credit based on points earned
+  const fractionCorrect = maxPoints > 0 ? totalPoints / maxPoints : 0;
+  awardPoints(q.id, fractionCorrect);
   updateStats(state.subjectId, isFullyCorrect);
 
   state.history.add({
@@ -2785,9 +2793,9 @@ function checkWiskundeMultiPart(q) {
 
   const isFullyCorrect = correctCount === parts.length;
 
-  // Update score (count as correct if > 50% of parts correct)
-  const isPassingScore = correctCount >= parts.length / 2;
-  awardPoints(q.id, isPassingScore);
+  // Award fractional credit based on correct parts
+  const fractionCorrect = parts.length > 0 ? correctCount / parts.length : 0;
+  awardPoints(q.id, fractionCorrect);
   updateStats(state.subjectId, isFullyCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, isFullyCorrect);
 
@@ -3463,11 +3471,16 @@ function renderSummary() {
   const container = $("quizArea");
   if (!container) return;
 
-  const total = state.history.getTotal();
-  const correct = state.history.getCorrectCount();
-  const wrong = state.history.getWrongCount();
-  const skipped = state.history.getSkippedCount();
-  const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+  // Use fractional scores from state (includes partial credit for sub-questions)
+  const totalAnswered = state.score + state.wrong;
+  const correct = state.score;
+  const wrong = state.wrong;
+  const skipped = state.skipped;
+  const percentage = totalAnswered > 0 ? Math.round((correct / totalAnswered) * 100) : 0;
+
+  // Format scores for display (show decimals only if needed)
+  const correctDisplay = Number.isInteger(correct) ? correct : correct.toFixed(1);
+  const wrongDisplay = Number.isInteger(wrong) ? wrong : wrong.toFixed(1);
 
   // Calculate grade for exam mode
   const isExam = state.mode === "exam";
@@ -3477,6 +3490,9 @@ function renderSummary() {
   if (percentage >= 70 || (grade && grade >= 7)) {
     showConfetti(4000);
   }
+
+  // Get total from history for the table display
+  const total = state.history.getTotal();
 
   // Build history table with points column for exam mode
   const historyRows = state.history
@@ -3527,11 +3543,11 @@ function renderSummary() {
 
       <div class="summary-score">
         <div class="summary-stat correct">
-          <div class="value">${correct}</div>
+          <div class="value">${correctDisplay}</div>
           <div class="label">Goed</div>
         </div>
         <div class="summary-stat wrong">
-          <div class="value">${wrong}</div>
+          <div class="value">${wrongDisplay}</div>
           <div class="label">Fout</div>
         </div>
         <div class="summary-stat">
@@ -3662,7 +3678,10 @@ function updateMeta() {
   if (statEl) {
     const total = state.questions.length;
     const current = Math.min(state.currentIndex + 1, total);
-    statEl.textContent = `${state.score} goed / ${state.wrong} fout / ${state.skipped} overgeslagen • vraag ${current} van ${total}`;
+    // Round scores to 1 decimal for display (fractional scoring for sub-questions)
+    const scoreDisplay = Number.isInteger(state.score) ? state.score : state.score.toFixed(1);
+    const wrongDisplay = Number.isInteger(state.wrong) ? state.wrong : state.wrong.toFixed(1);
+    statEl.textContent = `${scoreDisplay} goed / ${wrongDisplay} fout / ${state.skipped} overgeslagen • vraag ${current} van ${total}`;
   }
 }
 
