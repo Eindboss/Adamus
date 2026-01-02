@@ -123,18 +123,14 @@
       "c": 1,
       "e": "In deze periode gold (na hervormingen) dat burgerrecht aan strengere afstammingseisen gebonden kon zijn; de kern blijft: niet iedereen had politieke rechten.",
       "media": {
-        "query": "athenian democracy agora voting",
-        "alt": "Atheense democratie volksvergadering",
-        "negativeTerms": [
-          "modern"
-        ],
-        "qids": [
-          "Q145449"
-        ],
+        "query": "ancient athenian agora pnyx assembly",
+        "alt": "Atheense agora volksvergadering",
+        "negativeTerms": ["modern", "diagram"],
+        "qids": [],
         "_intent": {
-          "primaryConcept": "Atheense democratie volksvergadering",
-          "specificFocus": "Atheense democratie volksvergadering",
-          "representation": "diagram"
+          "primaryConcept": "Atheense agora",
+          "specificFocus": "plek van volksvergadering",
+          "representation": "photo"
         }
       }
     },
@@ -153,16 +149,14 @@
       "c": 1,
       "e": "De democratie gold alleen voor mannelijke burgers; grote groepen waren uitgesloten.",
       "media": {
-        "query": "athenian democracy citizens slaves excluded",
-        "alt": "beperkte democratie Athene",
-        "negativeTerms": [],
-        "qids": [
-          "Q145449"
-        ],
+        "query": "ancient greek slaves women society",
+        "alt": "Griekse maatschappij met slaven en vrouwen",
+        "negativeTerms": ["modern", "statue"],
+        "qids": [],
         "_intent": {
-          "primaryConcept": "beperkte democratie Athene",
-          "specificFocus": "beperkte democratie Athene",
-          "representation": "diagram"
+          "primaryConcept": "Griekse maatschappij slaven vrouwen",
+          "specificFocus": "uitgesloten groepen Athene",
+          "representation": "illustration"
         }
       }
     },
@@ -1325,7 +1319,7 @@
       "id": "g-045",
       "quiz_group": 15,
       "difficulty": 3,
-      "q": "Wat betekent ‘democratie’ letterlijk (Grieks)?",
+      "q": "Wat betekent 'democratie' letterlijk (Grieks)?",
       "a": [
         "macht van de koning",
         "macht van het volk",
@@ -1333,20 +1327,7 @@
         "macht van de adel"
       ],
       "c": 1,
-      "e": "demos = volk, kratos = macht/heerschappij.",
-      "media": {
-        "query": "athenian democracy pnyx assembly voting",
-        "alt": "Atheense democratie volksvergadering",
-        "negativeTerms": [],
-        "qids": [
-          "Q145449"
-        ],
-        "_intent": {
-          "primaryConcept": "Atheense democratie volksvergadering",
-          "specificFocus": "Atheense democratie volksvergadering",
-          "representation": "diagram"
-        }
-      }
+      "e": "demos = volk, kratos = macht/heerschappij."
     },
     {
       "id": "g-046",
