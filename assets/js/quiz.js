@@ -3651,9 +3651,13 @@ function setupEventListeners() {
       // Don't trigger if paused
       if (state.paused) return;
 
+      // Get current button state (buttons may be re-rendered)
+      const currentCheckBtn = $("checkBtn");
+      const currentNextBtn = $("nextBtn");
+
       if (state.phase === "question" && !state.answered) {
         // Check if there's a selection and the check button is enabled
-        if (checkBtn && !checkBtn.disabled) {
+        if (currentCheckBtn && !currentCheckBtn.disabled) {
           e.preventDefault();
           checkAnswer();
         }
