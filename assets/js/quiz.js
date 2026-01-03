@@ -81,6 +81,7 @@ import {
   expandCaseLabel,
   getCorrectAnswer,
 } from "./quiz-utils.js";
+import { checkAnswerWithAI, isAICheckingAvailable } from "./gemini.js";
 
 // Constants
 const QUESTION_SECONDS = 90;
@@ -2203,7 +2204,7 @@ function selectOption(el) {
 /**
  * Check the answer
  */
-export function checkAnswer() {
+export async function checkAnswer() {
   if (state.answered) return;
 
   const q = state.questions[state.currentIndex];
@@ -2219,7 +2220,7 @@ export function checkAnswer() {
       checkMCAnswer(q);
       break;
     case "open":
-      checkOpenAnswer(q);
+      await checkOpenAnswer(q);
       break;
     case "short_text":
       checkShortText(q);
@@ -2285,7 +2286,7 @@ export function checkAnswer() {
       checkSentenceCorrection(q);
       break;
     default:
-      checkOpenAnswer(q);
+      await checkOpenAnswer(q);
   }
 
   state.answered = true;
@@ -2331,14 +2332,15 @@ function checkMCAnswer(q) {
 }
 
 /**
- * Check open answer
+ * Check open answer (with optional AI semantic check)
  */
-function checkOpenAnswer(q) {
+async function checkOpenAnswer(q) {
   const input = $("openInput");
   const value = input ? input.value.trim() : "";
 
   // First check exact matches
   let isCorrect = checkAcceptList(q.accept || [], value, q.caseSensitive);
+  let aiFeedback = null;
 
   // If not exact match and keywords are defined, check if answer contains required keywords
   if (!isCorrect && q.keywords && q.keywords.length > 0) {
@@ -2347,6 +2349,36 @@ function checkOpenAnswer(q) {
     const matchedKeywords = q.keywords.filter(kw => valueLower.includes(kw.toLowerCase()));
     // Accept if at least 2 keywords match (to avoid single-word guesses)
     isCorrect = matchedKeywords.length >= 2;
+  }
+
+  // If still not correct and AI checking is available, try semantic check
+  if (!isCorrect && value.length > 0 && isAICheckingAvailable() && q.useAI !== false) {
+    try {
+      // Show loading indicator
+      const checkBtn = $("checkAnswer");
+      if (checkBtn) {
+        checkBtn.disabled = true;
+        checkBtn.textContent = "Controleren...";
+      }
+
+      const aiResult = await checkAnswerWithAI(
+        q.q,
+        value,
+        q.accept || [],
+        q.keywords || []
+      );
+
+      isCorrect = aiResult.correct;
+      aiFeedback = aiResult.feedback;
+
+      if (checkBtn) {
+        checkBtn.disabled = false;
+        checkBtn.textContent = "Controleer";
+      }
+    } catch (error) {
+      console.error("AI check failed:", error);
+      // Continue with non-AI result
+    }
   }
 
   awardPoints(q.id, isCorrect);
@@ -2361,9 +2393,15 @@ function checkOpenAnswer(q) {
     correctAnswer: q.accept[0] || "",
     correct: isCorrect,
     explanation: q.explanation,
+    aiFeedback,
   });
 
-  showFeedback(isCorrect, q.explanation, q.accept[0]);
+  // Show feedback with AI info if applicable
+  const explanation = aiFeedback
+    ? `${q.explanation || ""}\n\n🤖 AI-beoordeling: ${aiFeedback}`
+    : q.explanation;
+
+  showFeedback(isCorrect, explanation, q.accept[0]);
 }
 
 /**
