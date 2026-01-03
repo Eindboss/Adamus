@@ -2,56 +2,50 @@
   "results": [
     {
       "questionId": "q001",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/960px-Human_skeleton_front_en.svg.png",
-      "title": "Human skeleton front en.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Human_skeleton_front_en.svg",
-      "searchTerm": "incategory:\"Human skeleton diagrams\" functions -animal",
-      "imageIntent": "diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 257,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "No candidates found",
+      "queries": [
+        "incategory:\"Human skeleton diagrams\" functions -animal -insect -fish",
+        "human skeleton functions diagram -animal -insect -fish",
+        "skeleton functions diagram -animal -insect -fish"
+      ],
+      "repaired": false
     },
     {
       "questionId": "q002",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Axial_skeleton_diagram_blank.svg/960px-Axial_skeleton_diagram_blank.svg.png",
-      "title": "Axial skeleton diagram blank.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Axial_skeleton_diagram_blank.svg",
-      "searchTerm": "incategory:\"Human skeleton diagrams\" trunk bones labeled -animal",
-      "imageIntent": "labeled_diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 217,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "No candidates found",
+      "queries": [
+        "incategory:\"Human skeleton diagrams\" trunk bones -animal -insect -fish",
+        "human skeleton trunk bones diagram -animal -insect -fish",
+        "skeleton trunk bones diagram -animal -insect -fish"
+      ],
+      "repaired": false
     },
     {
       "questionId": "q003",
       "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1714939722515-17e107ae6ac1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHw1fHxib25lJTIwY29tcG9zaXRpb24lMjBkaWFncmFtJTIwaGFyZG5lc3N8ZW58MHwwfHx8MTc2NzQ3ODMyMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "Title: Frontal view of the human skull Creator: Wetselaar-Whittaker, J Date: 1950/1990 Providing institution: Universitaire Bibliotheken Leiden Aggregator: Dutch Collections for Europe Providing Country: Netherlands Public Domain Frontal view of the human skull by Wetselaar-Whittaker, J - Leiden University Libraries, Netherlands - Public Domain. https://www.europeana.eu/item/744/item_3462144",
-      "descriptionUrl": "https://unsplash.com/photos/a-drawing-of-a-human-skull-4rRcmBW6VQo",
-      "searchTerm": "bone composition diagram hardness -animal",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Composition_of_bone.png/960px-Composition_of_bone.png",
+      "title": "Composition of bone.png",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Composition_of_bone.png",
+      "searchTerm": "bone composition diagram calcium",
       "imageIntent": "diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 75,
-      "source": "unsplash",
+      "riskProfile": "none",
+      "score": 232,
+      "source": "commons",
       "repaired": false,
       "escalated": false
     },
     {
       "questionId": "q004",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Human_skeleton_back_en.svg/960px-Human_skeleton_back_en.svg.png",
-      "title": "Human skeleton back en.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Human_skeleton_back_en.svg",
-      "searchTerm": "bone development diagram child adult -animal",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Skeleton_diagram_of_a_cat.svg/960px-Skeleton_diagram_of_a_cat.svg.png",
+      "title": "Skeleton diagram of a cat.svg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Skeleton_diagram_of_a_cat.svg",
+      "searchTerm": "bone development diagram age",
       "imageIntent": "diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 147,
+      "riskProfile": "none",
+      "score": 200,
       "source": "commons",
       "repaired": false,
       "escalated": false
@@ -61,48 +55,42 @@
       "success": false,
       "reason": "No candidates found",
       "queries": [
-        "human cartilage locations diagram labeled -animal",
-        "cartilage locations diagram labeled -animal",
-        "human cartilage diagram -animal"
+        "incategory:\"Gray's Anatomy plates\" cartilage locations human -animal -insect -fish",
+        "human cartilage locations diagram -animal -insect -fish",
+        "cartilage locations diagram -animal -insect -fish"
       ],
       "repaired": false
     },
     {
       "questionId": "q006",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Asterion.PNG",
-      "title": "Asterion.PNG",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Asterion.PNG",
-      "searchTerm": "skull fontanelle closure diagram -animal",
-      "imageIntent": "diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 142,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "No candidates found",
+      "queries": [
+        "incategory:\"Gray's Anatomy plates\" skull fontanelle -animal",
+        "human skull fontanelle diagram -animal",
+        "fontanelle skull anatomy"
+      ],
+      "repaired": false
     },
     {
       "questionId": "q007",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Lambdoid_suture.png/960px-Lambdoid_suture.png",
-      "title": "Lambdoid suture.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lambdoid_suture.png",
-      "searchTerm": "immovable joint diagram -animal",
-      "imageIntent": "diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 162,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "No candidates found",
+      "queries": [
+        "immovable joint diagram",
+        "fibrous joint diagram",
+        "types of joints diagram"
+      ],
+      "repaired": false
     },
     {
       "questionId": "q008",
       "success": false,
       "reason": "No candidates found",
       "queries": [
-        "slightly movable joint diagram -animal",
-        "cartilaginous joint diagram -animal",
-        "human joint types diagram -animal"
+        "slightly movable joint diagram",
+        "cartilaginous joint diagram",
+        "types of joints diagram"
       ],
       "repaired": false
     },
@@ -111,9 +99,9 @@
       "success": false,
       "reason": "No candidates found",
       "queries": [
-        "bone cell micrograph osteocyte -animal",
-        "bone cell histology osteocyte -animal",
-        "osteocyte micrograph -animal"
+        "bone cells micrograph osteocytes",
+        "bone cells histology osteocytes",
+        "bone cells micrograph"
       ],
       "repaired": false
     },
@@ -122,36 +110,39 @@
       "success": false,
       "reason": "No candidates found",
       "queries": [
-        "bone collagen function diagram -animal",
-        "bone matrix collagen diagram -animal",
-        "bone structure collagen diagram -animal"
+        "bone collagen function diagram",
+        "bone collagen structure diagram",
+        "bone collagen diagram"
       ],
       "repaired": false
     },
     {
       "questionId": "q011",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Gray1172.png/960px-Gray1172.png",
-      "title": "Gray1172.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Gray1172.png",
-      "searchTerm": " diagram",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Dissected_lactating_breast_gray1172.png",
+      "title": "Dissected lactating breast gray1172.png",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Dissected_lactating_breast_gray1172.png",
+      "searchTerm": "incategory:\"Human skeleton diagrams\" muscle attachment -animal -insect -fish",
       "imageIntent": "labeled_diagram",
       "riskProfile": "human_vs_animal",
-      "score": 160,
+      "score": 100,
       "source": "commons",
-      "repaired": true,
+      "repaired": false,
       "escalated": false
     },
     {
       "questionId": "q012",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "joint cartilage function diagram -animal",
-        "articular cartilage function diagram -animal",
-        "human joint cartilage diagram -animal"
-      ],
-      "repaired": false
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Temporomandibular_joint_number.svg/960px-Temporomandibular_joint_number.svg.png",
+      "title": "Temporomandibular joint number.svg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Temporomandibular_joint_number.svg",
+      "searchTerm": "joint cartilage function diagram",
+      "imageIntent": "diagram",
+      "riskProfile": "none",
+      "score": 285,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q013",
@@ -176,65 +167,80 @@
       "searchTerm": "incategory:\"Gray's Anatomy plates\" ball and socket joint human -animal",
       "imageIntent": "labeled_diagram",
       "riskProfile": "human_vs_animal",
-      "score": 177,
+      "score": 275,
       "source": "commons",
       "repaired": false,
       "escalated": false
     },
     {
       "questionId": "q015",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "human hinge joint diagram -animal",
-        "human elbow joint diagram -animal",
-        "hinge joint anatomy human -animal"
-      ],
-      "repaired": false
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/The_human_body._A_beginner%27s_text-book_of_anatomy%2C_physiology_and_hygiene_%281884%29_%2814780769874%29.jpg/960px-The_human_body._A_beginner%27s_text-book_of_anatomy%2C_physiology_and_hygiene_%281884%29_%2814780769874%29.jpg",
+      "title": "The human body. A beginner's text-book of anatomy, physiology and hygiene (1884) (14780769874).jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:The_human_body._A_beginner%27s_text-book_of_anatomy,_physiology_and_hygiene_(1884)_(14780769874).jpg",
+      "searchTerm": "incategory:\"Human skeleton diagrams\" hinge joint human -animal",
+      "imageIntent": "diagram",
+      "riskProfile": "human_vs_animal",
+      "score": 145,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q016",
-      "success": false,
-      "reason": "Low score: 90 (min: 100)",
-      "queries": [
-        "human joint types diagram -animal",
-        "human synovial joint diagram -animal",
-        "human joint anatomy diagram -animal"
-      ],
-      "repaired": false
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Levers_of_the_Human_Body.svg/960px-Levers_of_the_Human_Body.svg.png",
+      "title": "Levers of the Human Body.svg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Levers_of_the_Human_Body.svg",
+      "searchTerm": "human joint types diagram -animal",
+      "imageIntent": "diagram",
+      "riskProfile": "human_vs_animal",
+      "score": 172,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q017",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "human osteoarthritis diagram -animal",
-        "human joint damage diagram -animal",
-        "human joint problems diagram -animal"
-      ],
-      "repaired": false
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
+      "title": "Synovial fluid",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Synovial_fluid",
+      "searchTerm": "human joint lubrication diagram -animal",
+      "imageIntent": "diagram",
+      "riskProfile": "human_vs_animal",
+      "score": 107,
+      "source": "wikipedia",
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q018",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "human ligament joint diagram -animal",
-        "human knee ligament diagram -animal",
-        "human joint ligament anatomy -animal"
-      ],
-      "repaired": false
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Bursa_of_elbow_joint.jpg",
+      "title": "Bursa of elbow joint.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Bursa_of_elbow_joint.jpg",
+      "searchTerm": "human ligament joint diagram -animal",
+      "imageIntent": "labeled_diagram",
+      "riskProfile": "human_vs_animal",
+      "score": 162,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q019",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "human intervertebral disc diagram -animal",
-        "human spine intervertebral disc diagram -animal",
-        "human vertebral column intervertebral disc -animal"
-      ],
-      "repaired": false
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/716_Intervertebral_Disk.svg/960px-716_Intervertebral_Disk.svg.png",
+      "title": "716 Intervertebral Disk.svg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:716_Intervertebral_Disk.svg",
+      "searchTerm": "human intervertebral disc diagram -animal",
+      "imageIntent": "labeled_diagram",
+      "riskProfile": "human_vs_animal",
+      "score": 277,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q020",
@@ -245,21 +251,24 @@
       "searchTerm": "human spine curvature diagram -animal",
       "imageIntent": "diagram",
       "riskProfile": "human_vs_animal",
-      "score": 175,
+      "score": 177,
       "source": "unsplash",
       "repaired": false,
       "escalated": false
     },
     {
       "questionId": "q021",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "human muscle tendon bone diagram -animal",
-        "human tendon attachment diagram -animal",
-        "human muscle attachment bone -animal"
-      ],
-      "repaired": false
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Skeletal_muscle.jpg/960px-Skeletal_muscle.jpg",
+      "title": "Skeletal muscle.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Skeletal_muscle.jpg",
+      "searchTerm": "human muscle tendon bone diagram -animal",
+      "imageIntent": "labeled_diagram",
+      "riskProfile": "human_vs_animal",
+      "score": 152,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q022",
@@ -268,7 +277,7 @@
       "queries": [
         "human muscle contraction diagram -animal",
         "human muscle movement diagram -animal",
-        "human muscle action diagram -animal"
+        "human muscle physiology -animal"
       ],
       "repaired": false
     },
@@ -277,9 +286,9 @@
       "success": false,
       "reason": "No candidates found",
       "queries": [
-        "human muscle contraction sarcomere diagram -animal",
-        "human sarcomere contraction diagram -animal",
-        "human muscle fiber contraction -animal"
+        "human muscle sarcomere contraction diagram -animal",
+        "human muscle fiber contraction -animal",
+        "human muscle contraction -animal"
       ],
       "repaired": false
     },
@@ -288,339 +297,138 @@
       "success": false,
       "reason": "No candidates found",
       "queries": [
-        "human antagonistic muscles diagram -animal",
+        "human antagonistic muscle pair diagram -animal",
         "human biceps triceps diagram -animal",
-        "human muscle pairs diagram -animal"
+        "human muscle action -animal"
       ],
       "repaired": false
     },
     {
       "questionId": "q025",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Gray525.png",
-      "title": "Gray525.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Gray525.png",
-      "searchTerm": "incategory:\"Gray's Anatomy plates\" biceps triceps antagonist human -animal -insect -fish",
-      "imageIntent": "labeled_diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 192,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q026",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/NSdiagram.png",
-      "title": "NSdiagram.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:NSdiagram.png",
-      "searchTerm": "autonomic nervous system diagram human -animal -insect -fish",
-      "imageIntent": "concept_diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 225,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q027",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Skin.svg/960px-Skin.svg.png",
-      "title": "Skin.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Skin.svg",
-      "searchTerm": "incategory:\"Gray's Anatomy plates\" arrector pili muscle human -animal -insect -fish",
-      "imageIntent": "diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 205,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q028",
       "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "motor learning diagram",
-        "muscle memory diagram",
-        "procedural memory diagram"
-      ],
-      "repaired": false
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q029",
       "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "muscle coordination diagram human -animal -insect -fish",
-        "neuromuscular coordination diagram human -animal -insect -fish",
-        "motor coordination diagram human -animal -insect -fish"
-      ],
-      "repaired": false
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q030",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/LRC_Bavaria_transportation_assistant_makes_exercise%2C_nutrition_part_of_her_healthy_lifestyle_%287312162%29.jpg/960px-LRC_Bavaria_transportation_assistant_makes_exercise%2C_nutrition_part_of_her_healthy_lifestyle_%287312162%29.jpg",
-      "title": "LRC Bavaria transportation assistant makes exercise, nutrition part of her healthy lifestyle (7312162).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:LRC_Bavaria_transportation_assistant_makes_exercise,_nutrition_part_of_her_healthy_lifestyle_(7312162).jpg",
-      "searchTerm": "exercise health benefits",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 110,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q031",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1758521959727-9fc5ca11335a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHx3YXJtaW5nJTIwdXAlMjBleGVyY2lzZXxlbnwwfDB8fHwxNzY3NDc4NzAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "Handsome man in headphones doing warm-up exercise while listening music in winter park outdoors",
-      "descriptionUrl": "https://unsplash.com/photos/man-with-headphones-stretching-outdoors-with-arms-outstretched--ElZ_JpMs0Y",
-      "searchTerm": "warming up exercise",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 132,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q032",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1694741249336-bb0728c46410?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxtdXNjbGUlMjBjb29sJTIwZG93biUyMHRpbWV8ZW58MHwwfHx8MTc2NzQ3ODcxMHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "a man flexing his muscles in a gym",
-      "descriptionUrl": "https://unsplash.com/photos/a-man-flexing-his-muscles-in-a-gym-ycvDYGxuT40",
-      "searchTerm": "muscle cool down time",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 115,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q033",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1761034114091-6d30447e25aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxzdHJldGNoaW5nJTIwZXhlcmNpc2UlMjB0ZWNobmlxdWV8ZW58MHwwfHx8MTc2NzQ3ODcxOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "Yoga instructor assisting student in downward dog pose.",
-      "descriptionUrl": "https://unsplash.com/photos/yoga-instructor-assisting-student-in-downward-dog-pose-2AfMN5_Jk2k",
-      "searchTerm": "stretching exercise technique",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 95,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q034",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1758738880382-d614a6ecdc4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxjb29saW5nJTIwZG93biUyMGV4ZXJjaXNlJTIwYmVuZWZpdHN8ZW58MHwwfHx8MTc2NzQ3ODcyOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "A young man is sitting on a blue mat in a lotus pose, with his eyes closed and a calm expression. He is wearing a blue t-shirt and black shorts. The background is a plain white wall.",
-      "descriptionUrl": "https://unsplash.com/photos/man-meditating-in-a-lotus-pose-on-a-mat-7YP4Ml-uPTc",
-      "searchTerm": "cooling down exercise benefits",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 95,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q035",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Muscle_spindle_antioxidants-09-00212-g001.png/960px-Muscle_spindle_antioxidants-09-00212-g001.png",
-      "title": "Muscle spindle antioxidants-09-00212-g001.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Muscle_spindle_antioxidants-09-00212-g001.png",
-      "searchTerm": "delayed onset muscle soreness",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 142,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q036",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1589698112632-f5dffc219c68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBpbmp1cnl8ZW58MHwwfHx8MTc2NzQ3ODc0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "2-men-in-red-and-white-jersey-shirt-sitting-on-grass-field-",
-      "descriptionUrl": "https://unsplash.com/photos/2-men-in-red-and-white-jersey-shirt-sitting-on-ground-during-daytime-KtPJkTlke8Y",
-      "searchTerm": "sports injury",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 95,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q037",
       "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "RSI diagram human",
-        "Repetitive Strain Injury diagram human",
-        "Ergonomics workstation diagram"
-      ],
-      "repaired": false
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q038",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1674471361339-2e1e1dbd3e73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjB1c2luZyUyMGNvbXB1dGVyJTIwcGFpbnxlbnwwfDB8fHwxNzY3NDc4NzY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "a man sitting at a desk in front of a laptop computer",
-      "descriptionUrl": "https://unsplash.com/photos/a-man-sitting-at-a-desk-in-front-of-a-laptop-computer-AtS6J87PRs0",
-      "searchTerm": "person using computer pain",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 127,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q039",
       "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "ergonomic break reminder diagram",
-        "workstation break timer diagram",
-        "computer break reminder"
-      ],
-      "repaired": false
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q040",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ergonomics_of_drawing_tablets_by_David_Revoy.svg/960px-Ergonomics_of_drawing_tablets_by_David_Revoy.svg.png",
-      "title": "Ergonomics of drawing tablets by David Revoy.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ergonomics_of_drawing_tablets_by_David_Revoy.svg",
-      "searchTerm": "ergonomic workstation setup diagram",
-      "imageIntent": "diagram",
-      "riskProfile": "none",
-      "score": 227,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q041",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Henry_Dreyfus_Cruising_Bicycle_Posture_AND_Strida.jpg/960px-Henry_Dreyfus_Cruising_Bicycle_Posture_AND_Strida.jpg",
-      "title": "Henry Dreyfus Cruising Bicycle Posture AND Strida.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Henry_Dreyfus_Cruising_Bicycle_Posture_AND_Strida.jpg",
-      "searchTerm": "correct sitting posture diagram human",
-      "imageIntent": "diagram",
-      "riskProfile": "human_vs_animal",
-      "score": 167,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q042",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1758599879513-9124e9718f2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBzdHJldGNoaW5nJTIwaGFuZHMlMjBwaG9uZXxlbnwwfDB8fHwxNzY3NDc4ODA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "Low shot of anonymous man meditating on yoga mat sitting in lotus position with hands in namaste then in mudra gestures. People and relaxation concept.",
-      "descriptionUrl": "https://unsplash.com/photos/man-meditating-in-lotus-pose-on-yoga-mat-qhDk6wJBt2A",
-      "searchTerm": "person stretching hands phone",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 127,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q043",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1664786562315-d12f13c18ebc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxwZW5ndWluJTIwc3dpbW1pbmclMjB1bmRlcndhdGVyfGVufDB8MHx8fDE3Njc0Nzg4MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "A penguin swimming in a water.",
-      "descriptionUrl": "https://unsplash.com/photos/a-shark-with-a-crab-on-its-back-heqtKCTxsJA",
-      "searchTerm": "penguin swimming underwater",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 185,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q044",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1565870304282-f99a26804887?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwyfHxwZW5ndWluJTIwd2Fsa2luZyUyMHdhZGRsZXxlbnwwfDB8fHwxNzY3NDc4ODI3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "Penguin walking",
-      "descriptionUrl": "https://unsplash.com/photos/black-and-white-penguin-on-focus-photography-rhNJJ4eD2zk",
-      "searchTerm": "penguin walking waddle",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 175,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q045",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Anatomy_and_physiology_of_animals_Birds_skeleton.jpg",
-      "title": "Anatomy and physiology of animals Birds skeleton.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Anatomy_and_physiology_of_animals_Birds_skeleton.jpg",
-      "searchTerm": "penguin skeleton wing",
-      "imageIntent": "diagram",
-      "riskProfile": "none",
-      "score": 202,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q046",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Squelette_oiseau.svg/960px-Squelette_oiseau.svg.png",
-      "title": "Squelette oiseau.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Squelette_oiseau.svg",
-      "searchTerm": "penguin keel bone diagram",
-      "imageIntent": "diagram",
-      "riskProfile": "none",
-      "score": 302,
-      "source": "commons",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q048",
       "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "exercise training phases diagram",
-        "workout phases diagram",
-        "exercise program diagram"
-      ],
-      "repaired": false
+      "reason": "AI batch error: 429 Rate limit exceeded"
     },
     {
       "questionId": "q050",
-      "success": true,
-      "imageUrl": "https://images.unsplash.com/photo-1518644730709-0835105d9daa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHx0aGlua2luZyUyMHBlcnNvbnxlbnwwfDB8fHwxNzY3NDc4ODY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "title": "work",
-      "descriptionUrl": "https://unsplash.com/photos/man-holding-his-chin-facing-laptop-computer-xj8qrWvuOEs",
-      "searchTerm": "thinking person",
-      "imageIntent": "photo",
-      "riskProfile": "none",
-      "score": 95,
-      "source": "unsplash",
-      "repaired": false,
-      "escalated": false
+      "success": false,
+      "reason": "AI batch error: 429 Rate limit exceeded"
     }
   ],
-  "successCount": 29,
-  "imageSuccessCount": 29,
+  "successCount": 13,
+  "imageSuccessCount": 13,
   "noImageCount": 0,
-  "escalationCount": 10,
+  "escalationCount": 9,
   "total": 48,
-  "timestamp": "2026-01-03T22:21:09.146Z",
+  "timestamp": "2026-01-03T22:48:10.059Z",
   "version": "v3.5"
 }

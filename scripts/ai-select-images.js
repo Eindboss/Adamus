@@ -46,10 +46,12 @@ const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models'
 const MODEL = 'gemini-2.0-flash-exp';
 
 // Batch settings
-const BATCH_SIZE = 12;
+const BATCH_SIZE = 10; // Reduced from 12 to avoid rate limits
 const MAX_RETRIES = 3;
-const BASE_DELAY = 2000;
+const BASE_DELAY = 3000; // Increased from 2000ms
 const MAX_ESCALATIONS_PER_QUIZ = 10; // v3.3: Cap per-question AI escalations
+const VISION_DELAY = 500; // Delay between AI vision calls (was 200ms)
+const BATCH_DELAY = 5000; // Delay between batches (was implicit)
 
 // v3.3: Latin grammar/translation keywords that indicate no image is needed
 // Only narrative (cultural/mythological) questions need images
@@ -1505,7 +1507,7 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
         process.stdout.write(` [AI:${shortReason}]`);
       }
 
-      await sleep(200);
+      await sleep(VISION_DELAY);
     }
 
     // Phase 2: Escalate to remaining candidates (4 and 5) if no valid found
@@ -1534,7 +1536,7 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
           process.stdout.write(` [AI:${validation.score}✗]`);
         }
 
-        await sleep(200);
+        await sleep(VISION_DELAY);
       }
     }
 
@@ -1787,8 +1789,8 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
     allResults.push(...batchResults);
 
     if (i + BATCH_SIZE < needsImage.length) {
-      console.log(`\nWaiting before next batch...`);
-      await sleep(BASE_DELAY);
+      console.log(`\nWaiting ${BATCH_DELAY/1000}s before next batch...`);
+      await sleep(BATCH_DELAY);
     }
   }
 
