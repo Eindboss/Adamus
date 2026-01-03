@@ -1,8 +1,8 @@
-# ChatGPT Review: AI-Powered Wikimedia Commons Image Selection (v3.2) - Lessons Learned
+# ChatGPT Review: AI-Powered Wikimedia Commons Image Selection (v3.3) - Lessons Learned
 
 ## Context
 
-Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Na vier iteraties heb ik nu een v3.2 systeem. Dit document beschrijft wat we geleerd hebben.
+Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Na vijf iteraties heb ik nu een v3.3 systeem. Dit document beschrijft wat we geleerd hebben.
 
 **Belangrijk:** Ik gebruik Gemini **Tier 1** (niet gratis tier), dus er is meer ruimte voor extra AI calls als dat nodig is.
 
@@ -14,99 +14,74 @@ Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Na v
 | v2 | 75% | - | - | - | 75% |
 | v3 | 87.5% | - | - | - | 87.5% |
 | v3.1 | 95.8% | 100% | - | - | 97.8% |
-| **v3.2** | **93.75%** | **100%** | **83.1%** | **98.9%** | **92.8%** |
+| v3.2 | 93.75% | 100% | 83.1% | 98.9% | 92.8% |
+| **v3.3** | **100%** | **97.8%** | **100%** | **100%** | **99.5%** |
 
-*Aardrijkskunde: H1 100% (49/49) + H2 97.8% (45/46) = 98.9% totaal*
-*Note: v3.2 heeft lagere biologie score door hogere MIN_ACCEPT_SCORE thresholds voor betere kwaliteit.*
+*v3.3: Latijn 100% = 15 images voor verhalende vragen + 74 grammaticavragen (imagePolicy="none")*
+*Aardrijkskunde: H1 100% (49/49) + H2 100% (46/46) = 100% totaal*
 
-## Wat Werkte (v3.2 Verbeteringen)
+## Wat Werkte (v3.3 Verbeteringen)
 
-### 1. Subject profiles (vakprofielen)
-Per-vak defaults voor intent, categoryHints en riskProfile.
+### 1. imagePolicy="none" voor grammaticavragen
+Latijnse grammatica/vertaalvragen krijgen geen afbeelding meer - alleen verhalende (culturele/mythologische) vragen.
 
 ```javascript
-const SUBJECT_PROFILES = {
+const LATIN_GRAMMAR_KEYWORDS = [
+  // Grammar terms
+  'accusativus', 'accusatief', 'dativus', 'datief', 'genitivus', 'genitief',
+  'ablativus', 'ablatief', 'nominativus', 'nominatief', 'vocativus', 'vocatief',
+  'vervoeging', 'verbuiging', 'coniugatio', 'conjugatie', 'declinatio', 'declinatie',
+  // Translation terms
+  'vertaal', 'vertaling', 'betekent', 'betekenis',
+  // Vocabulary terms
+  'woordsoort', 'zelfstandig naamwoord', 'werkwoord', 'bijvoeglijk',
+  // Sentence analysis
+  'ontleed', 'ontleding', 'zinsdeel', 'onderwerp', 'lijdend voorwerp',
+];
+
+// Narrative questions still get images
+const narrativeKeywords = [
+  'romulus', 'remus', 'vestaalse', 'vesta', 'numa', 'tarquinius',
+  'sabijnse', 'aeneas', 'troje', 'jupiter', 'mars', 'venus',
+  'mythe', 'sage', 'legende', 'verhaal', 'geschiedenis',
+];
+```
+
+### 2. Per-question AI escalation
+Bij gefaalde zoekopdrachten wordt een extra AI call gedaan voor creatieve alternatieve queries (max 10 per quiz).
+
+```javascript
+const MAX_ESCALATIONS_PER_QUIZ = 10;
+
+async function escalateWithAI(question, subject, chapterContext) {
+  // Generates new commonsQueries and categoryHints for failed questions
+  // Uses synonyms, alternative terminology, related concepts
+}
+```
+
+### 3. Subject-specific threshold overrides
+Vakspecifieke drempelwaarden voor betere balans tussen kwaliteit en coverage.
+
+```javascript
+const SUBJECT_THRESHOLDS = {
   biologie: {
-    defaultIntent: 'labeled_diagram',
-    categoryHints: ['Gray\'s Anatomy plates', 'Human anatomy diagrams', ...],
-    riskProfile: 'human_vs_animal',
+    labeled_diagram: 100,
+    concept_diagram: 60, // Lower for abstract concepts
   },
   geschiedenis: {
-    defaultIntent: 'historical_illustration',
-    categoryHints: ['Historical maps', 'Ancient Rome', 'Ancient Greece', ...],
-    riskProfile: 'historical_vs_modern',
+    historical_illustration: 80, // Higher for better quality
   },
   aardrijkskunde: {
-    defaultIntent: 'map',
-    categoryHints: ['Physical maps', 'Thematic maps', 'Climate diagrams', ...],
-    riskProfile: 'thematic_vs_tourist',
+    map: 80, // Higher for legibility
   },
   latijn: {
-    defaultIntent: 'historical_illustration',
-    categoryHints: ['Ancient Rome', 'Roman mythology', 'Roman mosaics', ...],
-    riskProfile: 'mythology_vs_popculture',
+    historical_illustration: 70,
+    photo: 40,
   },
 };
 ```
 
-### 2. concept_diagram intent voor abstracte concepten
-Nieuwe intent voor reflexen, homeostase, coördinatie, etc.
-
-```javascript
-const CONCEPT_DIAGRAM_TOKENS = ['schematic', 'flowchart', 'pathway', 'cycle', 'model',
-  'infographic', 'process', 'mechanism', 'regulation', 'feedback'];
-
-const ABSTRACT_CONCEPT_KEYWORDS = ['coördinatie', 'coordination', 'rusttoestand', 'reflex',
-  'regeling', 'homeostase', 'homeostasis', 'prikkel', 'stimulus', ...];
-```
-
-### 3. Nieuwe riskProfiles
-- `thematic_vs_tourist` - penaliseert metro/subway/tourist maps
-- `mythology_vs_popculture` - penaliseert Disney/Marvel/games/films
-
-### 4. Educational quality scoring
-```javascript
-const EDUCATIONAL_TOKENS = ['identification', 'field guide', 'distribution', 'range map',
-  'habitat', 'taxonomy', 'specimen', 'labeled', 'annotated', 'educational', 'textbook'];
-
-const STOCK_TOKENS = ['shutterstock', 'getty', 'istock', 'stock photo', ...];
-const POPCULTURE_TOKENS = ['disney', 'marvel', 'game', 'movie', 'film', 'lego', 'toy', ...];
-```
-
-### 5. Map legibility bonus
-Grotere kaarten (width >= 1200) krijgen +20, kleinere (< 800) krijgen -20.
-
-### 6. Hogere MIN_ACCEPT_SCORE thresholds
-```javascript
-const MIN_ACCEPT_SCORE = {
-  labeled_diagram: 100,  // was 80
-  diagram: 70,           // was 60
-  concept_diagram: 70,
-  photo: 35,            // was 30
-  map: 70,              // was 50
-  historical_illustration: 70,  // was 50
-  micrograph: 70,
-  default: 35,
-};
-```
-
-## Wat Nog Niet Werkt
-
-### Probleem 1: Latijn grammatica vragen (15/89 = 16.9% gefaald)
-Vragen over Latijnse grammatica (verbuigingen, vervoegingen, woordsoorten) hebben vaak geen geschikte afbeeldingen op Commons.
-
-**Gefaalde vragen:**
-- q028, q031, q034-q037: Grammaticavragen over accusatief, datief, etc.
-- q051-q053, q059-q060, q071, q074, q076-q077: Verbuigings/vervoegingsvragen
-
-**Mogelijke oplossing:**
-- Voor grammaticavragen: Wikipedia fallback naar artikelen over Latijnse grammatica
-- Of: Accepteren dat sommige taalkundige vragen geen afbeelding nodig hebben
-
-### Probleem 2: Biologie abstracte concepten (3/48 = 6.25%)
-Ondanks concept_diagram intent, blijven sommige abstracte vragen lastig.
-
-## Architectuur v3.2
+## Architectuur v3.3
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -123,7 +98,16 @@ Ondanks concept_diagram intent, blijven sommige abstracte vragen lastig.
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              SEARCH STRATEGY (v3.2)                          │
+│              IMAGE POLICY CHECK (v3.3)                       │
+│                                                              │
+│  • Latin grammar/translation → imagePolicy="none" (skip)    │
+│  • Narrative questions → imagePolicy="required"             │
+│  • Other subjects → imagePolicy="required"                  │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│              SEARCH STRATEGY (v3.3)                          │
 │                                                              │
 │  1. Category search (categoryHints)                          │
 │  2. Text search (commonsQueries)                            │
@@ -131,78 +115,67 @@ Ondanks concept_diagram intent, blijven sommige abstracte vragen lastig.
 │  4. Score candidates met subject-aware scoring               │
 │  5. Wikipedia fallback bij lage score                        │
 │  6. Broader search als nog steeds te laag                    │
+│  7. [NEW] AI escalation bij failure (max 10/quiz)           │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              DETERMINISTIC SCORING (v3.2)                    │
+│              DETERMINISTIC SCORING (v3.3)                    │
 │                                                              │
-│  BONUSSEN:                                                   │
-│  • Category match + topic: +60, zonder: +20                 │
-│  • Good category + topic: +30, zonder: +10                   │
-│  • SVG format: +20 extra                                     │
-│  • Concept diagram signals: +40                              │
-│  • Map legibility (width >= 1200): +20                       │
-│  • Educational tokens: +20                                   │
-│  • Ancient/Roman/Mosaic (latijn): +30                        │
+│  Subject-specific thresholds:                                │
+│  • Biologie concept_diagram: 60 (was 70)                    │
+│  • Geschiedenis historical_illustration: 80 (was 70)        │
+│  • Aardrijkskunde map: 80 (was 70)                          │
 │                                                              │
-│  PENALTIES:                                                  │
-│  • Animal token bij human_vs_animal: -80                     │
-│  • Modern indicator bij historical: -50                      │
-│  • Stock photo tokens: -80                                   │
-│  • Popculture tokens: -40 (global), -80 (latijn)            │
-│  • Tourist map tokens: -60                                   │
-│  • Concept diagram zonder teaching signals: -60              │
-│  • Map te klein (< 800): -20                                 │
-│  • Reeds gebruikt: -1000                                     │
+│  BONUSSEN & PENALTIES: (unchanged from v3.2)                │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ## Kosten
 
-**v3.2 kosten:** Gemini Tier 1
+**v3.3 kosten:** Gemini Tier 1
 - 4-8 AI calls per ~50 vragen (batches van 12)
-- Tier 1 geeft meer ruimte voor retries en extra calls
-- Mogelijkheid voor per-question AI calls bij moeilijke vragen
+- + max 10 escalation calls voor moeilijke vragen
+- Tier 1 geeft ruimte voor deze extra calls
 
 ## Concrete Successen per Vak
 
-### Biologie (93.75%)
+### Biologie (100%)
 | Type | Voorbeeld | Score |
 |------|-----------|-------|
-| Anatomie | Human arm bones diagram-es.svg | 220 |
-| Gewrichten | Ball and Socket Joint (Hip joint).svg | 230 |
-| Spieren | Skeletal muscle and fiber.jpg | 160 |
+| Anatomie | Axial skeleton diagram blank.svg | 200 |
+| Gewrichten | Ball and Socket Joint (Hip joint).svg | 180 |
+| Spieren | Skeletal muscle and fiber.jpg | 170 |
+| Concept | Muscle Contraction.svg | 240 |
 
-### Geschiedenis (100%)
+### Geschiedenis (97.8%)
 | Type | Voorbeeld | Score |
 |------|-----------|-------|
-| Mummificatie | Diagram showing method of packing for mummifi... | 290 |
-| Grieken | Ancient Egypt. Mummy of woman from Thebes... | 260 |
-| Mythologie | A Short Depiction of King Midas... | 240 |
+| Mummificatie | Mummification simple.png | 220 |
+| Grieken | Map of Ancient Greece (as drawn in 1903).jpg | 190 |
+| Olympische Spelen | Museum of the History of the Ancient Olympic... | 170 |
 
 ### Aardrijkskunde (100%)
 | Type | Voorbeeld | Score |
 |------|-----------|-------|
-| Tijdzones | World - time zones map (2014).svg | 250 |
+| Tijdzones | World - time zones map (2014).svg | 220 |
 | Coördinaten | Latitude and Longitude of the Earth.svg | 180 |
-| Bevolking | Russia Population Density Map 2021.png | 240 |
+| Klimaat | Köppen-Geiger Climate Classification Map... | 220 |
 
-### Latijn (83.1%)
-| Type | Voorbeeld | Score |
-|------|-----------|-------|
-| Romulus/Remus | Maria Saal Dom Grabrelief Romulus und Remus... | 230 |
-| Vestaalse maagd | Virgo Vestalis (Musgrave).jpg | 230 |
-| Slavernij | Jean-Léon Gérôme - A Roman Slave Market... | 180 |
+### Latijn (100%)
+| Type | Resultaat |
+|------|-----------|
+| Verhalende vragen | 15 images (Romulus, Remus, Vesta, etc.) |
+| Grammaticavragen | 74 (imagePolicy="none") |
 
 ## Vakken en Toepasbaarheid
 
-| Vak | v3.1 | v3.2 | Probleem |
-|-----|------|------|----------|
-| Biologie | 95.8% | **93.75%** | Hogere thresholds, minder false positives |
-| Geschiedenis | 100% | **100%** | Werkt uitstekend |
-| Aardrijkskunde | - | **100%** | thematic_vs_tourist effectief |
-| Latijn | - | **83.1%** | Grammaticavragen hebben geen afbeeldingen |
+| Vak | v3.2 | v3.3 | Verbetering |
+|-----|------|------|-------------|
+| Biologie | 93.75% | **100%** | Subject-specific thresholds + escalation |
+| Geschiedenis | 100% | **97.8%** | 1 edge case |
+| Aardrijkskunde | 98.9% | **100%** | Escalation helped |
+| Latijn | 83.1% | **100%** | imagePolicy="none" voor grammatica |
 
 *Dit zijn de vier vakken waarvoor afbeeldingen worden gezocht.*
 
@@ -211,26 +184,25 @@ Ondanks concept_diagram intent, blijven sommige abstracte vragen lastig.
 - **Platform:** Browser-based quiz app (HTML/JS)
 - **AI:** Gemini 2.0 Flash (**Tier 1** - niet gratis tier)
 - **Quiz grootte:** 30-100 vragen
-- **AI kosten:** 4-8 calls per ~50 vragen (batches van 12)
+- **AI kosten:** 4-8 batch calls + max 10 escalation calls per quiz
 - **API kosten:** Gratis (Commons/Wikipedia APIs)
 
-## Vragen voor Verdere Optimalisatie
+## Opgeloste Problemen
 
-1. **Latijn grammatica:** Moeten we voor grammaticavragen een "no_image_needed" flag toevoegen? Of een speciale grammatica-diagram generator?
+### ✅ Probleem 1: Latijn grammatica vragen
+**Oplossing:** `imagePolicy="none"` voor grammatica/vertaalvragen. Alleen verhalende vragen krijgen afbeeldingen.
 
-2. **Per-question AI calls:** Met Tier 1 budget, is het zinvol om voor gefaalde vragen een extra dedicated AI call te doen?
+### ✅ Probleem 2: Moeilijke zoekopdrachten
+**Oplossing:** Per-question AI escalation genereert creatieve alternatieve queries voor gefaalde vragen.
 
-3. **Semantic similarity:** Kunnen we embedding-based matching toevoegen om betere afbeeldingen te vinden voor abstracte concepten?
-
-4. **Score thresholds:** De hogere thresholds geven betere kwaliteit maar lagere coverage. Wat is de optimale balans?
+### ✅ Probleem 3: Suboptimale thresholds
+**Oplossing:** Subject-specific threshold overrides voor betere balans per vak.
 
 ## Conclusie
 
-**Grootste winst v3.2:** Subject profiles en nieuwe riskProfiles maakten aardrijkskunde (100%) en latijn (83.1%) mogelijk zonder handmatige configuratie.
+**v3.3 bereikt ~99.5% success rate** door:
+1. **imagePolicy="none"** voor niet-visuele vragen (grammatica/vertaling)
+2. **Per-question AI escalation** voor moeilijke zoekopdrachten
+3. **Subject-specific thresholds** voor optimale balans per vak
 
-**Resterende uitdaging:** Latijn grammaticavragen (17%) hebben geen geschikte afbeeldingen op Commons. Dit is mogelijk inherent aan het probleem - niet elke vraag heeft een afbeelding nodig.
-
-**Tier 1 mogelijkheden:** Met Tier 1 budget kunnen we overwegen:
-- Extra AI call voor gefaalde vragen
-- Langere/rijkere prompts
-- Semantic search met embeddings
+Het systeem is nu productierijp voor alle vier vakken.
