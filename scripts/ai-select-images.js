@@ -1,5 +1,5 @@
 /**
- * AI-powered image selection for quiz questions (v3.2)
+ * AI-powered image selection for quiz questions (v3.3)
  *
  * Uses Gemini AI to generate optimal search terms in BATCHES,
  * then fetches images from Wikimedia Commons with enhanced scoring.
@@ -27,6 +27,12 @@
  * - Higher MIN_ACCEPT_SCORE thresholds for better precision
  * - Map legibility bonus for larger images
  *
+ * v3.3 Improvements:
+ * - imagePolicy="none" for Latin grammar questions (no image needed)
+ * - Per-question AI escalation for failures (query-repair, capped per quiz)
+ * - Subject-specific threshold overrides
+ * - Improved Latin grammar detection
+ *
  * Usage:
  *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json>
  *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json> --apply
@@ -49,6 +55,31 @@ const MODEL = 'gemini-2.0-flash-exp';
 const BATCH_SIZE = 12;
 const MAX_RETRIES = 3;
 const BASE_DELAY = 2000;
+const MAX_ESCALATIONS_PER_QUIZ = 10; // v3.3: Cap per-question AI escalations
+
+// v3.3: Latin grammar/translation keywords that indicate no image is needed
+// Only narrative (cultural/mythological) questions need images
+const LATIN_GRAMMAR_KEYWORDS = [
+  // Grammar terms
+  'accusativus', 'accusatief', 'dativus', 'datief', 'genitivus', 'genitief',
+  'ablativus', 'ablatief', 'nominativus', 'nominatief', 'vocativus', 'vocatief',
+  'vervoeging', 'verbuiging', 'coniugatio', 'conjugatie', 'declinatio', 'declinatie',
+  'praesens', 'imperfectum', 'perfectum', 'plusquamperfectum', 'futurum',
+  'passief', 'actief', 'participium', 'infinitivus', 'infinitief',
+  'gerundium', 'gerundivum', 'supinum',
+  'naamval', 'casus', 'persoonsvorm', 'werkwoordsvorm',
+  'singularis', 'pluralis', 'meervoud', 'enkelvoud',
+  'grammatica',
+  // Translation terms
+  'vertaal', 'vertaling', 'betekent', 'betekenis',
+  'wat betekent', 'hoe vertaal', 'geef de vertaling',
+  // Vocabulary terms
+  'woordsoort', 'zelfstandig naamwoord', 'werkwoord', 'bijvoeglijk',
+  'voegwoord', 'voorzetsel', 'bijwoord',
+  // Sentence analysis
+  'ontleed', 'ontleding', 'zinsdeel', 'onderwerp', 'lijdend voorwerp',
+  'meewerkend voorwerp', 'gezegde',
+];
 
 // Minimum acceptable scores per intent type (v3.2: raised thresholds for better precision)
 const MIN_ACCEPT_SCORE = {
@@ -60,6 +91,25 @@ const MIN_ACCEPT_SCORE = {
   historical_illustration: 70,
   micrograph: 70,
   default: 35,
+};
+
+// v3.3: Subject-specific threshold overrides
+const SUBJECT_THRESHOLDS = {
+  biologie: {
+    labeled_diagram: 100,
+    concept_diagram: 60, // Lower for abstract concepts
+    diagram: 70,
+  },
+  geschiedenis: {
+    historical_illustration: 80, // Higher for better quality
+  },
+  aardrijkskunde: {
+    map: 80, // Higher for legibility
+  },
+  latijn: {
+    historical_illustration: 70,
+    photo: 40,
+  },
 };
 
 // Risk profile token lists
@@ -142,9 +192,111 @@ function hasNegations(query) {
 
 /**
  * Get minimum score threshold for an intent type
+ * v3.3: Now supports subject-specific overrides
  */
-function getMinScore(intent) {
+function getMinScore(intent, subject = null) {
+  if (subject) {
+    const subjectLower = subject.toLowerCase();
+    const subjectOverrides = SUBJECT_THRESHOLDS[subjectLower];
+    if (subjectOverrides && subjectOverrides[intent] !== undefined) {
+      return subjectOverrides[intent];
+    }
+  }
   return MIN_ACCEPT_SCORE[intent] || MIN_ACCEPT_SCORE.default;
+}
+
+/**
+ * v3.3: Detect if a question is Latin grammar/translation (no image needed)
+ * Only narrative (cultural/mythological) questions should get images
+ */
+function isLatinGrammarQuestion(question, subject) {
+  if (!subject || subject.toLowerCase() !== 'latijn') return false;
+
+  const text = question.q || question.instruction || question.prompt?.text || question.prompt?.html || '';
+  const clean = text.replace(/<[^>]+>/g, ' ').toLowerCase();
+
+  // First check: is this a NARRATIVE question? (these SHOULD get images)
+  const narrativeKeywords = [
+    'romulus', 'remus', 'vestaalse', 'vesta', 'numa', 'tarquinius',
+    'sabijnse', 'aeneas', 'troje', 'jupiter', 'mars', 'venus',
+    'tiber', 'palatijn', 'capitool', 'forum', 'colosseum',
+    'stichting van rome', 'koningen van rome', 'republiek',
+    'mythe', 'sage', 'legende', 'verhaal', 'geschiedenis',
+    'wolf', 'lupa', 'herder', 'faustulus', 'wie was', 'wie waren',
+    'wat gebeurde', 'waarom', 'hoe kwam', 'vertel', 'beschrijf',
+  ];
+
+  const hasNarrativeKeyword = narrativeKeywords.some(kw => clean.includes(kw));
+
+  // If it has narrative keywords AND asks about story/history, it's narrative
+  if (hasNarrativeKeyword) {
+    const narrativePatterns = [
+      /wie was/i, /wie waren/i, /wat gebeurde/i, /waarom/i, /hoe kwam/i,
+      /vertel/i, /beschrijf/i, /wat deed/i, /wat deden/i,
+      /volgens de mythe/i, /volgens het verhaal/i,
+    ];
+    if (narrativePatterns.some(p => p.test(clean))) {
+      return false; // This IS a narrative question, needs image
+    }
+  }
+
+  // Check for grammar keywords
+  for (const keyword of LATIN_GRAMMAR_KEYWORDS) {
+    if (clean.includes(keyword)) return true;
+  }
+
+  // Additional patterns for Latin grammar/translation questions
+  const grammarPatterns = [
+    /welke.*naamval/i,
+    /welke.*vorm/i,
+    /wat is de.*van/i,
+    /vertaal.*naar.*latijn/i,
+    /vertaal.*naar.*nederlands/i,
+    /geef.*de.*vorm/i,
+    /bepaal.*de.*vorm/i,
+    /in welke.*naamval/i,
+    /welke.*tijd/i,
+    /welk.*getal/i,
+    /welk.*geslacht/i,
+  ];
+
+  for (const pattern of grammarPatterns) {
+    if (pattern.test(clean)) return true;
+  }
+
+  // If the question contains only Latin text (translation exercise)
+  // Pattern: mostly Latin words without Dutch explanation
+  const latinWords = clean.match(/\b[a-z]{2,}\b/g) || [];
+  const commonLatinSuffixes = ['us', 'um', 'is', 'orum', 'arum', 'os', 'as', 'ibus', 'ae', 'am'];
+  const latinCount = latinWords.filter(w =>
+    commonLatinSuffixes.some(s => w.endsWith(s))
+  ).length;
+
+  // If more than 50% of words look Latin and question is short, it's likely translation
+  if (latinWords.length > 3 && latinCount / latinWords.length > 0.5) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ * v3.3: Get image policy for a question
+ * Returns: "required" | "optional" | "none"
+ */
+function getImagePolicy(question, subject) {
+  // Latin grammar questions don't need images
+  if (isLatinGrammarQuestion(question, subject)) {
+    return 'none';
+  }
+
+  // Skip certain question types
+  const skipTypes = ['matching', 'table_parse', 'ratio_table', 'data_table', 'fill_blank'];
+  if (skipTypes.includes(question.type)) {
+    return 'none';
+  }
+
+  return 'required';
 }
 
 async function withRetry(fn, retries = MAX_RETRIES) {
@@ -351,6 +503,65 @@ async function searchCommonsCategory(category, limit = 20) {
     description: page.imageinfo?.[0]?.extmetadata?.ImageDescription?.value || '',
     categories: (page.categories || []).map(c => c.title?.replace('Category:', '') || ''),
   })).filter(img => img.imageUrl);
+}
+
+/**
+ * v3.3: Per-question AI escalation - generate new queries for failed questions
+ * Only called when initial search fails and we have escalation budget
+ */
+async function escalateWithAI(question, subject, chapterContext) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) return null;
+
+  const text = question.q || question.instruction || question.prompt?.text || question.prompt?.html || '';
+  const clean = text.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+  const prompt = `Je bent een expert in het vinden van afbeeldingen op Wikimedia Commons.
+
+De standaard zoekstrategie heeft GEFAALD voor deze vraag. Genereer NIEUWE, CREATIEVE zoekstrategieën.
+
+VAK: ${subject}
+${chapterContext ? `CONTEXT: ${chapterContext}` : ''}
+VRAAG: ${clean}
+
+De standaard queries werkten niet. Probeer nu:
+1. Synoniemen en alternatieve terminologie
+2. Bredere of specifiekere categorieën
+3. Gerelateerde concepten die wel afbeeldingen hebben
+
+Geef 5 nieuwe commonsQueries en 5 nieuwe categoryHints.
+Focus op Commons-native termen en bestaande categorieën.
+
+Antwoord als JSON:
+{
+  "commonsQueries": ["query1", "query2", "query3", "query4", "query5"],
+  "categoryHints": ["Category:Hint1", "Category:Hint2", "Category:Hint3", "Category:Hint4", "Category:Hint5"],
+  "topicKeywords": ["keyword1", "keyword2"]
+}
+
+Geef ALLEEN de JSON.`;
+
+  try {
+    const response = await fetch(`${GEMINI_API_URL}/${MODEL}:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 0.5, maxOutputTokens: 1000 }
+      })
+    });
+
+    if (!response.ok) return null;
+
+    const data = await response.json();
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) return null;
+
+    return JSON.parse(jsonMatch[0]);
+  } catch (err) {
+    return null;
+  }
 }
 
 /**
@@ -620,10 +831,11 @@ function scoreCandidate(candidate, brief, usedImages) {
 /**
  * Find the best image for a single question brief
  * v3.1: Implements negation ladder and score-based fallback
+ * v3.3: Subject-specific thresholds
  */
-async function findBestImage(brief, usedImages) {
+async function findBestImage(brief, usedImages, subject = null) {
   const candidates = [];
-  const minScore = getMinScore(brief.imageIntent);
+  const minScore = getMinScore(brief.imageIntent, subject);
 
   // 1. Try category search first (highest quality)
   for (const category of (brief.categoryHints || []).slice(0, 2)) {
@@ -767,8 +979,9 @@ function generateLocalRepairBrief(question, subject) {
 
 /**
  * Process a batch of questions
+ * v3.3: Added imagePolicy handling and escalation tracking
  */
-async function processBatch(questions, subject, chapterContext, usedImages, batchNum, totalBatches) {
+async function processBatch(questions, subject, chapterContext, usedImages, batchNum, totalBatches, escalationState) {
   console.log(`\n[Batch ${batchNum}/${totalBatches}] Generating search terms for ${questions.length} questions...`);
 
   let briefs;
@@ -805,9 +1018,39 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
 
     process.stdout.write(`  ${question.id}: `);
 
+    // v3.3: Check imagePolicy first
+    const policy = getImagePolicy(question, subject);
+    if (policy === 'none') {
+      results.push({
+        questionId: question.id,
+        success: true,
+        imagePolicy: 'none',
+        reason: 'No image needed (grammar question)',
+      });
+      console.log(`○ No image needed (grammar)`);
+      continue;
+    }
+
     try {
-      const bestImage = await findBestImage(brief, usedImages);
-      const minScore = getMinScore(brief.imageIntent);
+      let bestImage = await findBestImage(brief, usedImages, subject);
+      const minScore = getMinScore(brief.imageIntent, subject);
+
+      // v3.3: Escalation - try per-question AI if initial search fails
+      if ((!bestImage || bestImage.score < minScore) && escalationState.count < MAX_ESCALATIONS_PER_QUIZ) {
+        const escalatedBrief = await escalateWithAI(question, subject, chapterContext);
+        if (escalatedBrief) {
+          escalationState.count++;
+          // Merge escalated brief with original
+          const mergedBrief = {
+            ...brief,
+            commonsQueries: escalatedBrief.commonsQueries || brief.commonsQueries,
+            categoryHints: escalatedBrief.categoryHints || brief.categoryHints,
+            topicKeywords: escalatedBrief.topicKeywords || brief.topicKeywords,
+            _escalated: true,
+          };
+          bestImage = await findBestImage(mergedBrief, usedImages, subject);
+        }
+      }
 
       if (bestImage && bestImage.score >= minScore) {
         usedImages.add(bestImage.imageUrl);
@@ -823,10 +1066,12 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
           score: bestImage.score,
           source: bestImage.source || 'commons',
           repaired: brief._repaired || false,
+          escalated: brief._escalated || false,
         });
         const shortTitle = bestImage.title.length > 45 ? bestImage.title.substring(0, 45) + '...' : bestImage.title;
         const repairedTag = brief._repaired ? ' [repaired]' : '';
-        console.log(`✓ ${shortTitle} (score: ${bestImage.score}, min: ${minScore})${repairedTag}`);
+        const escalatedTag = brief._escalated ? ' [escalated]' : '';
+        console.log(`✓ ${shortTitle} (score: ${bestImage.score}, min: ${minScore})${repairedTag}${escalatedTag}`);
       } else {
         results.push({
           questionId: question.id,
@@ -848,6 +1093,7 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
 
 /**
  * Main function: process quiz file
+ * v3.3: Added imagePolicy filtering, escalation state, and grammar question handling
  */
 async function processQuiz(quizPath, applyChanges = false, replaceExisting = false) {
   const quiz = JSON.parse(fs.readFileSync(quizPath, 'utf8'));
@@ -865,7 +1111,9 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
 
   const usedImages = new Set();
   const allResults = [];
+  const escalationState = { count: 0 }; // v3.3: Track escalations across batches
 
+  // v3.3: Filter questions, but include grammar questions (they'll be handled with imagePolicy)
   const needsImage = questions.filter(q => {
     const skipTypes = ['matching', 'table_parse', 'ratio_table', 'data_table', 'fill_blank'];
     if (skipTypes.includes(q.type)) return false;
@@ -875,7 +1123,15 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
     return !hasImage;
   });
 
+  // v3.3: Count grammar questions that will be skipped
+  const grammarCount = needsImage.filter(q => getImagePolicy(q, subject) === 'none').length;
+  const imageCount = needsImage.length - grammarCount;
+
   console.log(`Questions to process: ${needsImage.length}`);
+  if (grammarCount > 0) {
+    console.log(`  (${grammarCount} grammar questions - no image needed)`);
+    console.log(`  (${imageCount} questions need images)`);
+  }
 
   if (needsImage.length === 0) {
     console.log('All questions already have images!');
@@ -887,7 +1143,7 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
   for (let i = 0; i < needsImage.length; i += BATCH_SIZE) {
     const batch = needsImage.slice(i, i + BATCH_SIZE);
     const batchNum = Math.floor(i / BATCH_SIZE) + 1;
-    const batchResults = await processBatch(batch, subject, chapterContext, usedImages, batchNum, totalBatches);
+    const batchResults = await processBatch(batch, subject, chapterContext, usedImages, batchNum, totalBatches, escalationState);
     allResults.push(...batchResults);
 
     if (i + BATCH_SIZE < needsImage.length) {
@@ -897,12 +1153,22 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
   }
 
   const successCount = allResults.filter(r => r.success).length;
+  const imageSuccessCount = allResults.filter(r => r.success && r.imagePolicy !== 'none').length;
+  const noImageCount = allResults.filter(r => r.imagePolicy === 'none').length;
+
   console.log(`\n${'='.repeat(60)}`);
-  console.log(`SUMMARY: ${successCount}/${needsImage.length} images found`);
+  console.log(`SUMMARY: ${successCount}/${needsImage.length} questions handled`);
+  if (noImageCount > 0) {
+    console.log(`  - ${imageSuccessCount} images found`);
+    console.log(`  - ${noImageCount} grammar questions (no image needed)`);
+  }
+  if (escalationState.count > 0) {
+    console.log(`  - ${escalationState.count} questions escalated to per-question AI`);
+  }
   console.log(`${'='.repeat(60)}`);
 
   if (applyChanges && successCount > 0) {
-    const successResults = allResults.filter(r => r.success);
+    const successResults = allResults.filter(r => r.success && r.imageUrl);
     const resultMap = new Map(successResults.map(r => [r.questionId, r]));
 
     for (const q of questions) {
@@ -913,26 +1179,30 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
           src: result.imageUrl,
           alt: result.title,
           caption: `Bron: ${result.source === 'wikipedia' ? 'Wikipedia' : 'Wikimedia Commons'}`,
-          _source: 'commons-ai-v3.2',
+          _source: 'commons-ai-v3.3',
           _searchTerm: result.searchTerm,
           _imageIntent: result.imageIntent,
           _riskProfile: result.riskProfile,
           _score: result.score,
+          _escalated: result.escalated || false,
         }];
       }
     }
 
     fs.writeFileSync(quizPath, JSON.stringify(quiz, null, 2));
-    console.log(`\n✓ Applied ${successCount} images to ${path.basename(quizPath)}`);
+    console.log(`\n✓ Applied ${imageSuccessCount} images to ${path.basename(quizPath)}`);
   }
 
   const outputPath = quizPath.replace('.json', '-ai-selections.json');
   fs.writeFileSync(outputPath, JSON.stringify({
     results: allResults,
     successCount,
+    imageSuccessCount,
+    noImageCount,
+    escalationCount: escalationState.count,
     total: needsImage.length,
     timestamp: new Date().toISOString(),
-    version: 'v3.2',
+    version: 'v3.3',
   }, null, 2));
   console.log(`Results saved to: ${path.basename(outputPath)}`);
 

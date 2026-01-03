@@ -449,7 +449,21 @@
           "c": 0,
           "e": "iubere = bevelen"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg/960px-%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
+          "alt": "'Reuzen spinklos van 8 cm doorsnede waarschijnlijk inheem Romeins.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "\"Roman emperor\" \"giving orders\"",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 100,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q005",
@@ -553,7 +567,21 @@
           "c": 0,
           "e": "mandatum = opdracht"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bassorilievo_di_un%E2%80%99urna_romana.jpg/960px-Bassorilievo_di_un%E2%80%99urna_romana.jpg",
+          "alt": "Bassorilievo di un’urna romana.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "\"Roman emperor\" \"mandate\"",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 100,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q007",
@@ -897,7 +925,21 @@
           "c": 0,
           "e": "haerere = blijven steken"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Rambles_in_Rome_-_an_arch%C3%A6ological_and_historical_guide_to_the_museums%2C_galleries%2C_villas%2C_churches%2C_and_antiquities_of_Rome_and_the_Campagna_%281887%29_%2814581466958%29.jpg/960px-thumbnail.jpg",
+          "alt": "Rambles in Rome - an archæological and historical guide to the museums, galleries, villas, churches, and antiquities of Rome and the Campagna (1887) (14581466958).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "\"Roman glue\" \"adhere\"",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 120,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q011",
@@ -1508,7 +1550,21 @@
           "c": 0,
           "e": "alter...alter = de een... de ander"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Gildersleeve_and_Lodge_-_Latin_Grammar_-_cover.png/960px-Gildersleeve_and_Lodge_-_Latin_Grammar_-_cover.png",
+          "alt": "Gildersleeve and Lodge - Latin Grammar - cover.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Latin grammar diagram \"alter...alter\"",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 90,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q019",
@@ -1868,7 +1924,21 @@
           "c": 0,
           "e": "quoque = ook"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/CategorieScrittoriAnticaRoma.jpg",
+          "alt": "CategorieScrittoriAnticaRoma.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Latin inscriptions\" \"quoque\" example",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "none",
+          "_score": 120,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q024",
@@ -1972,7 +2042,21 @@
           "c": 0,
           "e": "et...et = zowel... als"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/LatinGenderLoss.svg/960px-LatinGenderLoss.svg.png",
+          "alt": "LatinGenderLoss.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "\"et...et\" meaning Latin diagram",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "none",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q026",
@@ -2408,7 +2492,21 @@
           "c": 0,
           "e": "facile est = het is gemakkelijk"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Fernando_de_Mena_%281553%29_Liber_Galeni_de_vrinis_omnium_medicorum_facile_principis.png",
+          "alt": "Fernando de Mena (1553) Liber Galeni de vrinis omnium medicorum facile principis.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "\"facile est\" meaning Latin diagram",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "none",
+          "_score": 70,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q034",
@@ -3221,7 +3319,21 @@
           "c": 0,
           "e": "estis = jullie zijn"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Roman_families.svg/960px-Roman_families.svg.png",
+          "alt": "Roman families.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Roman family",
+          "_imageIntent": "photo",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 180,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q048",
@@ -6449,7 +6561,21 @@
           ],
           "points": 3
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Alexandria_Library_Inscription.jpg",
+          "alt": "Alexandria Library Inscription.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Latin inscriptions\" word meaning",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "none",
+          "_score": 100,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q081",
@@ -6629,7 +6755,21 @@
           "e": "Numitor was de rechtmatige koning, maar zijn broer Amulius nam de macht over.",
           "image": "assets/images/latijn/flumen.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Augustus_Tample_Kalabsha.png/843px-Augustus_Tample_Kalabsha.png",
+          "alt": "Augustus Tample Kalabsha.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Alba Longa king",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 140,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q084",
@@ -6695,14 +6835,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/VestalisMaxima.jpg/960px-VestalisMaxima.jpg",
-          "alt": "Vestal Virgin",
-          "caption": "Bron: Wikipedia - Vestal Virgin",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Vestal_Virgin",
-            "searchTerm": "Vestal virgins",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Wall_painting_-_founding_myth_of_Rome_-_Pompeii_%28V_4_13%29_-_Napoli_MAN.jpg/960px-Wall_painting_-_founding_myth_of_Rome_-_Pompeii_%28V_4_13%29_-_Napoli_MAN.jpg",
+          "alt": "Wall painting - founding myth of Rome - Pompeii (V 4 13) - Napoli MAN.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Vesta Rhea Silvia",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 220,
+          "_escalated": false
         }
       ]
     },
@@ -6770,14 +6911,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/960px-Lupa_Capitolina%2C_Rome.jpg",
-          "alt": "Romulus and Remus",
-          "caption": "Bron: Wikipedia - Romulus and Remus",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Romulus_and_Remus",
-            "searchTerm": "Romulus Remus",
-            "score": 40
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mars_and_Rhea_Silvia_1797_Blake_after_Fuseli_to_Charles_Allen%27s_A_New_and_Improved_Roman_History_1798_Johnson.jpg",
+          "alt": "Mars and Rhea Silvia 1797 Blake after Fuseli to Charles Allen's A New and Improved Roman History 1798 Johnson.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Mars Rhea Silvia",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 200,
+          "_escalated": false
         }
       ]
     },
@@ -6841,7 +6983,21 @@
           "e": "Amulius beval een slaaf om de baby's te verdrinken in de Tiber.",
           "image": "assets/images/latijn/flumen.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tiber_river_with_Romulus_and_Remus%2C_Ma593_%2830626899433%29.jpg/960px-Tiber_river_with_Romulus_and_Remus%2C_Ma593_%2830626899433%29.jpg",
+          "alt": "Tiber river with Romulus and Remus, Ma593 (30626899433).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" twins river",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 180,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q087",
@@ -6895,14 +7051,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Biard_Abolition_de_l%27esclavage_1849.jpg/960px-Biard_Abolition_de_l%27esclavage_1849.jpg",
-          "alt": "Timeline of abolition of slavery and serfdom",
-          "caption": "Bron: Wikipedia - Timeline of abolition of slavery and serfdom",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Timeline_of_abolition_of_slavery_and_serfdom",
-            "searchTerm": "Roman slavery",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg/960px-%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
+          "alt": "'Reuzen spinklos van 8 cm doorsnede waarschijnlijk inheem Romeins.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" slave twins",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 100,
+          "_escalated": false
         }
       ]
     },
@@ -6966,7 +7123,21 @@
           "e": "Het mandje bleef haken aan de wortels van een vijgenboom bij de oever.",
           "image": "assets/images/latijn/lupa.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Tiber_river_with_Romulus_and_Remus_D20141107b.jpg/960px-Tiber_river_with_Romulus_and_Remus_D20141107b.jpg",
+          "alt": "Tiber river with Romulus and Remus D20141107b.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" twins Tiber",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 120,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q089",
@@ -7028,7 +7199,21 @@
           "e": "Een wolvin (lupa) vond de baby's en gaf ze te drinken.",
           "image": "assets/images/latijn/lupa.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Romulus_en_Remus%2C_RP-P-H-H-66.jpg/960px-Romulus_en_Remus%2C_RP-P-H-H-66.jpg",
+          "alt": "Romulus en Remus, RP-P-H-H-66.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" she-wolf twins",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 170,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q090",
@@ -7076,14 +7261,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Romolo_e_remo.jpg",
-          "alt": "Romulus and Remus (Rubens)",
-          "caption": "Bron: Wikipedia - Romulus and Remus (Rubens)",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Romulus_and_Remus_(Rubens)",
-            "searchTerm": "Romulus Remus",
-            "score": 40
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg/960px-Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg",
+          "alt": "Mignard - The Shepherd Faustulus Bringing Romulus and Remus to His Wife.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Faustulus Romulus",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 120,
+          "_escalated": false
         }
       ]
     },
@@ -7151,14 +7337,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/Brogi%2C_Carlo_%281850-1925%29_-_n._8226_-_Certosa_di_Pavia_-_Medaglione_sullo_zoccolo_della_facciata.jpg",
-          "alt": "Romulus",
-          "caption": "Bron: Wikipedia - Romulus",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Romulus",
-            "searchTerm": "Romulus Remus",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Romulus_et_Remus.jpg/960px-Romulus_et_Remus.jpg",
+          "alt": "Romulus et Remus.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Acca Larentia Romulus",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 130,
+          "_escalated": false
         }
       ]
     },
@@ -7226,14 +7413,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg/960px-Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg",
-          "alt": "Founding of Rome",
-          "caption": "Bron: Wikipedia - Founding of Rome",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Founding_of_Rome",
-            "searchTerm": "founding Rome",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Romulus_and_Remus_MET_DP822897.jpg/960px-Romulus_and_Remus_MET_DP822897.jpg",
+          "alt": "Romulus and Remus MET DP822897.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Romulus Remus discovery",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 190,
+          "_escalated": false
         }
       ]
     },
@@ -7301,14 +7489,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg/960px-Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg",
-          "alt": "Rome",
-          "caption": "Bron: Wikipedia - Rome",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Rome",
-            "searchTerm": "founding Rome",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Roman_She-wolf%2C_Romulus%2C_Remus%2C_replica_Capitole%2C_Rome%2C_Italy.jpg/960px-Roman_She-wolf%2C_Romulus%2C_Remus%2C_replica_Capitole%2C_Rome%2C_Italy.jpg",
+          "alt": "Roman She-wolf, Romulus, Remus, replica Capitole, Rome, Italy.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Romulus Remus founding quarrel",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 210,
+          "_escalated": false
         }
       ]
     },
@@ -7376,14 +7565,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/960px-Lupa_Capitolina%2C_Rome.jpg",
-          "alt": "She-wolf (Roman mythology)",
-          "caption": "Bron: Wikipedia - She-wolf (Roman mythology)",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/She-wolf_(Roman_mythology)",
-            "searchTerm": "Romulus Remus wolf",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Republican_Rome%3B_her_conquests%2C_manners_and_institutions_from_the_earliest_times_to_the_death_of_Caesar_%281914%29_%2814769733061%29.jpg/960px-Republican_Rome%3B_her_conquests%2C_manners_and_institutions_from_the_earliest_times_to_the_death_of_Caesar_%281914%29_%2814769733061%29.jpg",
+          "alt": "Republican Rome; her conquests, manners and institutions from the earliest times to the death of Caesar (1914) (14769733061).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Remus death illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 220,
+          "_escalated": false
         }
       ]
     },
@@ -7433,14 +7623,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roman_Republic_Empire_map.gif",
-          "alt": "Ancient Rome",
-          "caption": "Bron: Wikipedia - Ancient Rome",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Rome",
-            "searchTerm": "ancient Rome",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Rambles_in_Rome_-_an_arch%C3%A6ological_and_historical_guide_to_the_museums%2C_galleries%2C_villas%2C_churches%2C_and_antiquities_of_Rome_and_the_Campagna_%281887%29_%2814581531698%29.jpg/960px-thumbnail.jpg",
+          "alt": "Rambles in Rome - an archæological and historical guide to the museums, galleries, villas, churches, and antiquities of Rome and the Campagna (1887) (14581531698).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Romulus founding Rome illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 240,
+          "_escalated": false
         }
       ]
     },
@@ -7508,14 +7699,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Roma%2C_Museo_Ara_Pacis_-_Calco_di_Roma_con_Vittoria_-_Foto_Giovanni_Dall%27Orto%2C_30-Mar-2008.jpg/960px-Roma%2C_Museo_Ara_Pacis_-_Calco_di_Roma_con_Vittoria_-_Foto_Giovanni_Dall%27Orto%2C_30-Mar-2008.jpg",
-          "alt": "Religion in ancient Rome",
-          "caption": "Bron: Wikipedia - Religion in ancient Rome",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Religion_in_ancient_Rome",
-            "searchTerm": "ancient Rome",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg/960px-Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg",
+          "alt": "Woodcut illustration of Rhea Silvia and the birth of Romulus and Remus - Penn Provenance Project.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Rome\" Romulus king illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 160,
+          "_escalated": false
         }
       ]
     }

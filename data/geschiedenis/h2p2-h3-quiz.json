@@ -22,7 +22,21 @@
         "Slag bij Marathon",
         "Alexander verovert het Perzische Rijk"
       ],
-      "explanation": "Narmer (~3100 v.C.) → piramides (~2600–2500 v.C.) → Olympische Spelen (776 v.C.) → Marathon (490 v.C.) → Alexander (334–330 v.C. veroveringen)."
+      "explanation": "Narmer (~3100 v.C.) → piramides (~2600–2500 v.C.) → Olympische Spelen (776 v.C.) → Marathon (490 v.C.) → Alexander (334–330 v.C. veroveringen).",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A_history_of_art_in_ancient_Egypt_%281883%29_%2814792537213%29.jpg/960px-A_history_of_art_in_ancient_Egypt_%281883%29_%2814792537213%29.jpg",
+          "alt": "A history of art in ancient Egypt (1883) (14792537213).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Egypt\" timeline",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 150,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-002",
@@ -141,20 +155,20 @@
       ],
       "c": 1,
       "e": "In deze periode gold (na hervormingen) dat burgerrecht aan strengere afstammingseisen gebonden kon zijn; de kern blijft: niet iedereen had politieke rechten.",
-      "media": {
-        "query": "ancient athenian agora pnyx assembly",
-        "alt": "Atheense agora volksvergadering",
-        "negativeTerms": [
-          "modern",
-          "diagram"
-        ],
-        "qids": [],
-        "_intent": {
-          "primaryConcept": "Atheense agora",
-          "specificFocus": "plek van volksvergadering",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/A_smaller_history_of_Greece%2C_from_the_earliest_times_to_the_Roman_conquest_%281864%29_%2814579440559%29.jpg/960px-A_smaller_history_of_Greece%2C_from_the_earliest_times_to_the_Roman_conquest_%281864%29_%2814579440559%29.jpg",
+          "alt": "A smaller history of Greece, from the earliest times to the Roman conquest (1864) (14579440559).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Athens citizenship diagram",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 160,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-005",
@@ -173,14 +187,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Discurso_funebre_pericles.PNG",
-          "alt": "Athenian democracy",
-          "caption": "Bron: Wikipedia - Athenian democracy",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Athenian_democracy",
-            "searchTerm": "Athenian democracy",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Great_men_and_famous_women_-_a_series_of_pen_and_pencil_sketches_of_the_lives_of_more_than_200_of_the_most_prominent_personages_in_history_Volume_5_%281894%29_%2814595355987%29.jpg/960px-thumbnail.jpg",
+          "alt": "Great men and famous women - a series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in history Volume 5 (1894) (14595355987).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Athens democracy diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 90,
+          "_escalated": false
         }
       ]
     },
@@ -200,14 +215,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Map_of_Greece%2C_Archipelago_and_part_of_Anadoli%3B_Louis_Stanislas_d%27Arcy_Delarochette_1791.jpg/960px-Map_of_Greece%2C_Archipelago_and_part_of_Anadoli%3B_Louis_Stanislas_d%27Arcy_Delarochette_1791.jpg",
-          "alt": "Ancient Greece",
-          "caption": "Bron: Wikipedia - Ancient Greece",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Greece",
-            "searchTerm": "ancient Greeks",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Greek_mythology_systematized_%281880%29_%2814559582838%29.jpg/960px-Greek_mythology_systematized_%281880%29_%2814559582838%29.jpg",
+          "alt": "Greek mythology systematized (1880) (14559582838).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Greek mythology illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 240,
+          "_escalated": false
         }
       ]
     },
@@ -254,14 +270,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Detail_of_fresco_from_lateral_walls_of_the_Tomb_of_the_Diver_depicting_a_symposium_scene%2C_5th_century_BC%2C_Paestum_Archaeological_Museum_%2814603183465%292.jpg/960px-Detail_of_fresco_from_lateral_walls_of_the_Tomb_of_the_Diver_depicting_a_symposium_scene%2C_5th_century_BC%2C_Paestum_Archaeological_Museum_%2814603183465%292.jpg",
-          "alt": "Pederasty in ancient Greece",
-          "caption": "Bron: Wikipedia - Pederasty in ancient Greece",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Pederasty_in_ancient_Greece",
-            "searchTerm": "ancient Greece",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Ancient_Intellectual_Network.png/904px-Ancient_Intellectual_Network.png",
+          "alt": "Ancient Intellectual Network.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Greece myth science diagram",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 100,
+          "_escalated": false
         }
       ]
     },
@@ -280,17 +297,20 @@
       ],
       "c": 0,
       "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie.",
-      "media": {
-        "query": "ancient greek hoplite soldier persian wars",
-        "alt": "Griekse hopliet tijdens Perzische oorlogen",
-        "representation": "photo",
-        "negativeTerms": [
-          "running",
-          "sport",
-          "490",
-          "marathon"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_great_battles_of_all_nations_from_Marathon_to_Santiago%2C_490_B.C.-A.D._1898_%281898%29_%2814763415631%29.jpg/960px-The_great_battles_of_all_nations_from_Marathon_to_Santiago%2C_490_B.C.-A.D._1898_%281898%29_%2814763415631%29.jpg",
+          "alt": "The great battles of all nations from Marathon to Santiago, 490 B.C.-A.D. 1898 (1898) (14763415631).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Battle of Marathon illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 120,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-010",
@@ -327,7 +347,21 @@
           }
         }
       ],
-      "explanation": "Gymnasium-skill: begrijpen hoe ‘ontcijferen’ werkt via parallelteksten."
+      "explanation": "Gymnasium-skill: begrijpen hoe ‘ontcijferen’ werkt via parallelteksten.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/2006_0814_Appolon_Inscription_20060353.JPG/960px-2006_0814_Appolon_Inscription_20060353.JPG",
+          "alt": "2006 0814 Appolon Inscription 20060353.JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Greek inscription bilingual",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 200,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-011",
@@ -433,14 +467,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ancient_Egypt_map-en.svg/960px-Ancient_Egypt_map-en.svg.png",
-          "alt": "Ancient Egypt",
-          "caption": "Bron: Wikipedia - Ancient Egypt",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Egypt",
-            "searchTerm": "ancient Egypt",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Mummification_simple.png/960px-Mummification_simple.png",
+          "alt": "Mummification simple.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Egypt mummification process diagram",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 220,
+          "_escalated": false
         }
       ]
     },
@@ -484,19 +519,20 @@
       ],
       "c": 1,
       "e": "Loting beperkte de macht van een elite, maar kon ongeschikte bestuurders opleveren.",
-      "media": {
-        "query": "athenian democracy sortition lottery kleroterion",
-        "alt": "loting Atheense democratie",
-        "negativeTerms": [],
-        "qids": [
-          "Q378174"
-        ],
-        "_intent": {
-          "primaryConcept": "loting Atheense democratie",
-          "specificFocus": "loting Atheense democratie",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ancient_Athens_by_Morse.png/960px-Ancient_Athens_by_Morse.png",
+          "alt": "Ancient Athens by Morse.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Athens sortition diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 80,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-016",
@@ -511,22 +547,20 @@
       ],
       "c": 1,
       "e": "Olympia was vooral religieus: offers, eer voor Zeus, en sport als onderdeel van het festival.",
-      "media": {
-        "query": "ancient olympic games olympia zeus temple",
-        "alt": "antieke Olympische Spelen Olympia",
-        "negativeTerms": [
-          "modern",
-          "2024"
-        ],
-        "qids": [
-          "Q8447"
-        ],
-        "_intent": {
-          "primaryConcept": "antieke Olympische Spelen Olympia",
-          "specificFocus": "antieke Olympische Spelen Olympia",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Museum_of_the_History_of_the_Ancient_Olympic_Games%2C_Archaia_Olympia_Greece.jpg/960px-Museum_of_the_History_of_the_Ancient_Olympic_Games%2C_Archaia_Olympia_Greece.jpg",
+          "alt": "Museum of the History of the Ancient Olympic Games, Archaia Olympia Greece.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Olympic Games illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 170,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-017",
@@ -542,19 +576,20 @@
       ],
       "c": 1,
       "e": "De wapenstilstand moest veilige deelname aan het religieuze sportfestival mogelijk maken.",
-      "media": {
-        "query": "ancient olympics sacred truce greece map",
-        "alt": "heilige wapenstilstand Olympische Spelen",
-        "negativeTerms": [],
-        "qids": [
-          "Q8447"
-        ],
-        "_intent": {
-          "primaryConcept": "heilige wapenstilstand Olympische Spelen",
-          "specificFocus": "heilige wapenstilstand Olympische Spelen",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ayd%C4%B1nArchaeologicalMuseum_%2820%29.JPG/960px-Ayd%C4%B1nArchaeologicalMuseum_%2820%29.JPG",
+          "alt": "AydınArchaeologicalMuseum (20).JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Olympic Games truce illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 120,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-018",
@@ -572,14 +607,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Account_of_the_construction_of_Athena_Parthenos_by_Phidias.jpg/960px-Account_of_the_construction_of_Athena_Parthenos_by_Phidias.jpg",
-          "alt": "Ancient Greek",
-          "caption": "Bron: Wikipedia - Ancient Greek",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Greek",
-            "searchTerm": "ancient Greeks",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Map_of_Ancient_Greece_%28as_drawn_in_1903%29.jpg/960px-Map_of_Ancient_Greece_%28as_drawn_in_1903%29.jpg",
+          "alt": "Map of Ancient Greece (as drawn in 1903).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Greek colonies\" map",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 190,
+          "_escalated": false
         }
       ]
     },
@@ -619,19 +655,20 @@
       ],
       "c": 1,
       "e": "Een complexe staat heeft registratie nodig: graan, arbeid, belasting, handel. Schriftgeleerden vormen de ruggengraat.",
-      "media": {
-        "query": "ancient egypt scribe administration hieroglyphics",
-        "alt": "Egyptische schrijvers administratie",
-        "negativeTerms": [],
-        "qids": [
-          "Q333573"
-        ],
-        "_intent": {
-          "primaryConcept": "Egyptische schrijvers administratie",
-          "specificFocus": "Egyptische schrijvers administratie",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Egyptian_-_Scribe_Statue_of_Min-nakht_-_Walters_22230_-_Three_Quarter.jpg",
+          "alt": "Egyptian - Scribe Statue of Min-nakht - Walters 22230 - Three Quarter.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Egyptian scribe statue",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 250,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-021",
@@ -709,19 +746,20 @@
       ],
       "c": 1,
       "e": "Door Alexanders veroveringen vermengde de Griekse cultuur zich met oosterse culturen.",
-      "media": {
-        "query": "hellenistic period greek culture spread map",
-        "alt": "hellenisme verspreiding Griekse cultuur",
-        "negativeTerms": [],
-        "qids": [
-          "Q102248"
-        ],
-        "_intent": {
-          "primaryConcept": "hellenisme verspreiding Griekse cultuur",
-          "specificFocus": "hellenisme verspreiding Griekse cultuur",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Greek-speaking_areas_during_the_Hellenistic_period_%28323_to_31_BC%29.jpg/960px-Greek-speaking_areas_during_the_Hellenistic_period_%28323_to_31_BC%29.jpg",
+          "alt": "Greek-speaking areas during the Hellenistic period (323 to 31 BC).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Hellenistic world map",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 190,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-023",
@@ -741,13 +779,14 @@
         {
           "type": "image",
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/960px-All_Gizah_Pyramids.jpg",
-          "alt": "Egyptian pyramids",
-          "caption": "Bron: Wikipedia - Egyptian pyramids",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Egyptian_pyramids",
-            "searchTerm": "Egyptian pyramid",
-            "score": 40
-          }
+          "alt": "All Gizah Pyramids.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Egyptian pyramids\" Giza",
+          "_imageIntent": "photo",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -764,19 +803,20 @@
       ],
       "c": 1,
       "e": "Het palet toont machtssymboliek: legitimatie van een nieuwe politieke orde.",
-      "media": {
-        "query": "narmer palette upper lower egypt unification",
-        "alt": "Narmer-palet Boven- en Beneden-Egypte",
-        "negativeTerms": [],
-        "qids": [
-          "Q208291"
-        ],
-        "_intent": {
-          "primaryConcept": "Narmer-palet Boven- en Beneden-Egypte",
-          "specificFocus": "Narmer-palet Boven- en Beneden-Egypte",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Individual_in_leopard_dress_on_the_Narmer_Palette%2C_the_name_reads_Tt.jpg/960px-Individual_in_leopard_dress_on_the_Narmer_Palette%2C_the_name_reads_Tt.jpg",
+          "alt": "Individual in leopard dress on the Narmer Palette, the name reads Tt.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Narmer Palette",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 140,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-025",
@@ -822,7 +862,21 @@
         "Linnen wikkelen en amuletten toevoegen",
         "Bijzetten in sarcofaag/graf"
       ],
-      "explanation": "Het drogen (natron) is pas zinvol nadat organen zijn verwijderd; daarna wikkelen en begraven."
+      "explanation": "Het drogen (natron) is pas zinvol nadat organen zijn verwijderd; daarna wikkelen en begraven.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Diagram_showing_method_of_packing_for_mummification._Wellcome_M0009037.jpg/960px-Diagram_showing_method_of_packing_for_mummification._Wellcome_M0009037.jpg",
+          "alt": "Diagram showing method of packing for mummification. Wellcome M0009037.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Egyptian mummification process diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 220,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-027",
@@ -839,19 +893,20 @@
       ],
       "c": 0,
       "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum.",
-      "media": {
-        "query": "ancient olympia stadium 776 BC reconstruction",
-        "alt": "Olympia stadion 776 v.C.",
-        "negativeTerms": [],
-        "qids": [
-          "Q6100"
-        ],
-        "_intent": {
-          "primaryConcept": "Olympia stadion 776 v.C.",
-          "specificFocus": "Olympia stadion 776 v.C.",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Restoration_of_old_Olympian_fields_at_time_of_Olympic_games%2C_B.C_%28NYPL_b13537024-56615%29.jpg/960px-Restoration_of_old_Olympian_fields_at_time_of_Olympic_games%2C_B.C_%28NYPL_b13537024-56615%29.jpg",
+          "alt": "Restoration of old Olympian fields at time of Olympic games, B.C (NYPL b13537024-56615).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Olympic Games illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 170,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-028",
@@ -866,19 +921,20 @@
       ],
       "c": 1,
       "e": "Het gaat om nieuwsgierigheid, navigatie en observatie—een brug naar wetenschappelijk denken.",
-      "media": {
-        "query": "pytheas voyage exploration thule map",
-        "alt": "Pytheas reis naar Thule",
-        "negativeTerms": [],
-        "qids": [
-          "Q310170"
-        ],
-        "_intent": {
-          "primaryConcept": "Pytheas reis naar Thule",
-          "specificFocus": "Pytheas reis naar Thule",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Krieger%27s_Mond-Atlas_%281912%29_32_-_Karpathen%2C_Draper%2C_Pytheas.gif/960px-Krieger%27s_Mond-Atlas_%281912%29_32_-_Karpathen%2C_Draper%2C_Pytheas.gif",
+          "alt": "Krieger's Mond-Atlas (1912) 32 - Karpathen, Draper, Pytheas.gif",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Pytheas Thule map",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 150,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-029",
@@ -977,7 +1033,21 @@
           }
         }
       ],
-      "explanation": "Gymnasium: leg verband tussen inrichting (instituties) en internationale politiek (hegemonie)."
+      "explanation": "Gymnasium: leg verband tussen inrichting (instituties) en internationale politiek (hegemonie).",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/1783_Bocage_Map_of_the_Topography_of_Sparta%2C_Ancient_Greece%2C_and_Environs_-_Geographicus_-_Sparta2-white-1793.jpg/960px-1783_Bocage_Map_of_the_Topography_of_Sparta%2C_Ancient_Greece%2C_and_Environs_-_Geographicus_-_Sparta2-white-1793.jpg",
+          "alt": "1783 Bocage Map of the Topography of Sparta, Ancient Greece, and Environs - Geographicus - Sparta2-white-1793.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Athens Sparta comparison",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 240,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-031",
@@ -995,14 +1065,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cairo_skyline%2C_Panoramic_view%2C_Egypt.jpg/960px-Cairo_skyline%2C_Panoramic_view%2C_Egypt.jpg",
-          "alt": "Nile",
-          "caption": "Bron: Wikipedia - Nile",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Nile",
-            "searchTerm": "Nile River",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/90/C%2BB-Egypt-Map1-NileValley.JPG",
+          "alt": "C+B-Egypt-Map1-NileValley.JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Nile river map ancient Egypt",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 270,
+          "_escalated": false
         }
       ]
     },
@@ -1021,19 +1092,20 @@
       ],
       "c": 0,
       "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond.",
-      "media": {
-        "query": "battle of salamis 480 BC map naval",
-        "alt": "zeeslag bij Salamis 480 v.C.",
-        "negativeTerms": [],
-        "qids": [
-          "Q131212"
-        ],
-        "_intent": {
-          "primaryConcept": "zeeslag bij Salamis 480 v.C.",
-          "specificFocus": "zeeslag bij Salamis 480 v.C.",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/COX%281876%29_p241_BATTLE_OF_SALAMIS.jpg/960px-COX%281876%29_p241_BATTLE_OF_SALAMIS.jpg",
+          "alt": "COX(1876) p241 BATTLE OF SALAMIS.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Battle of Salamis illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 200,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-033",
@@ -1051,14 +1123,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Oracle_of_Delphi%2C_red-figure_kylix%2C_440-430_BC%2C_Kodros_Painter%2C_Berlin_F_2538%2C_141668.jpg/960px-Oracle_of_Delphi%2C_red-figure_kylix%2C_440-430_BC%2C_Kodros_Painter%2C_Berlin_F_2538%2C_141668.jpg",
-          "alt": "Ancient Greek religion",
-          "caption": "Bron: Wikipedia - Ancient Greek religion",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Greek_religion",
-            "searchTerm": "ancient Greeks",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/1740_map_of_Ancient_Greece_by_Matthaus_Seutter.jpg/960px-1740_map_of_Ancient_Greece_by_Matthaus_Seutter.jpg",
+          "alt": "1740 map of Ancient Greece by Matthaus Seutter.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Strait of Salamis map",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -1076,19 +1149,20 @@
       ],
       "c": 1,
       "e": "'Barbaren' laat zien dat Grieken een wij-zij-denken hadden op basis van taal en cultuur.",
-      "media": {
-        "query": "ancient greece barbarians concept map",
-        "alt": "Grieken en barbaren concept",
-        "negativeTerms": [],
-        "qids": [
-          "Q37956"
-        ],
-        "_intent": {
-          "primaryConcept": "Grieken en barbaren concept",
-          "specificFocus": "Grieken en barbaren concept",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/97/Itys_and_aedonaia_illustration_from_greek_vase_by_JE_Harrison_and_DS_MacColl_T_Fisher_Unwin_1894.png",
+          "alt": "Itys and aedonaia illustration from greek vase by JE Harrison and DS MacColl T Fisher Unwin 1894.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Greek vase painting \"barbarians\"",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 230,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-035",
@@ -1106,14 +1180,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Deer_hunt_mosaic_from_Pella.jpg",
-          "alt": "Ancient Macedonians",
-          "caption": "Bron: Wikipedia - Ancient Macedonians",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Macedonians",
-            "searchTerm": "ancient Greeks",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/The_ancient_world%2C_from_the_earliest_times_to_800_A._D_%281913%29_%2814801172563%29.jpg/960px-The_ancient_world%2C_from_the_earliest_times_to_800_A._D_%281913%29_%2814801172563%29.jpg",
+          "alt": "The ancient world, from the earliest times to 800 A. D (1913) (14801172563).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Greek tyrant illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 240,
+          "_escalated": false
         }
       ]
     },
@@ -1131,19 +1206,20 @@
       ],
       "c": 1,
       "e": "Beelden zijn vaak symbolisch, maar geven inzicht in waarden en zelfbeeld.",
-      "media": {
-        "query": "greek vase painting red figure black figure",
-        "alt": "Griekse vaasschildering",
-        "negativeTerms": [],
-        "qids": [
-          "Q738680"
-        ],
-        "_intent": {
-          "primaryConcept": "Griekse vaasschildering",
-          "specificFocus": "Griekse vaasschildering",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Theatre_scene_painted_by_Python%2C_ancient_Greek_vase_painter.jpg/960px-Theatre_scene_painted_by_Python%2C_ancient_Greek_vase_painter.jpg",
+          "alt": "Theatre scene painted by Python, ancient Greek vase painter.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Greek vase painting scene",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 250,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-037",
@@ -1178,7 +1254,21 @@
           "correct": 0
         }
       ],
-      "e": "Het symbool van Asklepios is een staf met één slang, de esculaapstaf. De caduceus (twee slangen) hoort bij Hermes, niet bij geneeskunde."
+      "e": "Het symbool van Asklepios is een staf met één slang, de esculaapstaf. De caduceus (twee slangen) hoort bij Hermes, niet bij geneeskunde.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Asclepius_of_Kurdistan_v1.png/960px-Asclepius_of_Kurdistan_v1.png",
+          "alt": "Asclepius of Kurdistan v1.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Asklepios symbol",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 110,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-038",
@@ -1229,7 +1319,21 @@
           "correct": 1
         }
       ],
-      "e": "Objectief = controleerbaar feit (datum, aantal). Subjectief = oordeel of waardering (heldhaftig, geweldig)."
+      "e": "Objectief = controleerbaar feit (datum, aantal). Subjectief = oordeel of waardering (heldhaftig, geweldig).",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Example_for_Text_with_Shadow.svg/960px-Example_for_Text_with_Shadow.svg.png",
+          "alt": "Example for Text with Shadow.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "opinion fact example",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 80,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-039",
@@ -1244,19 +1348,20 @@
       ],
       "c": 1,
       "e": "Aanleiding = directe trigger; diepere oorzaak = structurele machtsbalans en angst voor groeiende macht van de ander.",
-      "media": {
-        "query": "peloponnesian war athens sparta map",
-        "alt": "Peloponnesische oorlog Athene Sparta",
-        "negativeTerms": [],
-        "qids": [
-          "Q165139"
-        ],
-        "_intent": {
-          "primaryConcept": "Peloponnesische oorlog Athene Sparta",
-          "specificFocus": "Peloponnesische oorlog Athene Sparta",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Physical_map_of_Ancient_Greece-ru.svg/960px-Physical_map_of_Ancient_Greece-ru.svg.png",
+          "alt": "Physical map of Ancient Greece-ru.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Peloponnesian War map",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 230,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-040",
@@ -1271,19 +1376,20 @@
       ],
       "c": 2,
       "e": "Vierspan = vierspan-wagenrace, een prestigieuze discipline.",
-      "media": {
-        "query": "ancient greek chariot racing quadriga vase",
-        "alt": "Grieks wagenrennen vierspan",
-        "negativeTerms": [],
-        "qids": [
-          "Q36920"
-        ],
-        "_intent": {
-          "primaryConcept": "Grieks wagenrennen vierspan",
-          "specificFocus": "Grieks wagenrennen vierspan",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Chariot_race_MNA_Tarento.jpg/960px-Chariot_race_MNA_Tarento.jpg",
+          "alt": "Chariot race MNA Tarento.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Greek vase painting chariot race",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 190,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-041",
@@ -1298,20 +1404,20 @@
       ],
       "c": 1,
       "e": "Belangrijk: religieuze context + uitsluiting in de oudheid versus inclusiever en mondialer nu.",
-      "media": {
-        "query": "ancient vs modern olympic games comparison",
-        "alt": "antieke vs moderne Olympische Spelen",
-        "negativeTerms": [],
-        "qids": [
-          "Q8447",
-          "Q5389"
-        ],
-        "_intent": {
-          "primaryConcept": "antieke vs moderne Olympische Spelen",
-          "specificFocus": "antieke vs moderne Olympische Spelen",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pamphylia_Aspendos_Stater%2C_Olympic_Games_scene.jpg/960px-Pamphylia_Aspendos_Stater%2C_Olympic_Games_scene.jpg",
+          "alt": "Pamphylia Aspendos Stater, Olympic Games scene.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Olympic Games illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 180,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-042",
@@ -1325,7 +1431,21 @@
         "De spelen vinden altijd in Griekenland plaats"
       ],
       "c": 0,
-      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats."
+      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Summer_Olympic_Games_Medal_Nations1.svg/960px-Summer_Olympic_Games_Medal_Nations1.svg.png",
+          "alt": "Summer Olympic Games Medal Nations1.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Olympic Games symbol",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 110,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-043",
@@ -1345,7 +1465,21 @@
         "Soldaten komen ’s nachts uit het paard",
         "Poorten worden geopend voor het Griekse leger"
       ],
-      "explanation": "Dit is een klassiek verhaal over misleiding en psychologie in oorlog."
+      "explanation": "Dit is een klassiek verhaal over misleiding en psychologie in oorlog.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/VaticanVergilFolio19rTrojanHorse.jpg/960px-VaticanVergilFolio19rTrojanHorse.jpg",
+          "alt": "VaticanVergilFolio19rTrojanHorse.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Trojan Horse illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 160,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-044",
@@ -1364,7 +1498,21 @@
       ],
       "min_keywords": 2,
       "rubric": "Metafoor: lijkt onschuldig → wordt binnengelaten → verborgen ‘aanval’ van binnenuit.",
-      "example_answer": "Een trojan lijkt onschuldig (zoals een cadeau), waardoor je hem binnenlaat. Daarna voert hij verborgen schadelijke acties uit vanuit je systeem, net als soldaten die uit het paard kwamen."
+      "example_answer": "Een trojan lijkt onschuldig (zoals een cadeau), waardoor je hem binnenlaat. Daarna voert hij verborgen schadelijke acties uit vanuit je systeem, net als soldaten die uit het paard kwamen.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bicycle_diagram.svg/960px-Bicycle_diagram.svg.png",
+          "alt": "Bicycle diagram.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "computer diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 150,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-045",
@@ -1382,14 +1530,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/960px-The_Parthenon_in_Athens.jpg",
-          "alt": "Democracy",
-          "caption": "Bron: Wikipedia - Democracy",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Democracy",
-            "searchTerm": "Athenian democracy",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ancient_Acropolis.jpg/960px-Ancient_Acropolis.jpg",
+          "alt": "Ancient Acropolis.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Ancient Greek democracy symbol",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 190,
+          "_escalated": false
         }
       ]
     },
@@ -1410,7 +1559,21 @@
       ],
       "min_keywords": 2,
       "rubric": "Athene: burgers stemmen zelf over besluiten; NL: burgers kiezen vertegenwoordigers die besluiten nemen.",
-      "example_answer": "In Athene stemden burgers direct zelf over besluiten. In Nederland kiezen burgers vertegenwoordigers die namens hen beslissen in parlement en raden."
+      "example_answer": "In Athene stemden burgers direct zelf over besluiten. In Nederland kiezen burgers vertegenwoordigers die namens hen beslissen in parlement en raden.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Ancient_Greek_kerykeion_MKG_Hamburg.JPG/960px-Ancient_Greek_kerykeion_MKG_Hamburg.JPG",
+          "alt": "Ancient Greek kerykeion MKG Hamburg.JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Greek education\" gymnasium illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 140,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-047",
@@ -1461,7 +1624,21 @@
           ]
         }
       ],
-      "explanation": "Gymnasium: herken stijlen visueel; koppel aan bouwcultuur en religie."
+      "explanation": "Gymnasium: herken stijlen visueel; koppel aan bouwcultuur en religie.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Arch_illustration.svg/960px-Arch_illustration.svg.png",
+          "alt": "Arch illustration.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Architectural diagrams\" Greek columns orders labeled",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 80,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-048",
@@ -1481,14 +1658,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/%22Table_of_Nations%22_from_the_Book_of_Gates%2C_4th_Division%2C_5th_Hour%2C_Tomb_of_Seti_I%2C_based_on_an_illustration_by_Ernst_Weidenbach_for_Richard_Lepsius%E2%80%99_Denkm%C3%A4ler_aus_%C3%84gypten_und_%C3%84thiopien.png/960px-thumbnail.png",
-          "alt": "Ancient Egyptian race controversy",
-          "caption": "Bron: Wikipedia - Ancient Egyptian race controversy",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Egyptian_race_controversy",
-            "searchTerm": "ancient Egypt",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Limestone_head_of_a_king._Thought_by_Petrie_to_be_Narmer._Bought_by_Petrie_in_Cairo%2C_Egypt._1st_Dynasty._The_Petrie_Museum_of_Egyptian_Archaeology%2C_London.jpg/960px-Limestone_head_of_a_king._Thought_by_Petrie_to_be_Narmer._Bought_by_Petrie_in_Cairo%2C_Egypt._1st_Dynasty._The_Petrie_Museum_of_Egyptian_Archaeology%2C_London.jpg",
+          "alt": "Limestone head of a king. Thought by Petrie to be Narmer. Bought by Petrie in Cairo, Egypt. 1st Dynasty. The Petrie Museum of Egyptian Archaeology, London.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Egypt\" Narmer Palette",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 220,
+          "_escalated": false
         }
       ]
     },
@@ -1505,21 +1683,20 @@
       ],
       "c": 2,
       "e": "Mythen zijn betekenisvolle verklarende verhalen, maar niet gebaseerd op wetenschappelijk bewijs.",
-      "media": {
-        "query": "greek mythology characteristics oral tradition",
-        "alt": "Griekse mythologie kenmerken",
-        "negativeTerms": [
-          "disney"
-        ],
-        "qids": [
-          "Q33927"
-        ],
-        "_intent": {
-          "primaryConcept": "Griekse mythologie kenmerken",
-          "specificFocus": "Griekse mythologie kenmerken",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Manual_of_mythology_-_Greek_and_Roman%2C_Norse%2C_and_old_German%2C_Hindoo_and_Egyptian_mythology_%281875%29_%2814781088224%29.jpg",
+          "alt": "Manual of mythology - Greek and Roman, Norse, and old German, Hindoo and Egyptian mythology (1875) (14781088224).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Greek mythology\" illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 180,
+          "_escalated": false
         }
-      }
+      ]
     },
     {
       "id": "g-050",
@@ -1569,7 +1746,21 @@
           }
         }
       ],
-      "explanation": "Gymnasium: sport als sociaal kapitaal; religie en politiek verweven."
+      "explanation": "Gymnasium: sport als sociaal kapitaal; religie en politiek verweven.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Ayd%C4%B1nArchaeologicalMuseum_%2824%29.JPG/960px-Ayd%C4%B1nArchaeologicalMuseum_%2824%29.JPG",
+          "alt": "AydınArchaeologicalMuseum (24).JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Olympic Games\" illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 180,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-051",
@@ -1589,14 +1780,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg/960px-CairoEgMuseumTaaMaskMostlyPhotographed.jpg",
-          "alt": "Art of ancient Egypt",
-          "caption": "Bron: Wikipedia - Art of ancient Egypt",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Art_of_ancient_Egypt",
-            "searchTerm": "ancient Egypt",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Travels_to_discover_the_source_of_the_Nile%2C_in_the_years_1768%2C_1769%2C_1770%2C_1771%2C_1772%2C_and_1773_%281790%29_%2814784960353%29.jpg/960px-Travels_to_discover_the_source_of_the_Nile%2C_in_the_years_1768%2C_1769%2C_1770%2C_1771%2C_1772%2C_and_1773_%281790%29_%2814784960353%29.jpg",
+          "alt": "Travels to discover the source of the Nile, in the years 1768, 1769, 1770, 1771, 1772, and 1773 (1790) (14784960353).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Egyptian hieroglyphs\" illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 200,
+          "_escalated": false
         }
       ]
     },
@@ -1618,14 +1810,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/L._Cassius_Longinus%2C_denarius%2C_63_BC%2C_RRC_413-1_reverse.jpg/960px-L._Cassius_Longinus%2C_denarius%2C_63_BC%2C_RRC_413-1_reverse.jpg",
-          "alt": "History of democracy",
-          "caption": "Bron: Wikipedia - History of democracy",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/History_of_democracy",
-            "searchTerm": "ancient Greek democracy",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Political_campaign_-_New_Democracy_-_EP_election_2009_-_02.jpg/960px-Political_campaign_-_New_Democracy_-_EP_election_2009_-_02.jpg",
+          "alt": "Political campaign - New Democracy - EP election 2009 - 02.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Ancient Athens\" democracy illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 180,
+          "_escalated": false
         }
       ]
     },
@@ -1643,7 +1836,21 @@
         "485-465 v.C."
       ],
       "c": 0,
-      "e": "De Perzische Oorlogen duurden van 490 tot 479 v.C. Belangrijke veldslagen waren Marathon (490 v.C.), Thermopylae (480 v.C.), Salamis (480 v.C.) en Plataeae (479 v.C.)."
+      "e": "De Perzische Oorlogen duurden van 490 tot 479 v.C. Belangrijke veldslagen waren Marathon (490 v.C.), Thermopylae (480 v.C.), Salamis (480 v.C.) en Plataeae (479 v.C.).",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Map_Greco-Persian_Wars-en.svg/960px-Map_Greco-Persian_Wars-en.svg.png",
+          "alt": "Map Greco-Persian Wars-en.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Historical maps of Greece\" Persian Wars",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 230,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-054",
@@ -1659,7 +1866,21 @@
         "435-400 v.C."
       ],
       "c": 0,
-      "e": "De Peloponnesische Oorlog (431-404 v.C.) was een conflict tussen Athene en Sparta om de hegemonie over Griekenland. Sparta won uiteindelijk."
+      "e": "De Peloponnesische Oorlog (431-404 v.C.) was een conflict tussen Athene en Sparta om de hegemonie over Griekenland. Sparta won uiteindelijk.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Peloponnesian_War_-_it.png/960px-Peloponnesian_War_-_it.png",
+          "alt": "Peloponnesian War - it.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Historical maps of Greece\" Peloponnesian War",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 220,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "g-055",

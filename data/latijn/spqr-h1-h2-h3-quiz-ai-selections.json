@@ -3,960 +3,474 @@
     {
       "questionId": "q001",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/CategorieScrittoriAnticaRoma.jpg",
-      "title": "CategorieScrittoriAnticaRoma.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:CategorieScrittoriAnticaRoma.jpg",
-      "searchTerm": "incategory:\"Ancient Roman inscriptions\"",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 120,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q002",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Alexandria_Library_Inscription.jpg",
-      "title": "Alexandria Library Inscription.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Alexandria_Library_Inscription.jpg",
-      "searchTerm": "incategory:\"Ancient Roman inscriptions\"",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 120,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q003",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q004",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q005",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q006",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q007",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q008",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q009",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q010",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q011",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q012",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q013",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q014",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q015",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q016",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q017",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q018",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q019",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q020",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q021",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q022",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q023",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q024",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q025",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q026",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q027",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q028",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q029",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q030",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q031",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q032",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q033",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q034",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q035",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q036",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q037",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q038",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q039",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q040",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q041",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q042",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q043",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q044",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q045",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q046",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "q047",
       "success": true,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Roman_families.svg/960px-Roman_families.svg.png",
       "title": "Roman families.svg",
       "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_families.svg",
       "searchTerm": "Roman family",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 210,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q004",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Roman_Foot_Soldier.jpg/960px-Roman_Foot_Soldier.jpg",
-      "title": "Roman Foot Soldier.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_Foot_Soldier.jpg",
-      "searchTerm": "Roman emperor command",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 210,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q005",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ancient_Roman_Speculum.jpg/960px-Ancient_Roman_Speculum.jpg",
-      "title": "Ancient Roman Speculum.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Roman_Speculum.jpg",
-      "searchTerm": "Roman fear",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 140,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q006",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg/960px-%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
-      "title": "'Reuzen spinklos van 8 cm doorsnede waarschijnlijk inheem Romeins.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
-      "searchTerm": "Roman mandate",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q007",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Latin_inscription_on_the_Smollett_Monument_-_geograph.org.uk_-_927380.jpg",
-      "title": "Latin inscription on the Smollett Monument - geograph.org.uk - 927380.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Latin_inscription_on_the_Smollett_Monument_-_geograph.org.uk_-_927380.jpg",
-      "searchTerm": "incategory:\"Ancient Roman inscriptions\"",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 100,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q008",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Roman_Empire_125_general_map_%28Red_roads%29.svg/960px-Roman_Empire_125_general_map_%28Red_roads%29.svg.png",
-      "title": "Roman Empire 125 general map (Red roads).svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_Empire_125_general_map_(Red_roads).svg",
-      "searchTerm": "Roman roads map",
-      "imageIntent": "map",
-      "riskProfile": "historical_vs_modern",
-      "score": 160,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q009",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bassorilievo_di_un%E2%80%99urna_romana.jpg/960px-Bassorilievo_di_un%E2%80%99urna_romana.jpg",
-      "title": "Bassorilievo di un’urna romana.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Bassorilievo_di_un%E2%80%99urna_romana.jpg",
-      "searchTerm": "Roman action",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q010",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Roman_copper_alloy_bow_brooch_%28FindID_493399%29.jpg/960px-Roman_copper_alloy_bow_brooch_%28FindID_493399%29.jpg",
-      "title": "Roman copper alloy bow brooch (FindID 493399).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_copper_alloy_bow_brooch_(FindID_493399).jpg",
-      "searchTerm": "Roman stuck",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 100,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q011",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Maria_Saal_Dom_Grabrelief_Romulus_und_Remus_27122013_774.jpg/960px-Maria_Saal_Dom_Grabrelief_Romulus_und_Remus_27122013_774.jpg",
-      "title": "Maria Saal Dom Grabrelief Romulus und Remus 27122013 774.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Maria_Saal_Dom_Grabrelief_Romulus_und_Remus_27122013_774.jpg",
-      "searchTerm": "Lupa Romana",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 230,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q012",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Roman_sarcophagus_of_a_reader_identified_to_Plotinus_and_disciples.jpg",
-      "title": "Roman sarcophagus of a reader identified to Plotinus and disciples.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_sarcophagus_of_a_reader_identified_to_Plotinus_and_disciples.jpg",
-      "searchTerm": "Roman existence",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 120,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q013",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Virgo_Vestalis_%28Musgrave%29.jpg/960px-Virgo_Vestalis_%28Musgrave%29.jpg",
-      "title": "Virgo Vestalis (Musgrave).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Virgo_Vestalis_(Musgrave).jpg",
-      "searchTerm": "incategory:\"Ancient Roman religion\" offering sacrifice",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 230,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q014",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/ADVERBIA.png/960px-ADVERBIA.png",
-      "title": "ADVERBIA.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:ADVERBIA.png",
-      "searchTerm": "incategory:\"Latin inscriptions\" verb conjugation",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "none",
-      "score": 140,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q015",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Cursus.png",
-      "title": "Cursus.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Cursus.png",
-      "searchTerm": "incategory:\"Ancient Roman law\" punishment",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 140,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q016",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Interior_of_a_Roman_House_%28Domus%29_%E2%80%93_Residential_Quarter_of_Timgad.jpg/960px-Interior_of_a_Roman_House_%28Domus%29_%E2%80%93_Residential_Quarter_of_Timgad.jpg",
-      "title": "Interior of a Roman House (Domus) – Residential Quarter of Timgad.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Interior_of_a_Roman_House_(Domus)_%E2%80%93_Residential_Quarter_of_Timgad.jpg",
-      "searchTerm": "incategory:\"Ancient Roman architecture\" house",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 160,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q017",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Map_of_Aqueducts_of_Ancient_Rome.png/960px-Map_of_Aqueducts_of_Ancient_Rome.png",
-      "title": "Map of Aqueducts of Ancient Rome.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Map_of_Aqueducts_of_Ancient_Rome.png",
-      "searchTerm": "incategory:\"Ancient Roman society\" family",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 150,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q018",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Alc%C3%A1ntara_Bridge%2C_in_History_of_Rome_and_of_the_Roman_people_%281883%29_%2814780498941%29.jpg/960px-Alc%C3%A1ntara_Bridge%2C_in_History_of_Rome_and_of_the_Roman_people_%281883%29_%2814780498941%29.jpg",
-      "title": "Alcántara Bridge, in History of Rome and of the Roman people (1883) (14780498941).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Alc%C3%A1ntara_Bridge,_in_History_of_Rome_and_of_the_Roman_people_(1883)_(14780498941).jpg",
-      "searchTerm": "incategory:\"Ancient Roman society\" two people",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 170,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q019",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Roman_kings_family_tree_by_shakko.jpg",
-      "title": "Roman kings family tree by shakko.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_kings_family_tree_by_shakko.jpg",
-      "searchTerm": "incategory:\"Ancient Roman society\" family tree",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 240,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q020",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Base_Salus_Augusti_Ostia_Antica.JPG/960px-Base_Salus_Augusti_Ostia_Antica.JPG",
-      "title": "Base Salus Augusti Ostia Antica.JPG",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Base_Salus_Augusti_Ostia_Antica.JPG",
-      "searchTerm": "incategory:\"Ancient Roman society\" patronage",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 140,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q021",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Miliario_di_Magno_Massimo_e_Flavio_Vittore_da_Cartoceto_Pergola_%28Pesaro_Urbino%29.jpg/960px-Miliario_di_Magno_Massimo_e_Flavio_Vittore_da_Cartoceto_Pergola_%28Pesaro_Urbino%29.jpg",
-      "title": "Miliario di Magno Massimo e Flavio Vittore da Cartoceto Pergola (Pesaro Urbino).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Miliario_di_Magno_Massimo_e_Flavio_Vittore_da_Cartoceto_Pergola_(Pesaro_Urbino).jpg",
-      "searchTerm": "incategory:\"Ancient Roman roads\" milestone",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 190,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q022",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Aquincum_BHM_brooch_repair_tools_IMG_0617.jpg/960px-Aquincum_BHM_brooch_repair_tools_IMG_0617.jpg",
-      "title": "Aquincum BHM brooch repair tools IMG 0617.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Aquincum_BHM_brooch_repair_tools_IMG_0617.jpg",
-      "searchTerm": "incategory:\"Ancient Roman tools\"",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 170,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q023",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Street_of_Pompeii%2C_in_History_of_Rome_and_of_the_Roman_people_%281883%29_%2814803434623%29.jpg/960px-Street_of_Pompeii%2C_in_History_of_Rome_and_of_the_Roman_people_%281883%29_%2814803434623%29.jpg",
-      "title": "Street of Pompeii, in History of Rome and of the Roman people (1883) (14803434623).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Street_of_Pompeii,_in_History_of_Rome_and_of_the_Roman_people_(1883)_(14803434623).jpg",
-      "searchTerm": "incategory:\"Ancient Roman society\" two people",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 170,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q024",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Roman_Herzog_2012.JPG/836px-Roman_Herzog_2012.JPG",
-      "title": "Roman Herzog 2012.JPG",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_Herzog_2012.JPG",
-      "searchTerm": "incategory:\"Ancient Roman society\" celebration",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q025",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/LatinGenderLoss.svg/960px-LatinGenderLoss.svg.png",
-      "title": "LatinGenderLoss.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:LatinGenderLoss.svg",
-      "searchTerm": "\"et...et\" Latin grammar diagram",
-      "imageIntent": "concept_diagram",
-      "riskProfile": "none",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q026",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Ancient_Roman_inscriptions_in_the_forum_of_Timgad.jpg/960px-Ancient_Roman_inscriptions_in_the_forum_of_Timgad.jpg",
-      "title": "Ancient Roman inscriptions in the forum of Timgad.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Roman_inscriptions_in_the_forum_of_Timgad.jpg",
-      "searchTerm": "\"primum\" Latin inscription",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 110,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q027",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Roman_grave_inscription%2C_AD_69%2C_long_i_with_apex.jpg/960px-Roman_grave_inscription%2C_AD_69%2C_long_i_with_apex.jpg",
-      "title": "Roman grave inscription, AD 69, long i with apex.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_grave_inscription,_AD_69,_long_i_with_apex.jpg",
-      "searchTerm": "\"vir viri\" Latin inscription",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 160,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q028",
-      "success": false,
-      "reason": "Low score: 60 (min: 70)",
-      "queries": [
-        "Latin dative verbs diagram",
-        "Latin grammar dative diagram",
-        "Latin grammar diagram"
-      ],
-      "repaired": false
-    },
-    {
-      "questionId": "q029",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sexaginta_Prista_inscription_fragment.jpg/960px-Sexaginta_Prista_inscription_fragment.jpg",
-      "title": "Sexaginta Prista inscription fragment.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Sexaginta_Prista_inscription_fragment.jpg",
-      "searchTerm": "\"cur\" Latin inscription",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 140,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q030",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Villa_Lante_inscription_2.jpg/960px-Villa_Lante_inscription_2.jpg",
-      "title": "Villa Lante inscription 2.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Villa_Lante_inscription_2.jpg",
-      "searchTerm": "\"licet\" Latin inscription",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q031",
-      "success": false,
-      "reason": "Low score: 60 (min: 70)",
-      "queries": [
-        "Latin dative verbs diagram ridicule",
-        "Latin grammar dative diagram",
-        "Latin grammar diagram"
-      ],
-      "repaired": false
-    },
-    {
-      "questionId": "q032",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Julius_Caesar_and_the_foundation_of_the_Roman_imperial_system_%281894%29_%2814591161967%29.jpg/960px-Julius_Caesar_and_the_foundation_of_the_Roman_imperial_system_%281894%29_%2814591161967%29.jpg",
-      "title": "Julius Caesar and the foundation of the Roman imperial system (1894) (14591161967).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Julius_Caesar_and_the_foundation_of_the_Roman_imperial_system_(1894)_(14591161967).jpg",
-      "searchTerm": "Roman enemy illustration",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q033",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Lateinischer_Konjunktiv_bildung.png/801px-Lateinischer_Konjunktiv_bildung.png",
-      "title": "Lateinischer Konjunktiv bildung.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lateinischer_Konjunktiv_bildung.png",
-      "searchTerm": "\"facile est\" Latin grammar diagram",
-      "imageIntent": "concept_diagram",
-      "riskProfile": "none",
-      "score": 100,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q034",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "\"as\" Latin grammar diagram",
-        "Latin conjunctions diagram",
-        "Latin grammar diagram"
-      ],
-      "repaired": false
-    },
-    {
-      "questionId": "q035",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "Latin grammar case diagram subject",
-        "Latin grammar case diagram",
-        "Latin grammar diagram"
-      ],
-      "repaired": false
-    },
-    {
-      "questionId": "q036",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "Latin grammar case diagram object",
-        "Latin grammar case diagram",
-        "Latin grammar diagram"
-      ],
-      "repaired": false
-    },
-    {
-      "questionId": "q037",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "incategory:\"Latin grammar\" case diagram",
-        "Latin grammar case diagram",
-        "grammar case diagram"
-      ],
-      "repaired": false
-    },
-    {
-      "questionId": "q038",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Types_of_adverbials_in_Macedonian.svg/960px-Types_of_adverbials_in_Macedonian.svg.png",
-      "title": "Types of adverbials in Macedonian.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Types_of_adverbials_in_Macedonian.svg",
-      "searchTerm": "incategory:\"Latin grammar\" adverbial diagram",
-      "imageIntent": "diagram",
-      "riskProfile": "none",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q039",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Statue_of_a_Roman_woman._Copenhagen%2C_New_Carlsberg_Glyptotek._%2814662304769%29.jpg/960px-Statue_of_a_Roman_woman._Copenhagen%2C_New_Carlsberg_Glyptotek._%2814662304769%29.jpg",
-      "title": "Statue of a Roman woman. Copenhagen, New Carlsberg Glyptotek. (14662304769).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_a_Roman_woman._Copenhagen,_New_Carlsberg_Glyptotek._(14662304769).jpg",
-      "searchTerm": "Roman woman statue",
       "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 120,
+      "riskProfile": "mythology_vs_popculture",
+      "score": 180,
       "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q040",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Roman_collared_slaves_-_Ashmolean_Museum.jpg/960px-Roman_collared_slaves_-_Ashmolean_Museum.jpg",
-      "title": "Roman collared slaves - Ashmolean Museum.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_collared_slaves_-_Ashmolean_Museum.jpg",
-      "searchTerm": "Roman slave",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 170,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q041",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ancient_legends_of_Roman_history_%281905%29_%2814777381185%29.jpg/960px-Ancient_legends_of_Roman_history_%281905%29_%2814777381185%29.jpg",
-      "title": "Ancient legends of Roman history (1905) (14777381185).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ancient_legends_of_Roman_history_(1905)_(14777381185).jpg",
-      "searchTerm": "Roman king statue",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 110,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q042",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Statue_woman_Gortys.jpg/960px-Statue_woman_Gortys.jpg",
-      "title": "Statue woman Gortys.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Statue_woman_Gortys.jpg",
-      "searchTerm": "Roman woman statue",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 110,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q043",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Roman_slave_shackles.jpg/960px-Roman_slave_shackles.jpg",
-      "title": "Roman slave shackles.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_slave_shackles.jpg",
-      "searchTerm": "Roman slaves",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 100,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q044",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Roman_Aqueduct_at_Ag_Georgios_1.jpg/960px-Roman_Aqueduct_at_Ag_Georgios_1.jpg",
-      "title": "Roman Aqueduct at Ag Georgios 1.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_Aqueduct_at_Ag_Georgios_1.jpg",
-      "searchTerm": "Roman aqueduct",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 100,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q045",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Roman_with_drink-offering_%28Vatican_museum%29_-_replica_in_Pushkin_museum_01_by_shakko.jpg/960px-Roman_with_drink-offering_%28Vatican_museum%29_-_replica_in_Pushkin_museum_01_by_shakko.jpg",
-      "title": "Roman with drink-offering (Vatican museum) - replica in Pushkin museum 01 by shakko.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_with_drink-offering_(Vatican_museum)_-_replica_in_Pushkin_museum_01_by_shakko.jpg",
-      "searchTerm": "Roman offering",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 100,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q046",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ancient_Roman_inscriptions_in_Dougga_05.jpg/960px-Ancient_Roman_inscriptions_in_Dougga_05.jpg",
-      "title": "Ancient Roman inscriptions in Dougga 05.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Roman_inscriptions_in_Dougga_05.jpg",
-      "searchTerm": "Roman inscription",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 110,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q047",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tombstone_of_family_Aquincum_IMG_0845.jpg/960px-Tombstone_of_family_Aquincum_IMG_0845.jpg",
-      "title": "Tombstone of family Aquincum IMG 0845.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tombstone_of_family_Aquincum_IMG_0845.jpg",
-      "searchTerm": "Roman family",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 100,
-      "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q048",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Roman-figures.png/960px-Roman-figures.png",
-      "title": "Roman-figures.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman-figures.png",
-      "searchTerm": "Roman slave calling",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 160,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q049",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Roman_Imperial_Legion_Units.svg/960px-Roman_Imperial_Legion_Units.svg.png",
-      "title": "Roman Imperial Legion Units.svg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_Imperial_Legion_Units.svg",
-      "searchTerm": "\"Roman family\" \"slave\"",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 90,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q050",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Latin_personal_pronouns.jpg/960px-Latin_personal_pronouns.jpg",
-      "title": "Latin personal pronouns.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Latin_personal_pronouns.jpg",
-      "searchTerm": "Latin grammar case diagram",
-      "imageIntent": "diagram",
-      "riskProfile": "diagram_vs_photo",
-      "score": 90,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q051",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "Latin personal pronouns nominative",
-        "Latin pronouns nominative",
-        "Latin pronouns"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q052",
-      "success": false,
-      "reason": "Low score: 40 (min: 70)",
-      "queries": [
-        "Latin dative case diagram",
-        "Latin grammar dative",
-        "Latin grammar"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q053",
-      "success": false,
-      "reason": "Low score: 40 (min: 70)",
-      "queries": [
-        "Latin dative case diagram",
-        "Latin grammar dative",
-        "Latin grammar"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q054",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Esse%2C_%22to_be%22%2C_Latin%2C_present_conjugation.jpg/960px-Esse%2C_%22to_be%22%2C_Latin%2C_present_conjugation.jpg",
-      "title": "Esse, \"to be\", Latin, present conjugation.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Esse,_%22to_be%22,_Latin,_present_conjugation.jpg",
-      "searchTerm": "Latin verb conjugation diagram",
-      "imageIntent": "diagram",
-      "riskProfile": "diagram_vs_photo",
-      "score": 140,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q055",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Coniugatio_-_verbum_anomalum_-_EO.png/960px-Coniugatio_-_verbum_anomalum_-_EO.png",
-      "title": "Coniugatio - verbum anomalum - EO.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Coniugatio_-_verbum_anomalum_-_EO.png",
-      "searchTerm": "Latin verb conjugation diagram",
-      "imageIntent": "diagram",
-      "riskProfile": "diagram_vs_photo",
-      "score": 90,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q056",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Roman_Aqueduct_at_Ag_Georgios_18.jpg/960px-Roman_Aqueduct_at_Ag_Georgios_18.jpg",
-      "title": "Roman Aqueduct at Ag Georgios 18.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_Aqueduct_at_Ag_Georgios_18.jpg",
-      "searchTerm": "Ancient Roman aqueduct",
-      "imageIntent": "photo",
-      "riskProfile": "historical_vs_modern",
-      "score": 100,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q057",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/G%C3%A9r%C3%B4me--studies_for_Slave_Market_paintings--c1884--Walters_Art_Musuem.jpg/960px-G%C3%A9r%C3%B4me--studies_for_Slave_Market_paintings--c1884--Walters_Art_Musuem.jpg",
-      "title": "Gérôme--studies for Slave Market paintings--c1884--Walters Art Musuem.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:G%C3%A9r%C3%B4me--studies_for_Slave_Market_paintings--c1884--Walters_Art_Musuem.jpg",
-      "searchTerm": "Ancient Roman slave",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q058",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ancient_legends_of_Roman_history_%281905%29_%2814774213201%29.jpg/960px-Ancient_legends_of_Roman_history_%281905%29_%2814774213201%29.jpg",
-      "title": "Ancient legends of Roman history (1905) (14774213201).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ancient_legends_of_Roman_history_(1905)_(14774213201).jpg",
-      "searchTerm": "Ancient Roman king",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 190,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q059",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "Latin grammar preposition accusative",
-        "Latin preposition accusative",
-        "Latin preposition"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q060",
-      "success": false,
-      "reason": "No candidates found",
-      "queries": [
-        "Latin grammar preposition ablative",
-        "Latin preposition ablative",
-        "Latin preposition"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q061",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ancient_depiction_of_a_scythe.png",
-      "title": "Ancient depiction of a scythe.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ancient_depiction_of_a_scythe.png",
-      "searchTerm": "\"Roman family\" father son giving",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 180,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q062",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/DECLINATIO_III_N.png/960px-DECLINATIO_III_N.png",
-      "title": "DECLINATIO III N.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:DECLINATIO_III_N.png",
-      "searchTerm": "Latin noun declension urbs",
-      "imageIntent": "diagram",
-      "riskProfile": "none",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q063",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Augustus_Tample_Kalabsha.png/843px-Augustus_Tample_Kalabsha.png",
-      "title": "Augustus Tample Kalabsha.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Augustus_Tample_Kalabsha.png",
-      "searchTerm": "\"Roman slaves\" guarding sheep",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 90,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q064",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Latin_infins.png",
-      "title": "Latin infins.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Latin_infins.png",
-      "searchTerm": "Latin infinitive grammar",
-      "imageIntent": "diagram",
-      "riskProfile": "none",
-      "score": 110,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q069",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roman_Republic_Empire_map.gif",
-      "title": "Roman Republic Empire map.gif",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_Republic_Empire_map.gif",
-      "searchTerm": "\"Ancient Rome\" context",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q070",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Bandeau_portail_Rome_antique.jpg",
-      "title": "Bandeau portail Rome antique.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Bandeau_portail_Rome_antique.jpg",
-      "searchTerm": "\"Ancient Rome\" context",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 90,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q071",
-      "success": false,
-      "reason": "Low score: 50 (min: 70)",
-      "queries": [
-        "Latin noun case grammar",
-        "Latin noun case",
-        "Latin grammar"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q073",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Siege-alesia-vercingetorix-jules-cesar.jpg/960px-Siege-alesia-vercingetorix-jules-cesar.jpg",
-      "title": "Siege-alesia-vercingetorix-jules-cesar.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Siege-alesia-vercingetorix-jules-cesar.jpg",
-      "searchTerm": "\"Ancient Rome\" context",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 90,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q074",
-      "success": false,
-      "reason": "Low score: 50 (min: 70)",
-      "queries": [
-        "Latin noun case grammar",
-        "Latin noun case",
-        "Latin grammar"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q075",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Latin_adverbs.png",
-      "title": "Latin adverbs.png",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Latin_adverbs.png",
-      "searchTerm": "Latin verb conjugation grammar",
-      "imageIntent": "diagram",
-      "riskProfile": "none",
-      "score": 110,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q076",
-      "success": false,
-      "reason": "Low score: 50 (min: 70)",
-      "queries": [
-        "Latin noun case grammar",
-        "Latin noun case",
-        "Latin grammar"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q077",
-      "success": false,
-      "reason": "Low score: 50 (min: 70)",
-      "queries": [
-        "Latin noun case grammar",
-        "Latin noun case",
-        "Latin grammar"
-      ],
-      "repaired": false
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q080",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Luxembourg_Cath%C3%A9drale_Notre-Dame_Latin_inscription_1613.jpg/960px-Luxembourg_Cath%C3%A9drale_Notre-Dame_Latin_inscription_1613.jpg",
-      "title": "Luxembourg Cathédrale Notre-Dame Latin inscription 1613.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_Cath%C3%A9drale_Notre-Dame_Latin_inscription_1613.jpg",
-      "searchTerm": "incategory:\"Latin inscriptions\" word meaning",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "none",
-      "score": 190,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q081",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_A_Roman_Slave_Market_-_Walters_37885.jpg/960px-Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_A_Roman_Slave_Market_-_Walters_37885.jpg",
-      "title": "Jean-Léon Gérôme - A Roman Slave Market - Walters 37885.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_A_Roman_Slave_Market_-_Walters_37885.jpg",
-      "searchTerm": "Roman slave punishment ancient",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 180,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q082",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/TRAJAN_98AD_RARE_She_Wolf_%22Mother%22_to_Romulus_%26_Remus_Ancient_Roman_Coin_i51162_02.jpg",
-      "title": "TRAJAN 98AD RARE She Wolf \"Mother\" to Romulus & Remus Ancient Roman Coin i51162 02.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:TRAJAN_98AD_RARE_She_Wolf_%22Mother%22_to_Romulus_%26_Remus_Ancient_Roman_Coin_i51162_02.jpg",
-      "searchTerm": "Lupa Romana Romulus Remus historical illustration",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 210,
-      "source": "commons",
-      "repaired": false
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
     },
     {
       "questionId": "q083",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Lays_of_ancient_Rome%2C_with_Ivry%2C_and_The_Armada%3B_%281904%29_%2814804870923%29.jpg/960px-Lays_of_ancient_Rome%2C_with_Ivry%2C_and_The_Armada%3B_%281904%29_%2814804870923%29.jpg",
-      "title": "Lays of ancient Rome, with Ivry, and The Armada; (1904) (14804870923).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lays_of_ancient_Rome,_with_Ivry,_and_The_Armada;_(1904)_(14804870923).jpg",
-      "searchTerm": "Alba Longa king ancient",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Augustus_Tample_Kalabsha.png/843px-Augustus_Tample_Kalabsha.png",
+      "title": "Augustus Tample Kalabsha.png",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Augustus_Tample_Kalabsha.png",
+      "searchTerm": "incategory:\"Ancient Rome\" Alba Longa king",
       "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 190,
+      "riskProfile": "mythology_vs_popculture",
+      "score": 140,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q084",
@@ -964,129 +478,139 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Wall_painting_-_founding_myth_of_Rome_-_Pompeii_%28V_4_13%29_-_Napoli_MAN.jpg/960px-Wall_painting_-_founding_myth_of_Rome_-_Pompeii_%28V_4_13%29_-_Napoli_MAN.jpg",
       "title": "Wall painting - founding myth of Rome - Pompeii (V 4 13) - Napoli MAN.jpg",
       "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Wall_painting_-_founding_myth_of_Rome_-_Pompeii_(V_4_13)_-_Napoli_MAN.jpg",
-      "searchTerm": "Rhea Silvia Vesta ancient",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "historical_vs_modern",
-      "score": 130,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q085",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Head_of_the_Roman_god_Mars._Drawing%2C_c._1793._Wellcome_V0009202.jpg/960px-Head_of_the_Roman_god_Mars._Drawing%2C_c._1793._Wellcome_V0009202.jpg",
-      "title": "Head of the Roman god Mars. Drawing, c. 1793. Wellcome V0009202.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Head_of_the_Roman_god_Mars._Drawing,_c._1793._Wellcome_V0009202.jpg",
-      "searchTerm": "Mars Rhea Silvia ancient",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 170,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q086",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Bernardino_Poccetti_-_The_River_God_Tiber_%28Study_for_a_fresco%2C_Miracle_of_the_Snow%2C_or_the_Founda_-_2012.36_-_Cleveland_Museum_of_Art.tif/lossy-page1-800px-Bernardino_Poccetti_-_The_River_God_Tiber_%28Study_for_a_fresco%2C_Miracle_of_the_Snow%2C_or_the_Founda_-_2012.36_-_Cleveland_Museum_of_Art.tif.jpg",
-      "title": "Bernardino Poccetti - The River God Tiber (Study for a fresco, Miracle of the Snow, or the Founda - 2012.36 - Cleveland Museum of Art.tif",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Bernardino_Poccetti_-_The_River_God_Tiber_(Study_for_a_fresco,_Miracle_of_the_Snow,_or_the_Founda_-_2012.36_-_Cleveland_Museum_of_Art.tif",
-      "searchTerm": "Romulus Remus Tiber river ancient",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 230,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q087",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Marble_statuette_of_a_slave_boy_with_a_lantern_MET_DP292010.jpg/960px-Marble_statuette_of_a_slave_boy_with_a_lantern_MET_DP292010.jpg",
-      "title": "Marble statuette of a slave boy with a lantern MET DP292010.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Marble_statuette_of_a_slave_boy_with_a_lantern_MET_DP292010.jpg",
-      "searchTerm": "Romulus Remus slave ancient",
-      "imageIntent": "historical_illustration",
-      "riskProfile": "mythology_vs_popculture",
-      "score": 120,
-      "source": "commons",
-      "repaired": false
-    },
-    {
-      "questionId": "q088",
-      "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tiber_river_with_Romulus_and_Remus%2C_Ma593_%2830626899433%29.jpg/960px-Tiber_river_with_Romulus_and_Remus%2C_Ma593_%2830626899433%29.jpg",
-      "title": "Tiber river with Romulus and Remus, Ma593 (30626899433).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tiber_river_with_Romulus_and_Remus,_Ma593_(30626899433).jpg",
-      "searchTerm": "Romulus Remus Tiber river ancient",
+      "searchTerm": "incategory:\"Ancient Rome\" Vesta Rhea Silvia",
       "imageIntent": "historical_illustration",
       "riskProfile": "mythology_vs_popculture",
       "score": 220,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "q085",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mars_and_Rhea_Silvia_1797_Blake_after_Fuseli_to_Charles_Allen%27s_A_New_and_Improved_Roman_History_1798_Johnson.jpg",
+      "title": "Mars and Rhea Silvia 1797 Blake after Fuseli to Charles Allen's A New and Improved Roman History 1798 Johnson.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mars_and_Rhea_Silvia_1797_Blake_after_Fuseli_to_Charles_Allen%27s_A_New_and_Improved_Roman_History_1798_Johnson.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" Mars Rhea Silvia",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 200,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "q086",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tiber_river_with_Romulus_and_Remus%2C_Ma593_%2830626899433%29.jpg/960px-Tiber_river_with_Romulus_and_Remus%2C_Ma593_%2830626899433%29.jpg",
+      "title": "Tiber river with Romulus and Remus, Ma593 (30626899433).jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tiber_river_with_Romulus_and_Remus,_Ma593_(30626899433).jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" twins river",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 180,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "q087",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg/960px-%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
+      "title": "'Reuzen spinklos van 8 cm doorsnede waarschijnlijk inheem Romeins.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" slave twins",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 100,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "q088",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Tiber_river_with_Romulus_and_Remus_D20141107b.jpg/960px-Tiber_river_with_Romulus_and_Remus_D20141107b.jpg",
+      "title": "Tiber river with Romulus and Remus D20141107b.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tiber_river_with_Romulus_and_Remus_D20141107b.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" twins Tiber",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 120,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q089",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/TRAJAN_98AD_RARE_She_Wolf_%22Mother%22_to_Romulus_%26_Remus_Ancient_Roman_Coin_i51162_01.jpg",
-      "title": "TRAJAN 98AD RARE She Wolf \"Mother\" to Romulus & Remus Ancient Roman Coin i51162 01.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:TRAJAN_98AD_RARE_She_Wolf_%22Mother%22_to_Romulus_%26_Remus_Ancient_Roman_Coin_i51162_01.jpg",
-      "searchTerm": "Lupa Romana Romulus Remus historical illustration",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Romulus_en_Remus%2C_RP-P-H-H-66.jpg/960px-Romulus_en_Remus%2C_RP-P-H-H-66.jpg",
+      "title": "Romulus en Remus, RP-P-H-H-66.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Romulus_en_Remus,_RP-P-H-H-66.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" she-wolf twins",
       "imageIntent": "historical_illustration",
       "riskProfile": "mythology_vs_popculture",
-      "score": 210,
+      "score": 170,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q090",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lupa_cum_Romulo_et_Remo_%28Musgrave%29.jpg/960px-Lupa_cum_Romulo_et_Remo_%28Musgrave%29.jpg",
-      "title": "Lupa cum Romulo et Remo (Musgrave).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lupa_cum_Romulo_et_Remo_(Musgrave).jpg",
-      "searchTerm": "Faustulus Romulus Remus ancient",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg/960px-Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg",
+      "title": "Mignard - The Shepherd Faustulus Bringing Romulus and Remus to His Wife.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" Faustulus Romulus",
       "imageIntent": "historical_illustration",
       "riskProfile": "mythology_vs_popculture",
-      "score": 230,
+      "score": 120,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q091",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Statue_of_Romulus_and_Remus_at_Beechbarrow_on_Pen_Hill.jpg/960px-Statue_of_Romulus_and_Remus_at_Beechbarrow_on_Pen_Hill.jpg",
-      "title": "Statue of Romulus and Remus at Beechbarrow on Pen Hill.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_Romulus_and_Remus_at_Beechbarrow_on_Pen_Hill.jpg",
-      "searchTerm": "Acca Larentia Romulus Remus ancient",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Romulus_et_Remus.jpg/960px-Romulus_et_Remus.jpg",
+      "title": "Romulus et Remus.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Romulus_et_Remus.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" Acca Larentia Romulus",
       "imageIntent": "historical_illustration",
       "riskProfile": "mythology_vs_popculture",
-      "score": 160,
+      "score": 130,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q092",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg/960px-Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg",
-      "title": "Woodcut illustration of Rhea Silvia and the birth of Romulus and Remus - Penn Provenance Project.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Romulus_and_Remus_MET_DP822897.jpg/960px-Romulus_and_Remus_MET_DP822897.jpg",
+      "title": "Romulus and Remus MET DP822897.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Romulus_and_Remus_MET_DP822897.jpg",
       "searchTerm": "incategory:\"Ancient Rome\" Romulus Remus discovery",
       "imageIntent": "historical_illustration",
       "riskProfile": "mythology_vs_popculture",
-      "score": 150,
+      "score": 190,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q093",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Italy_from_the_Alps_to_Mount_Etna_%281877%29_%2814773680561%29.jpg/960px-Italy_from_the_Alps_to_Mount_Etna_%281877%29_%2814773680561%29.jpg",
-      "title": "Italy from the Alps to Mount Etna (1877) (14773680561).jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Italy_from_the_Alps_to_Mount_Etna_(1877)_(14773680561).jpg",
-      "searchTerm": "incategory:\"Ancient Rome\" Romulus Remus founding conflict",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Roman_She-wolf%2C_Romulus%2C_Remus%2C_replica_Capitole%2C_Rome%2C_Italy.jpg/960px-Roman_She-wolf%2C_Romulus%2C_Remus%2C_replica_Capitole%2C_Rome%2C_Italy.jpg",
+      "title": "Roman She-wolf, Romulus, Remus, replica Capitole, Rome, Italy.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_She-wolf,_Romulus,_Remus,_replica_Capitole,_Rome,_Italy.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" Romulus Remus founding quarrel",
       "imageIntent": "historical_illustration",
       "riskProfile": "mythology_vs_popculture",
-      "score": 250,
+      "score": 210,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q094",
@@ -1099,7 +623,8 @@
       "riskProfile": "mythology_vs_popculture",
       "score": 220,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q095",
@@ -1107,29 +632,34 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Rambles_in_Rome_-_an_arch%C3%A6ological_and_historical_guide_to_the_museums%2C_galleries%2C_villas%2C_churches%2C_and_antiquities_of_Rome_and_the_Campagna_%281887%29_%2814581531698%29.jpg/960px-thumbnail.jpg",
       "title": "Rambles in Rome - an archæological and historical guide to the museums, galleries, villas, churches, and antiquities of Rome and the Campagna (1887) (14581531698).jpg",
       "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Rambles_in_Rome_-_an_arch%C3%A6ological_and_historical_guide_to_the_museums,_galleries,_villas,_churches,_and_antiquities_of_Rome_and_the_Campagna_(1887)_(14581531698).jpg",
-      "searchTerm": "incategory:\"Ancient Rome\" founding of Rome illustration",
+      "searchTerm": "incategory:\"Ancient Rome\" Romulus founding Rome illustration",
       "imageIntent": "historical_illustration",
       "riskProfile": "mythology_vs_popculture",
-      "score": 200,
+      "score": 240,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     },
     {
       "questionId": "q096",
       "success": true,
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/%28Alleged%29_Flag_of_the_Roman_Kingdom_%26_Roman_Republic.jpg/960px-%28Alleged%29_Flag_of_the_Roman_Kingdom_%26_Roman_Republic.jpg",
-      "title": "(Alleged) Flag of the Roman Kingdom & Roman Republic.jpg",
-      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:(Alleged)_Flag_of_the_Roman_Kingdom_%26_Roman_Republic.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg/960px-Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg",
+      "title": "Woodcut illustration of Rhea Silvia and the birth of Romulus and Remus - Penn Provenance Project.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg",
       "searchTerm": "incategory:\"Ancient Rome\" Romulus king illustration",
       "imageIntent": "historical_illustration",
       "riskProfile": "mythology_vs_popculture",
-      "score": 120,
+      "score": 160,
       "source": "commons",
-      "repaired": false
+      "repaired": false,
+      "escalated": false
     }
   ],
-  "successCount": 74,
+  "successCount": 89,
+  "imageSuccessCount": 15,
+  "noImageCount": 74,
+  "escalationCount": 0,
   "total": 89,
-  "timestamp": "2026-01-03T13:42:51.227Z",
-  "version": "v3.2"
+  "timestamp": "2026-01-03T14:13:59.078Z",
+  "version": "v3.3"
 }

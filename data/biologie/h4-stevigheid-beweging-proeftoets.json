@@ -20,14 +20,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/1911_Britannica_-_Anatomy_-_Muscular.png/960px-1911_Britannica_-_Anatomy_-_Muscular.png",
-          "alt": "Human musculoskeletal system",
-          "caption": "Bron: Wikipedia - Human musculoskeletal system",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Human_musculoskeletal_system",
-            "searchTerm": "skeletal system",
-            "score": 35
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Dissected_lactating_breast_gray1172.png",
+          "alt": "Dissected lactating breast gray1172.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Human skeleton diagrams\" functions -animal",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 100,
+          "_escalated": false
         }
       ]
     },
@@ -46,14 +47,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/4/44/Anatomical_Male_Figure_Showing_Heart%2C_Lungs%2C_and_Main_Arteries.jpg",
-          "alt": "List of bones of the human skeleton",
-          "caption": "Bron: Wikipedia - List of bones of the human skeleton",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/List_of_bones_of_the_human_skeleton",
-            "searchTerm": "bones human",
-            "score": 55
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Axial_skeleton_diagram_blank.svg/960px-Axial_skeleton_diagram_blank.svg.png",
+          "alt": "Axial skeleton diagram blank.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Human skeleton diagrams\" trunk bones labeled -animal",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 200,
+          "_escalated": false
         }
       ]
     },
@@ -72,14 +74,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Metacarpal_bones_%28left_hand%29_01_palmar_view_with_label.png/960px-Metacarpal_bones_%28left_hand%29_01_palmar_view_with_label.png",
-          "alt": "Metacarpal bones",
-          "caption": "Bron: Wikipedia - Metacarpal bones",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Metacarpal_bones",
-            "searchTerm": "bone anatomy",
-            "score": 40
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Composition_of_bone.png/960px-Composition_of_bone.png",
+          "alt": "Composition of bone.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "bone composition diagram calcium phosphate",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 190,
+          "_escalated": false
         }
       ]
     },
@@ -98,14 +101,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Zygomatic_bone_anterior.png/900px-Zygomatic_bone_anterior.png",
-          "alt": "Zygomatic bone",
-          "caption": "Bron: Wikipedia - Zygomatic bone",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Zygomatic_bone",
-            "searchTerm": "bone anatomy",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bone_cross-section_uk.svg/960px-Bone_cross-section_uk.svg.png",
+          "alt": "Bone cross-section uk.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "bone development diagram child adult",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 250,
+          "_escalated": false
         }
       ]
     },
@@ -124,14 +128,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Hypertrophic_Zone_of_Epiphyseal_Plate.jpg",
-          "alt": "Cartilage",
-          "caption": "Bron: Wikipedia - Cartilage",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Cartilage",
-            "searchTerm": "cartilage",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Gray295.png",
+          "alt": "Gray295.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human cartilage locations diagram -animal",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 280,
+          "_escalated": false
         }
       ]
     },
@@ -150,14 +155,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Plastered_skull_from_Jericho_12741-42.jpg/960px-Plastered_skull_from_Jericho_12741-42.jpg",
-          "alt": "Plastered human skulls",
-          "caption": "Bron: Wikipedia - Plastered human skulls",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Plastered_human_skulls",
-            "searchTerm": "human skull",
-            "score": 35
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fontanelle-dt.JPG",
+          "alt": "Fontanelle-dt.JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" skull fontanelle -animal",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 190,
+          "_escalated": false
         }
       ]
     },
@@ -176,11 +182,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/904_Fibrous_Joints.jpg/960px-904_Fibrous_Joints.jpg",
-          "alt": "Fibrous joint",
-          "caption": "Bron: Wikipedia - Fibrous joint",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "fibrous joint"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ball_and_Socket_Joint_%28Hip_joint%29.svg/960px-Ball_and_Socket_Joint_%28Hip_joint%29.svg.png",
+          "alt": "Ball and Socket Joint (Hip joint).svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "immovable joint diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 180,
+          "_escalated": false
         }
       ]
     },
@@ -199,11 +209,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Gray298.png",
-          "alt": "Amphiarthrosis",
-          "caption": "Bron: Wikipedia - Amphiarthrosis",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "amphiarthrosis"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Common_joint_types.svg/960px-Common_joint_types.svg.png",
+          "alt": "Common joint types.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "cartilaginous joint diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 130,
+          "_escalated": false
         }
       ]
     },
@@ -222,14 +236,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Left_femur_of_extinct_elephant%2C_Alaska%2C_Ice_Age_Wellcome_L0057714.jpg/960px-Left_femur_of_extinct_elephant%2C_Alaska%2C_Ice_Age_Wellcome_L0057714.jpg",
-          "alt": "Bone",
-          "caption": "Bron: Wikipedia - Bone",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Bone",
-            "searchTerm": "bone anatomy",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Prognathodon_tissue.jpg/960px-Prognathodon_tissue.jpg",
+          "alt": "Prognathodon tissue.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "bone cells micrograph osteocytes",
+          "_imageIntent": "micrograph",
+          "_riskProfile": "none",
+          "_score": 240,
+          "_escalated": false
         }
       ]
     },
@@ -248,14 +263,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scheme_human_hand_bones-en.svg/960px-Scheme_human_hand_bones-en.svg.png",
-          "alt": "Phalanx bone",
-          "caption": "Bron: Wikipedia - Phalanx bone",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Phalanx_bone",
-            "searchTerm": "bone anatomy",
-            "score": 40
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Potential_origins_and_trafficking_of_fibrocytes.jpg/960px-Potential_origins_and_trafficking_of_fibrocytes.jpg",
+          "alt": "Potential origins and trafficking of fibrocytes.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "bone collagen function diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 220,
+          "_escalated": false
         }
       ]
     },
@@ -267,14 +283,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/907_Synovial_Joints.jpg/960px-907_Synovial_Joints.jpg",
-          "alt": "Synovial joint",
-          "caption": "Bron: Wikipedia - Synovial joint",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Synovial_joint",
-            "searchTerm": "synovial joint",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Gray1172.png/960px-Gray1172.png",
+          "alt": "Gray1172.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": " diagram",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 160,
+          "_escalated": false
         }
       ]
     },
@@ -293,14 +310,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
-          "alt": "Joint",
-          "caption": "Bron: Wikipedia - Joint",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Joint",
-            "searchTerm": "joint anatomy",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Temporomandibular_joint_number.svg/960px-Temporomandibular_joint_number.svg.png",
+          "alt": "Temporomandibular joint number.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "joint cartilage function diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 300,
+          "_escalated": false
         }
       ]
     },
@@ -319,14 +337,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
-          "alt": "Joint capsule",
-          "caption": "Bron: Wikipedia - Joint capsule",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Joint_capsule",
-            "searchTerm": "joint capsule",
-            "score": 50
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Shoulder_Capsule.png",
+          "alt": "Shoulder Capsule.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" joint capsule human -animal",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 220,
+          "_escalated": false
         }
       ]
     },
@@ -345,14 +364,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gelenke_Zeichnung01.jpg/960px-Gelenke_Zeichnung01.jpg",
-          "alt": "Ball-and-socket joint",
-          "caption": "Bron: Wikipedia - Ball-and-socket joint",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ball-and-socket_joint",
-            "searchTerm": "ball and socket joint",
-            "score": 60
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/96/Shoulder_joint_anatomy_quiz.jpg",
+          "alt": "Shoulder joint anatomy quiz.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" ball and socket joint human -animal",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 170,
+          "_escalated": false
         }
       ]
     },
@@ -371,14 +391,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gelenke_Zeichnung01.jpg/960px-Gelenke_Zeichnung01.jpg",
-          "alt": "Pivot joint",
-          "caption": "Bron: Wikipedia - Pivot joint",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Pivot_joint",
-            "searchTerm": "pivot joint",
-            "score": 40
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/8/83/Bursa_of_elbow_joint.jpg",
+          "alt": "Bursa of elbow joint.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" hinge joint human -animal",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 200,
+          "_escalated": false
         }
       ]
     },
@@ -397,11 +418,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/DNA_replication_split.svg/960px-DNA_replication_split.svg.png",
-          "alt": "DNA replication",
-          "caption": "Bron: Wikipedia - DNA replication",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "DNA replication diagram"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/909_Types_of_Synovial_Joints_esp.jpg/960px-909_Types_of_Synovial_Joints_esp.jpg",
+          "alt": "909 Types of Synovial Joints esp.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human joint types diagram -animal",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -420,14 +445,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
-          "alt": "Synovial fluid",
-          "caption": "Bron: Wikipedia - Synovial fluid",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Synovial_fluid",
-            "searchTerm": "synovial joint",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Gray989.png",
+          "alt": "Gray989.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human joint lubrication diagram -animal",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 120,
+          "_escalated": false
         }
       ]
     },
@@ -446,14 +472,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Sacroiliac_Joint.png/960px-Sacroiliac_Joint.png",
-          "alt": "Sacroiliac joint",
-          "caption": "Bron: Wikipedia - Sacroiliac joint",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Sacroiliac_joint",
-            "searchTerm": "joint anatomy",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Knee_diagram_pl.svg/960px-Knee_diagram_pl.svg.png",
+          "alt": "Knee diagram pl.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human ligament joint diagram -animal",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -472,14 +499,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Vertebra_Superior_View-en.svg/960px-Vertebra_Superior_View-en.svg.png",
-          "alt": "Vertebra",
-          "caption": "Bron: Wikipedia - Vertebra",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Vertebra",
-            "searchTerm": "vertebra",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/716_Intervertebral_Disk.svg/960px-716_Intervertebral_Disk.svg.png",
+          "alt": "716 Intervertebral Disk.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human intervertebral disc diagram -animal",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 230,
+          "_escalated": false
         }
       ]
     },
@@ -498,14 +526,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/TE-Nervous_system_diagram.svg/960px-TE-Nervous_system_diagram.svg.png",
-          "alt": "Human anatomy",
-          "caption": "Bron: Wikipedia - Human anatomy",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Human_anatomy",
-            "searchTerm": "spine anatomy",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Spine_of_scapula.PNG",
+          "alt": "Spine of scapula.PNG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human spine curvature diagram -animal",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 190,
+          "_escalated": false
         }
       ]
     },
@@ -524,14 +553,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Horse_anatomy.svg/960px-Horse_anatomy.svg.png",
-          "alt": "Skeletal system of the horse",
-          "caption": "Bron: Wikipedia - Skeletal system of the horse",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Skeletal_system_of_the_horse",
-            "searchTerm": "skeletal system",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Skeletal_muscle_and_fiber.jpg/960px-Skeletal_muscle_and_fiber.jpg",
+          "alt": "Skeletal muscle and fiber.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human muscle tendon bone diagram -animal",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 170,
+          "_escalated": false
         }
       ]
     },
@@ -550,14 +580,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Anterior_View_of_Muscles.jpg/960px-Anterior_View_of_Muscles.jpg",
-          "alt": "List of skeletal muscles of the human body",
-          "caption": "Bron: Wikipedia - List of skeletal muscles of the human body",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/List_of_skeletal_muscles_of_the_human_body",
-            "searchTerm": "muscle anatomy",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Elements_of_human_physiology_%281907%29_%2821252002612%29.jpg",
+          "alt": "Elements of human physiology (1907) (21252002612).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human muscle contraction diagram -animal",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 150,
+          "_escalated": false
         }
       ]
     },
@@ -576,14 +607,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Blausen_0801_SkeletalMuscle.png/960px-Blausen_0801_SkeletalMuscle.png",
-          "alt": "Skeletal muscle",
-          "caption": "Bron: Wikipedia - Skeletal muscle",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Skeletal_muscle",
-            "searchTerm": "skeletal muscle",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/A_text-book_of_human_physiology_%281906%29_%2814770092742%29.jpg/960px-A_text-book_of_human_physiology_%281906%29_%2814770092742%29.jpg",
+          "alt": "A text-book of human physiology (1906) (14770092742).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human muscle sarcomere contraction diagram -animal",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 130,
+          "_escalated": false
         }
       ]
     },
@@ -602,14 +634,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/2/2e/View_of_Viscera_Page_82.jpg",
-          "alt": "Anatomical terms of muscle",
-          "caption": "Bron: Wikipedia - Anatomical terms of muscle",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Anatomical_terms_of_muscle",
-            "searchTerm": "antagonist muscles",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Hand-book_of_physiology_%281892%29_%2814763044154%29.jpg/960px-Hand-book_of_physiology_%281892%29_%2814763044154%29.jpg",
+          "alt": "Hand-book of physiology (1892) (14763044154).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human antagonistic muscles diagram -animal",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -628,14 +661,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/9/92/Gray526.png",
-          "alt": "Deep artery of arm",
-          "caption": "Bron: Wikipedia - Deep artery of arm",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Deep_artery_of_arm",
-            "searchTerm": "triceps brachii",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Biceps_Brachii_Muscle_Contraction.jpg/960px-Biceps_Brachii_Muscle_Contraction.jpg",
+          "alt": "Biceps Brachii Muscle Contraction.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" biceps triceps antagonist human -animal -insect -fish",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 130,
+          "_escalated": false
         }
       ]
     },
@@ -654,14 +688,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Infraspinatus.PNG",
-          "alt": "Infraspinatus muscle",
-          "caption": "Bron: Wikipedia - Infraspinatus muscle",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Infraspinatus_muscle",
-            "searchTerm": "muscle anatomy",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/0/0b/NSdiagram.png",
+          "alt": "NSdiagram.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "autonomic nervous system diagram human -animal -insect -fish",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 180,
+          "_escalated": false
         }
       ]
     },
@@ -680,14 +715,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Gray382.png",
-          "alt": "Temporalis muscle",
-          "caption": "Bron: Wikipedia - Temporalis muscle",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Temporalis_muscle",
-            "searchTerm": "muscle anatomy",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/1107_The_Extrinsic_Eye_Muscles.jpg/960px-1107_The_Extrinsic_Eye_Muscles.jpg",
+          "alt": "1107 The Extrinsic Eye Muscles.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "eye muscle anatomy human -animal -insect -fish",
+          "_imageIntent": "photo",
+          "_riskProfile": "human_vs_animal",
+          "_score": 150,
+          "_escalated": false
         }
       ]
     },
@@ -706,14 +742,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Electronic_access_control_%28BSL3_Lab%29_using_personal_identification_number_%28PIN%29.jpg/960px-Electronic_access_control_%28BSL3_Lab%29_using_personal_identification_number_%28PIN%29.jpg",
-          "alt": "Muscle memory",
-          "caption": "Bron: Wikipedia - Muscle memory",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Muscle_memory",
-            "searchTerm": "motor memory",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/S-ART_Mindfulness_and_brain3.jpg/843px-S-ART_Mindfulness_and_brain3.jpg",
+          "alt": "S-ART Mindfulness and brain3.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "motor learning diagram",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 130,
+          "_escalated": false
         }
       ]
     },
@@ -732,11 +769,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Black_Chuck_Taylors.jpg/960px-Black_Chuck_Taylors.jpg",
-          "alt": "Developmental coordination disorder",
-          "caption": "Bron: Wikipedia - Developmental coordination disorder",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "human movement coordination"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Descartes_diagram.png/844px-Descartes_diagram.png",
+          "alt": "Descartes diagram.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human movement coordination diagram",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 150,
+          "_escalated": false
         }
       ]
     },
@@ -755,11 +796,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Cycling_in_Amsterdam_%28893%29.jpg/960px-Cycling_in_Amsterdam_%28893%29.jpg",
-          "alt": "Exercise",
-          "caption": "Bron: Wikipedia - Exercise",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "benefits of exercise"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Insufficient_physical_activity.png/960px-Insufficient_physical_activity.png",
+          "alt": "Insufficient physical activity.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "exercise health benefits",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 110,
+          "_escalated": false
         }
       ]
     },
@@ -778,14 +823,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Training_of_Seattle_Mist_Lingerie_Football_0154.jpg",
-          "alt": "Warming up",
-          "caption": "Bron: Wikipedia - Warming up",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Warming_up",
-            "searchTerm": "warm up exercise",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/Moharram_Military_Exercise_-_Preparation_Phase_%2818%29.jpg",
+          "alt": "Moharram Military Exercise - Preparation Phase (18).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "warming up exercise",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 100,
+          "_escalated": false
         }
       ]
     },
@@ -804,14 +850,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Plantaris_muscle_-_posterior_view.png/960px-Plantaris_muscle_-_posterior_view.png",
-          "alt": "Plantaris muscle",
-          "caption": "Bron: Wikipedia - Plantaris muscle",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Plantaris_muscle",
-            "searchTerm": "muscle anatomy",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/2007Taipei101RunUp_WarmingUp_Starting.jpg/960px-2007Taipei101RunUp_WarmingUp_Starting.jpg",
+          "alt": "2007Taipei101RunUp WarmingUp Starting.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "sports warm up cool down",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 110,
+          "_escalated": false
         }
       ]
     },
@@ -830,11 +877,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/%D0%A1%D0%B0%D0%BC%D0%B8%D1%80%D0%B0_%D0%9C%D1%83%D1%81%D1%82%D0%B0%D1%84%D0%B0%D0%B5%D0%B2%D0%B0_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.jpg/960px-%D0%A1%D0%B0%D0%BC%D0%B8%D1%80%D0%B0_%D0%9C%D1%83%D1%81%D1%82%D0%B0%D1%84%D0%B0%D0%B5%D0%B2%D0%B0_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.jpg",
-          "alt": "Stretching",
-          "caption": "Bron: Wikipedia - Stretching",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "muscle stretching techniques"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/8/86/Personal_trainer_assisting_and_correcting_a_client_during_a_fitball_stretching_exercise.jpg",
+          "alt": "Personal trainer assisting and correcting a client during a fitball stretching exercise.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "stretching exercise",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -853,14 +904,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/6/63/MatteoTosatto2.jpg",
-          "alt": "Exercise physiology",
-          "caption": "Bron: Wikipedia - Exercise physiology",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Exercise_physiology",
-            "searchTerm": "cool down exercise",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/The_book_of_school_and_college_sports_%281904%29_%2814591469967%29.jpg/960px-The_book_of_school_and_college_sports_%281904%29_%2814591469967%29.jpg",
+          "alt": "The book of school and college sports (1904) (14591469967).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "cooling down exercise",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -879,14 +931,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/0/05/Illu_lower_extremity_muscles.jpg",
-          "alt": "Soleus muscle",
-          "caption": "Bron: Wikipedia - Soleus muscle",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Soleus_muscle",
-            "searchTerm": "muscle anatomy",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Symptoms_of_coronavirus_disease_2019_in_Vietnamese.svg/960px-Symptoms_of_coronavirus_disease_2019_in_Vietnamese.svg.png",
+          "alt": "Symptoms of coronavirus disease 2019 in Vietnamese.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "delayed onset muscle soreness diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 70,
+          "_escalated": false
         }
       ]
     },
@@ -905,14 +958,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/03042012Ccm_gamosuma_juvenilA231.JPG/960px-03042012Ccm_gamosuma_juvenilA231.JPG",
-          "alt": "Sports injury",
-          "caption": "Bron: Wikipedia - Sports injury",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Sports_injury",
-            "searchTerm": "sports injury",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Sport_injury_warning_sign.jpg/960px-Sport_injury_warning_sign.jpg",
+          "alt": "Sport injury warning sign.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "sports injury",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -931,14 +985,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Operating_a_Computer_Keyboard_MOD_45158111.jpg/960px-Operating_a_Computer_Keyboard_MOD_45158111.jpg",
-          "alt": "Repetitive strain injury",
-          "caption": "Bron: Wikipedia - Repetitive strain injury",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Repetitive_strain_injury",
-            "searchTerm": "repetitive strain injury",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sch%C3%A9ma_RSI.svg/960px-Sch%C3%A9ma_RSI.svg.png",
+          "alt": "Schéma RSI.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "RSI diagram human",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 80,
+          "_escalated": false
         }
       ]
     },
@@ -957,14 +1012,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2010-10-02_pulled_hamstring.jpg/960px-2010-10-02_pulled_hamstring.jpg",
-          "alt": "Strain (injury)",
-          "caption": "Bron: Wikipedia - Strain (injury)",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Strain_(injury)",
-            "searchTerm": "repetitive strain injury",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Operating_a_Computer_Keyboard_MOD_45158111.jpg/960px-Operating_a_Computer_Keyboard_MOD_45158111.jpg",
+          "alt": "Repetitive strain injury",
+          "caption": "Bron: Wikipedia",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"People with RSI\" pain",
+          "_imageIntent": "photo",
+          "_riskProfile": "human_vs_animal",
+          "_score": 55,
+          "_escalated": false
         }
       ]
     },
@@ -983,14 +1039,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
-          "alt": "Computer mouse",
-          "caption": "Bron: Wikipedia - Computer mouse",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Computer_mouse",
-            "searchTerm": "RSI computer",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Bad_posture.jpg",
+          "alt": "Bad posture.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "ergonomics break computer human",
+          "_imageIntent": "photo",
+          "_riskProfile": "human_vs_animal",
+          "_score": 80,
+          "_escalated": false
         }
       ]
     },
@@ -1009,11 +1066,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Practical_Demonstrations_of_Ergonomic_Principles.webm/640px--Practical_Demonstrations_of_Ergonomic_Principles.webm.jpg",
-          "alt": "Ergonomics",
-          "caption": "Bron: Wikipedia - Ergonomics",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "ergonomics computer posture"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ergonomics_of_drawing_tablets_by_David_Revoy.svg/960px-Ergonomics_of_drawing_tablets_by_David_Revoy.svg.png",
+          "alt": "Ergonomics of drawing tablets by David Revoy.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "ergonomics computer posture diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 200,
+          "_escalated": false
         }
       ]
     },
@@ -1032,11 +1093,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Ergonomic_Guidelines_for_Manual_Material_Handling.pdf/page1-800px-Ergonomic_Guidelines_for_Manual_Material_Handling.pdf.jpg",
-          "alt": "Ergonomic hazard",
-          "caption": "Bron: Wikipedia - Ergonomic hazard",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "ergonomics posture diagram"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/GuteSitzhaltungSchlechteSitzhaltung.svg/960px-GuteSitzhaltungSchlechteSitzhaltung.svg.png",
+          "alt": "GuteSitzhaltungSchlechteSitzhaltung.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "sitting posture diagram human",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 100,
+          "_escalated": false
         }
       ]
     },
@@ -1055,14 +1120,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/BCS_logo_2021.svg/960px-BCS_logo_2021.svg.png",
-          "alt": "British Computer Society",
-          "caption": "Bron: Wikipedia - British Computer Society",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/British_Computer_Society",
-            "searchTerm": "RSI computer",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/120101-M-YO938-016_%286641606175%29.jpg/960px-120101-M-YO938-016_%286641606175%29.jpg",
+          "alt": "120101-M-YO938-016 (6641606175).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "stretching exercise break human",
+          "_imageIntent": "photo",
+          "_riskProfile": "human_vs_animal",
+          "_score": 150,
+          "_escalated": false
         }
       ]
     },
@@ -1081,11 +1147,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg/872px-Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
-          "alt": "Penguin",
-          "caption": "Bron: Wikipedia - Penguin",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "penguin swimming anatomy"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Pygoscelis_papua_-Nagasaki_Penguin_Aquarium_-swimming_underwater-8a.jpg/960px-Pygoscelis_papua_-Nagasaki_Penguin_Aquarium_-swimming_underwater-8a.jpg",
+          "alt": "Pygoscelis papua -Nagasaki Penguin Aquarium -swimming underwater-8a.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "penguin swimming",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 110,
+          "_escalated": false
         }
       ]
     },
@@ -1104,11 +1174,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg/872px-Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
-          "alt": "Penguin",
-          "caption": "Bron: Wikipedia - Penguin",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "penguin locomotion"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Adelie_penguin_%28Pygoscelis_adeliae%29%2C_walking.jpg/960px-Adelie_penguin_%28Pygoscelis_adeliae%29%2C_walking.jpg",
+          "alt": "Adelie penguin (Pygoscelis adeliae), walking.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "penguin walking",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -1127,11 +1201,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Br%C3%A9chet.png/960px-Br%C3%A9chet.png",
-          "alt": "Keel (bird anatomy)",
-          "caption": "Bron: Wikipedia - Keel (bird anatomy)",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "penguin wing anatomy"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/BirdWingFeatherSketch-gl.svg/960px-BirdWingFeatherSketch-gl.svg.png",
+          "alt": "BirdWingFeatherSketch-gl.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "penguin anatomy wings labeled",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "none",
+          "_score": 150,
+          "_escalated": false
         }
       ]
     },
@@ -1150,14 +1228,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Br%C3%A9chet.png/960px-Br%C3%A9chet.png",
-          "alt": "Keel (bird anatomy)",
-          "caption": "Bron: Wikipedia - Keel (bird anatomy)",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Keel_(bird_anatomy)",
-            "searchTerm": "breastbone",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/4493157583_7e65524ff4_bAutopsieOiseau.jpg/960px-4493157583_7e65524ff4_bAutopsieOiseau.jpg",
+          "alt": "4493157583 7e65524ff4 bAutopsieOiseau.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "penguin skeleton keel labeled",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "none",
+          "_score": 110,
+          "_escalated": false
         }
       ]
     },
@@ -1211,11 +1290,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/6/63/MatteoTosatto2.jpg",
-          "alt": "Exercise physiology",
-          "caption": "Bron: Wikipedia - Exercise physiology",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "exercise physiology"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Maintainers_participate_in_Integrated_Training_Exercise_%28ITX%29_2-16_160124-F-MJ875-607.jpg/960px-Maintainers_participate_in_Integrated_Training_Exercise_%28ITX%29_2-16_160124-F-MJ875-607.jpg",
+          "alt": "Maintainers participate in Integrated Training Exercise (ITX) 2-16 160124-F-MJ875-607.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "training phases diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 160,
+          "_escalated": false
         }
       ]
     },
@@ -1319,11 +1402,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/CellRespiration.svg/960px-CellRespiration.svg.png",
-          "alt": "Cellular respiration",
-          "caption": "Bron: Wikipedia - Cellular respiration",
-          "_source": "wikipedia-ai",
-          "_searchTerm": "Cellular respiration diagram"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wrist_and_hand_deeper_palmar_dissection-numbers.svg/960px-Wrist_and_hand_deeper_palmar_dissection-numbers.svg.png",
+          "alt": "Wrist and hand deeper palmar dissection-numbers.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "human musculoskeletal system diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 160,
+          "_escalated": false
         }
       ]
     }

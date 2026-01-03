@@ -17,15 +17,20 @@
       ],
       "c": 0,
       "e": "Urbanisatie betekent dat steeds meer mensen in steden gaan wonen.",
-      "media": {
-        "query": "urbanization city growth aerial view",
-        "alt": "Luchtfoto stadsgroei urbanisatie",
-        "representation": "photo",
-        "negativeTerms": [
-          "slum",
-          "poverty"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Percentage_of_Population_Living_in_urban_areas_1950-2050.png",
+          "alt": "Percentage of Population Living in urban areas 1950-2050.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Urbanization diagrams\" \"urban growth\"",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q002",
@@ -39,16 +44,20 @@
       ],
       "c": 0,
       "e": "De binnenstad is meestal vóór de industriële revolutie ontstaan.",
-      "media": {
-        "query": "Netherlands city map urban planning zones",
-        "alt": "Stadsplattegrond met wijken",
-        "representation": "map",
-        "negativeTerms": [
-          "historic",
-          "centrum",
-          "old"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/OLD_TOWN_HISTORIC_DISTRICT%2C_HARRISONBURG%2C_VIRGINIA.jpg/960px-OLD_TOWN_HISTORIC_DISTRICT%2C_HARRISONBURG%2C_VIRGINIA.jpg",
+          "alt": "OLD TOWN HISTORIC DISTRICT, HARRISONBURG, VIRGINIA.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Historic districts\" \"old town\"",
+          "_imageIntent": "photo",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 170,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q003",
@@ -62,16 +71,20 @@
       ],
       "c": 0,
       "e": "Arbeiders woonden dicht bij hun werk omdat vervoer beperkt was.",
-      "media": {
-        "query": "industrial revolution factory chimney 19th century",
-        "alt": "Fabriek uit de industriële revolutie",
-        "representation": "photo",
-        "negativeTerms": [
-          "housing",
-          "workers homes",
-          "neighborhood"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Industries_%C3%A9lectroniques_%C3%A0_Paris_Onde_revue_Electrique_N%C2%B0_249_d%C3%A9cembre_1947.jpg/960px-Industries_%C3%A9lectroniques_%C3%A0_Paris_Onde_revue_Electrique_N%C2%B0_249_d%C3%A9cembre_1947.jpg",
+          "alt": "Industries électroniques à Paris Onde revue Electrique N° 249 décembre 1947.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Industrial Revolution\" \"working class\" housing",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 100,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q004",
@@ -85,17 +98,20 @@
       ],
       "c": 0,
       "e": "Naoorlogse wijken zijn ruim opgezet met flats en groen.",
-      "media": {
-        "query": "netherlands reconstruction after world war 2 building",
-        "alt": "Wederopbouw Nederland na WO2",
-        "representation": "photo",
-        "negativeTerms": [
-          "apartment",
-          "flat",
-          "highrise",
-          "green space"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/b/be/Modern_Residential_Area_in_the_Village_of_Chilton_-_geograph.org.uk_-_10264.jpg",
+          "alt": "Modern Residential Area in the Village of Chilton - geograph.org.uk - 10264.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Modern architecture\" \"residential area\" 1950s",
+          "_imageIntent": "photo",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 80,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q005",
@@ -109,16 +125,20 @@
       ],
       "c": 0,
       "e": "Bij suburbanisatie trekken mensen vanuit de stad naar de rand.",
-      "media": {
-        "query": "moving truck family relocation netherlands",
-        "alt": "Verhuiswagen gezin verhuizing",
-        "representation": "photo",
-        "negativeTerms": [
-          "suburb",
-          "buitenwijk",
-          "outskirts"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Algiers_suburban_rail_network_-_Diagram_Line_-_January_2022_-_fr.svg/960px-Algiers_suburban_rail_network_-_Diagram_Line_-_January_2022_-_fr.svg.png",
+          "alt": "Algiers suburban rail network - Diagram Line - January 2022 - fr.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Suburbanization diagrams\"",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q006",
@@ -132,15 +152,20 @@
       ],
       "c": 0,
       "e": "Een agglomeratie is een stad met vastgegroeide omliggende plaatsen.",
-      "media": {
-        "query": "urban agglomeration metropolitan area satellite",
-        "alt": "Satellietbeeld agglomeratie",
-        "representation": "photo",
-        "negativeTerms": [
-          "rural",
-          "village"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Foyers3.png/960px-Foyers3.png",
+          "alt": "Foyers3.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Population density maps\" agglomeration",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 160,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q007",
@@ -154,15 +179,20 @@
       ],
       "c": 0,
       "e": "Steden vullen elkaar aan met voorzieningen.",
-      "media": {
-        "query": "urban network cities connection map diagram",
-        "alt": "Diagram stedelijk netwerk",
-        "representation": "diagram",
-        "negativeTerms": [
-          "computer",
-          "internet"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/1905_home_network_-_multi_devices_graphic.jpg/806px-1905_home_network_-_multi_devices_graphic.jpg",
+          "alt": "1905 home network - multi devices graphic.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Network diagrams\" \"urban network\"",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 210,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q008",
@@ -176,16 +206,20 @@
       ],
       "c": 0,
       "e": "De nulmeridiaan is de lengtegraad van 0°.",
-      "media": {
-        "query": "world globe longitude latitude lines",
-        "alt": "Wereldbol met graadnet",
-        "representation": "photo",
-        "negativeTerms": [
-          "greenwich",
-          "observatory",
-          "prime meridian"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Primemeridian.jpg/960px-Primemeridian.jpg",
+          "alt": "Primemeridian.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Prime Meridian\" map",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 330,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q009",
@@ -199,16 +233,20 @@
       ],
       "c": 0,
       "e": "Breedtegraden meten afstand tot de evenaar.",
-      "media": {
-        "query": "atlas book open world map",
-        "alt": "Open atlas met wereldkaart",
-        "representation": "photo",
-        "negativeTerms": [
-          "latitude",
-          "equator",
-          "horizontal lines"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg/960px-1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg",
+          "alt": "1794 Samuel Dunn Wall Map of the World in Hemispheres - Geographicus - World2-dunn-1794.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Latitude\" map",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 200,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q010",
@@ -222,16 +260,20 @@
       ],
       "c": 0,
       "e": "Lengtegraden verdelen de aarde in oost en west.",
-      "media": {
-        "query": "compass navigation cardinal directions",
-        "alt": "Kompas met windrichtingen",
-        "representation": "photo",
-        "negativeTerms": [
-          "east west",
-          "longitude",
-          "meridian"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Lines_of_equal_latitude_and_longitude_FROM_%28World_map_Winkel_Tripel_proj-0deg_centered%29.png",
+          "alt": "Lines of equal latitude and longitude FROM (World map Winkel Tripel proj-0deg centered).png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Longitude\" map",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 240,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q011",
@@ -251,7 +293,21 @@
         "Naoorlogse wijk",
         "Nieuwbouwwijk"
       ],
-      "explanation": "Steden groeiden van het centrum naar buiten."
+      "explanation": "Steden groeiden van het centrum naar buiten.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/A421_developments.svg/960px-A421_developments.svg.png",
+          "alt": "A421 developments.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Urban planning diagrams\" \"building periods\"",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 100,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q012",
@@ -301,15 +357,20 @@
         }
       ],
       "e": "Nederland ligt ten noorden van de evenaar en ten oosten van de nulmeridiaan.",
-      "media": {
-        "query": "world map hemispheres equator prime meridian",
-        "alt": "Wereldkaart met halfronden",
-        "representation": "map",
-        "negativeTerms": [
-          "game",
-          "fantasy"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ria_2000_Project.jpg/960px-Ria_2000_Project.jpg",
+          "alt": "Ria 2000 Project.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Urban planning maps\"",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 190,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q014",
@@ -323,14 +384,20 @@
       ],
       "c": 0,
       "e": "N.B. betekent noorderbreedte.",
-      "media": {
-        "query": "latitude coordinates globe north south diagram",
-        "alt": "Breedtegraad coördinaten diagram",
-        "representation": "diagram",
-        "negativeTerms": [
-          "longitude"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Equal-difference_latitude_polyconic_projection_Pacific-centric.jpg/960px-Equal-difference_latitude_polyconic_projection_Pacific-centric.jpg",
+          "alt": "Equal-difference latitude polyconic projection Pacific-centric.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Latitude maps\" 52°N",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 120,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q015",
@@ -344,15 +411,20 @@
       ],
       "c": 0,
       "e": "Accra ligt rond 5° N.B., dicht bij de evenaar.",
-      "media": {
-        "query": "Accra Ghana city skyline",
-        "alt": "Accra Ghana skyline",
-        "representation": "photo",
-        "negativeTerms": [
-          "poverty",
-          "slum"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/BlankMap-World-with-Equator.svg/960px-BlankMap-World-with-Equator.svg.png",
+          "alt": "BlankMap-World-with-Equator.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"World maps\" equator distance",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 200,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q016",
@@ -369,14 +441,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Equal-Earth-Physical-No-Type_%28cropped%29.jpg/960px-Equal-Earth-Physical-No-Type_%28cropped%29.jpg",
-          "alt": "World map",
-          "caption": "Bron: Wikipedia - World map",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/World_map",
-            "searchTerm": "world map",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/161_of_%27Beeton%27s_Dictionary_of_Geography._A_universal_gazetteer._Illustrated_by_maps%2C_etc%27_%2811087876564%29.jpg/960px-161_of_%27Beeton%27s_Dictionary_of_Geography._A_universal_gazetteer._Illustrated_by_maps%2C_etc%27_%2811087876564%29.jpg",
+          "alt": "161 of 'Beeton's Dictionary of Geography. A universal gazetteer. Illustrated by maps, etc' (11087876564).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Australia map index",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 180,
+          "_escalated": false
         }
       ]
     },
@@ -391,7 +464,21 @@
         "Richting bepalen"
       ],
       "c": 0,
-      "e": "Trefwoordenregister gebruik je voor onderwerpen."
+      "e": "Trefwoordenregister gebruik je voor onderwerpen.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Index_pages_of_%22Ber%C3%A4ttelser_ur_svenska_historien%22_by_Carl_Georg_Starb%C3%A4ck_1860.jpg",
+          "alt": "Index pages of \"Berättelser ur svenska historien\" by Carl Georg Starbäck 1860.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "book index page",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 110,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q018",
@@ -405,15 +492,20 @@
       ],
       "c": 0,
       "e": "Meerdere satellieten maken precieze berekening mogelijk.",
-      "media": {
-        "query": "GPS satellite navigation triangulation diagram",
-        "alt": "GPS satelliet navigatie diagram",
-        "representation": "diagram",
-        "negativeTerms": [
-          "phone",
-          "app"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/GPS_Satellite_NASA_art-iif.jpg/960px-GPS_Satellite_NASA_art-iif.jpg",
+          "alt": "GPS Satellite NASA art-iif.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "GPS triangulation diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 190,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q019",
@@ -427,15 +519,20 @@
       ],
       "c": 0,
       "e": "Re-urbanisatie betekent dat mensen weer terugverhuizen naar de stad.",
-      "media": {
-        "query": "city center revitalization gentrification renovation",
-        "alt": "Stadsvernieuwing binnenstad",
-        "representation": "photo",
-        "negativeTerms": [
-          "abandoned",
-          "decay"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/A_conventional_land_development.JPG/960px-A_conventional_land_development.JPG",
+          "alt": "A conventional land development.JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "reurbanisation example",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 70,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q020",
@@ -449,15 +546,20 @@
       ],
       "c": 0,
       "e": "Binnensteden zijn populair door hun voorzieningen en ligging.",
-      "media": {
-        "query": "Amsterdam canal houses city center",
-        "alt": "Amsterdam grachtenpanden binnenstad",
-        "representation": "photo",
-        "negativeTerms": [
-          "red light",
-          "tourist"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Manhattan_%28NYC-New_York_City%29_Skyline_%2831769153946%29.jpg/960px-Manhattan_%28NYC-New_York_City%29_Skyline_%2831769153946%29.jpg",
+          "alt": "Manhattan (NYC-New York City) Skyline (31769153946).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "expensive city center",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 150,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q021",
@@ -471,15 +573,20 @@
       ],
       "c": 0,
       "e": "Een overgangsgebied heeft zowel stedelijke als landelijke kenmerken.",
-      "media": {
-        "query": "urban rural transition zone peri-urban aerial",
-        "alt": "Overgangsgebied stad platteland",
-        "representation": "photo",
-        "negativeTerms": [
-          "city center",
-          "wilderness"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/5/5a/%27The_Fabric%27_Balanced_Urban_Development_unit.jpg",
+          "alt": "'The Fabric' Balanced Urban Development unit.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "urban transition zone",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q022",
@@ -493,15 +600,20 @@
       ],
       "c": 0,
       "e": "Universiteiten zijn vaak onderdeel van stedelijke netwerken.",
-      "media": {
-        "query": "university campus buildings aerial netherlands",
-        "alt": "Universiteitscampus Nederland",
-        "representation": "photo",
-        "negativeTerms": [
-          "american",
-          "usa"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/199_-_Buenos_Aires_-_A%C3%A9roport_international_Ezeiza_-_Janvier_2010.jpg/960px-199_-_Buenos_Aires_-_A%C3%A9roport_international_Ezeiza_-_Janvier_2010.jpg",
+          "alt": "199 - Buenos Aires - Aéroport international Ezeiza - Janvier 2010.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "international airport",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 140,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q023",
@@ -518,14 +630,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Adelaide_DougBarber.jpg/960px-Adelaide_DougBarber.jpg",
-          "alt": "Urban area",
-          "caption": "Bron: Wikipedia - Urban area",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Urban_area",
-            "searchTerm": "urban area",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Global_Grid_of_Probabilities_of_Urban_Expansion_to_2030_%2825213696153%29.jpg/960px-Global_Grid_of_Probabilities_of_Urban_Expansion_to_2030_%2825213696153%29.jpg",
+          "alt": "Global Grid of Probabilities of Urban Expansion to 2030 (25213696153).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "urban expansion",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 130,
+          "_escalated": false
         }
       ]
     },
@@ -541,14 +654,20 @@
       ],
       "c": 0,
       "e": "O.L. betekent oosterlengte.",
-      "media": {
-        "query": "longitude coordinates globe east west diagram",
-        "alt": "Lengtegraad coördinaten diagram",
-        "representation": "diagram",
-        "negativeTerms": [
-          "latitude"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Countries_using_Central_Europe_Time_plus_Longitude_15%C2%B0_E.png/960px-Countries_using_Central_Europe_Time_plus_Longitude_15%C2%B0_E.png",
+          "alt": "Countries using Central Europe Time plus Longitude 15° E.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Longitude maps\" 4°E",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 120,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q025",
@@ -565,14 +684,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/World_map_longlat.svg/960px-World_map_longlat.svg.png",
-          "alt": "Circle of latitude",
-          "caption": "Bron: Wikipedia - Circle of latitude",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Circle_of_latitude",
-            "searchTerm": "latitude lines",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/World_Map_1689.JPG/960px-World_Map_1689.JPG",
+          "alt": "World Map 1689.JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"World maps\" equator",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -588,15 +708,20 @@
       ],
       "c": 0,
       "e": "De datumgrens ligt tegenover de nulmeridiaan op 180°.",
-      "media": {
-        "query": "international date line pacific map",
-        "alt": "Internationale datumgrens kaart",
-        "representation": "map",
-        "negativeTerms": [
-          "timezone",
-          "clock"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/International_Date_Line_%28Kiribati_region%29.svg/960px-International_Date_Line_%28Kiribati_region%29.svg.png",
+          "alt": "International Date Line (Kiribati region).svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"World maps\" antimeridian",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 160,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q027",
@@ -610,15 +735,20 @@
       ],
       "c": 0,
       "e": "Met minuten en seconden kun je een plek preciezer bepalen.",
-      "media": {
-        "query": "coordinates degrees minutes seconds DMS format",
-        "alt": "Coördinaten graden minuten seconden",
-        "representation": "diagram",
-        "negativeTerms": [
-          "time",
-          "clock"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Volgograd_climate_diagram-fr.svg/960px-Volgograd_climate_diagram-fr.svg.png",
+          "alt": "Volgograd climate diagram-fr.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "geographic coordinates diagram minutes seconds",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 100,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q028",
@@ -635,14 +765,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Mercator_-_Atlas_-_1595.png",
-          "alt": "Atlas",
-          "caption": "Bron: Wikipedia - Atlas",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Atlas",
-            "searchTerm": "atlas map",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Atlas_de_Jacoubet_-_20._Index_-_Sheets_48%2C_52_-_David_Rumsey.jpg/960px-Atlas_de_Jacoubet_-_20._Index_-_Sheets_48%2C_52_-_David_Rumsey.jpg",
+          "alt": "Atlas de Jacoubet - 20. Index - Sheets 48, 52 - David Rumsey.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "atlas index page",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 140,
+          "_escalated": false
         }
       ]
     },
@@ -661,14 +792,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/960px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg",
-          "alt": "List of United States urban areas",
-          "caption": "Bron: Wikipedia - List of United States urban areas",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/List_of_United_States_urban_areas",
-            "searchTerm": "urban area",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Drente_hoogtekaart_met_hunebeddenlocaties_300dpi.png/960px-Drente_hoogtekaart_met_hunebeddenlocaties_300dpi.png",
+          "alt": "Drente hoogtekaart met hunebeddenlocaties 300dpi.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Randstad map labeled",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 160,
+          "_escalated": false
         }
       ]
     },
@@ -684,15 +816,20 @@
       ],
       "c": 0,
       "e": "Bedrijven profiteren van samenwerking en infrastructuur.",
-      "media": {
-        "query": "business district office buildings city center",
-        "alt": "Zakenwijk kantoorgebouwen",
-        "representation": "photo",
-        "negativeTerms": [
-          "rural",
-          "factory"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/New_Orleans_Business_District_Skyline-ST-158-52-62.jpg/960px-New_Orleans_Business_District_Skyline-ST-158-52-62.jpg",
+          "alt": "New Orleans Business District Skyline-ST-158-52-62.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "city skyline business district",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 110,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q031",
@@ -705,7 +842,21 @@
         "Nieuwe breedte"
       ],
       "c": 0,
-      "e": "N.B. staat voor noorderbreedte."
+      "e": "N.B. staat voor noorderbreedte.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/7/71/Sign_Writers%2C_nota_bene%5E%5E_-_geograph.org.uk_-_3022860.jpg",
+          "alt": "Sign Writers, nota bene^^ - geograph.org.uk - 3022860.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Nota Bene sign",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q032",
@@ -719,15 +870,20 @@
       ],
       "c": 0,
       "e": "New York ligt ten westen van de nulmeridiaan.",
-      "media": {
-        "query": "world map cities longitude comparison",
-        "alt": "Wereldkaart met steden op lengtegraden",
-        "representation": "map",
-        "negativeTerms": [
-          "fantasy",
-          "game"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Dutch_Provinces_am.png",
+          "alt": "Dutch Provinces am.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "Netherlands map extreme points",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 170,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q033",
@@ -741,15 +897,20 @@
       ],
       "c": 0,
       "e": "Goede infrastructuur zorgt voor verbinding tussen steden.",
-      "media": {
-        "query": "highway interchange infrastructure aerial Netherlands",
-        "alt": "Snelwegknooppunt infrastructuur",
-        "representation": "photo",
-        "negativeTerms": [
-          "accident",
-          "traffic jam"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/AERIAL_VIEW_OF_FOUR_LEVEL_INTERCHANGE_OF_ARROYO_SECO_PARKWAY_AND_HIGHWAY_101._LOOKING_NE._-_Arroyo_Seco_Parkway%2C_Los_Angeles_to_Pasadena%2C_Los_Angeles%2C_Los_Angeles_County%2C_CA_HAER_CAL%2C19-LOSAN%2C83-15.tif/lossy-page1-800px-thumbnail.tif.jpg",
+          "alt": "AERIAL VIEW OF FOUR LEVEL INTERCHANGE OF ARROYO SECO PARKWAY AND HIGHWAY 101. LOOKING NE. - Arroyo Seco Parkway, Los Angeles to Pasadena, Los Angeles, Los Angeles County, CA HAER CAL,19-LOSAN,83-15.tif",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "highway interchange aerial view",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 100,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q034",
@@ -766,14 +927,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/World_Population_Prospects.svg/960px-World_Population_Prospects.svg.png",
-          "alt": "World population",
-          "caption": "Bron: Wikipedia - World population",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/World_population",
-            "searchTerm": "world population",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Russia_Population_Density_Map_2021.png/960px-Russia_Population_Density_Map_2021.png",
+          "alt": "Russia Population Density Map 2021.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "population density map",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 210,
+          "_escalated": false
         }
       ]
     },
@@ -789,15 +951,20 @@
       ],
       "c": 0,
       "e": "Fabrieken zorgden voor werk in steden.",
-      "media": {
-        "query": "industrial revolution factory 19th century city",
-        "alt": "Industriële revolutie fabrieken stad",
-        "representation": "photo",
-        "negativeTerms": [
-          "modern",
-          "robot"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Japan%E2%80%99s_Meiji_Industrial_Revolution_sites_map_Nagasaki_City_center.svg/960px-Japan%E2%80%99s_Meiji_Industrial_Revolution_sites_map_Nagasaki_City_center.svg.png",
+          "alt": "Japan’s Meiji Industrial Revolution sites map Nagasaki City center.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "industrial revolution city illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 140,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q036",
@@ -811,15 +978,20 @@
       ],
       "c": 0,
       "e": "Naoorlogse wijken hebben vaak flats.",
-      "media": {
-        "query": "postwar apartment building Netherlands 1950s 1960s",
-        "alt": "Naoorlogse portiekflat Nederland",
-        "representation": "photo",
-        "negativeTerms": [
-          "luxury",
-          "modern"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Melrose_Apartment_Building%2C_Galveston.jpg/960px-Melrose_Apartment_Building%2C_Galveston.jpg",
+          "alt": "Melrose Apartment Building, Galveston.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "portiekflat",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 60,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q037",
@@ -836,14 +1008,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/2/23/City_and_related_typologies_%E2%80%93_an_example_for_Milano.png",
-          "alt": "Functional urban area",
-          "caption": "Bron: Wikipedia - Functional urban area",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Functional_urban_area",
-            "searchTerm": "urban area",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Shaw_School_Urban_Renewal_Area_map_1973.jpg/960px-Shaw_School_Urban_Renewal_Area_map_1973.jpg",
+          "alt": "Shaw School Urban Renewal Area map 1973.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "metropolitan area map",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 100,
+          "_escalated": false
         }
       ]
     },
@@ -862,14 +1035,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Blue_Marble%2C_AS17-148-22727.jpg/960px-The_Blue_Marble%2C_AS17-148-22727.jpg",
-          "alt": "Earth",
-          "caption": "Bron: Wikipedia - Earth",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Earth",
-            "searchTerm": "Earth planet",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1775_Lattre_and_Janvier_Map_of_the_World_on_a_Hemisphere_Projection_-_Geographicus_-_World-lattre-1775.jpg/960px-1775_Lattre_and_Janvier_Map_of_the_World_on_a_Hemisphere_Projection_-_Geographicus_-_World-lattre-1775.jpg",
+          "alt": "1775 Lattre and Janvier Map of the World on a Hemisphere Projection - Geographicus - World-lattre-1775.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"World maps\" equator labeled",
+          "_imageIntent": "diagram",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 260,
+          "_escalated": false
         }
       ]
     },
@@ -888,14 +1062,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Blue_Marble%2C_AS17-148-22727.jpg/960px-The_Blue_Marble%2C_AS17-148-22727.jpg",
-          "alt": "Earth in culture",
-          "caption": "Bron: Wikipedia - Earth in culture",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Earth_in_culture",
-            "searchTerm": "Earth from space",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Robinson_projection_with_major_circles_of_latitude_and_prime_meridian_labeled.png/960px-Robinson_projection_with_major_circles_of_latitude_and_prime_meridian_labeled.png",
+          "alt": "Robinson projection with major circles of latitude and prime meridian labeled.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"World maps\" prime meridian labeled",
+          "_imageIntent": "diagram",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 230,
+          "_escalated": false
         }
       ]
     },
@@ -910,7 +1085,21 @@
         "Wijdtegraad"
       ],
       "c": 0,
-      "e": "W.L. staat voor westerlengte."
+      "e": "W.L. staat voor westerlengte.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Latitude_and_Longitude_of_the_Earth.svg/960px-Latitude_and_Longitude_of_the_Earth.svg.png",
+          "alt": "Latitude and Longitude of the Earth.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "geographic coordinates latitude longitude diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 180,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q041",
@@ -927,14 +1116,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Bundesarchiv_Bild_183-H25224%2C_Guernica%2C_Ruinen.jpg",
-          "alt": "Aerial bombing of cities",
-          "caption": "Bron: Wikipedia - Aerial bombing of cities",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Aerial_bombing_of_cities",
-            "searchTerm": "city aerial",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/PIA22090-Ceres-DwarfPlanet-NotableFeatures-20180117.jpg/960px-PIA22090-Ceres-DwarfPlanet-NotableFeatures-20180117.jpg",
+          "alt": "PIA22090-Ceres-DwarfPlanet-NotableFeatures-20180117.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"World maps\" cities near equator",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 150,
+          "_escalated": false
         }
       ]
     },
@@ -949,7 +1139,21 @@
         "Ze horen bij kaarten"
       ],
       "c": 0,
-      "e": "Coördinaten gaan over plaats, niet over tijd."
+      "e": "Coördinaten gaan over plaats, niet over tijd.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/World_-_time_zones_map_%282014%29.svg/960px-World_-_time_zones_map_%282014%29.svg.png",
+          "alt": "World - time zones map (2014).svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "coordinate system time zones diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 220,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q043",
@@ -966,14 +1170,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/PtolemyWorldMap.jpg/960px-PtolemyWorldMap.jpg",
-          "alt": "Ptolemy's world map",
-          "caption": "Bron: Wikipedia - Ptolemy's world map",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ptolemy%27s_world_map",
-            "searchTerm": "world map",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Alagoas_Geogr%C3%A1fico.png/944px-Alagoas_Geogr%C3%A1fico.png",
+          "alt": "Alagoas Geográfico.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "GIS software screenshot",
+          "_imageIntent": "photo",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 110,
+          "_escalated": false
         }
       ]
     },
@@ -988,7 +1193,21 @@
         "Supermarkt"
       ],
       "c": 0,
-      "e": "Universiteiten liggen meestal in steden."
+      "e": "Universiteiten liggen meestal in steden.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/c/c5/La_Campagne_D%27ANDOHARANO.jpg",
+          "alt": "La Campagne D'ANDOHARANO.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "village vs city infrastructure",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 120,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q045",
@@ -1002,15 +1221,20 @@
       ],
       "c": 0,
       "e": "In steden wonen en werken veel mensen.",
-      "media": {
-        "query": "busy city street crowd pedestrians urban",
-        "alt": "Drukke stadsstraat met mensen",
-        "representation": "photo",
-        "negativeTerms": [
-          "protest",
-          "riot"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Traffic_congestion_-_JBS_Haldane_Avenue_-_Dinosaurs_Alive_Exhibition_-_Science_City_Area_-_Calcutta_1995_June-July_356.JPG/960px-Traffic_congestion_-_JBS_Haldane_Avenue_-_Dinosaurs_Alive_Exhibition_-_Science_City_Area_-_Calcutta_1995_June-July_356.JPG",
+          "alt": "Traffic congestion - JBS Haldane Avenue - Dinosaurs Alive Exhibition - Science City Area - Calcutta 1995 June-July 356.JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "urban congestion",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 200,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q046",
@@ -1027,14 +1251,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/The_Babylonian_map_of_the_world%2C_from_Sippar%2C_Mesopotamia..JPG/960px-The_Babylonian_map_of_the_world%2C_from_Sippar%2C_Mesopotamia..JPG",
-          "alt": "Babylonian Map of the World",
-          "caption": "Bron: Wikipedia - Babylonian Map of the World",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Babylonian_Map_of_the_World",
-            "searchTerm": "world map",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/ADEN_DISTRICS_MAP-02-02.png/960px-ADEN_DISTRICS_MAP-02-02.png",
+          "alt": "ADEN DISTRICS MAP-02-02.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "map scale ruler",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 180,
+          "_escalated": false
         }
       ]
     },
@@ -1049,7 +1274,21 @@
         "Oriëntatie lijn"
       ],
       "c": 0,
-      "e": "O.L. staat voor oosterlengte."
+      "e": "O.L. staat voor oosterlengte.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Latitude_and_Longitude_of_the_Earth-mk.svg/960px-Latitude_and_Longitude_of_the_Earth-mk.svg.png",
+          "alt": "Latitude and Longitude of the Earth-mk.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "geographic coordinates latitude longitude diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 180,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q048",
@@ -1063,15 +1302,20 @@
       ],
       "c": 0,
       "e": "Groeiende steden kunnen aan elkaar vastgroeien.",
-      "media": {
-        "query": "conurbation cities merged urban area aerial",
-        "alt": "Aan elkaar gegroeide steden luchtfoto",
-        "representation": "photo",
-        "negativeTerms": [
-          "rural",
-          "countryside"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Suburban_development_and_sprawl_maple_ontario_dufferin_majormack_keele.jpg/960px-Suburban_development_and_sprawl_maple_ontario_dufferin_majormack_keele.jpg",
+          "alt": "Suburban development and sprawl maple ontario dufferin majormack keele.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "urban sprawl",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 180,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q049",
@@ -1085,15 +1329,20 @@
       ],
       "c": 0,
       "e": "Nieuwbouwwijken zijn modern en ruim.",
-      "media": {
-        "query": "new housing development modern neighborhood Netherlands vinex",
-        "alt": "Moderne nieuwbouwwijk Nederland",
-        "representation": "photo",
-        "negativeTerms": [
-          "old",
-          "historic"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f9/New_Housing_Development_-_geograph.org.uk_-_236780.jpg",
+          "alt": "New Housing Development - geograph.org.uk - 236780.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "new housing development",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 110,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q050",
@@ -1106,7 +1355,21 @@
         "Zonbreedte"
       ],
       "c": 0,
-      "e": "Z.B. staat voor zuiderbreedte."
+      "e": "Z.B. staat voor zuiderbreedte.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sub_Regional_Economic_Cooperation_Zones.gif/960px-Sub_Regional_Economic_Cooperation_Zones.gif",
+          "alt": "Sub Regional Economic Cooperation Zones.gif",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "commons-ai-v3.3",
+          "_searchTerm": "incategory:\"Maps of Special Economic Zones\" China \"Z.B.\"",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 160,
+          "_escalated": false
+        }
+      ]
     }
   ]
 }
