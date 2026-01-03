@@ -175,14 +175,16 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Jean_Leon_Gerome_Selling_Slaves_in_Rome.jpg/960px-Jean_Leon_Gerome_Selling_Slaves_in_Rome.jpg",
-          "alt": "A Roman Slave Market",
-          "caption": "Bron: Wikipedia - A Roman Slave Market",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/A_Roman_Slave_Market",
-            "searchTerm": "Roman slave",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Latin_for_beginners_%281911%29_%2814769844142%29.jpg/960px-Latin_for_beginners_%281911%29_%2814769844142%29.jpg",
+          "alt": "Latin for beginners (1911) (14769844142).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Latin declensions\" servus declension table",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 130,
+          "_escalated": false
         }
       ]
     },
@@ -249,7 +251,22 @@
       },
       "feedback": {
         "explanation": "mater: nom ev mater, dat ev matri, acc ev matrem, nom mv matres, dat mv matribus, acc mv matres"
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/90/Antonio_de_Nebrija_Introductiones_latinae_1550.jpg",
+          "alt": "Antonio de Nebrija Introductiones latinae 1550.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Latin declensions\" mater declension table",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 70,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "lupa-004",
@@ -609,14 +626,16 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg",
-          "alt": "Ancient Roman architecture",
-          "caption": "Bron: Wikipedia - Ancient Roman architecture",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Roman_architecture",
-            "searchTerm": "ancient Roman",
-            "score": 60
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ficus_ruminalis.jpg/960px-Ficus_ruminalis.jpg",
+          "alt": "Ficus ruminalis.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" ficus ruminalis",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 170,
+          "_escalated": false
         }
       ]
     },
@@ -649,14 +668,16 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Pont_du_Gard_3.jpg/960px-Pont_du_Gard_3.jpg",
-          "alt": "Ancient Roman technology",
-          "caption": "Bron: Wikipedia - Ancient Roman technology",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Roman_technology",
-            "searchTerm": "ancient Roman",
-            "score": 50
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Maria_Saal_Dom_Grabrelief_Romulus_und_Remus_27122013_774.jpg/960px-Maria_Saal_Dom_Grabrelief_Romulus_und_Remus_27122013_774.jpg",
+          "alt": "Maria Saal Dom Grabrelief Romulus und Remus 27122013 774.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" Romulus and Remus Livy",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 190,
+          "_escalated": false
         }
       ]
     },
@@ -690,14 +711,16 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roman_Republic_Empire_map.gif",
-          "alt": "Ancient Rome",
-          "caption": "Bron: Wikipedia - Ancient Rome",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Rome",
-            "searchTerm": "ancient Rome",
-            "score": 30
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg/960px-%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
+          "alt": "'Reuzen spinklos van 8 cm doorsnede waarschijnlijk inheem Romeins.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" Lupa Romana",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 150,
+          "_escalated": false
         }
       ]
     },
@@ -727,7 +750,22 @@
       },
       "feedback": {
         "explanation": "Om een stad zo extra belangrijk te maken (bijvoorbeeld door te zeggen dat de stad door een god of godin of een belangrijke held gesticht is)."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Wall_painting_-_scenes_from_early_Roman_myth_-_Rome_%28columbarium_on_the_Esquiline%29_-_Roma_MNR_PMaT_-_01.jpg/960px-Wall_painting_-_scenes_from_early_Roman_myth_-_Rome_%28columbarium_on_the_Esquiline%29_-_Roma_MNR_PMaT_-_01.jpg",
+          "alt": "Wall painting - scenes from early Roman myth - Rome (columbarium on the Esquiline) - Roma MNR PMaT - 01.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" founding myth",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 190,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "lupa-011",
@@ -789,7 +827,22 @@
       },
       "feedback": {
         "explanation": "Omdat ze bang zijn voor de wolvin."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ancient_Roman_Speculum.jpg/960px-Ancient_Roman_Speculum.jpg",
+          "alt": "Ancient Roman Speculum.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" Roman balance",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "lupa-013",
@@ -817,7 +870,22 @@
       },
       "feedback": {
         "explanation": "De wolvin."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Romulus_en_Remus%2C_RP-P-H-H-66.jpg/960px-Romulus_en_Remus%2C_RP-P-H-H-66.jpg",
+          "alt": "Romulus en Remus, RP-P-H-H-66.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" she-wolf Romulus Remus",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 210,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "lupa-014",
@@ -874,7 +942,22 @@
       },
       "feedback": {
         "explanation": "Het woordje 'sed' = maar: de schapen zijn BANG MAAR vader LACHT."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Grecian_and_Roman_mythology_%281876%29_%2814769479124%29.jpg/960px-Grecian_and_Roman_mythology_%281876%29_%2814769479124%29.jpg",
+          "alt": "Grecian and Roman mythology (1876) (14769479124).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" shepherd",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     }
   ]
 }

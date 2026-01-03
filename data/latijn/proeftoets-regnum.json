@@ -171,7 +171,22 @@
       },
       "feedback": {
         "explanation": "femina: nom ev femina, dat ev feminae, acc ev feminam, abl ev femina, nom mv feminae, dat mv feminis, acc mv feminas, abl mv feminis"
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/DECLINATIO_III_N.png/960px-DECLINATIO_III_N.png",
+          "alt": "DECLINATIO III N.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Latin declension femina diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "regnum-003",
@@ -236,7 +251,22 @@
       },
       "feedback": {
         "explanation": "urbs: nom ev urbs, dat ev urbi, acc ev urbem, abl ev urbe, nom mv urbes, dat mv urbibus, acc mv urbes, abl mv urbibus"
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/DECLINATIO_I%2C_II.png/960px-DECLINATIO_I%2C_II.png",
+          "alt": "DECLINATIO I, II.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Latin declension urbs diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 130,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "regnum-004",
@@ -571,14 +601,16 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roman_Republic_Empire_map.gif",
-          "alt": "Ancient Rome",
-          "caption": "Bron: Wikipedia - Ancient Rome",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Rome",
-            "searchTerm": "ancient Rome",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg/960px-Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg",
+          "alt": "Giovanni Paolo Panini – Ancient Rome.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Founding of Rome illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 190,
+          "_escalated": false
         }
       ]
     },
@@ -613,14 +645,16 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/960px-Lupa_Capitolina%2C_Rome.jpg",
-          "alt": "Romulus and Remus",
-          "caption": "Bron: Wikipedia - Romulus and Remus",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/Romulus_and_Remus",
-            "searchTerm": "Romulus Remus",
-            "score": 20
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/The_Cabinet_of_natural_history_and_American_rural_sports_%281830%29_%2814592300029%29.jpg/960px-The_Cabinet_of_natural_history_and_American_rural_sports_%281830%29_%2814592300029%29.jpg",
+          "alt": "The Cabinet of natural history and American rural sports (1830) (14592300029).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Romulus augury illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 210,
+          "_escalated": false
         }
       ]
     },
@@ -658,14 +692,16 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/960px-Lupa_Capitolina%2C_Rome.jpg",
-          "alt": "She-wolf (Roman mythology)",
-          "caption": "Bron: Wikipedia - She-wolf (Roman mythology)",
-          "_source": {
-            "wikipedia": "https://en.wikipedia.org/wiki/She-wolf_(Roman_mythology)",
-            "searchTerm": "Romulus Remus wolf",
-            "score": 10
-          }
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Plan_of_the_Hills_of_Ancient_Rome.jpg/960px-Plan_of_the_Hills_of_Ancient_Rome.jpg",
+          "alt": "Plan of the Hills of Ancient Rome.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Seven hills of Rome map ancient",
+          "_imageIntent": "map",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 270,
+          "_escalated": false
         }
       ]
     },
@@ -694,7 +730,22 @@
       },
       "feedback": {
         "explanation": "Eerste gebeurtenis: Ze krijgen ruzie over wie de goden bevoordelen: Remus omdat hij de vogels het eerst zag, of Romulus omdat hij de meeste vogels zag.\n\nTweede gebeurtenis: Remus lacht zijn broer uit bij het zien van de lage muur en springt er overheen; hierop wordt Romulus zo boos dat hij Remus doodslaat."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/5/57/Lupa_cum_Romulo_et_Remo.jpg",
+          "alt": "Lupa cum Romulo et Remo.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Romulus and Remus conflict illustration",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "mythology_vs_popculture",
+          "_score": 200,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "regnum-011",
@@ -795,7 +846,22 @@
       },
       "feedback": {
         "explanation": "primum (eerst); tandem (eindelijk/ten slotte)"
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Timeline_of_the_main_schisms_from_the_Russian_Orthodox_Church_%281589_to_2021%29.svg/960px-Timeline_of_the_main_schisms_from_the_Russian_Orthodox_Church_%281589_to_2021%29.svg.png",
+          "alt": "Timeline of the main schisms from the Russian Orthodox Church (1589 to 2021).svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" timeline events",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 180,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "regnum-014",
@@ -823,7 +889,22 @@
       },
       "feedback": {
         "explanation": "Quintus speelt de baas, Marcus speelt een knecht/slaaf."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ancient_Roman_Speculum.jpg/960px-Ancient_Roman_Speculum.jpg",
+          "alt": "Ancient Roman Speculum.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" family roles",
+          "_imageIntent": "historical_illustration",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 120,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "regnum-015",
@@ -851,7 +932,22 @@
       },
       "feedback": {
         "explanation": "sed (maar): Quintus verdeelt de opdrachten, MAAR Marcus doet niets."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Buddhism_in_its_connexion_with_Brahmanism_and_Hinduism_and_in_its_contrast_with_Christianity_%281889%29_%2814776167001%29.jpg/960px-Buddhism_in_its_connexion_with_Brahmanism_and_Hinduism_and_in_its_contrast_with_Christianity_%281889%29_%2814776167001%29.jpg",
+          "alt": "Buddhism in its connexion with Brahmanism and Hinduism and in its contrast with Christianity (1889) (14776167001).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" contrast",
+          "_imageIntent": "concept_diagram",
+          "_riskProfile": "historical_vs_modern",
+          "_score": 140,
+          "_escalated": false
+        }
+      ]
     }
   ]
 }

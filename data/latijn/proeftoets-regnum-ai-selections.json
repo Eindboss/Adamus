@@ -1,0 +1,173 @@
+{
+  "results": [
+    {
+      "questionId": "regnum-001",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "regnum-002",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/DECLINATIO_III_N.png/960px-DECLINATIO_III_N.png",
+      "title": "DECLINATIO III N.png",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:DECLINATIO_III_N.png",
+      "searchTerm": "Latin declension femina diagram",
+      "imageIntent": "diagram",
+      "riskProfile": "none",
+      "score": 130,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "regnum-003",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/DECLINATIO_I%2C_II.png/960px-DECLINATIO_I%2C_II.png",
+      "title": "DECLINATIO I, II.png",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:DECLINATIO_I,_II.png",
+      "searchTerm": "Latin declension urbs diagram",
+      "imageIntent": "diagram",
+      "riskProfile": "none",
+      "score": 130,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "regnum-004",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "regnum-005",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "regnum-006",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "regnum-007",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg/960px-Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg",
+      "title": "Giovanni Paolo Panini – Ancient Rome.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg",
+      "searchTerm": "Founding of Rome illustration",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 190,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "regnum-008",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/The_Cabinet_of_natural_history_and_American_rural_sports_%281830%29_%2814592300029%29.jpg/960px-The_Cabinet_of_natural_history_and_American_rural_sports_%281830%29_%2814592300029%29.jpg",
+      "title": "The Cabinet of natural history and American rural sports (1830) (14592300029).jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:The_Cabinet_of_natural_history_and_American_rural_sports_(1830)_(14592300029).jpg",
+      "searchTerm": "Romulus augury illustration",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 210,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "regnum-009",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Plan_of_the_Hills_of_Ancient_Rome.jpg/960px-Plan_of_the_Hills_of_Ancient_Rome.jpg",
+      "title": "Plan of the Hills of Ancient Rome.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Plan_of_the_Hills_of_Ancient_Rome.jpg",
+      "searchTerm": "Seven hills of Rome map ancient",
+      "imageIntent": "map",
+      "riskProfile": "historical_vs_modern",
+      "score": 270,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "regnum-010",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Lupa_cum_Romulo_et_Remo.jpg",
+      "title": "Lupa cum Romulo et Remo.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lupa_cum_Romulo_et_Remo.jpg",
+      "searchTerm": "Romulus and Remus conflict illustration",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 200,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "regnum-011",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "regnum-012",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "regnum-013",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Timeline_of_the_main_schisms_from_the_Russian_Orthodox_Church_%281589_to_2021%29.svg/960px-Timeline_of_the_main_schisms_from_the_Russian_Orthodox_Church_%281589_to_2021%29.svg.png",
+      "title": "Timeline of the main schisms from the Russian Orthodox Church (1589 to 2021).svg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Timeline_of_the_main_schisms_from_the_Russian_Orthodox_Church_(1589_to_2021).svg",
+      "searchTerm": "incategory:\"Ancient Rome\" timeline events",
+      "imageIntent": "concept_diagram",
+      "riskProfile": "historical_vs_modern",
+      "score": 180,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "regnum-014",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ancient_Roman_Speculum.jpg/960px-Ancient_Roman_Speculum.jpg",
+      "title": "Ancient Roman Speculum.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Roman_Speculum.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" family roles",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "historical_vs_modern",
+      "score": 120,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "regnum-015",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Buddhism_in_its_connexion_with_Brahmanism_and_Hinduism_and_in_its_contrast_with_Christianity_%281889%29_%2814776167001%29.jpg/960px-Buddhism_in_its_connexion_with_Brahmanism_and_Hinduism_and_in_its_contrast_with_Christianity_%281889%29_%2814776167001%29.jpg",
+      "title": "Buddhism in its connexion with Brahmanism and Hinduism and in its contrast with Christianity (1889) (14776167001).jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Buddhism_in_its_connexion_with_Brahmanism_and_Hinduism_and_in_its_contrast_with_Christianity_(1889)_(14776167001).jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" contrast",
+      "imageIntent": "concept_diagram",
+      "riskProfile": "historical_vs_modern",
+      "score": 140,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    }
+  ],
+  "successCount": 15,
+  "imageSuccessCount": 9,
+  "noImageCount": 6,
+  "escalationCount": 0,
+  "total": 15,
+  "timestamp": "2026-01-03T17:05:18.965Z",
+  "version": "v3.4"
+}

@@ -3323,14 +3323,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Roman_families.svg/960px-Roman_families.svg.png",
-          "alt": "Roman families.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Conjugation_of_verb-es.svg/960px-Conjugation_of_verb-es.svg.png",
+          "alt": "Conjugation of verb-es.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Roman family",
-          "_imageIntent": "photo",
-          "_riskProfile": "mythology_vs_popculture",
-          "_score": 180,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Latin grammar\" verb diagram",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 120,
           "_escalated": false
         }
       ]
@@ -6762,11 +6763,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Augustus_Tample_Kalabsha.png/843px-Augustus_Tample_Kalabsha.png",
           "alt": "Augustus Tample Kalabsha.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" Alba Longa king",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Alba Longa\" king genealogy",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 140,
+          "_score": 170,
           "_escalated": false
         }
       ]
@@ -6835,14 +6837,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Wall_painting_-_founding_myth_of_Rome_-_Pompeii_%28V_4_13%29_-_Napoli_MAN.jpg/960px-Wall_painting_-_founding_myth_of_Rome_-_Pompeii_%28V_4_13%29_-_Napoli_MAN.jpg",
-          "alt": "Wall painting - founding myth of Rome - Pompeii (V 4 13) - Napoli MAN.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/69/Remains_of_the_House_of_the_Vestal_Virgins.jpg",
+          "alt": "Remains of the House of the Vestal Virgins.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" Vesta Rhea Silvia",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Rhea Silvia\" \"Vesta\" illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 220,
+          "_score": 160,
           "_escalated": false
         }
       ]
@@ -6911,11 +6914,12 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mars_and_Rhea_Silvia_1797_Blake_after_Fuseli_to_Charles_Allen%27s_A_New_and_Improved_Roman_History_1798_Johnson.jpg",
-          "alt": "Mars and Rhea Silvia 1797 Blake after Fuseli to Charles Allen's A New and Improved Roman History 1798 Johnson.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/0456_-_Roma%2C_Museo_d._civilt%C3%A0_romana_-_Sarcofago_Mattei_Foto_Giovanni_Dall%27Orto%2C_12-Apr-2008.jpg/960px-0456_-_Roma%2C_Museo_d._civilt%C3%A0_romana_-_Sarcofago_Mattei_Foto_Giovanni_Dall%27Orto%2C_12-Apr-2008.jpg",
+          "alt": "0456 - Roma, Museo d. civiltà romana - Sarcofago Mattei Foto Giovanni Dall'Orto, 12-Apr-2008.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" Mars Rhea Silvia",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Mars\" \"Rhea Silvia\" illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
           "_score": 200,
@@ -6990,11 +6994,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tiber_river_with_Romulus_and_Remus%2C_Ma593_%2830626899433%29.jpg/960px-Tiber_river_with_Romulus_and_Remus%2C_Ma593_%2830626899433%29.jpg",
           "alt": "Tiber river with Romulus and Remus, Ma593 (30626899433).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" twins river",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Romulus\" \"Remus\" river illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 180,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -7051,14 +7056,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg/960px-%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
-          "alt": "'Reuzen spinklos van 8 cm doorsnede waarschijnlijk inheem Romeins.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/The_story_of_the_greatest_nations%2C_from_the_dawn_of_history_to_the_twentieth_century_-_a_comprehensive_history%2C_founded_upon_the_leading_authorities%2C_including_a_complete_chronology_of_the_world%2C_and_%2814578939367%29.jpg/960px-thumbnail.jpg",
+          "alt": "The story of the greatest nations, from the dawn of history to the twentieth century - a comprehensive history, founded upon the leading authorities, including a complete chronology of the world, and (14578939367).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" slave twins",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Romulus\" \"Remus\" slave illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 100,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -7127,14 +7133,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Tiber_river_with_Romulus_and_Remus_D20141107b.jpg/960px-Tiber_river_with_Romulus_and_Remus_D20141107b.jpg",
-          "alt": "Tiber river with Romulus and Remus D20141107b.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Italy_from_the_Alps_to_Mount_Etna_%281877%29_%2814773680561%29.jpg/960px-Italy_from_the_Alps_to_Mount_Etna_%281877%29_%2814773680561%29.jpg",
+          "alt": "Italy from the Alps to Mount Etna (1877) (14773680561).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" twins Tiber",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Romulus\" \"Remus\" Tiber illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 120,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -7203,14 +7210,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Romulus_en_Remus%2C_RP-P-H-H-66.jpg/960px-Romulus_en_Remus%2C_RP-P-H-H-66.jpg",
-          "alt": "Romulus en Remus, RP-P-H-H-66.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lupa_cum_Romulo_et_Remo_%28Musgrave%29.jpg/960px-Lupa_cum_Romulo_et_Remo_%28Musgrave%29.jpg",
+          "alt": "Lupa cum Romulo et Remo (Musgrave).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" she-wolf twins",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Lupa\" \"Romulus\" \"Remus\" illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 170,
+          "_score": 250,
           "_escalated": false
         }
       ]
@@ -7261,14 +7269,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg/960px-Mignard_-_The_Shepherd_Faustulus_Bringing_Romulus_and_Remus_to_His_Wife.jpg",
-          "alt": "Mignard - The Shepherd Faustulus Bringing Romulus and Remus to His Wife.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/AraCasali_RoscherLexikonP1466.jpg",
+          "alt": "AraCasali RoscherLexikonP1466.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" Faustulus Romulus",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Faustulus\" \"Romulus\" \"Remus\" illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 120,
+          "_score": 230,
           "_escalated": false
         }
       ]
@@ -7340,11 +7349,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Romulus_et_Remus.jpg/960px-Romulus_et_Remus.jpg",
           "alt": "Romulus et Remus.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" Acca Larentia Romulus",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "\"Acca Larentia\" \"Romulus\" \"Remus\" illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 130,
+          "_score": 120,
           "_escalated": false
         }
       ]
@@ -7416,7 +7426,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Romulus_and_Remus_MET_DP822897.jpg/960px-Romulus_and_Remus_MET_DP822897.jpg",
           "alt": "Romulus and Remus MET DP822897.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Ancient Rome\" Romulus Remus discovery",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
@@ -7489,14 +7500,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Roman_She-wolf%2C_Romulus%2C_Remus%2C_replica_Capitole%2C_Rome%2C_Italy.jpg/960px-Roman_She-wolf%2C_Romulus%2C_Remus%2C_replica_Capitole%2C_Rome%2C_Italy.jpg",
-          "alt": "Roman She-wolf, Romulus, Remus, replica Capitole, Rome, Italy.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Romanino_-_Romulus_and_Remus_Found_by_Faustulus_-_1963.87.a_-_Cleveland_Museum_of_Art.tif/lossy-page1-800px-Romanino_-_Romulus_and_Remus_Found_by_Faustulus_-_1963.87.a_-_Cleveland_Museum_of_Art.tif.jpg",
+          "alt": "Romanino - Romulus and Remus Found by Faustulus - 1963.87.a - Cleveland Museum of Art.tif",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" Romulus Remus founding quarrel",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" Romulus Remus quarrel founding",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 210,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -7568,11 +7580,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Republican_Rome%3B_her_conquests%2C_manners_and_institutions_from_the_earliest_times_to_the_death_of_Caesar_%281914%29_%2814769733061%29.jpg/960px-Republican_Rome%3B_her_conquests%2C_manners_and_institutions_from_the_earliest_times_to_the_death_of_Caesar_%281914%29_%2814769733061%29.jpg",
           "alt": "Republican Rome; her conquests, manners and institutions from the earliest times to the death of Caesar (1914) (14769733061).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Ancient Rome\" Remus death illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 220,
+          "_score": 210,
           "_escalated": false
         }
       ]
@@ -7623,14 +7636,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Rambles_in_Rome_-_an_arch%C3%A6ological_and_historical_guide_to_the_museums%2C_galleries%2C_villas%2C_churches%2C_and_antiquities_of_Rome_and_the_Campagna_%281887%29_%2814581531698%29.jpg/960px-thumbnail.jpg",
-          "alt": "Rambles in Rome - an archæological and historical guide to the museums, galleries, villas, churches, and antiquities of Rome and the Campagna (1887) (14581531698).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg/960px-Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg",
+          "alt": "Giovanni Paolo Panini – Ancient Rome.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Ancient Rome\" Romulus founding Rome illustration",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Ancient Rome\" founding Rome illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 240,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -7702,11 +7716,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg/960px-Woodcut_illustration_of_Rhea_Silvia_and_the_birth_of_Romulus_and_Remus_-_Penn_Provenance_Project.jpg",
           "alt": "Woodcut illustration of Rhea Silvia and the birth of Romulus and Remus - Penn Provenance Project.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Ancient Rome\" Romulus king illustration",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "mythology_vs_popculture",
-          "_score": 160,
+          "_score": 140,
           "_escalated": false
         }
       ]

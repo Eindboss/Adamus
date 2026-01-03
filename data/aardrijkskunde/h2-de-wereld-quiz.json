@@ -42,14 +42,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Day_%26_Night_Mountain_Scene.svg/960px-Day_%26_Night_Mountain_Scene.svg.png",
-          "alt": "Day & Night Mountain Scene.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Earth_Rotation%2B.jpg/960px-Earth_Rotation%2B.jpg",
+          "alt": "Earth Rotation+.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Earth rotation diagrams\" \"day and night\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Earth rotation diagram labeled",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 130,
+          "_score": 320,
           "_escalated": false
         }
       ]
@@ -70,14 +71,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/The_Future_Physics_of_Planet_Earth_%2840217810733%29.jpg/960px-The_Future_Physics_of_Planet_Earth_%2840217810733%29.jpg",
-          "alt": "The Future Physics of Planet Earth (40217810733).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Seasons_mk.svg/960px-Seasons_mk.svg.png",
+          "alt": "Seasons mk.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Earth's axial tilt diagrams\" \"summer solstice\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Earth axis tilt seasons diagram labeled",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 130,
+          "_score": 360,
           "_escalated": false
         }
       ]
@@ -164,14 +166,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Norilsk_climate_diagram-fr.svg/960px-Norilsk_climate_diagram-fr.svg.png",
-          "alt": "Norilsk climate diagram-fr.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Equator_%28PSF%29.png/960px-Equator_%28PSF%29.png",
+          "alt": "Equator (PSF).png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Climate zones maps\" equatorial temperature",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Equator temperature diagram",
           "_imageIntent": "diagram",
-          "_riskProfile": "thematic_vs_tourist",
-          "_score": 250,
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 140,
           "_escalated": false
         }
       ]
@@ -192,14 +195,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Polar_diagram_of_the_solar_irradiance_in_Valencia_%28Spain%2C_latitude_40%C2%B0_N%29_vs_tilt_and_orientation.jpg/960px-Polar_diagram_of_the_solar_irradiance_in_Valencia_%28Spain%2C_latitude_40%C2%B0_N%29_vs_tilt_and_orientation.jpg",
-          "alt": "Polar diagram of the solar irradiance in Valencia (Spain, latitude 40° N) vs tilt and orientation.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/The_Day_the_Earth_smiled.jpg/960px-The_Day_the_Earth_smiled.jpg",
+          "alt": "The Day the Earth smiled.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Solar irradiance diagrams\" \"angle of incidence\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Solar angle Earth diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 140,
+          "_score": 290,
           "_escalated": false
         }
       ]
@@ -220,14 +224,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Annotated_Skew_T_diagram.png/864px-Annotated_Skew_T_diagram.png",
-          "alt": "Annotated Skew T diagram.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Atmospheric_Pressure_vs._Altitude.png",
+          "alt": "Atmospheric Pressure vs. Altitude.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Adiabatic lapse rate diagrams\" altitude temperature",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Atmospheric temperature altitude diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 240,
+          "_score": 150,
           "_escalated": false
         }
       ]
@@ -248,14 +253,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gulf_Stream_Sea_Surface_Currents_and_Temperatures_NASA_SVS.jpg/960px-Gulf_Stream_Sea_Surface_Currents_and_Temperatures_NASA_SVS.jpg",
-          "alt": "Gulf Stream Sea Surface Currents and Temperatures NASA SVS.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Schematic_map_North_brazil_Current_retroflection_and_rings.png/960px-Schematic_map_North_brazil_Current_retroflection_and_rings.png",
+          "alt": "Schematic map North brazil Current retroflection and rings.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Gulf Stream maps\" Europe",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Gulf Stream map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 180,
+          "_score": 270,
           "_escalated": false
         }
       ]
@@ -276,14 +282,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Diagrama_de_formacion_de_la_brisa-breeze.svg/960px-Diagrama_de_formacion_de_la_brisa-breeze.svg.png",
-          "alt": "Diagrama de formacion de la brisa-breeze.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/SeaBreeze-fr.svg/960px-SeaBreeze-fr.svg.png",
+          "alt": "SeaBreeze-fr.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Sea breeze diagrams\" land sea",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Sea breeze diagram labeled",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 200,
+          "_score": 180,
           "_escalated": false
         }
       ]
@@ -307,11 +314,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Geostrophic_Wind_Diagram.svg/960px-Geostrophic_Wind_Diagram.svg.png",
           "alt": "Geostrophic Wind Diagram.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Atmospheric pressure diagrams\" wind",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Atmospheric pressure wind diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 160,
+          "_score": 290,
           "_escalated": false
         }
       ]
@@ -332,14 +340,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/3/34/Netherlands_Antilles_%26_Aruba_Coast_Guard.JPG",
-          "alt": "Netherlands Antilles & Aruba Coast Guard.JPG",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Temperature_Bar_Chart_Africa-Ivory_Coast--1901-2020--2021-07-13.png/960px-Temperature_Bar_Chart_Africa-Ivory_Coast--1901-2020--2021-07-13.png",
+          "alt": "Temperature Bar Chart Africa-Ivory Coast--1901-2020--2021-07-13.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "sea breeze Netherlands coast",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Coastal temperature difference photo",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 160,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -360,14 +369,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Lasri_condensation_reaction.svg/960px-Lasri_condensation_reaction.svg.png",
-          "alt": "Lasri condensation reaction.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Dieckmann_condensation_scheme.svg/960px-Dieckmann_condensation_scheme.svg.png",
+          "alt": "Dieckmann condensation scheme.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Cloud formation diagrams\" condensation",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Condensation diagram labeled",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 150,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -399,7 +409,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Percentage_of_GDP_spent_on_education_in_2020.png/960px-Percentage_of_GDP_spent_on_education_in_2020.png",
           "alt": "Percentage of GDP spent on education in 2020.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": " diagram",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
@@ -424,14 +435,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Scheme_female_reproductive_system-id.svg/960px-Scheme_female_reproductive_system-id.svg.png",
-          "alt": "Scheme female reproductive system-id.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/1/15/Gfs10.prp.012.tropio.gif",
+          "alt": "Gfs10.prp.012.tropio.gif",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Frontal system diagrams\" \"occluded front\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Frontal precipitation diagram labeled",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 160,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -455,7 +467,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Water_for_a_Desert_Lake_in_Algeria_%28153475_-_929_lrg%29.jpg/960px-Water_for_a_Desert_Lake_in_Algeria_%28153475_-_929_lrg%29.jpg",
           "alt": "Water for a Desert Lake in Algeria (153475 - 929 lrg).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Physical maps of Africa\" Sahara precipitation",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
@@ -509,14 +522,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Central_Asia_map_of_K%C3%B6ppen_climate_classification.svg/960px-Central_Asia_map_of_K%C3%B6ppen_climate_classification.svg.png",
-          "alt": "Central Asia map of Köppen climate classification.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Brazil_K%C3%B6ppen_Climate_Map_Portuguese.svg/960px-Brazil_K%C3%B6ppen_Climate_Map_Portuguese.svg.png",
+          "alt": "Brazil Köppen Climate Map Portuguese.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Köppen climate classification map",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Köppen climate classification map A",
           "_imageIntent": "diagram",
-          "_riskProfile": "thematic_vs_tourist",
-          "_score": 260,
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 290,
           "_escalated": false
         }
       ]
@@ -537,13 +551,14 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kuopio_climate_diagram.svg/960px-Kuopio_climate_diagram.svg.png",
-          "alt": "Kuopio climate diagram.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Continental_climate_%28K%C3%B6ppen_climate_classification%29.svg/960px-Continental_climate_%28K%C3%B6ppen_climate_classification%29.svg.png",
+          "alt": "Continental climate (Köppen climate classification).svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Köppen climate B diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Köppen climate classification map B",
           "_imageIntent": "diagram",
-          "_riskProfile": "thematic_vs_tourist",
+          "_riskProfile": "diagram_vs_photo",
           "_score": 290,
           "_escalated": false
         }
@@ -586,11 +601,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Mediterranean_climate_%28K%C3%B6ppen_climate_classification%29.svg/960px-Mediterranean_climate_%28K%C3%B6ppen_climate_classification%29.svg.png",
           "alt": "Mediterranean climate (Köppen climate classification).svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Köppen climate Csa diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Köppen climate classification map Csa",
           "_imageIntent": "diagram",
-          "_riskProfile": "thematic_vs_tourist",
-          "_score": 230,
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 300,
           "_escalated": false
         }
       ]
@@ -611,13 +627,14 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mount_Kilimanjaro_Tanzania-NASA.jpg/960px-Mount_Kilimanjaro_Tanzania-NASA.jpg",
-          "alt": "Mount Kilimanjaro Tanzania-NASA.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Snow_and_Ice_on_Kilimanjaro-2000.jpg/960px-Snow_and_Ice_on_Kilimanjaro-2000.jpg",
+          "alt": "Snow and Ice on Kilimanjaro-2000.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Kilimanjaro snow",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Kilimanjaro snow summit",
           "_imageIntent": "photo",
-          "_riskProfile": "thematic_vs_tourist",
+          "_riskProfile": "none",
           "_score": 150,
           "_escalated": false
         }
@@ -642,11 +659,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Saint-Petersburg_climate_diagram-es.svg/960px-Saint-Petersburg_climate_diagram-es.svg.png",
           "alt": "Saint-Petersburg climate diagram-es.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Climate diagram precipitation temperature",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "climate diagram precipitation temperature",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 250,
+          "_score": 290,
           "_escalated": false
         }
       ]
@@ -670,11 +688,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/8/85/Hei%C3%9Fe-W%C3%BCstenklimate.png",
           "alt": "Heiße-Wüstenklimate.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Climate diagram southern hemisphere",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "climate diagram southern hemisphere",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 210,
+          "_score": 250,
           "_escalated": false
         }
       ]
@@ -695,14 +714,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fahrenheit_Celsius_scales.svg/960px-Fahrenheit_Celsius_scales.svg.png",
-          "alt": "Fahrenheit Celsius scales.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/7/74/Thermometer_Graphic.png",
+          "alt": "Thermometer Graphic.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Celsius Fahrenheit conversion chart",
-          "_imageIntent": "diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "thermometer celsius fahrenheit",
+          "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 100,
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -723,14 +743,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Helsinki_climate_diagram_en.svg/960px-Helsinki_climate_diagram_en.svg.png",
-          "alt": "Helsinki climate diagram en.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/Climate-aboriginal.jpg",
+          "alt": "Climate-aboriginal.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Köppen climate Af diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "climate diagram tropical rainforest",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 180,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -754,11 +775,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Quy_Nhon_OpenStreetMap_2012_scale%3D50000.svg/960px-Quy_Nhon_OpenStreetMap_2012_scale%3D50000.svg.png",
           "alt": "Quy Nhon OpenStreetMap 2012 scale=50000.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Map scale 1:50000",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "map scale 1:50000",
           "_imageIntent": "diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 130,
+          "_riskProfile": "none",
+          "_score": 220,
           "_escalated": false
         }
       ]
@@ -779,14 +801,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Aldebaran-Sun_comparison-fr.svg/960px-Aldebaran-Sun_comparison-fr.svg.png",
-          "alt": "Aldebaran-Sun comparison-fr.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg/960px-1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg",
+          "alt": "1794 Samuel Dunn Wall Map of the World in Hemispheres - Geographicus - World2-dunn-1794.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Map scale comparison",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "map scale comparison detail",
           "_imageIntent": "diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 180,
+          "_riskProfile": "none",
+          "_score": 220,
           "_escalated": false
         }
       ]
@@ -807,14 +830,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pyrenees_topographic_map-fr.svg/960px-Pyrenees_topographic_map-fr.svg.png",
-          "alt": "Pyrenees topographic map-fr.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Vinland_Map_HiRes.jpg/960px-Vinland_Map_HiRes.jpg",
+          "alt": "Vinland Map HiRes.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Map north arrow",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "map north arrow",
           "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 100,
+          "_score": 180,
           "_escalated": false
         }
       ]
@@ -835,14 +859,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Rhu_Peninsula_elevated_thematic_map_1_location_legend.svg/960px-Rhu_Peninsula_elevated_thematic_map_1_location_legend.svg.png",
-          "alt": "Rhu Peninsula elevated thematic map 1 location legend.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Russia_Population_Density_Map_2021.png/960px-Russia_Population_Density_Map_2021.png",
+          "alt": "Russia Population Density Map 2021.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Thematic maps\" \"population density\" legend",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Thematic maps\" bevolkingsdichtheid Nederland",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 180,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -863,14 +888,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Orbital_relations_of_the_Solstice%2C_Equinox_%26_Intervening_Seasons.svg/960px-Orbital_relations_of_the_Solstice%2C_Equinox_%26_Intervening_Seasons.svg.png",
-          "alt": "Orbital relations of the Solstice, Equinox & Intervening Seasons.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Seasons_illustration.jpg/960px-Seasons_illustration.jpg",
+          "alt": "Seasons illustration.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "earth sun \"arctic circle\" \"polar night\" diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Earth's seasons\" Finland winter solstice",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 170,
+          "_score": 150,
           "_escalated": false
         }
       ]
@@ -929,14 +955,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Almeria-diagr.svg/960px-Almeria-diagr.svg.png",
-          "alt": "Almeria-diagr.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/ArcticStationClimatologies.png/884px-ArcticStationClimatologies.png",
+          "alt": "ArcticStationClimatologies.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "monsoon diagram \"south asia\"",
-          "_imageIntent": "diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 140,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Climate diagrams\" Mumbai climate diagram",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -960,11 +987,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Iceland_map_of_K%C3%B6ppen_climate_classification.svg/960px-Iceland_map_of_K%C3%B6ppen_climate_classification.svg.png",
           "alt": "Iceland map of Köppen climate classification.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Köppen climate classification Europe map",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Köppen climate classification map Europe",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 370,
+          "_score": 340,
           "_escalated": false
         }
       ]
@@ -985,14 +1013,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Global_tropical_cyclone_tracks-edit2.jpg/960px-Global_tropical_cyclone_tracks-edit2.jpg",
-          "alt": "Global tropical cyclone tracks-edit2.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Index_diagram_of_sheets_for_the_International_map_on_the_scale_of_1_1%2C000%2C000_%282710800326%29.jpg/960px-Index_diagram_of_sheets_for_the_International_map_on_the_scale_of_1_1%2C000%2C000_%282710800326%29.jpg",
+          "alt": "Index diagram of sheets for the International map on the scale of 1 1,000,000 (2710800326).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "map scale diagram \"large scale\" \"small scale\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "map scale diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 190,
+          "_score": 150,
           "_escalated": false
         }
       ]
@@ -1013,14 +1042,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Athen-klimadiagramm.svg/960px-Athen-klimadiagramm.svg.png",
-          "alt": "Athen-klimadiagramm.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Climate_change_unlabeled.svg/960px-Climate_change_unlabeled.svg.png",
+          "alt": "Climate change unlabeled.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "factors affecting climate diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 200,
+          "_score": 220,
           "_escalated": false
         }
       ]
@@ -1041,14 +1071,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Coastal_currents_along_the_Atlantic_coast_of_the_United_States_%281942%29_%2820035207064%29.jpg/960px-Coastal_currents_along_the_Atlantic_coast_of_the_United_States_%281942%29_%2820035207064%29.jpg",
-          "alt": "Coastal currents along the Atlantic coast of the United States (1942) (20035207064).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/49/A_chart_of_the_Gulf_Stream_inverted_right_to_left_%288475486331%29.jpg",
+          "alt": "A chart of the Gulf Stream inverted right to left (8475486331).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "gulf stream map \"north atlantic drift\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Gulf Stream map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 200,
+          "_score": 160,
           "_escalated": false
         }
       ]
@@ -1072,11 +1103,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/AtmosphCirc2.svg/960px-AtmosphCirc2.svg.png",
           "alt": "AtmosphCirc2.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "Hadley cell diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 170,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -1100,11 +1132,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/K%C3%B6ppen-Geiger_Climate_Classification_Map_%281980%E2%80%932016%29_no_borders.png/960px-K%C3%B6ppen-Geiger_Climate_Classification_Map_%281980%E2%80%932016%29_no_borders.png",
           "alt": "Köppen-Geiger Climate Classification Map (1980–2016) no borders.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Köppen climate classification map world",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Köppen climate classification map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 220,
+          "_score": 210,
           "_escalated": false
         }
       ]
@@ -1125,14 +1158,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Ethnographic_map_of_the_Tiflis_Governorate_%281902%29-map_legend-1.jpg/928px-Ethnographic_map_of_the_Tiflis_Governorate_%281902%29-map_legend-1.jpg",
-          "alt": "Ethnographic map of the Tiflis Governorate (1902)-map legend-1.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/OpenRailwayMap_North_America_OSI_Legend.png",
+          "alt": "OpenRailwayMap North America OSI Legend.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "thematic map legend example",
-          "_imageIntent": "map",
-          "_riskProfile": "thematic_vs_tourist",
-          "_score": 170,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "thematic map legend explanation",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 130,
           "_escalated": false
         }
       ]
@@ -1196,14 +1230,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/2011_Census_India_population_density_map%2C_states_and_union_territories.svg/960px-2011_Census_India_population_density_map%2C_states_and_union_territories.svg.png",
-          "alt": "2011 Census India population density map, states and union territories.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Physical_Map_of_Western_Europe_Without_Political_Markings.svg/960px-Physical_Map_of_Western_Europe_Without_Political_Markings.svg.png",
+          "alt": "Physical Map of Western Europe Without Political Markings.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "population density map Netherlands",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "physical map Europe",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 250,
+          "_score": 300,
           "_escalated": false
         }
       ]
@@ -1251,14 +1286,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Physical_Map_of_Western_Europe_Without_Political_Markings.svg/960px-Physical_Map_of_Western_Europe_Without_Political_Markings.svg.png",
-          "alt": "Physical Map of Western Europe Without Political Markings.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/World_population_density_1994.png/960px-World_population_density_1994.png",
+          "alt": "World population density 1994.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "physical map Netherlands",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "population density map world",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 290,
+          "_score": 270,
           "_escalated": false
         }
       ]
@@ -1313,11 +1349,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Europe_relief_laea_location_map.jpg/960px-Europe_relief_laea_location_map.jpg",
           "alt": "Europe relief laea location map.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Physical maps of Europe\" Europe physical map relief",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Physical maps of Europe\" Europe relief map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 210,
+          "_score": 160,
           "_escalated": false
         }
       ]
@@ -1369,14 +1406,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/3/37/Choropleth_map.jpg",
-          "alt": "Choropleth map.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Oregon_map_of_K%C3%B6ppen_climate_classification.svg/960px-Oregon_map_of_K%C3%B6ppen_climate_classification.svg.png",
+          "alt": "Oregon map of Köppen climate classification.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Population density maps of Europe\" Population density Europe",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Climate maps of the world\" world Köppen climate classification",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 290,
+          "_score": 230,
           "_escalated": false
         }
       ]
@@ -1426,14 +1464,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Alliances_of_europe.png/960px-Alliances_of_europe.png",
-          "alt": "Alliances of europe.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/World_human_population_density_map.png/960px-World_human_population_density_map.png",
+          "alt": "World human population density map.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Political maps of Europe\" Europe political map",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Population density maps\" world population density map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 250,
+          "_score": 240,
           "_escalated": false
         }
       ]
@@ -1481,14 +1520,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Georgia_Landuse_Map.png/960px-Georgia_Landuse_Map.png",
-          "alt": "Georgia Landuse Map.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tectonic_plates_boundaries_detailed-en.svg/960px-Tectonic_plates_boundaries_detailed-en.svg.png",
+          "alt": "Tectonic plates boundaries detailed-en.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Land use maps of Europe\" Land use Europe map",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Tectonic plates maps\" world tectonic plates map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 220,
+          "_score": 240,
           "_escalated": false
         }
       ]
@@ -1543,14 +1583,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Brazil_K%C3%B6ppen_Climate_Map_Portuguese.svg/960px-Brazil_K%C3%B6ppen_Climate_Map_Portuguese.svg.png",
-          "alt": "Brazil Köppen Climate Map Portuguese.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Georgia_Landuse_Map.png/960px-Georgia_Landuse_Map.png",
+          "alt": "Georgia Landuse Map.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Climate maps of the world\" world climate map Köppen",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Land use maps\" world land use map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 260,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -1643,11 +1684,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Rain_Shadow.tif/lossy-page1-800px-Rain_Shadow.tif.jpg",
           "alt": "Rain Shadow.tif",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "orographic lift diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 130,
+          "_score": 150,
           "_escalated": false
         }
       ]
@@ -1665,14 +1707,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg/960px-1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg",
-          "alt": "1794 Samuel Dunn Wall Map of the World in Hemispheres - Geographicus - World2-dunn-1794.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Global_tropical_cyclone_tracks-edit2.jpg/960px-Global_tropical_cyclone_tracks-edit2.jpg",
+          "alt": "Global tropical cyclone tracks-edit2.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "map scale calculation diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "map scale diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 180,
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -1725,14 +1768,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tectonic_plates_boundaries_detailed-en.svg/960px-Tectonic_plates_boundaries_detailed-en.svg.png",
-          "alt": "Tectonic plates boundaries detailed-en.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Standard_time_zones_of_the_world_%282012%29.svg/960px-Standard_time_zones_of_the_world_%282012%29.svg.png",
+          "alt": "Standard time zones of the world (2012).svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Tectonic plates maps\" tectonic plates map",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Time zone maps\" world time zones map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 250,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -1753,14 +1797,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Koppen-Geiger_Map_ISL_present.svg/960px-Koppen-Geiger_Map_ISL_present.svg.png",
-          "alt": "Koppen-Geiger Map ISL present.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Archibio.svg/960px-Archibio.svg.png",
+          "alt": "Archibio.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Köppen climate classification Cf diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Köppen climate classification f",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 260,
+          "_score": 180,
           "_escalated": false
         }
       ]
@@ -1781,14 +1826,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Iceland_K%C3%B6ppen.svg/960px-Iceland_K%C3%B6ppen.svg.png",
-          "alt": "Iceland Köppen.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Oceanic_climate_%28K%C3%B6ppen_climate_classification%29.svg/960px-Oceanic_climate_%28K%C3%B6ppen_climate_classification%29.svg.png",
+          "alt": "Oceanic climate (Köppen climate classification).svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Köppen climate classification Cs Cf diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "Köppen climate Cs Cf",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 250,
+          "_score": 180,
           "_escalated": false
         }
       ]

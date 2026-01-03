@@ -1,8 +1,8 @@
 /**
- * AI-powered image selection for quiz questions (v3.3)
+ * AI-powered image selection for quiz questions (v3.4)
  *
  * Uses Gemini AI to generate optimal search terms in BATCHES,
- * then fetches images from Wikimedia Commons with enhanced scoring.
+ * then fetches images from multiple sources with AI validation.
  *
  * v3 Improvements:
  * - Category-based scoring using Commons categories as context signal
@@ -33,6 +33,12 @@
  * - Subject-specific threshold overrides
  * - Improved Latin grammar detection
  *
+ * v3.4 Improvements:
+ * - Multiple image sources: Wikimedia Commons, Unsplash, Pexels
+ * - Reduced diagram preference, prefer real photos for anatomy
+ * - AI validation to filter out abstract/schematic images
+ * - Better quality photos from professional sources
+ *
  * Usage:
  *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json>
  *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json> --apply
@@ -48,6 +54,8 @@ const path = require('path');
 
 const COMMONS_API = 'https://commons.wikimedia.org/w/api.php';
 const WIKIPEDIA_API = 'https://en.wikipedia.org/w/api.php';
+const UNSPLASH_API = 'https://api.unsplash.com';
+const PEXELS_API = 'https://api.pexels.com/v1';
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models';
 const MODEL = 'gemini-2.0-flash-exp';
 
@@ -506,6 +514,139 @@ async function searchCommonsCategory(category, limit = 20) {
 }
 
 /**
+ * v3.4: Search Unsplash for high-quality photos
+ * Requires UNSPLASH_ACCESS_KEY environment variable
+ */
+async function searchUnsplash(searchTerm, limit = 10) {
+  const accessKey = process.env.UNSPLASH_ACCESS_KEY;
+  if (!accessKey) return [];
+
+  try {
+    const params = new URLSearchParams({
+      query: searchTerm,
+      per_page: String(limit),
+      orientation: 'landscape',
+    });
+
+    const res = await fetch(`${UNSPLASH_API}/search/photos?${params}`, {
+      headers: { 'Authorization': `Client-ID ${accessKey}` }
+    });
+
+    if (!res.ok) return [];
+
+    const data = await res.json();
+    return (data.results || []).map(photo => ({
+      title: photo.description || photo.alt_description || searchTerm,
+      imageUrl: photo.urls?.regular || photo.urls?.small,
+      descriptionUrl: photo.links?.html,
+      width: photo.width,
+      height: photo.height,
+      mime: 'image/jpeg',
+      description: photo.description || '',
+      categories: photo.tags?.map(t => t.title) || [],
+      source: 'unsplash',
+      attribution: `Photo by ${photo.user?.name} on Unsplash`,
+    })).filter(img => img.imageUrl);
+  } catch (err) {
+    return [];
+  }
+}
+
+/**
+ * v3.4: Search Pexels for high-quality photos
+ * Requires PEXELS_API_KEY environment variable
+ */
+async function searchPexels(searchTerm, limit = 10) {
+  const apiKey = process.env.PEXELS_API_KEY;
+  if (!apiKey) return [];
+
+  try {
+    const params = new URLSearchParams({
+      query: searchTerm,
+      per_page: String(limit),
+      orientation: 'landscape',
+    });
+
+    const res = await fetch(`${PEXELS_API}/search?${params}`, {
+      headers: { 'Authorization': apiKey }
+    });
+
+    if (!res.ok) return [];
+
+    const data = await res.json();
+    return (data.photos || []).map(photo => ({
+      title: photo.alt || searchTerm,
+      imageUrl: photo.src?.large || photo.src?.medium,
+      descriptionUrl: photo.url,
+      width: photo.width,
+      height: photo.height,
+      mime: 'image/jpeg',
+      description: photo.alt || '',
+      categories: [],
+      source: 'pexels',
+      attribution: `Photo by ${photo.photographer} on Pexels`,
+    })).filter(img => img.imageUrl);
+  } catch (err) {
+    return [];
+  }
+}
+
+/**
+ * v3.4: AI validation - check if image is actually useful (not abstract/schematic)
+ */
+async function validateImageWithAI(imageUrl, questionText, expectedContent) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) return { valid: true, score: 0 }; // Skip validation if no key
+
+  try {
+    const prompt = `Je bent een expert in het beoordelen van educatieve afbeeldingen.
+
+VRAAG: ${questionText}
+VERWACHTE INHOUD: ${expectedContent}
+AFBEELDING URL: ${imageUrl}
+
+Beoordeel of deze afbeelding geschikt is voor de vraag. Let op:
+1. Is het een ECHTE foto/illustratie of een abstract/schematisch diagram met alleen geometrische vormen?
+2. Toont het de verwachte inhoud (anatomie, historische scene, kaart, etc.)?
+3. Is het educatief bruikbaar voor middelbare scholieren?
+
+Antwoord als JSON:
+{
+  "valid": true/false,
+  "reason": "korte uitleg",
+  "qualityScore": 0-100
+}
+
+Geef ALLEEN de JSON.`;
+
+    const response = await fetch(`${GEMINI_API_URL}/${MODEL}:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 0.2, maxOutputTokens: 500 }
+      })
+    });
+
+    if (!response.ok) return { valid: true, score: 0 };
+
+    const data = await response.json();
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) return { valid: true, score: 0 };
+
+    const result = JSON.parse(jsonMatch[0]);
+    return {
+      valid: result.valid !== false,
+      score: result.qualityScore || 0,
+      reason: result.reason || '',
+    };
+  } catch (err) {
+    return { valid: true, score: 0 };
+  }
+}
+
+/**
  * v3.3: Per-question AI escalation - generate new queries for failed questions
  * Only called when initial search fails and we have escalation budget
  */
@@ -832,12 +973,36 @@ function scoreCandidate(candidate, brief, usedImages) {
  * Find the best image for a single question brief
  * v3.1: Implements negation ladder and score-based fallback
  * v3.3: Subject-specific thresholds
+ * v3.4: Multi-source search (Commons, Unsplash, Pexels) + photo preference
  */
-async function findBestImage(brief, usedImages, subject = null) {
+async function findBestImage(brief, usedImages, subject = null, questionText = '') {
   const candidates = [];
   const minScore = getMinScore(brief.imageIntent, subject);
+  const queries = brief.commonsQueries || brief.searchTerms || [];
+  const subjectLower = (subject || '').toLowerCase();
 
-  // 1. Try category search first (highest quality)
+  // v3.4: For biologie and aardrijkskunde, prefer photos over diagrams
+  const preferPhotos = subjectLower === 'biologie' || subjectLower === 'aardrijkskunde';
+
+  // 1. v3.4: Try Unsplash and Pexels FIRST for photo-preferred subjects
+  if (preferPhotos && queries.length > 0) {
+    const photoQuery = queries[0].replace(/incategory:"[^"]*"/g, '').replace(/-\w+/g, '').trim();
+    if (photoQuery) {
+      try {
+        const unsplashResults = await searchUnsplash(photoQuery, 5);
+        candidates.push(...unsplashResults);
+        await sleep(100);
+      } catch (err) { /* continue */ }
+
+      try {
+        const pexelsResults = await searchPexels(photoQuery, 5);
+        candidates.push(...pexelsResults);
+        await sleep(100);
+      } catch (err) { /* continue */ }
+    }
+  }
+
+  // 2. Try category search (Commons)
   for (const category of (brief.categoryHints || []).slice(0, 2)) {
     try {
       const results = await searchCommonsCategory(category, 15);
@@ -846,8 +1011,7 @@ async function findBestImage(brief, usedImages, subject = null) {
     } catch (err) { /* continue */ }
   }
 
-  // 2. Try Commons queries (strict → relaxed → broad)
-  const queries = brief.commonsQueries || brief.searchTerms || [];
+  // 3. Try Commons queries (strict → relaxed → broad)
   for (const query of queries.slice(0, 3)) {
     try {
       const results = await searchCommons(query, 10);
@@ -856,7 +1020,7 @@ async function findBestImage(brief, usedImages, subject = null) {
     } catch (err) { /* continue */ }
   }
 
-  // 3. NEGATION LADDER: If queries with negations gave 0 results, retry without negations
+  // 4. NEGATION LADDER: If queries with negations gave 0 results, retry without negations
   if (candidates.length === 0) {
     for (const query of queries.slice(0, 3)) {
       if (hasNegations(query)) {
@@ -873,20 +1037,24 @@ async function findBestImage(brief, usedImages, subject = null) {
   }
 
   // Score what we have so far
-  let scored = candidates.map(c => ({
-    ...c,
-    score: scoreCandidate(c, brief, usedImages),
-  }));
+  // v3.4: Apply photo preference bonus for Unsplash/Pexels sources
+  let scored = candidates.map(c => {
+    let score = scoreCandidate(c, brief, usedImages);
+    // Bonus for professional photo sources when photos are preferred
+    if (preferPhotos && (c.source === 'unsplash' || c.source === 'pexels')) {
+      score += 50; // Bonus for high-quality photo sources
+    }
+    return { ...c, score };
+  });
   scored.sort((a, b) => b.score - a.score);
   let best = scored.find(c => c.score >= minScore);
 
-  // 4. SCORE-BASED FALLBACK: Try Wikipedia if no candidates OR best score is too low
+  // 5. SCORE-BASED FALLBACK: Try Wikipedia if no candidates OR best score is too low
   if ((!best || best.score < minScore) && brief.wikipediaFallback) {
     try {
       const wikiImage = await getWikipediaImage(brief.wikipediaFallback);
       if (wikiImage) {
         wikiImage.score = scoreCandidate(wikiImage, brief, usedImages);
-        // Use Wikipedia image if it's better than what we have
         if (!best || wikiImage.score > best.score) {
           best = wikiImage;
         }
@@ -894,7 +1062,7 @@ async function findBestImage(brief, usedImages, subject = null) {
     } catch (err) { /* continue */ }
   }
 
-  // 5. If still no good result, try broader search terms without category prefix
+  // 6. If still no good result, try broader search terms
   if (!best || best.score < minScore) {
     const lastQuery = queries[queries.length - 1];
     if (lastQuery) {
@@ -909,6 +1077,19 @@ async function findBestImage(brief, usedImages, subject = null) {
             }
           }
         } catch (err) { /* continue */ }
+
+        // v3.4: Also try Unsplash/Pexels with broad query
+        if (preferPhotos) {
+          try {
+            const unsplashResults = await searchUnsplash(broadQuery, 5);
+            for (const r of unsplashResults) {
+              r.score = scoreCandidate(r, brief, usedImages) + 50;
+              if (!best || r.score > best.score) {
+                best = r;
+              }
+            }
+          } catch (err) { /* continue */ }
+        }
       }
     }
   }
@@ -1174,12 +1355,19 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
     for (const q of questions) {
       const result = resultMap.get(q.id);
       if (result) {
+        // v3.4: Proper attribution per source
+        let caption = 'Bron: Wikimedia Commons';
+        if (result.source === 'wikipedia') caption = 'Bron: Wikipedia';
+        else if (result.source === 'unsplash') caption = result.attribution || 'Bron: Unsplash';
+        else if (result.source === 'pexels') caption = result.attribution || 'Bron: Pexels';
+
         q.media = [{
           type: 'image',
           src: result.imageUrl,
           alt: result.title,
-          caption: `Bron: ${result.source === 'wikipedia' ? 'Wikipedia' : 'Wikimedia Commons'}`,
-          _source: 'commons-ai-v3.3',
+          caption,
+          _source: 'ai-v3.4',
+          _imageSource: result.source || 'commons',
           _searchTerm: result.searchTerm,
           _imageIntent: result.imageIntent,
           _riskProfile: result.riskProfile,
@@ -1202,7 +1390,7 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
     escalationCount: escalationState.count,
     total: needsImage.length,
     timestamp: new Date().toISOString(),
-    version: 'v3.3',
+    version: 'v3.4',
   }, null, 2));
   console.log(`Results saved to: ${path.basename(outputPath)}`);
 

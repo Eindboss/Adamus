@@ -1,0 +1,173 @@
+{
+  "results": [
+    {
+      "questionId": "lupa-001",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "lupa-002",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Latin_for_beginners_%281911%29_%2814769844142%29.jpg/960px-Latin_for_beginners_%281911%29_%2814769844142%29.jpg",
+      "title": "Latin for beginners (1911) (14769844142).jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Latin_for_beginners_(1911)_(14769844142).jpg",
+      "searchTerm": "incategory:\"Latin declensions\" servus declension table",
+      "imageIntent": "diagram",
+      "riskProfile": "none",
+      "score": 130,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "lupa-003",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Antonio_de_Nebrija_Introductiones_latinae_1550.jpg",
+      "title": "Antonio de Nebrija Introductiones latinae 1550.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Antonio_de_Nebrija_Introductiones_latinae_1550.jpg",
+      "searchTerm": "incategory:\"Latin declensions\" mater declension table",
+      "imageIntent": "diagram",
+      "riskProfile": "none",
+      "score": 70,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "lupa-004",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "lupa-005",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "lupa-006",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "lupa-007",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ficus_ruminalis.jpg/960px-Ficus_ruminalis.jpg",
+      "title": "Ficus ruminalis.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ficus_ruminalis.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" ficus ruminalis",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "historical_vs_modern",
+      "score": 170,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "lupa-008",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Maria_Saal_Dom_Grabrelief_Romulus_und_Remus_27122013_774.jpg/960px-Maria_Saal_Dom_Grabrelief_Romulus_und_Remus_27122013_774.jpg",
+      "title": "Maria Saal Dom Grabrelief Romulus und Remus 27122013 774.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Maria_Saal_Dom_Grabrelief_Romulus_und_Remus_27122013_774.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" Romulus and Remus Livy",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 190,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "lupa-009",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg/960px-%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
+      "title": "'Reuzen spinklos van 8 cm doorsnede waarschijnlijk inheem Romeins.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%27Reuzen_spinklos_van_8_cm_doorsnede_waarschijnlijk_inheem_Romeins.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" Lupa Romana",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 150,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "lupa-010",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Wall_painting_-_scenes_from_early_Roman_myth_-_Rome_%28columbarium_on_the_Esquiline%29_-_Roma_MNR_PMaT_-_01.jpg/960px-Wall_painting_-_scenes_from_early_Roman_myth_-_Rome_%28columbarium_on_the_Esquiline%29_-_Roma_MNR_PMaT_-_01.jpg",
+      "title": "Wall painting - scenes from early Roman myth - Rome (columbarium on the Esquiline) - Roma MNR PMaT - 01.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Wall_painting_-_scenes_from_early_Roman_myth_-_Rome_(columbarium_on_the_Esquiline)_-_Roma_MNR_PMaT_-_01.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" founding myth",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 190,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "lupa-011",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "lupa-012",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ancient_Roman_Speculum.jpg/960px-Ancient_Roman_Speculum.jpg",
+      "title": "Ancient Roman Speculum.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Roman_Speculum.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" Roman balance",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "historical_vs_modern",
+      "score": 130,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "lupa-013",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Romulus_en_Remus%2C_RP-P-H-H-66.jpg/960px-Romulus_en_Remus%2C_RP-P-H-H-66.jpg",
+      "title": "Romulus en Remus, RP-P-H-H-66.jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Romulus_en_Remus,_RP-P-H-H-66.jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" she-wolf Romulus Remus",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "mythology_vs_popculture",
+      "score": 210,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    },
+    {
+      "questionId": "lupa-014",
+      "success": true,
+      "imagePolicy": "none",
+      "reason": "No image needed (grammar question)"
+    },
+    {
+      "questionId": "lupa-015",
+      "success": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Grecian_and_Roman_mythology_%281876%29_%2814769479124%29.jpg/960px-Grecian_and_Roman_mythology_%281876%29_%2814769479124%29.jpg",
+      "title": "Grecian and Roman mythology (1876) (14769479124).jpg",
+      "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Grecian_and_Roman_mythology_(1876)_(14769479124).jpg",
+      "searchTerm": "incategory:\"Ancient Rome\" shepherd",
+      "imageIntent": "historical_illustration",
+      "riskProfile": "historical_vs_modern",
+      "score": 130,
+      "source": "commons",
+      "repaired": false,
+      "escalated": false
+    }
+  ],
+  "successCount": 15,
+  "imageSuccessCount": 9,
+  "noImageCount": 6,
+  "escalationCount": 1,
+  "total": 15,
+  "timestamp": "2026-01-03T17:03:33.646Z",
+  "version": "v3.4"
+}

@@ -23,8 +23,9 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Percentage_of_Population_Living_in_urban_areas_1950-2050.png",
           "alt": "Percentage of Population Living in urban areas 1950-2050.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Urbanization diagrams\" \"urban growth\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Urbanization diagrams\" process",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
           "_score": 130,
@@ -47,14 +48,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/OLD_TOWN_HISTORIC_DISTRICT%2C_HARRISONBURG%2C_VIRGINIA.jpg/960px-OLD_TOWN_HISTORIC_DISTRICT%2C_HARRISONBURG%2C_VIRGINIA.jpg",
-          "alt": "OLD TOWN HISTORIC DISTRICT, HARRISONBURG, VIRGINIA.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bur_-Dubai_Old_Town_Business.jpg/960px-Bur_-Dubai_Old_Town_Business.jpg",
+          "alt": "Bur -Dubai Old Town Business.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Historic districts\" \"old town\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Historic districts\" Europe",
           "_imageIntent": "photo",
           "_riskProfile": "historical_vs_modern",
-          "_score": 170,
+          "_score": 140,
           "_escalated": false
         }
       ]
@@ -74,14 +76,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Industries_%C3%A9lectroniques_%C3%A0_Paris_Onde_revue_Electrique_N%C2%B0_249_d%C3%A9cembre_1947.jpg/960px-Industries_%C3%A9lectroniques_%C3%A0_Paris_Onde_revue_Electrique_N%C2%B0_249_d%C3%A9cembre_1947.jpg",
-          "alt": "Industries électroniques à Paris Onde revue Electrique N° 249 décembre 1947.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Neave_Street%2C_Lower_Price_Hill%2C_Cincinnati%2C_OH_%2827227764017%29.jpg/960px-Neave_Street%2C_Lower_Price_Hill%2C_Cincinnati%2C_OH_%2827227764017%29.jpg",
+          "alt": "Neave Street, Lower Price Hill, Cincinnati, OH (27227764017).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Industrial Revolution\" \"working class\" housing",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"19th-century industrial workers\" housing",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "historical_vs_modern",
-          "_score": 100,
+          "_score": 180,
           "_escalated": false
         }
       ]
@@ -101,14 +104,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/b/be/Modern_Residential_Area_in_the_Village_of_Chilton_-_geograph.org.uk_-_10264.jpg",
-          "alt": "Modern Residential Area in the Village of Chilton - geograph.org.uk - 10264.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Modern_Housing_Estate_at_Newhaven_-_geograph.org.uk_-_18329.jpg",
+          "alt": "Modern Housing Estate at Newhaven - geograph.org.uk - 18329.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Modern architecture\" \"residential area\" 1950s",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Post-war architecture\" residential",
           "_imageIntent": "photo",
           "_riskProfile": "historical_vs_modern",
-          "_score": 80,
+          "_score": 130,
           "_escalated": false
         }
       ]
@@ -131,7 +135,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Algiers_suburban_rail_network_-_Diagram_Line_-_January_2022_-_fr.svg/960px-Algiers_suburban_rail_network_-_Diagram_Line_-_January_2022_-_fr.svg.png",
           "alt": "Algiers suburban rail network - Diagram Line - January 2022 - fr.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Suburbanization diagrams\"",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
@@ -155,14 +160,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Foyers3.png/960px-Foyers3.png",
-          "alt": "Foyers3.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Tula-Novomoskovsk_urban_agglomeration%2C_Russia.jpg/960px-Tula-Novomoskovsk_urban_agglomeration%2C_Russia.jpg",
+          "alt": "Tula-Novomoskovsk urban agglomeration, Russia.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Population density maps\" agglomeration",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Urban areas\" map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 160,
+          "_score": 120,
           "_escalated": false
         }
       ]
@@ -185,8 +191,9 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/1905_home_network_-_multi_devices_graphic.jpg/806px-1905_home_network_-_multi_devices_graphic.jpg",
           "alt": "1905 home network - multi devices graphic.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Network diagrams\" \"urban network\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Network diagrams\" cities",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
           "_score": 210,
@@ -212,11 +219,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Primemeridian.jpg/960px-Primemeridian.jpg",
           "alt": "Primemeridian.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Prime Meridian\" map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 330,
+          "_score": 270,
           "_escalated": false
         }
       ]
@@ -236,14 +244,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg/960px-1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg",
-          "alt": "1794 Samuel Dunn Wall Map of the World in Hemispheres - Geographicus - World2-dunn-1794.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/A_comparative_study_of_bird_migration_in_Illinois_allong_the_40th_parallel_of_latitude_%281913%29_%2820483489779%29.jpg/960px-A_comparative_study_of_bird_migration_in_Illinois_allong_the_40th_parallel_of_latitude_%281913%29_%2820483489779%29.jpg",
+          "alt": "A comparative study of bird migration in Illinois allong the 40th parallel of latitude (1913) (20483489779).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Latitude\" map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 200,
+          "_score": 210,
           "_escalated": false
         }
       ]
@@ -266,11 +275,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Lines_of_equal_latitude_and_longitude_FROM_%28World_map_Winkel_Tripel_proj-0deg_centered%29.png",
           "alt": "Lines of equal latitude and longitude FROM (World map Winkel Tripel proj-0deg centered).png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Longitude\" map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 240,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -297,14 +307,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/A421_developments.svg/960px-A421_developments.svg.png",
-          "alt": "A421 developments.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/%27The_Fabric%27_Balanced_Urban_Development_unit.svg/960px-%27The_Fabric%27_Balanced_Urban_Development_unit.svg.png",
+          "alt": "'The Fabric' Balanced Urban Development unit.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Urban planning diagrams\" \"building periods\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Urban planning diagrams\" building periods timeline",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 100,
+          "_score": 150,
           "_escalated": false
         }
       ]
@@ -360,14 +371,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ria_2000_Project.jpg/960px-Ria_2000_Project.jpg",
-          "alt": "Ria 2000 Project.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Arabic_dialectal_variation_location_map.svg/960px-Arabic_dialectal_variation_location_map.svg.png",
+          "alt": "Arabic dialectal variation location map.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Urban planning maps\"",
-          "_imageIntent": "map",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Location maps\" world",
+          "_imageIntent": "diagram",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 190,
+          "_score": 230,
           "_escalated": false
         }
       ]
@@ -390,8 +402,9 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Equal-difference_latitude_polyconic_projection_Pacific-centric.jpg/960px-Equal-difference_latitude_polyconic_projection_Pacific-centric.jpg",
           "alt": "Equal-difference latitude polyconic projection Pacific-centric.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Latitude maps\" 52°N",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Latitude maps\" \"52°N\"",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
           "_score": 120,
@@ -414,14 +427,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/BlankMap-World-with-Equator.svg/960px-BlankMap-World-with-Equator.svg.png",
-          "alt": "BlankMap-World-with-Equator.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Moll_-_A_new_and_correct_map_of_the_whole_World.png/960px-Moll_-_A_new_and_correct_map_of_the_whole_World.png",
+          "alt": "Moll - A new and correct map of the whole World.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"World maps\" equator distance",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 200,
+          "_score": 160,
           "_escalated": false
         }
       ]
@@ -441,11 +455,12 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/161_of_%27Beeton%27s_Dictionary_of_Geography._A_universal_gazetteer._Illustrated_by_maps%2C_etc%27_%2811087876564%29.jpg/960px-161_of_%27Beeton%27s_Dictionary_of_Geography._A_universal_gazetteer._Illustrated_by_maps%2C_etc%27_%2811087876564%29.jpg",
-          "alt": "161 of 'Beeton's Dictionary of Geography. A universal gazetteer. Illustrated by maps, etc' (11087876564).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/AUS_locator_map_with_corners.png/960px-AUS_locator_map_with_corners.png",
+          "alt": "AUS locator map with corners.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Australia map index",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Maps of Australia\"",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
           "_score": 180,
@@ -468,14 +483,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Index_pages_of_%22Ber%C3%A4ttelser_ur_svenska_historien%22_by_Carl_Georg_Starb%C3%A4ck_1860.jpg",
-          "alt": "Index pages of \"Berättelser ur svenska historien\" by Carl Georg Starbäck 1860.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Symmetric_group_4%3B_Lattice_of_subgroups_Hasse_diagram_%28index%29.svg/960px-Symmetric_group_4%3B_Lattice_of_subgroups_Hasse_diagram_%28index%29.svg.png",
+          "alt": "Symmetric group 4; Lattice of subgroups Hasse diagram (index).svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "book index page",
-          "_imageIntent": "photo",
-          "_riskProfile": "none",
-          "_score": 110,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Index (typography)\" map index",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 210,
           "_escalated": false
         }
       ]
@@ -495,14 +511,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/GPS_Satellite_NASA_art-iif.jpg/960px-GPS_Satellite_NASA_art-iif.jpg",
-          "alt": "GPS Satellite NASA art-iif.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/1/13/GPS-EGNOS-draft.jpg",
+          "alt": "GPS-EGNOS-draft.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "GPS triangulation diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"GPS diagrams\" multiple satellites",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 190,
+          "_score": 140,
           "_escalated": false
         }
       ]
@@ -522,14 +539,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/A_conventional_land_development.JPG/960px-A_conventional_land_development.JPG",
-          "alt": "A conventional land development.JPG",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/20190704_Warming_stripes_-_HadCRUT.4.6.0.0_-_world.svg/960px-20190704_Warming_stripes_-_HadCRUT.4.6.0.0_-_world.svg.png",
+          "alt": "20190704 Warming stripes - HadCRUT.4.6.0.0 - world.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "reurbanisation example",
-          "_imageIntent": "photo",
-          "_riskProfile": "none",
-          "_score": 70,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Urban planning diagrams\" reurbanisation",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 120,
           "_escalated": false
         }
       ]
@@ -549,14 +567,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Manhattan_%28NYC-New_York_City%29_Skyline_%2831769153946%29.jpg/960px-Manhattan_%28NYC-New_York_City%29_Skyline_%2831769153946%29.jpg",
-          "alt": "Manhattan (NYC-New York City) Skyline (31769153946).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/-corporate_-office_-people_-perspective_-cityscape_-composition_-streetphotography_-dhaka_-green_-plant_%2830307362572%29.jpg/960px--corporate_-office_-people_-perspective_-cityscape_-composition_-streetphotography_-dhaka_-green_-plant_%2830307362572%29.jpg",
+          "alt": "-corporate -office -people -perspective -cityscape -composition -streetphotography -dhaka -green -plant (30307362572).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "expensive city center",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Cityscapes\" expensive housing",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 150,
+          "_score": 90,
           "_escalated": false
         }
       ]
@@ -576,14 +595,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/5/5a/%27The_Fabric%27_Balanced_Urban_Development_unit.jpg",
-          "alt": "'The Fabric' Balanced Urban Development unit.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Georgia_Landuse_Map.png/960px-Georgia_Landuse_Map.png",
+          "alt": "Georgia Landuse Map.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "urban transition zone",
-          "_imageIntent": "photo",
-          "_riskProfile": "none",
-          "_score": 130,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Land use maps\" transition zone",
+          "_imageIntent": "map",
+          "_riskProfile": "thematic_vs_tourist",
+          "_score": 210,
           "_escalated": false
         }
       ]
@@ -603,14 +623,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/199_-_Buenos_Aires_-_A%C3%A9roport_international_Ezeiza_-_Janvier_2010.jpg/960px-199_-_Buenos_Aires_-_A%C3%A9roport_international_Ezeiza_-_Janvier_2010.jpg",
-          "alt": "199 - Buenos Aires - Aéroport international Ezeiza - Janvier 2010.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infrastructure-vs-Services.jpg/817px-Infrastructure-vs-Services.jpg",
+          "alt": "Infrastructure-vs-Services.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "international airport",
-          "_imageIntent": "photo",
-          "_riskProfile": "none",
-          "_score": 140,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Infrastructure diagrams\" urban network",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -630,14 +651,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Global_Grid_of_Probabilities_of_Urban_Expansion_to_2030_%2825213696153%29.jpg/960px-Global_Grid_of_Probabilities_of_Urban_Expansion_to_2030_%2825213696153%29.jpg",
-          "alt": "Global Grid of Probabilities of Urban Expansion to 2030 (25213696153).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Fig_4.3.3_Causal_loop_relation_of_the_vicious_cycle_of_urban_expansion_and_related_transport_regimes_that_need_to_be_broken_to_reduce_car.png/960px-Fig_4.3.3_Causal_loop_relation_of_the_vicious_cycle_of_urban_expansion_and_related_transport_regimes_that_need_to_be_broken_to_reduce_car.png",
+          "alt": "Fig 4.3.3 Causal loop relation of the vicious cycle of urban expansion and related transport regimes that need to be broken to reduce car.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "urban expansion",
-          "_imageIntent": "photo",
-          "_riskProfile": "none",
-          "_score": 130,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Urban sprawl diagrams\"",
+          "_imageIntent": "diagram",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 140,
           "_escalated": false
         }
       ]
@@ -657,11 +679,12 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Countries_using_Central_Europe_Time_plus_Longitude_15%C2%B0_E.png/960px-Countries_using_Central_Europe_Time_plus_Longitude_15%C2%B0_E.png",
-          "alt": "Countries using Central Europe Time plus Longitude 15° E.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Icones_ornithopterorum_%28MAP_4%29_%287704266858%29.jpg/960px-Icones_ornithopterorum_%28MAP_4%29_%287704266858%29.jpg",
+          "alt": "Icones ornithopterorum (MAP 4) (7704266858).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Longitude maps\" 4°E",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Longitude maps\" \"4°E\"",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
           "_score": 120,
@@ -684,14 +707,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/World_Map_1689.JPG/960px-World_Map_1689.JPG",
-          "alt": "World Map 1689.JPG",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Equator_and_Prime_Meridian.svg/960px-Equator_and_Prime_Meridian.svg.png",
+          "alt": "Equator and Prime Meridian.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"World maps\" equator",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Latitude maps\" equator",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 140,
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -711,14 +735,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/International_Date_Line_%28Kiribati_region%29.svg/960px-International_Date_Line_%28Kiribati_region%29.svg.png",
-          "alt": "International Date Line (Kiribati region).svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/International_Date_Line_South_Pacific.png/960px-International_Date_Line_South_Pacific.png",
+          "alt": "International Date Line South Pacific.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"World maps\" antimeridian",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 160,
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -738,14 +763,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Volgograd_climate_diagram-fr.svg/960px-Volgograd_climate_diagram-fr.svg.png",
-          "alt": "Volgograd climate diagram-fr.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/JPL_Horizons_On-Line_Ephemeris_System_output_values.png/914px-JPL_Horizons_On-Line_Ephemeris_System_output_values.png",
+          "alt": "JPL Horizons On-Line Ephemeris System output values.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "geographic coordinates diagram minutes seconds",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Coordinate system diagrams\" degrees minutes seconds",
           "_imageIntent": "diagram",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 100,
+          "_score": 130,
           "_escalated": false
         }
       ]
@@ -765,14 +791,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Atlas_de_Jacoubet_-_20._Index_-_Sheets_48%2C_52_-_David_Rumsey.jpg/960px-Atlas_de_Jacoubet_-_20._Index_-_Sheets_48%2C_52_-_David_Rumsey.jpg",
-          "alt": "Atlas de Jacoubet - 20. Index - Sheets 48, 52 - David Rumsey.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Atlas_maior_1655_-_vol_10_-_Novus_Atlas_Sinensis_-_index_-_P1080375.JPG/960px-Atlas_maior_1655_-_vol_10_-_Novus_Atlas_Sinensis_-_index_-_P1080375.JPG",
+          "alt": "Atlas maior 1655 - vol 10 - Novus Atlas Sinensis - index - P1080375.JPG",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "atlas index page",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 140,
+          "_score": 100,
           "_escalated": false
         }
       ]
@@ -792,14 +819,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Drente_hoogtekaart_met_hunebeddenlocaties_300dpi.png/960px-Drente_hoogtekaart_met_hunebeddenlocaties_300dpi.png",
-          "alt": "Drente hoogtekaart met hunebeddenlocaties 300dpi.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Landkaart_gras_nekkeveld.JPG/960px-Landkaart_gras_nekkeveld.JPG",
+          "alt": "Landkaart gras nekkeveld.JPG",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Randstad map labeled",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Maps of the Netherlands\" Randstad",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 160,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -819,14 +847,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/New_Orleans_Business_District_Skyline-ST-158-52-62.jpg/960px-New_Orleans_Business_District_Skyline-ST-158-52-62.jpg",
-          "alt": "New Orleans Business District Skyline-ST-158-52-62.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Skyline_of_the_Central_Business_District_of_Singapore_with_Esplanade_Bridge.jpg/960px-Skyline_of_the_Central_Business_District_of_Singapore_with_Esplanade_Bridge.jpg",
+          "alt": "Skyline of the Central Business District of Singapore with Esplanade Bridge.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "city skyline business district",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "business district skyline",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 110,
+          "_score": 130,
           "_escalated": false
         }
       ]
@@ -846,14 +875,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/7/71/Sign_Writers%2C_nota_bene%5E%5E_-_geograph.org.uk_-_3022860.jpg",
-          "alt": "Sign Writers, nota bene^^ - geograph.org.uk - 3022860.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Boeing_Compass_Cope_YQM-94A.svg/960px-Boeing_Compass_Cope_YQM-94A.svg.png",
+          "alt": "Boeing Compass Cope YQM-94A.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Nota Bene sign",
-          "_imageIntent": "photo",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Abbreviations\" Nota Bene",
+          "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 130,
+          "_score": 70,
           "_escalated": false
         }
       ]
@@ -873,14 +903,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Dutch_Provinces_am.png",
-          "alt": "Dutch Provinces am.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/LocDBMap.PNG/919px-LocDBMap.PNG",
+          "alt": "LocDBMap.PNG",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "Netherlands map extreme points",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Maps of the Netherlands\" location",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 170,
+          "_score": 180,
           "_escalated": false
         }
       ]
@@ -900,14 +931,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/AERIAL_VIEW_OF_FOUR_LEVEL_INTERCHANGE_OF_ARROYO_SECO_PARKWAY_AND_HIGHWAY_101._LOOKING_NE._-_Arroyo_Seco_Parkway%2C_Los_Angeles_to_Pasadena%2C_Los_Angeles%2C_Los_Angeles_County%2C_CA_HAER_CAL%2C19-LOSAN%2C83-15.tif/lossy-page1-800px-thumbnail.tif.jpg",
-          "alt": "AERIAL VIEW OF FOUR LEVEL INTERCHANGE OF ARROYO SECO PARKWAY AND HIGHWAY 101. LOOKING NE. - Arroyo Seco Parkway, Los Angeles to Pasadena, Los Angeles, Los Angeles County, CA HAER CAL,19-LOSAN,83-15.tif",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Rail_transport_infrastructure_map_-_FR_-_Occitanie.svg/960px-Rail_transport_infrastructure_map_-_FR_-_Occitanie.svg.png",
+          "alt": "Rail transport infrastructure map - FR - Occitanie.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "highway interchange aerial view",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "highway interchange aerial",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 100,
+          "_score": 60,
           "_escalated": false
         }
       ]
@@ -927,14 +959,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Russia_Population_Density_Map_2021.png/960px-Russia_Population_Density_Map_2021.png",
-          "alt": "Russia Population Density Map 2021.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/World_population_density_1994.png/960px-World_population_density_1994.png",
+          "alt": "World population density 1994.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "population density map",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Population density maps\" world",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 210,
+          "_score": 220,
           "_escalated": false
         }
       ]
@@ -957,11 +990,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Japan%E2%80%99s_Meiji_Industrial_Revolution_sites_map_Nagasaki_City_center.svg/960px-Japan%E2%80%99s_Meiji_Industrial_Revolution_sites_map_Nagasaki_City_center.svg.png",
           "alt": "Japan’s Meiji Industrial Revolution sites map Nagasaki City center.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "industrial revolution city illustration",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Industrial Revolution\" city growth",
           "_imageIntent": "historical_illustration",
           "_riskProfile": "historical_vs_modern",
-          "_score": 140,
+          "_score": 180,
           "_escalated": false
         }
       ]
@@ -981,11 +1015,12 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Melrose_Apartment_Building%2C_Galveston.jpg/960px-Melrose_Apartment_Building%2C_Galveston.jpg",
-          "alt": "Melrose Apartment Building, Galveston.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Zicht_op_een_portiekflat_gelegen_bij_het_Westbroekpark_-_%27s-Gravenhage_-_20398109_-_RCE.jpg/960px-Zicht_op_een_portiekflat_gelegen_bij_het_Westbroekpark_-_%27s-Gravenhage_-_20398109_-_RCE.jpg",
+          "alt": "Zicht op een portiekflat gelegen bij het Westbroekpark - 's-Gravenhage - 20398109 - RCE.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "portiekflat",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "apartment building portiekflat",
           "_imageIntent": "photo",
           "_riskProfile": "none",
           "_score": 60,
@@ -1011,11 +1046,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Shaw_School_Urban_Renewal_Area_map_1973.jpg/960px-Shaw_School_Urban_Renewal_Area_map_1973.jpg",
           "alt": "Shaw School Urban Renewal Area map 1973.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "metropolitan area map",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "urban agglomeration map",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 100,
+          "_score": 170,
           "_escalated": false
         }
       ]
@@ -1038,7 +1074,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1775_Lattre_and_Janvier_Map_of_the_World_on_a_Hemisphere_Projection_-_Geographicus_-_World-lattre-1775.jpg/960px-1775_Lattre_and_Janvier_Map_of_the_World_on_a_Hemisphere_Projection_-_Geographicus_-_World-lattre-1775.jpg",
           "alt": "1775 Lattre and Janvier Map of the World on a Hemisphere Projection - Geographicus - World-lattre-1775.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"World maps\" equator labeled",
           "_imageIntent": "diagram",
           "_riskProfile": "thematic_vs_tourist",
@@ -1065,7 +1102,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Robinson_projection_with_major_circles_of_latitude_and_prime_meridian_labeled.png/960px-Robinson_projection_with_major_circles_of_latitude_and_prime_meridian_labeled.png",
           "alt": "Robinson projection with major circles of latitude and prime meridian labeled.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"World maps\" prime meridian labeled",
           "_imageIntent": "diagram",
           "_riskProfile": "thematic_vs_tourist",
@@ -1089,14 +1127,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Latitude_and_Longitude_of_the_Earth.svg/960px-Latitude_and_Longitude_of_the_Earth.svg.png",
-          "alt": "Latitude and Longitude of the Earth.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/TriMet_MAX_Light_Rail_map.svg/960px-TriMet_MAX_Light_Rail_map.svg.png",
+          "alt": "TriMet MAX Light Rail map.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "geographic coordinates latitude longitude diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "longitude latitude diagram labeled",
           "_imageIntent": "diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 180,
+          "_riskProfile": "none",
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -1116,14 +1155,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/PIA22090-Ceres-DwarfPlanet-NotableFeatures-20180117.jpg/960px-PIA22090-Ceres-DwarfPlanet-NotableFeatures-20180117.jpg",
-          "alt": "PIA22090-Ceres-DwarfPlanet-NotableFeatures-20180117.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Equator_on_GPS.JPG/960px-Equator_on_GPS.JPG",
+          "alt": "Equator on GPS.JPG",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"World maps\" cities near equator",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 150,
+          "_score": 100,
           "_escalated": false
         }
       ]
@@ -1146,11 +1186,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/World_-_time_zones_map_%282014%29.svg/960px-World_-_time_zones_map_%282014%29.svg.png",
           "alt": "World - time zones map (2014).svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "coordinate system time zones diagram",
-          "_imageIntent": "diagram",
+          "_imageIntent": "concept_diagram",
           "_riskProfile": "thematic_vs_tourist",
-          "_score": 220,
+          "_score": 210,
           "_escalated": false
         }
       ]
@@ -1170,14 +1211,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Alagoas_Geogr%C3%A1fico.png/944px-Alagoas_Geogr%C3%A1fico.png",
-          "alt": "Alagoas Geográfico.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Digital-elevation-map-california.png/960px-Digital-elevation-map-california.png",
+          "alt": "Digital-elevation-map-california.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "GIS software screenshot",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "digital map GIS example",
           "_imageIntent": "photo",
           "_riskProfile": "diagram_vs_photo",
-          "_score": 110,
+          "_score": 90,
           "_escalated": false
         }
       ]
@@ -1197,14 +1239,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/c/c5/La_Campagne_D%27ANDOHARANO.jpg",
-          "alt": "La Campagne D'ANDOHARANO.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Giethoorn_Netherlands_Bovenwijde-06.jpg/960px-Giethoorn_Netherlands_Bovenwijde-06.jpg",
+          "alt": "Giethoorn Netherlands Bovenwijde-06.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "village vs city infrastructure",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "village rural area Netherlands",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 120,
+          "_score": 100,
           "_escalated": false
         }
       ]
@@ -1224,14 +1267,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Traffic_congestion_-_JBS_Haldane_Avenue_-_Dinosaurs_Alive_Exhibition_-_Science_City_Area_-_Calcutta_1995_June-July_356.JPG/960px-Traffic_congestion_-_JBS_Haldane_Avenue_-_Dinosaurs_Alive_Exhibition_-_Science_City_Area_-_Calcutta_1995_June-July_356.JPG",
-          "alt": "Traffic congestion - JBS Haldane Avenue - Dinosaurs Alive Exhibition - Science City Area - Calcutta 1995 June-July 356.JPG",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Population_Density_in_the_New_York_City_Urban_Area_in_2020.png/960px-Population_Density_in_the_New_York_City_Urban_Area_in_2020.png",
+          "alt": "Population Density in the New York City Urban Area in 2020.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "urban congestion",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "urban area population density",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 200,
+          "_score": 160,
           "_escalated": false
         }
       ]
@@ -1251,14 +1295,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/ADEN_DISTRICS_MAP-02-02.png/960px-ADEN_DISTRICS_MAP-02-02.png",
-          "alt": "ADEN DISTRICS MAP-02-02.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Lycogala_epidendrum_-_young_aethalia_with_ruler_for_scale.jpg/960px-Lycogala_epidendrum_-_young_aethalia_with_ruler_for_scale.jpg",
+          "alt": "Lycogala epidendrum - young aethalia with ruler for scale.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "map scale ruler",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 180,
+          "_score": 100,
           "_escalated": false
         }
       ]
@@ -1278,14 +1323,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Latitude_and_Longitude_of_the_Earth-mk.svg/960px-Latitude_and_Longitude_of_the_Earth-mk.svg.png",
-          "alt": "Latitude and Longitude of the Earth-mk.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kuopio_climate_diagram.svg/960px-Kuopio_climate_diagram.svg.png",
+          "alt": "Kuopio climate diagram.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "geographic coordinates latitude longitude diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "longitude latitude diagram labeled",
           "_imageIntent": "diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 180,
+          "_riskProfile": "none",
+          "_score": 170,
           "_escalated": false
         }
       ]
@@ -1305,14 +1351,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Suburban_development_and_sprawl_maple_ontario_dufferin_majormack_keele.jpg/960px-Suburban_development_and_sprawl_maple_ontario_dufferin_majormack_keele.jpg",
-          "alt": "Suburban development and sprawl maple ontario dufferin majormack keele.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Laggan_urban_sprawl._-_geograph.org.uk_-_130410.jpg",
+          "alt": "Laggan urban sprawl. - geograph.org.uk - 130410.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "urban sprawl",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "urban sprawl conurbation",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 180,
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -1332,14 +1379,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f9/New_Housing_Development_-_geograph.org.uk_-_236780.jpg",
-          "alt": "New Housing Development - geograph.org.uk - 236780.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Woningbouw_Pendrecht_-_Housing_Pendrecht_%289773769173%29.jpg/960px-Woningbouw_Pendrecht_-_Housing_Pendrecht_%289773769173%29.jpg",
+          "alt": "Woningbouw Pendrecht - Housing Pendrecht (9773769173).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "new housing development",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "new housing development Netherlands",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 110,
+          "_score": 140,
           "_escalated": false
         }
       ]
@@ -1359,11 +1407,12 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sub_Regional_Economic_Cooperation_Zones.gif/960px-Sub_Regional_Economic_Cooperation_Zones.gif",
-          "alt": "Sub Regional Economic Cooperation Zones.gif",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/107.35149E_34.75769N.png/960px-107.35149E_34.75769N.png",
+          "alt": "107.35149E 34.75769N.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Maps of Special Economic Zones\" China \"Z.B.\"",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Maps of Special Economic Zones of China\" \"Special Economic Zone\"",
           "_imageIntent": "map",
           "_riskProfile": "thematic_vs_tourist",
           "_score": 160,

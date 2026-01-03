@@ -23,9 +23,10 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Dissected_lactating_breast_gray1172.png",
           "alt": "Dissected lactating breast gray1172.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Human skeleton diagrams\" functions -animal",
-          "_imageIntent": "diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Human skeleton diagrams\" functions -animal -insect -fish",
+          "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
           "_score": 100,
           "_escalated": false
@@ -47,14 +48,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Axial_skeleton_diagram_blank.svg/960px-Axial_skeleton_diagram_blank.svg.png",
-          "alt": "Axial skeleton diagram blank.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Axial_skeleton_diagram_fr.svg/960px-Axial_skeleton_diagram_fr.svg.png",
+          "alt": "Axial skeleton diagram fr.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Human skeleton diagrams\" trunk bones labeled -animal",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Human skeleton diagrams\" trunk bones -animal -insect -fish",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 200,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -77,11 +79,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Composition_of_bone.png/960px-Composition_of_bone.png",
           "alt": "Composition of bone.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "bone composition diagram calcium phosphate",
           "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 190,
+          "_score": 160,
           "_escalated": false
         }
       ]
@@ -101,14 +104,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bone_cross-section_uk.svg/960px-Bone_cross-section_uk.svg.png",
-          "alt": "Bone cross-section uk.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Skeleton_diagram_of_a_cat.svg/960px-Skeleton_diagram_of_a_cat.svg.png",
+          "alt": "Skeleton diagram of a cat.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "bone development diagram child adult",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "bone flexibility age diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 250,
+          "_score": 170,
           "_escalated": false
         }
       ]
@@ -128,14 +132,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Gray295.png",
-          "alt": "Gray295.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Gray989.png",
+          "alt": "Gray989.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human cartilage locations diagram -animal",
-          "_imageIntent": "diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" cartilage locations human -animal -insect -fish",
+          "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 280,
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -158,7 +163,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fontanelle-dt.JPG",
           "alt": "Fontanelle-dt.JPG",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Gray's Anatomy plates\" skull fontanelle -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
@@ -182,14 +188,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ball_and_Socket_Joint_%28Hip_joint%29.svg/960px-Ball_and_Socket_Joint_%28Hip_joint%29.svg.png",
-          "alt": "Ball and Socket Joint (Hip joint).svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/904_Fibrous_Joints.jpg/960px-904_Fibrous_Joints.jpg",
+          "alt": "904 Fibrous Joints.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "immovable joint diagram",
-          "_imageIntent": "diagram",
-          "_riskProfile": "none",
-          "_score": 180,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" fibrous joint -animal -insect -fish",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 120,
           "_escalated": false
         }
       ]
@@ -209,14 +216,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Common_joint_types.svg/960px-Common_joint_types.svg.png",
-          "alt": "Common joint types.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Gray1172.png/960px-Gray1172.png",
+          "alt": "Gray1172.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "cartilaginous joint diagram",
-          "_imageIntent": "diagram",
-          "_riskProfile": "none",
-          "_score": 130,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" cartilaginous joint -animal -insect -fish",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 100,
           "_escalated": false
         }
       ]
@@ -239,11 +247,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Prognathodon_tissue.jpg/960px-Prognathodon_tissue.jpg",
           "alt": "Prognathodon tissue.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "bone cells micrograph osteocytes",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "bone cell micrograph osteocyte",
           "_imageIntent": "micrograph",
           "_riskProfile": "none",
-          "_score": 240,
+          "_score": 140,
           "_escalated": false
         }
       ]
@@ -266,7 +275,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Potential_origins_and_trafficking_of_fibrocytes.jpg/960px-Potential_origins_and_trafficking_of_fibrocytes.jpg",
           "alt": "Potential origins and trafficking of fibrocytes.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "bone collagen function diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "none",
@@ -283,14 +293,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Gray1172.png/960px-Gray1172.png",
-          "alt": "Gray1172.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Haultain_and_Ferguson_-_female_skeleton_in_colour.svg/960px-Haultain_and_Ferguson_-_female_skeleton_in_colour.svg.png",
+          "alt": "Haultain and Ferguson - female skeleton in colour.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": " diagram",
-          "_imageIntent": "labeled_diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human skeleton",
+          "_imageIntent": "photo",
           "_riskProfile": "human_vs_animal",
-          "_score": 160,
+          "_score": 80,
           "_escalated": false
         }
       ]
@@ -313,11 +324,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Temporomandibular_joint_number.svg/960px-Temporomandibular_joint_number.svg.png",
           "alt": "Temporomandibular joint number.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "joint cartilage function diagram",
-          "_imageIntent": "diagram",
-          "_riskProfile": "none",
-          "_score": 300,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "incategory:\"Gray's Anatomy plates\" articular cartilage function -animal -insect -fish",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 130,
           "_escalated": false
         }
       ]
@@ -340,7 +352,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Shoulder_Capsule.png",
           "alt": "Shoulder Capsule.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Gray's Anatomy plates\" joint capsule human -animal",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
@@ -364,14 +377,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/9/96/Shoulder_joint_anatomy_quiz.jpg",
-          "alt": "Shoulder joint anatomy quiz.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ball_and_Socket_Joint_%28Hip_joint%29.svg/960px-Ball_and_Socket_Joint_%28Hip_joint%29.svg.png",
+          "alt": "Ball and Socket Joint (Hip joint).svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Gray's Anatomy plates\" ball and socket joint human -animal",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 170,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -391,14 +405,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/8/83/Bursa_of_elbow_joint.jpg",
-          "alt": "Bursa of elbow joint.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Human_arm_bones_diagram.heb.svg/960px-Human_arm_bones_diagram.heb.svg.png",
+          "alt": "Human arm bones diagram.heb.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" hinge joint human -animal",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human hinge joint diagram -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 200,
+          "_score": 190,
           "_escalated": false
         }
       ]
@@ -418,14 +433,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/909_Types_of_Synovial_Joints_esp.jpg/960px-909_Types_of_Synovial_Joints_esp.jpg",
-          "alt": "909 Types of Synovial Joints esp.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Knee_diagram_pl.svg/960px-Knee_diagram_pl.svg.png",
+          "alt": "Knee diagram pl.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human joint types diagram -animal",
-          "_imageIntent": "diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human synovial joint diagram -animal",
+          "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 140,
+          "_score": 150,
           "_escalated": false
         }
       ]
@@ -445,14 +461,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Gray989.png",
-          "alt": "Gray989.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/1-1lentel%C4%97.Griau%C4%8Di%C5%B3_raumenini%C5%B3_skaidul%C5%B3_tipai..jpg/942px-1-1lentel%C4%97.Griau%C4%8Di%C5%B3_raumenini%C5%B3_skaidul%C5%B3_tipai..jpg",
+          "alt": "1-1lentelė.Griaučių raumeninių skaidulų tipai..jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human joint lubrication diagram -animal",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human osteoarthritis diagram -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 120,
+          "_score": 90,
           "_escalated": false
         }
       ]
@@ -472,14 +489,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Knee_diagram_pl.svg/960px-Knee_diagram_pl.svg.png",
-          "alt": "Knee diagram pl.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Knee_diagram_tr.svg/960px-Knee_diagram_tr.svg.png",
+          "alt": "Knee diagram tr.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human ligament joint diagram -animal",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human joint ligaments diagram -animal",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 140,
+          "_score": 130,
           "_escalated": false
         }
       ]
@@ -502,11 +520,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/716_Intervertebral_Disk.svg/960px-716_Intervertebral_Disk.svg.png",
           "alt": "716 Intervertebral Disk.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "human intervertebral disc diagram -animal",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 230,
+          "_score": 260,
           "_escalated": false
         }
       ]
@@ -526,14 +545,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Spine_of_scapula.PNG",
-          "alt": "Spine of scapula.PNG",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Arm_Spinal_column_curvature_2011.png",
+          "alt": "Arm Spinal column curvature 2011.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "human spine curvature diagram -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 190,
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -553,11 +573,12 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Skeletal_muscle_and_fiber.jpg/960px-Skeletal_muscle_and_fiber.jpg",
-          "alt": "Skeletal muscle and fiber.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Hand_bones_numbered.png",
+          "alt": "Hand bones numbered.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human muscle tendon bone diagram -animal",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human muscle tendon attachment diagram -animal",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
           "_score": 170,
@@ -583,11 +604,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Elements_of_human_physiology_%281907%29_%2821252002612%29.jpg",
           "alt": "Elements of human physiology (1907) (21252002612).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "human muscle contraction diagram -animal",
           "_imageIntent": "concept_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 150,
+          "_score": 170,
           "_escalated": false
         }
       ]
@@ -607,14 +629,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/A_text-book_of_human_physiology_%281906%29_%2814770092742%29.jpg/960px-A_text-book_of_human_physiology_%281906%29_%2814770092742%29.jpg",
-          "alt": "A text-book of human physiology (1906) (14770092742).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Diseases_of_the_nervous_system_%281910%29_%2814772980145%29.jpg/960px-Diseases_of_the_nervous_system_%281910%29_%2814772980145%29.jpg",
+          "alt": "Diseases of the nervous system (1910) (14772980145).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human muscle sarcomere contraction diagram -animal",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human muscle fiber contraction diagram -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 130,
+          "_score": 100,
           "_escalated": false
         }
       ]
@@ -634,14 +657,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Hand-book_of_physiology_%281892%29_%2814763044154%29.jpg/960px-Hand-book_of_physiology_%281892%29_%2814763044154%29.jpg",
-          "alt": "Hand-book of physiology (1892) (14763044154).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wrist_and_hand_deeper_palmar_dissection-numbers.svg/960px-Wrist_and_hand_deeper_palmar_dissection-numbers.svg.png",
+          "alt": "Wrist and hand deeper palmar dissection-numbers.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human antagonistic muscles diagram -animal",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human agonist antagonist muscle diagram -animal",
           "_imageIntent": "concept_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 140,
+          "_score": 180,
           "_escalated": false
         }
       ]
@@ -661,14 +685,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Biceps_Brachii_Muscle_Contraction.jpg/960px-Biceps_Brachii_Muscle_Contraction.jpg",
-          "alt": "Biceps Brachii Muscle Contraction.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Anatomy%2C_physiology_and_hygiene_%281890%29_%2814577957577%29.jpg",
+          "alt": "Anatomy, physiology and hygiene (1890) (14577957577).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "incategory:\"Gray's Anatomy plates\" biceps triceps antagonist human -animal -insect -fish",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 130,
+          "_score": 160,
           "_escalated": false
         }
       ]
@@ -691,7 +716,8 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/0/0b/NSdiagram.png",
           "alt": "NSdiagram.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "autonomic nervous system diagram human -animal -insect -fish",
           "_imageIntent": "concept_diagram",
           "_riskProfile": "human_vs_animal",
@@ -715,14 +741,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/1107_The_Extrinsic_Eye_Muscles.jpg/960px-1107_The_Extrinsic_Eye_Muscles.jpg",
-          "alt": "1107 The Extrinsic Eye Muscles.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Eye-diagram_no_circles_border.svg/960px-Eye-diagram_no_circles_border.svg.png",
+          "alt": "Eye-diagram no circles border.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "eye muscle anatomy human -animal -insect -fish",
-          "_imageIntent": "photo",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "ciliary muscle diagram human eye -animal -insect -fish",
+          "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 150,
+          "_score": 210,
           "_escalated": false
         }
       ]
@@ -742,14 +769,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/S-ART_Mindfulness_and_brain3.jpg/843px-S-ART_Mindfulness_and_brain3.jpg",
-          "alt": "S-ART Mindfulness and brain3.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Office_typing_instruction%2C_correct_hands_position.jpg/960px-Office_typing_instruction%2C_correct_hands_position.jpg",
+          "alt": "Office typing instruction, correct hands position.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "motor learning diagram",
-          "_imageIntent": "concept_diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 130,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "playing piano hands",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -769,14 +797,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Descartes_diagram.png/844px-Descartes_diagram.png",
-          "alt": "Descartes diagram.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Knee_diagram_es.svg/960px-Knee_diagram_es.svg.png",
+          "alt": "Knee diagram es.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human movement coordination diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "human coordination diagram",
           "_imageIntent": "concept_diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 150,
+          "_riskProfile": "human_vs_animal",
+          "_score": 170,
           "_escalated": false
         }
       ]
@@ -796,14 +825,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Insufficient_physical_activity.png/960px-Insufficient_physical_activity.png",
-          "alt": "Insufficient physical activity.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Summer_Streets_NYC_2023-08-19%2C_people_running_on_Park_Avenue_and_91st-92nd%2C_Carnegie_Hill%2C_Upper_East_Side%2C_Manhattan.jpg/960px-Summer_Streets_NYC_2023-08-19%2C_people_running_on_Park_Avenue_and_91st-92nd%2C_Carnegie_Hill%2C_Upper_East_Side%2C_Manhattan.jpg",
+          "alt": "Summer Streets NYC 2023-08-19, people running on Park Avenue and 91st-92nd, Carnegie Hill, Upper East Side, Manhattan.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "exercise health benefits",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "people exercising outdoors",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 110,
+          "_score": 60,
           "_escalated": false
         }
       ]
@@ -823,11 +853,12 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/Moharram_Military_Exercise_-_Preparation_Phase_%2818%29.jpg",
-          "alt": "Moharram Military Exercise - Preparation Phase (18).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/2007Taipei101RunUp_WarmingUp_Starting.jpg/960px-2007Taipei101RunUp_WarmingUp_Starting.jpg",
+          "alt": "2007Taipei101RunUp WarmingUp Starting.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "warming up exercise",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "people warming up exercise",
           "_imageIntent": "photo",
           "_riskProfile": "none",
           "_score": 100,
@@ -850,14 +881,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/2007Taipei101RunUp_WarmingUp_Starting.jpg/960px-2007Taipei101RunUp_WarmingUp_Starting.jpg",
-          "alt": "2007Taipei101RunUp WarmingUp Starting.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Euphronios_ARV_13_1_young_athletes_preparing_themselves_%2803%29.jpg/960px-Euphronios_ARV_13_1_young_athletes_preparing_themselves_%2803%29.jpg",
+          "alt": "Euphronios ARV 13 1 young athletes preparing themselves (03).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "sports warm up cool down",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "athletes resting after warm up",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 110,
+          "_score": 70,
           "_escalated": false
         }
       ]
@@ -877,14 +909,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/8/86/Personal_trainer_assisting_and_correcting_a_client_during_a_fitball_stretching_exercise.jpg",
-          "alt": "Personal trainer assisting and correcting a client during a fitball stretching exercise.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Osteopathic_first_aids_to_the_sick_-_written_for_the_sick_people_%281906%29_%2814781111244%29.jpg/960px-Osteopathic_first_aids_to_the_sick_-_written_for_the_sick_people_%281906%29_%2814781111244%29.jpg",
+          "alt": "Osteopathic first aids to the sick - written for the sick people (1906) (14781111244).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "stretching exercise",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "people stretching muscles",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 140,
+          "_score": 90,
           "_escalated": false
         }
       ]
@@ -904,14 +937,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/The_book_of_school_and_college_sports_%281904%29_%2814591469967%29.jpg/960px-The_book_of_school_and_college_sports_%281904%29_%2814591469967%29.jpg",
-          "alt": "The book of school and college sports (1904) (14591469967).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Halifax_books_and_authors._A_series_of_articles_on_the_books_written_by_natives_and_residents%2C_ancient_and_modern%2C_of_the_parish_of_Halifax_%28stretching_from_Todmorden_to_Brighouse%29_%281906%29_%2814780160825%29.jpg/960px-thumbnail.jpg",
+          "alt": "Halifax books and authors. A series of articles on the books written by natives and residents, ancient and modern, of the parish of Halifax (stretching from Todmorden to Brighouse) (1906) (14780160825).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "cooling down exercise",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "athletes cooling down exercise",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 140,
+          "_score": 90,
           "_escalated": false
         }
       ]
@@ -931,14 +965,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Symptoms_of_coronavirus_disease_2019_in_Vietnamese.svg/960px-Symptoms_of_coronavirus_disease_2019_in_Vietnamese.svg.png",
-          "alt": "Symptoms of coronavirus disease 2019 in Vietnamese.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Muscle_spindle_antioxidants-09-00212-g001.png/960px-Muscle_spindle_antioxidants-09-00212-g001.png",
+          "alt": "Muscle spindle antioxidants-09-00212-g001.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "delayed onset muscle soreness diagram",
-          "_imageIntent": "diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 70,
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "muscle soreness exercise",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 130,
           "_escalated": false
         }
       ]
@@ -961,11 +996,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Sport_injury_warning_sign.jpg/960px-Sport_injury_warning_sign.jpg",
           "alt": "Sport injury warning sign.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "sports injury",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 140,
+          "_score": 80,
           "_escalated": false
         }
       ]
@@ -985,14 +1021,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sch%C3%A9ma_RSI.svg/960px-Sch%C3%A9ma_RSI.svg.png",
-          "alt": "Schéma RSI.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Gray988.png",
+          "alt": "Gray988.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "RSI diagram human",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "RSI diagram human -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 80,
+          "_score": 90,
           "_escalated": false
         }
       ]
@@ -1012,14 +1049,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Operating_a_Computer_Keyboard_MOD_45158111.jpg/960px-Operating_a_Computer_Keyboard_MOD_45158111.jpg",
-          "alt": "Repetitive strain injury",
-          "caption": "Bron: Wikipedia",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "incategory:\"People with RSI\" pain",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d3/1033race.jpg",
+          "alt": "1033race.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "neck pain computer human -animal",
           "_imageIntent": "photo",
           "_riskProfile": "human_vs_animal",
-          "_score": 55,
+          "_score": 50,
           "_escalated": false
         }
       ]
@@ -1039,14 +1077,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Bad_posture.jpg",
-          "alt": "Bad posture.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ergonomic_Workstation.png/889px-Ergonomic_Workstation.png",
+          "alt": "Ergonomic Workstation.png",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "ergonomics break computer human",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "ergonomics computer break human -animal",
           "_imageIntent": "photo",
           "_riskProfile": "human_vs_animal",
-          "_score": 80,
+          "_score": 100,
           "_escalated": false
         }
       ]
@@ -1066,14 +1105,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ergonomics_of_drawing_tablets_by_David_Revoy.svg/960px-Ergonomics_of_drawing_tablets_by_David_Revoy.svg.png",
-          "alt": "Ergonomics of drawing tablets by David Revoy.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/3/35/Computer_Workstation_Variables.jpg",
+          "alt": "Computer Workstation Variables.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "ergonomics computer posture diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "ergonomics workstation diagram human -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 200,
+          "_score": 70,
           "_escalated": false
         }
       ]
@@ -1093,14 +1133,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/GuteSitzhaltungSchlechteSitzhaltung.svg/960px-GuteSitzhaltungSchlechteSitzhaltung.svg.png",
-          "alt": "GuteSitzhaltungSchlechteSitzhaltung.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Henry_Dreyfus_Cruising_Bicycle_Posture_AND_Strida.jpg/960px-Henry_Dreyfus_Cruising_Bicycle_Posture_AND_Strida.jpg",
+          "alt": "Henry Dreyfus Cruising Bicycle Posture AND Strida.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "sitting posture diagram human",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "sitting posture diagram human -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 100,
+          "_score": 90,
           "_escalated": false
         }
       ]
@@ -1120,14 +1161,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/120101-M-YO938-016_%286641606175%29.jpg/960px-120101-M-YO938-016_%286641606175%29.jpg",
-          "alt": "120101-M-YO938-016 (6641606175).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ergonomics_of_drawing_tablets_by_David_Revoy.svg/960px-Ergonomics_of_drawing_tablets_by_David_Revoy.svg.png",
+          "alt": "Ergonomics of drawing tablets by David Revoy.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "stretching exercise break human",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "stretching hands phone human -animal",
           "_imageIntent": "photo",
           "_riskProfile": "human_vs_animal",
-          "_score": 150,
+          "_score": 80,
           "_escalated": false
         }
       ]
@@ -1150,11 +1192,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Pygoscelis_papua_-Nagasaki_Penguin_Aquarium_-swimming_underwater-8a.jpg/960px-Pygoscelis_papua_-Nagasaki_Penguin_Aquarium_-swimming_underwater-8a.jpg",
           "alt": "Pygoscelis papua -Nagasaki Penguin Aquarium -swimming underwater-8a.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "penguin swimming",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 110,
+          "_score": 90,
           "_escalated": false
         }
       ]
@@ -1177,11 +1220,12 @@
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Adelie_penguin_%28Pygoscelis_adeliae%29%2C_walking.jpg/960px-Adelie_penguin_%28Pygoscelis_adeliae%29%2C_walking.jpg",
           "alt": "Adelie penguin (Pygoscelis adeliae), walking.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "penguin walking",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 140,
+          "_score": 110,
           "_escalated": false
         }
       ]
@@ -1201,14 +1245,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/BirdWingFeatherSketch-gl.svg/960px-BirdWingFeatherSketch-gl.svg.png",
-          "alt": "BirdWingFeatherSketch-gl.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Wing_Muscles%2C_color.svg/960px-Wing_Muscles%2C_color.svg.png",
+          "alt": "Wing Muscles, color.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "penguin anatomy wings labeled",
-          "_imageIntent": "labeled_diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "penguin skeleton diagram",
+          "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 150,
+          "_score": 210,
           "_escalated": false
         }
       ]
@@ -1228,14 +1273,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/4493157583_7e65524ff4_bAutopsieOiseau.jpg/960px-4493157583_7e65524ff4_bAutopsieOiseau.jpg",
-          "alt": "4493157583 7e65524ff4 bAutopsieOiseau.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/NIE_1905_Bird_-_anatomy.jpg/960px-NIE_1905_Bird_-_anatomy.jpg",
+          "alt": "NIE 1905 Bird - anatomy.jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "penguin skeleton keel labeled",
-          "_imageIntent": "labeled_diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "penguin keel diagram",
+          "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 110,
+          "_score": 170,
           "_escalated": false
         }
       ]
@@ -1290,14 +1336,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Maintainers_participate_in_Integrated_Training_Exercise_%28ITX%29_2-16_160124-F-MJ875-607.jpg/960px-Maintainers_participate_in_Integrated_Training_Exercise_%28ITX%29_2-16_160124-F-MJ875-607.jpg",
-          "alt": "Maintainers participate in Integrated Training Exercise (ITX) 2-16 160124-F-MJ875-607.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/6e/93_of_%27The_Ground_beneath_us%2C_its_geological_changes_and_phases._..._Three_lectures%27_%2811236159095%29.jpg",
+          "alt": "93 of 'The Ground beneath us, its geological changes and phases. ... Three lectures' (11236159095).jpg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
           "_searchTerm": "training phases diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 160,
+          "_score": 80,
           "_escalated": false
         }
       ]
@@ -1402,14 +1449,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wrist_and_hand_deeper_palmar_dissection-numbers.svg/960px-Wrist_and_hand_deeper_palmar_dissection-numbers.svg.png",
-          "alt": "Wrist and hand deeper palmar dissection-numbers.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Hematopoiesis_%28human%29_diagram_en.svg/960px-Hematopoiesis_%28human%29_diagram_en.svg.png",
+          "alt": "Hematopoiesis (human) diagram en.svg",
           "caption": "Bron: Wikimedia Commons",
-          "_source": "commons-ai-v3.3",
-          "_searchTerm": "human musculoskeletal system diagram",
+          "_source": "ai-v3.4",
+          "_imageSource": "commons",
+          "_searchTerm": "checklist diagram",
           "_imageIntent": "diagram",
-          "_riskProfile": "human_vs_animal",
-          "_score": 160,
+          "_riskProfile": "none",
+          "_score": 150,
           "_escalated": false
         }
       ]
