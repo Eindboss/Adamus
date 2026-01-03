@@ -207,16 +207,19 @@ Geef ALLEEN de JSON, geen andere tekst.`;
 function findReferencedImages(quiz, quizDir) {
   const images = [];
 
-  for (const q of quiz.questions || []) {
-    // Check media array
+  const questions = quiz.questions || quiz.question_bank || [];
+  for (const q of questions) {
+    // Check media array (can be array or object)
     if (q.media) {
-      for (const m of q.media) {
+      const mediaItems = Array.isArray(q.media) ? q.media : [q.media];
+      for (const m of mediaItems) {
         if (m.type === 'image' && m.src) {
           images.push({
             questionId: q.id,
             src: m.src,
-            fullPath: path.resolve(quizDir, '..', m.src),
-            context: q.q || q.instruction || '',
+            fullPath: m.src.startsWith('http') ? m.src : path.resolve(quizDir, '..', m.src),
+            isUrl: m.src.startsWith('http'),
+            context: q.q || q.instruction || q.prompt?.text || '',
           });
         }
       }
@@ -242,8 +245,10 @@ function findReferencedImages(quiz, quizDir) {
 function findQuestionsWithoutImages(quiz) {
   const questionsWithoutImages = [];
 
-  for (const q of quiz.questions || []) {
-    const hasImage = (q.media && q.media.some(m => m.type === 'image')) || q.img;
+  const questions = quiz.questions || quiz.question_bank || [];
+  for (const q of questions) {
+    const mediaItems = Array.isArray(q.media) ? q.media : (q.media ? [q.media] : []);
+    const hasImage = mediaItems.some(m => m.type === 'image') || q.img;
 
     if (!hasImage) {
       // Skip certain question types that don't need images
@@ -293,6 +298,17 @@ async function validateQuiz(quizPath, options = {}) {
 
     for (const img of images) {
       process.stdout.write(`  ${img.questionId}: `);
+
+      // Skip URL images for now (can't validate with base64)
+      if (img.isUrl) {
+        console.log(`URL (${img.src.substring(0, 50)}...)`);
+        results.existingImages.push({
+          ...img,
+          validation: { recommendation: 'behouden', note: 'URL image - not validated locally' }
+        });
+        results.summary.valid++;
+        continue;
+      }
 
       if (!fs.existsSync(img.fullPath)) {
         console.log('MISSING');
@@ -385,7 +401,8 @@ function findAllQuizFiles(dataDir) {
         // Check if it's a quiz file
         try {
           const data = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
-          if (data.questions && Array.isArray(data.questions)) {
+          if ((data.questions && Array.isArray(data.questions)) ||
+              (data.question_bank && Array.isArray(data.question_bank))) {
             files.push(fullPath);
           }
         } catch (e) {
