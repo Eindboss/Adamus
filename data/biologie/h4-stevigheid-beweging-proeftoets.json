@@ -17,24 +17,19 @@
       ],
       "c": 3,
       "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd.",
-      "media": {
-        "query": "human skeleton full body anatomy",
-        "alt": "volledig skelet (hele lichaam), duidelijk herkenbaar",
-        "negativeTerms": [
-          "dinosaur",
-          "museum",
-          "statue"
-        ],
-        "_intent": {
-          "primaryConcept": "menselijk skelet – functies",
-          "specificFocus": "volledig skelet (hele lichaam), duidelijk herkenbaar",
-          "representation": "photo of labeled diagram",
-          "uniquenessKey": "skeleton-full-body"
-        },
-        "qids": [
-          "Q12107251"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/1911_Britannica_-_Anatomy_-_Muscular.png/960px-1911_Britannica_-_Anatomy_-_Muscular.png",
+          "alt": "Human musculoskeletal system",
+          "caption": "Bron: Wikipedia - Human musculoskeletal system",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Human_musculoskeletal_system",
+            "searchTerm": "skeletal system",
+            "score": 35
+          }
+        }
+      ]
     },
     {
       "id": "q002",
@@ -48,24 +43,19 @@
       ],
       "c": 0,
       "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel.",
-      "media": {
-        "query": "rib cage sternum human anatomy",
-        "alt": "ribbenkast + borstbeen (sternum)",
-        "negativeTerms": [
-          "dinosaur",
-          "armor"
-        ],
-        "_intent": {
-          "primaryConcept": "romp van het skelet",
-          "specificFocus": "ribbenkast + borstbeen (sternum)",
-          "representation": "labeled diagram of clear photo of skeletal thorax",
-          "uniquenessKey": "thorax-ribcage-sternum"
-        },
-        "qids": [
-          "Q193304",
-          "Q103148"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/44/Anatomical_Male_Figure_Showing_Heart%2C_Lungs%2C_and_Main_Arteries.jpg",
+          "alt": "List of bones of the human skeleton",
+          "caption": "Bron: Wikipedia - List of bones of the human skeleton",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/List_of_bones_of_the_human_skeleton",
+            "searchTerm": "bones human",
+            "score": 55
+          }
+        }
+      ]
     },
     {
       "id": "q003",
@@ -79,23 +69,19 @@
       ],
       "c": 1,
       "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam.",
-      "media": {
-        "query": "compact bone osteon haversian system",
-        "alt": "compact bot / botstructuur (doorsnede of microscopie)",
-        "negativeTerms": [
-          "cartoon",
-          "abstract"
-        ],
-        "_intent": {
-          "primaryConcept": "botweefsel – hardheid",
-          "specificFocus": "compact bot / botstructuur (doorsnede of microscopie)",
-          "representation": "diagram or microscope image (osteon/Havers-systeem)",
-          "uniquenessKey": "bone-osteon"
-        },
-        "qids": [
-          "Q1115467"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Metacarpal_bones_%28left_hand%29_01_palmar_view_with_label.png/960px-Metacarpal_bones_%28left_hand%29_01_palmar_view_with_label.png",
+          "alt": "Metacarpal bones",
+          "caption": "Bron: Wikipedia - Metacarpal bones",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Metacarpal_bones",
+            "searchTerm": "bone anatomy",
+            "score": 40
+          }
+        }
+      ]
     },
     {
       "id": "q004",
@@ -109,24 +95,19 @@
       ],
       "c": 1,
       "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer.",
-      "media": {
-        "query": "bone composition collagen mineral diagram",
-        "alt": "vergelijking buigzaamheid/brosheid (bijv. schema collageen vs kalk)",
-        "negativeTerms": [
-          "fracture x-ray",
-          "surgery"
-        ],
-        "_intent": {
-          "primaryConcept": "botten kinderen vs ouderen",
-          "specificFocus": "vergelijking buigzaamheid/brosheid (bijv. schema collageen vs kalk)",
-          "representation": "simple educational diagram (not meme)",
-          "uniquenessKey": "bone-collagen-vs-mineral"
-        },
-        "qids": [
-          "Q83375",
-          "Q271960"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Zygomatic_bone_anterior.png/900px-Zygomatic_bone_anterior.png",
+          "alt": "Zygomatic bone",
+          "caption": "Bron: Wikipedia - Zygomatic bone",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Zygomatic_bone",
+            "searchTerm": "bone anatomy",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q005",
@@ -140,24 +121,19 @@
       ],
       "c": 1,
       "e": "Kraakbeen zit bij volwassenen o.a. in oorschelp en neus, en ook tussen ribben en borstbeen en in tussenwervelschijven.",
-      "media": {
-        "query": "human ear auricle cartilage",
-        "alt": "oorschelp of neus (kraakbeen duidelijk zichtbaar)",
-        "negativeTerms": [
-          "piercing close-up",
-          "cosmetic"
-        ],
-        "_intent": {
-          "primaryConcept": "kraakbeen bij volwassenen",
-          "specificFocus": "oorschelp of neus (kraakbeen duidelijk zichtbaar)",
-          "representation": "photo (close-up) of labeled diagram",
-          "uniquenessKey": "cartilage-ear-or-nose"
-        },
-        "qids": [
-          "Q181600",
-          "Q7362"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Hypertrophic_Zone_of_Epiphyseal_Plate.jpg",
+          "alt": "Cartilage",
+          "caption": "Bron: Wikipedia - Cartilage",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Cartilage",
+            "searchTerm": "cartilage",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q006",
@@ -171,23 +147,19 @@
       ],
       "c": 2,
       "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien.",
-      "media": {
-        "query": "infant skull fontanelle diagram",
-        "alt": "babyschedel met fontanellen gemarkeerd",
-        "negativeTerms": [
-          "surgery",
-          "trauma"
-        ],
-        "_intent": {
-          "primaryConcept": "fontanellen schedel baby",
-          "specificFocus": "babyschedel met fontanellen gemarkeerd",
-          "representation": "labeled diagram preferred",
-          "uniquenessKey": "infant-fontanelle"
-        },
-        "qids": [
-          "Q590684"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Plastered_skull_from_Jericho_12741-42.jpg/960px-Plastered_skull_from_Jericho_12741-42.jpg",
+          "alt": "Plastered human skulls",
+          "caption": "Bron: Wikipedia - Plastered human skulls",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Plastered_human_skulls",
+            "searchTerm": "human skull",
+            "score": 35
+          }
+        }
+      ]
     },
     {
       "id": "q007",
@@ -259,23 +231,19 @@
       ],
       "c": 0,
       "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten).",
-      "media": {
-        "query": "haversian system osteon labeled",
-        "alt": "osteon (Havers-systeem) met concentrische lamellen",
-        "negativeTerms": [
-          "unclear",
-          "low resolution"
-        ],
-        "_intent": {
-          "primaryConcept": "botcellen in kringen rond kanaaltjes",
-          "specificFocus": "osteon (Havers-systeem) met concentrische lamellen",
-          "representation": "microscope image or labeled diagram",
-          "uniquenessKey": "haversian-system"
-        },
-        "qids": [
-          "Q1115467"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Left_femur_of_extinct_elephant%2C_Alaska%2C_Ice_Age_Wellcome_L0057714.jpg/960px-Left_femur_of_extinct_elephant%2C_Alaska%2C_Ice_Age_Wellcome_L0057714.jpg",
+          "alt": "Bone",
+          "caption": "Bron: Wikipedia - Bone",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Bone",
+            "searchTerm": "bone anatomy",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q010",
@@ -289,28 +257,38 @@
       ],
       "c": 1,
       "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten.",
-      "media": {
-        "query": "collagen fibers bone matrix diagram",
-        "alt": "schema van collageenvezels in botmatrix (conceptueel)",
-        "negativeTerms": [
-          "skin collagen cosmetic"
-        ],
-        "_intent": {
-          "primaryConcept": "collageen in botweefsel – buigzaamheid",
-          "specificFocus": "schema van collageenvezels in botmatrix (conceptueel)",
-          "representation": "educational diagram",
-          "uniquenessKey": "bone-collagen-fibers"
-        },
-        "qids": [
-          "Q83375"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scheme_human_hand_bones-en.svg/960px-Scheme_human_hand_bones-en.svg.png",
+          "alt": "Phalanx bone",
+          "caption": "Bron: Wikipedia - Phalanx bone",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Phalanx_bone",
+            "searchTerm": "bone anatomy",
+            "score": 40
+          }
+        }
+      ]
     },
     {
       "id": "q011",
       "type": "info_card",
       "title": "Kernbegrippen gewrichten",
-      "content_html": "<ul><li><strong>Gewricht</strong>: verbinding tussen botten met veel beweging.</li><li><strong>Kraakbeenlaagjes</strong>: verminderen slijtage en maken beweging soepeler.</li><li><strong>Gewrichtskapsel</strong>: houdt botten op hun plaats en maakt gewrichtssmeer.</li><li><strong>Kapselbanden</strong>: verstevigen het gewricht.</li></ul>"
+      "content_html": "<ul><li><strong>Gewricht</strong>: verbinding tussen botten met veel beweging.</li><li><strong>Kraakbeenlaagjes</strong>: verminderen slijtage en maken beweging soepeler.</li><li><strong>Gewrichtskapsel</strong>: houdt botten op hun plaats en maakt gewrichtssmeer.</li><li><strong>Kapselbanden</strong>: verstevigen het gewricht.</li></ul>",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/907_Synovial_Joints.jpg/960px-907_Synovial_Joints.jpg",
+          "alt": "Synovial joint",
+          "caption": "Bron: Wikipedia - Synovial joint",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Synovial_joint",
+            "searchTerm": "synovial joint",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q012",
@@ -324,22 +302,19 @@
       ],
       "c": 1,
       "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen.",
-      "media": {
-        "query": "articular cartilage diagram",
-        "alt": "gewrichtskraakbeen op botuiteinden (articular cartilage)",
-        "negativeTerms": [
-          "x-ray"
-        ],
-        "_intent": {
-          "primaryConcept": "kraakbeenlaagjes in gewricht",
-          "specificFocus": "gewrichtskraakbeen op botuiteinden (articular cartilage)",
-          "representation": "diagram or anatomical model photo",
-          "uniquenessKey": "articular-cartilage"
-        },
-        "qids": [
-          "Q2432244"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
+          "alt": "Joint",
+          "caption": "Bron: Wikipedia - Joint",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Joint",
+            "searchTerm": "joint anatomy",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q013",
@@ -353,22 +328,19 @@
       ],
       "c": 1,
       "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat.",
-      "media": {
-        "query": "joint capsule synovium diagram",
-        "alt": "kapsel rondom gewricht + synovium",
-        "negativeTerms": [
-          "surgery"
-        ],
-        "_intent": {
-          "primaryConcept": "gewrichtskapsel",
-          "specificFocus": "kapsel rondom gewricht + synovium",
-          "representation": "labeled diagram",
-          "uniquenessKey": "joint-capsule"
-        },
-        "qids": [
-          "Q847019"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
+          "alt": "Joint capsule",
+          "caption": "Bron: Wikipedia - Joint capsule",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Joint_capsule",
+            "searchTerm": "joint capsule",
+            "score": 50
+          }
+        }
+      ]
     },
     {
       "id": "q014",
@@ -382,22 +354,19 @@
       ],
       "c": 2,
       "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk.",
-      "media": {
-        "query": "ball and socket joint shoulder anatomy",
-        "alt": "schoudergewricht (glenohumeral) of heupgewricht",
-        "negativeTerms": [
-          "door hinge"
-        ],
-        "_intent": {
-          "primaryConcept": "kogelgewricht",
-          "specificFocus": "schoudergewricht (glenohumeral) of heupgewricht",
-          "representation": "photo of anatomical model or labeled diagram",
-          "uniquenessKey": "ball-socket-joint"
-        },
-        "qids": [
-          "Q1199023"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gelenke_Zeichnung01.jpg/960px-Gelenke_Zeichnung01.jpg",
+          "alt": "Ball-and-socket joint",
+          "caption": "Bron: Wikipedia - Ball-and-socket joint",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ball-and-socket_joint",
+            "searchTerm": "ball and socket joint",
+            "score": 60
+          }
+        }
+      ]
     },
     {
       "id": "q015",
@@ -411,23 +380,19 @@
       ],
       "c": 2,
       "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp).",
-      "media": {
-        "query": "radioulnar joint rotation diagram",
-        "alt": "spaakbeen/ellepijp (radius/ulna) rotatie (pronatie/supinatie)",
-        "negativeTerms": [
-          "hinge door"
-        ],
-        "_intent": {
-          "primaryConcept": "rolgewricht",
-          "specificFocus": "spaakbeen/ellepijp (radius/ulna) rotatie (pronatie/supinatie)",
-          "representation": "diagram preferred",
-          "uniquenessKey": "pivot-joint-radius-ulna"
-        },
-        "qids": [
-          "Q1464028",
-          "Q181946"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gelenke_Zeichnung01.jpg/960px-Gelenke_Zeichnung01.jpg",
+          "alt": "Pivot joint",
+          "caption": "Bron: Wikipedia - Pivot joint",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Pivot_joint",
+            "searchTerm": "pivot joint",
+            "score": 40
+          }
+        }
+      ]
     },
     {
       "id": "q016",
@@ -471,23 +436,19 @@
       ],
       "c": 1,
       "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen.",
-      "media": {
-        "query": "synovial fluid lubrication diagram",
-        "alt": "synoviaal gewricht met synovial fluid (glijlaag) concept",
-        "negativeTerms": [
-          "arthritis",
-          "disease"
-        ],
-        "_intent": {
-          "primaryConcept": "gewrichtssmeer/wrijving",
-          "specificFocus": "synoviaal gewricht met synovial fluid (glijlaag) concept",
-          "representation": "diagram with friction concept",
-          "uniquenessKey": "joint-lubrication"
-        },
-        "qids": [
-          "Q192825"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
+          "alt": "Synovial fluid",
+          "caption": "Bron: Wikipedia - Synovial fluid",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Synovial_fluid",
+            "searchTerm": "synovial joint",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q018",
@@ -501,23 +462,19 @@
       ],
       "c": 0,
       "e": "Kapselbanden zijn extra versteviging om het gewricht.",
-      "media": {
-        "query": "knee ligaments diagram",
-        "alt": "gewricht met ligamenten zichtbaar (bijv. kniebanden)",
-        "negativeTerms": [
-          "surgery"
-        ],
-        "_intent": {
-          "primaryConcept": "kapselbanden (ligaments) verstevigen",
-          "specificFocus": "gewricht met ligamenten zichtbaar (bijv. kniebanden)",
-          "representation": "labeled diagram or anatomical model",
-          "uniquenessKey": "ligaments-knee"
-        },
-        "qids": [
-          "Q843885",
-          "Q187947"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Sacroiliac_Joint.png/960px-Sacroiliac_Joint.png",
+          "alt": "Sacroiliac joint",
+          "caption": "Bron: Wikipedia - Sacroiliac joint",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Sacroiliac_joint",
+            "searchTerm": "joint anatomy",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q019",
@@ -531,23 +488,19 @@
       ],
       "c": 1,
       "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering).",
-      "media": {
-        "query": "intervertebral disc diagram",
-        "alt": "wervelkolom met discus als schokdemper",
-        "negativeTerms": [
-          "hernia",
-          "MRI"
-        ],
-        "_intent": {
-          "primaryConcept": "tussenwervelschijven",
-          "specificFocus": "wervelkolom met discus als schokdemper",
-          "representation": "diagram preferred",
-          "uniquenessKey": "intervertebral-disc"
-        },
-        "qids": [
-          "Q212808"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Vertebra_Superior_View-en.svg/960px-Vertebra_Superior_View-en.svg.png",
+          "alt": "Vertebra",
+          "caption": "Bron: Wikipedia - Vertebra",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Vertebra",
+            "searchTerm": "vertebra",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q020",
@@ -561,23 +514,19 @@
       ],
       "c": 1,
       "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen.",
-      "media": {
-        "query": "human spine double S curve diagram",
-        "alt": "S-curve in zijaanzicht + vering/absorptie concept",
-        "negativeTerms": [
-          "scoliosis",
-          "disease"
-        ],
-        "_intent": {
-          "primaryConcept": "dubbele-S-vorm wervelkolom",
-          "specificFocus": "S-curve in zijaanzicht + vering/absorptie concept",
-          "representation": "educational diagram",
-          "uniquenessKey": "spine-s-curve"
-        },
-        "qids": [
-          "Q182524"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/TE-Nervous_system_diagram.svg/960px-TE-Nervous_system_diagram.svg.png",
+          "alt": "Human anatomy",
+          "caption": "Bron: Wikipedia - Human anatomy",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Human_anatomy",
+            "searchTerm": "spine anatomy",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q021",
@@ -591,23 +540,19 @@
       ],
       "c": 1,
       "e": "Spieren zitten met pezen aan botten vast.",
-      "media": {
-        "query": "tendon attachment to bone diagram",
-        "alt": "pees aan bot (bijv. achillespees of bicepspees)",
-        "negativeTerms": [
-          "surgery",
-          "injury"
-        ],
-        "_intent": {
-          "primaryConcept": "pees verbindt spier aan bot",
-          "specificFocus": "pees aan bot (bijv. achillespees of bicepspees)",
-          "representation": "photo or labeled diagram",
-          "uniquenessKey": "tendon-attachment"
-        },
-        "qids": [
-          "Q82356"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Horse_anatomy.svg/960px-Horse_anatomy.svg.png",
+          "alt": "Skeletal system of the horse",
+          "caption": "Bron: Wikipedia - Skeletal system of the horse",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Skeletal_system_of_the_horse",
+            "searchTerm": "skeletal system",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q022",
@@ -621,23 +566,19 @@
       ],
       "c": 1,
       "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe.",
-      "media": {
-        "query": "muscle contraction pulls bone lever diagram",
-        "alt": "schema hefboom: spier trekt via pees aan bot (armvoorbeeld)",
-        "negativeTerms": [
-          "cartoon"
-        ],
-        "_intent": {
-          "primaryConcept": "spier trekt bot (geen duwen)",
-          "specificFocus": "schema hefboom: spier trekt via pees aan bot (armvoorbeeld)",
-          "representation": "simple diagram with arrows",
-          "uniquenessKey": "muscle-pulls-bone"
-        },
-        "qids": [
-          "Q7365",
-          "Q82356"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Anterior_View_of_Muscles.jpg/960px-Anterior_View_of_Muscles.jpg",
+          "alt": "List of skeletal muscles of the human body",
+          "caption": "Bron: Wikipedia - List of skeletal muscles of the human body",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/List_of_skeletal_muscles_of_the_human_body",
+            "searchTerm": "muscle anatomy",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q023",
@@ -651,22 +592,19 @@
       ],
       "c": 1,
       "e": "Bij samentrekking wordt de spier korter en dikker.",
-      "media": {
-        "query": "muscle contraction shorter thicker diagram",
-        "alt": "voor/na van spiervezel of spierbundel",
-        "negativeTerms": [
-          "advanced sarcomere"
-        ],
-        "_intent": {
-          "primaryConcept": "spiercontractie: korter en dikker",
-          "specificFocus": "voor/na van spiervezel of spierbundel",
-          "representation": "comparison diagram (relaxed vs contracted)",
-          "uniquenessKey": "muscle-contraction-macro"
-        },
-        "qids": [
-          "Q1411410"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Blausen_0801_SkeletalMuscle.png/960px-Blausen_0801_SkeletalMuscle.png",
+          "alt": "Skeletal muscle",
+          "caption": "Bron: Wikipedia - Skeletal muscle",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Skeletal_muscle",
+            "searchTerm": "skeletal muscle",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q024",
@@ -680,23 +618,19 @@
       ],
       "c": 1,
       "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken.",
-      "media": {
-        "query": "biceps triceps antagonistic pair diagram",
-        "alt": "biceps vs triceps met tegengestelde werking",
-        "negativeTerms": [
-          "bodybuilding photo only"
-        ],
-        "_intent": {
-          "primaryConcept": "antagonistisch paar",
-          "specificFocus": "biceps vs triceps met tegengestelde werking",
-          "representation": "labeled diagram",
-          "uniquenessKey": "antagonistic-biceps-triceps"
-        },
-        "qids": [
-          "Q182494",
-          "Q182614"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/2/2e/View_of_Viscera_Page_82.jpg",
+          "alt": "Anatomical terms of muscle",
+          "caption": "Bron: Wikipedia - Anatomical terms of muscle",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Anatomical_terms_of_muscle",
+            "searchTerm": "antagonist muscles",
+            "score": 10
+          }
+        }
+      ]
     },
     {
       "id": "q025",
@@ -710,22 +644,19 @@
       ],
       "c": 1,
       "e": "De biceps is een armbuigspier. De triceps is een armstrekspier.",
-      "media": {
-        "query": "biceps elbow flexion diagram",
-        "alt": "elleboog buigen (flexie) door biceps",
-        "negativeTerms": [
-          "cartoon"
-        ],
-        "_intent": {
-          "primaryConcept": "biceps beweging",
-          "specificFocus": "elleboog buigen (flexie) door biceps",
-          "representation": "diagram or annotated photo",
-          "uniquenessKey": "biceps-flexion"
-        },
-        "qids": [
-          "Q182494"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/92/Gray526.png",
+          "alt": "Deep artery of arm",
+          "caption": "Bron: Wikipedia - Deep artery of arm",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Deep_artery_of_arm",
+            "searchTerm": "triceps brachii",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q026",
@@ -739,22 +670,19 @@
       ],
       "c": 1,
       "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust.",
-      "media": {
-        "query": "intestinal peristalsis diagram",
-        "alt": "darmperistaltiek / gladde spier in darmwand",
-        "negativeTerms": [
-          "surgery photo"
-        ],
-        "_intent": {
-          "primaryConcept": "onbewuste spierbeweging (orgaanspieren)",
-          "specificFocus": "darmperistaltiek / gladde spier in darmwand",
-          "representation": "diagram preferred",
-          "uniquenessKey": "peristalsis"
-        },
-        "qids": [
-          "Q1056396"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Infraspinatus.PNG",
+          "alt": "Infraspinatus muscle",
+          "caption": "Bron: Wikipedia - Infraspinatus muscle",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Infraspinatus_muscle",
+            "searchTerm": "muscle anatomy",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q027",
@@ -768,22 +696,19 @@
       ],
       "c": 2,
       "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen.",
-      "media": {
-        "query": "arrector pili muscle diagram",
-        "alt": "arrector pili muscle + haarfollikel (goosebumps)",
-        "negativeTerms": [
-          "cosmetic"
-        ],
-        "_intent": {
-          "primaryConcept": "huidspiertje dat haar rechtop zet",
-          "specificFocus": "arrector pili muscle + haarfollikel (goosebumps)",
-          "representation": "labeled diagram",
-          "uniquenessKey": "arrector-pili"
-        },
-        "qids": [
-          "Q605686"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Gray382.png",
+          "alt": "Temporalis muscle",
+          "caption": "Bron: Wikipedia - Temporalis muscle",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Temporalis_muscle",
+            "searchTerm": "muscle anatomy",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q028",
@@ -797,23 +722,19 @@
       ],
       "c": 2,
       "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren.",
-      "media": {
-        "query": "person riding bicycle everyday",
-        "alt": "fietsen als automatisch voorbeeld",
-        "negativeTerms": [
-          "race",
-          "logo"
-        ],
-        "_intent": {
-          "primaryConcept": "motorisch geheugen – geautomatiseerde beweging",
-          "specificFocus": "fietsen als automatisch voorbeeld",
-          "representation": "photo (clear, simple) preferred",
-          "uniquenessKey": "bicycle-automatic-movement"
-        },
-        "qids": [
-          "Q11442"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Electronic_access_control_%28BSL3_Lab%29_using_personal_identification_number_%28PIN%29.jpg/960px-Electronic_access_control_%28BSL3_Lab%29_using_personal_identification_number_%28PIN%29.jpg",
+          "alt": "Muscle memory",
+          "caption": "Bron: Wikipedia - Muscle memory",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Muscle_memory",
+            "searchTerm": "motor memory",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q029",
@@ -886,22 +807,19 @@
       ],
       "c": 1,
       "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid.",
-      "media": {
-        "query": "warm up running drills photo",
-        "alt": "warming-up oefening (licht rennen, dynamische warming-up)",
-        "negativeTerms": [
-          "stretching static only"
-        ],
-        "_intent": {
-          "primaryConcept": "warming-up (spieren warm, meer bloed)",
-          "specificFocus": "warming-up oefening (licht rennen, dynamische warming-up)",
-          "representation": "photo",
-          "uniquenessKey": "warm-up"
-        },
-        "qids": [
-          "Q912831"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Training_of_Seattle_Mist_Lingerie_Football_0154.jpg",
+          "alt": "Warming up",
+          "caption": "Bron: Wikipedia - Warming up",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Warming_up",
+            "searchTerm": "warm up exercise",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q032",
@@ -915,22 +833,19 @@
       ],
       "c": 1,
       "e": "In de tekst: maximaal een kwartier; anders zijn de spieren weer koud reminder.",
-      "media": {
-        "query": "stopwatch sports training",
-        "alt": "tijd/klok + sportcontext (max 15 min) zonder tekstdominantie",
-        "negativeTerms": [
-          "infographic"
-        ],
-        "_intent": {
-          "primaryConcept": "afkoelen na warming-up (tijd tussenin)",
-          "specificFocus": "tijd/klok + sportcontext (max 15 min) zonder tekstdominantie",
-          "representation": "photo or simple diagram",
-          "uniquenessKey": "stopwatch-training"
-        },
-        "qids": [
-          "Q178794"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Plantaris_muscle_-_posterior_view.png/960px-Plantaris_muscle_-_posterior_view.png",
+          "alt": "Plantaris muscle",
+          "caption": "Bron: Wikipedia - Plantaris muscle",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Plantaris_muscle",
+            "searchTerm": "muscle anatomy",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q033",
@@ -974,22 +889,19 @@
       ],
       "c": 0,
       "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd.",
-      "media": {
-        "query": "cool down jogging after workout",
-        "alt": "uitlopen/uitfietsen na sport (lage intensiteit)",
-        "negativeTerms": [
-          "finish line"
-        ],
-        "_intent": {
-          "primaryConcept": "cooling-down (afvalstoffen afvoeren)",
-          "specificFocus": "uitlopen/uitfietsen na sport (lage intensiteit)",
-          "representation": "photo",
-          "uniquenessKey": "cooling-down"
-        },
-        "qids": [
-          "Q1783697"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/63/MatteoTosatto2.jpg",
+          "alt": "Exercise physiology",
+          "caption": "Bron: Wikipedia - Exercise physiology",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Exercise_physiology",
+            "searchTerm": "cool down exercise",
+            "score": 10
+          }
+        }
+      ]
     },
     {
       "id": "q035",
@@ -1003,23 +915,19 @@
       ],
       "c": 1,
       "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen.",
-      "media": {
-        "query": "muscle soreness after exercise photo",
-        "alt": "spier met 'burning' concept zonder medische pathologie (bijv. sporter met bovenbeen vasthouden)",
-        "negativeTerms": [
-          "injury",
-          "blood"
-        ],
-        "_intent": {
-          "primaryConcept": "spierpijn (leerboekuitleg: afvalstoffen/overbelasting)",
-          "specificFocus": "spier met 'burning' concept zonder medische pathologie (bijv. sporter met bovenbeen vasthouden)",
-          "representation": "photo",
-          "uniquenessKey": "muscle-soreness"
-        },
-        "qids": [
-          "Q1198311"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/0/05/Illu_lower_extremity_muscles.jpg",
+          "alt": "Soleus muscle",
+          "caption": "Bron: Wikipedia - Soleus muscle",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Soleus_muscle",
+            "searchTerm": "muscle anatomy",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q036",
@@ -1033,23 +941,19 @@
       ],
       "c": 1,
       "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders.",
-      "media": {
-        "query": "ankle sprain brace photo",
-        "alt": "enkelverstuiking-achtige situatie (neutraal) of kniebrace (algemeen)",
-        "negativeTerms": [
-          "blood",
-          "surgery"
-        ],
-        "_intent": {
-          "primaryConcept": "blessure = beschadiging spier/bot/gewricht",
-          "specificFocus": "enkelverstuiking-achtige situatie (neutraal) of kniebrace (algemeen)",
-          "representation": "photo",
-          "uniquenessKey": "sports-injury-general"
-        },
-        "qids": [
-          "Q193078"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/03042012Ccm_gamosuma_juvenilA231.JPG/960px-03042012Ccm_gamosuma_juvenilA231.JPG",
+          "alt": "Sports injury",
+          "caption": "Bron: Wikipedia - Sports injury",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Sports_injury",
+            "searchTerm": "sports injury",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q037",
@@ -1063,23 +967,19 @@
       ],
       "c": 1,
       "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning.",
-      "media": {
-        "query": "repetitive strain typing hands keyboard",
-        "alt": "hand/arm bij toetsenbord of smartphone, overbelasting context",
-        "negativeTerms": [
-          "x-ray",
-          "surgery"
-        ],
-        "_intent": {
-          "primaryConcept": "RSI door herhaling + statische houding",
-          "specificFocus": "hand/arm bij toetsenbord of smartphone, overbelasting context",
-          "representation": "photo",
-          "uniquenessKey": "rsi-typing"
-        },
-        "qids": [
-          "Q831706"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Operating_a_Computer_Keyboard_MOD_45158111.jpg/960px-Operating_a_Computer_Keyboard_MOD_45158111.jpg",
+          "alt": "Repetitive strain injury",
+          "caption": "Bron: Wikipedia - Repetitive strain injury",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Repetitive_strain_injury",
+            "searchTerm": "repetitive strain injury",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q038",
@@ -1093,22 +993,19 @@
       ],
       "c": 0,
       "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm).",
-      "media": {
-        "query": "wrist pain from typing photo",
-        "alt": "persoon die pols/onderarm masseert of hand schudt (subtiel)",
-        "negativeTerms": [
-          "hospital"
-        ],
-        "_intent": {
-          "primaryConcept": "beginnende RSI-klachten (tintelingen/vermoeidheid)",
-          "specificFocus": "persoon die pols/onderarm masseert of hand schudt (subtiel)",
-          "representation": "photo",
-          "uniquenessKey": "rsi-symptom-wrist"
-        },
-        "qids": [
-          "Q831706"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2010-10-02_pulled_hamstring.jpg/960px-2010-10-02_pulled_hamstring.jpg",
+          "alt": "Strain (injury)",
+          "caption": "Bron: Wikipedia - Strain (injury)",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Strain_(injury)",
+            "searchTerm": "repetitive strain injury",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q039",
@@ -1122,22 +1019,19 @@
       ],
       "c": 1,
       "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI.",
-      "media": {
-        "query": "taking break from computer desk photo",
-        "alt": "werkplek met pauze-moment (bijv. opstaan van bureau, stretchen bij bureau)",
-        "negativeTerms": [
-          "infographic"
-        ],
-        "_intent": {
-          "primaryConcept": "RSI voorkomen: pauzes/afwisseling",
-          "specificFocus": "werkplek met pauze-moment (bijv. opstaan van bureau, stretchen bij bureau)",
-          "representation": "photo",
-          "uniquenessKey": "rsi-prevention-break"
-        },
-        "qids": [
-          "Q831706"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+          "alt": "Computer mouse",
+          "caption": "Bron: Wikipedia - Computer mouse",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Computer_mouse",
+            "searchTerm": "RSI computer",
+            "score": 10
+          }
+        }
+      ]
     },
     {
       "id": "q040",
@@ -1209,22 +1103,19 @@
       ],
       "c": 0,
       "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging.",
-      "media": {
-        "query": "putting smartphone away break",
-        "alt": "telefoon wegleggen / wandelen / afwisseling",
-        "negativeTerms": [
-          "gaming"
-        ],
-        "_intent": {
-          "primaryConcept": "RSI verminderen: wisselen van activiteit",
-          "specificFocus": "telefoon wegleggen / wandelen / afwisseling",
-          "representation": "photo",
-          "uniquenessKey": "phone-break"
-        },
-        "qids": [
-          "Q22645"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/BCS_logo_2021.svg/960px-BCS_logo_2021.svg.png",
+          "alt": "British Computer Society",
+          "caption": "Bron: Wikipedia - British Computer Society",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/British_Computer_Society",
+            "searchTerm": "RSI computer",
+            "score": 10
+          }
+        }
+      ]
     },
     {
       "id": "q043",
@@ -1325,24 +1216,19 @@
       ],
       "c": 1,
       "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk.",
-      "media": {
-        "query": "bird sternum keel diagram",
-        "alt": "borstbeen met kiel bij vogel/pinguïn of diagram borstspieren-aanhechting",
-        "negativeTerms": [
-          "cooking",
-          "food"
-        ],
-        "_intent": {
-          "primaryConcept": "kiel (borstbeenuitsteeksel) aanhechting borstspieren",
-          "specificFocus": "borstbeen met kiel bij vogel/pinguïn of diagram borstspieren-aanhechting",
-          "representation": "labeled diagram preferred",
-          "uniquenessKey": "keel-sternum"
-        },
-        "qids": [
-          "Q1318814",
-          "Q103148"
-        ]
-      }
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Br%C3%A9chet.png/960px-Br%C3%A9chet.png",
+          "alt": "Keel (bird anatomy)",
+          "caption": "Bron: Wikipedia - Keel (bird anatomy)",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Keel_(bird_anatomy)",
+            "searchTerm": "breastbone",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q047",

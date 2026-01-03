@@ -1,0 +1,107 @@
+{
+  "quizId": "latijn-proeftoets-lupa",
+  "subject": "latijn",
+  "briefs": [
+    {
+      "questionId": "lupa-002",
+      "concepts": [
+        "slaaf"
+      ],
+      "searchTerms": [
+        "Roman slavery",
+        "Roman slave"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "Roman slavery"
+    },
+    {
+      "questionId": "lupa-007",
+      "concepts": [
+        "romein",
+        "romeinen",
+        "rome",
+        "forum"
+      ],
+      "searchTerms": [
+        "ancient Roman",
+        "Roman citizen",
+        "ancient Romans",
+        "Roman people",
+        "ancient Rome"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Roman"
+    },
+    {
+      "questionId": "lupa-008",
+      "concepts": [
+        "romein",
+        "rome"
+      ],
+      "searchTerms": [
+        "ancient Roman",
+        "Roman citizen",
+        "ancient Rome",
+        "Roman Forum"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Roman"
+    },
+    {
+      "questionId": "lupa-009",
+      "concepts": [
+        "rome",
+        "wolvin"
+      ],
+      "searchTerms": [
+        "ancient Rome",
+        "Roman Forum",
+        "Capitoline wolf",
+        "she-wolf Rome"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Rome"
+    }
+  ],
+  "skipped": [
+    "lupa-001",
+    "lupa-003",
+    "lupa-004",
+    "lupa-005",
+    "lupa-006",
+    "lupa-010",
+    "lupa-011",
+    "lupa-012",
+    "lupa-013",
+    "lupa-014",
+    "lupa-015"
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "selections": [
+    {
+      "questionId": "q001",
+      "title": "Human musculoskeletal system",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/1911_Britannica_-_Anatomy_-_Muscular.png/960px-1911_Britannica_-_Anatomy_-_Muscular.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Human_musculoskeletal_system",
+      "searchTerm": "skeletal system",
+      "score": 35,
+      "reason": "Matched \"skeletal system\" -> \"Human musculoskeletal system\" (score: 35)"
+    },
+    {
+      "questionId": "q002",
+      "title": "List of bones of the human skeleton",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Anatomical_Male_Figure_Showing_Heart%2C_Lungs%2C_and_Main_Arteries.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/List_of_bones_of_the_human_skeleton",
+      "searchTerm": "bones human",
+      "score": 55,
+      "reason": "Matched \"bones human\" -> \"List of bones of the human skeleton\" (score: 55)"
+    },
+    {
+      "questionId": "q003",
+      "title": "Metacarpal bones",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Metacarpal_bones_%28left_hand%29_01_palmar_view_with_label.png/960px-Metacarpal_bones_%28left_hand%29_01_palmar_view_with_label.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Metacarpal_bones",
+      "searchTerm": "bone anatomy",
+      "score": 40,
+      "reason": "Matched \"bone anatomy\" -> \"Metacarpal bones\" (score: 40)"
+    },
+    {
+      "questionId": "q004",
+      "title": "Zygomatic bone",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Zygomatic_bone_anterior.png/900px-Zygomatic_bone_anterior.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Zygomatic_bone",
+      "searchTerm": "bone anatomy",
+      "score": 20,
+      "reason": "Matched \"bone anatomy\" -> \"Zygomatic bone\" (score: 20)"
+    },
+    {
+      "questionId": "q005",
+      "title": "Cartilage",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Hypertrophic_Zone_of_Epiphyseal_Plate.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Cartilage",
+      "searchTerm": "cartilage",
+      "score": 20,
+      "reason": "Matched \"cartilage\" -> \"Cartilage\" (score: 20)"
+    },
+    {
+      "questionId": "q006",
+      "title": "Plastered human skulls",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Plastered_skull_from_Jericho_12741-42.jpg/960px-Plastered_skull_from_Jericho_12741-42.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Plastered_human_skulls",
+      "searchTerm": "human skull",
+      "score": 35,
+      "reason": "Matched \"human skull\" -> \"Plastered human skulls\" (score: 35)"
+    },
+    {
+      "questionId": "q009",
+      "title": "Bone",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Left_femur_of_extinct_elephant%2C_Alaska%2C_Ice_Age_Wellcome_L0057714.jpg/960px-Left_femur_of_extinct_elephant%2C_Alaska%2C_Ice_Age_Wellcome_L0057714.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Bone",
+      "searchTerm": "bone anatomy",
+      "score": 30,
+      "reason": "Matched \"bone anatomy\" -> \"Bone\" (score: 30)"
+    },
+    {
+      "questionId": "q010",
+      "title": "Phalanx bone",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scheme_human_hand_bones-en.svg/960px-Scheme_human_hand_bones-en.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Phalanx_bone",
+      "searchTerm": "bone anatomy",
+      "score": 40,
+      "reason": "Matched \"bone anatomy\" -> \"Phalanx bone\" (score: 40)"
+    },
+    {
+      "questionId": "q011",
+      "title": "Synovial joint",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/907_Synovial_Joints.jpg/960px-907_Synovial_Joints.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Synovial_joint",
+      "searchTerm": "synovial joint",
+      "score": 30,
+      "reason": "Matched \"synovial joint\" -> \"Synovial joint\" (score: 30)"
+    },
+    {
+      "questionId": "q012",
+      "title": "Joint",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Joint",
+      "searchTerm": "joint anatomy",
+      "score": 20,
+      "reason": "Matched \"joint anatomy\" -> \"Joint\" (score: 20)"
+    },
+    {
+      "questionId": "q013",
+      "title": "Joint capsule",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Joint_capsule",
+      "searchTerm": "joint capsule",
+      "score": 50,
+      "reason": "Matched \"joint capsule\" -> \"Joint capsule\" (score: 50)"
+    },
+    {
+      "questionId": "q014",
+      "title": "Ball-and-socket joint",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gelenke_Zeichnung01.jpg/960px-Gelenke_Zeichnung01.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ball-and-socket_joint",
+      "searchTerm": "ball and socket joint",
+      "score": 60,
+      "reason": "Matched \"ball and socket joint\" -> \"Ball-and-socket joint\" (score: 60)"
+    },
+    {
+      "questionId": "q015",
+      "title": "Pivot joint",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gelenke_Zeichnung01.jpg/960px-Gelenke_Zeichnung01.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Pivot_joint",
+      "searchTerm": "pivot joint",
+      "score": 40,
+      "reason": "Matched \"pivot joint\" -> \"Pivot joint\" (score: 40)"
+    },
+    {
+      "questionId": "q017",
+      "title": "Synovial fluid",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Joint.svg/960px-Joint.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Synovial_fluid",
+      "searchTerm": "synovial joint",
+      "score": 30,
+      "reason": "Matched \"synovial joint\" -> \"Synovial fluid\" (score: 30)"
+    },
+    {
+      "questionId": "q018",
+      "title": "Sacroiliac joint",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Sacroiliac_Joint.png/960px-Sacroiliac_Joint.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Sacroiliac_joint",
+      "searchTerm": "joint anatomy",
+      "score": 20,
+      "reason": "Matched \"joint anatomy\" -> \"Sacroiliac joint\" (score: 20)"
+    },
+    {
+      "questionId": "q019",
+      "title": "Vertebra",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Vertebra_Superior_View-en.svg/960px-Vertebra_Superior_View-en.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Vertebra",
+      "searchTerm": "vertebra",
+      "score": 20,
+      "reason": "Matched \"vertebra\" -> \"Vertebra\" (score: 20)"
+    },
+    {
+      "questionId": "q020",
+      "title": "Human anatomy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/TE-Nervous_system_diagram.svg/960px-TE-Nervous_system_diagram.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Human_anatomy",
+      "searchTerm": "spine anatomy",
+      "score": 30,
+      "reason": "Matched \"spine anatomy\" -> \"Human anatomy\" (score: 30)"
+    },
+    {
+      "questionId": "q021",
+      "title": "Skeletal system of the horse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Horse_anatomy.svg/960px-Horse_anatomy.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Skeletal_system_of_the_horse",
+      "searchTerm": "skeletal system",
+      "score": 20,
+      "reason": "Matched \"skeletal system\" -> \"Skeletal system of the horse\" (score: 20)"
+    },
+    {
+      "questionId": "q022",
+      "title": "List of skeletal muscles of the human body",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Anterior_View_of_Muscles.jpg/960px-Anterior_View_of_Muscles.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/List_of_skeletal_muscles_of_the_human_body",
+      "searchTerm": "muscle anatomy",
+      "score": 30,
+      "reason": "Matched \"muscle anatomy\" -> \"List of skeletal muscles of the human body\" (score: 30)"
+    },
+    {
+      "questionId": "q023",
+      "title": "Skeletal muscle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Blausen_0801_SkeletalMuscle.png/960px-Blausen_0801_SkeletalMuscle.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Skeletal_muscle",
+      "searchTerm": "skeletal muscle",
+      "score": 30,
+      "reason": "Matched \"skeletal muscle\" -> \"Skeletal muscle\" (score: 30)"
+    },
+    {
+      "questionId": "q024",
+      "title": "Anatomical terms of muscle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/View_of_Viscera_Page_82.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Anatomical_terms_of_muscle",
+      "searchTerm": "antagonist muscles",
+      "score": 10,
+      "reason": "Matched \"antagonist muscles\" -> \"Anatomical terms of muscle\" (score: 10)"
+    },
+    {
+      "questionId": "q025",
+      "title": "Deep artery of arm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Gray526.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Deep_artery_of_arm",
+      "searchTerm": "triceps brachii",
+      "score": 20,
+      "reason": "Matched \"triceps brachii\" -> \"Deep artery of arm\" (score: 20)"
+    },
+    {
+      "questionId": "q026",
+      "title": "Infraspinatus muscle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Infraspinatus.PNG",
+      "pageUrl": "https://en.wikipedia.org/wiki/Infraspinatus_muscle",
+      "searchTerm": "muscle anatomy",
+      "score": 20,
+      "reason": "Matched \"muscle anatomy\" -> \"Infraspinatus muscle\" (score: 20)"
+    },
+    {
+      "questionId": "q027",
+      "title": "Temporalis muscle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Gray382.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Temporalis_muscle",
+      "searchTerm": "muscle anatomy",
+      "score": 20,
+      "reason": "Matched \"muscle anatomy\" -> \"Temporalis muscle\" (score: 20)"
+    },
+    {
+      "questionId": "q028",
+      "title": "Muscle memory",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Electronic_access_control_%28BSL3_Lab%29_using_personal_identification_number_%28PIN%29.jpg/960px-Electronic_access_control_%28BSL3_Lab%29_using_personal_identification_number_%28PIN%29.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Muscle_memory",
+      "searchTerm": "motor memory",
+      "score": 30,
+      "reason": "Matched \"motor memory\" -> \"Muscle memory\" (score: 30)"
+    },
+    {
+      "questionId": "q031",
+      "title": "Warming up",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Training_of_Seattle_Mist_Lingerie_Football_0154.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Warming_up",
+      "searchTerm": "warm up exercise",
+      "score": 20,
+      "reason": "Matched \"warm up exercise\" -> \"Warming up\" (score: 20)"
+    },
+    {
+      "questionId": "q032",
+      "title": "Plantaris muscle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Plantaris_muscle_-_posterior_view.png/960px-Plantaris_muscle_-_posterior_view.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Plantaris_muscle",
+      "searchTerm": "muscle anatomy",
+      "score": 20,
+      "reason": "Matched \"muscle anatomy\" -> \"Plantaris muscle\" (score: 20)"
+    },
+    {
+      "questionId": "q034",
+      "title": "Exercise physiology",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/MatteoTosatto2.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Exercise_physiology",
+      "searchTerm": "cool down exercise",
+      "score": 10,
+      "reason": "Matched \"cool down exercise\" -> \"Exercise physiology\" (score: 10)"
+    },
+    {
+      "questionId": "q035",
+      "title": "Soleus muscle",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Illu_lower_extremity_muscles.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Soleus_muscle",
+      "searchTerm": "muscle anatomy",
+      "score": 30,
+      "reason": "Matched \"muscle anatomy\" -> \"Soleus muscle\" (score: 30)"
+    },
+    {
+      "questionId": "q036",
+      "title": "Sports injury",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/03042012Ccm_gamosuma_juvenilA231.JPG/960px-03042012Ccm_gamosuma_juvenilA231.JPG",
+      "pageUrl": "https://en.wikipedia.org/wiki/Sports_injury",
+      "searchTerm": "sports injury",
+      "score": 30,
+      "reason": "Matched \"sports injury\" -> \"Sports injury\" (score: 30)"
+    },
+    {
+      "questionId": "q037",
+      "title": "Repetitive strain injury",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Operating_a_Computer_Keyboard_MOD_45158111.jpg/960px-Operating_a_Computer_Keyboard_MOD_45158111.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Repetitive_strain_injury",
+      "searchTerm": "repetitive strain injury",
+      "score": 30,
+      "reason": "Matched \"repetitive strain injury\" -> \"Repetitive strain injury\" (score: 30)"
+    },
+    {
+      "questionId": "q038",
+      "title": "Strain (injury)",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2010-10-02_pulled_hamstring.jpg/960px-2010-10-02_pulled_hamstring.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Strain_(injury)",
+      "searchTerm": "repetitive strain injury",
+      "score": 20,
+      "reason": "Matched \"repetitive strain injury\" -> \"Strain (injury)\" (score: 20)"
+    },
+    {
+      "questionId": "q039",
+      "title": "Computer mouse",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Computer_mouse",
+      "searchTerm": "RSI computer",
+      "score": 10,
+      "reason": "Matched \"RSI computer\" -> \"Computer mouse\" (score: 10)"
+    },
+    {
+      "questionId": "q042",
+      "title": "British Computer Society",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/BCS_logo_2021.svg/960px-BCS_logo_2021.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/British_Computer_Society",
+      "searchTerm": "RSI computer",
+      "score": 10,
+      "reason": "Matched \"RSI computer\" -> \"British Computer Society\" (score: 10)"
+    },
+    {
+      "questionId": "q046",
+      "title": "Keel (bird anatomy)",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Br%C3%A9chet.png/960px-Br%C3%A9chet.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Keel_(bird_anatomy)",
+      "searchTerm": "breastbone",
+      "score": 20,
+      "reason": "Matched \"breastbone\" -> \"Keel (bird anatomy)\" (score: 20)"
+    }
+  ],
+  "failed": [],
+  "usedImages": [
+    "Human musculoskeletal system",
+    "List of bones of the human skeleton",
+    "Metacarpal bones",
+    "Zygomatic bone",
+    "Cartilage",
+    "Plastered human skulls",
+    "Bone",
+    "Phalanx bone",
+    "Synovial joint",
+    "Joint",
+    "Joint capsule",
+    "Ball-and-socket joint",
+    "Pivot joint",
+    "Synovial fluid",
+    "Sacroiliac joint",
+    "Vertebra",
+    "Human anatomy",
+    "Skeletal system of the horse",
+    "List of skeletal muscles of the human body",
+    "Skeletal muscle",
+    "Anatomical terms of muscle",
+    "Deep artery of arm",
+    "Infraspinatus muscle",
+    "Temporalis muscle",
+    "Muscle memory",
+    "Warming up",
+    "Plantaris muscle",
+    "Exercise physiology",
+    "Soleus muscle",
+    "Sports injury",
+    "Repetitive strain injury",
+    "Strain (injury)",
+    "Computer mouse",
+    "British Computer Society",
+    "Keel (bird anatomy)"
+  ]
+}

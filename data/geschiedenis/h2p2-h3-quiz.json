@@ -63,23 +63,51 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": ["Narmer"],
-          "options": ["Narmer", "Ramses", "Toetanchamon", "Cleopatra"]
+          "answers": [
+            "Narmer"
+          ],
+          "options": [
+            "Narmer",
+            "Ramses",
+            "Toetanchamon",
+            "Cleopatra"
+          ]
         },
         {
           "id": "blank2",
-          "answers": ["farao"],
-          "options": ["farao", "koning", "keizer", "consul"]
+          "answers": [
+            "farao"
+          ],
+          "options": [
+            "farao",
+            "koning",
+            "keizer",
+            "consul"
+          ]
         },
         {
           "id": "blank3",
-          "answers": ["hiërogliefen"],
-          "options": ["hiërogliefen", "spijkerschrift", "runen", "letters"]
+          "answers": [
+            "hiërogliefen"
+          ],
+          "options": [
+            "hiërogliefen",
+            "spijkerschrift",
+            "runen",
+            "letters"
+          ]
         },
         {
           "id": "blank4",
-          "answers": ["papyrus"],
-          "options": ["papyrus", "perkament", "kleitabletten", "hout"]
+          "answers": [
+            "papyrus"
+          ],
+          "options": [
+            "papyrus",
+            "perkament",
+            "kleitabletten",
+            "hout"
+          ]
         }
       ],
       "explanation": "Schrift + administratie is essentieel voor een staat: belasting, voorraden, bevelen.",
@@ -116,7 +144,10 @@
       "media": {
         "query": "ancient athenian agora pnyx assembly",
         "alt": "Atheense agora volksvergadering",
-        "negativeTerms": ["modern", "diagram"],
+        "negativeTerms": [
+          "modern",
+          "diagram"
+        ],
         "qids": [],
         "_intent": {
           "primaryConcept": "Atheense agora",
@@ -139,17 +170,19 @@
       ],
       "c": 1,
       "e": "De democratie gold alleen voor mannelijke burgers; grote groepen waren uitgesloten.",
-      "media": {
-        "query": "ancient greek slaves women society",
-        "alt": "Griekse maatschappij met slaven en vrouwen",
-        "negativeTerms": ["modern", "statue"],
-        "qids": [],
-        "_intent": {
-          "primaryConcept": "Griekse maatschappij slaven vrouwen",
-          "specificFocus": "uitgesloten groepen Athene",
-          "representation": "illustration"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Discurso_funebre_pericles.PNG",
+          "alt": "Athenian democracy",
+          "caption": "Bron: Wikipedia - Athenian democracy",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Athenian_democracy",
+            "searchTerm": "Athenian democracy",
+            "score": 30
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-006",
@@ -164,22 +197,19 @@
       ],
       "c": 1,
       "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als ‘wereldbeeld’ vóór wetenschappelijke verklaringen dominant worden.",
-      "media": {
-        "query": "greek mythology olympus gods illustration",
-        "alt": "Griekse mythologie goden",
-        "negativeTerms": [
-          "disney",
-          "cartoon"
-        ],
-        "qids": [
-          "Q33927"
-        ],
-        "_intent": {
-          "primaryConcept": "Griekse mythologie goden",
-          "specificFocus": "Griekse mythologie goden",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Map_of_Greece%2C_Archipelago_and_part_of_Anadoli%3B_Louis_Stanislas_d%27Arcy_Delarochette_1791.jpg/960px-Map_of_Greece%2C_Archipelago_and_part_of_Anadoli%3B_Louis_Stanislas_d%27Arcy_Delarochette_1791.jpg",
+          "alt": "Ancient Greece",
+          "caption": "Bron: Wikipedia - Ancient Greece",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Greece",
+            "searchTerm": "ancient Greeks",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-007",
@@ -221,19 +251,19 @@
       ],
       "c": 1,
       "e": "Mythen bleven belangrijk als wereldbeeld, terwijl sommige Grieken ook met observatie en logica gingen verklaren.",
-      "media": {
-        "query": "greek philosophy science thales natural explanation",
-        "alt": "Griekse filosofie wetenschap",
-        "negativeTerms": [],
-        "qids": [
-          "Q122393"
-        ],
-        "_intent": {
-          "primaryConcept": "Griekse filosofie wetenschap",
-          "specificFocus": "Griekse filosofie wetenschap",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Detail_of_fresco_from_lateral_walls_of_the_Tomb_of_the_Diver_depicting_a_symposium_scene%2C_5th_century_BC%2C_Paestum_Archaeological_Museum_%2814603183465%292.jpg/960px-Detail_of_fresco_from_lateral_walls_of_the_Tomb_of_the_Diver_depicting_a_symposium_scene%2C_5th_century_BC%2C_Paestum_Archaeological_Museum_%2814603183465%292.jpg",
+          "alt": "Pederasty in ancient Greece",
+          "caption": "Bron: Wikipedia - Pederasty in ancient Greece",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Pederasty_in_ancient_Greece",
+            "searchTerm": "ancient Greece",
+            "score": 30
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-009",
@@ -337,18 +367,39 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": ["burgers"],
-          "options": ["burgers", "metoiken", "slaven", "aristocraten"]
+          "answers": [
+            "burgers"
+          ],
+          "options": [
+            "burgers",
+            "metoiken",
+            "slaven",
+            "aristocraten"
+          ]
         },
         {
           "id": "blank2",
-          "answers": ["metoiken"],
-          "options": ["burgers", "metoiken", "slaven", "heloten"]
+          "answers": [
+            "metoiken"
+          ],
+          "options": [
+            "burgers",
+            "metoiken",
+            "slaven",
+            "heloten"
+          ]
         },
         {
           "id": "blank3",
-          "answers": ["slaven"],
-          "options": ["burgers", "metoiken", "slaven", "vrouwen"]
+          "answers": [
+            "slaven"
+          ],
+          "options": [
+            "burgers",
+            "metoiken",
+            "slaven",
+            "vrouwen"
+          ]
         }
       ],
       "explanation": "Kern: ‘vrij’ ≠ ‘burger’. Burgerrecht bepaalt politieke deelname.",
@@ -379,22 +430,19 @@
       ],
       "c": 1,
       "e": "Religieus wereldbeeld: het lichaam moest bewaard blijven voor voortbestaan na de dood.",
-      "media": {
-        "query": "egyptian mummification afterlife ka ba",
-        "alt": "Egyptische mummificatie hiernamaals",
-        "negativeTerms": [
-          "horror",
-          "movie"
-        ],
-        "qids": [
-          "Q178885"
-        ],
-        "_intent": {
-          "primaryConcept": "Egyptische mummificatie hiernamaals",
-          "specificFocus": "Egyptische mummificatie hiernamaals",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ancient_Egypt_map-en.svg/960px-Ancient_Egypt_map-en.svg.png",
+          "alt": "Ancient Egypt",
+          "caption": "Bron: Wikipedia - Ancient Egypt",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Egypt",
+            "searchTerm": "ancient Egypt",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-014",
@@ -521,19 +569,19 @@
       ],
       "c": 2,
       "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotamië was moeilijk bereikbaar én politiek bezet door sterke rijken.",
-      "media": {
-        "query": "greek colonization mediterranean map colonies",
-        "alt": "Griekse kolonisatie Middellandse Zee",
-        "negativeTerms": [],
-        "qids": [
-          "Q9242711"
-        ],
-        "_intent": {
-          "primaryConcept": "Griekse kolonisatie Middellandse Zee",
-          "specificFocus": "Griekse kolonisatie Middellandse Zee",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Account_of_the_construction_of_Athena_Parthenos_by_Phidias.jpg/960px-Account_of_the_construction_of_Athena_Parthenos_by_Phidias.jpg",
+          "alt": "Ancient Greek",
+          "caption": "Bron: Wikipedia - Ancient Greek",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Greek",
+            "searchTerm": "ancient Greeks",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-019",
@@ -595,18 +643,39 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": ["Macedonië"],
-          "options": ["Macedonië", "Athene", "Sparta", "Thebe"]
+          "answers": [
+            "Macedonië"
+          ],
+          "options": [
+            "Macedonië",
+            "Athene",
+            "Sparta",
+            "Thebe"
+          ]
         },
         {
           "id": "blank2",
-          "answers": ["Perzische"],
-          "options": ["Perzische", "Egyptische", "Romeinse", "Griekse"]
+          "answers": [
+            "Perzische"
+          ],
+          "options": [
+            "Perzische",
+            "Egyptische",
+            "Romeinse",
+            "Griekse"
+          ]
         },
         {
           "id": "blank3",
-          "answers": ["hellenisme"],
-          "options": ["hellenisme", "democratie", "filosofie", "kolonisatie"]
+          "answers": [
+            "hellenisme"
+          ],
+          "options": [
+            "hellenisme",
+            "democratie",
+            "filosofie",
+            "kolonisatie"
+          ]
         }
       ],
       "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet ‘iedereen werd Grieks hetzelfde’.",
@@ -668,21 +737,19 @@
       ],
       "c": 1,
       "e": "Piramides waren religieuze graven en symbolen van macht en organisatie.",
-      "media": {
-        "query": "pyramids of giza ancient egypt pharaoh",
-        "alt": "piramides van Gizeh farao",
-        "negativeTerms": [
-          "modern"
-        ],
-        "qids": [
-          "Q37200"
-        ],
-        "_intent": {
-          "primaryConcept": "piramides van Gizeh farao",
-          "specificFocus": "piramides van Gizeh farao",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/960px-All_Gizah_Pyramids.jpg",
+          "alt": "Egyptian pyramids",
+          "caption": "Bron: Wikipedia - Egyptian pyramids",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Egyptian_pyramids",
+            "searchTerm": "Egyptian pyramid",
+            "score": 40
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-024",
@@ -823,18 +890,39 @@
       "blanks": [
         {
           "id": "blank1",
-          "answers": ["Olympus"],
-          "options": ["Olympus", "Parnassus", "Vesuvius", "Akropolis"]
+          "answers": [
+            "Olympus"
+          ],
+          "options": [
+            "Olympus",
+            "Parnassus",
+            "Vesuvius",
+            "Akropolis"
+          ]
         },
         {
           "id": "blank2",
-          "answers": ["orakel"],
-          "options": ["orakel", "theater", "gymnasium", "tempel"]
+          "answers": [
+            "orakel"
+          ],
+          "options": [
+            "orakel",
+            "theater",
+            "gymnasium",
+            "tempel"
+          ]
         },
         {
           "id": "blank3",
-          "answers": ["verstand"],
-          "options": ["verstand", "oorlog", "liefde", "wijn"]
+          "answers": [
+            "verstand"
+          ],
+          "options": [
+            "verstand",
+            "oorlog",
+            "liefde",
+            "wijn"
+          ]
         }
       ],
       "explanation": "Delphi is hét voorbeeld van religieus ‘advies’ in politieke beslissingen.",
@@ -904,19 +992,19 @@
       ],
       "c": 2,
       "e": "Vruchtbaar gebied = ‘zwarte land’ (kemet); woestijn = ‘rode land’ (deshret).",
-      "media": {
-        "query": "nile river egypt flooding agriculture kemet",
-        "alt": "Nijl overstroming vruchtbaar land",
-        "negativeTerms": [],
-        "qids": [
-          "Q3392"
-        ],
-        "_intent": {
-          "primaryConcept": "Nijl overstroming vruchtbaar land",
-          "specificFocus": "Nijl overstroming vruchtbaar land",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cairo_skyline%2C_Panoramic_view%2C_Egypt.jpg/960px-Cairo_skyline%2C_Panoramic_view%2C_Egypt.jpg",
+          "alt": "Nile",
+          "caption": "Bron: Wikipedia - Nile",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Nile",
+            "searchTerm": "Nile River",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-032",
@@ -960,19 +1048,19 @@
       ],
       "c": 1,
       "e": "Smalle zeestraat = manoeuvreerruimte beperkt → tactisch voordeel voor kleinere/behendigere vloot.",
-      "media": {
-        "query": "battle of salamis strait tactics trireme",
-        "alt": "Salamis zeestraat strategie",
-        "negativeTerms": [],
-        "qids": [
-          "Q131212"
-        ],
-        "_intent": {
-          "primaryConcept": "Salamis zeestraat strategie",
-          "specificFocus": "Salamis zeestraat strategie",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Oracle_of_Delphi%2C_red-figure_kylix%2C_440-430_BC%2C_Kodros_Painter%2C_Berlin_F_2538%2C_141668.jpg/960px-Oracle_of_Delphi%2C_red-figure_kylix%2C_440-430_BC%2C_Kodros_Painter%2C_Berlin_F_2538%2C_141668.jpg",
+          "alt": "Ancient Greek religion",
+          "caption": "Bron: Wikipedia - Ancient Greek religion",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Greek_religion",
+            "searchTerm": "ancient Greeks",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-034",
@@ -1015,19 +1103,19 @@
       ],
       "c": 1,
       "e": "Een tiran greep macht; het woord is niet per se ‘modern moreel’ negatief in de oudheid.",
-      "media": {
-        "query": "greek tyranny tyrant ancient greece",
-        "alt": "Griekse tirannie machthebber",
-        "negativeTerms": [],
-        "qids": [
-          "Q181138"
-        ],
-        "_intent": {
-          "primaryConcept": "Griekse tirannie machthebber",
-          "specificFocus": "Griekse tirannie machthebber",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Deer_hunt_mosaic_from_Pella.jpg",
+          "alt": "Ancient Macedonians",
+          "caption": "Bron: Wikipedia - Ancient Macedonians",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Macedonians",
+            "searchTerm": "ancient Greeks",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-036",
@@ -1290,7 +1378,20 @@
         "macht van de adel"
       ],
       "c": 1,
-      "e": "demos = volk, kratos = macht/heerschappij."
+      "e": "demos = volk, kratos = macht/heerschappij.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/960px-The_Parthenon_in_Athens.jpg",
+          "alt": "Democracy",
+          "caption": "Bron: Wikipedia - Democracy",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Democracy",
+            "searchTerm": "Athenian democracy",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "g-046",
@@ -1377,19 +1478,19 @@
       ],
       "c": 0,
       "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes.",
-      "media": {
-        "query": "narmer ancient egypt 3100 BC unification",
-        "alt": "Narmer 3100 v.C. Egypte",
-        "negativeTerms": [],
-        "qids": [
-          "Q183109"
-        ],
-        "_intent": {
-          "primaryConcept": "Narmer 3100 v.C. Egypte",
-          "specificFocus": "Narmer 3100 v.C. Egypte",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/%22Table_of_Nations%22_from_the_Book_of_Gates%2C_4th_Division%2C_5th_Hour%2C_Tomb_of_Seti_I%2C_based_on_an_illustration_by_Ernst_Weidenbach_for_Richard_Lepsius%E2%80%99_Denkm%C3%A4ler_aus_%C3%84gypten_und_%C3%84thiopien.png/960px-thumbnail.png",
+          "alt": "Ancient Egyptian race controversy",
+          "caption": "Bron: Wikipedia - Ancient Egyptian race controversy",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Egyptian_race_controversy",
+            "searchTerm": "ancient Egypt",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "g-049",
@@ -1484,7 +1585,20 @@
         "4000 v.C."
       ],
       "c": 0,
-      "e": "Rond 3000 v.C. werden de eerste hiërogliefen gebruikt in Egypte. Dit was een beeldschrift dat door schrijvers werd gebruikt voor administratie en religieuze teksten."
+      "e": "Rond 3000 v.C. werden de eerste hiërogliefen gebruikt in Egypte. Dit was een beeldschrift dat door schrijvers werd gebruikt voor administratie en religieuze teksten.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg/960px-CairoEgMuseumTaaMaskMostlyPhotographed.jpg",
+          "alt": "Art of ancient Egypt",
+          "caption": "Bron: Wikipedia - Art of ancient Egypt",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Art_of_ancient_Egypt",
+            "searchTerm": "ancient Egypt",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "g-052",
@@ -1500,7 +1614,20 @@
         "550-400 v.C."
       ],
       "c": 0,
-      "e": "De Atheense democratie duurde van 508 v.C. (hervormingen van Cleisthenes) tot 338 v.C. (verovering door Macedonië onder Philippus II)."
+      "e": "De Atheense democratie duurde van 508 v.C. (hervormingen van Cleisthenes) tot 338 v.C. (verovering door Macedonië onder Philippus II).",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/L._Cassius_Longinus%2C_denarius%2C_63_BC%2C_RRC_413-1_reverse.jpg/960px-L._Cassius_Longinus%2C_denarius%2C_63_BC%2C_RRC_413-1_reverse.jpg",
+          "alt": "History of democracy",
+          "caption": "Bron: Wikipedia - History of democracy",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/History_of_democracy",
+            "searchTerm": "ancient Greek democracy",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "g-053",

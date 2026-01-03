@@ -1,0 +1,634 @@
+{
+  "subject": "aardrijkskunde",
+  "briefs": [
+    {
+      "questionId": "h2-002",
+      "concepts": [
+        "aarde"
+      ],
+      "searchTerms": [
+        "Earth planet",
+        "Earth from space"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "Earth planet"
+    },
+    {
+      "questionId": "h2-003",
+      "concepts": [
+        "land"
+      ],
+      "searchTerms": [
+        "country map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "country map"
+    },
+    {
+      "questionId": "h2-006",
+      "concepts": [
+        "stad"
+      ],
+      "searchTerms": [
+        "city aerial",
+        "urban area"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "city aerial"
+    },
+    {
+      "questionId": "h2-007",
+      "concepts": [
+        "aarde"
+      ],
+      "searchTerms": [
+        "Earth planet",
+        "Earth from space"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "Earth planet"
+    },
+    {
+      "questionId": "h2-009",
+      "concepts": [
+        "breedtegraad"
+      ],
+      "searchTerms": [
+        "latitude lines"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "latitude lines"
+    },
+    {
+      "questionId": "h2-010",
+      "concepts": [
+        "zee",
+        "land"
+      ],
+      "searchTerms": [
+        "sea",
+        "country map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "sea"
+    },
+    {
+      "questionId": "h2-012",
+      "concepts": [
+        "zee",
+        "land"
+      ],
+      "searchTerms": [
+        "sea",
+        "country map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "sea"
+    },
+    {
+      "questionId": "h2-015",
+      "concepts": [
+        "land"
+      ],
+      "searchTerms": [
+        "country map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "country map"
+    },
+    {
+      "questionId": "h2-016",
+      "concepts": [
+        "aarde"
+      ],
+      "searchTerms": [
+        "Earth planet",
+        "Earth from space"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "Earth planet"
+    },
+    {
+      "questionId": "h2-018",
+      "concepts": [
+        "klimaat"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-019",
+      "concepts": [
+        "klimaat"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-021",
+      "concepts": [
+        "zee",
+        "klimaat",
+        "land"
+      ],
+      "searchTerms": [
+        "sea",
+        "climate zones",
+        "world climate",
+        "country map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "sea"
+    },
+    {
+      "questionId": "h2-022",
+      "concepts": [
+        "berg"
+      ],
+      "searchTerms": [
+        "mountain"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "mountain"
+    },
+    {
+      "questionId": "h2-023",
+      "concepts": [
+        "klimaat"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-024",
+      "concepts": [
+        "klimaat"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-025",
+      "concepts": [
+        "land"
+      ],
+      "searchTerms": [
+        "country map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "country map"
+    },
+    {
+      "questionId": "h2-026",
+      "concepts": [
+        "klimaat"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-027",
+      "concepts": [
+        "kaart"
+      ],
+      "searchTerms": [
+        "world map",
+        "geographic map"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "world map"
+    },
+    {
+      "questionId": "h2-028",
+      "concepts": [
+        "kaart"
+      ],
+      "searchTerms": [
+        "world map",
+        "geographic map"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "world map"
+    },
+    {
+      "questionId": "h2-029",
+      "concepts": [
+        "kaart"
+      ],
+      "searchTerms": [
+        "world map",
+        "geographic map"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "world map"
+    },
+    {
+      "questionId": "h2-030",
+      "concepts": [
+        "klimaat",
+        "bevolking",
+        "kaart"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate",
+        "world population",
+        "population density",
+        "world map"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-031",
+      "concepts": [
+        "land"
+      ],
+      "searchTerms": [
+        "country map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "country map"
+    },
+    {
+      "questionId": "h2-034",
+      "concepts": [
+        "klimaat",
+        "land"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate",
+        "country map"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-035",
+      "concepts": [
+        "land",
+        "kaart"
+      ],
+      "searchTerms": [
+        "country map",
+        "world map",
+        "geographic map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "country map"
+    },
+    {
+      "questionId": "h2-036",
+      "concepts": [
+        "klimaat",
+        "land",
+        "breedtegraad"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate",
+        "country map",
+        "latitude lines"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-037",
+      "concepts": [
+        "klimaat"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    },
+    {
+      "questionId": "h2-040",
+      "concepts": [
+        "kaart"
+      ],
+      "searchTerms": [
+        "world map",
+        "geographic map"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "world map"
+    },
+    {
+      "questionId": "h2-new-005",
+      "concepts": [
+        "berg",
+        "gebergte"
+      ],
+      "searchTerms": [
+        "mountain",
+        "mountain range"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "mountain"
+    },
+    {
+      "questionId": "h2-new-006",
+      "concepts": [
+        "kaart"
+      ],
+      "searchTerms": [
+        "world map",
+        "geographic map"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "world map"
+    },
+    {
+      "questionId": "h2-new-009",
+      "concepts": [
+        "land"
+      ],
+      "searchTerms": [
+        "country map"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "country map"
+    },
+    {
+      "questionId": "h2-new-010",
+      "concepts": [
+        "klimaat"
+      ],
+      "searchTerms": [
+        "climate zones",
+        "world climate"
+      ],
+      "preferredType": "map or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "climate zones"
+    }
+  ],
+  "skipped": [
+    "h2-001",
+    "h2-004",
+    "h2-005",
+    "h2-008",
+    "h2-011",
+    "h2-013",
+    "h2-014",
+    "h2-017",
+    "h2-020",
+    "h2-032",
+    "h2-033",
+    "h2-038",
+    "h2-039",
+    "h2-mp-001",
+    "h2-mp-002",
+    "h2-mp-003",
+    "h2-mp-004",
+    "h2-mp-005",
+    "h2-mp-006",
+    "h2-new-001",
+    "h2-new-002",
+    "h2-new-003",
+    "h2-new-004",
+    "h2-new-007",
+    "h2-new-008"
+  ]
+}

@@ -2817,7 +2817,20 @@
           "c": 0,
           "e": "servum is de accusativus enkelvoud (groep 2)"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Jean_Leon_Gerome_Selling_Slaves_in_Rome.jpg/960px-Jean_Leon_Gerome_Selling_Slaves_in_Rome.jpg",
+          "alt": "A Roman Slave Market",
+          "caption": "Bron: Wikipedia - A Roman Slave Market",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/A_Roman_Slave_Market",
+            "searchTerm": "Roman slave",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "q041",
@@ -3253,7 +3266,20 @@
           ],
           "e": "De slaaf roept = Servus vocat/clamat"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Dougga_cup-bearers_mosa%C3%AFc.jpg/960px-Dougga_cup-bearers_mosa%C3%AFc.jpg",
+          "alt": "Slavery in ancient Rome",
+          "caption": "Bron: Wikipedia - Slavery in ancient Rome",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Slavery_in_ancient_Rome",
+            "searchTerm": "Roman slavery",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q049",
@@ -3296,7 +3322,20 @@
           ],
           "e": "De vrouw (nom) ziet de slaaf (acc) = Femina servum videt"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Targum.jpg/946px-Targum.jpg",
+          "alt": "The Bible and slavery",
+          "caption": "Bron: Wikipedia - The Bible and slavery",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/The_Bible_and_slavery",
+            "searchTerm": "Roman slavery",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q050",
@@ -6652,7 +6691,20 @@
           "e": "Vestaalse Maagden moesten kuis blijven, zo kon Rhea Silvia geen troonopvolger krijgen.",
           "image": "assets/images/latijn/flumen.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/VestalisMaxima.jpg/960px-VestalisMaxima.jpg",
+          "alt": "Vestal Virgin",
+          "caption": "Bron: Wikipedia - Vestal Virgin",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Vestal_Virgin",
+            "searchTerm": "Vestal virgins",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q085",
@@ -6714,7 +6766,20 @@
           "e": "De god Mars verwekte de tweeling bij Rhea Silvia.",
           "image": "assets/images/latijn/flumen.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/960px-Lupa_Capitolina%2C_Rome.jpg",
+          "alt": "Romulus and Remus",
+          "caption": "Bron: Wikipedia - Romulus and Remus",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Romulus_and_Remus",
+            "searchTerm": "Romulus Remus",
+            "score": 40
+          }
+        }
+      ]
     },
     {
       "id": "q086",
@@ -6826,7 +6891,20 @@
           "e": "De slaaf weigerde de baby's te doden en zette ze in een mandje op de rivier.",
           "image": "assets/images/latijn/flumen.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Biard_Abolition_de_l%27esclavage_1849.jpg/960px-Biard_Abolition_de_l%27esclavage_1849.jpg",
+          "alt": "Timeline of abolition of slavery and serfdom",
+          "caption": "Bron: Wikipedia - Timeline of abolition of slavery and serfdom",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Timeline_of_abolition_of_slavery_and_serfdom",
+            "searchTerm": "Roman slavery",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q088",
@@ -6994,7 +7072,20 @@
           "e": "Faustulus was de herder die de tweeling vond bij de wolvin.",
           "image": "assets/images/latijn/lupa.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Romolo_e_remo.jpg",
+          "alt": "Romulus and Remus (Rubens)",
+          "caption": "Bron: Wikipedia - Romulus and Remus (Rubens)",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Romulus_and_Remus_(Rubens)",
+            "searchTerm": "Romulus Remus",
+            "score": 40
+          }
+        }
+      ]
     },
     {
       "id": "q091",
@@ -7056,7 +7147,20 @@
           "e": "De herder Faustulus en zijn vrouw Larentia voedden de tweeling op.",
           "image": "assets/images/latijn/lupa.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/Brogi%2C_Carlo_%281850-1925%29_-_n._8226_-_Certosa_di_Pavia_-_Medaglione_sullo_zoccolo_della_facciata.jpg",
+          "alt": "Romulus",
+          "caption": "Bron: Wikipedia - Romulus",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Romulus",
+            "searchTerm": "Romulus Remus",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q092",
@@ -7118,7 +7222,20 @@
           "e": "De broers doodden de usurpator Amulius en herstelden hun grootvader Numitor op de troon.",
           "image": "assets/images/latijn/regnum.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg/960px-Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg",
+          "alt": "Founding of Rome",
+          "caption": "Bron: Wikipedia - Founding of Rome",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Founding_of_Rome",
+            "searchTerm": "founding Rome",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q093",
@@ -7180,7 +7297,20 @@
           "e": "De broers kregen ruzie over waar de nieuwe stad gebouwd moest worden.",
           "image": "assets/images/latijn/regnum.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg/960px-Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg",
+          "alt": "Rome",
+          "caption": "Bron: Wikipedia - Rome",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Rome",
+            "searchTerm": "founding Rome",
+            "score": 10
+          }
+        }
+      ]
     },
     {
       "id": "q094",
@@ -7242,7 +7372,20 @@
           "e": "Remus sprong spottend over de muur van Romulus, waarop Romulus hem doodde.",
           "image": "assets/images/latijn/regnum.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/960px-Lupa_Capitolina%2C_Rome.jpg",
+          "alt": "She-wolf (Roman mythology)",
+          "caption": "Bron: Wikipedia - She-wolf (Roman mythology)",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/She-wolf_(Roman_mythology)",
+            "searchTerm": "Romulus Remus wolf",
+            "score": 10
+          }
+        }
+      ]
     },
     {
       "id": "q095",
@@ -7286,7 +7429,20 @@
           "e": "Rome (Roma) is vernoemd naar Romulus, de eerste koning.",
           "image": "assets/images/latijn/regnum.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roman_Republic_Empire_map.gif",
+          "alt": "Ancient Rome",
+          "caption": "Bron: Wikipedia - Ancient Rome",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Rome",
+            "searchTerm": "ancient Rome",
+            "score": 20
+          }
+        }
+      ]
     },
     {
       "id": "q096",
@@ -7348,7 +7504,20 @@
           "e": "Romulus werd de eerste koning van Rome na de dood van zijn broer.",
           "image": "assets/images/latijn/regnum.jpg"
         }
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Roma%2C_Museo_Ara_Pacis_-_Calco_di_Roma_con_Vittoria_-_Foto_Giovanni_Dall%27Orto%2C_30-Mar-2008.jpg/960px-Roma%2C_Museo_Ara_Pacis_-_Calco_di_Roma_con_Vittoria_-_Foto_Giovanni_Dall%27Orto%2C_30-Mar-2008.jpg",
+          "alt": "Religion in ancient Rome",
+          "caption": "Bron: Wikipedia - Religion in ancient Rome",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Religion_in_ancient_Rome",
+            "searchTerm": "ancient Rome",
+            "score": 20
+          }
+        }
+      ]
     }
   ]
 }

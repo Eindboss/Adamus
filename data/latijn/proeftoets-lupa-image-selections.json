@@ -1,0 +1,47 @@
+{
+  "selections": [
+    {
+      "questionId": "lupa-002",
+      "title": "A Roman Slave Market",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Jean_Leon_Gerome_Selling_Slaves_in_Rome.jpg/960px-Jean_Leon_Gerome_Selling_Slaves_in_Rome.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/A_Roman_Slave_Market",
+      "searchTerm": "Roman slave",
+      "score": 30,
+      "reason": "Matched \"Roman slave\" -> \"A Roman Slave Market\" (score: 30)"
+    },
+    {
+      "questionId": "lupa-007",
+      "title": "Ancient Roman architecture",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Roman_architecture",
+      "searchTerm": "ancient Roman",
+      "score": 60,
+      "reason": "Matched \"ancient Roman\" -> \"Ancient Roman architecture\" (score: 60)"
+    },
+    {
+      "questionId": "lupa-008",
+      "title": "Ancient Roman technology",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Pont_du_Gard_3.jpg/960px-Pont_du_Gard_3.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Roman_technology",
+      "searchTerm": "ancient Roman",
+      "score": 50,
+      "reason": "Matched \"ancient Roman\" -> \"Ancient Roman technology\" (score: 50)"
+    },
+    {
+      "questionId": "lupa-009",
+      "title": "Ancient Rome",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roman_Republic_Empire_map.gif",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Rome",
+      "searchTerm": "ancient Rome",
+      "score": 30,
+      "reason": "Matched \"ancient Rome\" -> \"Ancient Rome\" (score: 30)"
+    }
+  ],
+  "failed": [],
+  "usedImages": [
+    "A Roman Slave Market",
+    "Ancient Roman architecture",
+    "Ancient Roman technology",
+    "Ancient Rome"
+  ]
+}

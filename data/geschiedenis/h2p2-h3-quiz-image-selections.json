@@ -1,0 +1,137 @@
+{
+  "selections": [
+    {
+      "questionId": "g-005",
+      "title": "Athenian democracy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Discurso_funebre_pericles.PNG",
+      "pageUrl": "https://en.wikipedia.org/wiki/Athenian_democracy",
+      "searchTerm": "Athenian democracy",
+      "score": 30,
+      "reason": "Matched \"Athenian democracy\" -> \"Athenian democracy\" (score: 30)"
+    },
+    {
+      "questionId": "g-006",
+      "title": "Ancient Greece",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Map_of_Greece%2C_Archipelago_and_part_of_Anadoli%3B_Louis_Stanislas_d%27Arcy_Delarochette_1791.jpg/960px-Map_of_Greece%2C_Archipelago_and_part_of_Anadoli%3B_Louis_Stanislas_d%27Arcy_Delarochette_1791.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Greece",
+      "searchTerm": "ancient Greeks",
+      "score": 10,
+      "reason": "Matched \"ancient Greeks\" -> \"Ancient Greece\" (score: 10)"
+    },
+    {
+      "questionId": "g-008",
+      "title": "Pederasty in ancient Greece",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Detail_of_fresco_from_lateral_walls_of_the_Tomb_of_the_Diver_depicting_a_symposium_scene%2C_5th_century_BC%2C_Paestum_Archaeological_Museum_%2814603183465%292.jpg/960px-Detail_of_fresco_from_lateral_walls_of_the_Tomb_of_the_Diver_depicting_a_symposium_scene%2C_5th_century_BC%2C_Paestum_Archaeological_Museum_%2814603183465%292.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Pederasty_in_ancient_Greece",
+      "searchTerm": "ancient Greece",
+      "score": 30,
+      "reason": "Matched \"ancient Greece\" -> \"Pederasty in ancient Greece\" (score: 30)"
+    },
+    {
+      "questionId": "g-013",
+      "title": "Ancient Egypt",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ancient_Egypt_map-en.svg/960px-Ancient_Egypt_map-en.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Egypt",
+      "searchTerm": "ancient Egypt",
+      "score": 20,
+      "reason": "Matched \"ancient Egypt\" -> \"Ancient Egypt\" (score: 20)"
+    },
+    {
+      "questionId": "g-018",
+      "title": "Ancient Greek",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Account_of_the_construction_of_Athena_Parthenos_by_Phidias.jpg/960px-Account_of_the_construction_of_Athena_Parthenos_by_Phidias.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Greek",
+      "searchTerm": "ancient Greeks",
+      "score": 10,
+      "reason": "Matched \"ancient Greeks\" -> \"Ancient Greek\" (score: 10)"
+    },
+    {
+      "questionId": "g-023",
+      "title": "Egyptian pyramids",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/960px-All_Gizah_Pyramids.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Egyptian_pyramids",
+      "searchTerm": "Egyptian pyramid",
+      "score": 40,
+      "reason": "Matched \"Egyptian pyramid\" -> \"Egyptian pyramids\" (score: 40)"
+    },
+    {
+      "questionId": "g-031",
+      "title": "Nile",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cairo_skyline%2C_Panoramic_view%2C_Egypt.jpg/960px-Cairo_skyline%2C_Panoramic_view%2C_Egypt.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Nile",
+      "searchTerm": "Nile River",
+      "score": 20,
+      "reason": "Matched \"Nile River\" -> \"Nile\" (score: 20)"
+    },
+    {
+      "questionId": "g-033",
+      "title": "Ancient Greek religion",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Oracle_of_Delphi%2C_red-figure_kylix%2C_440-430_BC%2C_Kodros_Painter%2C_Berlin_F_2538%2C_141668.jpg/960px-Oracle_of_Delphi%2C_red-figure_kylix%2C_440-430_BC%2C_Kodros_Painter%2C_Berlin_F_2538%2C_141668.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Greek_religion",
+      "searchTerm": "ancient Greeks",
+      "score": 10,
+      "reason": "Matched \"ancient Greeks\" -> \"Ancient Greek religion\" (score: 10)"
+    },
+    {
+      "questionId": "g-035",
+      "title": "Ancient Macedonians",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Deer_hunt_mosaic_from_Pella.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Macedonians",
+      "searchTerm": "ancient Greeks",
+      "score": 20,
+      "reason": "Matched \"ancient Greeks\" -> \"Ancient Macedonians\" (score: 20)"
+    },
+    {
+      "questionId": "g-045",
+      "title": "Democracy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/960px-The_Parthenon_in_Athens.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Democracy",
+      "searchTerm": "Athenian democracy",
+      "score": 20,
+      "reason": "Matched \"Athenian democracy\" -> \"Democracy\" (score: 20)"
+    },
+    {
+      "questionId": "g-048",
+      "title": "Ancient Egyptian race controversy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/%22Table_of_Nations%22_from_the_Book_of_Gates%2C_4th_Division%2C_5th_Hour%2C_Tomb_of_Seti_I%2C_based_on_an_illustration_by_Ernst_Weidenbach_for_Richard_Lepsius%E2%80%99_Denkm%C3%A4ler_aus_%C3%84gypten_und_%C3%84thiopien.png/960px-thumbnail.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ancient_Egyptian_race_controversy",
+      "searchTerm": "ancient Egypt",
+      "score": 20,
+      "reason": "Matched \"ancient Egypt\" -> \"Ancient Egyptian race controversy\" (score: 20)"
+    },
+    {
+      "questionId": "g-051",
+      "title": "Art of ancient Egypt",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg/960px-CairoEgMuseumTaaMaskMostlyPhotographed.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Art_of_ancient_Egypt",
+      "searchTerm": "ancient Egypt",
+      "score": 20,
+      "reason": "Matched \"ancient Egypt\" -> \"Art of ancient Egypt\" (score: 20)"
+    },
+    {
+      "questionId": "g-052",
+      "title": "History of democracy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/L._Cassius_Longinus%2C_denarius%2C_63_BC%2C_RRC_413-1_reverse.jpg/960px-L._Cassius_Longinus%2C_denarius%2C_63_BC%2C_RRC_413-1_reverse.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/History_of_democracy",
+      "searchTerm": "ancient Greek democracy",
+      "score": 20,
+      "reason": "Matched \"ancient Greek democracy\" -> \"History of democracy\" (score: 20)"
+    }
+  ],
+  "failed": [],
+  "usedImages": [
+    "Athenian democracy",
+    "Ancient Greece",
+    "Pederasty in ancient Greece",
+    "Ancient Egypt",
+    "Ancient Greek",
+    "Egyptian pyramids",
+    "Nile",
+    "Ancient Greek religion",
+    "Ancient Macedonians",
+    "Democracy",
+    "Ancient Egyptian race controversy",
+    "Art of ancient Egypt",
+    "History of democracy"
+  ]
+}

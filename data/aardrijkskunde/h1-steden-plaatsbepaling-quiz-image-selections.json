@@ -1,0 +1,127 @@
+{
+  "selections": [
+    {
+      "questionId": "q016",
+      "title": "World map",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Equal-Earth-Physical-No-Type_%28cropped%29.jpg/960px-Equal-Earth-Physical-No-Type_%28cropped%29.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/World_map",
+      "searchTerm": "world map",
+      "score": 30,
+      "reason": "Matched \"world map\" -> \"World map\" (score: 30)"
+    },
+    {
+      "questionId": "q023",
+      "title": "Urban area",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Adelaide_DougBarber.jpg/960px-Adelaide_DougBarber.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Urban_area",
+      "searchTerm": "urban area",
+      "score": 20,
+      "reason": "Matched \"urban area\" -> \"Urban area\" (score: 20)"
+    },
+    {
+      "questionId": "q025",
+      "title": "Circle of latitude",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/World_map_longlat.svg/960px-World_map_longlat.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Circle_of_latitude",
+      "searchTerm": "latitude lines",
+      "score": 10,
+      "reason": "Matched \"latitude lines\" -> \"Circle of latitude\" (score: 10)"
+    },
+    {
+      "questionId": "q028",
+      "title": "Atlas",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Mercator_-_Atlas_-_1595.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Atlas",
+      "searchTerm": "atlas map",
+      "score": 10,
+      "reason": "Matched \"atlas map\" -> \"Atlas\" (score: 10)"
+    },
+    {
+      "questionId": "q029",
+      "title": "List of United States urban areas",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/960px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/List_of_United_States_urban_areas",
+      "searchTerm": "urban area",
+      "score": 20,
+      "reason": "Matched \"urban area\" -> \"List of United States urban areas\" (score: 20)"
+    },
+    {
+      "questionId": "q034",
+      "title": "World population",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/World_Population_Prospects.svg/960px-World_Population_Prospects.svg.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/World_population",
+      "searchTerm": "world population",
+      "score": 30,
+      "reason": "Matched \"world population\" -> \"World population\" (score: 30)"
+    },
+    {
+      "questionId": "q037",
+      "title": "Functional urban area",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/City_and_related_typologies_%E2%80%93_an_example_for_Milano.png",
+      "pageUrl": "https://en.wikipedia.org/wiki/Functional_urban_area",
+      "searchTerm": "urban area",
+      "score": 20,
+      "reason": "Matched \"urban area\" -> \"Functional urban area\" (score: 20)"
+    },
+    {
+      "questionId": "q038",
+      "title": "Earth",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Blue_Marble%2C_AS17-148-22727.jpg/960px-The_Blue_Marble%2C_AS17-148-22727.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Earth",
+      "searchTerm": "Earth planet",
+      "score": 20,
+      "reason": "Matched \"Earth planet\" -> \"Earth\" (score: 20)"
+    },
+    {
+      "questionId": "q039",
+      "title": "Earth in culture",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Blue_Marble%2C_AS17-148-22727.jpg/960px-The_Blue_Marble%2C_AS17-148-22727.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Earth_in_culture",
+      "searchTerm": "Earth from space",
+      "score": 20,
+      "reason": "Matched \"Earth from space\" -> \"Earth in culture\" (score: 20)"
+    },
+    {
+      "questionId": "q041",
+      "title": "Aerial bombing of cities",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Bundesarchiv_Bild_183-H25224%2C_Guernica%2C_Ruinen.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Aerial_bombing_of_cities",
+      "searchTerm": "city aerial",
+      "score": 10,
+      "reason": "Matched \"city aerial\" -> \"Aerial bombing of cities\" (score: 10)"
+    },
+    {
+      "questionId": "q043",
+      "title": "Ptolemy's world map",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/PtolemyWorldMap.jpg/960px-PtolemyWorldMap.jpg",
+      "pageUrl": "https://en.wikipedia.org/wiki/Ptolemy%27s_world_map",
+      "searchTerm": "world map",
+      "score": 30,
+      "reason": "Matched \"world map\" -> \"Ptolemy's world map\" (score: 30)"
+    },
+    {
+      "questionId": "q046",
+      "title": "Babylonian Map of the World",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/The_Babylonian_map_of_the_world%2C_from_Sippar%2C_Mesopotamia..JPG/960px-The_Babylonian_map_of_the_world%2C_from_Sippar%2C_Mesopotamia..JPG",
+      "pageUrl": "https://en.wikipedia.org/wiki/Babylonian_Map_of_the_World",
+      "searchTerm": "world map",
+      "score": 30,
+      "reason": "Matched \"world map\" -> \"Babylonian Map of the World\" (score: 30)"
+    }
+  ],
+  "failed": [],
+  "usedImages": [
+    "World map",
+    "Urban area",
+    "Circle of latitude",
+    "Atlas",
+    "List of United States urban areas",
+    "World population",
+    "Functional urban area",
+    "Earth",
+    "Earth in culture",
+    "Aerial bombing of cities",
+    "Ptolemy's world map",
+    "Babylonian Map of the World"
+  ]
+}

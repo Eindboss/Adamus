@@ -39,22 +39,19 @@
       ],
       "c": 0,
       "e": "Door de rotatie van de aarde om haar as is het aan de kant die naar de zon wijst dag, en aan de andere kant nacht. De seizoenen ontstaan door de schuine stand van de aardas, niet door de dagelijkse rotatie.",
-      "media": {
-        "query": "earth rotation day night diagram",
-        "alt": "aarde draait om as, dag en nacht",
-        "negativeTerms": [
-          "cartoon",
-          "kids"
-        ],
-        "qids": [
-          "Q3441"
-        ],
-        "_intent": {
-          "primaryConcept": "aarde draait om as, dag en nacht",
-          "specificFocus": "aarde draait om as, dag en nacht",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Blue_Marble%2C_AS17-148-22727.jpg/960px-The_Blue_Marble%2C_AS17-148-22727.jpg",
+          "alt": "Earth",
+          "caption": "Bron: Wikipedia - Earth",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Earth",
+            "searchTerm": "Earth planet",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-003",
@@ -69,21 +66,19 @@
       ],
       "c": 0,
       "e": "Door de schuine stand van de aardas (23,5°) is het noordelijk halfrond in juni naar de zon gekeerd. Dit zorgt voor langere dagen en meer directe zonnestralen. De afstand tot de zon speelt nauwelijks een rol.",
-      "media": {
-        "query": "earth axial tilt seasons diagram",
-        "alt": "schuine stand aardas en seizoenen",
-        "negativeTerms": [
-          "cartoon"
-        ],
-        "qids": [
-          "Q193757"
-        ],
-        "_intent": {
-          "primaryConcept": "schuine stand aardas en seizoenen",
-          "specificFocus": "schuine stand aardas en seizoenen",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Equal-Earth-Physical-No-Type_%28cropped%29.jpg/960px-Equal-Earth-Physical-No-Type_%28cropped%29.jpg",
+          "alt": "World map",
+          "caption": "Bron: Wikipedia - World map",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/World_map",
+            "searchTerm": "country map",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-004",
@@ -164,19 +159,19 @@
       "c": 1,
       "e": "Op de evenaar staat de zon het hele jaar hoog aan de hemel. Daardoor is er weinig verschil tussen seizoenen en blijft de temperatuur vrij constant (rond 25-30°C).",
       "points": 1,
-      "media": {
-        "query": "equator climate temperature map",
-        "alt": "klimaat bij de evenaar",
-        "negativeTerms": [],
-        "qids": [
-          "Q23538"
-        ],
-        "_intent": {
-          "primaryConcept": "klimaat bij de evenaar",
-          "specificFocus": "klimaat bij de evenaar",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Adelaide_DougBarber.jpg/960px-Adelaide_DougBarber.jpg",
+          "alt": "Urban area",
+          "caption": "Bron: Wikipedia - Urban area",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Urban_area",
+            "searchTerm": "urban area",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-007",
@@ -191,19 +186,19 @@
       "c": 1,
       "e": "Bij een grote invalshoek (zon hoog) vallen de stralen recht op een klein oppervlak en geven veel warmte. Bij een kleine invalshoek (zon laag) verspreiden dezelfde stralen zich over een groter oppervlak.",
       "points": 1,
-      "media": {
-        "query": "sun angle solar radiation diagram",
-        "alt": "invalshoek zonnestralen",
-        "negativeTerms": [],
-        "qids": [
-          "Q107"
-        ],
-        "_intent": {
-          "primaryConcept": "invalshoek zonnestralen",
-          "specificFocus": "invalshoek zonnestralen",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Blue_Marble%2C_AS17-148-22727.jpg/960px-The_Blue_Marble%2C_AS17-148-22727.jpg",
+          "alt": "Earth in culture",
+          "caption": "Bron: Wikipedia - Earth in culture",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Earth_in_culture",
+            "searchTerm": "Earth from space",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-008",
@@ -245,19 +240,19 @@
       "c": 0,
       "e": "De warme Golfstroom brengt warm water naar West-Europa. Bovendien warmt de zee in de zomer langzamer op en koelt in de winter langzamer af, wat zorgt voor een gematigder klimaat in Londen.",
       "points": 1,
-      "media": {
-        "query": "gulf stream atlantic ocean current map",
-        "alt": "Golfstroom warme zeestroming",
-        "negativeTerms": [],
-        "qids": [
-          "Q193770"
-        ],
-        "_intent": {
-          "primaryConcept": "Golfstroom warme zeestroming",
-          "specificFocus": "Golfstroom warme zeestroming",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Division_of_the_Earth_into_Gauss-Krueger_zones_-_Globe.svg/960px-Division_of_the_Earth_into_Gauss-Krueger_zones_-_Globe.svg.png",
+          "alt": "Latitude",
+          "caption": "Bron: Wikipedia - Latitude",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Latitude",
+            "searchTerm": "latitude lines",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-010",
@@ -272,20 +267,19 @@
       "c": 1,
       "e": "Aanlandige wind waait vanaf zee naar het land. Dit gebeurt overdag omdat het land sneller opwarmt dan de zee, waardoor boven land lagedruk ontstaat.",
       "points": 1,
-      "media": {
-        "query": "sea breeze land breeze diagram",
-        "alt": "aanlandige en aflandige wind",
-        "negativeTerms": [],
-        "qids": [
-          "Q190380",
-          "Q2374844"
-        ],
-        "_intent": {
-          "primaryConcept": "aanlandige en aflandige wind",
-          "specificFocus": "aanlandige en aflandige wind",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Atlantic_near_Faroe_Islands.jpg/960px-Atlantic_near_Faroe_Islands.jpg",
+          "alt": "Sea",
+          "caption": "Bron: Wikipedia - Sea",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Sea",
+            "searchTerm": "sea",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-011",
@@ -328,19 +322,19 @@
       "c": 0,
       "e": "Water warmt langzamer op dan land. Overdag is de zee dus koeler. De aanlandige wind brengt deze koelere zeelucht naar de kust, waardoor het daar verkoelend aanvoelt.",
       "points": 1,
-      "media": {
-        "query": "coastal sea breeze cooling diagram",
-        "alt": "verkoelend effect zeewind",
-        "negativeTerms": [],
-        "qids": [
-          "Q190380"
-        ],
-        "_intent": {
-          "primaryConcept": "verkoelend effect zeewind",
-          "specificFocus": "verkoelend effect zeewind",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Mediterranee_02_EN.jpg/960px-Mediterranee_02_EN.jpg",
+          "alt": "Mediterranean Sea",
+          "caption": "Bron: Wikipedia - Mediterranean Sea",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+            "searchTerm": "sea",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-013",
@@ -404,19 +398,19 @@
       "c": 0,
       "e": "Frontale neerslag ontstaat waar een front van koude en warme lucht elkaar ontmoeten. Stuwingsregen ontstaat bij bergen, convectieregen door lokale opwarming, en moessonregen door seizoensgebonden winden.",
       "points": 1,
-      "media": {
-        "query": "frontal rainfall warm cold front diagram",
-        "alt": "frontale neerslag koude warme lucht",
-        "negativeTerms": [],
-        "qids": [
-          "Q192022"
-        ],
-        "_intent": {
-          "primaryConcept": "frontale neerslag koude warme lucht",
-          "specificFocus": "frontale neerslag koude warme lucht",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/World_Map_1689.JPG/960px-World_Map_1689.JPG",
+          "alt": "Map",
+          "caption": "Bron: Wikipedia - Map",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Map",
+            "searchTerm": "country map",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-016",
@@ -431,19 +425,19 @@
       "c": 2,
       "e": "In subtropische gebieden rond 30° breedte daalt lucht. Dalende lucht warmt op en kan daardoor veel vocht vasthouden, waardoor er geen wolken en neerslag ontstaan.",
       "points": 1,
-      "media": {
-        "query": "sahara desert high pressure subsidence diagram",
-        "alt": "woestijn hoge druk dalende lucht",
-        "negativeTerms": [],
-        "qids": [
-          "Q6583"
-        ],
-        "_intent": {
-          "primaryConcept": "woestijn hoge druk dalende lucht",
-          "specificFocus": "woestijn hoge druk dalende lucht",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Planet_collage_to_scale.jpg/960px-Planet_collage_to_scale.jpg",
+          "alt": "Planet",
+          "caption": "Bron: Wikipedia - Planet",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Planet",
+            "searchTerm": "Earth planet",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-017",
@@ -487,19 +481,19 @@
       "c": 3,
       "e": "Köppen gebruikte letters: A = tropisch, B = droog, C = gematigd, D = koud (continentaal), E = poolklimaat. Het A-klimaat heeft het hele jaar hoge temperaturen.",
       "points": 1,
-      "media": {
-        "query": "tropical climate zone world map koppen",
-        "alt": "tropisch klimaat A-zone",
-        "negativeTerms": [],
-        "qids": [
-          "Q180753"
-        ],
-        "_intent": {
-          "primaryConcept": "tropisch klimaat A-zone",
-          "specificFocus": "tropisch klimaat A-zone",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/K%C3%B6ppen-Geiger_Climate_Classification_Map_%281980%E2%80%932016%29_no_borders.png/960px-K%C3%B6ppen-Geiger_Climate_Classification_Map_%281980%E2%80%932016%29_no_borders.png",
+          "alt": "Climate classification",
+          "caption": "Bron: Wikipedia - Climate classification",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Climate_classification",
+            "searchTerm": "climate zones",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-019",
@@ -514,19 +508,19 @@
       "c": 2,
       "e": "B-klimaten zijn droge klimaten, zoals woestijnen (BWh) en steppen (BSh). Er valt weinig neerslag en de verdamping is groter dan de neerslag.",
       "points": 1,
-      "media": {
-        "query": "desert climate BWh world map",
-        "alt": "droog klimaat woestijn B-zone",
-        "negativeTerms": [],
-        "qids": [
-          "Q185291"
-        ],
-        "_intent": {
-          "primaryConcept": "droog klimaat woestijn B-zone",
-          "specificFocus": "droog klimaat woestijn B-zone",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Koppen-Geiger_Map_v2_C_1991%E2%80%932020.svg/960px-Koppen-Geiger_Map_v2_C_1991%E2%80%932020.svg.png",
+          "alt": "Temperate climate",
+          "caption": "Bron: Wikipedia - Temperate climate",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Temperate_climate",
+            "searchTerm": "climate zones",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-020",
@@ -559,19 +553,19 @@
       "c": 0,
       "e": "Cs staat voor gematigd klimaat (C) met droge zomers (s = summer). Cf heeft het hele jaar neerslag, Cw heeft droge winters, en Df is een koud klimaat.",
       "points": 1,
-      "media": {
-        "query": "mediterranean climate Cs map",
-        "alt": "mediterraan klimaat Cs",
-        "negativeTerms": [],
-        "qids": [
-          "Q181885"
-        ],
-        "_intent": {
-          "primaryConcept": "mediterraan klimaat Cs",
-          "specificFocus": "mediterraan klimaat Cs",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Koppen-Geiger_Map_v2_World_1991%E2%80%932020.svg/960px-Koppen-Geiger_Map_v2_World_1991%E2%80%932020.svg.png",
+          "alt": "Köppen climate classification",
+          "caption": "Bron: Wikipedia - Köppen climate classification",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification",
+            "searchTerm": "climate zones",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-022",
@@ -586,19 +580,19 @@
       "c": 0,
       "e": "De Kilimanjaro is bijna 6000 meter hoog. Per 1000 meter daalt de temperatuur met ongeveer 6°C. Op de top is het dus circa 36°C kouder dan aan de voet, waardoor er permanent sneeuw ligt.",
       "points": 1,
-      "media": {
-        "query": "mount kilimanjaro snow altitude temperature",
-        "alt": "Kilimanjaro sneeuw op hoogte",
-        "negativeTerms": [],
-        "qids": [
-          "Q7296"
-        ],
-        "_intent": {
-          "primaryConcept": "Kilimanjaro sneeuw op hoogte",
-          "specificFocus": "Kilimanjaro sneeuw op hoogte",
-          "representation": "photo"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/960px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg",
+          "alt": "Mountain",
+          "caption": "Bron: Wikipedia - Mountain",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Mountain",
+            "searchTerm": "mountain",
+            "score": 10
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-023",
@@ -613,19 +607,19 @@
       "c": 1,
       "e": "In een klimaatgrafiek geven de blauwe balken de maandelijkse neerslag (in mm) weer en de rode lijn de gemiddelde temperatuur (in °C).",
       "points": 1,
-      "media": {
-        "query": "climate graph temperature precipitation diagram",
-        "alt": "klimaatgrafiek temperatuur neerslag",
-        "negativeTerms": [],
-        "qids": [
-          "Q917641"
-        ],
-        "_intent": {
-          "primaryConcept": "klimaatgrafiek temperatuur neerslag",
-          "specificFocus": "klimaatgrafiek temperatuur neerslag",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/ISS-48_Towering_cumulonimbus_and_other_clouds_over_the_Earth_%282%29.jpg/960px-ISS-48_Towering_cumulonimbus_and_other_clouds_over_the_Earth_%282%29.jpg",
+          "alt": "Climate",
+          "caption": "Bron: Wikipedia - Climate",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Climate",
+            "searchTerm": "climate zones",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-024",
@@ -640,19 +634,19 @@
       "c": 1,
       "e": "Op het zuidelijk halfrond zijn de seizoenen omgekeerd. December, januari en februari zijn daar de zomermaanden met de hoogste temperaturen.",
       "points": 1,
-      "media": {
-        "query": "southern hemisphere seasons diagram",
-        "alt": "seizoenen zuidelijk halfrond",
-        "negativeTerms": [],
-        "qids": [
-          "Q41228"
-        ],
-        "_intent": {
-          "primaryConcept": "seizoenen zuidelijk halfrond",
-          "specificFocus": "seizoenen zuidelijk halfrond",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Change_in_Average_Temperature_With_Fahrenheit.svg/960px-Change_in_Average_Temperature_With_Fahrenheit.svg.png",
+          "alt": "Climate change",
+          "caption": "Bron: Wikipedia - Climate change",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Climate_change",
+            "searchTerm": "world climate",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-025",
@@ -666,7 +660,20 @@
       ],
       "c": 1,
       "e": "De formule is: °F = (°C × 1,8) + 32. Dus 10°C = (10 × 1,8) + 32 = 18 + 32 = 50°F.",
-      "points": 1
+      "points": 1,
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Dawlish_Warren_MMB_07_South_Devon_Main_Line_220032.jpg/960px-Dawlish_Warren_MMB_07_South_Devon_Main_Line_220032.jpg",
+          "alt": "CrossCountry",
+          "caption": "Bron: Wikipedia - CrossCountry",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/CrossCountry",
+            "searchTerm": "country map",
+            "score": 10
+          }
+        }
+      ]
     },
     {
       "id": "h2-026",
@@ -680,7 +687,20 @@
       ],
       "c": 1,
       "e": "Constante hoge temperaturen en veel neerslag het hele jaar door zijn typisch voor het tropisch regenwoudklimaat (Af) bij de evenaar.",
-      "points": 1
+      "points": 1,
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/World_map_indicating_tropics_and_subtropics.png/960px-World_map_indicating_tropics_and_subtropics.png",
+          "alt": "Geographical zone",
+          "caption": "Bron: Wikipedia - Geographical zone",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Geographical_zone",
+            "searchTerm": "climate zones",
+            "score": 0
+          }
+        }
+      ]
     },
     {
       "id": "h2-027",
@@ -695,19 +715,19 @@
       "c": 1,
       "e": "Bij schaal 1:50.000 is 1 cm op de kaart = 50.000 cm in werkelijkheid = 500 meter.",
       "points": 1,
-      "media": {
-        "query": "map scale ratio explanation diagram",
-        "alt": "kaartschaal uitleg",
-        "negativeTerms": [],
-        "qids": [
-          "Q483247"
-        ],
-        "_intent": {
-          "primaryConcept": "kaartschaal uitleg",
-          "specificFocus": "kaartschaal uitleg",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/The_Babylonian_map_of_the_world%2C_from_Sippar%2C_Mesopotamia..JPG/960px-The_Babylonian_map_of_the_world%2C_from_Sippar%2C_Mesopotamia..JPG",
+          "alt": "Babylonian Map of the World",
+          "caption": "Bron: Wikipedia - Babylonian Map of the World",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Babylonian_Map_of_the_World",
+            "searchTerm": "world map",
+            "score": 30
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-028",
@@ -722,19 +742,19 @@
       "c": 0,
       "e": "Kaart A (1:25.000) is een grotere schaal. Hoe kleiner het getal achter de 1:, hoe meer details je ziet. Bij 1:25.000 is 1 cm op de kaart maar 250 meter, bij 1:100.000 is dat 1 kilometer.",
       "points": 1,
-      "media": {
-        "query": "map scale comparison detail",
-        "alt": "vergelijking kaartschaal detail",
-        "negativeTerms": [],
-        "qids": [
-          "Q483247"
-        ],
-        "_intent": {
-          "primaryConcept": "vergelijking kaartschaal detail",
-          "specificFocus": "vergelijking kaartschaal detail",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/PtolemyWorldMap.jpg/960px-PtolemyWorldMap.jpg",
+          "alt": "Ptolemy's world map",
+          "caption": "Bron: Wikipedia - Ptolemy's world map",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ptolemy%27s_world_map",
+            "searchTerm": "world map",
+            "score": 30
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-029",
@@ -749,19 +769,19 @@
       "c": 0,
       "e": "Volgens internationale afspraak wijst de bovenkant van een kaart naar het noorden, tenzij anders aangegeven met een noordpijl.",
       "points": 1,
-      "media": {
-        "query": "map orientation north arrow compass",
-        "alt": "kaart oriëntatie noorden",
-        "negativeTerms": [],
-        "qids": [
-          "Q39621"
-        ],
-        "_intent": {
-          "primaryConcept": "kaart oriëntatie noorden",
-          "specificFocus": "kaart oriëntatie noorden",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Australian_Census_2011_demographic_map_-_Australia_by_SLA_-_BCP_field_2715_Christianity_Anglican_Persons.svg/960px-Australian_Census_2011_demographic_map_-_Australia_by_SLA_-_BCP_field_2715_Christianity_Anglican_Persons.svg.png",
+          "alt": "Choropleth map",
+          "caption": "Bron: Wikipedia - Choropleth map",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Choropleth_map",
+            "searchTerm": "geographic map",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-030",
@@ -776,20 +796,19 @@
       "c": 0,
       "e": "Een topografische kaart geeft een algemeen beeld van het landschap (hoogte, water, wegen, bebouwing). Een thematische kaart is gespecialiseerd in één onderwerp zoals klimaat of bevolking.",
       "points": 1,
-      "media": {
-        "query": "thematic map vs topographic map comparison",
-        "alt": "thematische vs topografische kaart",
-        "negativeTerms": [],
-        "qids": [
-          "Q4288304",
-          "Q592665"
-        ],
-        "_intent": {
-          "primaryConcept": "thematische vs topografische kaart",
-          "specificFocus": "thematische vs topografische kaart",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/World_Population_Prospects.svg/960px-World_Population_Prospects.svg.png",
+          "alt": "World population",
+          "caption": "Bron: Wikipedia - World population",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/World_population",
+            "searchTerm": "world population",
+            "score": 50
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-031",
@@ -923,7 +942,20 @@
       ],
       "c": 1,
       "e": "Bij 1:100.000 is alles 4x zo klein als bij 1:25.000 (100.000 / 25.000 = 4). Een kleinere schaal betekent minder detail maar meer gebied op dezelfde kaart.",
-      "points": 1
+      "points": 1,
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_World%2C_1572.jpg/960px-Theatrum_Orbis_Terrarum%2C_by_Abraham_Ortelius%2C_World%2C_1572.jpg",
+          "alt": "Geography",
+          "caption": "Bron: Wikipedia - Geography",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Geography",
+            "searchTerm": "geographic map",
+            "score": 0
+          }
+        }
+      ]
     },
     {
       "id": "h2-036",
@@ -965,19 +997,19 @@
       "c": 0,
       "e": "De Golfstroom transporteert warm water van de Golf van Mexico naar West-Europa. Dit zorgt ervoor dat West-Europa veel zachtere winters heeft dan gebieden op dezelfde breedtegraad elders, zoals Canada.",
       "points": 1,
-      "media": {
-        "query": "gulf stream europe climate effect map",
-        "alt": "Golfstroom effect West-Europa",
-        "negativeTerms": [],
-        "qids": [
-          "Q193770"
-        ],
-        "_intent": {
-          "primaryConcept": "Golfstroom effect West-Europa",
-          "specificFocus": "Golfstroom effect West-Europa",
-          "representation": "map"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Koppen-Geiger_Map_v2_JPN_1991%E2%80%932020.svg/960px-Koppen-Geiger_Map_v2_JPN_1991%E2%80%932020.svg.png",
+          "alt": "Climate of Japan",
+          "caption": "Bron: Wikipedia - Climate of Japan",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Climate_of_Japan",
+            "searchTerm": "climate zones",
+            "score": 20
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-038",
@@ -1462,19 +1494,19 @@
       "c": 0,
       "e": "Aan de lijzijde daalt de lucht, warmt op en kan daardoor meer waterdamp vasthouden. Wolken lossen op en het blijft droog. Dit heet het regenschaduw-effect.",
       "points": 1,
-      "media": {
-        "query": "rain shadow orographic precipitation diagram",
-        "alt": "regenschaduw lijzijde",
-        "negativeTerms": [],
-        "qids": [
-          "Q902098"
-        ],
-        "_intent": {
-          "primaryConcept": "regenschaduw lijzijde",
-          "specificFocus": "regenschaduw lijzijde",
-          "representation": "diagram"
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Apollo_9_image_of_the_Namcha_Barwa_Himal_range%2C_AS09-23-3511.jpg/960px-Apollo_9_image_of_the_Namcha_Barwa_Himal_range%2C_AS09-23-3511.jpg",
+          "alt": "Mountain range",
+          "caption": "Bron: Wikipedia - Mountain range",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Mountain_range",
+            "searchTerm": "mountain range",
+            "score": 30
+          }
         }
-      }
+      ]
     },
     {
       "id": "h2-new-006",

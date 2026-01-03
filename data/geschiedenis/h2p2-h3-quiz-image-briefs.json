@@ -1,0 +1,295 @@
+{
+  "subject": "geschiedenis",
+  "briefs": [
+    {
+      "questionId": "g-005",
+      "concepts": [
+        "democratie"
+      ],
+      "searchTerms": [
+        "Athenian democracy",
+        "ancient Greek democracy"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "Athenian democracy"
+    },
+    {
+      "questionId": "g-006",
+      "concepts": [
+        "grieken"
+      ],
+      "searchTerms": [
+        "ancient Greeks"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Greeks"
+    },
+    {
+      "questionId": "g-008",
+      "concepts": [
+        "griekenland",
+        "grieken"
+      ],
+      "searchTerms": [
+        "ancient Greece",
+        "ancient Greeks"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Greece"
+    },
+    {
+      "questionId": "g-013",
+      "concepts": [
+        "egypte"
+      ],
+      "searchTerms": [
+        "ancient Egypt"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Egypt"
+    },
+    {
+      "questionId": "g-018",
+      "concepts": [
+        "grieken"
+      ],
+      "searchTerms": [
+        "ancient Greeks"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Greeks"
+    },
+    {
+      "questionId": "g-023",
+      "concepts": [
+        "egypte",
+        "piramide"
+      ],
+      "searchTerms": [
+        "ancient Egypt",
+        "Egyptian pyramid",
+        "Giza pyramid"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Egypt"
+    },
+    {
+      "questionId": "g-031",
+      "concepts": [
+        "nijl"
+      ],
+      "searchTerms": [
+        "Nile River",
+        "ancient Nile"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "Nile River"
+    },
+    {
+      "questionId": "g-033",
+      "concepts": [
+        "grieken"
+      ],
+      "searchTerms": [
+        "ancient Greeks"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Greeks"
+    },
+    {
+      "questionId": "g-035",
+      "concepts": [
+        "griekenland",
+        "grieken"
+      ],
+      "searchTerms": [
+        "ancient Greece",
+        "ancient Greeks"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Greece"
+    },
+    {
+      "questionId": "g-045",
+      "concepts": [
+        "democratie"
+      ],
+      "searchTerms": [
+        "Athenian democracy",
+        "ancient Greek democracy"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "Athenian democracy"
+    },
+    {
+      "questionId": "g-048",
+      "concepts": [
+        "egypte"
+      ],
+      "searchTerms": [
+        "ancient Egypt"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Egypt"
+    },
+    {
+      "questionId": "g-051",
+      "concepts": [
+        "egypte"
+      ],
+      "searchTerms": [
+        "ancient Egypt"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "ancient Egypt"
+    },
+    {
+      "questionId": "g-052",
+      "concepts": [
+        "democratie"
+      ],
+      "searchTerms": [
+        "Athenian democracy",
+        "ancient Greek democracy"
+      ],
+      "preferredType": "photo or diagram",
+      "negativeTerms": [
+        "cartoon",
+        "meme",
+        "logo",
+        "icon",
+        "clipart"
+      ],
+      "fallbackSearch": "Athenian democracy"
+    }
+  ],
+  "skipped": [
+    "g-001",
+    "g-002",
+    "g-003",
+    "g-004",
+    "g-007",
+    "g-009",
+    "g-010",
+    "g-011",
+    "g-012",
+    "g-014",
+    "g-015",
+    "g-016",
+    "g-017",
+    "g-019",
+    "g-020",
+    "g-021",
+    "g-022",
+    "g-024",
+    "g-025",
+    "g-026",
+    "g-027",
+    "g-028",
+    "g-029",
+    "g-030",
+    "g-032",
+    "g-034",
+    "g-036",
+    "g-037",
+    "g-038",
+    "g-039",
+    "g-040",
+    "g-041",
+    "g-042",
+    "g-043",
+    "g-044",
+    "g-046",
+    "g-047",
+    "g-049",
+    "g-050",
+    "g-053",
+    "g-054",
+    "g-055",
+    "g-056"
+  ]
+}

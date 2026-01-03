@@ -118,6 +118,81 @@ const SUBJECT_VOCABULARY = {
     "godenbeeld": ["ancient statue god"],
   },
 
+  latijn: {
+    // Roman society & daily life
+    "romein": ["ancient Roman", "Roman citizen"],
+    "romeinen": ["ancient Romans", "Roman people"],
+    "rome": ["ancient Rome", "Roman Forum"],
+    "slaaf": ["Roman slavery", "Roman slave"],
+    "slaven": ["Roman slaves", "slavery ancient Rome"],
+    "vrijgelaten": ["Roman freedman", "libertus"],
+    "patronus": ["Roman patron", "patronage Rome"],
+    "cliens": ["Roman client", "clientela"],
+    "pater familias": ["Roman paterfamilias", "Roman family head"],
+    "familia": ["Roman family", "Roman household"],
+    "domus": ["Roman house", "domus interior"],
+    "villa": ["Roman villa"],
+    "atrium": ["Roman atrium", "atrium house"],
+    "impluvium": ["Roman impluvium"],
+    "tablinum": ["Roman tablinum"],
+    "peristylium": ["Roman peristyle", "peristylium garden"],
+    "triclinium": ["Roman triclinium", "Roman dining"],
+    "cubiculum": ["Roman bedroom", "cubiculum"],
+    "toga": ["Roman toga"],
+    "tunica": ["Roman tunic"],
+    "stola": ["Roman stola", "Roman women clothing"],
+
+    // Roman buildings & places
+    "forum": ["Roman Forum"],
+    "basilica": ["Roman basilica"],
+    "tempel": ["Roman temple"],
+    "thermen": ["Roman baths", "Roman thermae"],
+    "aquaduct": ["Roman aqueduct"],
+    "colosseum": ["Colosseum Rome"],
+    "amphitheater": ["Roman amphitheater"],
+    "circus": ["Circus Maximus", "Roman chariot racing"],
+    "insula": ["Roman insula", "Roman apartment"],
+
+    // Roman religion & gods
+    "jupiter": ["Jupiter god", "Jupiter Roman"],
+    "juno": ["Juno goddess", "Juno Roman"],
+    "mars": ["Mars god war", "Mars Roman god"],
+    "venus": ["Venus goddess", "Venus Roman"],
+    "minerva": ["Minerva goddess", "Minerva Roman"],
+    "neptunus": ["Neptune god", "Neptunus Roman"],
+    "mercurius": ["Mercury god", "Mercurius Roman"],
+    "apollo": ["Apollo god"],
+    "diana": ["Diana goddess"],
+    "bacchus": ["Bacchus god", "Dionysus"],
+    "vesta": ["Vesta goddess", "Vestal virgins"],
+    "laren": ["Lares Roman", "household gods"],
+    "penaten": ["Penates Roman", "Roman gods"],
+    "lararium": ["Roman lararium", "household shrine"],
+    "offer": ["Roman sacrifice", "Roman offering"],
+
+    // Roman army & war
+    "legioen": ["Roman legion"],
+    "legionair": ["Roman legionary", "Roman soldier"],
+    "centurio": ["Roman centurion"],
+    "gladius": ["Roman gladius", "Roman sword"],
+    "pilum": ["Roman pilum", "Roman javelin"],
+    "scutum": ["Roman scutum", "Roman shield"],
+    "lorica": ["Roman lorica", "Roman armor"],
+    "helm": ["Roman helmet", "galea"],
+
+    // Roman entertainment
+    "gladiator": ["Roman gladiator"],
+    "gladiatoren": ["Roman gladiators", "gladiator fight"],
+    "wagenrennen": ["Roman chariot race"],
+    "spelen": ["Roman games", "ludi"],
+
+    // Mythology stories
+    "romulus": ["Romulus Remus", "founding Rome"],
+    "remus": ["Romulus Remus wolf"],
+    "aeneas": ["Aeneas Troy", "Aeneid"],
+    "wolvin": ["Capitoline wolf", "she-wolf Rome"],
+  },
+
   aardrijkskunde: {
     // Physical geography
     "aarde": ["Earth planet", "Earth from space"],
@@ -185,12 +260,14 @@ function detectSubject(quiz, filePath) {
     if (s.includes('biologie')) return 'biologie';
     if (s.includes('geschiedenis')) return 'geschiedenis';
     if (s.includes('aardrijkskunde')) return 'aardrijkskunde';
+    if (s.includes('latijn')) return 'latijn';
   }
 
   const fp = filePath.toLowerCase();
   if (fp.includes('biologie')) return 'biologie';
   if (fp.includes('geschiedenis')) return 'geschiedenis';
   if (fp.includes('aardrijkskunde')) return 'aardrijkskunde';
+  if (fp.includes('latijn')) return 'latijn';
 
   return null;
 }
@@ -220,9 +297,10 @@ function generateBrief(question, subject, vocabulary) {
     return null;
   }
 
-  // Get question text
+  // Get question text (support multiple formats)
   const text = question.q || question.question || question.prompt_html ||
-               question.instruction || question.title || "";
+               question.instruction || question.title ||
+               question.prompt?.text || question.prompt?.html || "";
 
   if (!text || text.length < 10) {
     return null;
@@ -295,12 +373,15 @@ function generateQuizBriefs(quizPath) {
   }
 
   console.log(`Detected subject: ${subject}`);
-  console.log(`Processing ${quiz.questions?.length || 0} questions...\n`);
+
+  // Support both 'questions' array and 'question_bank' array
+  const questions = quiz.questions || quiz.question_bank || [];
+  console.log(`Processing ${questions.length} questions...\n`);
 
   const briefs = [];
   const skipped = [];
 
-  for (const q of quiz.questions || []) {
+  for (const q of questions) {
     const brief = generateBrief(q, subject, vocabulary);
     if (brief) {
       briefs.push(brief);

@@ -26,14 +26,46 @@
   },
   "taxonomy": {
     "groups": {
-      "I": { "id": "I", "title": "I - Invulvraag", "description": "Naamval meewerkend voorwerp" },
-      "II": { "id": "II", "title": "II - Verbuigingen", "description": "Verbuigingstabellen servus en mater" },
-      "III": { "id": "III", "title": "III - Woordenschat", "description": "Vertaling Latijn-Nederlands" },
-      "IV": { "id": "IV", "title": "IV - Contextvertaling", "description": "Vertaal in context" },
-      "V": { "id": "V", "title": "V - Grammaticale analyse", "description": "Naamval, getal, verklaring" },
-      "VI": { "id": "VI", "title": "VI - Cultuur", "description": "Cultuurvragen les 2" },
-      "VII": { "id": "VII", "title": "VII - Vertaling", "description": "Tekst vertalen" },
-      "VIII": { "id": "VIII", "title": "VIII - Tekstbegrip", "description": "Vragen over de tekst" }
+      "I": {
+        "id": "I",
+        "title": "I - Invulvraag",
+        "description": "Naamval meewerkend voorwerp"
+      },
+      "II": {
+        "id": "II",
+        "title": "II - Verbuigingen",
+        "description": "Verbuigingstabellen servus en mater"
+      },
+      "III": {
+        "id": "III",
+        "title": "III - Woordenschat",
+        "description": "Vertaling Latijn-Nederlands"
+      },
+      "IV": {
+        "id": "IV",
+        "title": "IV - Contextvertaling",
+        "description": "Vertaal in context"
+      },
+      "V": {
+        "id": "V",
+        "title": "V - Grammaticale analyse",
+        "description": "Naamval, getal, verklaring"
+      },
+      "VI": {
+        "id": "VI",
+        "title": "VI - Cultuur",
+        "description": "Cultuurvragen les 2"
+      },
+      "VII": {
+        "id": "VII",
+        "title": "VII - Vertaling",
+        "description": "Tekst vertalen"
+      },
+      "VIII": {
+        "id": "VIII",
+        "title": "VIII - Tekstbegrip",
+        "description": "Vragen over de tekst"
+      }
     },
     "skills": [
       "grammatica_naamvallen",
@@ -56,12 +88,20 @@
         "html": "Vul de zin aan:<br><br>Het zelfstandig naamwoord dat in een Latijnse zin de functie <strong>meewerkend voorwerp</strong> heeft, staat in de naamval ..."
       },
       "points": 1,
-      "skills": ["grammatica_naamvallen"],
+      "skills": [
+        "grammatica_naamvallen"
+      ],
       "mode": "practice",
       "payload": {
         "question": "Het zelfstandig naamwoord dat in een Latijnse zin de functie meewerkend voorwerp heeft, staat in de naamval ...",
-        "accepted_answers": ["dativus", "de dativus", "datief"],
-        "grading": { "rule": "any_accepted" }
+        "accepted_answers": [
+          "dativus",
+          "de dativus",
+          "datief"
+        ],
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "Het meewerkend voorwerp staat in de dativus.",
@@ -77,22 +117,74 @@
         "html": "Vul de ontbrekende vormen in van <strong>servus</strong> (slaaf):"
       },
       "points": 5,
-      "skills": ["verbuigingen"],
+      "skills": [
+        "verbuigingen"
+      ],
       "mode": "practice",
       "payload": {
         "instruction_html": "Vul de ontbrekende vormen in van <strong>servus</strong> (slaaf). De nominativus enkelvoud is gegeven: <em>servus</em>",
         "items": [
-          { "id": "item01", "question": "dativus enkelvoud", "accepted_answers": ["servo"], "points": 1 },
-          { "id": "item02", "question": "accusativus enkelvoud", "accepted_answers": ["servum"], "points": 1 },
-          { "id": "item03", "question": "nominativus meervoud", "accepted_answers": ["servi"], "points": 1 },
-          { "id": "item04", "question": "dativus meervoud", "accepted_answers": ["servis"], "points": 1 },
-          { "id": "item05", "question": "accusativus meervoud", "accepted_answers": ["servos"], "points": 1 }
+          {
+            "id": "item01",
+            "question": "dativus enkelvoud",
+            "accepted_answers": [
+              "servo"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item02",
+            "question": "accusativus enkelvoud",
+            "accepted_answers": [
+              "servum"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item03",
+            "question": "nominativus meervoud",
+            "accepted_answers": [
+              "servi"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item04",
+            "question": "dativus meervoud",
+            "accepted_answers": [
+              "servis"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item05",
+            "question": "accusativus meervoud",
+            "accepted_answers": [
+              "servos"
+            ],
+            "points": 1
+          }
         ],
-        "grading": { "rule": "per_item" }
+        "grading": {
+          "rule": "per_item"
+        }
       },
       "feedback": {
         "explanation": "servus: nom ev servus, dat ev servo, acc ev servum, nom mv servi, dat mv servis, acc mv servos"
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Jean_Leon_Gerome_Selling_Slaves_in_Rome.jpg/960px-Jean_Leon_Gerome_Selling_Slaves_in_Rome.jpg",
+          "alt": "A Roman Slave Market",
+          "caption": "Bron: Wikipedia - A Roman Slave Market",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/A_Roman_Slave_Market",
+            "searchTerm": "Roman slave",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "lupa-003",
@@ -103,18 +195,57 @@
         "html": "Vul de ontbrekende vormen in van <strong>mater</strong> (moeder):"
       },
       "points": 5,
-      "skills": ["verbuigingen"],
+      "skills": [
+        "verbuigingen"
+      ],
       "mode": "practice",
       "payload": {
         "instruction_html": "Vul de ontbrekende vormen in van <strong>mater</strong> (moeder). De nominativus enkelvoud is gegeven: <em>mater</em>",
         "items": [
-          { "id": "item01", "question": "dativus enkelvoud", "accepted_answers": ["matri"], "points": 1 },
-          { "id": "item02", "question": "accusativus enkelvoud", "accepted_answers": ["matrem"], "points": 1 },
-          { "id": "item03", "question": "nominativus meervoud", "accepted_answers": ["matres"], "points": 1 },
-          { "id": "item04", "question": "dativus meervoud", "accepted_answers": ["matribus"], "points": 1 },
-          { "id": "item05", "question": "accusativus meervoud", "accepted_answers": ["matres"], "points": 1 }
+          {
+            "id": "item01",
+            "question": "dativus enkelvoud",
+            "accepted_answers": [
+              "matri"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item02",
+            "question": "accusativus enkelvoud",
+            "accepted_answers": [
+              "matrem"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item03",
+            "question": "nominativus meervoud",
+            "accepted_answers": [
+              "matres"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item04",
+            "question": "dativus meervoud",
+            "accepted_answers": [
+              "matribus"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item05",
+            "question": "accusativus meervoud",
+            "accepted_answers": [
+              "matres"
+            ],
+            "points": 1
+          }
         ],
-        "grading": { "rule": "per_item" }
+        "grading": {
+          "rule": "per_item"
+        }
       },
       "feedback": {
         "explanation": "mater: nom ev mater, dat ev matri, acc ev matrem, nom mv matres, dat mv matribus, acc mv matres"
@@ -129,18 +260,60 @@
         "html": "Noteer de vertaling van de onderstaande woorden:"
       },
       "points": 5,
-      "skills": ["woordenschat_la_nl"],
+      "skills": [
+        "woordenschat_la_nl"
+      ],
       "mode": "practice",
       "payload": {
         "instruction_html": "Vertaal de volgende Latijnse woorden naar het Nederlands:",
         "items": [
-          { "id": "item11", "question": "dare", "accepted_answers": ["geven"], "points": 1 },
-          { "id": "item12", "question": "nam", "accepted_answers": ["want"], "points": 1 },
-          { "id": "item13", "question": "ridere", "accepted_answers": ["lachen"], "points": 1 },
-          { "id": "item14", "question": "uxor", "accepted_answers": ["echtgenote", "echtgenoot", "vrouw"], "points": 1 },
-          { "id": "item15", "question": "cogitare", "accepted_answers": ["denken", "nadenken"], "points": 1 }
+          {
+            "id": "item11",
+            "question": "dare",
+            "accepted_answers": [
+              "geven"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item12",
+            "question": "nam",
+            "accepted_answers": [
+              "want"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item13",
+            "question": "ridere",
+            "accepted_answers": [
+              "lachen"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item14",
+            "question": "uxor",
+            "accepted_answers": [
+              "echtgenote",
+              "echtgenoot",
+              "vrouw"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item15",
+            "question": "cogitare",
+            "accepted_answers": [
+              "denken",
+              "nadenken"
+            ],
+            "points": 1
+          }
         ],
-        "grading": { "rule": "per_item" }
+        "grading": {
+          "rule": "per_item"
+        }
       },
       "feedback": {
         "explanation": "dare = geven, nam = want, ridere = lachen, uxor = echtgenote, cogitare = (na)denken"
@@ -155,18 +328,64 @@
         "html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin (let op naamval, getal en persoon):"
       },
       "points": 5,
-      "skills": ["vertalen_context"],
+      "skills": [
+        "vertalen_context"
+      ],
       "mode": "practice",
       "payload": {
         "instruction_html": "Vertaal het onderstreepte woord in de context van de zin:",
         "items": [
-          { "id": "item16", "question": "Mater ei <u>nomen</u> dat.", "accepted_answers": ["naam"], "points": 1 },
-          { "id": "item17", "question": "Lupa ad gregem <u>accedit</u>.", "accepted_answers": ["nadert", "komt dichterbij", "komt naderbij"], "points": 1 },
-          { "id": "item18", "question": "Feminae <u>haud</u> rident.", "accepted_answers": ["helemaal niet", "niet"], "points": 1 },
-          { "id": "item19", "question": "<u>Subito</u> uxor infantes audit.", "accepted_answers": ["plotseling", "opeens", "ineens"], "points": 1 },
-          { "id": "item20", "question": "<u>Sic</u> deus regibus favet.", "accepted_answers": ["zo", "op die manier", "aldus"], "points": 1 }
+          {
+            "id": "item16",
+            "question": "Mater ei <u>nomen</u> dat.",
+            "accepted_answers": [
+              "naam"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item17",
+            "question": "Lupa ad gregem <u>accedit</u>.",
+            "accepted_answers": [
+              "nadert",
+              "komt dichterbij",
+              "komt naderbij"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item18",
+            "question": "Feminae <u>haud</u> rident.",
+            "accepted_answers": [
+              "helemaal niet",
+              "niet"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item19",
+            "question": "<u>Subito</u> uxor infantes audit.",
+            "accepted_answers": [
+              "plotseling",
+              "opeens",
+              "ineens"
+            ],
+            "points": 1
+          },
+          {
+            "id": "item20",
+            "question": "<u>Sic</u> deus regibus favet.",
+            "accepted_answers": [
+              "zo",
+              "op die manier",
+              "aldus"
+            ],
+            "points": 1
+          }
         ],
-        "grading": { "rule": "per_item" }
+        "grading": {
+          "rule": "per_item"
+        }
       },
       "feedback": {
         "explanation": "nomen = naam, accedit = nadert, haud = helemaal niet, subito = plotseling, sic = zo"
@@ -181,28 +400,161 @@
         "html": "Noteer van de woorden uit de zinnen hierboven: <strong>naamval</strong> (nom/dat/acc), <strong>getal</strong> (ev/mv) en <strong>verklaring</strong> voor de gebruikte naamval."
       },
       "points": 5,
-      "skills": ["zinsanalyse"],
+      "skills": [
+        "zinsanalyse"
+      ],
       "mode": "practice",
       "payload": {
         "instruction_html": "Geef voor elk woord: naamval, getal, verklaring. Voorbeeld: mater (zin 16) = nom, ev, onderwerp",
         "items": [
-          { "id": "item21", "question": "naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33, "subheader": "Zin 16: Mater <strong>ei</strong> nomen dat." },
-          { "id": "item21b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item21c", "question": "verklaring", "accepted_answers": ["meewerkend voorwerp", "mvo", "m.v."], "points": 0.34 },
-          { "id": "item22", "question": "naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33, "subheader": "Zin 17: Lupa ad <strong>gregem</strong> accedit." },
-          { "id": "item22b", "question": "getal", "accepted_answers": ["ev", "enkelvoud"], "points": 0.33 },
-          { "id": "item22c", "question": "verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
-          { "id": "item23", "question": "naamval", "accepted_answers": ["nom", "nominativus"], "points": 0.33, "subheader": "Zin 18: <strong>Feminae</strong> haud rident." },
-          { "id": "item23b", "question": "getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
-          { "id": "item23c", "question": "verklaring", "accepted_answers": ["onderwerp", "ow", "o.w."], "points": 0.34 },
-          { "id": "item24", "question": "naamval", "accepted_answers": ["acc", "accusativus"], "points": 0.33, "subheader": "Zin 19: Subito uxor <strong>infantes</strong> audit." },
-          { "id": "item24b", "question": "getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
-          { "id": "item24c", "question": "verklaring", "accepted_answers": ["lijdend voorwerp", "lvo", "l.v."], "points": 0.34 },
-          { "id": "item25", "question": "naamval", "accepted_answers": ["dat", "dativus"], "points": 0.33, "subheader": "Zin 20: Sic deus <strong>regibus</strong> favet." },
-          { "id": "item25b", "question": "getal", "accepted_answers": ["mv", "meervoud"], "points": 0.33 },
-          { "id": "item25c", "question": "verklaring", "accepted_answers": ["aanvulling bij werkwoord", "afhankelijk van werkwoord"], "points": 0.34 }
+          {
+            "id": "item21",
+            "question": "naamval",
+            "accepted_answers": [
+              "dat",
+              "dativus"
+            ],
+            "points": 0.33,
+            "subheader": "Zin 16: Mater <strong>ei</strong> nomen dat."
+          },
+          {
+            "id": "item21b",
+            "question": "getal",
+            "accepted_answers": [
+              "ev",
+              "enkelvoud"
+            ],
+            "points": 0.33
+          },
+          {
+            "id": "item21c",
+            "question": "verklaring",
+            "accepted_answers": [
+              "meewerkend voorwerp",
+              "mvo",
+              "m.v."
+            ],
+            "points": 0.34
+          },
+          {
+            "id": "item22",
+            "question": "naamval",
+            "accepted_answers": [
+              "acc",
+              "accusativus"
+            ],
+            "points": 0.33,
+            "subheader": "Zin 17: Lupa ad <strong>gregem</strong> accedit."
+          },
+          {
+            "id": "item22b",
+            "question": "getal",
+            "accepted_answers": [
+              "ev",
+              "enkelvoud"
+            ],
+            "points": 0.33
+          },
+          {
+            "id": "item22c",
+            "question": "verklaring",
+            "accepted_answers": [
+              "lijdend voorwerp",
+              "lvo",
+              "l.v."
+            ],
+            "points": 0.34
+          },
+          {
+            "id": "item23",
+            "question": "naamval",
+            "accepted_answers": [
+              "nom",
+              "nominativus"
+            ],
+            "points": 0.33,
+            "subheader": "Zin 18: <strong>Feminae</strong> haud rident."
+          },
+          {
+            "id": "item23b",
+            "question": "getal",
+            "accepted_answers": [
+              "mv",
+              "meervoud"
+            ],
+            "points": 0.33
+          },
+          {
+            "id": "item23c",
+            "question": "verklaring",
+            "accepted_answers": [
+              "onderwerp",
+              "ow",
+              "o.w."
+            ],
+            "points": 0.34
+          },
+          {
+            "id": "item24",
+            "question": "naamval",
+            "accepted_answers": [
+              "acc",
+              "accusativus"
+            ],
+            "points": 0.33,
+            "subheader": "Zin 19: Subito uxor <strong>infantes</strong> audit."
+          },
+          {
+            "id": "item24b",
+            "question": "getal",
+            "accepted_answers": [
+              "mv",
+              "meervoud"
+            ],
+            "points": 0.33
+          },
+          {
+            "id": "item24c",
+            "question": "verklaring",
+            "accepted_answers": [
+              "lijdend voorwerp",
+              "lvo",
+              "l.v."
+            ],
+            "points": 0.34
+          },
+          {
+            "id": "item25",
+            "question": "naamval",
+            "accepted_answers": [
+              "dat",
+              "dativus"
+            ],
+            "points": 0.33,
+            "subheader": "Zin 20: Sic deus <strong>regibus</strong> favet."
+          },
+          {
+            "id": "item25b",
+            "question": "getal",
+            "accepted_answers": [
+              "mv",
+              "meervoud"
+            ],
+            "points": 0.33
+          },
+          {
+            "id": "item25c",
+            "question": "verklaring",
+            "accepted_answers": [
+              "aanvulling bij werkwoord",
+              "afhankelijk van werkwoord"
+            ],
+            "points": 0.34
+          }
         ],
-        "grading": { "rule": "per_item" }
+        "grading": {
+          "rule": "per_item"
+        }
       },
       "feedback": {
         "explanation": "ei = dat, ev, meewerkend voorwerp; gregem = acc, ev, lijdend voorwerp; feminae = nom, mv, onderwerp; infantes = acc, mv, lijdend voorwerp; regibus = dat, mv, aanvulling bij werkwoord"
@@ -217,7 +569,9 @@
         "html": "Waaraan precies herinnerde de vijgenboom op het Forum Romanum de Romeinen?"
       },
       "points": 1,
-      "skills": ["cultuur"],
+      "skills": [
+        "cultuur"
+      ],
       "mode": "practice",
       "payload": {
         "question": "Waaraan precies herinnerde de vijgenboom op het Forum Romanum de Romeinen?",
@@ -235,12 +589,36 @@
           "aanspoelen van de tweeling",
           "plek waar romulus en remus aanspoelden"
         ],
-        "keywords": ["mandje", "tweeling", "aanspoelen", "aanspoelde", "wortels", "Romulus", "Remus", "gevonden"],
-        "grading": { "rule": "any_accepted" }
+        "keywords": [
+          "mandje",
+          "tweeling",
+          "aanspoelen",
+          "aanspoelde",
+          "wortels",
+          "Romulus",
+          "Remus",
+          "gevonden"
+        ],
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "Volgens de legende was dit de plaats waar het mandje met de tweeling Romulus en Remus aanspoelde en bleef steken tussen de wortels van een vijgenboom."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg",
+          "alt": "Ancient Roman architecture",
+          "caption": "Bron: Wikipedia - Ancient Roman architecture",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Roman_architecture",
+            "searchTerm": "ancient Roman",
+            "score": 60
+          }
+        }
+      ]
     },
     {
       "id": "lupa-008",
@@ -251,16 +629,36 @@
         "html": "Welke Romeinse geschiedschrijver heeft het verhaal over de twee jongetjes in het mandje opgeschreven?"
       },
       "points": 1,
-      "skills": ["cultuur"],
+      "skills": [
+        "cultuur"
+      ],
       "mode": "practice",
       "payload": {
         "question": "Welke Romeinse geschiedschrijver heeft het verhaal over de twee jongetjes in het mandje opgeschreven?",
-        "accepted_answers": ["Livius", "Titus Livius"],
-        "grading": { "rule": "any_accepted" }
+        "accepted_answers": [
+          "Livius",
+          "Titus Livius"
+        ],
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "Livius heeft dit verhaal opgeschreven."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Pont_du_Gard_3.jpg/960px-Pont_du_Gard_3.jpg",
+          "alt": "Ancient Roman technology",
+          "caption": "Bron: Wikipedia - Ancient Roman technology",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Roman_technology",
+            "searchTerm": "ancient Roman",
+            "score": 50
+          }
+        }
+      ]
     },
     {
       "id": "lupa-009",
@@ -271,7 +669,9 @@
         "html": "Waarom is de wolvin nu nog het symbool van de stad Rome?"
       },
       "points": 1,
-      "skills": ["cultuur"],
+      "skills": [
+        "cultuur"
+      ],
       "mode": "practice",
       "payload": {
         "question": "Waarom is de wolvin nu nog het symbool van de stad Rome?",
@@ -280,11 +680,26 @@
           "de wolvin hield de jongens in leven",
           "de wolvin zoogde de tweeling"
         ],
-        "grading": { "rule": "any_accepted" }
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "Omdat volgens de legende de wolvin de beide jongens gezoogd had en ze zo in leven had gehouden."
-      }
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roman_Republic_Empire_map.gif",
+          "alt": "Ancient Rome",
+          "caption": "Bron: Wikipedia - Ancient Rome",
+          "_source": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Ancient_Rome",
+            "searchTerm": "ancient Rome",
+            "score": 30
+          }
+        }
+      ]
     },
     {
       "id": "lupa-010",
@@ -295,7 +710,9 @@
         "html": "Veel steden hebben een mythologisch verhaal over hun ontstaan. Waarom denk je dat dit zo is?"
       },
       "points": 2,
-      "skills": ["cultuur"],
+      "skills": [
+        "cultuur"
+      ],
       "mode": "practice",
       "payload": {
         "question": "Veel steden hebben een mythologisch verhaal over hun ontstaan. Waarom denk je dat dit zo is?",
@@ -304,7 +721,9 @@
           "om de stad extra bijzonder te maken",
           "door te zeggen dat een god of held de stad stichtte"
         ],
-        "grading": { "rule": "any_accepted" }
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "Om een stad zo extra belangrijk te maken (bijvoorbeeld door te zeggen dat de stad door een god of godin of een belangrijke held gesticht is)."
@@ -319,16 +738,26 @@
         "html": "Vertaal de volgende tekst in begrijpelijk Nederlands:<br><br><em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br><em>Subito oves lupam vident.</em><br><em>Balant.</em> <small>(balare = blaten)</small><br><em>Eam timent sed pater ridet et ovibus dicit:</em><br><em>'Nos dei protegunt!'</em>"
       },
       "points": 10,
-      "skills": ["vertalen_tekst"],
+      "skills": [
+        "vertalen_tekst"
+      ],
       "mode": "practice",
       "payload": {
         "latin_text": "Pater et filius oves custodunt.\nSubito oves lupam vident.\nBalant.\nEam timent sed pater ridet et ovibus dicit:\n'Nos dei protegunt!'",
         "vocabulary": [
-          { "latin": "ovis, oves", "dutch": "schaap" },
-          { "latin": "balare", "dutch": "blaten" }
+          {
+            "latin": "ovis, oves",
+            "dutch": "schaap"
+          },
+          {
+            "latin": "balare",
+            "dutch": "blaten"
+          }
         ],
         "model_answer": "[Een] vader en een zoon bewaken [de] schapen.\nPlotSeling zien de schapen een wolvin.\nZij/ze blaten.\nZe zijn bang voor haar maar vader lacht en zegt tegen de schapen:\n'De goden beschermen ons!'",
-        "grading": { "rule": "manual_review" }
+        "grading": {
+          "rule": "manual_review"
+        }
       },
       "feedback": {
         "explanation": "Modelvertaling: Een vader en een zoon bewaken de schapen. Plotseling zien de schapen een wolvin. Zij blaten. Ze zijn bang voor haar maar vader lacht en zegt tegen de schapen: 'De goden beschermen ons!'"
@@ -343,7 +772,9 @@
         "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br>1 <em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br>  <em>Subito oves lupam vident.</em><br>  <em>Balant.</em> <small>(balare = blaten)</small><br>  <em>Eam timent sed pater ridet et ovibus dicit:</em><br>5 <em>'Nos dei protegunt!'</em></div><br>r.3 <em>Balant</em> - Leg uit waarom ze dit doen."
       },
       "points": 1,
-      "skills": ["tekstbegrip"],
+      "skills": [
+        "tekstbegrip"
+      ],
       "mode": "practice",
       "payload": {
         "question": "r.3 'Balant' - Leg uit waarom ze dit doen.",
@@ -352,7 +783,9 @@
           "ze zijn bang voor de wolvin",
           "van angst voor de wolvin"
         ],
-        "grading": { "rule": "any_accepted" }
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "Omdat ze bang zijn voor de wolvin."
@@ -367,12 +800,20 @@
         "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br>1 <em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br>  <em>Subito oves lupam vident.</em><br>  <em>Balant.</em> <small>(balare = blaten)</small><br>  <em>Eam timent sed pater ridet et ovibus dicit:</em><br>5 <em>'Nos dei protegunt!'</em></div><br>r.4 <em>Eam</em> - Wie wordt/worden bedoeld met <em>eam</em>?"
       },
       "points": 1,
-      "skills": ["tekstbegrip"],
+      "skills": [
+        "tekstbegrip"
+      ],
       "mode": "practice",
       "payload": {
         "question": "r.4 'Eam' - Wie wordt/worden bedoeld met 'eam'?",
-        "accepted_answers": ["de wolvin", "wolvin", "lupa"],
-        "grading": { "rule": "any_accepted" }
+        "accepted_answers": [
+          "de wolvin",
+          "wolvin",
+          "lupa"
+        ],
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "De wolvin."
@@ -387,7 +828,10 @@
         "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br>1 <em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br>  <em>Subito oves lupam vident.</em><br>  <em>Balant.</em> <small>(balare = blaten)</small><br>  <em>Eam timent sed pater ridet et ovibus dicit:</em><br>5 <em>'Nos dei protegunt!'</em></div><br>r.4 <em>ovibus</em> - Wat is de functie van het woord <em>ovibus</em>? Leg je antwoord uit."
       },
       "points": 1,
-      "skills": ["tekstbegrip", "zinsanalyse"],
+      "skills": [
+        "tekstbegrip",
+        "zinsanalyse"
+      ],
       "mode": "practice",
       "payload": {
         "question": "r.4 'ovibus' - Wat is de functie van het woord 'ovibus'? Leg je antwoord uit.",
@@ -396,7 +840,9 @@
           "meewerkend voorwerp",
           "mvo"
         ],
-        "grading": { "rule": "any_accepted" }
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "Meewerkend voorwerp: Vader zegt TEGEN de schapen."
@@ -411,12 +857,20 @@
         "html": "<div class=\"latin-context\"><strong>Tekst:</strong><br>1 <em>Pater et filius oves custodunt.</em> <small>(ovis, oves = schaap)</small><br>  <em>Subito oves lupam vident.</em><br>  <em>Balant.</em> <small>(balare = blaten)</small><br>  <em>Eam timent sed pater ridet et ovibus dicit:</em><br>5 <em>'Nos dei protegunt!'</em></div><br>r.3-5 De verhaalfiguren in de tekst reageren tegengesteld op de gebeurtenis. Noteer het Latijnse tekstelement dat deze tegenstelling aangeeft."
       },
       "points": 1,
-      "skills": ["tekstbegrip"],
+      "skills": [
+        "tekstbegrip"
+      ],
       "mode": "practice",
       "payload": {
         "question": "r.3-5 Noteer het Latijnse tekstelement dat de tegenstelling aangeeft.",
-        "accepted_answers": ["sed", "het woordje sed", "sed (maar)"],
-        "grading": { "rule": "any_accepted" }
+        "accepted_answers": [
+          "sed",
+          "het woordje sed",
+          "sed (maar)"
+        ],
+        "grading": {
+          "rule": "any_accepted"
+        }
       },
       "feedback": {
         "explanation": "Het woordje 'sed' = maar: de schapen zijn BANG MAAR vader LACHT."
