@@ -497,16 +497,23 @@ async function renderQuestion() {
   state.partialScore = 0;
   state.maxPartialScore = 0;
 
-  // Auto-load Wikimedia image if no image yet
+  // Load image: first check for static media URL, then try Wikimedia search
   if (!q.image) {
-    try {
-      const imageUrl = await loadQuestionImage(q);
-      if (imageUrl) {
-        q.image = imageUrl;
-        q.imageAlt = q.media?.alt || "Afbeelding bij vraag";
+    // Check for static media array with direct URL
+    if (Array.isArray(q.media) && q.media[0]?.type === "image" && q.media[0]?.src) {
+      q.image = q.media[0].src;
+      q.imageAlt = q.media[0].alt || "Afbeelding bij vraag";
+    } else {
+      // Fall back to dynamic Wikimedia search
+      try {
+        const imageUrl = await loadQuestionImage(q);
+        if (imageUrl) {
+          q.image = imageUrl;
+          q.imageAlt = q.media?.alt || "Afbeelding bij vraag";
+        }
+      } catch (err) {
+        console.warn("Failed to load Wikimedia image:", err);
       }
-    } catch (err) {
-      console.warn("Failed to load Wikimedia image:", err);
     }
   }
 
