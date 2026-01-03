@@ -1,0 +1,21 @@
+# Runtime config with secrets (generated at container startup)
+# Keep the placeholder in git, but ignore local dev versions with real keys
+# assets/js/runtime-config.js
+
+# Local development
+.env
+.env.local
+*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if used later)
+node_modules/
