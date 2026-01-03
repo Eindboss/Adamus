@@ -1,8 +1,8 @@
 /**
- * AI-powered image selection for quiz questions (v3.4)
+ * AI-powered image selection for quiz questions (v3.5)
  *
  * Uses Gemini AI to generate optimal search terms in BATCHES,
- * then fetches images from multiple sources with AI validation.
+ * then fetches images from multiple sources with AI VISION validation.
  *
  * v3 Improvements:
  * - Category-based scoring using Commons categories as context signal
@@ -36,8 +36,14 @@
  * v3.4 Improvements:
  * - Multiple image sources: Wikimedia Commons, Unsplash, Pexels
  * - Reduced diagram preference, prefer real photos for anatomy
- * - AI validation to filter out abstract/schematic images
  * - Better quality photos from professional sources
+ *
+ * v3.5 Improvements:
+ * - AI VISION validation: Gemini actually looks at images before selecting
+ * - Rejects wrong species (cat skeleton for human anatomy)
+ * - Rejects irrelevant diagrams (flowcharts, organs for skeleton questions)
+ * - Validates image matches question content
+ * - Top candidates validated, best valid one selected
  *
  * Usage:
  *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json>
@@ -592,57 +598,198 @@ async function searchPexels(searchTerm, limit = 10) {
 }
 
 /**
- * v3.4: AI validation - check if image is actually useful (not abstract/schematic)
+ * v3.5: Download image and convert to base64 for AI vision
  */
-async function validateImageWithAI(imageUrl, questionText, expectedContent) {
+async function fetchImageAsBase64(imageUrl) {
+  try {
+    const response = await fetch(imageUrl);
+    if (!response.ok) return null;
+
+    const contentType = response.headers.get('content-type') || 'image/jpeg';
+    const buffer = await response.arrayBuffer();
+    const base64 = Buffer.from(buffer).toString('base64');
+
+    // Determine mime type
+    let mimeType = 'image/jpeg';
+    if (contentType.includes('png')) mimeType = 'image/png';
+    else if (contentType.includes('gif')) mimeType = 'image/gif';
+    else if (contentType.includes('webp')) mimeType = 'image/webp';
+    else if (contentType.includes('svg')) mimeType = 'image/svg+xml';
+
+    return { base64, mimeType };
+  } catch (err) {
+    return null;
+  }
+}
+
+// v3.5: Intent-specific AI validation thresholds (ChatGPT recommendation)
+const MIN_AI_SCORE_BY_INTENT = {
+  labeled_diagram: 75,
+  diagram: 70,
+  concept_diagram: 65,
+  map: 70,
+  historical_illustration: 70,
+  micrograph: 65,
+  photo: 60,
+  default: 60,
+};
+
+/**
+ * Get minimum AI validation score for an intent
+ */
+function getMinAIScore(intent) {
+  return MIN_AI_SCORE_BY_INTENT[intent] || MIN_AI_SCORE_BY_INTENT.default;
+}
+
+/**
+ * v3.5: AI VISION validation - Gemini actually LOOKS at the image
+ * Downloads the image as base64 and sends it to Gemini for visual analysis
+ *
+ * Enhanced with ChatGPT recommendations:
+ * - Two-stage prompt (observations first, then scoring)
+ * - Hard reject rules per riskProfile
+ * - Topic coverage checking
+ * - Readability assessment
+ */
+async function validateImageWithAI(imageUrl, questionText, subject, brief) {
   const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return { valid: true, score: 0 }; // Skip validation if no key
+  if (!apiKey) return { valid: true, score: 50, reason: 'No API key' };
 
   try {
-    const prompt = `Je bent een expert in het beoordelen van educatieve afbeeldingen.
+    // Download the image as base64
+    const imageData = await fetchImageAsBase64(imageUrl);
+    if (!imageData) return { valid: false, score: 0, reason: 'Could not download image' };
 
+    // Skip SVG validation (Gemini doesn't handle SVG well)
+    if (imageData.mimeType === 'image/svg+xml') {
+      return { valid: true, score: 60, reason: 'SVG - text-based validation only', image_type: 'diagram' };
+    }
+
+    const topicKeywords = brief.topicKeywords || [];
+    const topicKeywordsStr = topicKeywords.join(', ') || '(none)';
+    const intent = brief.imageIntent || 'photo';
+    const riskProfile = brief.riskProfile || 'none';
+
+    // Build topic coverage request
+    const topicCoverageRequest = topicKeywords.length > 0
+      ? `"topic_coverage": { ${topicKeywords.map(k => `"${k}": true/false`).join(', ')} },`
+      : '';
+
+    // Enhanced prompt based on ChatGPT recommendations
+    const prompt = `Je bent een strenge beoordelaar van educatieve afbeeldingen. Je MOET de afbeelding echt beoordelen.
+
+VAK: ${subject || 'Onbekend'}
 VRAAG: ${questionText}
-VERWACHTE INHOUD: ${expectedContent}
-AFBEELDING URL: ${imageUrl}
+INTENT: ${intent}
+TOPIC KEYWORDS: ${topicKeywordsStr}
+RISK PROFILE: ${riskProfile}
 
-Beoordeel of deze afbeelding geschikt is voor de vraag. Let op:
-1. Is het een ECHTE foto/illustratie of een abstract/schematisch diagram met alleen geometrische vormen?
-2. Toont het de verwachte inhoud (anatomie, historische scene, kaart, etc.)?
-3. Is het educatief bruikbaar voor middelbare scholieren?
+HARD REJECT RULES:
+- Als RISK PROFILE = human_vs_animal: als je GEEN mens ziet (of je twijfelt) → valid=false.
+- Als INTENT = labeled_diagram: als het geen (gelabeld) anatomisch diagram/tekening is → valid=false.
+- Als het vooral tekst/flowchart/poster is en niet de gevraagde structuur toont → valid=false.
+- Als de afbeelding onleesbaar of te klein is om didactisch te gebruiken → valid=false.
+
+WERKWIJZE:
+1) Beschrijf kort wat je ziet (max 2 zinnen). Noem mens/dier en welk lichaamsdeel/onderwerp.
+2) Bepaal image_type: photo / labeled_diagram / diagram / map / text_heavy / unknown.
+3) Geef per topicKeyword: true/false of het zichtbaar/gelabeld is.
+4) Score:
+   - Relevantie (0-40): toont de afbeelding wat de vraag vraagt?
+   - Correctheid (0-30): juiste soort/type? (menselijk voor menselijke anatomie)
+   - Educatieve waarde (0-30): duidelijk en leesbaar?
+   Totaal 0-100.
 
 Antwoord als JSON:
 {
   "valid": true/false,
-  "reason": "korte uitleg",
-  "qualityScore": 0-100
+  "score": 0-100,
+  "observations": "wat zie je (1-2 zinnen)",
+  "detected_subject": "human|animal|mixed|unknown",
+  "image_type": "photo|labeled_diagram|diagram|map|text_heavy|unknown",
+  "readability": "good|ok|poor",
+  ${topicCoverageRequest}
+  "issues": ["probleem 1", "probleem 2"],
+  "reason": "korte uitleg in het Nederlands"
 }
 
+Wees STRENG. Bij twijfel: valid=false.
 Geef ALLEEN de JSON.`;
 
     const response = await fetch(`${GEMINI_API_URL}/${MODEL}:generateContent?key=${apiKey}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.2, maxOutputTokens: 500 }
+        contents: [{
+          parts: [
+            {
+              inline_data: {
+                mime_type: imageData.mimeType,
+                data: imageData.base64
+              }
+            },
+            { text: prompt }
+          ]
+        }],
+        generationConfig: { temperature: 0.1, maxOutputTokens: 800 }
       })
     });
 
-    if (!response.ok) return { valid: true, score: 0 };
+    if (!response.ok) {
+      console.log(`    [AI validation error: ${response.status}]`);
+      return { valid: true, score: 50, reason: 'API error, using text-based scoring' };
+    }
 
     const data = await response.json();
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
     const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) return { valid: true, score: 0 };
+    if (!jsonMatch) return { valid: true, score: 50, reason: 'Could not parse response' };
 
     const result = JSON.parse(jsonMatch[0]);
+
+    // Apply hard reject rules based on ChatGPT recommendations
+    let hardReject = false;
+    let rejectReason = '';
+
+    // Rule 1: human_vs_animal risk profile
+    if (riskProfile === 'human_vs_animal' && result.detected_subject !== 'human') {
+      hardReject = true;
+      rejectReason = `Detected ${result.detected_subject}, not human`;
+    }
+
+    // Rule 2: labeled_diagram intent requires diagram type
+    if (intent === 'labeled_diagram' && !['labeled_diagram', 'diagram'].includes(result.image_type)) {
+      hardReject = true;
+      rejectReason = `Image type ${result.image_type}, not a diagram`;
+    }
+
+    // Rule 3: text_heavy is reject for anatomy (but ok for concept_diagram)
+    if (result.image_type === 'text_heavy' && intent !== 'concept_diagram' && subject?.toLowerCase() === 'biologie') {
+      hardReject = true;
+      rejectReason = 'Text-heavy image for anatomy question';
+    }
+
+    // Rule 4: poor readability is reject
+    if (result.readability === 'poor') {
+      hardReject = true;
+      rejectReason = 'Poor readability';
+    }
+
     return {
-      valid: result.valid !== false,
-      score: result.qualityScore || 0,
-      reason: result.reason || '',
+      valid: hardReject ? false : (result.valid === true),
+      score: hardReject ? Math.min(result.score || 0, 40) : (result.score || 0),
+      reason: hardReject ? rejectReason : (result.reason || ''),
+      issues: result.issues || [],
+      observations: result.observations || '',
+      detected_subject: result.detected_subject || 'unknown',
+      image_type: result.image_type || 'unknown',
+      readability: result.readability || 'unknown',
+      topic_coverage: result.topic_coverage || {},
+      hardReject,
     };
   } catch (err) {
-    return { valid: true, score: 0 };
+    console.log(`    [AI validation exception: ${err.message}]`);
+    return { valid: true, score: 50, reason: 'Validation error' };
   }
 }
 
@@ -974,8 +1121,9 @@ function scoreCandidate(candidate, brief, usedImages) {
  * v3.1: Implements negation ladder and score-based fallback
  * v3.3: Subject-specific thresholds
  * v3.4: Multi-source search (Commons, Unsplash, Pexels) + photo preference
+ * v3.5: AI VISION validation of top candidates
  */
-async function findBestImage(brief, usedImages, subject = null, questionText = '') {
+async function findBestImage(brief, usedImages, subject = null, questionText = '', enableAIValidation = true) {
   const candidates = [];
   const minScore = getMinScore(brief.imageIntent, subject);
   const queries = brief.commonsQueries || brief.searchTerms || [];
@@ -1047,23 +1195,22 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
     return { ...c, score };
   });
   scored.sort((a, b) => b.score - a.score);
-  let best = scored.find(c => c.score >= minScore);
 
   // 5. SCORE-BASED FALLBACK: Try Wikipedia if no candidates OR best score is too low
-  if ((!best || best.score < minScore) && brief.wikipediaFallback) {
+  const currentBest = scored[0];
+  if ((!currentBest || currentBest.score < minScore) && brief.wikipediaFallback) {
     try {
       const wikiImage = await getWikipediaImage(brief.wikipediaFallback);
       if (wikiImage) {
         wikiImage.score = scoreCandidate(wikiImage, brief, usedImages);
-        if (!best || wikiImage.score > best.score) {
-          best = wikiImage;
-        }
+        scored.push(wikiImage);
+        scored.sort((a, b) => b.score - a.score);
       }
     } catch (err) { /* continue */ }
   }
 
   // 6. If still no good result, try broader search terms
-  if (!best || best.score < minScore) {
+  if (scored.length === 0 || scored[0].score < minScore) {
     const lastQuery = queries[queries.length - 1];
     if (lastQuery) {
       const broadQuery = stripNegations(lastQuery).replace(/incategory:"[^"]*"/g, '').trim();
@@ -1072,9 +1219,7 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
           const results = await searchCommons(broadQuery, 15);
           for (const r of results) {
             r.score = scoreCandidate(r, brief, usedImages);
-            if (!best || r.score > best.score) {
-              best = r;
-            }
+            scored.push(r);
           }
         } catch (err) { /* continue */ }
 
@@ -1084,17 +1229,108 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
             const unsplashResults = await searchUnsplash(broadQuery, 5);
             for (const r of unsplashResults) {
               r.score = scoreCandidate(r, brief, usedImages) + 50;
-              if (!best || r.score > best.score) {
-                best = r;
-              }
+              scored.push(r);
             }
           } catch (err) { /* continue */ }
         }
+        scored.sort((a, b) => b.score - a.score);
       }
     }
   }
 
-  return best && best.score >= MIN_ACCEPT_SCORE.default ? best : null;
+  // v3.5: AI VISION VALIDATION (enhanced with ChatGPT recommendations)
+  // Strategy: validate top 3 first, escalate to top 5 if needed
+  // Use intent-specific AI score thresholds
+  if (enableAIValidation && scored.length > 0 && questionText) {
+    const intent = brief.imageIntent || 'photo';
+    const minAIScore = getMinAIScore(intent);
+    const validatedCandidates = [];
+
+    // Phase 1: Validate top 3 candidates
+    const INITIAL_CANDIDATES = 3;
+    const MAX_CANDIDATES = 5;
+
+    for (let i = 0; i < Math.min(INITIAL_CANDIDATES, scored.length); i++) {
+      const candidate = scored[i];
+      if (candidate.score < MIN_ACCEPT_SCORE.default) continue;
+
+      process.stdout.write(` [v${i + 1}]`);
+      const validation = await validateImageWithAI(
+        candidate.imageUrl,
+        questionText,
+        subject,
+        brief
+      );
+
+      candidate.aiValidation = validation;
+      validatedCandidates.push(candidate);
+
+      if (validation.valid && validation.score >= minAIScore) {
+        // Found a valid candidate!
+        candidate.score += Math.floor(validation.score / 2);
+        process.stdout.write(` [AI:${validation.score}✓ ${validation.detected_subject || ''}]`);
+        return candidate;
+      } else {
+        const shortReason = validation.hardReject
+          ? `REJECT:${validation.reason?.substring(0, 20) || ''}`
+          : `${validation.score}<${minAIScore}`;
+        process.stdout.write(` [AI:${shortReason}]`);
+      }
+
+      await sleep(200);
+    }
+
+    // Phase 2: Escalate to remaining candidates (4 and 5) if no valid found
+    if (scored.length > INITIAL_CANDIDATES) {
+      process.stdout.write(` [escalating]`);
+      for (let i = INITIAL_CANDIDATES; i < Math.min(MAX_CANDIDATES, scored.length); i++) {
+        const candidate = scored[i];
+        if (candidate.score < MIN_ACCEPT_SCORE.default) continue;
+
+        process.stdout.write(` [v${i + 1}]`);
+        const validation = await validateImageWithAI(
+          candidate.imageUrl,
+          questionText,
+          subject,
+          brief
+        );
+
+        candidate.aiValidation = validation;
+        validatedCandidates.push(candidate);
+
+        if (validation.valid && validation.score >= minAIScore) {
+          candidate.score += Math.floor(validation.score / 2);
+          process.stdout.write(` [AI:${validation.score}✓]`);
+          return candidate;
+        } else {
+          process.stdout.write(` [AI:${validation.score}✗]`);
+        }
+
+        await sleep(200);
+      }
+    }
+
+    // No candidate passed AI validation
+    // Return the best validated candidate (highest AI score) with warning
+    if (validatedCandidates.length > 0) {
+      validatedCandidates.sort((a, b) => (b.aiValidation?.score || 0) - (a.aiValidation?.score || 0));
+      const bestValidated = validatedCandidates[0];
+      bestValidated._aiValidationFailed = true;
+      bestValidated._bestAIScore = bestValidated.aiValidation?.score || 0;
+      return bestValidated;
+    }
+
+    // Fallback to best text-scored
+    const best = scored.find(c => c.score >= MIN_ACCEPT_SCORE.default);
+    if (best) {
+      best._aiValidationFailed = true;
+      return best;
+    }
+  }
+
+  // Fallback: return best text-scored candidate
+  const best = scored.find(c => c.score >= MIN_ACCEPT_SCORE.default);
+  return best || null;
 }
 
 /**
@@ -1213,7 +1449,11 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
     }
 
     try {
-      let bestImage = await findBestImage(brief, usedImages, subject);
+      // v3.5: Extract question text for AI validation
+      const questionText = question.q || question.instruction || question.prompt?.text || question.prompt?.html || '';
+      const cleanQuestionText = questionText.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+      let bestImage = await findBestImage(brief, usedImages, subject, cleanQuestionText, true);
       const minScore = getMinScore(brief.imageIntent, subject);
 
       // v3.3: Escalation - try per-question AI if initial search fails
@@ -1229,7 +1469,7 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
             topicKeywords: escalatedBrief.topicKeywords || brief.topicKeywords,
             _escalated: true,
           };
-          bestImage = await findBestImage(mergedBrief, usedImages, subject);
+          bestImage = await findBestImage(mergedBrief, usedImages, subject, cleanQuestionText, true);
         }
       }
 
@@ -1366,7 +1606,7 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
           src: result.imageUrl,
           alt: result.title,
           caption,
-          _source: 'ai-v3.4',
+          _source: 'ai-v3.5',
           _imageSource: result.source || 'commons',
           _searchTerm: result.searchTerm,
           _imageIntent: result.imageIntent,
@@ -1390,7 +1630,7 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
     escalationCount: escalationState.count,
     total: needsImage.length,
     timestamp: new Date().toISOString(),
-    version: 'v3.4',
+    version: 'v3.5',
   }, null, 2));
   console.log(`Results saved to: ${path.basename(outputPath)}`);
 
