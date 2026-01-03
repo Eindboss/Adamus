@@ -1,49 +1,29 @@
 /**
- * AI-powered image selection for quiz questions (v3.5)
+ * AI-powered image selection for quiz questions (v3.6)
  *
  * Uses Gemini AI to generate optimal search terms in BATCHES,
  * then fetches images from multiple sources with AI VISION validation.
  *
- * v3 Improvements:
- * - Category-based scoring using Commons categories as context signal
- * - RiskProfile penalties (animals vs humans, modern vs historical)
- * - Intent gating (require diagram signals for diagram intents)
- * - Wikipedia fallback for "no candidates found" cases
- * - Enhanced AI prompt with commonsQueries and riskProfile
+ * v3.6 Improvements (based on ChatGPT analysis of 46% failure rate):
+ * - CONCEPT MATCHING: expectedConcept/allowedConcepts per question
+ *   → Prevents "breast for skeleton question" errors
+ * - LANGUAGE GATE: Hard reject non-NL/EN text in images
+ *   → Prevents Polish/Ukrainian/Lithuanian diagram labels
+ * - FAIL-CLOSED FALLBACK: No image is better than wrong image
+ *   → Prevents "soup for collagen question" errors
+ * - CONTENT-TYPE GATE: Reject abstract_art, network_graph, table_wordlist
+ *   → Prevents completely irrelevant images
+ * - CANONICAL DEDUP: Use pageid/title instead of URL for deduplication
+ *   → Prevents same image appearing twice
+ * - COMPLEXITY GATE: Reject images too complex for 14-16 year olds
  *
- * v3.1 Improvements:
- * - Negation ladder: retry queries without negations when 0 results
- * - Category bonus gating: require topicKeyword match for category bonus
- * - MIN_ACCEPT_SCORE thresholds per intent type
- * - AI coverage check with local repair brief
- * - Score-based fallback trigger (not just 0 candidates)
- *
- * v3.2 Improvements:
- * - concept_diagram intent for abstract concepts (reflexes, homeostasis, etc.)
- * - Subject profiles (vakprofielen) with preset categoryHints and riskProfiles
- * - Educational quality scoring (bonus for field guide, penalty for stock/toys)
- * - thematic_vs_tourist riskProfile for aardrijkskunde
- * - mythology_vs_popculture riskProfile for latijn
- * - Higher MIN_ACCEPT_SCORE thresholds for better precision
- * - Map legibility bonus for larger images
- *
- * v3.3 Improvements:
- * - imagePolicy="none" for Latin grammar questions (no image needed)
- * - Per-question AI escalation for failures (query-repair, capped per quiz)
- * - Subject-specific threshold overrides
- * - Improved Latin grammar detection
- *
- * v3.4 Improvements:
- * - Multiple image sources: Wikimedia Commons, Unsplash, Pexels
- * - Reduced diagram preference, prefer real photos for anatomy
- * - Better quality photos from professional sources
- *
- * v3.5 Improvements:
- * - AI VISION validation: Gemini actually looks at images before selecting
- * - Rejects wrong species (cat skeleton for human anatomy)
- * - Rejects irrelevant diagrams (flowcharts, organs for skeleton questions)
- * - Validates image matches question content
- * - Top candidates validated, best valid one selected
+ * Previous versions:
+ * - v3.5: AI vision validation (looks at images)
+ * - v3.4: Multi-source (Unsplash, Pexels, Commons)
+ * - v3.3: imagePolicy, escalation, Latin grammar
+ * - v3.2: concept_diagram, subject profiles
+ * - v3.1: negation ladder, score thresholds
+ * - v3.0: categories, riskProfiles, intent gating
  *
  * Usage:
  *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json>
@@ -160,6 +140,85 @@ const ABSTRACT_CONCEPT_KEYWORDS = ['coördinatie', 'coordination', 'rusttoestand
   'regeling', 'homeostase', 'homeostasis', 'prikkel', 'stimulus', 'reactie', 'response',
   'spierwerking', 'muscle contraction', 'werking', 'function', 'proces', 'process'];
 
+// v3.6: CONCEPT VOCABULARY for biologie
+// Maps question keywords to expected concepts for validation
+// This prevents "breast for skeleton question" errors
+const BIOLOGIE_CONCEPT_VOCABULARY = {
+  // Skeleton/bones
+  skelet: { expectedConcept: 'skeleton', allowedConcepts: ['skeleton', 'bone', 'skull', 'spine', 'vertebra', 'rib', 'pelvis', 'femur', 'tibia'] },
+  bot: { expectedConcept: 'bone', allowedConcepts: ['bone', 'skeleton', 'femur', 'tibia', 'humerus', 'bone_tissue', 'osteon'] },
+  botten: { expectedConcept: 'bone', allowedConcepts: ['bone', 'skeleton', 'femur', 'tibia', 'humerus', 'bone_tissue'] },
+  beenderen: { expectedConcept: 'bone', allowedConcepts: ['bone', 'skeleton'] },
+  schedel: { expectedConcept: 'skull', allowedConcepts: ['skull', 'cranium', 'head', 'skeleton'] },
+  wervelkolom: { expectedConcept: 'spine', allowedConcepts: ['spine', 'vertebra', 'backbone', 'skeleton'] },
+  wervel: { expectedConcept: 'vertebra', allowedConcepts: ['vertebra', 'spine', 'backbone', 'skeleton'] },
+  ribben: { expectedConcept: 'rib', allowedConcepts: ['rib', 'ribcage', 'thorax', 'skeleton'] },
+  bekken: { expectedConcept: 'pelvis', allowedConcepts: ['pelvis', 'hip', 'skeleton'] },
+  fontanel: { expectedConcept: 'fontanelle', allowedConcepts: ['fontanelle', 'skull', 'baby_skull', 'cranium'] },
+
+  // Bone tissue
+  botweefsel: { expectedConcept: 'bone_tissue', allowedConcepts: ['bone_tissue', 'osteon', 'bone_cell', 'osteocyte', 'compact_bone', 'spongy_bone'] },
+  beenmerg: { expectedConcept: 'bone_marrow', allowedConcepts: ['bone_marrow', 'marrow', 'bone'] },
+  collageen: { expectedConcept: 'collagen', allowedConcepts: ['collagen', 'bone_tissue', 'connective_tissue', 'fibers'] },
+  kraakbeen: { expectedConcept: 'cartilage', allowedConcepts: ['cartilage', 'joint', 'bone'] },
+
+  // Joints
+  gewricht: { expectedConcept: 'joint', allowedConcepts: ['joint', 'knee', 'elbow', 'hip', 'shoulder', 'synovial'] },
+  gewrichten: { expectedConcept: 'joint', allowedConcepts: ['joint', 'knee', 'elbow', 'hip', 'shoulder', 'synovial'] },
+  knie: { expectedConcept: 'knee', allowedConcepts: ['knee', 'joint', 'leg'] },
+  elleboog: { expectedConcept: 'elbow', allowedConcepts: ['elbow', 'joint', 'arm'] },
+  schouder: { expectedConcept: 'shoulder', allowedConcepts: ['shoulder', 'joint', 'arm'] },
+  heup: { expectedConcept: 'hip', allowedConcepts: ['hip', 'joint', 'pelvis'] },
+  gewrichtssmeer: { expectedConcept: 'synovial_fluid', allowedConcepts: ['synovial_fluid', 'joint', 'synovial'] },
+  synoviale: { expectedConcept: 'synovial', allowedConcepts: ['synovial', 'joint', 'synovial_fluid'] },
+
+  // Muscles
+  spier: { expectedConcept: 'muscle', allowedConcepts: ['muscle', 'biceps', 'triceps', 'quadriceps', 'muscle_fiber'] },
+  spieren: { expectedConcept: 'muscle', allowedConcepts: ['muscle', 'biceps', 'triceps', 'quadriceps', 'muscle_fiber', 'muscular_system'] },
+  biceps: { expectedConcept: 'biceps', allowedConcepts: ['biceps', 'arm_muscle', 'muscle'] },
+  triceps: { expectedConcept: 'triceps', allowedConcepts: ['triceps', 'arm_muscle', 'muscle'] },
+  spiervezel: { expectedConcept: 'muscle_fiber', allowedConcepts: ['muscle_fiber', 'myofibril', 'muscle'] },
+  samentrekken: { expectedConcept: 'muscle_contraction', allowedConcepts: ['muscle_contraction', 'muscle', 'contraction'] },
+  samentrekking: { expectedConcept: 'muscle_contraction', allowedConcepts: ['muscle_contraction', 'muscle', 'contraction'] },
+  antagonist: { expectedConcept: 'antagonist_muscle', allowedConcepts: ['antagonist_muscle', 'muscle_pair', 'biceps_triceps', 'muscle'] },
+
+  // Nervous system
+  zenuw: { expectedConcept: 'nerve', allowedConcepts: ['nerve', 'neuron', 'nervous_system'] },
+  zenuwen: { expectedConcept: 'nerve', allowedConcepts: ['nerve', 'neuron', 'nervous_system'] },
+  zenuwstelsel: { expectedConcept: 'nervous_system', allowedConcepts: ['nervous_system', 'brain', 'spinal_cord', 'nerve'] },
+  hersenen: { expectedConcept: 'brain', allowedConcepts: ['brain', 'cerebrum', 'nervous_system'] },
+  ruggenmerg: { expectedConcept: 'spinal_cord', allowedConcepts: ['spinal_cord', 'spine', 'nervous_system'] },
+  reflex: { expectedConcept: 'reflex', allowedConcepts: ['reflex', 'reflex_arc', 'nervous_system', 'spinal_cord'] },
+  reflexboog: { expectedConcept: 'reflex_arc', allowedConcepts: ['reflex_arc', 'reflex', 'nervous_system'] },
+  motorisch: { expectedConcept: 'motor', allowedConcepts: ['motor_neuron', 'motor_cortex', 'muscle', 'movement'] },
+
+  // RSI / posture
+  rsi: { expectedConcept: 'rsi', allowedConcepts: ['rsi', 'repetitive_strain', 'ergonomics', 'wrist', 'posture', 'computer_work'] },
+  houding: { expectedConcept: 'posture', allowedConcepts: ['posture', 'sitting', 'standing', 'ergonomics', 'spine'] },
+  zithouding: { expectedConcept: 'sitting_posture', allowedConcepts: ['sitting_posture', 'posture', 'ergonomics', 'chair', 'desk'] },
+  ergonomie: { expectedConcept: 'ergonomics', allowedConcepts: ['ergonomics', 'posture', 'workspace'] },
+
+  // Training / movement
+  training: { expectedConcept: 'training', allowedConcepts: ['training', 'exercise', 'fitness', 'sport', 'muscle'] },
+  squats: { expectedConcept: 'squats', allowedConcepts: ['squats', 'leg_exercise', 'training', 'quadriceps'] },
+  opwarmen: { expectedConcept: 'warmup', allowedConcepts: ['warmup', 'stretching', 'exercise', 'training'] },
+  stretchen: { expectedConcept: 'stretching', allowedConcepts: ['stretching', 'flexibility', 'warmup', 'muscle'] },
+  bewegen: { expectedConcept: 'movement', allowedConcepts: ['movement', 'exercise', 'muscle', 'joint'] },
+  beweging: { expectedConcept: 'movement', allowedConcepts: ['movement', 'exercise', 'muscle', 'joint'] },
+};
+
+// v3.6: Content types that should ALWAYS be rejected
+const REJECT_CONTENT_TYPES = [
+  'abstract_art',
+  'network_graph',
+  'table_wordlist',
+  'map_transit',
+  'music_instrument',
+  'food_drink',
+  'scientific_method',
+  'unrelated_diagram',
+];
+
 // Subject profiles with default categoryHints and riskProfiles
 const SUBJECT_PROFILES = {
   biologie: {
@@ -187,6 +246,35 @@ const SUBJECT_PROFILES = {
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * v3.6: Extract expected concept and allowed concepts from question text
+ * Uses BIOLOGIE_CONCEPT_VOCABULARY to map Dutch keywords to concepts
+ */
+function extractExpectedConcepts(questionText, subject) {
+  if (!subject || subject.toLowerCase() !== 'biologie') {
+    return { expectedConcept: null, allowedConcepts: [] };
+  }
+
+  const clean = questionText.replace(/<[^>]+>/g, ' ').toLowerCase();
+  const allAllowed = new Set();
+  let primaryConcept = null;
+
+  // Check each vocabulary entry
+  for (const [keyword, mapping] of Object.entries(BIOLOGIE_CONCEPT_VOCABULARY)) {
+    if (clean.includes(keyword)) {
+      if (!primaryConcept) {
+        primaryConcept = mapping.expectedConcept;
+      }
+      mapping.allowedConcepts.forEach(c => allAllowed.add(c));
+    }
+  }
+
+  return {
+    expectedConcept: primaryConcept,
+    allowedConcepts: Array.from(allAllowed),
+  };
 }
 
 /**
@@ -313,16 +401,48 @@ function getImagePolicy(question, subject) {
   return 'required';
 }
 
-async function withRetry(fn, retries = MAX_RETRIES) {
+// v3.6: Track rate limit state per API to apply adaptive delays
+const rateLimitState = {
+  gemini: { lastRateLimit: 0, backoffMs: 200 },
+  unsplash: { lastRateLimit: 0, backoffMs: 100 },
+  pexels: { lastRateLimit: 0, backoffMs: 100 },
+  commons: { lastRateLimit: 0, backoffMs: 100 },
+};
+
+/**
+ * v3.6: Enhanced retry with exponential backoff and rate limit tracking
+ */
+async function withRetry(fn, retries = MAX_RETRIES, apiName = 'gemini') {
+  const state = rateLimitState[apiName] || rateLimitState.gemini;
+
+  // Apply adaptive delay if we were recently rate limited
+  const timeSinceRateLimit = Date.now() - state.lastRateLimit;
+  if (timeSinceRateLimit < 60000 && state.backoffMs > 200) {
+    await sleep(state.backoffMs);
+  }
+
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      return await fn();
+      const result = await fn();
+      // Success: gradually reduce backoff
+      if (state.backoffMs > 200) {
+        state.backoffMs = Math.max(200, state.backoffMs * 0.8);
+      }
+      return result;
     } catch (err) {
-      const isRateLimit = err.message.includes('429') || err.message.includes('rate');
+      const isRateLimit = err.message.includes('429') || err.message.includes('rate') || err.message.includes('quota');
       const isLastAttempt = attempt === retries;
+
+      if (isRateLimit) {
+        // Track rate limit event
+        state.lastRateLimit = Date.now();
+        state.backoffMs = Math.min(30000, state.backoffMs * 2); // Max 30s backoff
+      }
+
       if (isLastAttempt || !isRateLimit) throw err;
+
       const delay = BASE_DELAY * Math.pow(2, attempt) + Math.random() * 1000;
-      console.log(`  Rate limited, waiting ${Math.round(delay / 1000)}s before retry...`);
+      console.log(`  [${apiName}] Rate limited, waiting ${Math.round(delay / 1000)}s before retry (attempt ${attempt + 1}/${retries})...`);
       await sleep(delay);
     }
   }
@@ -471,6 +591,7 @@ async function searchCommons(searchTerm, limit = 10) {
 
   return Object.values(pages).map(page => ({
     title: page.title?.replace('File:', '') || '',
+    pageid: page.pageid, // v3.6: Include pageid for canonical dedup
     imageUrl: page.imageinfo?.[0]?.thumburl || page.imageinfo?.[0]?.url,
     descriptionUrl: page.imageinfo?.[0]?.descriptionurl,
     width: page.imageinfo?.[0]?.width,
@@ -478,6 +599,7 @@ async function searchCommons(searchTerm, limit = 10) {
     mime: page.imageinfo?.[0]?.mime,
     description: page.imageinfo?.[0]?.extmetadata?.ImageDescription?.value || '',
     categories: (page.categories || []).map(c => c.title?.replace('Category:', '') || ''),
+    source: 'commons',
   })).filter(img => img.imageUrl);
 }
 
@@ -509,6 +631,7 @@ async function searchCommonsCategory(category, limit = 20) {
 
   return Object.values(pages).map(page => ({
     title: page.title?.replace('File:', '') || '',
+    pageid: page.pageid, // v3.6: Include pageid for canonical dedup
     imageUrl: page.imageinfo?.[0]?.thumburl || page.imageinfo?.[0]?.url,
     descriptionUrl: page.imageinfo?.[0]?.descriptionurl,
     width: page.imageinfo?.[0]?.width,
@@ -516,6 +639,7 @@ async function searchCommonsCategory(category, limit = 20) {
     mime: page.imageinfo?.[0]?.mime,
     description: page.imageinfo?.[0]?.extmetadata?.ImageDescription?.value || '',
     categories: (page.categories || []).map(c => c.title?.replace('Category:', '') || ''),
+    source: 'commons',
   })).filter(img => img.imageUrl);
 }
 
@@ -542,6 +666,7 @@ async function searchUnsplash(searchTerm, limit = 10) {
 
     const data = await res.json();
     return (data.results || []).map(photo => ({
+      id: photo.id, // v3.6: Include ID for canonical dedup
       title: photo.description || photo.alt_description || searchTerm,
       imageUrl: photo.urls?.regular || photo.urls?.small,
       descriptionUrl: photo.links?.html,
@@ -581,6 +706,7 @@ async function searchPexels(searchTerm, limit = 10) {
 
     const data = await res.json();
     return (data.photos || []).map(photo => ({
+      id: photo.id, // v3.6: Include ID for canonical dedup
       title: photo.alt || searchTerm,
       imageUrl: photo.src?.large || photo.src?.medium,
       descriptionUrl: photo.url,
@@ -642,23 +768,24 @@ function getMinAIScore(intent) {
 }
 
 /**
- * v3.5: AI VISION validation - Gemini actually LOOKS at the image
+ * v3.6: AI VISION validation - Gemini actually LOOKS at the image
  * Downloads the image as base64 and sends it to Gemini for visual analysis
  *
- * Enhanced with ChatGPT recommendations:
- * - Two-stage prompt (observations first, then scoring)
- * - Hard reject rules per riskProfile
- * - Topic coverage checking
- * - Readability assessment
+ * v3.6 improvements based on ChatGPT analysis of 46% failure rate:
+ * - CONCEPT MATCHING: predicted_concept vs expectedConcept
+ * - LANGUAGE GATE: Detect and reject non-NL/EN text
+ * - CONTENT-TYPE GATE: Reject abstract_art, network_graph, etc.
+ * - COMPLEXITY GATE: Check age appropriateness for 14-16 year olds
+ * - Enhanced JSON contract with new fields
  */
 async function validateImageWithAI(imageUrl, questionText, subject, brief) {
   const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return { valid: true, score: 50, reason: 'No API key' };
+  if (!apiKey) return { valid: false, score: 0, reason: 'No API key', hardReject: true };
 
   try {
     // Download the image as base64
     const imageData = await fetchImageAsBase64(imageUrl);
-    if (!imageData) return { valid: false, score: 0, reason: 'Could not download image' };
+    if (!imageData) return { valid: false, score: 0, reason: 'Could not download image', hardReject: true };
 
     // Skip SVG validation (Gemini doesn't handle SVG well)
     if (imageData.mimeType === 'image/svg+xml') {
@@ -670,50 +797,68 @@ async function validateImageWithAI(imageUrl, questionText, subject, brief) {
     const intent = brief.imageIntent || 'photo';
     const riskProfile = brief.riskProfile || 'none';
 
-    // Build topic coverage request
-    const topicCoverageRequest = topicKeywords.length > 0
-      ? `"topic_coverage": { ${topicKeywords.map(k => `"${k}": true/false`).join(', ')} },`
-      : '';
+    // v3.6: Extract expected concepts from question
+    const { expectedConcept, allowedConcepts } = extractExpectedConcepts(questionText, subject);
+    const expectedConceptStr = expectedConcept || '(any)';
+    const allowedConceptsStr = allowedConcepts.length > 0 ? allowedConcepts.join(', ') : '(any)';
 
-    // Enhanced prompt based on ChatGPT recommendations
-    const prompt = `Je bent een strenge beoordelaar van educatieve afbeeldingen. Je MOET de afbeelding echt beoordelen.
+    // v3.6: Enhanced prompt with new JSON contract
+    const prompt = `Je bent een ZEER STRENGE beoordelaar van educatieve afbeeldingen voor Nederlandse middelbare scholieren (14-16 jaar).
 
 VAK: ${subject || 'Onbekend'}
 VRAAG: ${questionText}
 INTENT: ${intent}
 TOPIC KEYWORDS: ${topicKeywordsStr}
 RISK PROFILE: ${riskProfile}
+EXPECTED CONCEPT: ${expectedConceptStr}
+ALLOWED CONCEPTS: ${allowedConceptsStr}
 
-HARD REJECT RULES:
-- Als RISK PROFILE = human_vs_animal: als je GEEN mens ziet (of je twijfelt) → valid=false.
-- Als INTENT = labeled_diagram: als het geen (gelabeld) anatomisch diagram/tekening is → valid=false.
-- Als het vooral tekst/flowchart/poster is en niet de gevraagde structuur toont → valid=false.
-- Als de afbeelding onleesbaar of te klein is om didactisch te gebruiken → valid=false.
+ABSOLUTE HARD REJECT RULES (valid=false):
+1. TAAL: Als er tekst in de afbeelding staat die NIET Nederlands of Engels is → REJECT
+2. CONTENT TYPE: Als de afbeelding een van deze types is → REJECT:
+   - abstract_art (abstracte kunst, gekleurde lijnen/vormen zonder anatomische betekenis)
+   - network_graph (netwerk/graph diagrammen die geen anatomie tonen)
+   - table_wordlist (tabellen met woordenlijsten)
+   - map_transit (metro/bus/trein kaarten)
+   - music_instrument (muziekinstrumenten)
+   - food_drink (eten/drinken zoals soep, gerechten)
+   - scientific_method (wetenschappelijke methode diagrammen)
+   - unrelated_diagram (diagrammen die NIETS met het onderwerp te maken hebben)
+3. CONCEPT MATCH: Als EXPECTED CONCEPT gegeven is en de afbeelding toont iets COMPLEET anders → REJECT
+   Voorbeeld: vraag over skelet maar afbeelding toont borstklier → REJECT
+4. HUMAN VS ANIMAL: Als RISK PROFILE = human_vs_animal en je ziet GEEN mens → REJECT
+5. READABILITY: Als de afbeelding te klein, vaag, of onleesbaar is → REJECT
+6. COMPLEXITY: Als het te complex is voor 14-16 jarigen (bijv. zeer gedetailleerd medisch diagram) → REJECT
 
 WERKWIJZE:
-1) Beschrijf kort wat je ziet (max 2 zinnen). Noem mens/dier en welk lichaamsdeel/onderwerp.
-2) Bepaal image_type: photo / labeled_diagram / diagram / map / text_heavy / unknown.
-3) Geef per topicKeyword: true/false of het zichtbaar/gelabeld is.
-4) Score:
-   - Relevantie (0-40): toont de afbeelding wat de vraag vraagt?
-   - Correctheid (0-30): juiste soort/type? (menselijk voor menselijke anatomie)
-   - Educatieve waarde (0-30): duidelijk en leesbaar?
-   Totaal 0-100.
+1) Beschrijf kort wat je ECHT ziet (max 2 zinnen). Wees specifiek.
+2) Detecteer eventuele tekst en de taal ervan.
+3) Bepaal welk concept de afbeelding werkelijk toont (predicted_concept).
+4) Beoordeel of het concept past bij de vraag.
+5) Score ALLEEN als alle reject rules zijn gepasseerd.
 
 Antwoord als JSON:
 {
   "valid": true/false,
   "score": 0-100,
-  "observations": "wat zie je (1-2 zinnen)",
+  "observations": "wat zie je echt (1-2 zinnen)",
+  "predicted_concept": "wat de afbeelding werkelijk toont (bijv: skeleton, muscle, bone, breast, soup, abstract_art)",
+  "concept_matches": true/false,
   "detected_subject": "human|animal|mixed|unknown",
+  "has_text": true/false,
+  "text_languages": ["nl", "en", "pl", "uk", "lt", "de", "other"],
+  "content_type": "photo|labeled_diagram|diagram|abstract_art|network_graph|table_wordlist|map_transit|food_drink|music_instrument|unknown",
   "image_type": "photo|labeled_diagram|diagram|map|text_heavy|unknown",
   "readability": "good|ok|poor",
-  ${topicCoverageRequest}
+  "complexity_level": "simple|moderate|complex",
+  "age_appropriate": true/false,
   "issues": ["probleem 1", "probleem 2"],
+  "reject_reason": "specifieke reden als valid=false",
   "reason": "korte uitleg in het Nederlands"
 }
 
-Wees STRENG. Bij twijfel: valid=false.
+BELANGRIJK: Wees EXTREEM STRENG. Een foute afbeelding is ERGER dan geen afbeelding.
+Bij ELKE twijfel: valid=false.
 Geef ALLEEN de JSON.`;
 
     const response = await fetch(`${GEMINI_API_URL}/${MODEL}:generateContent?key=${apiKey}`, {
@@ -731,65 +876,111 @@ Geef ALLEEN de JSON.`;
             { text: prompt }
           ]
         }],
-        generationConfig: { temperature: 0.1, maxOutputTokens: 800 }
+        generationConfig: { temperature: 0.1, maxOutputTokens: 1000 }
       })
     });
 
     if (!response.ok) {
       console.log(`    [AI validation error: ${response.status}]`);
-      return { valid: true, score: 50, reason: 'API error, using text-based scoring' };
+      // v3.6: FAIL-CLOSED - don't allow fallback on API errors
+      return { valid: false, score: 0, reason: `API error: ${response.status}`, hardReject: true };
     }
 
     const data = await response.json();
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
     const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) return { valid: true, score: 50, reason: 'Could not parse response' };
+    if (!jsonMatch) {
+      return { valid: false, score: 0, reason: 'Could not parse response', hardReject: true };
+    }
 
     const result = JSON.parse(jsonMatch[0]);
 
-    // Apply hard reject rules based on ChatGPT recommendations
+    // v3.6: Apply ALL hard reject gates
     let hardReject = false;
     let rejectReason = '';
 
-    // Rule 1: human_vs_animal risk profile
-    if (riskProfile === 'human_vs_animal' && result.detected_subject !== 'human') {
+    // GATE 1: Language check - reject non-NL/EN text
+    if (result.has_text && result.text_languages) {
+      const allowedLanguages = ['nl', 'en'];
+      const hasInvalidLanguage = result.text_languages.some(
+        lang => lang && !allowedLanguages.includes(lang.toLowerCase())
+      );
+      if (hasInvalidLanguage) {
+        hardReject = true;
+        rejectReason = `Non-NL/EN text detected: ${result.text_languages.join(', ')}`;
+      }
+    }
+
+    // GATE 2: Content type check - reject banned content types
+    if (!hardReject && result.content_type && REJECT_CONTENT_TYPES.includes(result.content_type)) {
+      hardReject = true;
+      rejectReason = `Banned content type: ${result.content_type}`;
+    }
+
+    // GATE 3: Concept match check (for biologie)
+    if (!hardReject && expectedConcept && result.predicted_concept) {
+      const predictedLower = result.predicted_concept.toLowerCase();
+      const conceptMatches = allowedConcepts.some(c =>
+        predictedLower.includes(c.toLowerCase()) || c.toLowerCase().includes(predictedLower)
+      );
+      if (!conceptMatches && result.concept_matches === false) {
+        hardReject = true;
+        rejectReason = `Concept mismatch: expected ${expectedConcept}, got ${result.predicted_concept}`;
+      }
+    }
+
+    // GATE 4: human_vs_animal risk profile
+    if (!hardReject && riskProfile === 'human_vs_animal' && result.detected_subject !== 'human') {
       hardReject = true;
       rejectReason = `Detected ${result.detected_subject}, not human`;
     }
 
-    // Rule 2: labeled_diagram intent requires diagram type
-    if (intent === 'labeled_diagram' && !['labeled_diagram', 'diagram'].includes(result.image_type)) {
+    // GATE 5: labeled_diagram intent requires diagram type
+    if (!hardReject && intent === 'labeled_diagram' && !['labeled_diagram', 'diagram'].includes(result.image_type)) {
       hardReject = true;
       rejectReason = `Image type ${result.image_type}, not a diagram`;
     }
 
-    // Rule 3: text_heavy is reject for anatomy (but ok for concept_diagram)
-    if (result.image_type === 'text_heavy' && intent !== 'concept_diagram' && subject?.toLowerCase() === 'biologie') {
-      hardReject = true;
-      rejectReason = 'Text-heavy image for anatomy question';
-    }
-
-    // Rule 4: poor readability is reject
-    if (result.readability === 'poor') {
+    // GATE 6: poor readability
+    if (!hardReject && result.readability === 'poor') {
       hardReject = true;
       rejectReason = 'Poor readability';
     }
 
+    // GATE 7: Age appropriateness
+    if (!hardReject && result.age_appropriate === false) {
+      hardReject = true;
+      rejectReason = `Not age-appropriate: ${result.complexity_level} complexity`;
+    }
+
+    // GATE 8: Explicit valid=false from AI
+    if (!hardReject && result.valid === false) {
+      hardReject = true;
+      rejectReason = result.reject_reason || result.reason || 'AI rejected image';
+    }
+
     return {
-      valid: hardReject ? false : (result.valid === true),
-      score: hardReject ? Math.min(result.score || 0, 40) : (result.score || 0),
+      valid: !hardReject && result.valid === true,
+      score: hardReject ? 0 : (result.score || 0),
       reason: hardReject ? rejectReason : (result.reason || ''),
       issues: result.issues || [],
       observations: result.observations || '',
+      predicted_concept: result.predicted_concept || 'unknown',
+      concept_matches: result.concept_matches,
       detected_subject: result.detected_subject || 'unknown',
+      has_text: result.has_text || false,
+      text_languages: result.text_languages || [],
+      content_type: result.content_type || 'unknown',
       image_type: result.image_type || 'unknown',
       readability: result.readability || 'unknown',
-      topic_coverage: result.topic_coverage || {},
+      complexity_level: result.complexity_level || 'unknown',
+      age_appropriate: result.age_appropriate,
       hardReject,
     };
   } catch (err) {
     console.log(`    [AI validation exception: ${err.message}]`);
-    return { valid: true, score: 50, reason: 'Validation error' };
+    // v3.6: FAIL-CLOSED - reject on exceptions too
+    return { valid: false, score: 0, reason: `Validation error: ${err.message}`, hardReject: true };
   }
 }
 
@@ -889,11 +1080,48 @@ async function getWikipediaImage(articleTitle) {
 }
 
 /**
+ * v3.6: Generate a canonical unique key for deduplication
+ * Uses pageid (for Commons) or title-based key to prevent same image via different URLs
+ */
+function getCanonicalKey(candidate) {
+  // For Wikimedia Commons: use pageid if available (most reliable)
+  if (candidate.pageid) {
+    return `commons:${candidate.pageid}`;
+  }
+
+  // For Unsplash/Pexels: use their unique ID
+  if (candidate.source === 'unsplash' && candidate.id) {
+    return `unsplash:${candidate.id}`;
+  }
+  if (candidate.source === 'pexels' && candidate.id) {
+    return `pexels:${candidate.id}`;
+  }
+
+  // Fallback: normalize title to create a canonical key
+  // Remove File: prefix, normalize case, strip extension variants
+  const title = (candidate.title || '')
+    .replace(/^File:/i, '')
+    .toLowerCase()
+    .replace(/\.(jpg|jpeg|png|gif|svg|webp|tiff?)$/i, '')
+    .replace(/[_\s]+/g, '_')
+    .trim();
+
+  if (title) {
+    return `title:${title}`;
+  }
+
+  // Last resort: use imageUrl
+  return `url:${candidate.imageUrl}`;
+}
+
+/**
  * Enhanced deterministic scoring with categories and risk profiles
  */
 function scoreCandidate(candidate, brief, usedImages) {
-  // Hard disqualifications
-  if (usedImages.has(candidate.imageUrl)) return -1000;
+  // v3.6: Use canonical key for deduplication instead of URL
+  const canonicalKey = getCanonicalKey(candidate);
+  candidate._canonicalKey = canonicalKey; // Store for later use
+  if (usedImages.has(canonicalKey)) return -1000;
 
   const validImageMimes = ['image/jpeg', 'image/png', 'image/svg+xml', 'image/gif', 'image/webp', 'image/tiff'];
   if (candidate.mime && !validImageMimes.includes(candidate.mime)) return -1000;
@@ -1310,25 +1538,14 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
       }
     }
 
-    // No candidate passed AI validation
-    // Return the best validated candidate (highest AI score) with warning
-    if (validatedCandidates.length > 0) {
-      validatedCandidates.sort((a, b) => (b.aiValidation?.score || 0) - (a.aiValidation?.score || 0));
-      const bestValidated = validatedCandidates[0];
-      bestValidated._aiValidationFailed = true;
-      bestValidated._bestAIScore = bestValidated.aiValidation?.score || 0;
-      return bestValidated;
-    }
-
-    // Fallback to best text-scored
-    const best = scored.find(c => c.score >= MIN_ACCEPT_SCORE.default);
-    if (best) {
-      best._aiValidationFailed = true;
-      return best;
-    }
+    // v3.6: FAIL-CLOSED - No candidate passed AI validation
+    // DO NOT return a bad image. Return null instead.
+    // This prevents the "soup for collagen" and "breast for skeleton" errors.
+    process.stdout.write(` [FAIL-CLOSED: all ${validatedCandidates.length} candidates rejected]`);
+    return null;
   }
 
-  // Fallback: return best text-scored candidate
+  // v3.6: If AI validation is disabled, still require minimum text score
   const best = scored.find(c => c.score >= MIN_ACCEPT_SCORE.default);
   return best || null;
 }
@@ -1474,7 +1691,9 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
       }
 
       if (bestImage && bestImage.score >= minScore) {
-        usedImages.add(bestImage.imageUrl);
+        // v3.6: Use canonical key for deduplication
+        const canonicalKey = bestImage._canonicalKey || getCanonicalKey(bestImage);
+        usedImages.add(canonicalKey);
         results.push({
           questionId: question.id,
           success: true,

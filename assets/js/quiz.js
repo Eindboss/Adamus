@@ -89,33 +89,12 @@ const QUESTION_SECONDS_MULTIPART = 120;
 const EXAM_DURATION_MINUTES = 60;
 const EXAM_DURATION_SECONDS = EXAM_DURATION_MINUTES * 60; // 3600 seconds
 
-// Points per question for exam mode (total: 90 points)
-const EXAM_POINTS = {
-  // FASE 1 - Instap
-  "g-001": 2, "g-002": 2, "g-003": 1, "g-004": 2, "g-005": 1, "g-006": 1, "g-007": 2, "g-009": 1, "g-010": 3, "g-017": 2, "g-023": 2, "g-022": 2,
-  // FASE 2 - Kern
-  "g-008": 2, "g-011": 2, "g-012": 1, "g-013": 1, "g-014": 2, "g-015": 2, "g-016": 1, "g-018": 2, "g-019": 2, "g-020": 2, "g-021": 1, "g-024": 1, "g-025": 2, "g-026": 2,
-  // FASE 3 - Toepassen
-  "g-027": 1, "g-028": 2, "g-029": 1, "g-030": 3, "g-031": 1, "g-032": 1, "g-033": 2, "g-034": 2, "g-035": 2, "g-036": 2, "g-037": 2, "g-038": 4, "g-039": 2, "g-040": 1,
-  // FASE 4 - Uitdaging
-  "g-041": 2, "g-042": 4, "g-043": 2, "g-044": 4, "g-045": 1, "g-046": 4, "g-047": 1, "g-048": 1, "g-049": 1, "g-050": 3
-};
-const EXAM_MAX_POINTS = Object.values(EXAM_POINTS).reduce((a, b) => a + b, 0); // 90
-
 /**
- * Get points for a question (exam mode only)
- */
-function getQuestionPoints(questionId) {
-  return EXAM_POINTS[questionId] || 1;
-}
-
-/**
- * Award points for correct answer (updates both score and earnedPoints)
+ * Award points for correct answer (updates score counters)
  * @param {string} questionId - The question ID
  * @param {boolean|number} correctAmount - true/false for simple questions, or fraction (0-1) for partial credit
- * @param {number} totalParts - Total number of parts (default 1 for simple questions)
  */
-function awardPoints(questionId, correctAmount, totalParts = 1) {
+function awardPoints(questionId, correctAmount) {
   // Convert boolean to number
   let correctParts, wrongParts;
   if (typeof correctAmount === "boolean") {
@@ -130,10 +109,6 @@ function awardPoints(questionId, correctAmount, totalParts = 1) {
   state.score += correctParts;
   state.wrong += wrongParts;
 
-  if (state.mode === "exam") {
-    state.earnedPoints += getQuestionPoints(questionId) * correctParts;
-  }
-
   // Track wrong questions for retry in practice mode (if any part was wrong)
   if (wrongParts > 0) {
     const q = state.questions[state.currentIndex];
@@ -143,15 +118,8 @@ function awardPoints(questionId, correctAmount, totalParts = 1) {
   }
 }
 
-/**
- * Calculate grade from score (1-10 scale)
- */
-function calculateGrade(earnedPoints, maxPoints) {
-  if (maxPoints <= 0) return 1.0;
-  const ratio = earnedPoints / maxPoints;
-  const grade = 1 + 9 * ratio;
-  return Math.round(grade * 10) / 10; // Round to 1 decimal
-}
+// Grade calculation removed - only showing percentages now
+// The old point-based grade system was broken for quizzes other than the original g-001 exam
 
 // State
 let state = {
@@ -177,9 +145,6 @@ let state = {
   mode: "practice",
   // For retry wrong questions
   wrongQuestions: [],
-  // Points tracking for exam mode
-  earnedPoints: 0,
-  maxPoints: 0,
 };
 
 let subjects = [];
@@ -444,15 +409,7 @@ async function loadQuestions(savedProgress = null) {
       state.score = 0;
       state.wrong = 0;
       state.skipped = 0;
-      state.earnedPoints = 0;
       state.wrongQuestions = [];
-    }
-
-    // Set max points for exam mode
-    if (state.mode === "exam") {
-      state.maxPoints = EXAM_MAX_POINTS;
-    } else {
-      state.maxPoints = state.questions.length; // 1 point per question in practice
     }
 
     state.phase = "question";
@@ -2331,7 +2288,6 @@ function checkMCAnswer(q) {
     correctAnswer: q.answers[q.correctIndex],
     correct: isCorrect,
     explanation: q.explanation,
-    points: state.mode === "exam" ? getQuestionPoints(q.id) : 1,
   });
 
   // Show feedback
@@ -3527,12 +3483,11 @@ function renderSummary() {
   const correctDisplay = formatScore(correct);
   const wrongDisplay = formatScore(wrong);
 
-  // Calculate grade for exam mode
+  // Check if this is exam mode
   const isExam = state.mode === "exam";
-  const grade = isExam ? calculateGrade(state.earnedPoints, state.maxPoints) : null;
 
-  // Show confetti for good scores (70%+ or grade >= 7)
-  if (percentage >= 70 || (grade && grade >= 7)) {
+  // Show confetti for good scores (70%+)
+  if (percentage >= 70) {
     showConfetti(4000);
   }
 
@@ -3561,17 +3516,6 @@ function renderSummary() {
   // Different titles for exam vs practice
   const title = isExam ? "Toets voltooid!" : "Oefenronde voltooid!";
 
-  // Grade display for exam mode
-  const gradeHtml = isExam ? `
-    <div class="summary-grade">
-      <div class="grade-circle ${grade >= 5.5 ? "pass" : "fail"}">
-        <span class="grade-value">${grade.toFixed(1)}</span>
-      </div>
-      <div class="grade-label">Cijfer</div>
-      <div class="grade-points">${state.earnedPoints} / ${state.maxPoints} punten</div>
-    </div>
-  ` : "";
-
   // Retry wrong questions button (practice mode only)
   const hasWrongQuestions = state.wrongQuestions.length > 0;
   const retryButton = !isExam && hasWrongQuestions ? `
@@ -3583,8 +3527,6 @@ function renderSummary() {
   container.innerHTML = `
     <div class="summary-card">
       <h2 class="summary-title">${title}</h2>
-
-      ${gradeHtml}
 
       <div class="summary-score">
         <div class="summary-stat correct">

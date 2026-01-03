@@ -2,62 +2,84 @@
 
 ## Context
 
-Ik bouw een educatieve quiz-applicatie (Adamus) voor middelbare scholieren. Na zeven iteraties heb ik nu een v3.5 systeem getest. Dit document beschrijft de resultaten en vraagt om feedback.
+Ik bouw een educatieve quiz-applicatie (Adamus) voor Nederlandse middelbare scholieren. Na zeven iteraties heb ik nu een v3.5 systeem getest. Dit document beschrijft de resultaten en vraagt om feedback.
 
 **Belangrijk:** Ik gebruik Gemini **Tier 1** (niet gratis tier), dus er is meer ruimte voor extra AI calls als dat nodig is.
 
 ## v3.5 Testresultaten (Biologie Quiz - 50 vragen)
 
 ### Samenvatting
-- **47/48 vragen verwerkt** (98% success rate)
-- **1 vraag gefaald** (q046 - geen geschikte afbeelding gevonden)
-- Veel vragen vonden pas bij kandidaat 4 of 5 een valide afbeelding
+- **47/48 vragen verwerkt** (98% success rate op papier)
+- **Maar: 23 van 50 afbeeldingen kloppen NIET** (46% fout!)
+- De AI valideert te oppervlakkig
 
-### Positieve Resultaten
+### Handmatige Controle (50 vragen gecontroleerd, 23 fouten gevonden)
 
-| Vraag | AI Detectie | Afbeelding | Opmerking |
-|-------|-------------|------------|-----------|
-| q002 | `AI:90✓ human` | Human skeleton (svg template).svg | Correct menselijk skelet |
-| q006 | `AI:95✓ human` | Fontanelle-dt.JPG | Fontanel baby correct |
-| q021 | `AI:90✓ human` | Hand bones numbered.png | Handbotten correct |
-| q043 | `AI:90✓ animal` | Zoo photography - penguin swimming | Correct dier voor pinguïnvraag |
-| q044 | `AI:85✓ animal` | Adelie penguin walking | Correct voor pinguïnvraag |
-| q030 | `AI:90✓ human` | Couple jogging together (Unsplash) | Unsplash integratie werkt |
+| Vraag | Wat AI selecteerde | Wat er mis is | Root cause |
+|-------|-------------------|---------------|------------|
+| **q001** | Borstklier (dissected lactating breast) | Vraag gaat over SKELET functie, niet borstklier | AI zag "human anatomy" maar controleerde niet of het de JUISTE anatomie was |
+| **q003** | Flowchart diagram (Composition of bone) | Ik wil een FOTO, geen diagram | Intent was `labeled_diagram` maar gebruiker wil eigenlijk foto |
+| **q004** | Bot doorsnede met Oekraïense tekst | Tekst is niet Nederlands/Engels | **Geen taalcontrole** |
+| **q007** | Vaag symbool/icoon | Onduidelijk, deel van grotere afbeelding | Te kleine/vage afbeelding goedgekeurd |
+| **q008** | Vage foto van losse botten | Slechte kwaliteit, niet educatief | Lage beeldkwaliteit niet afgewezen |
+| **q010** | **Soep** (collagen bone broth) | Vraag over collageen in botweefsel, kreeg foto van soep | AI faalde alle validaties, fallback op text-score |
+| **q015** | Skelet met **Poolse** labels | Tekst is niet Nederlands/Engels | **Geen taalcontrole** |
+| **q017** | Netwerk/graph diagram | Vraag over gewrichtssmeer, toont een abstract netwerk | **Compleet irrelevant** - AI herkende niet wat het was |
+| **q018** | Knie diagram met **Poolse** labels | Tekst is niet Nederlands/Engels | **Geen taalcontrole** |
+| **q023** | Abstracte kunst (gekleurde touwen) | Vraag over spier samentrekken | **Compleet irrelevant** - AI herkende niet dat dit kunst is, geen anatomie |
+| **q024** | **Litouwse** woordenlijst/tabel | Vraag over antagonistisch spierpaar | **Geen taalcontrole** + geen anatomische afbeelding |
+| **q026** | Complex zenuwstelsel diagram (Eng) | Vraag over onbewuste beweging | **Te complex** voor middelbare scholier |
+| **q028** | Caffeine effecten diagram | Vraag over motorisch geheugen | **Verkeerd onderwerp** - caffeine ≠ motorisch geheugen |
+| **q029** | Abstracte kunst (gekleurde touwen) | Vraag over coördinatie | **Compleet irrelevant** - zelfde foute afbeelding als q023 |
+| **q037** | Onbekend diagram | Vraag over RSI | **Compleet irrelevant** - heeft niets met RSI te maken |
+| **q038** | Onduidelijke foto | Onbekend wat dit voorstelt | **Onherkenbaar** - geen idee wat de foto inhoudt |
+| **q039** | Onduidelijke afbeelding | Onduidelijk verband met lesstof | **Compleet irrelevant** - geen duidelijk verband met de vraag |
+| **q040** | Veel kleine plaatjes in één afbeelding | Te gedetailleerd, onoverzichtelijk | **Te klein/complex** - individuele plaatjes zijn niet leesbaar |
+| **q041** | Persoon op fiets | Vraag over zithouding | **Verkeerd onderwerp** - fietsen ≠ zithouding (op stoel) |
+| **q042** | Diabetes afbeelding | Vraag over RSI | **Verkeerd onderwerp** - diabetes ≠ RSI |
+| **q048** | Kaart/plattegrond met lijnen | Vraag over training onderdelen | **Compleet irrelevant** - lijkt op een spoorwegkaart, niets met sport/training |
+| **q049** | Keyboard/muziekstudio | Vraag over RSI | **Compleet irrelevant** - muziekinstrument heeft niets met RSI te maken |
+| **q050** | Scientific method diagram | Vraag over effect squats op spieren | **Compleet irrelevant** - wetenschappelijke methode ≠ spiertraining |
 
-### Escalation Successen
-De top 3 → top 5 escalation werkt:
-- **q005**: v1-v3 gefaald, **v4 succesvol** (Gray859.png)
-- **q012**: v1-v3 gefaald, **v4 succesvol** (Muscular tissue on a joint)
-- **q014**: v1-v3 gefaald, **v5 succesvol** (Bursae shoulder joint)
-- **q026**: v1-v3 gefaald, **v4 succesvol** (Autonomic Nervous System)
+### Analyse van de Problemen
 
-### Problemen Geïdentificeerd
+#### Probleem 1: AI valideert "menselijk" maar niet "juiste anatomie"
+- q001 vraagt over skeletfuncties → AI zag borstklier → "dit is menselijke anatomie" → GOEDGEKEURD
+- q028: vraag over motorisch geheugen → toont caffeine effecten diagram
+- **De AI moet niet alleen "human vs animal" checken, maar ook of de SPECIFIEKE anatomie/onderwerp past bij de vraag**
 
-#### 1. Rate Limiting (429 errors)
-```
-q048: [AI validation error: 429] [AI validation error: 429] [AI validation error: 429]
-```
-Te veel API calls in korte tijd. Huidige delay is 200ms tussen validaties.
+#### Probleem 2: Geen taalcontrole (GROOT PROBLEEM)
+Meerdere afbeeldingen hebben tekst in vreemde talen:
+- q004: Oekraïens
+- q015: Pools
+- q018: Pools
+- q024: Litouws
+- **Nodig**: Hard reject voor niet-Nederlandse/Engelse tekst in afbeeldingen
 
-#### 2. Fallback op Text-Score bij AI Falen
-Sommige vragen falen ALLE 5 AI validaties maar worden toch geselecteerd op text-score:
+#### Probleem 3: Compleet irrelevante afbeeldingen worden geaccepteerd
+- q017: Netwerk/graph diagram voor vraag over gewrichtssmeer
+- q023 & q029: **Abstracte kunst** (gekleurde touwen) voor spier/coördinatie vragen
+- q024: Een woordenlijst/tabel voor anatomie vraag
+- **De AI herkent niet dat sommige afbeeldingen NIETS met het onderwerp te maken hebben**
 
-| Vraag | AI Resultaten | Geselecteerde Afbeelding | Probleem |
-|-------|---------------|--------------------------|----------|
-| q007 | v1-v5 allemaal 0-40 score | "Ancient Meitei character HOOK" | Volledig verkeerde afbeelding |
-| q008 | v1-v5 allemaal 0-40 score | "Joint with deposits of urate of soda" | Medisch correct maar onduidelijk |
-| q010 | v1-v5 allemaal 0 score | "collagen bone broth.jpg" | Eten in plaats van anatomie |
-| q023 | v1-v4 allemaal 0 score | "AI illustration" | Generieke AI kunst |
+#### Probleem 4: Te complexe afbeeldingen voor doelgroep
+- q026: Complex zenuwstelsel diagram (parasympathicus/sympathicus)
+- **Te complex voor middelbare scholier** - moet simpeler
 
-#### 3. Labeled Diagram Intent Te Streng
-q046 gefaald omdat `intent=labeled_diagram` alles afwees:
-```
-q046: [AI:REJECT:Image type photo, no] [AI:REJECT:Image type photo, no] [AI:REJECT:Image type photo, no]
-```
-De vraag vereiste een gelabeld diagram maar alle kandidaten waren foto's.
+#### Probleem 5: Fallback strategie faalt
+- q010: Alle 5 AI validaties faalden (score 0)
+- Toch werd "collagen bone broth.jpg" (soep!) geselecteerd op text-score
+- **Huidige fallback is gevaarlijk** - beter geen afbeelding dan een foute
 
-#### 4. "Unknown" Detected Subject
-Bij veel diagrammen geeft AI `detected_subject: unknown` omdat het geen persoon/dier is, maar een schematische tekening.
+#### Probleem 6: Vage/kleine afbeeldingen worden goedgekeurd
+- q007: Een klein symbool/icoon werd geselecteerd
+- q008: Vage foto van losse botten zonder context
+- AI moet strenger zijn op beeldkwaliteit en duidelijkheid
+
+#### Probleem 7: Dubbele afbeeldingen
+- q023 en q029 tonen DEZELFDE foute afbeelding (abstracte kunst)
+- q033 en q034 tonen ook DEZELFDE afbeelding
+- **De `usedImages` check werkt niet goed, of dezelfde afbeelding wordt voor verschillende vragen hergebruikt**
 
 ## Huidige Architectuur v3.5
 
@@ -65,6 +87,7 @@ Bij veel diagrammen geeft AI `detected_subject: unknown` omdat het geen persoon/
 ┌─────────────────────────────────────────────────────────────┐
 │                    BATCH AI (12 vragen)                      │
 │  → Genereert zoektermen, categoryHints, riskProfile, etc.   │
+│  → Bepaalt "intent" (photo/diagram/labeled_diagram)         │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -88,12 +111,14 @@ Bij veel diagrammen geeft AI `detected_subject: unknown` omdat het geen persoon/
 │     - observations: wat zie je?                             │
 │     - detected_subject: human/animal/mixed/unknown         │
 │     - image_type: photo/diagram/labeled_diagram/etc.       │
-│     - readability: good/ok/poor                            │
+│     - readability: good|ok|poor                            │
 │     - score: 0-100                                         │
 │  4. Hard reject rules:                                      │
 │     - human_vs_animal risk + niet human → reject           │
 │     - labeled_diagram intent + niet diagram → reject       │
 │     - poor readability → reject                            │
+│  [PROBLEEM: Controleert niet of specifieke anatomie klopt] │
+│  [PROBLEEM: Geen taalcontrole]                             │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -101,24 +126,8 @@ Bij veel diagrammen geeft AI `detected_subject: unknown` omdat het geen persoon/
 │              FALLBACK (als alle AI validaties falen)        │
 │                                                              │
 │  → Selecteer beste kandidaat op text-score                  │
-│  → Markeer met _aiValidationFailed = true                   │
-│  [PROBLEEM: Dit levert soms slechte afbeeldingen op]       │
+│  [PROBLEEM: Levert soep op voor collageen-vraag!]          │
 └─────────────────────────────────────────────────────────────┘
-```
-
-## Intent-Specifieke Thresholds
-
-```javascript
-const MIN_AI_SCORE_BY_INTENT = {
-  labeled_diagram: 75,  // Streng voor anatomische diagrammen
-  diagram: 70,
-  concept_diagram: 65,
-  map: 70,
-  historical_illustration: 70,
-  micrograph: 65,
-  photo: 60,
-  default: 60,
-};
 ```
 
 ## Validation Prompt (huidige versie)
@@ -159,44 +168,53 @@ Antwoord als JSON:
 Wees STRENG. Bij twijfel: valid=false.`;
 ```
 
-## Kosten v3.5 (gemeten)
-
-**Voor 48 vragen:**
-- 4 batch calls (12 vragen per batch)
-- ~150 vision validation calls (gemiddeld 3 per vraag)
-- 10+ escalation calls
-- Rate limiting bij q048 (429 errors)
-
 ## Vragen aan ChatGPT
 
-### 1. Fallback Strategie
+### 1. Specifieke Onderwerp Validatie (KRITIEK)
+Hoe kan ik de AI laten controleren of het SPECIFIEKE onderwerp past bij de vraag?
+- q001: vraag over skelet → borstklier is NIET relevant (maar wel "human")
+- q028: vraag over motorisch geheugen → caffeine diagram is NIET relevant
+- **De AI moet begrijpen WAT de vraag vraagt, niet alleen of het "menselijk" is**
+
+### 2. Taalcontrole (KRITIEK)
+4+ afbeeldingen hadden Pools/Oekraïens/Litouwse tekst. Hoe fix ik dit?
+- Optie A: AI vragen om taal te detecteren in de validation prompt → `"detected_language": "pl|uk|lt|en|nl"`
+- Optie B: Alleen zoeken met `language:en` of `language:nl` filters
+- Optie C: Hard reject als tekst niet NL/EN is
+
+### 3. Irrelevante Afbeeldingen Detecteren (KRITIEK)
+De AI accepteert compleet irrelevante afbeeldingen:
+- Abstracte kunst (gekleurde touwen) voor anatomie vragen
+- Netwerk/graph diagrammen voor gewrichtssmeer
+- Woordenlijsten/tabellen voor anatomie
+- **Hoe leer ik de AI om "dit heeft NIETS te maken met het onderwerp" te herkennen?**
+
+### 4. Complexiteit voor Doelgroep
+q026 toont een zeer complex zenuwstelsel diagram dat te moeilijk is voor middelbare scholieren.
+- Moet ik een "complexity" score toevoegen?
+- Of specifiek vragen of het geschikt is voor 14-16 jarigen?
+
+### 5. Fallback Strategie
 Wat moet ik doen als ALLE 5 kandidaten AI validation falen?
-- Huidige aanpak: fallback op text-score (levert soms slechte afbeeldingen)
-- Optie A: Geen afbeelding selecteren (betere kwaliteit, maar meer gaps)
-- Optie B: Automatisch nieuwe zoekstrategie met andere queries
-- Optie C: Lagere threshold voor "last resort" kandidaat
+- **Huidige aanpak**: fallback op text-score → levert soep op voor collageen vraag
+- **Optie A**: Geen afbeelding selecteren (betere kwaliteit, maar meer gaps)
+- **Optie B**: Markeer als "needs manual review"
+- **Wat is beter: geen afbeelding of een foute afbeelding?**
 
-### 2. Rate Limiting
-Hoe kan ik 429 errors voorkomen?
-- Huidige delay: 200ms tussen validaties
-- Opties: hogere delay, exponential backoff, parallel batching?
+### 6. Dubbele Afbeeldingen
+q023/q029 en q033/q034 tonen dezelfde afbeelding.
+- De `usedImages` check zou dit moeten voorkomen
+- Werkt dit niet correct, of is er een bug?
 
-### 3. Labeled Diagram Intent
-Intent `labeled_diagram` is te streng - alle foto's worden afgewezen. Moet ik:
-- Een soft fallback naar `photo` toevoegen?
-- De intent automatisch downgraden als geen diagram gevonden?
-- De prompt aanpassen om "anatomische foto's met labels" ook te accepteren?
-
-### 4. "Unknown" Detected Subject
-Voor diagrammen is `detected_subject: unknown` vaak correct (het is geen persoon).
-Moet ik de hard reject rule voor `human_vs_animal` aanpassen om `unknown` toe te staan bij diagram intents?
-
-### 5. Algemene Verbeteringen
-Andere suggesties om de 47/48 naar 48/48 te krijgen en de fallback-kwaliteit te verbeteren?
+### 7. Rate Limiting
+Ik krijg 429 errors bij grote quizzes. Huidige delay is 200ms.
+- Wat is een goede delay tussen API calls?
+- Moet ik exponential backoff implementeren?
 
 ## Technische Context
 
 - **Platform:** Browser-based quiz app (HTML/JS)
+- **Doelgroep:** Nederlandse middelbare scholieren
 - **AI:** Gemini 2.0 Flash (**Tier 1** - niet gratis tier)
 - **Vision API:** Gemini inline_data met base64 images
 - **Quiz grootte:** 30-100 vragen
@@ -205,16 +223,12 @@ Andere suggesties om de 47/48 naar 48/48 te krijgen en de fallback-kwaliteit te 
   - Unsplash API (gratis tier, nu actief)
   - Pexels API (gratis tier, nu actief)
 
-## Conclusie v3.5
+## Gewenste Verbeteringen voor v3.6
 
-**Verbeteringen t.o.v. v3.4:**
-- ✅ Geen kattenskeletten meer voor menselijke anatomie
-- ✅ AI detecteert correct human vs animal
-- ✅ Escalation strategie vindt vaak alsnog goede afbeelding
-- ✅ Unsplash/Pexels integratie levert mooie foto's
+1. **Specifieke anatomie matching** - Niet alleen "human" maar ook "skelet" vs "borstklier"
+2. **Taalcontrole** - Reject niet-NL/EN tekst
+3. **Betere fallback** - Liever geen afbeelding dan een foute
+4. **Strengere beeldkwaliteit** - Reject vage/kleine afbeeldingen
+5. **Intent flexibiliteit** - Probeer meerdere intents als eerste faalt
 
-**Nog te verbeteren:**
-- ❌ Fallback bij AI falen levert soms slechte afbeeldingen
-- ❌ Rate limiting bij grote quizzes
-- ❌ labeled_diagram intent is te streng
-- ❌ 1 vraag gefaald (q046)
+Graag feedback op hoe ik deze verbeteringen het beste kan implementeren!
