@@ -46,7 +46,6 @@ import {
   createLineGraph,
   createGlobalGraph,
 } from "./graph.js";
-import { loadQuestionImage } from "./wikimedia.js";
 import {
   initV2QuestionTypes,
   renderFillBlank,
@@ -454,24 +453,10 @@ async function renderQuestion() {
   state.partialScore = 0;
   state.maxPartialScore = 0;
 
-  // Load image: first check for static media URL, then try Wikimedia search
-  if (!q.image) {
-    // Check for static media array with direct URL
-    if (Array.isArray(q.media) && q.media[0]?.type === "image" && q.media[0]?.src) {
-      q.image = q.media[0].src;
-      q.imageAlt = q.media[0].alt || "Afbeelding bij vraag";
-    } else {
-      // Fall back to dynamic Wikimedia search
-      try {
-        const imageUrl = await loadQuestionImage(q);
-        if (imageUrl) {
-          q.image = imageUrl;
-          q.imageAlt = q.media?.alt || "Afbeelding bij vraag";
-        }
-      } catch (err) {
-        console.warn("Failed to load Wikimedia image:", err);
-      }
-    }
+  // Load image from static media array in JSON
+  if (!q.image && Array.isArray(q.media) && q.media[0]?.type === "image" && q.media[0]?.src) {
+    q.image = q.media[0].src;
+    q.imageAlt = q.media[0].alt || "Afbeelding bij vraag";
   }
 
   // Toggle wider layout for questions with images
