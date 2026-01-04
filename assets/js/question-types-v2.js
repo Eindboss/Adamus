@@ -1163,7 +1163,7 @@ export function checkOrderingV2(q) {
 
 /**
  * Render vocab_list question
- * Supports direction: "nl-en", "en-nl", "mixed"
+ * Supports direction: "nl-en", "en-nl", "nl-fr", "fr-nl", "mixed"
  */
 export function renderVocabList(container, q) {
   const instruction = q.instruction || "Vertaal de woorden:";
@@ -1180,6 +1180,12 @@ export function renderVocabList(container, q) {
       placeholder = "Engels...";
     } else if (direction === "en-nl") {
       prompt = item.en;
+      placeholder = "Nederlands...";
+    } else if (direction === "nl-fr") {
+      prompt = item.nl;
+      placeholder = "Frans...";
+    } else if (direction === "fr-nl") {
+      prompt = item.fr;
       placeholder = "Nederlands...";
     } else {
       // mixed
@@ -1261,6 +1267,10 @@ export function checkVocabList(q) {
     if (direction === "nl-en") {
       acceptedAnswers = item.en || [];
     } else if (direction === "en-nl") {
+      acceptedAnswers = item.nl || [];
+    } else if (direction === "nl-fr") {
+      acceptedAnswers = item.fr || [];
+    } else if (direction === "fr-nl") {
       acceptedAnswers = item.nl || [];
     } else {
       // mixed
