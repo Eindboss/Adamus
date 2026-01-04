@@ -483,7 +483,7 @@ textarea.open-input {
    =========================================== */
 .quiz-controls {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-2);
   margin-top: var(--space-5);
   align-items: center;
@@ -492,6 +492,7 @@ textarea.open-input {
 /* Primary action (Controleer) always rightmost and prominent */
 .quiz-controls #checkBtn {
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 .quiz-controls.single {
@@ -507,6 +508,7 @@ textarea.open-input {
   padding: var(--space-2) var(--space-3) !important;
   font-size: 0.8125rem !important;
   min-height: 36px !important;
+  white-space: nowrap;
 }
 
 @media (max-width: 640px) {
@@ -555,20 +557,23 @@ textarea.open-input {
 
 @media (max-width: 480px) {
   .quiz-controls {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-1);
   }
 
-  /* Controleer button spans full width and comes first */
   .quiz-controls #checkBtn {
-    grid-column: 1 / -1;
-    order: -1;
     margin-left: 0;
+    flex: 1 1 100%;
+    order: -1;
   }
 
-  .quiz-controls .btn {
-    font-size: 0.8125rem;
+  .quiz-controls .btn-sm {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: var(--space-1) var(--space-2) !important;
+    font-size: 0.7rem !important;
   }
 
   .question-card {
