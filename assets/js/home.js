@@ -38,10 +38,15 @@ async function init() {
       }
     });
 
+    // Sort subjects alphabetically
+    const sortedSubjects = [...subjectMap.entries()].sort((a, b) =>
+      a[0].localeCompare(b[0], "nl")
+    );
+
     // Render subject cards
     listEl.innerHTML = "";
 
-    subjectMap.forEach((meta, subject) => {
+    sortedSubjects.forEach(([subject, meta]) => {
       const accent = getSubjectAccent(subject);
       const icon = getSubjectIcon(subject);
 
