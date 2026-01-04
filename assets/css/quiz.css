@@ -30,6 +30,37 @@
   padding: var(--space-6);
   box-shadow: var(--shadow-md);
   margin: var(--space-4) 0;
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    box-shadow var(--duration-fast) var(--ease);
+}
+
+/* Card feedback states */
+.question-card.is-correct {
+  border-color: var(--success);
+  box-shadow:
+    var(--shadow-md),
+    0 0 0 3px rgba(46, 125, 82, 0.15);
+}
+
+.question-card.is-wrong {
+  border-color: var(--error);
+  box-shadow:
+    var(--shadow-md),
+    0 0 0 3px rgba(196, 62, 62, 0.15);
+  animation: card-shake 0.2s ease-in-out;
+}
+
+@keyframes card-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .question-card.is-wrong {
+    animation: none;
+  }
 }
 
 .question-title {

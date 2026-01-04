@@ -445,6 +445,9 @@ async function renderQuestion() {
   const container = $("quizArea");
   if (!container) return;
 
+  // Remove previous feedback state from card
+  container.classList.remove("is-correct", "is-wrong");
+
   state.phase = "question";
   state.answered = false;
   state.selectedOption = null;
@@ -3246,6 +3249,13 @@ function showFeedback(isCorrect, explanation, correctAnswer) {
   const feedbackEl = $("feedback");
   if (!feedbackEl) return;
 
+  // Add card feedback state
+  const questionCard = $("quizArea");
+  if (questionCard) {
+    questionCard.classList.remove("is-correct", "is-wrong");
+    questionCard.classList.add(isCorrect ? "is-correct" : "is-wrong");
+  }
+
   const icon = isCorrect ? "✓" : "✗";
   const title = isCorrect ? "Goed!" : "Niet goed";
   const className = isCorrect ? "feedback-success" : "feedback-error";
@@ -3400,11 +3410,23 @@ export function giveUp() {
   let correctAnswer = "";
   if (q.type === "mc") {
     correctAnswer = q.answers[q.correctIndex] || "";
+  } else if (q.type === "grouped_short_text" && q.payload?.items) {
+    // Show all answers for grouped questions
+    correctAnswer = q.payload.items
+      .map(item => `${item.question}: ${item.accepted_answers[0]}`)
+      .join(" | ");
+  } else if (q.type === "translation_open" && q.payload?.model_answer) {
+    correctAnswer = q.payload.model_answer;
   } else if (q.accept && q.accept.length > 0) {
     correctAnswer = q.accept[0];
   } else if (q.correct_answer !== undefined) {
     correctAnswer = String(q.correct_answer);
+  } else if (q.payload?.accepted_answers && q.payload.accepted_answers.length > 0) {
+    correctAnswer = q.payload.accepted_answers[0];
   }
+
+  // Also get explanation from feedback object if present
+  const explanation = q.e || q.explanation || q.feedback?.explanation || "";
 
   state.history.add({
     question: q.q || htmlToText(q.prompt_html) || "Vraag",
@@ -3415,7 +3437,7 @@ export function giveUp() {
   });
 
   // Show the answer
-  showFeedback(false, q.e || q.explanation || "", correctAnswer);
+  showFeedback(false, explanation, correctAnswer);
 
   state.answered = true;
   state.phase = "feedback";
@@ -3754,13 +3776,21 @@ function setupEventListeners() {
   // Global Enter key to check answer or go to next question
   document.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
-      // Don't trigger if typing in an input field (those have their own handlers)
-      const activeEl = document.activeElement;
-      const isInputField = activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA");
-      if (isInputField) return;
-
       // Don't trigger if paused
       if (state.paused) return;
+
+      const activeEl = document.activeElement;
+      const isInputField = activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA");
+
+      // In feedback phase, Enter should always go to next question (even from input fields)
+      if (state.phase === "feedback") {
+        e.preventDefault();
+        nextQuestion();
+        return;
+      }
+
+      // In question phase, don't trigger global handler if in input field (those have their own handlers)
+      if (isInputField) return;
 
       // Get current button state (buttons may be re-rendered)
       const currentCheckBtn = $("checkBtn");
@@ -3772,10 +3802,6 @@ function setupEventListeners() {
           e.preventDefault();
           checkAnswer();
         }
-      } else if (state.phase === "feedback") {
-        // Go to next question
-        e.preventDefault();
-        nextQuestion();
       }
     }
   });
