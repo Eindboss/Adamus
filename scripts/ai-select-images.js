@@ -1,8 +1,33 @@
 /**
- * AI-powered image selection for quiz questions (v3.7)
+ * AI-powered image selection for quiz questions (v3.9)
  *
  * Uses Gemini AI to generate optimal search terms in BATCHES,
  * then fetches images from multiple sources with AI VISION validation.
+ *
+ * v3.9 Improvements (fixing v3.8 query-language-mismatch):
+ * - SOURCE-SPECIFIC QUERIES: Different query format per source
+ *   → Stock sites get normalized queries (no incategory, no negations)
+ *   → Commons gets full queries with incategory/negations
+ * - BASELINE-FIRST: Start with simple index-derived queries
+ *   → High recall before precision
+ * - BREADTH-THEN-PRECISION: Commons searches without negations first
+ *   → Only add negations if too many bad results
+ * - QUERY NORMALIZATION: normalizeForStock() strips Commons syntax
+ *   → Max 3 keywords, no special operators
+ *
+ * v3.8 Improvements (based on ChatGPT analysis + lesson content indexing):
+ * - BEGRIPPEN INDEX: Loads lesson content index for better keyword enrichment
+ *   → NL→EN translations, synonyms, visual concepts from textbook
+ * - KEYWORD ENRICHMENT: Matches question keywords against index
+ *   → Uses curated English terms instead of AI guessing
+ * - MICRO-CONTEXT INJECTION: Per-batch relevant concepts in prompt
+ *   → Only ~20 begrippen per batch, not entire index
+ * - EXPANDED ALLOWED CONCEPTS: Proxy concepts for RSI/ergonomics/training
+ *   → RSI accepts "computer_posture", "typing", "wrist_pain"
+ * - MIN SCORE ADJUSTMENTS: Lower thresholds for difficult concepts
+ *   → RSI/warming-up/spierpijn get -15 minScore
+ * - FALLBACK SEARCHES: Pre-defined searches from visualTypes
+ *   → Deterministic fallback when AI queries fail
  *
  * v3.7 Improvements (based on ChatGPT analysis of rate limiting issues):
  * - TOKEN BUCKET RATE LIMITER: Prevents 429 errors instead of reacting to them
@@ -429,19 +454,192 @@ class VisionCache {
 let visionCache = null;
 
 /**
+ * v3.8: Begrippen Index Loader
+ * Loads lesson content index for keyword enrichment.
+ * Index contains NL→EN translations, synonyms, visual concepts.
+ */
+class BegrippenIndex {
+  constructor(quizPath) {
+    this.index = null;
+    this.indexPath = null;
+    this._loadIndex(quizPath);
+  }
+
+  _loadIndex(quizPath) {
+    // Try to find a begrippen index in the same directory
+    const dir = path.dirname(quizPath);
+    const possibleFiles = fs.readdirSync(dir).filter(f =>
+      f.endsWith('-begrippen-index.json') || f === 'begrippen-index.json'
+    );
+
+    if (possibleFiles.length > 0) {
+      this.indexPath = path.join(dir, possibleFiles[0]);
+      try {
+        this.index = JSON.parse(fs.readFileSync(this.indexPath, 'utf8'));
+        console.log(`Begrippen index: ${Object.keys(this.index.begrippen || {}).length} entries loaded`);
+      } catch (err) {
+        console.log(`  [Begrippen index load error: ${err.message}]`);
+        this.index = null;
+      }
+    } else {
+      console.log('Begrippen index: not found (using defaults)');
+    }
+  }
+
+  /**
+   * Match question text against begrippen index
+   * Returns enriched data: EN terms, visualConcepts, allowedConcepts, etc.
+   */
+  matchQuestion(questionText) {
+    if (!this.index || !this.index.begrippen) {
+      return null;
+    }
+
+    const clean = questionText.replace(/<[^>]+>/g, ' ').toLowerCase();
+    const matches = [];
+
+    for (const [key, begrip] of Object.entries(this.index.begrippen)) {
+      // Match on nl term
+      const nlTerm = begrip.nl?.toLowerCase() || key.toLowerCase();
+      if (clean.includes(nlTerm)) {
+        matches.push({ key, begrip, matchType: 'nl' });
+        continue;
+      }
+
+      // Match on synonyms
+      const synonyms = begrip.synonyms || [];
+      for (const syn of synonyms) {
+        if (clean.includes(syn.toLowerCase())) {
+          matches.push({ key, begrip, matchType: 'synonym' });
+          break;
+        }
+      }
+    }
+
+    if (matches.length === 0) return null;
+
+    // Aggregate all matched begrippen
+    const result = {
+      matchedKeys: matches.map(m => m.key),
+      englishTerms: [],
+      visualConcepts: [],
+      allowedConcepts: [],
+      alternativeSearches: [],
+      preferredIntents: [],
+      minScoreAdjust: 0,
+    };
+
+    for (const { begrip } of matches) {
+      // English terms
+      if (begrip.en) {
+        result.englishTerms.push(...(Array.isArray(begrip.en) ? begrip.en : [begrip.en]));
+      }
+
+      // Visual concepts
+      if (begrip.visualConcepts) {
+        result.visualConcepts.push(...begrip.visualConcepts);
+      }
+
+      // Allowed concepts (expanded for proxy matching)
+      if (begrip.allowedConcepts) {
+        result.allowedConcepts.push(...begrip.allowedConcepts);
+      }
+
+      // Alternative searches (fallback)
+      if (begrip.alternativeSearches) {
+        result.alternativeSearches.push(...begrip.alternativeSearches);
+      }
+
+      // Preferred intents
+      if (begrip.preferredIntents) {
+        result.preferredIntents.push(...begrip.preferredIntents);
+      }
+
+      // Min score adjustment (use most negative)
+      if (begrip.minScoreAdjust && begrip.minScoreAdjust < result.minScoreAdjust) {
+        result.minScoreAdjust = begrip.minScoreAdjust;
+      }
+    }
+
+    // Dedupe arrays
+    result.englishTerms = [...new Set(result.englishTerms)];
+    result.visualConcepts = [...new Set(result.visualConcepts)];
+    result.allowedConcepts = [...new Set(result.allowedConcepts)];
+    result.alternativeSearches = [...new Set(result.alternativeSearches)];
+    result.preferredIntents = [...new Set(result.preferredIntents)];
+
+    return result;
+  }
+
+  /**
+   * Get micro-context for a batch of questions
+   * Returns compact string with only relevant begrippen
+   */
+  getMicroContext(questions) {
+    if (!this.index || !this.index.begrippen) return '';
+
+    const relevantKeys = new Set();
+
+    for (const q of questions) {
+      const text = q.q || q.instruction || q.prompt?.text || q.prompt?.html || '';
+      const match = this.matchQuestion(text);
+      if (match) {
+        match.matchedKeys.forEach(k => relevantKeys.add(k));
+      }
+    }
+
+    if (relevantKeys.size === 0) return '';
+
+    // Build compact micro-context (max 20 begrippen)
+    const begrippen = this.index.begrippen;
+    const lines = [];
+    let count = 0;
+
+    for (const key of relevantKeys) {
+      if (count >= 20) break;
+      const b = begrippen[key];
+      if (!b) continue;
+
+      const en = Array.isArray(b.en) ? b.en.slice(0, 2).join('; ') : b.en;
+      const visual = b.visualConcepts?.slice(0, 2).join(', ') || '';
+      lines.push(`- ${b.nl || key} -> ${en}${visual ? `; visual: ${visual}` : ''}`);
+      count++;
+    }
+
+    return lines.length > 0
+      ? `\nCHAPTER CONCEPTS (use when relevant; prefer these exact English terms):\n${lines.join('\n')}\n`
+      : '';
+  }
+
+  /**
+   * Get fallback search terms from visualTypes
+   */
+  getFallbackSearches(visualConcept) {
+    if (!this.index || !this.index.visualTypes) return [];
+    const vt = this.index.visualTypes[visualConcept];
+    return vt?.searchTerms || [];
+  }
+}
+
+// v3.8: Global begrippen index (initialized per quiz)
+let begrippenIndex = null;
+
+/**
  * v3.6: Extract expected concept and allowed concepts from question text
  * Uses BIOLOGIE_CONCEPT_VOCABULARY to map Dutch keywords to concepts
+ * v3.8: Enhanced with begrippen index lookup for expanded allowedConcepts
  */
 function extractExpectedConcepts(questionText, subject) {
   if (!subject || subject.toLowerCase() !== 'biologie') {
-    return { expectedConcept: null, allowedConcepts: [] };
+    return { expectedConcept: null, allowedConcepts: [], minScoreAdjust: 0 };
   }
 
   const clean = questionText.replace(/<[^>]+>/g, ' ').toLowerCase();
   const allAllowed = new Set();
   let primaryConcept = null;
+  let minScoreAdjust = 0;
 
-  // Check each vocabulary entry
+  // Check each vocabulary entry (original v3.6 logic)
   for (const [keyword, mapping] of Object.entries(BIOLOGIE_CONCEPT_VOCABULARY)) {
     if (clean.includes(keyword)) {
       if (!primaryConcept) {
@@ -451,9 +649,24 @@ function extractExpectedConcepts(questionText, subject) {
     }
   }
 
+  // v3.8: Enrich with begrippen index if available
+  if (begrippenIndex) {
+    const indexMatch = begrippenIndex.matchQuestion(questionText);
+    if (indexMatch) {
+      // Add expanded allowed concepts from index
+      indexMatch.allowedConcepts.forEach(c => allAllowed.add(c));
+
+      // Use most negative minScoreAdjust
+      if (indexMatch.minScoreAdjust < minScoreAdjust) {
+        minScoreAdjust = indexMatch.minScoreAdjust;
+      }
+    }
+  }
+
   return {
     expectedConcept: primaryConcept,
     allowedConcepts: Array.from(allAllowed),
+    minScoreAdjust,
   };
 }
 
@@ -470,6 +683,55 @@ function stripNegations(query) {
  */
 function hasNegations(query) {
   return /-\w+/.test(query);
+}
+
+/**
+ * v3.9: Normalize query for stock photo sites (Unsplash/Pexels)
+ * Stock sites don't understand Commons syntax - strip it all
+ * - Remove incategory:"..."
+ * - Remove negations (-animal, -insect, etc.)
+ * - Remove quotes
+ * - Keep max 3 keywords for better recall
+ */
+function normalizeForStock(query) {
+  let clean = query
+    .replace(/incategory:"[^"]*"/gi, '')  // Remove incategory:
+    .replace(/-\w+/g, '')                  // Remove negations
+    .replace(/"/g, '')                     // Remove quotes
+    .replace(/\s+/g, ' ')                  // Normalize whitespace
+    .trim();
+
+  // Keep max 3 keywords for better recall
+  const words = clean.split(' ').filter(w => w.length > 2);
+  if (words.length > 3) {
+    clean = words.slice(0, 3).join(' ');
+  }
+
+  return clean;
+}
+
+/**
+ * v3.9: Generate baseline queries from begrippen index
+ * These are simple, high-recall queries that work on all sources
+ */
+function generateBaselineQueries(questionText, subject) {
+  const baselines = [];
+
+  if (begrippenIndex) {
+    const match = begrippenIndex.matchQuestion(questionText);
+    if (match) {
+      // Use English terms from index (simple, 1-2 words)
+      for (const term of match.englishTerms.slice(0, 2)) {
+        baselines.push(term);
+      }
+      // Use alternativeSearches (pre-validated to work)
+      for (const alt of match.alternativeSearches.slice(0, 2)) {
+        baselines.push(normalizeForStock(alt));
+      }
+    }
+  }
+
+  return [...new Set(baselines)]; // Dedupe
 }
 
 /**
@@ -631,6 +893,7 @@ async function withRetry(fn, retries = MAX_RETRIES, apiName = 'gemini') {
 /**
  * Generate search briefs for a BATCH of questions using AI
  * Now includes commonsQueries and riskProfile
+ * v3.8: Injects micro-context from begrippen index
  */
 async function generateBatchSearchTerms(questions, subject, chapterContext) {
   const apiKey = process.env.GEMINI_API_KEY;
@@ -642,10 +905,13 @@ async function generateBatchSearchTerms(questions, subject, chapterContext) {
     return `${i + 1}. [${q.id}] ${clean}`;
   }).join('\n');
 
+  // v3.8: Get micro-context from begrippen index (only relevant begrippen for this batch)
+  const microContext = begrippenIndex ? begrippenIndex.getMicroContext(questions) : '';
+
   const prompt = `Je bent een expert in het vinden van educatieve afbeeldingen op Wikimedia Commons voor een Nederlandse quiz-app voor middelbare scholieren.
 
 VAK: ${subject}
-${chapterContext ? `HOOFDSTUK/CONTEXT: ${chapterContext}` : ''}
+${chapterContext ? `HOOFDSTUK/CONTEXT: ${chapterContext}` : ''}${microContext}
 
 VRAGEN:
 ${questionList}
@@ -1605,18 +1871,27 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
   // v3.4: For biologie and aardrijkskunde, prefer photos over diagrams
   const preferPhotos = subjectLower === 'biologie' || subjectLower === 'aardrijkskunde';
 
-  // 1. v3.4: Try Unsplash and Pexels FIRST for photo-preferred subjects
-  if (preferPhotos && queries.length > 0) {
-    const photoQuery = queries[0].replace(/incategory:"[^"]*"/g, '').replace(/-\w+/g, '').trim();
-    if (photoQuery) {
+  // v3.9: Generate baseline queries from begrippen index (high-recall, simple)
+  const baselineQueries = generateBaselineQueries(questionText, subject);
+
+  // v3.9: Normalize AI queries for stock sites (remove incategory, negations)
+  const stockQueries = queries.map(q => normalizeForStock(q)).filter(q => q.length > 2);
+
+  // v3.9: Combined query set - baselines first, then AI-generated
+  const allStockQueries = [...new Set([...baselineQueries, ...stockQueries])].slice(0, 4);
+
+  // 1. v3.9: Try Unsplash and Pexels with NORMALIZED queries (no Commons syntax)
+  if (preferPhotos && allStockQueries.length > 0) {
+    for (const stockQuery of allStockQueries.slice(0, 2)) {
+      if (!stockQuery) continue;
       try {
-        const unsplashResults = await searchUnsplash(photoQuery, 5);
+        const unsplashResults = await searchUnsplash(stockQuery, 5);
         candidates.push(...unsplashResults);
         await sleep(100);
       } catch (err) { /* continue */ }
 
       try {
-        const pexelsResults = await searchPexels(photoQuery, 5);
+        const pexelsResults = await searchPexels(stockQuery, 5);
         candidates.push(...pexelsResults);
         await sleep(100);
       } catch (err) { /* continue */ }
@@ -1632,8 +1907,10 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
     } catch (err) { /* continue */ }
   }
 
-  // 3. Try Commons queries (strict → relaxed → broad)
-  for (const query of queries.slice(0, 3)) {
+  // 3. v3.9: Try Commons with ORIGINAL queries (incategory OK here, but breadth first)
+  // First try without negations for breadth, then with negations for precision
+  const commonsQueriesNoNeg = queries.map(q => stripNegations(q)).filter(q => q.length > 2);
+  for (const query of [...new Set(commonsQueriesNoNeg)].slice(0, 2)) {
     try {
       const results = await searchCommons(query, 10);
       candidates.push(...results);
@@ -1641,18 +1918,15 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
     } catch (err) { /* continue */ }
   }
 
-  // 4. NEGATION LADDER: If queries with negations gave 0 results, retry without negations
-  if (candidates.length === 0) {
-    for (const query of queries.slice(0, 3)) {
+  // 4. v3.9: If still few candidates, try original queries with negations (precision)
+  if (candidates.length < 5) {
+    for (const query of queries.slice(0, 2)) {
       if (hasNegations(query)) {
-        const cleanQuery = stripNegations(query);
-        if (cleanQuery && cleanQuery !== query) {
-          try {
-            const results = await searchCommons(cleanQuery, 10);
-            candidates.push(...results);
-            await sleep(100);
-          } catch (err) { /* continue */ }
-        }
+        try {
+          const results = await searchCommons(query, 10);
+          candidates.push(...results);
+          await sleep(100);
+        } catch (err) { /* continue */ }
       }
     }
   }
@@ -1934,8 +2208,14 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
       const questionText = question.q || question.instruction || question.prompt?.text || question.prompt?.html || '';
       const cleanQuestionText = questionText.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 
+      // v3.8: Get minScoreAdjust from begrippen index for difficult concepts
+      const { minScoreAdjust } = extractExpectedConcepts(cleanQuestionText, subject);
+      let minScore = getMinScore(brief.imageIntent, subject);
+      if (minScoreAdjust < 0) {
+        minScore = Math.max(MIN_ACCEPT_SCORE.default, minScore + minScoreAdjust);
+      }
+
       let bestImage = await findBestImage(brief, usedImages, subject, cleanQuestionText, true);
-      const minScore = getMinScore(brief.imageIntent, subject);
 
       // v3.3: Escalation - try per-question AI if initial search fails
       if ((!bestImage || bestImage.score < minScore) && escalationState.count < MAX_ESCALATIONS_PER_QUIZ) {
@@ -1951,6 +2231,25 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
             _escalated: true,
           };
           bestImage = await findBestImage(mergedBrief, usedImages, subject, cleanQuestionText, true);
+        }
+      }
+
+      // v3.8: Fallback - try alternativeSearches from begrippen index
+      let usedFallback = false;
+      if ((!bestImage || bestImage.score < minScore) && begrippenIndex) {
+        const indexMatch = begrippenIndex.matchQuestion(cleanQuestionText);
+        if (indexMatch && indexMatch.alternativeSearches.length > 0) {
+          process.stdout.write(` [index-fallback]`);
+          const fallbackBrief = {
+            ...brief,
+            commonsQueries: indexMatch.alternativeSearches.slice(0, 3),
+            _fallback: true,
+          };
+          const fallbackImage = await findBestImage(fallbackBrief, usedImages, subject, cleanQuestionText, true);
+          if (fallbackImage && fallbackImage.score >= minScore) {
+            bestImage = fallbackImage;
+            usedFallback = true;
+          }
         }
       }
 
@@ -1971,11 +2270,13 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
           source: bestImage.source || 'commons',
           repaired: brief._repaired || false,
           escalated: brief._escalated || false,
+          fallback: usedFallback,
         });
         const shortTitle = bestImage.title.length > 45 ? bestImage.title.substring(0, 45) + '...' : bestImage.title;
         const repairedTag = brief._repaired ? ' [repaired]' : '';
         const escalatedTag = brief._escalated ? ' [escalated]' : '';
-        console.log(`✓ ${shortTitle} (score: ${bestImage.score}, min: ${minScore})${repairedTag}${escalatedTag}`);
+        const fallbackTag = usedFallback ? ' [fallback]' : '';
+        console.log(`✓ ${shortTitle} (score: ${bestImage.score}, min: ${minScore})${repairedTag}${escalatedTag}${fallbackTag}`);
       } else {
         results.push({
           questionId: question.id,
@@ -2009,6 +2310,9 @@ async function processQuiz(quizPath, applyChanges = false) {
   // v3.7: Initialize vision cache for this quiz
   visionCache = new VisionCache(quizPath);
   const cacheStats = visionCache.getStats();
+
+  // v3.8: Initialize begrippen index for this quiz
+  begrippenIndex = new BegrippenIndex(quizPath);
 
   console.log(`\n${'='.repeat(60)}`);
   console.log(`Processing: ${path.basename(quizPath)}`);

@@ -1,0 +1,844 @@
+{
+  "chapter": "Hoofdstuk 4 - Stevigheid en beweging",
+  "subject": "Biologie",
+  "source": "Nectar 2 vmbo-kgt",
+  "sections": {
+    "4.1": "Het skelet",
+    "4.2": "De bouw van botten",
+    "4.3": "Beenverbindingen",
+    "4.4": "Spieren",
+    "4.5": "Spieren en skelet (De wervelkolom)",
+    "4.6": "Gezond bewegen",
+    "extra_7": "Vorm en functie van botten",
+    "extra_8": "Blessures"
+  },
+  "begrippen": {
+    "skelet": {
+      "nl": "skelet",
+      "en": ["skeleton", "human skeleton"],
+      "synonyms": ["geraamte", "beenderstelsel"],
+      "related": ["botten", "beenderen", "gewrichten"],
+      "visualConcepts": ["skeleton_diagram", "skeleton_labeled", "full_body_skeleton"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["skeleton", "human_skeleton", "bone", "skeletal_system"],
+      "section": "4.1"
+    },
+    "schedel": {
+      "nl": "schedel",
+      "en": ["skull", "cranium"],
+      "parts": ["voorhoofdsbeen", "wandbeen", "slaapbeen", "achterhoofdsbeen", "wiggenbeen", "neusbeen", "jukbeen", "bovenkaak", "onderkaak"],
+      "related": ["hoofd", "hersenen", "fontanel"],
+      "visualConcepts": ["skull_diagram", "skull_labeled", "skull_front_view", "skull_side_view"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["skull", "cranium", "head_bones"],
+      "section": "4.1"
+    },
+    "wervelkolom": {
+      "nl": "wervelkolom",
+      "en": ["spine", "spinal column", "vertebral column", "backbone"],
+      "synonyms": ["ruggengraat"],
+      "parts": ["halswervels", "borstwervels", "lendenwervels", "heiligbeen", "staartbeen"],
+      "related": ["ruggengraat", "wervels", "tussenwervelschijf"],
+      "visualConcepts": ["spine_diagram", "vertebral_column", "spine_curvature", "double_s_curve"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["spine", "vertebral_column", "backbone", "vertebrae"],
+      "section": "4.1"
+    },
+    "halswervels": {
+      "nl": "halswervels",
+      "en": ["cervical vertebrae", "neck vertebrae"],
+      "count": 7,
+      "related": ["wervelkolom", "nek"],
+      "visualConcepts": ["cervical_spine", "neck_vertebrae"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["cervical_vertebrae", "neck_spine", "spine"],
+      "section": "4.1"
+    },
+    "borstwervels": {
+      "nl": "borstwervels",
+      "en": ["thoracic vertebrae"],
+      "count": 12,
+      "related": ["wervelkolom", "ribben", "borstkas"],
+      "visualConcepts": ["thoracic_spine"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["thoracic_vertebrae", "spine"],
+      "section": "4.1"
+    },
+    "lendenwervels": {
+      "nl": "lendenwervels",
+      "en": ["lumbar vertebrae", "lower back vertebrae"],
+      "count": 5,
+      "related": ["wervelkolom", "onderrug"],
+      "visualConcepts": ["lumbar_spine"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["lumbar_vertebrae", "lower_back", "spine"],
+      "section": "4.1"
+    },
+    "heiligbeen": {
+      "nl": "heiligbeen",
+      "en": ["sacrum"],
+      "related": ["wervelkolom", "bekken", "staartbeen"],
+      "visualConcepts": ["sacrum_bone", "pelvis"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["sacrum", "pelvis", "spine"],
+      "section": "4.1"
+    },
+    "staartbeen": {
+      "nl": "staartbeen",
+      "en": ["coccyx", "tailbone"],
+      "related": ["wervelkolom", "heiligbeen"],
+      "visualConcepts": ["coccyx_bone"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["coccyx", "tailbone", "spine"],
+      "section": "4.1"
+    },
+    "schoudergordel": {
+      "nl": "schoudergordel",
+      "en": ["shoulder girdle", "pectoral girdle"],
+      "parts": ["sleutelbeen", "schouderblad"],
+      "related": ["armen", "romp"],
+      "visualConcepts": ["shoulder_girdle_diagram"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["shoulder_girdle", "pectoral_girdle", "clavicle", "scapula"],
+      "section": "4.1"
+    },
+    "bekkengordel": {
+      "nl": "bekkengordel",
+      "en": ["pelvic girdle", "hip girdle"],
+      "parts": ["heupbeen", "darmbeen", "zitbeen", "schaambeen"],
+      "related": ["benen", "bekken"],
+      "visualConcepts": ["pelvic_girdle", "pelvis_diagram"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["pelvic_girdle", "pelvis", "hip_bones"],
+      "section": "4.1"
+    },
+    "opperarmbeen": {
+      "nl": "opperarmbeen",
+      "en": ["humerus", "upper arm bone"],
+      "related": ["arm", "elleboog", "schouder"],
+      "visualConcepts": ["humerus_bone", "arm_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["humerus", "arm_bone", "upper_arm"],
+      "section": "4.1"
+    },
+    "ellepijp": {
+      "nl": "ellepijp",
+      "en": ["ulna"],
+      "related": ["onderarm", "spaakbeen", "elleboog"],
+      "visualConcepts": ["ulna_bone", "forearm_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["ulna", "forearm_bone"],
+      "section": "4.1"
+    },
+    "spaakbeen": {
+      "nl": "spaakbeen",
+      "en": ["radius"],
+      "related": ["onderarm", "ellepijp", "pols"],
+      "visualConcepts": ["radius_bone", "forearm_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["radius", "forearm_bone"],
+      "section": "4.1"
+    },
+    "dijbeen": {
+      "nl": "dijbeen",
+      "en": ["femur", "thigh bone"],
+      "related": ["been", "heup", "knie"],
+      "visualConcepts": ["femur_bone", "leg_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["femur", "thigh_bone", "leg_bone"],
+      "section": "4.1"
+    },
+    "knieschijf": {
+      "nl": "knieschijf",
+      "en": ["patella", "kneecap"],
+      "related": ["knie", "been"],
+      "visualConcepts": ["patella_bone", "knee_anatomy"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["patella", "kneecap", "knee"],
+      "section": "4.1"
+    },
+    "scheenbeen": {
+      "nl": "scheenbeen",
+      "en": ["tibia", "shinbone"],
+      "related": ["onderbeen", "kuitbeen", "enkel"],
+      "visualConcepts": ["tibia_bone", "lower_leg_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["tibia", "shinbone", "leg_bone"],
+      "section": "4.1"
+    },
+    "kuitbeen": {
+      "nl": "kuitbeen",
+      "en": ["fibula"],
+      "related": ["onderbeen", "scheenbeen"],
+      "visualConcepts": ["fibula_bone", "lower_leg_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["fibula", "leg_bone"],
+      "section": "4.1"
+    },
+    "ribben": {
+      "nl": "ribben",
+      "en": ["ribs"],
+      "count": 12,
+      "related": ["borstkas", "borstwervels", "borstbeen"],
+      "visualConcepts": ["rib_cage", "ribs_diagram"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["ribs", "rib_cage", "thorax"],
+      "section": "4.1"
+    },
+    "borstbeen": {
+      "nl": "borstbeen",
+      "en": ["sternum", "breastbone"],
+      "related": ["borstkas", "ribben"],
+      "visualConcepts": ["sternum_bone", "chest_anatomy"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["sternum", "breastbone", "chest"],
+      "section": "4.1"
+    },
+    "handwortelbeentjes": {
+      "nl": "handwortelbeentjes",
+      "en": ["carpal bones", "wrist bones"],
+      "related": ["pols", "hand"],
+      "visualConcepts": ["carpal_bones", "hand_bones", "wrist_xray"],
+      "preferredIntents": ["labeled_diagram", "diagram", "xray"],
+      "allowedConcepts": ["carpal_bones", "wrist", "hand_bones"],
+      "section": "4.1"
+    },
+    "middenhandbeentjes": {
+      "nl": "middenhandbeentjes",
+      "en": ["metacarpal bones"],
+      "related": ["hand", "vingerkootjes"],
+      "visualConcepts": ["metacarpal_bones", "hand_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["metacarpal", "hand_bones"],
+      "section": "4.1"
+    },
+    "vingerkootjes": {
+      "nl": "vingerkootjes",
+      "en": ["phalanges", "finger bones"],
+      "related": ["vingers", "hand"],
+      "visualConcepts": ["finger_bones", "hand_anatomy"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["phalanges", "finger_bones", "hand"],
+      "section": "4.1"
+    },
+    "voetwortelbeentjes": {
+      "nl": "voetwortelbeentjes",
+      "en": ["tarsal bones", "ankle bones"],
+      "related": ["enkel", "voet"],
+      "visualConcepts": ["tarsal_bones", "foot_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["tarsal_bones", "ankle", "foot_bones"],
+      "section": "4.1"
+    },
+    "middenvoetbeentjes": {
+      "nl": "middenvoetbeentjes",
+      "en": ["metatarsal bones"],
+      "related": ["voet", "teenkootjes"],
+      "visualConcepts": ["metatarsal_bones", "foot_bones"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["metatarsal", "foot_bones"],
+      "section": "4.1"
+    },
+    "teenkootjes": {
+      "nl": "teenkootjes",
+      "en": ["toe phalanges", "toe bones"],
+      "related": ["tenen", "voet"],
+      "visualConcepts": ["toe_bones", "foot_anatomy"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["toe_bones", "phalanges", "foot"],
+      "section": "4.1"
+    },
+    "botweefsel": {
+      "nl": "botweefsel",
+      "en": ["bone tissue", "ossite tissue"],
+      "components": ["kalkzouten", "collageen"],
+      "related": ["botten", "beenderen"],
+      "visualConcepts": ["bone_tissue_microscope", "bone_cross_section", "haversian_system"],
+      "preferredIntents": ["micrograph", "diagram", "labeled_diagram"],
+      "allowedConcepts": ["bone_tissue", "bone_structure", "osteon", "haversian"],
+      "alternativeSearches": ["bone tissue microscope", "compact bone structure diagram", "osteon diagram labeled"],
+      "section": "4.2"
+    },
+    "kraakbeenweefsel": {
+      "nl": "kraakbeenweefsel",
+      "en": ["cartilage tissue", "cartilage"],
+      "synonyms": ["kraakbeen"],
+      "related": ["kraakbeen", "gewrichten"],
+      "visualConcepts": ["cartilage_tissue", "cartilage_microscope"],
+      "preferredIntents": ["micrograph", "diagram", "labeled_diagram"],
+      "allowedConcepts": ["cartilage", "cartilage_tissue", "chondrocyte", "connective_tissue"],
+      "alternativeSearches": ["cartilage tissue microscope", "hyaline cartilage diagram", "articular cartilage structure"],
+      "section": "4.2"
+    },
+    "kalkzouten": {
+      "nl": "kalkzouten",
+      "en": ["calcium salts", "calcium", "bone minerals"],
+      "function": "stevigheid",
+      "related": ["botweefsel", "hardheid"],
+      "visualConcepts": ["bone_composition"],
+      "preferredIntents": ["diagram", "infographic"],
+      "allowedConcepts": ["calcium", "bone_mineral", "bone_composition", "bone_structure"],
+      "alternativeSearches": ["bone composition diagram", "calcium in bones", "bone mineral content"],
+      "section": "4.2"
+    },
+    "collageen": {
+      "nl": "collageen",
+      "en": ["collagen", "collagen fibers"],
+      "function": "buigzaamheid",
+      "related": ["botweefsel", "vezels"],
+      "visualConcepts": ["collagen_fibers"],
+      "preferredIntents": ["micrograph", "diagram"],
+      "allowedConcepts": ["collagen", "collagen_fibers", "connective_tissue", "protein_fibers"],
+      "alternativeSearches": ["collagen fibers microscope", "collagen structure diagram", "bone collagen"],
+      "section": "4.2"
+    },
+    "fontanel": {
+      "nl": "fontanel",
+      "en": ["fontanelle", "soft spot", "fontanel"],
+      "types": ["grote fontanel", "kleine fontanel"],
+      "related": ["baby", "schedel", "groei"],
+      "visualConcepts": ["baby_skull", "fontanelle_diagram"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["fontanelle", "soft_spot", "baby_skull", "infant_skull"],
+      "alternativeSearches": ["baby skull fontanelle diagram", "infant skull soft spot", "fontanelle anatomy"],
+      "section": "4.2"
+    },
+    "groeischijf": {
+      "nl": "groeischijf",
+      "en": ["growth plate", "epiphyseal plate"],
+      "related": ["groei", "botten", "leeftijd"],
+      "visualConcepts": ["growth_plate", "bone_growth", "xray_hand_child"],
+      "preferredIntents": ["labeled_diagram", "diagram", "xray"],
+      "allowedConcepts": ["growth_plate", "epiphyseal_plate", "bone_growth", "ossification"],
+      "alternativeSearches": ["growth plate diagram", "epiphyseal plate anatomy", "bone age xray hand"],
+      "section": "4.2"
+    },
+    "osteoporose": {
+      "nl": "osteoporose",
+      "en": ["osteoporosis", "bone loss"],
+      "related": ["botontkalking", "ouderdom", "kalkzouten"],
+      "visualConcepts": ["osteoporosis_bone", "bone_density"],
+      "preferredIntents": ["diagram", "micrograph", "comparison"],
+      "allowedConcepts": ["osteoporosis", "bone_loss", "bone_density", "porous_bone"],
+      "alternativeSearches": ["osteoporosis bone comparison", "healthy vs osteoporotic bone", "bone density diagram"],
+      "section": "4.2"
+    },
+    "achondroplasie": {
+      "nl": "achondroplasie",
+      "en": ["achondroplasia", "dwarfism"],
+      "related": ["dwerggroei", "kraakbeen"],
+      "visualConcepts": ["achondroplasia"],
+      "preferredIntents": ["diagram", "photo"],
+      "allowedConcepts": ["achondroplasia", "dwarfism", "skeletal_dysplasia"],
+      "section": "4.2"
+    },
+    "beenverbinding": {
+      "nl": "beenverbinding",
+      "en": ["bone connection", "joint", "articulation"],
+      "types": ["vergroeid", "naad", "kraakbeen", "gewricht"],
+      "related": ["botten", "gewrichten"],
+      "visualConcepts": ["bone_joint", "joint_types"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["joint", "articulation", "bone_connection"],
+      "section": "4.3"
+    },
+    "gewricht": {
+      "nl": "gewricht",
+      "en": ["joint", "articulation", "synovial joint"],
+      "types": ["kogelgewricht", "scharniergewricht", "rolgewricht", "schuifgewricht"],
+      "parts": ["gewrichtskogel", "gewrichtskom", "gewrichtskapsel", "gewrichtssmeer", "kraakbeenlaagje"],
+      "related": ["beweging", "botten"],
+      "visualConcepts": ["joint_diagram", "joint_anatomy", "synovial_joint"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["joint", "synovial_joint", "articulation", "joint_anatomy"],
+      "section": "4.3"
+    },
+    "kogelgewricht": {
+      "nl": "kogelgewricht",
+      "en": ["ball and socket joint", "ball-and-socket joint"],
+      "examples": ["heupgewricht", "schoudergewricht"],
+      "movement": "draaiende beweging, meerdere richtingen",
+      "related": ["gewricht", "beweging"],
+      "visualConcepts": ["ball_socket_joint", "hip_joint", "shoulder_joint"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["ball_socket_joint", "hip_joint", "shoulder_joint", "multiaxial_joint"],
+      "alternativeSearches": ["ball and socket joint diagram labeled", "hip joint anatomy", "shoulder joint anatomy"],
+      "section": "4.3"
+    },
+    "scharniergewricht": {
+      "nl": "scharniergewricht",
+      "en": ["hinge joint"],
+      "examples": ["ellebooggewricht", "kniegewricht", "vingergewricht"],
+      "movement": "buigen en strekken",
+      "related": ["gewricht", "beweging"],
+      "visualConcepts": ["hinge_joint", "elbow_joint", "knee_joint"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["hinge_joint", "elbow_joint", "knee_joint", "uniaxial_joint"],
+      "alternativeSearches": ["hinge joint diagram labeled", "elbow joint anatomy", "knee joint anatomy"],
+      "section": "4.3"
+    },
+    "gewrichtskapsel": {
+      "nl": "gewrichtskapsel",
+      "en": ["joint capsule", "articular capsule"],
+      "related": ["gewricht", "gewrichtssmeer"],
+      "visualConcepts": ["joint_capsule_diagram"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["joint_capsule", "articular_capsule", "synovial_membrane"],
+      "section": "4.3"
+    },
+    "gewrichtssmeer": {
+      "nl": "gewrichtssmeer",
+      "en": ["synovial fluid", "joint fluid"],
+      "function": "smering",
+      "related": ["gewricht", "gewrichtskapsel"],
+      "visualConcepts": ["synovial_fluid"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["synovial_fluid", "joint_fluid", "joint_lubrication"],
+      "section": "4.3"
+    },
+    "kapselbanden": {
+      "nl": "kapselbanden",
+      "en": ["ligaments", "joint ligaments"],
+      "function": "verbinden botten",
+      "related": ["gewricht", "gewrichtskapsel"],
+      "visualConcepts": ["ligaments_diagram"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["ligaments", "joint_ligaments", "connective_tissue"],
+      "section": "4.3"
+    },
+    "spier": {
+      "nl": "spier",
+      "en": ["muscle"],
+      "types": ["skeletspier", "hartspier", "orgaanspier"],
+      "related": ["beweging", "pees"],
+      "visualConcepts": ["muscle_anatomy", "muscle_diagram", "muscular_system"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["muscle", "muscular_system", "muscle_anatomy"],
+      "section": "4.4"
+    },
+    "skeletspier": {
+      "nl": "skeletspier",
+      "en": ["skeletal muscle", "voluntary muscle", "striated muscle"],
+      "property": "bewust bestuurbaar",
+      "related": ["spieren", "beweging", "botten"],
+      "visualConcepts": ["skeletal_muscle", "muscle_fiber"],
+      "preferredIntents": ["labeled_diagram", "diagram", "micrograph"],
+      "allowedConcepts": ["skeletal_muscle", "striated_muscle", "voluntary_muscle", "muscle_fiber"],
+      "section": "4.4"
+    },
+    "hartspier": {
+      "nl": "hartspier",
+      "en": ["cardiac muscle", "heart muscle"],
+      "property": "onbewust",
+      "related": ["hart", "orgaanspier"],
+      "visualConcepts": ["cardiac_muscle", "heart_anatomy"],
+      "preferredIntents": ["labeled_diagram", "diagram", "micrograph"],
+      "allowedConcepts": ["cardiac_muscle", "heart_muscle", "myocardium"],
+      "section": "4.4"
+    },
+    "orgaanspier": {
+      "nl": "orgaanspier",
+      "en": ["smooth muscle", "involuntary muscle"],
+      "property": "onbewust",
+      "examples": ["darmen", "maag", "bloedvaten"],
+      "related": ["organen"],
+      "visualConcepts": ["smooth_muscle"],
+      "preferredIntents": ["labeled_diagram", "diagram", "micrograph"],
+      "allowedConcepts": ["smooth_muscle", "involuntary_muscle", "visceral_muscle"],
+      "section": "4.4"
+    },
+    "pees": {
+      "nl": "pees",
+      "en": ["tendon"],
+      "function": "verbindt spier aan bot",
+      "related": ["spier", "aanhechtingsplaats"],
+      "visualConcepts": ["tendon_anatomy", "muscle_tendon"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["tendon", "muscle_tendon", "muscle_attachment"],
+      "section": "4.4"
+    },
+    "aanhechtingsplaats": {
+      "nl": "aanhechtingsplaats",
+      "en": ["attachment point", "muscle insertion", "muscle origin"],
+      "related": ["pees", "spier", "bot"],
+      "visualConcepts": ["muscle_attachment"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["muscle_insertion", "muscle_origin", "attachment_point"],
+      "section": "4.4"
+    },
+    "antagonistisch_paar": {
+      "nl": "antagonistisch paar",
+      "en": ["antagonistic pair", "antagonist muscles", "muscle pair"],
+      "synonyms": ["antagonisten"],
+      "examples": ["biceps-triceps", "voorste dijspier-achterste dijspier"],
+      "related": ["spieren", "beweging"],
+      "visualConcepts": ["antagonist_muscles", "biceps_triceps"],
+      "preferredIntents": ["labeled_diagram", "diagram", "animation"],
+      "allowedConcepts": ["antagonist_muscles", "muscle_pair", "biceps_triceps", "flexor_extensor"],
+      "alternativeSearches": ["biceps triceps antagonist diagram", "antagonistic muscle pair animation", "flexor extensor pair"],
+      "section": "4.4"
+    },
+    "biceps": {
+      "nl": "biceps",
+      "en": ["biceps", "biceps brachii"],
+      "synonyms": ["armbuigspier"],
+      "function": "arm buigen",
+      "antagonist": "triceps",
+      "related": ["arm", "spier"],
+      "visualConcepts": ["biceps_muscle", "arm_flexion"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["biceps", "arm_muscle", "flexor", "upper_arm_muscle"],
+      "section": "4.4"
+    },
+    "triceps": {
+      "nl": "triceps",
+      "en": ["triceps", "triceps brachii"],
+      "synonyms": ["armstrekspier"],
+      "function": "arm strekken",
+      "antagonist": "biceps",
+      "related": ["arm", "spier"],
+      "visualConcepts": ["triceps_muscle", "arm_extension"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["triceps", "arm_muscle", "extensor", "upper_arm_muscle"],
+      "section": "4.4"
+    },
+    "buikspier": {
+      "nl": "buikspier",
+      "en": ["abdominal muscle", "abs", "abdominals"],
+      "related": ["buik", "romp"],
+      "visualConcepts": ["abdominal_muscles", "core_muscles"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["abdominal_muscles", "abs", "core_muscles", "rectus_abdominis"],
+      "section": "4.4"
+    },
+    "rugspier": {
+      "nl": "rugspier",
+      "en": ["back muscle", "back muscles"],
+      "types": ["brede rugspier", "trapeziumvormige spier", "ruitvormige spier", "rugstrekker"],
+      "related": ["rug", "wervelkolom"],
+      "visualConcepts": ["back_muscles", "erector_spinae"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["back_muscles", "erector_spinae", "trapezius", "latissimus_dorsi"],
+      "section": "4.4"
+    },
+    "dijspier": {
+      "nl": "dijspier",
+      "en": ["thigh muscle", "quadriceps", "hamstring"],
+      "types": ["voorste dijspier", "achterste dijspier"],
+      "related": ["been", "knie"],
+      "visualConcepts": ["thigh_muscles", "quadriceps", "hamstrings"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["quadriceps", "hamstrings", "thigh_muscles", "leg_muscles"],
+      "section": "4.4"
+    },
+    "kuitspier": {
+      "nl": "kuitspier",
+      "en": ["calf muscle", "gastrocnemius"],
+      "related": ["onderbeen", "achillespees"],
+      "visualConcepts": ["calf_muscle", "lower_leg_muscles"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["calf_muscle", "gastrocnemius", "soleus", "lower_leg_muscles"],
+      "section": "4.4"
+    },
+    "achillespees": {
+      "nl": "achillespees",
+      "en": ["Achilles tendon", "calcaneal tendon"],
+      "related": ["kuitspier", "hiel"],
+      "visualConcepts": ["achilles_tendon", "heel_anatomy"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["achilles_tendon", "calcaneal_tendon", "heel_tendon"],
+      "section": "4.4"
+    },
+    "tussenribspieren": {
+      "nl": "tussenribspieren",
+      "en": ["intercostal muscles"],
+      "function": "ademhaling",
+      "related": ["ribben", "borstkas", "ademhaling"],
+      "visualConcepts": ["intercostal_muscles", "breathing_muscles"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["intercostal_muscles", "breathing_muscles", "respiratory_muscles"],
+      "section": "4.4"
+    },
+    "tussenwervelschijf": {
+      "nl": "tussenwervelschijf",
+      "en": ["intervertebral disc", "spinal disc", "vertebral disc"],
+      "parts": ["geleiachtige kern", "nucleus pulposus", "annulus fibrosus"],
+      "function": "schokdemper",
+      "related": ["wervelkolom", "wervels", "hernia"],
+      "visualConcepts": ["intervertebral_disc", "spinal_disc_diagram", "disc_cross_section"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["intervertebral_disc", "spinal_disc", "disc_anatomy", "vertebral_disc"],
+      "alternativeSearches": ["intervertebral disc anatomy diagram", "spinal disc cross section", "vertebral disc labeled"],
+      "section": "4.5"
+    },
+    "hernia": {
+      "nl": "hernia",
+      "en": ["herniated disc", "slipped disc", "disc herniation"],
+      "related": ["tussenwervelschijf", "rugklachten", "zenuw"],
+      "visualConcepts": ["herniated_disc", "disc_herniation"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["herniated_disc", "slipped_disc", "disc_herniation", "bulging_disc"],
+      "alternativeSearches": ["herniated disc diagram", "slipped disc anatomy", "disc herniation spine"],
+      "section": "4.5"
+    },
+    "lichaamshouding": {
+      "nl": "lichaamshouding",
+      "en": ["posture", "body posture"],
+      "types": ["goede houding", "slechte houding"],
+      "related": ["wervelkolom", "rugspieren", "zithouding"],
+      "visualConcepts": ["posture_diagram", "good_posture", "sitting_posture"],
+      "preferredIntents": ["diagram", "photo", "infographic"],
+      "allowedConcepts": ["posture", "good_posture", "bad_posture", "spine_alignment", "sitting_posture"],
+      "alternativeSearches": ["correct posture diagram", "good vs bad posture", "spine alignment posture"],
+      "section": "4.5"
+    },
+    "dubbele_s_vorm": {
+      "nl": "dubbele-S-vorm",
+      "en": ["double S curve", "spinal curvature", "S-curve spine"],
+      "related": ["wervelkolom", "lichaamshouding"],
+      "visualConcepts": ["spine_curvature", "spinal_curves"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["spinal_curvature", "spine_curves", "lordosis", "kyphosis"],
+      "alternativeSearches": ["spine curvature diagram", "spinal curves anatomy", "spine S curve"],
+      "section": "4.5"
+    },
+    "rsi": {
+      "nl": "RSI",
+      "en": ["RSI", "repetitive strain injury", "repetitive stress injury"],
+      "fullname": "repetitive strain injury",
+      "symptoms": ["pijn", "tintelingen", "vermoeidheid"],
+      "causes": ["herhaalde beweging", "beeldschermgebruik", "telefoon", "gamen"],
+      "related": ["blessure", "ergonomie"],
+      "visualConcepts": ["rsi_ergonomics", "computer_posture", "typing", "wrist_pain"],
+      "preferredIntents": ["photo", "diagram", "infographic"],
+      "allowedConcepts": ["rsi", "repetitive_strain", "ergonomics", "computer_posture", "typing", "wrist_pain", "carpal_tunnel", "office_ergonomics"],
+      "alternativeSearches": ["office ergonomics diagram", "correct sitting posture computer", "typing wrist position", "computer workstation ergonomics"],
+      "minScoreAdjust": -15,
+      "section": "4.6"
+    },
+    "warming_up": {
+      "nl": "warming-up",
+      "en": ["warm-up", "warming up", "warm up exercises"],
+      "synonyms": ["opwarmen"],
+      "related": ["sporten", "training", "blessure_preventie"],
+      "visualConcepts": ["stretching", "warm_up_exercises", "dynamic_stretching"],
+      "preferredIntents": ["photo", "diagram"],
+      "allowedConcepts": ["warm_up", "warming_up", "stretching", "dynamic_stretching", "exercise_preparation", "athletes_stretching"],
+      "alternativeSearches": ["athletes warming up", "dynamic stretching exercises", "warm up before exercise", "sports warm up routine"],
+      "minScoreAdjust": -15,
+      "section": "4.6"
+    },
+    "cooling_down": {
+      "nl": "cooling-down",
+      "en": ["cool-down", "cooling down", "cool down exercises"],
+      "synonyms": ["afkoelen"],
+      "related": ["sporten", "training", "herstel"],
+      "visualConcepts": ["cool_down_exercises", "stretching", "static_stretching"],
+      "preferredIntents": ["photo", "diagram"],
+      "allowedConcepts": ["cool_down", "cooling_down", "stretching", "static_stretching", "recovery", "post_exercise"],
+      "alternativeSearches": ["athletes cooling down", "static stretching exercises", "cool down after exercise", "post workout stretching"],
+      "minScoreAdjust": -15,
+      "section": "4.6"
+    },
+    "rekoefeningen": {
+      "nl": "rekoefeningen",
+      "en": ["stretching exercises", "stretches", "flexibility exercises"],
+      "synonyms": ["stretchen"],
+      "related": ["warming-up", "spieren", "flexibiliteit"],
+      "visualConcepts": ["stretching", "flexibility_exercises"],
+      "preferredIntents": ["photo", "diagram"],
+      "allowedConcepts": ["stretching", "flexibility", "stretching_exercises", "muscle_stretch"],
+      "alternativeSearches": ["stretching exercises diagram", "flexibility exercises", "muscle stretching"],
+      "minScoreAdjust": -10,
+      "section": "4.6"
+    },
+    "conditie": {
+      "nl": "conditie",
+      "en": ["fitness", "physical condition", "endurance", "cardiovascular fitness"],
+      "related": ["training", "sporten", "gezondheid"],
+      "visualConcepts": ["fitness", "exercise", "running", "cardio"],
+      "preferredIntents": ["photo"],
+      "allowedConcepts": ["fitness", "exercise", "running", "cardio", "endurance", "physical_activity"],
+      "alternativeSearches": ["people exercising", "fitness training", "running exercise", "cardio workout"],
+      "minScoreAdjust": -10,
+      "section": "4.6"
+    },
+    "coordinatie": {
+      "nl": "coördinatie",
+      "en": ["coordination", "motor coordination", "body coordination"],
+      "related": ["beweging", "spieren", "training"],
+      "visualConcepts": ["coordination_exercise", "balance"],
+      "preferredIntents": ["photo", "diagram"],
+      "allowedConcepts": ["coordination", "balance", "motor_skills", "agility"],
+      "alternativeSearches": ["balance exercise", "coordination training", "motor skills exercise"],
+      "minScoreAdjust": -10,
+      "section": "4.6"
+    },
+    "spierpijn": {
+      "nl": "spierpijn",
+      "en": ["muscle pain", "muscle soreness", "DOMS", "delayed onset muscle soreness"],
+      "related": ["spieren", "training"],
+      "visualConcepts": ["muscle_soreness", "muscle_pain"],
+      "preferredIntents": ["photo", "diagram", "infographic"],
+      "allowedConcepts": ["muscle_pain", "muscle_soreness", "doms", "muscle_ache", "exercise_recovery"],
+      "alternativeSearches": ["muscle soreness after exercise", "DOMS muscle pain", "sore muscles"],
+      "minScoreAdjust": -15,
+      "section": "4.6"
+    },
+    "blessure": {
+      "nl": "blessure",
+      "en": ["injury", "sports injury"],
+      "types": ["verstuiking", "verrekking", "breuk"],
+      "related": ["sporten", "pijn"],
+      "visualConcepts": ["sports_injury", "bandage", "injury_treatment"],
+      "preferredIntents": ["photo", "diagram"],
+      "allowedConcepts": ["injury", "sports_injury", "sprain", "strain", "bandage", "first_aid"],
+      "alternativeSearches": ["sports injury treatment", "ankle sprain bandage", "sports injury prevention"],
+      "minScoreAdjust": -10,
+      "section": "4.6"
+    },
+    "pinguin": {
+      "nl": "pinguïn",
+      "en": ["penguin", "Adelie penguin"],
+      "synonyms": ["pinguïn", "pinguin"],
+      "species": "Adéliepinguïn",
+      "anatomy": ["kiel", "vleugels", "zwemmen", "lopen"],
+      "related": ["vogel", "skelet", "aanpassing"],
+      "visualConcepts": ["penguin", "penguin_skeleton", "penguin_swimming", "penguin_walking"],
+      "preferredIntents": ["photo", "labeled_diagram"],
+      "allowedConcepts": ["penguin", "adelie_penguin", "penguin_anatomy", "bird", "swimming_bird"],
+      "alternativeSearches": ["penguin swimming underwater", "adelie penguin", "penguin walking"],
+      "section": "extra"
+    },
+    "kiel": {
+      "nl": "kiel",
+      "en": ["keel", "carina", "breastbone keel"],
+      "function": "aanhechtingsplaats borstspieren",
+      "related": ["vogel", "borstbeen", "vliegen", "pinguïn"],
+      "visualConcepts": ["bird_keel", "bird_skeleton", "avian_skeleton"],
+      "preferredIntents": ["labeled_diagram", "diagram"],
+      "allowedConcepts": ["keel", "carina", "bird_skeleton", "avian_anatomy", "bird_sternum", "penguin_skeleton"],
+      "alternativeSearches": ["bird skeleton keel diagram", "avian sternum carina", "bird breastbone anatomy", "penguin skeleton labeled"],
+      "minScoreAdjust": -10,
+      "section": "extra"
+    },
+    "dolfijn": {
+      "nl": "dolfijn",
+      "en": ["dolphin", "whale"],
+      "synonyms": ["bultrug", "walvis"],
+      "anatomy": ["bultrug", "voorpoten", "zwemmen"],
+      "related": ["zoogdier", "skelet", "aanpassing"],
+      "visualConcepts": ["dolphin_skeleton", "whale_skeleton", "cetacean_anatomy"],
+      "preferredIntents": ["labeled_diagram", "diagram", "photo"],
+      "allowedConcepts": ["dolphin", "whale", "dolphin_skeleton", "cetacean", "marine_mammal"],
+      "alternativeSearches": ["dolphin skeleton anatomy", "whale skeleton diagram", "cetacean flipper anatomy"],
+      "section": "extra"
+    },
+    "fysiotherapeut": {
+      "nl": "fysiotherapeut",
+      "en": ["physiotherapist", "physical therapist"],
+      "related": ["blessure", "behandeling", "oefeningen"],
+      "visualConcepts": ["physiotherapy", "physical_therapy"],
+      "preferredIntents": ["photo"],
+      "allowedConcepts": ["physiotherapy", "physical_therapy", "rehabilitation", "therapist"],
+      "alternativeSearches": ["physiotherapy session", "physical therapy treatment", "rehabilitation exercises"],
+      "section": "extra"
+    },
+    "hypermobiliteit": {
+      "nl": "hypermobiliteit",
+      "en": ["hypermobility", "joint hypermobility", "double jointed"],
+      "related": ["gewrichten", "flexibiliteit", "blessure"],
+      "visualConcepts": ["hypermobile_joint", "flexibility"],
+      "preferredIntents": ["photo", "diagram"],
+      "allowedConcepts": ["hypermobility", "flexible_joints", "double_jointed", "joint_laxity"],
+      "section": "extra"
+    },
+    "rontgenfoto": {
+      "nl": "röntgenfoto",
+      "en": ["X-ray", "radiograph", "x-ray image"],
+      "synonyms": ["röntgen"],
+      "related": ["botten", "diagnose", "breuk"],
+      "visualConcepts": ["xray", "xray_hand", "xray_skeleton"],
+      "preferredIntents": ["xray", "photo"],
+      "allowedConcepts": ["xray", "radiograph", "bone_xray", "medical_imaging"],
+      "section": "general"
+    }
+  },
+  "visualTypes": {
+    "skeleton_diagram": {
+      "description": "Gelabeld skelet diagram",
+      "searchTerms": ["human skeleton diagram labeled", "skeleton anatomy chart", "full body skeleton labeled"]
+    },
+    "skull_diagram": {
+      "description": "Schedel met labels",
+      "searchTerms": ["human skull anatomy labeled", "skull bones diagram", "cranium anatomy"]
+    },
+    "spine_diagram": {
+      "description": "Wervelkolom diagram",
+      "searchTerms": ["spine anatomy diagram", "vertebral column labeled", "spinal column anatomy"]
+    },
+    "joint_diagram": {
+      "description": "Gewricht doorsnede",
+      "searchTerms": ["joint anatomy diagram", "synovial joint cross section", "joint structure labeled"]
+    },
+    "ball_socket_joint": {
+      "description": "Kogelgewricht",
+      "searchTerms": ["ball and socket joint diagram", "hip joint anatomy", "shoulder joint diagram"]
+    },
+    "hinge_joint": {
+      "description": "Scharniergewricht",
+      "searchTerms": ["hinge joint diagram", "elbow joint anatomy", "knee joint diagram"]
+    },
+    "muscle_diagram": {
+      "description": "Spierstelsel",
+      "searchTerms": ["muscular system diagram", "human muscles labeled", "muscle anatomy chart"]
+    },
+    "antagonist_muscles": {
+      "description": "Antagonistisch spierpaar",
+      "searchTerms": ["biceps triceps antagonist", "antagonist muscle pair diagram", "flexor extensor pair"]
+    },
+    "intervertebral_disc": {
+      "description": "Tussenwervelschijf",
+      "searchTerms": ["intervertebral disc diagram", "spinal disc anatomy", "vertebral disc cross section"]
+    },
+    "posture_diagram": {
+      "description": "Lichaamshouding",
+      "searchTerms": ["good posture diagram", "sitting posture ergonomics", "correct posture illustration"]
+    },
+    "xray": {
+      "description": "Röntgenfoto",
+      "searchTerms": ["X-ray skeleton", "bone xray", "radiograph anatomy"]
+    },
+    "penguin": {
+      "description": "Pinguïn",
+      "searchTerms": ["penguin", "adelie penguin", "penguin swimming", "penguin walking"]
+    },
+    "ergonomics": {
+      "description": "Ergonomie werkplek",
+      "searchTerms": ["office ergonomics diagram", "computer workstation setup", "ergonomic sitting posture"]
+    },
+    "stretching": {
+      "description": "Rekoefeningen",
+      "searchTerms": ["stretching exercises", "dynamic stretching", "static stretching", "athletes stretching"]
+    },
+    "exercise": {
+      "description": "Lichaamsbeweging",
+      "searchTerms": ["people exercising", "fitness training", "sports activity", "physical exercise"]
+    },
+    "bone_tissue": {
+      "description": "Botweefsel microscopisch",
+      "searchTerms": ["bone tissue microscope", "compact bone structure", "osteon diagram", "haversian system"]
+    },
+    "cartilage": {
+      "description": "Kraakbeenweefsel",
+      "searchTerms": ["cartilage tissue microscope", "hyaline cartilage", "articular cartilage diagram"]
+    }
+  },
+  "questionKeywordMapping": {
+    "skelet_functies": ["stevigheid", "beweging", "bescherming", "vorm"],
+    "skelet_delen": ["hoofd", "romp", "ledematen", "armen", "benen"],
+    "gewricht_types": ["kogelgewricht", "scharniergewricht", "rolgewricht", "schuifgewricht"],
+    "spier_types": ["skeletspier", "hartspier", "orgaanspier"],
+    "wervelkolom_delen": ["halswervels", "borstwervels", "lendenwervels", "heiligbeen", "staartbeen"]
+  }
+}

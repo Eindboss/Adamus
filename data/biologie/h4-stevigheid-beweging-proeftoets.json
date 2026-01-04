@@ -20,15 +20,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Human_skeleton_front_numbered.svg/960px-Human_skeleton_front_numbered.svg.png",
-          "alt": "Human skeleton front numbered.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/960px-Human_skeleton_front_en.svg.png",
+          "alt": "Human skeleton front en.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Human skeleton diagrams\" functions -animal -insect -fish",
-          "_imageIntent": "labeled_diagram",
+          "_searchTerm": "human skeleton functions diagram -animal",
+          "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 340,
+          "_score": 210,
           "_escalated": false
         }
       ],
@@ -46,22 +46,22 @@
       ],
       "c": 0,
       "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Human_skeleton_back_en.svg/960px-Human_skeleton_back_en.svg.png",
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Axial_skeleton_diagram.svg/960px-Axial_skeleton_diagram.svg.png",
-          "alt": "Axial skeleton diagram.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Axial_skeleton_diagram_blank.svg/960px-Axial_skeleton_diagram_blank.svg.png",
+          "alt": "Axial skeleton diagram blank.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Human skeleton diagrams\" trunk -animal -insect -fish",
+          "_searchTerm": "human skeleton trunk bones labeled -animal",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 230,
+          "_score": 227,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Human_skeleton_back_en.svg/960px-Human_skeleton_back_en.svg.png"
+      ]
     },
     {
       "id": "q003",
@@ -89,22 +89,22 @@
       ],
       "c": 1,
       "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bone_cross-section_uk.svg/960px-Bone_cross-section_uk.svg.png",
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Bones_of_the_hand_and_wrist_used_for_bone_age_estimation_in_the_Tanner-Whitehouse_method.svg/960px-Bones_of_the_hand_and_wrist_used_for_bone_age_estimation_in_the_Tanner-Whitehouse_method.svg.png",
-          "alt": "Bones of the hand and wrist used for bone age estimation in the Tanner-Whitehouse method.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/X-ray_of_ossification_centers.svg/960px-X-ray_of_ossification_centers.svg.png",
+          "alt": "X-ray of ossification centers.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "bone development diagram child adult -animal -insect -fish",
+          "_searchTerm": "bone development children adults diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 160,
+          "_score": 177,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bone_cross-section_uk.svg/960px-Bone_cross-section_uk.svg.png"
+      ]
     },
     {
       "id": "q005",
@@ -118,7 +118,22 @@
       ],
       "c": 1,
       "e": "Kraakbeen zit bij volwassenen o.a. in oorschelp en neus, en ook tussen ribben en borstbeen en in tussenwervelschijven.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/716_Intervertebral_Disk.svg/960px-716_Intervertebral_Disk.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/716_Intervertebral_Disk.svg/960px-716_Intervertebral_Disk.svg.png",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Gray852.png",
+          "alt": "Gray852.png",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.7",
+          "_imageSource": "commons",
+          "_searchTerm": "human cartilage locations labeled -animal",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "human_vs_animal",
+          "_score": 222,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q006",
@@ -135,15 +150,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/1/15/Trigonocephaly.png",
-          "alt": "Trigonocephaly.png",
-          "caption": "Bron: Wikimedia Commons",
+          "src": "https://images.unsplash.com/photo-1714939722515-17e107ae6ac1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHxjcmFuaXVtfGVufDB8MHx8fDE3Njc1MjkxODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "alt": "Title: Frontal view of the human skull Creator: Wetselaar-Whittaker, J Date: 1950/1990 Providing institution: Universitaire Bibliotheken Leiden Aggregator: Dutch Collections for Europe Providing Country: Netherlands Public Domain Frontal view of the human skull by Wetselaar-Whittaker, J - Leiden University Libraries, Netherlands - Public Domain. https://www.europeana.eu/item/744/item_3462144",
+          "caption": "Bron: Unsplash",
           "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" skull fontanelle -animal -insect -fish",
+          "_imageSource": "unsplash",
+          "_searchTerm": "baby skull fontanelle closure diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 180,
+          "_score": 107,
           "_escalated": false
         }
       ],
@@ -164,15 +179,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Frontal_suture.png",
-          "alt": "Frontal suture.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/904_Fibrous_Joints.jpg/960px-904_Fibrous_Joints.jpg",
+          "alt": "904 Fibrous Joints.jpg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" fibrous joint -animal -insect -fish",
-          "_imageIntent": "labeled_diagram",
+          "_searchTerm": "immovable bone joint diagram",
+          "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 215,
+          "_score": 187,
           "_escalated": false
         }
       ]
@@ -192,15 +207,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/716_Intervertebral_Disk_cs.svg/960px-716_Intervertebral_Disk_cs.svg.png",
-          "alt": "716 Intervertebral Disk cs.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Sacroiliac_joint.svg/960px-Sacroiliac_joint.svg.png",
+          "alt": "Sacroiliac joint.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" cartilaginous joint -animal -insect -fish",
-          "_imageIntent": "labeled_diagram",
+          "_searchTerm": "slightly movable bone joint diagram",
+          "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 195,
+          "_score": 225,
           "_escalated": false
         }
       ]
@@ -220,15 +235,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Elemgasem_%28caudal_vertebra_histology%29.png/960px-Elemgasem_%28caudal_vertebra_histology%29.png",
-          "alt": "Elemgasem (caudal vertebra histology).png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Bone_tissue_under_the_microscope.jpg/960px-Bone_tissue_under_the_microscope.jpg",
+          "alt": "Bone tissue under the microscope.jpg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "bone cell histology micrograph -animal -insect -fish",
+          "_searchTerm": "bone cells osteocytes microscope",
           "_imageIntent": "micrograph",
           "_riskProfile": "none",
-          "_score": 182,
+          "_score": 222,
           "_escalated": false
         }
       ],
@@ -246,6 +261,7 @@
       ],
       "c": 1,
       "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Types_of_tissues_in_bone.png",
       "media": [
         {
           "type": "image",
@@ -254,36 +270,35 @@
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "bone collagen structure diagram -animal -insect -fish",
+          "_searchTerm": "collagen bone tissue diagram",
           "_imageIntent": "diagram",
           "_riskProfile": "none",
-          "_score": 205,
+          "_score": 175,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Types_of_tissues_in_bone.png"
+      ]
     },
     {
       "id": "q011",
       "type": "info_card",
       "title": "Kernbegrippen gewrichten",
       "content_html": "<ul><li><strong>Gewricht</strong>: verbinding tussen botten met veel beweging.</li><li><strong>Kraakbeenlaagjes</strong>: verminderen slijtage en maken beweging soepeler.</li><li><strong>Gewrichtskapsel</strong>: houdt botten op hun plaats en maakt gewrichtssmeer.</li><li><strong>Kapselbanden</strong>: verstevigen het gewricht.</li></ul>",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Temporomandibular_joint_number.svg/960px-Temporomandibular_joint_number.svg.png",
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Human_arm_bones_diagram_zh.svg/960px-Human_arm_bones_diagram_zh.svg.png",
-          "alt": "Human arm bones diagram zh.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Human_arm_bones_diagram_PL.svg/960px-Human_arm_bones_diagram_PL.svg.png",
+          "alt": "Human arm bones diagram PL.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Human skeleton diagrams\" bone joint -animal",
-          "_imageIntent": "labeled_diagram",
+          "_searchTerm": "incategory:\"Human skeleton diagrams\" joint -animal -insect -fish",
+          "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 180,
+          "_score": 190,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Temporomandibular_joint_number.svg/960px-Temporomandibular_joint_number.svg.png"
+      ]
     },
     {
       "id": "q012",
@@ -300,15 +315,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Temporomandibular_joint_number.svg/960px-Temporomandibular_joint_number.svg.png",
-          "alt": "Temporomandibular joint number.svg",
-          "caption": "Bron: Wikimedia Commons",
+          "src": "https://images.unsplash.com/photo-1715531786074-e21c1d3b4fc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHw1fHxjYXJ0aWxhZ2UlMjB0aXNzdWV8ZW58MHwwfHx8MTc2NzUyOTE3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+          "alt": "Title: Muscular tissue on a joint Creator: Date: 1950/1990 Providing institution: Universitaire Bibliotheken Leiden Aggregator: Dutch Collections for Europe Providing Country: Netherlands Public Domain Muscular tissue on a joint - Leiden University Libraries, Netherlands - Public Domain. https://www.europeana.eu/item/744/item_3461913",
+          "caption": "Bron: Unsplash",
           "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" cartilage joint -animal",
-          "_imageIntent": "labeled_diagram",
+          "_imageSource": "unsplash",
+          "_searchTerm": "cartilage tissue microscope human -animal",
+          "_imageIntent": "micrograph",
           "_riskProfile": "human_vs_animal",
-          "_score": 220,
+          "_score": 122,
           "_escalated": false
         }
       ],
@@ -326,6 +341,7 @@
       ],
       "c": 1,
       "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Shoulder_Capsule.png",
       "media": [
         {
           "type": "image",
@@ -334,14 +350,13 @@
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" joint capsule -animal",
+          "_searchTerm": "incategory:\"Human skeleton diagrams\" joint capsule diagram -animal -insect -fish",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 220,
+          "_score": 222,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Shoulder_Capsule.png"
+      ]
     },
     {
       "id": "q014",
@@ -355,6 +370,7 @@
       ],
       "c": 2,
       "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ball_and_Socket_Joint_%28Hip_joint%29.svg/960px-Ball_and_Socket_Joint_%28Hip_joint%29.svg.png",
       "media": [
         {
           "type": "image",
@@ -363,14 +379,13 @@
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" ball and socket joint -animal",
+          "_searchTerm": "incategory:\"Human skeleton diagrams\" ball and socket joint -animal -insect -fish",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 250,
+          "_score": 230,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ball_and_Socket_Joint_%28Hip_joint%29.svg/960px-Ball_and_Socket_Joint_%28Hip_joint%29.svg.png"
+      ]
     },
     {
       "id": "q015",
@@ -387,15 +402,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/The_human_body._A_beginner%27s_text-book_of_anatomy%2C_physiology_and_hygiene_%281884%29_%2814780769874%29.jpg/960px-The_human_body._A_beginner%27s_text-book_of_anatomy%2C_physiology_and_hygiene_%281884%29_%2814780769874%29.jpg",
-          "alt": "The human body. A beginner's text-book of anatomy, physiology and hygiene (1884) (14780769874).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Knee_diagram_pl.svg/960px-Knee_diagram_pl.svg.png",
+          "alt": "Knee diagram pl.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Human skeleton diagrams\" hinge joint movement -animal",
+          "_searchTerm": "human hinge joint diagram -animal -insect -fish",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 155,
+          "_score": 222,
           "_escalated": false
         }
       ]
@@ -415,15 +430,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/909_Types_of_Synovial_Joints.jpg/960px-909_Types_of_Synovial_Joints.jpg",
-          "alt": "909 Types of Synovial Joints.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Human_skeleton_front_numbered.png",
+          "alt": "Human skeleton front numbered.png",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Human skeleton diagrams\" joint types labeled -animal",
-          "_imageIntent": "labeled_diagram",
+          "_searchTerm": "human joint diagram -animal -insect -fish",
+          "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 217,
+          "_score": 267,
           "_escalated": false
         }
       ]
@@ -440,6 +455,7 @@
       ],
       "c": 1,
       "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Joint_with_severe_osteoathritis.png",
       "media": [
         {
           "type": "image",
@@ -448,14 +464,13 @@
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "synovial fluid joint diagram",
+          "_searchTerm": "synovial fluid diagram human -animal -insect -fish",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 202,
+          "_score": 162,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Joint_with_severe_osteoathritis.png"
+      ]
     },
     {
       "id": "q018",
@@ -469,22 +484,22 @@
       ],
       "c": 0,
       "e": "Kapselbanden zijn extra versteviging om het gewricht.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Ankle_es.svg/960px-Ankle_es.svg.png",
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/9/96/Shoulder_joint_anatomy_quiz.jpg",
-          "alt": "Shoulder joint anatomy quiz.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Knee_diagram_tr.svg/960px-Knee_diagram_tr.svg.png",
+          "alt": "Knee diagram tr.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" ligament joint -animal",
+          "_searchTerm": "human joint ligament diagram -animal -insect -fish",
           "_imageIntent": "labeled_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 230,
+          "_score": 185,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Ankle_es.svg/960px-Ankle_es.svg.png"
+      ]
     },
     {
       "id": "q019",
@@ -501,15 +516,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/0/06/ACDF_oblique_numbered.png",
-          "alt": "ACDF oblique numbered.png",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/716_Intervertebral_Disk.svg/960px-716_Intervertebral_Disk.svg.png",
+          "alt": "716 Intervertebral Disk.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" intervertebral disc -animal",
-          "_imageIntent": "labeled_diagram",
+          "_searchTerm": "human intervertebral disc diagram -animal -insect -fish",
+          "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 162,
+          "_score": 220,
           "_escalated": false
         }
       ]
@@ -534,10 +549,10 @@
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "human spine curvature diagram",
+          "_searchTerm": "human spine curvature diagram -animal -insect -fish",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 210,
+          "_score": 200,
           "_escalated": false
         }
       ]
@@ -554,22 +569,22 @@
       ],
       "c": 1,
       "e": "Spieren zitten met pezen aan botten vast.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Atlas_and_text-book_of_human_anatomy_%281914-%29_%2820337038512%29.jpg/960px-Atlas_and_text-book_of_human_anatomy_%281914-%29_%2820337038512%29.jpg",
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Skeletal_muscle_and_fiber.jpg/960px-Skeletal_muscle_and_fiber.jpg",
-          "alt": "Skeletal muscle and fiber.jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wrist_and_hand_deeper_palmar_dissection-numbers.svg/960px-Wrist_and_hand_deeper_palmar_dissection-numbers.svg.png",
+          "alt": "Wrist and hand deeper palmar dissection-numbers.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "incategory:\"Gray's Anatomy plates\" muscle tendon bone human -animal -insect -fish",
-          "_imageIntent": "labeled_diagram",
+          "_searchTerm": "tendon muscle bone diagram human -animal",
+          "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
           "_score": 230,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Atlas_and_text-book_of_human_anatomy_%281914-%29_%2820337038512%29.jpg/960px-Atlas_and_text-book_of_human_anatomy_%281914-%29_%2820337038512%29.jpg"
+      ]
     },
     {
       "id": "q022",
@@ -582,22 +597,7 @@
         "kraakbeen vormt"
       ],
       "c": 1,
-      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe.",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Animation_biceps.gif",
-          "alt": "Animation biceps.gif",
-          "caption": "Bron: Wikimedia Commons",
-          "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "muscle contraction diagram human -animal -insect -fish",
-          "_imageIntent": "diagram",
-          "_riskProfile": "human_vs_animal",
-          "_score": 142,
-          "_escalated": false
-        }
-      ]
+      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe."
     },
     {
       "id": "q023",
@@ -611,21 +611,6 @@
       ],
       "c": 1,
       "e": "Bij samentrekking wordt de spier korter en dikker.",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/1015_Types_of_Contraction_new.jpg",
-          "alt": "1015 Types of Contraction new.jpg",
-          "caption": "Bron: Wikimedia Commons",
-          "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "muscle sarcomere contraction diagram human -animal -insect -fish",
-          "_imageIntent": "diagram",
-          "_riskProfile": "human_vs_animal",
-          "_score": 117,
-          "_escalated": false
-        }
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Animation_biceps.gif"
     },
     {
@@ -640,21 +625,6 @@
       ],
       "c": 1,
       "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken.",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/3/30/Animation_triceps_biceps.gif",
-          "alt": "Animation triceps biceps.gif",
-          "caption": "Bron: Wikimedia Commons",
-          "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "antagonistic muscle pair diagram human -animal -insect -fish",
-          "_imageIntent": "diagram",
-          "_riskProfile": "human_vs_animal",
-          "_score": 87,
-          "_escalated": false
-        }
-      ],
       "image": "https://images.unsplash.com/photo-1615505368758-8a3af2a4c379?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHxhbnRhZ29uaXN0aWMlMjBtdXNjbGUlMjBwYWlyJTIwZGlhZ3JhbSUyMGh1bWFufGVufDB8MHx8fDE3Njc1MTY1NjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
@@ -669,21 +639,6 @@
       ],
       "c": 1,
       "e": "De biceps is een armbuigspier. De triceps is een armstrekspier.",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Biceps_femoris_muscle_long_head.PNG",
-          "alt": "Biceps femoris muscle long head.PNG",
-          "caption": "Bron: Wikimedia Commons",
-          "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "biceps contraction diagram human -animal -insect -fish",
-          "_imageIntent": "diagram",
-          "_riskProfile": "human_vs_animal",
-          "_score": 242,
-          "_escalated": false
-        }
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Animation_triceps_biceps.gif"
     },
     {
@@ -698,21 +653,6 @@
       ],
       "c": 1,
       "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust.",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Christian_and_Thompson_Figure_5_SVG.svg/960px-Christian_and_Thompson_Figure_5_SVG.svg.png",
-          "alt": "Christian and Thompson Figure 5 SVG.svg",
-          "caption": "Bron: Wikimedia Commons",
-          "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "reflex arc diagram human -animal -insect -fish",
-          "_imageIntent": "concept_diagram",
-          "_riskProfile": "human_vs_animal",
-          "_score": 220,
-          "_escalated": false
-        }
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_human_body_and_health_-_an_elementary_text-book_of_essential_anatomy%2C_applied_physiology_and_practical_hygiene_for_schools_%281908%29_%2814772701962%29.jpg/960px-The_human_body_and_health_-_an_elementary_text-book_of_essential_anatomy%2C_applied_physiology_and_practical_hygiene_for_schools_%281908%29_%2814772701962%29.jpg"
     },
     {
@@ -727,22 +667,22 @@
       ],
       "c": 2,
       "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Heart_numlabels.svg/960px-Heart_numlabels.svg.png",
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Renal_corpuscle.svg/960px-Renal_corpuscle.svg.png",
-          "alt": "Renal corpuscle.svg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Eye-diagram_no_circles_border_1.svg/960px-Eye-diagram_no_circles_border_1.svg.png",
+          "alt": "Eye-diagram no circles border 1.svg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "smooth muscle diagram human -animal -insect -fish",
+          "_searchTerm": "ciliary muscle diagram human -animal",
           "_imageIntent": "diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 200,
+          "_score": 210,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Heart_numlabels.svg/960px-Heart_numlabels.svg.png"
+      ]
     },
     {
       "id": "q028",
@@ -755,22 +695,7 @@
         "Een nieuwe formule ontdekken"
       ],
       "c": 2,
-      "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren.",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Backlit_keyboard.jpg/960px-Backlit_keyboard.jpg",
-          "alt": "Backlit keyboard.jpg",
-          "caption": "Bron: Wikimedia Commons",
-          "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "typing keyboard fingers",
-          "_imageIntent": "photo",
-          "_riskProfile": "none",
-          "_score": 97,
-          "_escalated": false
-        }
-      ]
+      "e": "Door herhaling worden bewegingen opgeslagen in het motorisch geheugen; dan kun je ze automatisch uitvoeren."
     },
     {
       "id": "q029",
@@ -797,22 +722,22 @@
       ],
       "c": 1,
       "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Multiple_tissues_and_organ_systems_are_affected_by_exercise%2C_initiating_diverse_homeostatic_responses.jpg/960px-Multiple_tissues_and_organ_systems_are_affected_by_exercise%2C_initiating_diverse_homeostatic_responses.jpg",
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Summer_Streets_NYC_2023-08-19%2C_people_running_on_Park_Avenue_and_91st-92nd%2C_Carnegie_Hill%2C_Upper_East_Side%2C_Manhattan.jpg/960px-Summer_Streets_NYC_2023-08-19%2C_people_running_on_Park_Avenue_and_91st-92nd%2C_Carnegie_Hill%2C_Upper_East_Side%2C_Manhattan.jpg",
-          "alt": "Summer Streets NYC 2023-08-19, people running on Park Avenue and 91st-92nd, Carnegie Hill, Upper East Side, Manhattan.jpg",
-          "caption": "Bron: Wikimedia Commons",
+          "src": "https://images.unsplash.com/photo-1611095968462-3dc56b14454a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHw0fHxleGVyY2lzZSUyMGhlYWx0aCUyMGJlbmVmaXRzfGVufDB8MHx8fDE3Njc0Nzg2ODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "alt": "woman in gray shirt elbow bumping with woman in sports outfit",
+          "caption": "Bron: Unsplash",
           "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "people exercising outdoors",
+          "_imageSource": "unsplash",
+          "_searchTerm": "exercise health benefits human",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 105,
+          "_score": 112,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Multiple_tissues_and_organ_systems_are_affected_by_exercise%2C_initiating_diverse_homeostatic_responses.jpg/960px-Multiple_tissues_and_organ_systems_are_affected_by_exercise%2C_initiating_diverse_homeostatic_responses.jpg"
+      ]
     },
     {
       "id": "q031",
@@ -826,7 +751,22 @@
       ],
       "c": 1,
       "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid.",
-      "image": "https://images.unsplash.com/photo-1758521959402-61177dcc4e37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHx3YXJtaW5nJTIwdXAlMjBleGVyY2lzZSUyMGh1bWFufGVufDB8MHx8fDE3Njc0NjM1MDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "https://images.unsplash.com/photo-1758521959402-61177dcc4e37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHx3YXJtaW5nJTIwdXAlMjBleGVyY2lzZSUyMGh1bWFufGVufDB8MHx8fDE3Njc0NjM1MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/120101-M-YO938-016_%286641606175%29.jpg/960px-120101-M-YO938-016_%286641606175%29.jpg",
+          "alt": "120101-M-YO938-016 (6641606175).jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.7",
+          "_imageSource": "commons",
+          "_searchTerm": "warm-up exercises stretching -animal",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 200,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q032",
@@ -840,21 +780,6 @@
       ],
       "c": 1,
       "e": "In de tekst: maximaal een kwartier; anders zijn de spieren weer koud reminder.",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Exercises_in_practical_physiology_%281897%29_%2814764549592%29.jpg/960px-Exercises_in_practical_physiology_%281897%29_%2814764549592%29.jpg",
-          "alt": "Exercises in practical physiology (1897) (14764549592).jpg",
-          "caption": "Bron: Wikimedia Commons",
-          "_source": "ai-v3.7",
-          "_imageSource": "commons",
-          "_searchTerm": "muscle cooling rate diagram",
-          "_imageIntent": "concept_diagram",
-          "_riskProfile": "diagram_vs_photo",
-          "_score": 305,
-          "_escalated": false
-        }
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Exercises_in_practical_physiology_%281897%29_%2814764549592%29.jpg/960px-Exercises_in_practical_physiology_%281897%29_%2814764549592%29.jpg"
     },
     {
@@ -869,22 +794,22 @@
       ],
       "c": 1,
       "e": "Rekoefeningen: rustig, langzaam, tot spanning maar geen pijn; veren vergroot juist kans op blessure.",
+      "image": "https://images.unsplash.com/photo-1597079997686-87eeebe516d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxzdHJldGNoaW5nJTIwZXhlcmNpc2UlMjBodW1hbnxlbnwwfDB8fHwxNzY3NTE3NTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "media": [
         {
           "type": "image",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/120101-M-YO938-016_%286641606175%29.jpg/960px-120101-M-YO938-016_%286641606175%29.jpg",
-          "alt": "120101-M-YO938-016 (6641606175).jpg",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/AC_Milan_players_stretching.jpg/960px-AC_Milan_players_stretching.jpg",
+          "alt": "AC Milan players stretching.jpg",
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "stretching exercise technique human",
+          "_searchTerm": "stretching exercises flexibility -animal",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 210,
+          "_score": 155,
           "_escalated": false
         }
-      ],
-      "image": "https://images.unsplash.com/photo-1597079997686-87eeebe516d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxzdHJldGNoaW5nJTIwZXhlcmNpc2UlMjBodW1hbnxlbnwwfDB8fHwxNzY3NTE3NTc0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      ]
     },
     {
       "id": "q034",
@@ -898,7 +823,22 @@
       ],
       "c": 0,
       "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd.",
-      "image": "https://images.unsplash.com/photo-1696875036596-6f72dd25eab5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHxjb29saW5nJTIwZG93biUyMGV4ZXJjaXNlJTIwaHVtYW58ZW58MHwwfHx8MTc2NzQ2MzUzMHww&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "https://images.unsplash.com/photo-1696875036596-6f72dd25eab5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHxjb29saW5nJTIwZG93biUyMGV4ZXJjaXNlJTIwaHVtYW58ZW58MHwwfHx8MTc2NzQ2MzUzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://images.unsplash.com/photo-1622820653459-7a0980a58ff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHw1fHxjb29sLWRvd258ZW58MHwwfHx8MTc2NzUyOTUyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+          "alt": "Cool down",
+          "caption": "Bron: Unsplash",
+          "_source": "ai-v3.7",
+          "_imageSource": "unsplash",
+          "_searchTerm": "cool-down exercises stretching -animal",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 170,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q035",
@@ -912,7 +852,22 @@
       ],
       "c": 1,
       "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/202107_Single-unit_smooth_muscle.svg/960px-202107_Single-unit_smooth_muscle.svg.png"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/202107_Single-unit_smooth_muscle.svg/960px-202107_Single-unit_smooth_muscle.svg.png",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Symptoms-muscle-pain.jpg/960px-Symptoms-muscle-pain.jpg",
+          "alt": "Symptoms-muscle-pain.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.7",
+          "_imageSource": "commons",
+          "_searchTerm": "muscle soreness pain -animal",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 157,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q036",
@@ -926,7 +881,22 @@
       ],
       "c": 1,
       "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Asdrubal_Cabrera_hurt_on_July_31%2C_2016.jpg/960px-Asdrubal_Cabrera_hurt_on_July_31%2C_2016.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Asdrubal_Cabrera_hurt_on_July_31%2C_2016.jpg/960px-Asdrubal_Cabrera_hurt_on_July_31%2C_2016.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/AfterBicycleFall_0367.JPG/960px-AfterBicycleFall_0367.JPG",
+          "alt": "AfterBicycleFall 0367.JPG",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.7",
+          "_imageSource": "commons",
+          "_searchTerm": "sports injury bandage -animal",
+          "_imageIntent": "photo",
+          "_riskProfile": "none",
+          "_score": 172,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q037",
@@ -979,7 +949,22 @@
         "Altijd op één voet staan"
       ],
       "c": 2,
-      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken."
+      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Prawid%C5%82owa_postura_przekszta%C5%82cona.svg/960px-Prawid%C5%82owa_postura_przekszta%C5%82cona.svg.png",
+          "alt": "Prawidłowa postura przekształcona.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.7",
+          "_imageSource": "commons",
+          "_searchTerm": "ergonomics computer posture diagram",
+          "_imageIntent": "photo",
+          "_riskProfile": "diagram_vs_photo",
+          "_score": 137,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q041",
@@ -993,21 +978,6 @@
       ],
       "c": 0,
       "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden).",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://images.unsplash.com/photo-1723201964235-ea5b99b55d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHxlcmdvbm9taWNzJTIwc2l0dGluZyUyMHBvc3R1cmUlMjBjb3JyZWN0fGVufDB8MHx8fDE3Njc1MTY3NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-          "alt": "A man sitting at a desk in front of a computer",
-          "caption": "Bron: Unsplash",
-          "_source": "ai-v3.7",
-          "_imageSource": "unsplash",
-          "_searchTerm": "ergonomics sitting posture correct -animal -insect -fish",
-          "_imageIntent": "photo",
-          "_riskProfile": "none",
-          "_score": 132,
-          "_escalated": false
-        }
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ergonomics_of_drawing_tablets_by_David_Revoy.svg/960px-Ergonomics_of_drawing_tablets_by_David_Revoy.svg.png"
     },
     {
@@ -1038,15 +1008,15 @@
       "media": [
         {
           "type": "image",
-          "src": "https://images.unsplash.com/photo-1664786562315-d12f13c18ebc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxwZW5ndWluJTIwc3dpbW1pbmclMjB1bmRlcndhdGVyfGVufDB8MHx8fDE3Njc0Nzg4MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-          "alt": "A penguin swimming in a water.",
-          "caption": "Bron: Unsplash",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Gal%C3%A1pagos_penguin_%28Spheniscus_mendiculus%29_male.jpg/960px-Gal%C3%A1pagos_penguin_%28Spheniscus_mendiculus%29_male.jpg",
+          "alt": "Galápagos penguin (Spheniscus mendiculus) male.jpg",
+          "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
-          "_imageSource": "unsplash",
-          "_searchTerm": "penguin swimming underwater",
+          "_imageSource": "commons",
+          "_searchTerm": "Adelie penguin swimming",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 185,
+          "_score": 105,
           "_escalated": false
         }
       ],
@@ -1075,7 +1045,7 @@
           "_searchTerm": "penguin walking",
           "_imageIntent": "photo",
           "_riskProfile": "none",
-          "_score": 177,
+          "_score": 150,
           "_escalated": false
         }
       ],
@@ -1092,7 +1062,22 @@
         "Het zorgt dat ze kunnen draaien met hun vleugels als rolgewricht"
       ],
       "c": 1,
-      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten."
+      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Anatomy_and_physiology_of_animals_Birds_skeleton.jpg",
+          "alt": "Anatomy and physiology of animals Birds skeleton.jpg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.7",
+          "_imageSource": "commons",
+          "_searchTerm": "penguin skeleton wing",
+          "_imageIntent": "diagram",
+          "_riskProfile": "none",
+          "_score": 172,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q046",
@@ -1105,7 +1090,22 @@
         "handspieren"
       ],
       "c": 1,
-      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk."
+      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk.",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Bird_pelvis.svg/960px-Bird_pelvis.svg.png",
+          "alt": "Bird pelvis.svg",
+          "caption": "Bron: Wikimedia Commons",
+          "_source": "ai-v3.7",
+          "_imageSource": "commons",
+          "_searchTerm": "bird keel muscle attachment labeled",
+          "_imageIntent": "labeled_diagram",
+          "_riskProfile": "none",
+          "_score": 142,
+          "_escalated": false
+        }
+      ]
     },
     {
       "id": "q047",
@@ -1252,6 +1252,7 @@
         }
       ],
       "e": "Krachttraining maakt spieren sterker (dikker). Een verstandige trainingsopbouw is warming-up → (rekoefeningen) → trainen → cooling-down. Coördinatie is samenwerking/timing van spieren. Door herhaling sla je bewegingen op in het motorisch geheugen, waardoor ze automatisch gaan.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Human_Skeleton_Upper_Body_Posterior_View.jpg/960px-Human_Skeleton_Upper_Body_Posterior_View.jpg",
       "media": [
         {
           "type": "image",
@@ -1260,14 +1261,13 @@
           "caption": "Bron: Wikimedia Commons",
           "_source": "ai-v3.7",
           "_imageSource": "commons",
-          "_searchTerm": "human body systems diagram -animal -insect -fish",
+          "_searchTerm": "human body systems diagram",
           "_imageIntent": "concept_diagram",
           "_riskProfile": "human_vs_animal",
-          "_score": 195,
+          "_score": 215,
           "_escalated": false
         }
-      ],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Human_Skeleton_Upper_Body_Posterior_View.jpg/960px-Human_Skeleton_Upper_Body_Posterior_View.jpg"
+      ]
     }
   ]
 }
