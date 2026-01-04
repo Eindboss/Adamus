@@ -327,7 +327,7 @@
 /* Primary Button */
 .btn-primary {
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
-  color: white;
+  color: #1a1815;
   border-color: transparent;
   box-shadow: 0 2px 8px rgba(201, 162, 39, 0.3);
 }

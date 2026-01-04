@@ -555,6 +555,11 @@ textarea.open-input {
   margin: var(--space-3) 0;
 }
 
+.quiz-meta #stat {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
 .quiz-meta .timer {
   margin-left: auto;
   font-weight: 600;
@@ -580,8 +585,10 @@ textarea.open-input {
 
 .timer-toggle {
   position: relative;
-  width: 36px;
-  height: 20px;
+  width: 44px;
+  height: 24px;
+  min-width: 44px;
+  min-height: 24px;
   background: var(--border-strong);
   border-radius: var(--radius-full);
   cursor: pointer;
@@ -597,8 +604,8 @@ textarea.open-input {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background: white;
   border-radius: var(--radius-full);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -610,7 +617,7 @@ textarea.open-input {
 }
 
 .timer-toggle.active::after {
-  transform: translateX(16px);
+  transform: translateX(20px);
 }
 
 /* Hide timer display when disabled */
