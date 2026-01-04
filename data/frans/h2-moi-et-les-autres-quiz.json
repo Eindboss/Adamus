@@ -1,242 +1,516 @@
 {
   "schema_version": "2.0.0",
-  "id": "frans-h2",
+  "id": "frans-h2-moi-et-les-autres",
   "title": "Frans – Unité 2: Moi et les autres",
   "subject": "Frans",
-  "description": "Toets Unité 2 (Moi et les autres). Alle woordenschat en grammatica.",
+  "description": "Toets Unité 2: woordenschat (familie, vrienden, feest), avoir, être, bezittelijk voornaamwoord, telwoorden 0-20.",
   "questions": [
     {
       "id": "q001",
       "type": "vocab_list",
-      "direction": "fr-nl",
-      "instruction": "Vertaal de Franse woorden naar het Nederlands:",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (familie).",
       "items": [
-        {
-          "fr": "la famille",
-          "nl": ["familie", "het gezin"]
-        },
-        {
-          "fr": "le frère",
-          "nl": ["broer"]
-        },
-        {
-          "fr": "la sœur",
-          "nl": ["zus"]
-        },
-        {
-          "fr": "les parents",
-          "nl": ["ouders"]
-        },
-        {
-          "fr": "le père",
-          "nl": ["vader"]
-        },
-        {
-          "fr": "la mère",
-          "nl": ["moeder"]
-        },
-        {
-          "fr": "le fils",
-          "nl": ["zoon"]
-        },
-        {
-          "fr": "la fille",
-          "nl": ["dochter"]
-        },
-        {
-          "fr": "l'oncle",
-          "nl": ["oom"]
-        },
-        {
-          "fr": "la tante",
-          "nl": ["tante"]
-        },
-        {
-          "fr": "le grand-père",
-          "nl": ["opa"]
-        },
-        {
-          "fr": "la grand-mère",
-          "nl": ["oma"]
-        },
-        {
-          "fr": "le cousin",
-          "nl": ["neef"]
-        },
-        {
-          "fr": "la cousine",
-          "nl": ["nicht"]
-        }
-      ],
-      "explanation": "Dit zijn familieleden uit Apprendre 1."
+        { "nl": "de familie / het gezin", "fr": ["la famille"] },
+        { "nl": "de vader", "fr": ["le père"] },
+        { "nl": "de moeder", "fr": ["la mère"] },
+        { "nl": "de ouders", "fr": ["les parents"] },
+        { "nl": "het kind", "fr": ["l'enfant"] }
+      ]
     },
     {
       "id": "q002",
       "type": "vocab_list",
-      "direction": "fr-nl",
-      "instruction": "Vertaal de woorden:",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (broers/zussen).",
       "items": [
-        {
-          "fr": "demain",
-          "nl": ["morgen"]
-        },
-        {
-          "fr": "l'anniversaire",
-          "nl": ["verjaardag"]
-        },
-        {
-          "fr": "la fête",
-          "nl": ["feest"]
-        },
-        {
-          "fr": "l'invitation",
-          "nl": ["uitnodiging"]
-        },
-        {
-          "fr": "inviter",
-          "nl": ["uitnodigen"]
-        },
-        {
-          "fr": "danser",
-          "nl": ["dansen"]
-        },
-        {
-          "fr": "manger",
-          "nl": ["eten"]
-        }
+        { "nl": "de broer", "fr": ["le frère"] },
+        { "nl": "de zus", "fr": ["la sœur", "la soeur"] },
+        { "nl": "de tweeling", "fr": ["les jumeaux"] },
+        { "nl": "de zoon", "fr": ["le fils"] },
+        { "nl": "de dochter", "fr": ["la fille"] }
       ]
     },
     {
       "id": "q003",
-      "type": "mc",
-      "q": "Kies de juiste vorm: Nous ___ amis.",
-      "a": ["sommes", "êtes", "sont", "es"],
-      "c": 0,
-      "e": "Bij 'nous' hoort 'sommes'."
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (grootouders).",
+      "items": [
+        { "nl": "de opa", "fr": ["le grand-père"] },
+        { "nl": "de oma", "fr": ["la grand-mère"] },
+        { "nl": "de grootouders", "fr": ["les grands-parents"] }
+      ]
     },
     {
       "id": "q004",
-      "type": "mc",
-      "q": "Welke zin is correct?",
-      "a": [
-        "Elles est en vacances.",
-        "Elles sont en vacances.",
-        "Elles es en vacances.",
-        "Elles êtes en vacances."
-      ],
-      "c": 1,
-      "e": "Elles → sont."
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (oom/tante/neef/nicht).",
+      "items": [
+        { "nl": "de oom", "fr": ["l'oncle"] },
+        { "nl": "de tante", "fr": ["la tante"] },
+        { "nl": "de neef", "fr": ["le cousin"] },
+        { "nl": "de nicht", "fr": ["la cousine"] }
+      ]
     },
     {
       "id": "q005",
-      "type": "fill_blank",
-      "instruction": "Vul de juiste vorm van avoir in.",
-      "text": "Tu {{blank}} quinze ans.",
-      "blanks": [
-        {
-          "id": "blank",
-          "answers": ["as"]
-        }
-      ],
-      "explanation": "Leeftijd druk je uit met 'avoir'."
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (relaties).",
+      "items": [
+        { "nl": "de halfbroer", "fr": ["le demi-frère"] },
+        { "nl": "getrouwd", "fr": ["marié", "mariée"] },
+        { "nl": "gescheiden", "fr": ["divorcé", "divorcée"] },
+        { "nl": "het enig kind", "fr": ["le fils unique", "la fille unique"] },
+        { "nl": "alleen", "fr": ["seul", "seule"] }
+      ]
     },
     {
       "id": "q006",
-      "type": "matching",
-      "instruction": "Koppel het getal aan het juiste Franse woord.",
-      "left": ["0", "5", "8", "11", "16", "20"],
-      "right": ["zéro", "cinq", "huit", "onze", "seize", "vingt"],
-      "correct_pairs": {
-        "0": "zéro",
-        "5": "cinq",
-        "8": "huit",
-        "11": "onze",
-        "16": "seize",
-        "20": "vingt"
-      },
-      "explanation": "Telwoorden 0–20."
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (vrienden/buren).",
+      "items": [
+        { "nl": "de vriend", "fr": ["le copain"] },
+        { "nl": "de vriendin", "fr": ["la copine"] },
+        { "nl": "de buurman", "fr": ["le voisin"] },
+        { "nl": "de buurvrouw", "fr": ["la voisine"] },
+        { "nl": "de beste vriend", "fr": ["le meilleur ami"] },
+        { "nl": "de beste vriendin", "fr": ["la meilleure amie"] }
+      ]
     },
     {
       "id": "q007",
-      "type": "fill_blank_dropdown",
-      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
-      "text": "C'est {{b1}} école et {{b2}} histoire.",
-      "blanks": [
-        {
-          "id": "b1",
-          "correct": "mon",
-          "options": ["mon", "ma"]
-        },
-        {
-          "id": "b2",
-          "correct": "son",
-          "options": ["son", "sa"]
-        }
-      ],
-      "explanation": "Bij klinker of stomme h gebruik je mon/ton/son."
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (feest).",
+      "items": [
+        { "nl": "de verjaardag", "fr": ["l'anniversaire"] },
+        { "nl": "het feest", "fr": ["la fête"] },
+        { "nl": "de uitnodiging", "fr": ["l'invitation"] },
+        { "nl": "uitnodigen", "fr": ["inviter"] },
+        { "nl": "organiseren", "fr": ["organiser"] }
+      ]
     },
     {
       "id": "q008",
-      "type": "mc",
-      "q": "Welke zin is correct?",
-      "a": [
-        "C'est ma ami.",
-        "C'est mon ami.",
-        "C'est mes ami.",
-        "C'est ma amie."
-      ],
-      "c": 1,
-      "e": "'Ami' begint met een klinker → mon ami."
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (activiteiten).",
+      "items": [
+        { "nl": "eten", "fr": ["manger"] },
+        { "nl": "dansen", "fr": ["danser"] },
+        { "nl": "luisteren (naar)", "fr": ["écouter"] },
+        { "nl": "wachten (op)", "fr": ["attendre"] }
+      ]
     },
     {
       "id": "q009",
-      "type": "sentence_correction",
-      "instruction": "Verbeter de fout.",
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (plaatsen/vervoer).",
       "items": [
-        {
-          "sentence": "Il a treize an.",
-          "error_type": "spelling",
-          "accept": ["Il a treize ans."]
-        },
-        {
-          "sentence": "Elles est gentilles.",
-          "error_type": "werkwoord",
-          "accept": ["Elles sont gentilles."]
-        }
-      ],
-      "explanation": "Let op meervoud en juiste werkwoordsvorm."
+        { "nl": "de trein", "fr": ["le train"] },
+        { "nl": "de metro", "fr": ["le métro"] },
+        { "nl": "de slaapkamer", "fr": ["la chambre"] },
+        { "nl": "lopend / te voet", "fr": ["à pied"] },
+        { "nl": "bij (thuis)", "fr": ["chez"] }
+      ]
     },
     {
       "id": "q010",
       "type": "vocab_list",
-      "direction": "fr-nl",
-      "instruction": "Vertaal:",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (overig).",
       "items": [
-        {
-          "fr": "le copain",
-          "nl": ["vriend"]
-        },
-        {
-          "fr": "la copine",
-          "nl": ["vriendin"]
-        },
-        {
-          "fr": "le weekend",
-          "nl": ["het weekend"]
-        },
-        {
-          "fr": "seul",
-          "nl": ["alleen"]
-        },
-        {
-          "fr": "le voisin",
-          "nl": ["buurman"]
-        },
-        {
-          "fr": "la voisine",
-          "nl": ["buurvrouw"]
-        }
+        { "nl": "de muziek", "fr": ["la musique"] },
+        { "nl": "de boodschap", "fr": ["le message"] },
+        { "nl": "de foto", "fr": ["la photo"] },
+        { "nl": "de taart", "fr": ["le gâteau"] },
+        { "nl": "de vakantie", "fr": ["les vacances"] },
+        { "nl": "de kat", "fr": ["le chat"] }
       ]
+    },
+    {
+      "id": "q011",
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (bijvoeglijke naamwoorden).",
+      "items": [
+        { "nl": "schattig", "fr": ["mignon", "mignonne"] },
+        { "nl": "geweldig", "fr": ["génial", "géniale"] },
+        { "nl": "grappig", "fr": ["drôle"] },
+        { "nl": "goed / lekker", "fr": ["bon", "bonne"] }
+      ]
+    },
+    {
+      "id": "q012",
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (kleine woordjes).",
+      "items": [
+        { "nl": "alleen maar", "fr": ["seulement"] },
+        { "nl": "bovendien", "fr": ["en plus"] },
+        { "nl": "zoals", "fr": ["comme"] },
+        { "nl": "altijd", "fr": ["toujours"] },
+        { "nl": "sinds", "fr": ["depuis"] },
+        { "nl": "op", "fr": ["sur"] }
+      ]
+    },
+    {
+      "id": "q013",
+      "type": "vocab_list",
+      "direction": "nl-fr",
+      "instruction": "Vertaal naar het Frans (herhaling H1).",
+      "items": [
+        { "nl": "het is / dat is", "fr": ["c'est"] },
+        { "nl": "er is / er zijn", "fr": ["il y a"] },
+        { "nl": "ook", "fr": ["aussi"] },
+        { "nl": "en", "fr": ["et"] },
+        { "nl": "maar", "fr": ["mais"] }
+      ]
+    },
+    {
+      "id": "q014",
+      "type": "vocab_list",
+      "direction": "fr-nl",
+      "instruction": "Vertaal naar het Nederlands.",
+      "items": [
+        { "fr": "la journée", "nl": ["de dag"] },
+        { "fr": "la chance", "nl": ["het geluk", "geluk"] },
+        { "fr": "tout le monde", "nl": ["iedereen"] },
+        { "fr": "rentrer", "nl": ["naar huis gaan", "thuiskomen"] },
+        { "fr": "la fleur", "nl": ["de bloem"] },
+        { "fr": "la table", "nl": ["de tafel"] }
+      ]
+    },
+    {
+      "id": "q015",
+      "type": "matching",
+      "instruction": "Koppel de familieleden (NL → FR).",
+      "left": ["de vader", "de moeder", "de broer", "de zus", "de opa"],
+      "right": ["le père", "la mère", "le frère", "la sœur", "le grand-père"],
+      "correct_pairs": {
+        "de vader": "le père",
+        "de moeder": "la mère",
+        "de broer": "le frère",
+        "de zus": "la sœur",
+        "de opa": "le grand-père"
+      }
+    },
+    {
+      "id": "q016",
+      "type": "matching",
+      "instruction": "Koppel de woorden (NL → FR).",
+      "left": ["de verjaardag", "het feest", "de uitnodiging", "de vriend", "de buurman"],
+      "right": ["l'anniversaire", "la fête", "l'invitation", "le copain", "le voisin"],
+      "correct_pairs": {
+        "de verjaardag": "l'anniversaire",
+        "het feest": "la fête",
+        "de uitnodiging": "l'invitation",
+        "de vriend": "le copain",
+        "de buurman": "le voisin"
+      }
+    },
+    {
+      "id": "q017",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van AVOIR in.",
+      "text": "J'{{b1}} treize ans.",
+      "blanks": [{ "id": "b1", "answers": ["ai"] }],
+      "explanation": "Avoir: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont."
+    },
+    {
+      "id": "q018",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van AVOIR in.",
+      "text": "Tu {{b1}} quel âge?",
+      "blanks": [{ "id": "b1", "answers": ["as"] }],
+      "explanation": "Avoir: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont."
+    },
+    {
+      "id": "q019",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van AVOIR in.",
+      "text": "Il {{b1}} un petit frère.",
+      "blanks": [{ "id": "b1", "answers": ["a"] }],
+      "explanation": "Avoir: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont."
+    },
+    {
+      "id": "q020",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van AVOIR in.",
+      "text": "Nous {{b1}} un chien.",
+      "blanks": [{ "id": "b1", "answers": ["avons"] }],
+      "explanation": "Avoir: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont."
+    },
+    {
+      "id": "q021",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van AVOIR in.",
+      "text": "Vous {{b1}} une grande maison?",
+      "blanks": [{ "id": "b1", "answers": ["avez"] }],
+      "explanation": "Avoir: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont."
+    },
+    {
+      "id": "q022",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van AVOIR in.",
+      "text": "Ils {{b1}} une grande famille.",
+      "blanks": [{ "id": "b1", "answers": ["ont"] }],
+      "explanation": "Avoir: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont."
+    },
+    {
+      "id": "q023",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van AVOIR in.",
+      "text": "Elle {{b1}} deux sœurs.",
+      "blanks": [{ "id": "b1", "answers": ["a"] }],
+      "explanation": "Avoir: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont."
+    },
+    {
+      "id": "q024",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van AVOIR in.",
+      "text": "On {{b1}} une fête ce weekend.",
+      "blanks": [{ "id": "b1", "answers": ["a"] }],
+      "explanation": "Avoir: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont."
+    },
+    {
+      "id": "q025",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van ÊTRE in.",
+      "text": "Je {{b1}} néerlandais.",
+      "blanks": [{ "id": "b1", "answers": ["suis"] }],
+      "explanation": "Être: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont."
+    },
+    {
+      "id": "q026",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van ÊTRE in.",
+      "text": "Tu {{b1}} français?",
+      "blanks": [{ "id": "b1", "answers": ["es"] }],
+      "explanation": "Être: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont."
+    },
+    {
+      "id": "q027",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van ÊTRE in.",
+      "text": "Il {{b1}} au collège.",
+      "blanks": [{ "id": "b1", "answers": ["est"] }],
+      "explanation": "Être: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont."
+    },
+    {
+      "id": "q028",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van ÊTRE in.",
+      "text": "Nous {{b1}} en vacances.",
+      "blanks": [{ "id": "b1", "answers": ["sommes"] }],
+      "explanation": "Être: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont."
+    },
+    {
+      "id": "q029",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van ÊTRE in.",
+      "text": "Vous {{b1}} à Paris?",
+      "blanks": [{ "id": "b1", "answers": ["êtes"] }],
+      "explanation": "Être: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont."
+    },
+    {
+      "id": "q030",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van ÊTRE in.",
+      "text": "Elles {{b1}} très gentilles.",
+      "blanks": [{ "id": "b1", "answers": ["sont"] }],
+      "explanation": "Être: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont."
+    },
+    {
+      "id": "q031",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "C'est {{b1}} père.",
+      "blanks": [{ "id": "b1", "correct": "mon", "options": ["mon", "ma", "mes"] }],
+      "explanation": "Père is mannelijk enkelvoud → mon."
+    },
+    {
+      "id": "q032",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "C'est {{b1}} mère.",
+      "blanks": [{ "id": "b1", "correct": "ma", "options": ["mon", "ma", "mes"] }],
+      "explanation": "Mère is vrouwelijk enkelvoud → ma."
+    },
+    {
+      "id": "q033",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "Voilà {{b1}} parents.",
+      "blanks": [{ "id": "b1", "correct": "mes", "options": ["mon", "ma", "mes"] }],
+      "explanation": "Parents is meervoud → mes."
+    },
+    {
+      "id": "q034",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "C'est {{b1}} amie.",
+      "blanks": [{ "id": "b1", "correct": "mon", "options": ["mon", "ma"] }],
+      "explanation": "Klinkerbotsing! Amie begint met een klinker → mon amie (niet ma amie)."
+    },
+    {
+      "id": "q035",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "Voilà {{b1}} école.",
+      "blanks": [{ "id": "b1", "correct": "ton", "options": ["ton", "ta"] }],
+      "explanation": "Klinkerbotsing! École begint met een klinker → ton école (niet ta école)."
+    },
+    {
+      "id": "q036",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "C'est {{b1}} histoire.",
+      "blanks": [{ "id": "b1", "correct": "son", "options": ["son", "sa"] }],
+      "explanation": "Klinkerbotsing! Histoire begint met een stomme h → son histoire."
+    },
+    {
+      "id": "q037",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "Voilà {{b1}} tante.",
+      "blanks": [{ "id": "b1", "correct": "ta", "options": ["ton", "ta", "tes"] }],
+      "explanation": "Tante is vrouwelijk enkelvoud → ta."
+    },
+    {
+      "id": "q038",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "Ce sont {{b1}} frères.",
+      "blanks": [{ "id": "b1", "correct": "ses", "options": ["son", "sa", "ses"] }],
+      "explanation": "Frères is meervoud → ses."
+    },
+    {
+      "id": "q039",
+      "type": "matching",
+      "instruction": "Koppel de telwoorden 0-5.",
+      "left": ["0", "1", "2", "3", "4", "5"],
+      "right": ["zéro", "un", "deux", "trois", "quatre", "cinq"],
+      "correct_pairs": {
+        "0": "zéro",
+        "1": "un",
+        "2": "deux",
+        "3": "trois",
+        "4": "quatre",
+        "5": "cinq"
+      }
+    },
+    {
+      "id": "q040",
+      "type": "matching",
+      "instruction": "Koppel de telwoorden 6-10.",
+      "left": ["6", "7", "8", "9", "10"],
+      "right": ["six", "sept", "huit", "neuf", "dix"],
+      "correct_pairs": {
+        "6": "six",
+        "7": "sept",
+        "8": "huit",
+        "9": "neuf",
+        "10": "dix"
+      }
+    },
+    {
+      "id": "q041",
+      "type": "matching",
+      "instruction": "Koppel de telwoorden 11-15.",
+      "left": ["11", "12", "13", "14", "15"],
+      "right": ["onze", "douze", "treize", "quatorze", "quinze"],
+      "correct_pairs": {
+        "11": "onze",
+        "12": "douze",
+        "13": "treize",
+        "14": "quatorze",
+        "15": "quinze"
+      }
+    },
+    {
+      "id": "q042",
+      "type": "matching",
+      "instruction": "Koppel de telwoorden 16-20.",
+      "left": ["16", "17", "18", "19", "20"],
+      "right": ["seize", "dix-sept", "dix-huit", "dix-neuf", "vingt"],
+      "correct_pairs": {
+        "16": "seize",
+        "17": "dix-sept",
+        "18": "dix-huit",
+        "19": "dix-neuf",
+        "20": "vingt"
+      }
+    },
+    {
+      "id": "q043",
+      "type": "fill_blank",
+      "instruction": "Schrijf het Franse telwoord.",
+      "text": "14 = {{b1}}",
+      "blanks": [{ "id": "b1", "answers": ["quatorze"] }]
+    },
+    {
+      "id": "q044",
+      "type": "fill_blank",
+      "instruction": "Schrijf het Franse telwoord.",
+      "text": "18 = {{b1}}",
+      "blanks": [{ "id": "b1", "answers": ["dix-huit"] }]
+    },
+    {
+      "id": "q045",
+      "type": "fill_blank",
+      "instruction": "Schrijf het Franse telwoord.",
+      "text": "7 = {{b1}}",
+      "blanks": [{ "id": "b1", "answers": ["sept"] }]
+    },
+    {
+      "id": "q046",
+      "type": "fill_blank",
+      "instruction": "Schrijf het Franse telwoord.",
+      "text": "13 = {{b1}}",
+      "blanks": [{ "id": "b1", "answers": ["treize"] }]
+    },
+    {
+      "id": "q047",
+      "type": "matching",
+      "instruction": "Koppel de Franse zin aan de Nederlandse vertaling.",
+      "left": ["Mes parents sont divorcés.", "J'ai un demi-frère.", "Je suis fils unique.", "Tu as de la chance."],
+      "right": ["Mijn ouders zijn gescheiden.", "Ik heb een halfbroer.", "Ik ben enig kind.", "Je hebt geluk."],
+      "correct_pairs": {
+        "Mes parents sont divorcés.": "Mijn ouders zijn gescheiden.",
+        "J'ai un demi-frère.": "Ik heb een halfbroer.",
+        "Je suis fils unique.": "Ik ben enig kind.",
+        "Tu as de la chance.": "Je hebt geluk."
+      }
+    },
+    {
+      "id": "q048",
+      "type": "mc",
+      "q": "Welke zin is correct?",
+      "a": ["J'ai 13 ans.", "Je suis 13 ans.", "J'est 13 ans.", "Je ai 13 ans."],
+      "c": 0,
+      "e": "Leeftijd druk je uit met AVOIR: J'ai 13 ans."
+    },
+    {
+      "id": "q049",
+      "type": "mc",
+      "q": "Hoe zeg je 'Ik heb een broer en twee zussen' in het Frans?",
+      "a": ["J'ai un frère et deux sœurs.", "Je suis un frère et deux sœurs.", "J'ai une frère et deux sœurs.", "J'ai un frère et deux soeur."],
+      "c": 0,
+      "e": "J'ai un frère (mannelijk) et deux sœurs (vrouwelijk meervoud)."
+    },
+    {
+      "id": "q050",
+      "type": "mc",
+      "q": "Wat is de juiste vertaling van 'Léa is mijn beste vriendin'?",
+      "a": ["Léa est ma meilleure amie.", "Léa est mon meilleur ami.", "Léa a ma meilleure amie.", "Léa est ma meilleur amie."],
+      "c": 0,
+      "e": "Vriendin = amie (v), dus: ma meilleure amie."
     }
   ]
 }
