@@ -1,20 +1,29 @@
 /**
- * AI-powered image selection for quiz questions (v3.6)
+ * AI-powered image selection for quiz questions (v3.7)
  *
  * Uses Gemini AI to generate optimal search terms in BATCHES,
  * then fetches images from multiple sources with AI VISION validation.
  *
+ * v3.7 Improvements (based on ChatGPT analysis of rate limiting issues):
+ * - TOKEN BUCKET RATE LIMITER: Prevents 429 errors instead of reacting to them
+ *   → Hard cap on 14 RPM with automatic queuing
+ * - TOP-1/TOP-2/TOP-3 STRATEGY: Validates fewer candidates per question
+ *   → Reduces vision calls from ~3 to ~1.5 per question
+ * - VISION CACHE: Stores validation results to avoid re-validating same images
+ *   → JSON file cache with TTL per result type
+ * - DOWNLOAD FALLBACK: Multiple URL resolutions for Commons images
+ *   → thumb 800px → 1200px → original
+ * - AUTO-ACCEPT: Strong Commons matches skip vision validation
+ *   → Saves API calls for obvious good matches
+ * - FAIL-CLOSED REMOVES OLD: Questions without valid image get image removed
+ *   → No stale bad images, retry on next run
+ *
  * v3.6 Improvements (based on ChatGPT analysis of 46% failure rate):
  * - CONCEPT MATCHING: expectedConcept/allowedConcepts per question
- *   → Prevents "breast for skeleton question" errors
  * - LANGUAGE GATE: Hard reject non-NL/EN text in images
- *   → Prevents Polish/Ukrainian/Lithuanian diagram labels
  * - FAIL-CLOSED FALLBACK: No image is better than wrong image
- *   → Prevents "soup for collagen question" errors
  * - CONTENT-TYPE GATE: Reject abstract_art, network_graph, table_wordlist
- *   → Prevents completely irrelevant images
  * - CANONICAL DEDUP: Use pageid/title instead of URL for deduplication
- *   → Prevents same image appearing twice
  * - COMPLEXITY GATE: Reject images too complex for 14-16 year olds
  *
  * Previous versions:
@@ -28,11 +37,9 @@
  * Usage:
  *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json>
  *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json> --apply
- *   GEMINI_API_KEY=key node ai-select-images.js --quiz <quiz-file.json> --replace --apply
  *
  * Options:
- *   --apply    Apply the selected images to the quiz file
- *   --replace  Replace ALL existing images (re-evaluate everything with AI)
+ *   --apply    Apply the selected images to the quiz file (removes old images on fail)
  */
 
 const fs = require('fs');
@@ -46,12 +53,27 @@ const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models'
 const MODEL = 'gemini-2.0-flash-exp';
 
 // Batch settings
-const BATCH_SIZE = 10; // Reduced from 12 to avoid rate limits
+const BATCH_SIZE = 10;
 const MAX_RETRIES = 3;
-const BASE_DELAY = 3000; // Increased from 2000ms
-const MAX_ESCALATIONS_PER_QUIZ = 10; // v3.3: Cap per-question AI escalations
-const VISION_DELAY = 500; // Delay between AI vision calls (was 200ms)
-const BATCH_DELAY = 5000; // Delay between batches (was implicit)
+const BASE_DELAY = 3000;
+const MAX_ESCALATIONS_PER_QUIZ = 10;
+const BATCH_DELAY = 5000;
+
+// v3.7: Rate limiting settings
+const GEMINI_RPM = 14; // Stay under 15 RPM limit
+
+// v3.7: Vision validation strategy - fewer candidates = fewer API calls
+const MAX_VISION_CANDIDATES = 3; // Start with top 3
+const ESCALATE_VISION_TO = 5; // Only escalate to 5 for high-priority
+
+// v3.7: Cache settings
+const CACHE_FILE = 'vision-cache.json';
+const CACHE_TTL_VALID_DAYS = 30; // Good results last 30 days
+const CACHE_TTL_INVALID_DAYS = 30; // Bad results (concept mismatch, etc) last 30 days
+const CACHE_TTL_DOWNLOAD_FAIL_HOURS = 24; // Download failures may be transient
+
+// v3.7: Auto-accept threshold - skip vision if text score is extremely high
+const AUTO_ACCEPT_SCORE_THRESHOLD = 200; // Very high confidence from text scoring
 
 // v3.3: Latin grammar/translation keywords that indicate no image is needed
 // Only narrative (cultural/mythological) questions need images
@@ -249,6 +271,162 @@ const SUBJECT_PROFILES = {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+/**
+ * v3.7: Token Bucket Rate Limiter
+ * Prevents 429 errors by enforcing a hard cap on requests per minute.
+ * Instead of reacting to rate limits, we prevent them entirely.
+ */
+class TokenBucketLimiter {
+  constructor({ rpm, cooldownMs = 65000 }) {
+    this.capacity = rpm;
+    this.tokens = rpm;
+    this.refillIntervalMs = Math.ceil(60000 / rpm);
+    this.lastRefill = Date.now();
+    this.cooldownUntil = 0;
+    this.defaultCooldownMs = cooldownMs;
+    this.callCount = 0;
+  }
+
+  _refill() {
+    const now = Date.now();
+    if (now <= this.lastRefill) return;
+    const elapsed = now - this.lastRefill;
+    const add = Math.floor(elapsed / this.refillIntervalMs);
+    if (add > 0) {
+      this.tokens = Math.min(this.capacity, this.tokens + add);
+      this.lastRefill += add * this.refillIntervalMs;
+    }
+  }
+
+  async take(count = 1) {
+    while (true) {
+      const now = Date.now();
+
+      // If in cooldown, wait
+      if (now < this.cooldownUntil) {
+        const wait = this.cooldownUntil - now + Math.floor(Math.random() * 250);
+        process.stdout.write(` [cooldown ${Math.ceil(wait/1000)}s]`);
+        await sleep(wait);
+        continue;
+      }
+
+      this._refill();
+
+      if (this.tokens >= count) {
+        this.tokens -= count;
+        this.callCount++;
+        return;
+      }
+
+      // Wait until at least 1 token refills
+      const wait = this.refillIntervalMs + 50 + Math.floor(Math.random() * 250);
+      process.stdout.write(` [wait ${Math.ceil(wait/1000)}s]`);
+      await sleep(wait);
+    }
+  }
+
+  cooldown(ms) {
+    const until = Date.now() + (ms ?? this.defaultCooldownMs);
+    this.cooldownUntil = Math.max(this.cooldownUntil, until);
+    // Drop tokens to avoid burst right after cooldown
+    this.tokens = Math.min(this.tokens, 1);
+    console.log(`  [Rate limited! Cooldown for ${Math.ceil((ms ?? this.defaultCooldownMs)/1000)}s]`);
+  }
+
+  getStats() {
+    return { tokens: this.tokens, callCount: this.callCount };
+  }
+}
+
+// v3.7: Global rate limiter for Gemini API
+const geminiLimiter = new TokenBucketLimiter({ rpm: GEMINI_RPM, cooldownMs: 65000 });
+
+/**
+ * v3.7: Vision Cache
+ * Stores validation results to avoid re-validating the same images.
+ * Uses canonical keys (pageid/title) instead of URLs.
+ */
+class VisionCache {
+  constructor(quizPath) {
+    this.cacheDir = path.dirname(quizPath);
+    this.cachePath = path.join(this.cacheDir, CACHE_FILE);
+    this.cache = this._load();
+    this.hits = 0;
+    this.misses = 0;
+  }
+
+  _load() {
+    try {
+      if (fs.existsSync(this.cachePath)) {
+        const data = JSON.parse(fs.readFileSync(this.cachePath, 'utf8'));
+        // Clean expired entries on load
+        const now = Date.now();
+        const cleaned = {};
+        for (const [key, entry] of Object.entries(data)) {
+          if (entry.expiresAt > now) {
+            cleaned[key] = entry;
+          }
+        }
+        return cleaned;
+      }
+    } catch (err) {
+      console.log(`  [Cache load error: ${err.message}]`);
+    }
+    return {};
+  }
+
+  _save() {
+    try {
+      fs.writeFileSync(this.cachePath, JSON.stringify(this.cache, null, 2));
+    } catch (err) {
+      console.log(`  [Cache save error: ${err.message}]`);
+    }
+  }
+
+  _getTTL(result) {
+    // Download failures are transient - short TTL
+    if (result.reason?.includes('download') || result.reason?.includes('Could not')) {
+      return CACHE_TTL_DOWNLOAD_FAIL_HOURS * 60 * 60 * 1000;
+    }
+    // Valid results - long TTL
+    if (result.valid) {
+      return CACHE_TTL_VALID_DAYS * 24 * 60 * 60 * 1000;
+    }
+    // Invalid results (concept mismatch, language, etc) - long TTL
+    return CACHE_TTL_INVALID_DAYS * 24 * 60 * 60 * 1000;
+  }
+
+  get(canonicalKey) {
+    const entry = this.cache[canonicalKey];
+    if (entry && entry.expiresAt > Date.now()) {
+      this.hits++;
+      return entry.result;
+    }
+    this.misses++;
+    return null;
+  }
+
+  set(canonicalKey, result) {
+    const ttl = this._getTTL(result);
+    this.cache[canonicalKey] = {
+      result,
+      cachedAt: Date.now(),
+      expiresAt: Date.now() + ttl,
+    };
+  }
+
+  save() {
+    this._save();
+  }
+
+  getStats() {
+    return { hits: this.hits, misses: this.misses, size: Object.keys(this.cache).length };
+  }
+}
+
+// v3.7: Global vision cache (initialized per quiz)
+let visionCache = null;
 
 /**
  * v3.6: Extract expected concept and allowed concepts from question text
@@ -792,24 +970,41 @@ function getMinAIScore(intent) {
 }
 
 /**
- * v3.6: AI VISION validation - Gemini actually LOOKS at the image
- * Downloads the image as base64 and sends it to Gemini for visual analysis
+ * v3.7: AI VISION validation with rate limiting and caching
+ * Downloads the image as base64 and sends it to Gemini for visual analysis.
+ *
+ * v3.7 improvements:
+ * - TOKEN BUCKET RATE LIMITER: Waits for available token before API call
+ * - VISION CACHE: Checks cache before making API call
+ * - Handles 429 gracefully with cooldown
  *
  * v3.6 improvements based on ChatGPT analysis of 46% failure rate:
  * - CONCEPT MATCHING: predicted_concept vs expectedConcept
  * - LANGUAGE GATE: Detect and reject non-NL/EN text
  * - CONTENT-TYPE GATE: Reject abstract_art, network_graph, etc.
  * - COMPLEXITY GATE: Check age appropriateness for 14-16 year olds
- * - Enhanced JSON contract with new fields
  */
-async function validateImageWithAI(imageUrl, questionText, subject, brief) {
+async function validateImageWithAI(imageUrl, questionText, subject, brief, canonicalKey = null) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return { valid: false, score: 0, reason: 'No API key', hardReject: true };
+
+  // v3.7: Check cache first
+  if (canonicalKey && visionCache) {
+    const cached = visionCache.get(canonicalKey);
+    if (cached) {
+      process.stdout.write(` [CACHE]`);
+      return cached;
+    }
+  }
 
   try {
     // Download the image as base64
     const imageData = await fetchImageAsBase64(imageUrl);
-    if (!imageData) return { valid: false, score: 0, reason: 'Could not download image', hardReject: true };
+    if (!imageData) {
+      const result = { valid: false, score: 0, reason: 'Could not download image', hardReject: true };
+      if (canonicalKey && visionCache) visionCache.set(canonicalKey, result);
+      return result;
+    }
 
     // Skip SVG validation (Gemini doesn't handle SVG well)
     if (imageData.mimeType === 'image/svg+xml') {
@@ -885,6 +1080,9 @@ BELANGRIJK: Wees EXTREEM STRENG. Een foute afbeelding is ERGER dan geen afbeeldi
 Bij ELKE twijfel: valid=false.
 Geef ALLEEN de JSON.`;
 
+    // v3.7: Wait for rate limiter token before making API call
+    await geminiLimiter.take(1);
+
     const response = await fetch(`${GEMINI_API_URL}/${MODEL}:generateContent?key=${apiKey}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -905,9 +1103,16 @@ Geef ALLEEN de JSON.`;
     });
 
     if (!response.ok) {
-      console.log(`    [AI validation error: ${response.status}]`);
-      // v3.6: FAIL-CLOSED - don't allow fallback on API errors
-      return { valid: false, score: 0, reason: `API error: ${response.status}`, hardReject: true };
+      // v3.7: On 429, trigger cooldown
+      if (response.status === 429) {
+        geminiLimiter.cooldown(65000);
+      }
+      const result = { valid: false, score: 0, reason: `API error: ${response.status}`, hardReject: true };
+      // Don't cache 429 errors - they're transient
+      if (response.status !== 429 && canonicalKey && visionCache) {
+        visionCache.set(canonicalKey, result);
+      }
+      return result;
     }
 
     const data = await response.json();
@@ -983,7 +1188,7 @@ Geef ALLEEN de JSON.`;
       rejectReason = result.reject_reason || result.reason || 'AI rejected image';
     }
 
-    return {
+    const finalResult = {
       valid: !hardReject && result.valid === true,
       score: hardReject ? 0 : (result.score || 0),
       reason: hardReject ? rejectReason : (result.reason || ''),
@@ -1001,10 +1206,25 @@ Geef ALLEEN de JSON.`;
       age_appropriate: result.age_appropriate,
       hardReject,
     };
+
+    // v3.7: Cache the result
+    if (canonicalKey && visionCache) {
+      visionCache.set(canonicalKey, finalResult);
+    }
+
+    return finalResult;
   } catch (err) {
-    console.log(`    [AI validation exception: ${err.message}]`);
-    // v3.6: FAIL-CLOSED - reject on exceptions too
-    return { valid: false, score: 0, reason: `Validation error: ${err.message}`, hardReject: true };
+    // v3.7: Handle rate limit errors from fetch
+    const is429 = err.message.includes('429') || err.message.includes('rate') || err.message.includes('quota');
+    if (is429) {
+      geminiLimiter.cooldown(65000);
+    }
+    const result = { valid: false, score: 0, reason: `Validation error: ${err.message}`, hardReject: true };
+    // Don't cache rate limit errors
+    if (!is429 && canonicalKey && visionCache) {
+      visionCache.set(canonicalKey, result);
+    }
+    return result;
   }
 }
 
@@ -1374,6 +1594,7 @@ function scoreCandidate(candidate, brief, usedImages) {
  * v3.3: Subject-specific thresholds
  * v3.4: Multi-source search (Commons, Unsplash, Pexels) + photo preference
  * v3.5: AI VISION validation of top candidates
+ * v3.7: Auto-accept for very high scores, reduced vision calls, caching
  */
 async function findBestImage(brief, usedImages, subject = null, questionText = '', enableAIValidation = true) {
   const candidates = [];
@@ -1490,28 +1711,43 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
     }
   }
 
-  // v3.5: AI VISION VALIDATION (enhanced with ChatGPT recommendations)
-  // Strategy: validate top 3 first, escalate to top 5 if needed
-  // Use intent-specific AI score thresholds
+  // v3.7: AI VISION VALIDATION with rate limiting and caching
+  // Strategy:
+  // 1. Auto-accept very high scoring Commons/Wikipedia matches (skip vision)
+  // 2. Validate top MAX_VISION_CANDIDATES first
+  // 3. Escalate to ESCALATE_VISION_TO only for high-priority intents
   if (enableAIValidation && scored.length > 0 && questionText) {
     const intent = brief.imageIntent || 'photo';
     const minAIScore = getMinAIScore(intent);
     const validatedCandidates = [];
 
-    // Phase 1: Validate top 3 candidates
-    const INITIAL_CANDIDATES = 3;
-    const MAX_CANDIDATES = 5;
+    // v3.7: Check for auto-accept candidates (very high text score from trusted sources)
+    // These are obvious good matches that don't need vision validation
+    const topCandidate = scored[0];
+    if (topCandidate &&
+        topCandidate.score >= AUTO_ACCEPT_SCORE_THRESHOLD &&
+        (topCandidate.source === 'commons' || topCandidate.source === 'wikipedia') &&
+        (topCandidate.mime === 'image/svg+xml' || intent === 'labeled_diagram')) {
+      process.stdout.write(` [AUTO-ACCEPT:${topCandidate.score}]`);
+      return topCandidate;
+    }
 
-    for (let i = 0; i < Math.min(INITIAL_CANDIDATES, scored.length); i++) {
+    // Phase 1: Validate top candidates (reduced from 3 to save API calls)
+    for (let i = 0; i < Math.min(MAX_VISION_CANDIDATES, scored.length); i++) {
       const candidate = scored[i];
       if (candidate.score < MIN_ACCEPT_SCORE.default) continue;
+
+      // v3.7: Get canonical key for caching
+      const canonicalKey = candidate._canonicalKey || getCanonicalKey(candidate);
+      candidate._canonicalKey = canonicalKey;
 
       process.stdout.write(` [v${i + 1}]`);
       const validation = await validateImageWithAI(
         candidate.imageUrl,
         questionText,
         subject,
-        brief
+        brief,
+        canonicalKey  // v3.7: Pass canonical key for caching
       );
 
       candidate.aiValidation = validation;
@@ -1528,23 +1764,29 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
           : `${validation.score}<${minAIScore}`;
         process.stdout.write(` [AI:${shortReason}]`);
       }
-
-      await sleep(VISION_DELAY);
     }
 
-    // Phase 2: Escalate to remaining candidates (4 and 5) if no valid found
-    if (scored.length > INITIAL_CANDIDATES) {
+    // Phase 2: Escalate to more candidates only for high-priority intents
+    const isHighPriority = intent === 'labeled_diagram' ||
+                           intent === 'map' ||
+                           brief.riskProfile === 'human_vs_animal';
+
+    if (isHighPriority && scored.length > MAX_VISION_CANDIDATES) {
       process.stdout.write(` [escalating]`);
-      for (let i = INITIAL_CANDIDATES; i < Math.min(MAX_CANDIDATES, scored.length); i++) {
+      for (let i = MAX_VISION_CANDIDATES; i < Math.min(ESCALATE_VISION_TO, scored.length); i++) {
         const candidate = scored[i];
         if (candidate.score < MIN_ACCEPT_SCORE.default) continue;
+
+        const canonicalKey = candidate._canonicalKey || getCanonicalKey(candidate);
+        candidate._canonicalKey = canonicalKey;
 
         process.stdout.write(` [v${i + 1}]`);
         const validation = await validateImageWithAI(
           candidate.imageUrl,
           questionText,
           subject,
-          brief
+          brief,
+          canonicalKey
         );
 
         candidate.aiValidation = validation;
@@ -1557,8 +1799,6 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
         } else {
           process.stdout.write(` [AI:${validation.score}✗]`);
         }
-
-        await sleep(VISION_DELAY);
       }
     }
 
@@ -1758,33 +1998,37 @@ async function processBatch(questions, subject, chapterContext, usedImages, batc
 /**
  * Main function: process quiz file
  * v3.3: Added imagePolicy filtering, escalation state, and grammar question handling
+ * v3.7: Initialize vision cache, process ALL questions, remove old images on fail
  */
-async function processQuiz(quizPath, applyChanges = false, replaceExisting = false) {
+async function processQuiz(quizPath, applyChanges = false) {
   const quiz = JSON.parse(fs.readFileSync(quizPath, 'utf8'));
   const questions = quiz.questions || quiz.question_bank || [];
   const subject = quiz.subject || path.basename(path.dirname(quizPath));
   const chapterContext = quiz.title || quiz.chapter || '';
+
+  // v3.7: Initialize vision cache for this quiz
+  visionCache = new VisionCache(quizPath);
+  const cacheStats = visionCache.getStats();
 
   console.log(`\n${'='.repeat(60)}`);
   console.log(`Processing: ${path.basename(quizPath)}`);
   console.log(`Subject: ${subject}`);
   console.log(`Context: ${chapterContext}`);
   console.log(`Total questions: ${questions.length}`);
-  if (replaceExisting) console.log(`Mode: REPLACE ALL IMAGES`);
+  console.log(`Vision cache: ${cacheStats.size} entries loaded`);
+  console.log(`Rate limiter: ${GEMINI_RPM} RPM (${Math.ceil(60000/GEMINI_RPM/1000)}s between calls)`);
   console.log(`${'='.repeat(60)}`);
 
   const usedImages = new Set();
   const allResults = [];
   const escalationState = { count: 0 }; // v3.3: Track escalations across batches
 
-  // v3.3: Filter questions, but include grammar questions (they'll be handled with imagePolicy)
+  // v3.7: Process ALL questions that could have images
+  // Questions without valid images will have their old images removed
   const needsImage = questions.filter(q => {
     const skipTypes = ['matching', 'table_parse', 'ratio_table', 'data_table', 'fill_blank'];
     if (skipTypes.includes(q.type)) return false;
-    if (replaceExisting) return true;
-    const mediaItems = Array.isArray(q.media) ? q.media : (q.media ? [q.media] : []);
-    const hasImage = mediaItems.some(m => m.type === 'image' && m.src);
-    return !hasImage;
+    return true; // Process all eligible questions
   });
 
   // v3.3: Count grammar questions that will be skipped
@@ -1831,14 +2075,19 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
   }
   console.log(`${'='.repeat(60)}`);
 
-  if (applyChanges && successCount > 0) {
+  if (applyChanges) {
     const successResults = allResults.filter(r => r.success && r.imageUrl);
+    const failedResults = allResults.filter(r => !r.success && r.imagePolicy !== 'none');
     const resultMap = new Map(successResults.map(r => [r.questionId, r]));
+    const failedIds = new Set(failedResults.map(r => r.questionId));
+
+    let addedCount = 0;
+    let removedCount = 0;
 
     for (const q of questions) {
       const result = resultMap.get(q.id);
       if (result) {
-        // v3.4: Proper attribution per source
+        // v3.7: Add new valid image
         let caption = 'Bron: Wikimedia Commons';
         if (result.source === 'wikipedia') caption = 'Bron: Wikipedia';
         else if (result.source === 'unsplash') caption = result.attribution || 'Bron: Unsplash';
@@ -1849,7 +2098,7 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
           src: result.imageUrl,
           alt: result.title,
           caption,
-          _source: 'ai-v3.5',
+          _source: 'ai-v3.7',
           _imageSource: result.source || 'commons',
           _searchTerm: result.searchTerm,
           _imageIntent: result.imageIntent,
@@ -1857,12 +2106,37 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
           _score: result.score,
           _escalated: result.escalated || false,
         }];
+        addedCount++;
+      } else if (failedIds.has(q.id)) {
+        // v3.7: FAIL-CLOSED - Remove old image if no valid replacement found
+        // This ensures we don't keep stale/bad images
+        const hadImage = q.media && q.media.length > 0;
+        if (hadImage) {
+          delete q.media;
+          removedCount++;
+        }
       }
     }
 
     fs.writeFileSync(quizPath, JSON.stringify(quiz, null, 2));
-    console.log(`\n✓ Applied ${imageSuccessCount} images to ${path.basename(quizPath)}`);
+    console.log(`\n✓ Applied changes to ${path.basename(quizPath)}`);
+    console.log(`  - ${addedCount} images added/updated`);
+    if (removedCount > 0) {
+      console.log(`  - ${removedCount} old images removed (no valid replacement)`);
+    }
   }
+
+  // v3.7: Save vision cache
+  if (visionCache) {
+    visionCache.save();
+    const finalCacheStats = visionCache.getStats();
+    console.log(`\nCache stats: ${finalCacheStats.hits} hits, ${finalCacheStats.misses} misses, ${finalCacheStats.size} entries`);
+  }
+
+  // v3.7: Log rate limiter stats
+  const limiterStats = geminiLimiter.getStats();
+  console.log(`API calls: ${limiterStats.callCount} vision validations`);
+  console.log(`Tokens remaining: ${limiterStats.tokens}/${GEMINI_RPM}`);
 
   const outputPath = quizPath.replace('.json', '-ai-selections.json');
   fs.writeFileSync(outputPath, JSON.stringify({
@@ -1873,7 +2147,9 @@ async function processQuiz(quizPath, applyChanges = false, replaceExisting = fal
     escalationCount: escalationState.count,
     total: needsImage.length,
     timestamp: new Date().toISOString(),
-    version: 'v3.5',
+    version: 'v3.7',
+    cacheStats: visionCache ? visionCache.getStats() : null,
+    rateLimiterStats: geminiLimiter.getStats(),
   }, null, 2));
   console.log(`Results saved to: ${path.basename(outputPath)}`);
 
@@ -1889,7 +2165,8 @@ async function main() {
     console.error('Usage:');
     console.error('  GEMINI_API_KEY=key node ai-select-images.js --quiz <file.json>');
     console.error('  GEMINI_API_KEY=key node ai-select-images.js --quiz <file.json> --apply');
-    console.error('  GEMINI_API_KEY=key node ai-select-images.js --quiz <file.json> --replace --apply');
+    console.error('\nv3.7: All questions are re-evaluated. Valid images are kept/updated,');
+    console.error('      invalid images are removed. Use --apply to save changes.');
     process.exit(1);
   }
 
@@ -1906,9 +2183,8 @@ async function main() {
   }
 
   const applyChanges = args.includes('--apply');
-  const replaceExisting = args.includes('--replace');
 
-  await processQuiz(quizPath, applyChanges, replaceExisting);
+  await processQuiz(quizPath, applyChanges);
 }
 
 main().catch(console.error);

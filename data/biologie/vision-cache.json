@@ -1,0 +1,1765 @@
+{
+  "commons:396061": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected skeleton, got breast",
+      "issues": [],
+      "observations": "De afbeelding toont een doorsnede van een borst met labels. De labels verwijzen naar verschillende structuren binnen de borst.",
+      "predicted_concept": "breast",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519374156,
+    "expiresAt": 1770111374156
+  },
+  "commons:566928": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected skeleton, got embryonic development of the gut",
+      "issues": [],
+      "observations": "De afbeelding toont een diagram van de embryonale ontwikkeling van de darmen en de bijbehorende structuren zoals de lever, maag, pancreas, duodenum en mesenterium.",
+      "predicted_concept": "embryonic development of the gut",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519376431,
+    "expiresAt": 1770111376431
+  },
+  "commons:567152": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected skeleton, got breast",
+      "issues": [],
+      "observations": "De afbeelding toont een diagram van de borstklier met labels in het Engels.",
+      "predicted_concept": "breast",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519379030,
+    "expiresAt": 1770111379030
+  },
+  "commons:529635": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "De afbeelding toont een schematische weergave van het spijsverteringsstelsel, inclusief de maag, darmen en bloedvaten. Er zijn labels aanwezig, zoals 'Col' en 'M'.",
+      "predicted_concept": "digestive_system",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519381556,
+    "expiresAt": 1770111381556
+  },
+  "commons:566793": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected skeleton, got nasal cavity",
+      "issues": [],
+      "observations": "De afbeelding toont een dwarsdoorsnede van de neusholte en omliggende structuren, met labels in het Engels.",
+      "predicted_concept": "nasal cavity",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519384085,
+    "expiresAt": 1770111384085
+  },
+  "commons:43365110": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519399033,
+    "expiresAt": 1767605799033
+  },
+  "commons:43364020": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "De afbeelding is niet relevant voor de vraag. Het toont een bot in een knoop, wat geen informatie geeft over de stof die botten hardheid geeft.",
+      "issues": [],
+      "observations": "De afbeelding toont een bot die in een knoop is gelegd. Het is een zwart-wit illustratie.",
+      "predicted_concept": "bone",
+      "concept_matches": true,
+      "detected_subject": "unknown",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519408390,
+    "expiresAt": 1770111408390
+  },
+  "commons:27784531": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [
+        "Taal is niet Nederlands of Engels",
+        "Onleesbaar"
+      ],
+      "observations": "De afbeelding toont een schematische weergave van een menselijk skelet met Arabische tekst eromheen.",
+      "predicted_concept": "skeleton",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "text_heavy",
+      "readability": "poor",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519411372,
+    "expiresAt": 1770111411372
+  },
+  "commons:34864684": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected bone, got axilla",
+      "issues": [
+        "niet relevant voor de vraag",
+        "te complex"
+      ],
+      "observations": "De afbeelding toont een mindmap over de axilla (oksel). Er staan verschillende termen en definities in het Engels.",
+      "predicted_concept": "axilla",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519414165,
+    "expiresAt": 1770111414165
+  },
+  "commons:101214522": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected bone, got skull",
+      "issues": [],
+      "observations": "De afbeelding toont een diagram van een krokodillenschedel in verschillende aanzichten. De botten zijn ingekleurd en er is een legenda aanwezig.",
+      "predicted_concept": "skull",
+      "concept_matches": false,
+      "detected_subject": "animal",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519485039,
+    "expiresAt": 1770111485039
+  },
+  "commons:1530385": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "De afbeelding toont een gelabeld diagram van een menselijke schedel, met verschillende botten zoals het os frontale, os nasale, os parietale, os temporale, os sphenoidale, os lacrimale, os zygomaticum, os ethmoidale, maxilla en mandibula. De botten zijn in verschillende kleuren weergegeven en gelabeld met rode stippellijnen.",
+      "predicted_concept": "bone",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519487940,
+    "expiresAt": 1770111487940
+  },
+  "commons:6936350": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "De afbeelding toont een skelet, maar geeft geen informatie over de buigzaamheid van botten bij kinderen versus ouderen. Het is dus niet relevant voor de vraag.",
+      "issues": [],
+      "observations": "De afbeelding toont een gelabeld diagram van het menselijk skelet. De labels zijn in het Engels.",
+      "predicted_concept": "skeleton",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519498471,
+    "expiresAt": 1770111498471
+  },
+  "commons:125445771": {
+    "result": {
+      "valid": true,
+      "score": 80,
+      "reason": "De afbeelding toont een diagram van de botten in een hand, wat relevant is voor de vraag over botten en hun flexibiliteit. De labels zijn in het Engels, maar dit is acceptabel.",
+      "issues": [],
+      "observations": "De afbeelding toont een gelabeld diagram van de botten in een hand. De verschillende botten zijn benoemd met afkortingen.",
+      "predicted_concept": "bone",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519501273,
+    "expiresAt": 1770111501273
+  },
+  "commons:112426686": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Detected unknown, not human",
+      "issues": [],
+      "observations": "De afbeelding toont een gelabeld diagram van kraakbeenweefsel, met labels zoals chondrocyten, lacunae, nucleus, interterritoriale matrix, territoriale matrix en isogene groepen.",
+      "predicted_concept": "cartilage",
+      "concept_matches": true,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519512856,
+    "expiresAt": 1770111512856
+  },
+  "commons:792381": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Detected unknown, not human",
+      "issues": [],
+      "observations": "De afbeelding toont een microscopische weergave van cellen in een matrix. De cellen lijken ingebed in een vezelachtige structuur.",
+      "predicted_concept": "cartilage",
+      "concept_matches": true,
+      "detected_subject": "unknown",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519515654,
+    "expiresAt": 1770111515654
+  },
+  "commons:99534994": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519515669,
+    "expiresAt": 1767605915669
+  },
+  "commons:3720979": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: de, en",
+      "issues": [],
+      "observations": "De afbeelding toont een bovenaanzicht van een babyschedel met labels in het Duits en Engels die de fontanellen en sutures aangeven.",
+      "predicted_concept": "skull",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "de",
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519521346,
+    "expiresAt": 1770111521346
+  },
+  "commons:11304758": {
+    "result": {
+      "valid": true,
+      "score": 80,
+      "reason": "De afbeelding is duidelijk en relevant voor de vraag over fontanellen. Het is een eenvoudig diagram dat geschikt is voor de doelgroep.",
+      "issues": [],
+      "observations": "De afbeelding toont een bovenaanzicht van de schedel van een baby, met de occipitale fontanel aangegeven. De lijnen suggereren de groei van de schedelplaten.",
+      "predicted_concept": "baby_skull",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519523872,
+    "expiresAt": 1770111523872
+  },
+  "commons:11304759": {
+    "result": {
+      "valid": true,
+      "score": 90,
+      "reason": "De afbeelding is duidelijk en relevant voor de vraag over beenverbindingen die geen beweging toelaten. De schedelnaden zijn een goed voorbeeld van een dergelijke verbinding. De afbeelding is geschikt voor de doelgroep.",
+      "issues": [],
+      "observations": "De afbeelding toont een bovenaanzicht van de schedel van een baby, met labels voor de frontale suture en de occipitale fontanel. De schedelplaten zijn duidelijk zichtbaar en de naden ertussen zijn aangegeven.",
+      "predicted_concept": "skull sutures",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519530123,
+    "expiresAt": 1770111530123
+  },
+  "commons:131916808": {
+    "result": {
+      "valid": true,
+      "score": 90,
+      "reason": "De afbeelding is duidelijk, relevant en geschikt voor de doelgroep. Het toont een wervelkolom met de annulus fibrosus en nucleus pulposus, wat relevant is voor de vraag over beenverbindingen die enige beweging toelaten.",
+      "issues": [],
+      "observations": "De afbeelding toont een gelabeld diagram van een wervelkolom met de annulus fibrosus en nucleus pulposus aangeduid. Er zijn twee aanzichten van de wervel afgebeeld.",
+      "predicted_concept": "intervertebral disc",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519601933,
+    "expiresAt": 1770111601933
+  },
+  "commons:144906111": {
+    "result": {
+      "valid": true,
+      "score": 85,
+      "reason": "De afbeelding is relevant voor de vraag over botcellen en is geschikt voor middelbare scholieren. De microscopische opnames tonen verschillende structuren van botweefsel, wat helpt bij het begrijpen van de organisatie van botcellen.",
+      "issues": [],
+      "observations": "De afbeelding toont verschillende microscopische opnames van botweefsel, met aanduidingen van structuren zoals 'ivs' (intervasculaire ruimte), 'its' (interstitiële ruimte), 'rl' (rustlijn), 'Hc' (Havers kanaal) en 'Shf' (Sharpey's vezels). De opnames zijn gemaakt met verschillende technieken, wat resulteert in variërende kleuren en details.",
+      "predicted_concept": "bone_tissue",
+      "concept_matches": true,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519609769,
+    "expiresAt": 1770111609769
+  },
+  "commons:158069888": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected bone, got cell_interactions",
+      "issues": [
+        "te complex voor de doelgroep",
+        "geen duidelijke relatie met de vraag over collageen in botweefsel"
+      ],
+      "observations": "De afbeelding toont een diagram van de interacties tussen verschillende celtypen (fibrocyten, macrofagen, monocyten) in verschillende organen en systemen (beenmerg, bloed, lymfestelsel, weefsel, milt). De diagram is gelabeld met de namen van de celtypen en organen, en pijlen geven de richting van de interacties aan.",
+      "predicted_concept": "cell_interactions",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "complex",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519618037,
+    "expiresAt": 1770111618037
+  },
+  "commons:172411106": {
+    "result": {
+      "valid": true,
+      "score": 70,
+      "reason": "De afbeelding is relevant voor het onderwerp botweefsel, omdat tanden ook botweefsel bevatten. De afbeelding is duidelijk en informatief, en geschikt voor middelbare scholieren.",
+      "issues": [],
+      "observations": "De afbeelding toont de verschillende stadia van tandontwikkeling, van de cap stage tot de root development stage. De stadia zijn gelabeld en de verschillende structuren zijn aangegeven.",
+      "predicted_concept": "tooth_development",
+      "concept_matches": true,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519621741,
+    "expiresAt": 1770111621741
+  },
+  "commons:43362636": {
+    "result": {
+      "valid": true,
+      "score": 70,
+      "reason": "De afbeelding toont een heupgewricht, wat relevant is voor de vraag over gewrichten en beweging. Het is een duidelijk diagram dat geschikt is voor de doelgroep.",
+      "issues": [],
+      "observations": "De afbeelding toont een doorsnede van een heupgewricht met labels a, b, c en L.T.",
+      "predicted_concept": "hip joint",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519655895,
+    "expiresAt": 1770111655895
+  },
+  "commons:30131668": {
+    "result": {
+      "valid": true,
+      "score": 95,
+      "reason": "De afbeelding is duidelijk, informatief en relevant voor het onderwerp biologie voor middelbare scholieren. De labels zijn in het Engels, maar dit is acceptabel omdat de vraag ook in het Engels is gesteld.",
+      "issues": [],
+      "observations": "De afbeelding toont een schematische weergave van het menselijk skelet, met verschillende soorten gewrichten aangeduid en uitvergroot. De gewrichten zijn gelabeld met hun naam en locatie.",
+      "predicted_concept": "types of joints",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519661866,
+    "expiresAt": 1770111661866
+  },
+  "commons:157018874": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Detected unknown, not human",
+      "issues": [],
+      "observations": "De afbeelding toont een diagram van de rol van VEGF (Vascular Endothelial Growth Factor) in verschillende celtypen en processen die betrokken zijn bij de pathologie van gewrichtsaandoeningen. Het laat zien hoe VEGF interageert met endotheelcellen, fibroblast-achtige synoviocyten, macrofagen, osteoclasten en chondrocyten, en de effecten daarvan op processen zoals angiogenese, ontsteking, botverlies en weefseldestructie.",
+      "predicted_concept": "VEGF role in joint pathology",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "complex",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519668659,
+    "expiresAt": 1770111668659
+  },
+  "commons:31015005": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519675850,
+    "expiresAt": 1767606075850
+  },
+  "commons:40173050": {
+    "result": {
+      "valid": true,
+      "score": 85,
+      "reason": "De afbeelding is een duidelijk gelabeld diagram van een kniegewricht met beschadigd kraakbeen, wat relevant is voor de vraag over verminderd gewrichtssmeer en de gevolgen daarvan. Het is geschikt voor de doelgroep.",
+      "issues": [],
+      "observations": "De afbeelding toont een schematische weergave van een kniegewricht met aanduidingen van verschillende structuren zoals spieren, ligamenten, botten, kraakbeen en gewrichtsvloeistof. Er is sprake van beschadigd kraakbeen en botsporen.",
+      "predicted_concept": "knee_joint",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519679009,
+    "expiresAt": 1770111679009
+  },
+  "commons:30774109": {
+    "result": {
+      "valid": true,
+      "score": 85,
+      "reason": "De afbeelding is duidelijk, relevant en geschikt voor de doelgroep. Het toont een wervel met tussenwervelschijven, wat aansluit bij de vraag.",
+      "issues": [],
+      "observations": "De afbeelding toont een gelabeld diagram van een deel van de wervelkolom, met de tussenwervelschijven duidelijk zichtbaar. De labels zijn genummerd en verwijzen naar verschillende onderdelen van de wervels en de tussenliggende structuren.",
+      "predicted_concept": "vertebra",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519688669,
+    "expiresAt": 1770111688669
+  },
+  "commons:43335176": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "De afbeelding toont een anatomische doorsnede van het vrouwelijke bekkengebied, met aanduidingen van verschillende organen en structuren.",
+      "predicted_concept": "female_anatomy",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519715020,
+    "expiresAt": 1770111715020
+  },
+  "commons:43339123": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected bone, got pelvic_viscera",
+      "issues": [
+        "te complex",
+        "niet relevant voor de vraag"
+      ],
+      "observations": "De afbeelding toont een anatomische tekening van de mannelijke bekkenorganen, inclusief de blaas, prostaat, rectum en omliggende structuren. De tekening is gedetailleerd en gelabeld.",
+      "predicted_concept": "pelvic_viscera",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "complex",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519719061,
+    "expiresAt": 1770111719061
+  },
+  "commons:43366649": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected bone, got unknown",
+      "issues": [],
+      "observations": "Ik zie een schematische tekening van een apparaat met verschillende onderdelen aangeduid met letters. Het lijkt geen biologische afbeelding te zijn.",
+      "predicted_concept": "unknown",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519722080,
+    "expiresAt": 1770111722080
+  },
+  "commons:43352919": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected bone, got nervous_system",
+      "issues": [],
+      "observations": "De afbeelding toont een schematische weergave van een deel van het zenuwstelsel in relatie tot de urethra en andere structuren. Er zijn labels in het Engels aanwezig.",
+      "predicted_concept": "nervous_system",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519725047,
+    "expiresAt": 1770111725047
+  },
+  "commons:38718683": {
+    "result": {
+      "valid": true,
+      "score": 85,
+      "reason": "De afbeelding is duidelijk en relevant voor de vraag over spieren en botten. Het is een eenvoudige weergave van de biceps, geschikt voor de doelgroep.",
+      "issues": [],
+      "observations": "De afbeelding toont een schematische weergave van een arm met de biceps spier. De spier is in oranje weergegeven en de botten in beige.",
+      "predicted_concept": "biceps",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519732216,
+    "expiresAt": 1770111732216
+  },
+  "commons:43727686": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected muscle, got brain",
+      "issues": [
+        "te complex",
+        "niet relevant voor de vraag"
+      ],
+      "observations": "De afbeelding toont een schematische weergave van de hersenen en de oogspieren, met aanduidingen van verschillende structuren en zenuwbanen. Er is veel tekst in de afbeelding.",
+      "predicted_concept": "brain",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "complex",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519739506,
+    "expiresAt": 1770111739506
+  },
+  "commons:64290345": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Not age-appropriate: moderate complexity",
+      "issues": [
+        "Niet geschikt voor middelbare scholieren vanwege de expliciete weergave van de mannelijke geslachtsorganen."
+      ],
+      "observations": "De afbeelding toont een anatomisch diagram van de mannelijke perineum met labels voor verschillende spieren, waaronder de ischiocavernosus, bulbospongiosus, transverse perineal muscles, levator ani en gluteus maximus. De penis en anus zijn ook gelabeld.",
+      "predicted_concept": "muscle",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519743146,
+    "expiresAt": 1770111743146
+  },
+  "commons:30015046": {
+    "result": {
+      "valid": true,
+      "score": 95,
+      "reason": "De afbeelding is duidelijk en relevant voor de vraag. Het laat de verschillende soorten spiercontracties zien tijdens een biceps curl.",
+      "issues": [],
+      "observations": "De afbeelding toont een diagram van een arm die een dumbbell optilt. Het diagram laat zien wat er met de spier gebeurt tijdens concentrische, excentrische en isometrische contracties.",
+      "predicted_concept": "muscle",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519745650,
+    "expiresAt": 1770111745650
+  },
+  "commons:43361460": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "De afbeelding toont een diagram van de oogspieren en hun posities. Er staan verschillende labels bij de lijnen en cirkels.",
+      "predicted_concept": "eye_muscles",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519753639,
+    "expiresAt": 1770111753639
+  },
+  "unsplash:DuEHkSHvXUQ": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "De afbeelding toont een anatomisch model van de menselijke romp, met zichtbare spieren en ribben. De spieren zijn in rood weergegeven en de ribben in wit/beige.",
+      "predicted_concept": "muscle",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519756103,
+    "expiresAt": 1770111756103
+  },
+  "commons:43361365": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "De afbeelding toont een schematische weergave van twee benen met spieren en zenuwbanen. Er zijn labels zoals 'R' en 'L' voor rechts en links, en andere Griekse letters.",
+      "predicted_concept": "antagonistic muscles",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519769213,
+    "expiresAt": 1770111769213
+  },
+  "commons:146807282": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected antagonist_muscle, got human_anatomy",
+      "issues": [],
+      "observations": "Ik zie een diagram van een menselijk lichaam met de skeletstructuur en interne organen, waaronder de hersenen, longen, lever, darmen en blaas.",
+      "predicted_concept": "human_anatomy",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519837252,
+    "expiresAt": 1770111837252
+  },
+  "commons:159341755": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519837311,
+    "expiresAt": 1767606237311
+  },
+  "commons:38718790": {
+    "result": {
+      "valid": true,
+      "score": 75,
+      "reason": "De afbeelding is een duidelijke schematische weergave van de biceps en triceps, relevant voor de vraag over antagonistische spieren. De tekst is in het Engels, maar dit is acceptabel. De complexiteit is geschikt voor de doelgroep.",
+      "issues": [],
+      "observations": "De afbeelding toont een schematische weergave van een arm met de spieren (biceps en triceps) en botten (schouderblad, opperarmbeen, ellepijp en spaakbeen). Er staat tekst onderaan: \"biceps/triceps animation (contraction/relaxation)\".",
+      "predicted_concept": "biceps_triceps",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519840162,
+    "expiresAt": 1770111840162
+  },
+  "commons:2831602": {
+    "result": {
+      "valid": true,
+      "score": 85,
+      "reason": "De afbeelding is een duidelijk gelabeld diagram van de spieren in het bovenbeen, inclusief de biceps femoris. Het is geschikt voor middelbare scholieren en relevant voor de vraag over biceps en triceps als antagonistisch paar.",
+      "issues": [],
+      "observations": "De afbeelding toont een anatomische illustratie van de spieren in het bovenbeen, met de biceps femoris in het rood gemarkeerd. Verschillende spieren en pezen zijn gelabeld.",
+      "predicted_concept": "biceps_femoris",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519848334,
+    "expiresAt": 1770111848334
+  },
+  "commons:23267893": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Banned content type: music_instrument",
+      "issues": [],
+      "observations": "Een hand die een gitaar bespeelt. De vingers drukken snaren in op de hals van de gitaar.",
+      "predicted_concept": "music_instrument",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "music_instrument",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519861981,
+    "expiresAt": 1770111861981
+  },
+  "commons:30343877": {
+    "result": {
+      "valid": true,
+      "score": 75,
+      "reason": "De afbeelding illustreert een geautomatiseerde beweging, namelijk het typen op een toetsenbord. Dit is een goed voorbeeld van motorisch geheugen, waarbij de bewegingen vloeiend en automatisch worden uitgevoerd.",
+      "issues": [],
+      "observations": "De afbeelding toont een close-up van een toetsenbord met twee handen die toetsen indrukken. De toetsen zijn verlicht en de handen zijn in beweging.",
+      "predicted_concept": "motor_skill",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519864927,
+    "expiresAt": 1770111864927
+  },
+  "commons:1546709": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected movement, got basal ganglia circuitry",
+      "issues": [
+        "te complex voor de doelgroep",
+        "geen duidelijke relatie met coördinatie van beweging"
+      ],
+      "observations": "De afbeelding toont een diagram van de basale ganglia en hun verbindingen, met pijlen die excitatie en inhibitie aangeven. Verschillende hersengebieden zoals de substantia nigra, corpus striatum, globus pallidus en hypothalamus zijn gelabeld.",
+      "predicted_concept": "basal ganglia circuitry",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "complex",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519879947,
+    "expiresAt": 1770111879947
+  },
+  "commons:166074541": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: de",
+      "issues": [
+        "taal is Duits"
+      ],
+      "observations": "Ik zie een diagram met pijlen en tekst in het Duits. Het lijkt een schema te zijn van spiercontrole.",
+      "predicted_concept": "muscle control diagram",
+      "concept_matches": true,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "de"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519882340,
+    "expiresAt": 1770111882340
+  },
+  "commons:86584453": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected movement, got circular vection",
+      "issues": [],
+      "observations": "De afbeelding toont drie hoofden. De eerste heeft een stippellijn eromheen, de tweede is alleen een hoofd en de derde heeft een grijze cirkel eromheen met de tekst 'Circular vection'.",
+      "predicted_concept": "circular vection",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519884893,
+    "expiresAt": 1770111884893
+  },
+  "commons:30148005": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected movement, got sound localization",
+      "issues": [],
+      "observations": "De afbeelding toont een schematische weergave van hoe geluid door de oren wordt waargenomen en hoe de hersenen de verschillen in geluidsintensiteit en aankomsttijd gebruiken om de locatie van een geluidsbron te bepalen. Er zijn twee scenario's: één waarbij het geluid beide oren tegelijkertijd bereikt en één waarbij het geluid het ene oor eerder en luider bereikt dan het andere.",
+      "predicted_concept": "sound localization",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519888457,
+    "expiresAt": 1770111888457
+  },
+  "commons:14643526": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Detected unknown, not human",
+      "issues": [],
+      "observations": "De afbeelding toont een blokdiagram van een spiercontrole systeem. Het diagram bevat verschillende componenten zoals interneuronen, spieren, pezen, en spindels, met feedback loops die de spierlengte en kracht regelen.",
+      "predicted_concept": "muscle control system",
+      "concept_matches": true,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519891299,
+    "expiresAt": 1770111891299
+  },
+  "commons:136209569": {
+    "result": {
+      "valid": true,
+      "score": 90,
+      "reason": "De afbeelding toont mensen die aan het sporten zijn, wat goed past bij de vraag over lichaamsbeweging en gezondheid. De afbeelding is duidelijk en geschikt voor de doelgroep.",
+      "issues": [],
+      "observations": "Ik zie een groep mensen die aan het hardlopen zijn in een stedelijke omgeving. Er staan bomen langs de weg.",
+      "predicted_concept": "exercise",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519896463,
+    "expiresAt": 1770111896463
+  },
+  "commons:67514931": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "Een foto van een marineband in witte uniformen die op een pier staat, met schepen op de achtergrond. De bandleden hebben muziekinstrumenten in hun handen.",
+      "predicted_concept": "military band",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519914890,
+    "expiresAt": 1770111914890
+  },
+  "commons:67514932": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "Ik zie een oorlogsschip met mensen aan boord. Op de voorgrond is een meerpaal te zien.",
+      "predicted_concept": "warship",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519917220,
+    "expiresAt": 1770111917220
+  },
+  "commons:67514933": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519917240,
+    "expiresAt": 1767606317240
+  },
+  "commons:144560181": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519925726,
+    "expiresAt": 1767606325726
+  },
+  "commons:35991379": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519925785,
+    "expiresAt": 1767606325785
+  },
+  "commons:179972407": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519925803,
+    "expiresAt": 1767606325803
+  },
+  "commons:43368882": {
+    "result": {
+      "valid": true,
+      "score": 90,
+      "reason": "De afbeelding toont een grafiek die de temperatuur van de onderarm weergeeft over een periode van 4 uur, met intervallen van 1 uur tussen de groepen oefeningen. Dit is relevant voor de vraag over hoe lang er maximaal tussen warming-up en wedstrijd/training mag zitten voordat spieren weer afkoelen. De tekst geeft aan dat er intervallen van ongeveer 1 uur zijn tussen de groepen oefeningen.",
+      "issues": [],
+      "observations": "De afbeelding toont een grafiek die de oppervlakte temperatuur van de onderarm weergeeft, opgenomen door een air-thermograph. Er zijn vier groepen met intervallen van ongeveer 1 uur, elk van 30 grepen bij 20 kilogram van de dynamograaf.",
+      "predicted_concept": "muscle",
+      "concept_matches": true,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "diagram",
+      "image_type": "diagram",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519932539,
+    "expiresAt": 1770111932539
+  },
+  "commons:51087601": {
+    "result": {
+      "valid": true,
+      "score": 60,
+      "reason": "De afbeelding toont mensen die rek- en strekoefeningen doen, wat relevant is voor de vraag. De afbeelding is duidelijk en niet te complex voor de doelgroep.",
+      "issues": [],
+      "observations": "De foto toont een groep mensen die op een sportveld zitten en rek- en strekoefeningen doen. Een van hen draagt een militair uniform.",
+      "predicted_concept": "stretching",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767519939749,
+    "expiresAt": 1770111939749
+  },
+  "commons:67514935": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "De afbeelding toont geen cooling-down of iets dat gerelateerd is aan sport of biologie. Het is een foto van een handdruk.",
+      "issues": [],
+      "observations": "Twee mannen in uniform schudden elkaar de hand en houden een ingelijste foto vast. Er staat nog een persoon op de achtergrond.",
+      "predicted_concept": "handshake",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519945381,
+    "expiresAt": 1770111945381
+  },
+  "commons:67514936": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "De afbeelding toont geen cooling-down of iets dat gerelateerd is aan de vraag over de reden voor een cooling-down.",
+      "issues": [],
+      "observations": "Twee mannen in uniform schudden elkaar de hand en een van hen houdt een gouden model van een zeilboot vast. De achtergrond is een gordijn en een airconditioning.",
+      "predicted_concept": "men in uniform",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767519948248,
+    "expiresAt": 1770111948248
+  },
+  "commons:67514937": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519948263,
+    "expiresAt": 1767606348263
+  },
+  "commons:15061409": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519955684,
+    "expiresAt": 1767606355684
+  },
+  "commons:144895345": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519955735,
+    "expiresAt": 1767606355735
+  },
+  "commons:104497480": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519955749,
+    "expiresAt": 1767606355749
+  },
+  "commons:86384402": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519959071,
+    "expiresAt": 1767606359071
+  },
+  "commons:87644670": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519959088,
+    "expiresAt": 1767606359088
+  },
+  "commons:87002576": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519959105,
+    "expiresAt": 1767606359105
+  },
+  "commons:24622106": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519962627,
+    "expiresAt": 1767606362627
+  },
+  "commons:129114607": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519962644,
+    "expiresAt": 1767606362644
+  },
+  "commons:129114617": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519962659,
+    "expiresAt": 1767606362659
+  },
+  "title:repetitive_strain_injury": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519969178,
+    "expiresAt": 1767606369178
+  },
+  "unsplash:rvH_nOBMBoY": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected rsi, got diseased_lungs",
+      "issues": [],
+      "observations": "De afbeelding toont twee longen met gaten erin. Het lijkt een medische illustratie van beschadigde longen.",
+      "predicted_concept": "diseased_lungs",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519974877,
+    "expiresAt": 1770111974877
+  },
+  "commons:4019902": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519974937,
+    "expiresAt": 1767606374937
+  },
+  "unsplash:D5HLtyfphrE": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Banned content type: abstract_art",
+      "issues": [],
+      "observations": "De afbeelding toont een abstracte weergave van een menselijk lichaam, mogelijk een skelet met zenuwbanen. De weergave is artistiek en niet direct anatomisch correct.",
+      "predicted_concept": "abstract_art",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "abstract_art",
+      "image_type": "photo",
+      "readability": "ok",
+      "complexity_level": "moderate",
+      "age_appropriate": false,
+      "hardReject": true
+    },
+    "cachedAt": 1767519977605,
+    "expiresAt": 1770111977605
+  },
+  "commons:31418026": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Could not download image",
+      "hardReject": true
+    },
+    "cachedAt": 1767519981757,
+    "expiresAt": 1767606381757
+  },
+  "unsplash:zOlroafBElA": {
+    "result": {
+      "valid": true,
+      "score": 85,
+      "reason": "De afbeelding toont een man in een zithouding aan een bureau, wat relevant is voor de vraag over een goede zithouding. De afbeelding is duidelijk en geschikt voor de doelgroep.",
+      "issues": [],
+      "observations": "Een man zit aan een bureau en werkt op een computer. De afbeelding toont een ergonomische werkplek met een verstelbaar bureau en een bureaustoel.",
+      "predicted_concept": "sitting_posture",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767520000884,
+    "expiresAt": 1770112000884
+  },
+  "commons:2709967": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected rsi, got mobile phone",
+      "issues": [],
+      "observations": "De afbeelding toont een Nokia N95 telefoon. Op het scherm van de telefoon is een man te zien die een vredesteken maakt.",
+      "predicted_concept": "mobile phone",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767520009410,
+    "expiresAt": 1770112009410
+  },
+  "commons:2904322": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected rsi, got mobile_phone",
+      "issues": [],
+      "observations": "De afbeelding toont een Nokia N95 mobiele telefoon. Op het scherm van de telefoon is een man te zien die een vredesteken maakt.",
+      "predicted_concept": "mobile_phone",
+      "concept_matches": false,
+      "detected_subject": "human",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767520012072,
+    "expiresAt": 1770112012072
+  },
+  "commons:4516144": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected rsi, got camera",
+      "issues": [],
+      "observations": "Ik zie een foto van een Nokia camera telefoon. Er staat 'Nokia' op de telefoon.",
+      "predicted_concept": "camera",
+      "concept_matches": false,
+      "detected_subject": "unknown",
+      "has_text": true,
+      "text_languages": [
+        "en"
+      ],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767520014947,
+    "expiresAt": 1770112014947
+  },
+  "unsplash:heqtKCTxsJA": {
+    "result": {
+      "valid": true,
+      "score": 90,
+      "reason": "De afbeelding is duidelijk en relevant voor de vraag over het gebruik van pinguïnvleugels in het water. Het is geschikt voor de doelgroep.",
+      "issues": [],
+      "observations": "De afbeelding toont een pinguïn die onder water zwemt. De pinguïn gebruikt zijn vleugels om zich voort te bewegen.",
+      "predicted_concept": "penguin swimming",
+      "concept_matches": true,
+      "detected_subject": "animal",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767520020354,
+    "expiresAt": 1770112020354
+  },
+  "commons:9708450": {
+    "result": {
+      "valid": true,
+      "score": 75,
+      "reason": "De afbeelding is een foto van een pinguïn, wat relevant is voor de vraag over de waggelende gang van pinguïns. De afbeelding is duidelijk en niet te complex voor de doelgroep.",
+      "issues": [],
+      "observations": "De afbeelding toont een pinguïn die op een besneeuwde ondergrond staat. Op de achtergrond is water met ijsbergen te zien.",
+      "predicted_concept": "penguin",
+      "concept_matches": true,
+      "detected_subject": "animal",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767520025137,
+    "expiresAt": 1770112025137
+  },
+  "commons:79605601": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Non-NL/EN text detected: other",
+      "issues": [],
+      "observations": "De afbeelding toont een diagram van een vogelvleugel, met nummers die naar verschillende delen van de vleugel wijzen. De vleugel is in verschillende delen verdeeld.",
+      "predicted_concept": "wing",
+      "concept_matches": true,
+      "detected_subject": "animal",
+      "has_text": true,
+      "text_languages": [
+        "other"
+      ],
+      "content_type": "labeled_diagram",
+      "image_type": "labeled_diagram",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767520030359,
+    "expiresAt": 1770112030359
+  },
+  "commons:24445383": {
+    "result": {
+      "valid": false,
+      "score": 0,
+      "reason": "Concept mismatch: expected elbow, got dead fish",
+      "issues": [],
+      "observations": "Ik zie een foto van een waterkant met veel dode vissen. Er is geen anatomisch diagram van een pinguïnvleugel te zien.",
+      "predicted_concept": "dead fish",
+      "concept_matches": false,
+      "detected_subject": "animal",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "simple",
+      "age_appropriate": true,
+      "hardReject": true
+    },
+    "cachedAt": 1767520034483,
+    "expiresAt": 1770112034483
+  },
+  "commons:49411617": {
+    "result": {
+      "valid": true,
+      "score": 90,
+      "reason": "De afbeelding is duidelijk, informatief en relevant voor biologieonderwijs op middelbare schoolniveau. Het toont het skelet, wat een belangrijk onderdeel is van de studie van het menselijk lichaam.",
+      "issues": [],
+      "observations": "De afbeelding toont een posterieure weergave van het menselijk skelet, met de nadruk op de schedel, wervelkolom, ribbenkast, schouderbladen en bovenarmen. De botten zijn in detail weergegeven.",
+      "predicted_concept": "skeleton",
+      "concept_matches": true,
+      "detected_subject": "human",
+      "has_text": false,
+      "text_languages": [],
+      "content_type": "photo",
+      "image_type": "photo",
+      "readability": "good",
+      "complexity_level": "moderate",
+      "age_appropriate": true,
+      "hardReject": false
+    },
+    "cachedAt": 1767520049187,
+    "expiresAt": 1770112049187
+  }
+}
