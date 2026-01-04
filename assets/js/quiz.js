@@ -453,10 +453,13 @@ async function renderQuestion() {
   state.partialScore = 0;
   state.maxPartialScore = 0;
 
-  // Load image from static media array in JSON
-  if (!q.image && Array.isArray(q.media) && q.media[0]?.type === "image" && q.media[0]?.src) {
-    q.image = q.media[0].src;
-    q.imageAlt = q.media[0].alt || "Afbeelding bij vraag";
+  // Load image from static media in JSON (supports both object and array format, url or src)
+  if (!q.image && q.media) {
+    const mediaItem = Array.isArray(q.media) ? q.media[0] : q.media;
+    if (mediaItem?.type === "image") {
+      q.image = mediaItem.src || mediaItem.url;
+      q.imageAlt = mediaItem.alt || "Afbeelding bij vraag";
+    }
   }
 
   // Toggle wider layout for questions with images

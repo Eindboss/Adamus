@@ -16,7 +16,13 @@
         "Afvalstoffen afvoeren"
       ],
       "c": 3,
-      "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd."
+      "e": "Het skelet zorgt voor stevigheid, beweging en bescherming. Afvalstoffen worden vooral via bloed, nieren, longen en huid afgevoerd.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q002",
@@ -29,7 +35,13 @@
         "Sleutelbeen en schouderblad"
       ],
       "c": 0,
-      "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel."
+      "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Pivot_joint.svg",
+        "alt": "Schema van een rolgewricht",
+        "source": "commons"
+      }
     },
     {
       "id": "q003",
@@ -42,7 +54,13 @@
         "Huidvet"
       ],
       "c": 1,
-      "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam."
+      "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Osteon.svg/800px-Osteon.svg.png",
+        "alt": "Bouw van compact botweefsel (osteon/Havers-systeem)",
+        "source": "commons"
+      }
     },
     {
       "id": "q004",
@@ -55,7 +73,13 @@
         "Meer water in de gewrichtskom"
       ],
       "c": 1,
-      "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer."
+      "e": "Bij kinderen relatief meer collageen en minder kalk: daardoor buigzamer. Bij ouderen minder collageen en meer kalk: harder maar brozer.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Osteon.svg/800px-Osteon.svg.png",
+        "alt": "Bouw van compact botweefsel (osteon/Havers-systeem)",
+        "source": "commons"
+      }
     },
     {
       "id": "q005",
@@ -81,7 +105,13 @@
         "Ze blijven altijd open"
       ],
       "c": 2,
-      "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien."
+      "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q007",
@@ -94,7 +124,13 @@
         "Kogelgewricht in de heup"
       ],
       "c": 2,
-      "e": "Een naad is onbeweeglijk. Kraakbeenverbindingen laten een beetje beweging toe; gewrichten veel."
+      "e": "Een naad is onbeweeglijk. Kraakbeenverbindingen laten een beetje beweging toe; gewrichten veel.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ball_and_socket_joint.svg",
+        "alt": "Schema van een kogelgewricht",
+        "source": "commons"
+      }
     },
     {
       "id": "q008",
@@ -120,7 +156,13 @@
         "Botcellen zitten alleen in kraakbeen"
       ],
       "c": 0,
-      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten)."
+      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten).",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q010",
@@ -133,7 +175,13 @@
         "warmteproductie"
       ],
       "c": 1,
-      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten."
+      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Osteon.svg/800px-Osteon.svg.png",
+        "alt": "Bouw van compact botweefsel (osteon/Havers-systeem)",
+        "source": "commons"
+      }
     },
     {
       "id": "q011",
@@ -152,7 +200,13 @@
         "Ze produceren bloed"
       ],
       "c": 1,
-      "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen."
+      "e": "Kraakbeenlaagjes werken als gladde beschermlaag: minder wrijving/slijtage en soepeler bewegen.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q013",
@@ -165,7 +219,13 @@
         "Vormt nieuwe botten"
       ],
       "c": 1,
-      "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat."
+      "e": "Het kapsel houdt botten bij elkaar en produceert gewrichtssmeer, waardoor bewegen soepeler gaat.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Osteon.svg/800px-Osteon.svg.png",
+        "alt": "Bouw van compact botweefsel (osteon/Havers-systeem)",
+        "source": "commons"
+      }
     },
     {
       "id": "q014",
@@ -178,7 +238,13 @@
         "tussen twee wervels"
       ],
       "c": 2,
-      "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk."
+      "e": "Schouder (en heup) zijn kogelgewrichten: beweging in veel richtingen mogelijk.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gray_111_-_Vertebral_column.png/800px-Gray_111_-_Vertebral_column.png",
+        "alt": "Wervelkolom (anatomische tekening)",
+        "source": "commons"
+      }
     },
     {
       "id": "q015",
@@ -191,7 +257,13 @@
         "Open- en dichtklappen van een deur"
       ],
       "c": 2,
-      "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp)."
+      "e": "Bij een rolgewricht draait het ene bot in de lengteas om het andere (spaakbeen/ellepijp).",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Carpal_tunnel_syndrome.svg/800px-Carpal_tunnel_syndrome.svg.png",
+        "alt": "Overbelasting/RSI: voorbeeld bij de pols (carpale tunnel)",
+        "source": "commons"
+      }
     },
     {
       "id": "q016",
@@ -204,7 +276,13 @@
         "Knie = kraakbeenverbinding; schouder = naad"
       ],
       "c": 1,
-      "e": "De knie is een scharniergewricht (heen en weer). De schouder is een kogelgewricht (veel richtingen)."
+      "e": "De knie is een scharniergewricht (heen en weer). De schouder is een kogelgewricht (veel richtingen).",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ball_and_socket_joint.svg",
+        "alt": "Schema van een kogelgewricht",
+        "source": "commons"
+      }
     },
     {
       "id": "q017",
@@ -217,7 +295,13 @@
         "Spieren worden dikker"
       ],
       "c": 1,
-      "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen."
+      "e": "Minder gewrichtssmeer betekent meer wrijving; bewegen gaat stroever en slijtage kan toenemen.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q018",
@@ -243,7 +327,13 @@
         "Ze zorgen voor bloedtransport"
       ],
       "c": 1,
-      "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering)."
+      "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering).",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Intervertebral_disc.svg/800px-Intervertebral_disc.svg.png",
+        "alt": "Tussenwervelschijf met gelkern en ring",
+        "source": "commons"
+      }
     },
     {
       "id": "q020",
@@ -256,7 +346,13 @@
         "Je botten worden zachter"
       ],
       "c": 1,
-      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen."
+      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gray_111_-_Vertebral_column.png/800px-Gray_111_-_Vertebral_column.png",
+        "alt": "Wervelkolom (anatomische tekening)",
+        "source": "commons"
+      }
     },
     {
       "id": "q021",
@@ -269,7 +365,13 @@
         "tussencelstof"
       ],
       "c": 1,
-      "e": "Spieren zitten met pezen aan botten vast."
+      "e": "Spieren zitten met pezen aan botten vast.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q022",
@@ -282,7 +384,13 @@
         "kraakbeen vormt"
       ],
       "c": 1,
-      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe."
+      "e": "Spieren kunnen niet duwen; door samentrekken trekken ze botten naar elkaar toe.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q023",
@@ -295,7 +403,13 @@
         "Wordt vloeibaar"
       ],
       "c": 1,
-      "e": "Bij samentrekking wordt de spier korter en dikker."
+      "e": "Bij samentrekking wordt de spier korter en dikker.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Osteon.svg/800px-Osteon.svg.png",
+        "alt": "Bouw van compact botweefsel (osteon/Havers-systeem)",
+        "source": "commons"
+      }
     },
     {
       "id": "q024",
@@ -308,7 +422,13 @@
         "Omdat pezen anders niet bestaan"
       ],
       "c": 1,
-      "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken."
+      "e": "Voor tegengestelde bewegingen (buigen/strekken) heb je twee spieren nodig, want een spier kan alleen trekken.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Biceps_triceps_muscles.svg/800px-Biceps_triceps_muscles.svg.png",
+        "alt": "Biceps en triceps in de bovenarm",
+        "source": "commons"
+      }
     },
     {
       "id": "q025",
@@ -321,7 +441,13 @@
         "Schouder optrekken"
       ],
       "c": 1,
-      "e": "De biceps is een armbuigspier. De triceps is een armstrekspier."
+      "e": "De biceps is een armbuigspier. De triceps is een armstrekspier.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Biceps_triceps_muscles.svg/800px-Biceps_triceps_muscles.svg.png",
+        "alt": "Biceps en triceps in de bovenarm",
+        "source": "commons"
+      }
     },
     {
       "id": "q026",
@@ -334,7 +460,13 @@
         "Je knieën buigen"
       ],
       "c": 1,
-      "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust."
+      "e": "Orgaanspieren (zoals in maag/darmen) werken onbewust.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Lifting_technique.svg/800px-Lifting_technique.svg.png",
+        "alt": "Goede tiltechniek (rug recht, knieën buigen)",
+        "source": "commons"
+      }
     },
     {
       "id": "q027",
@@ -347,7 +479,13 @@
         "kuitspier"
       ],
       "c": 2,
-      "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen."
+      "e": "Het spiertje dat een haar rechtop zet (huidspiertje) werkt onbewust en is niet iets wat je gericht kunt trainen.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Biceps_triceps_muscles.svg/800px-Biceps_triceps_muscles.svg.png",
+        "alt": "Biceps en triceps in de bovenarm",
+        "source": "commons"
+      }
     },
     {
       "id": "q028",
@@ -373,7 +511,13 @@
         "Hoeveel vet je hebt"
       ],
       "c": 1,
-      "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen."
+      "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q030",
@@ -386,7 +530,13 @@
         "Altijd meer spierpijn"
       ],
       "c": 1,
-      "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen."
+      "e": "Volgens de samenvatting: lichaamsbeweging geeft ontspanning, betere conditie en helpt klachten voorkomen.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Carpal_tunnel_syndrome.svg/800px-Carpal_tunnel_syndrome.svg.png",
+        "alt": "Overbelasting/RSI: voorbeeld bij de pols (carpale tunnel)",
+        "source": "commons"
+      }
     },
     {
       "id": "q031",
@@ -399,7 +549,13 @@
         "Je botten worden harder"
       ],
       "c": 1,
-      "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid."
+      "e": "Door warming-up stroomt meer bloed naar spieren: warmer en meer zuurstof, dus beter voorbereid.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q032",
@@ -438,7 +594,13 @@
         "Je botten herstellen sneller"
       ],
       "c": 0,
-      "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd."
+      "e": "Cooling-down laat bloed blijven stromen, waardoor afvalstoffen worden afgevoerd.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q035",
@@ -451,7 +613,13 @@
         "een te snelle hartslag"
       ],
       "c": 1,
-      "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen."
+      "e": "In deze methode: afvalstoffen blijven achter; warming-up/cooling-down helpen dat te voorkomen.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q036",
@@ -464,7 +632,13 @@
         "Een automatisch leerproces"
       ],
       "c": 1,
-      "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders."
+      "e": "Blessure = beschadiging (spier/bot/gewricht). Spierpijn is iets anders.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/800px-Human_skeleton_front_en.svg.png",
+        "alt": "Menselijk skelet (voorzijde) met botnamen",
+        "source": "commons"
+      }
     },
     {
       "id": "q037",
@@ -477,7 +651,13 @@
         "een warming-up"
       ],
       "c": 1,
-      "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning."
+      "e": "RSI (repetitive strain injury) is overbelasting door herhaling en langdurige (spier)spanning.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Carpal_tunnel_syndrome.svg/800px-Carpal_tunnel_syndrome.svg.png",
+        "alt": "Overbelasting/RSI: voorbeeld bij de pols (carpale tunnel)",
+        "source": "commons"
+      }
     },
     {
       "id": "q038",
@@ -490,7 +670,13 @@
         "Sneller kunnen rennen"
       ],
       "c": 0,
-      "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm)."
+      "e": "Bij beginnende RSI: tintelingen, vermoeidheid en gevoeligheid (nek/schouder/arm).",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Carpal_tunnel_syndrome.svg/800px-Carpal_tunnel_syndrome.svg.png",
+        "alt": "Overbelasting/RSI: voorbeeld bij de pols (carpale tunnel)",
+        "source": "commons"
+      }
     },
     {
       "id": "q039",
@@ -503,7 +689,13 @@
         "Altijd in dezelfde houding blijven"
       ],
       "c": 1,
-      "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI."
+      "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Computer_workstation_ergonomics.svg/800px-Computer_workstation_ergonomics.svg.png",
+        "alt": "Ergonomische zithouding bij computergebruik",
+        "source": "commons"
+      }
     },
     {
       "id": "q040",
@@ -516,7 +708,13 @@
         "Altijd op één voet staan"
       ],
       "c": 2,
-      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken."
+      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Computer_workstation_ergonomics.svg/800px-Computer_workstation_ergonomics.svg.png",
+        "alt": "Ergonomische zithouding bij computergebruik",
+        "source": "commons"
+      }
     },
     {
       "id": "q041",
@@ -542,7 +740,13 @@
         "5 minuten je schouders aanspannen"
       ],
       "c": 0,
-      "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging."
+      "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Carpal_tunnel_syndrome.svg/800px-Carpal_tunnel_syndrome.svg.png",
+        "alt": "Overbelasting/RSI: voorbeeld bij de pols (carpale tunnel)",
+        "source": "commons"
+      }
     },
     {
       "id": "q043",
@@ -555,7 +759,13 @@
         "Om te ademen onder water"
       ],
       "c": 1,
-      "e": "Pinguïns vliegen niet; ze zwemmen snel en gebruiken vleugels als flippers."
+      "e": "Pinguïns vliegen niet; ze zwemmen snel en gebruiken vleugels als flippers.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Penguin_swimming.jpg/800px-Penguin_swimming.jpg",
+        "alt": "Pinguïn zwemmend onder water",
+        "source": "commons"
+      }
     },
     {
       "id": "q044",
@@ -568,7 +778,13 @@
         "Omdat ze geen heupbeen hebben"
       ],
       "c": 1,
-      "e": "De tekst: pinguïns lopen op hun hurken; vleugels helpen bij evenwicht, wat leidt tot waggelende gang."
+      "e": "De tekst: pinguïns lopen op hun hurken; vleugels helpen bij evenwicht, wat leidt tot waggelende gang.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Penguin_swimming.jpg/800px-Penguin_swimming.jpg",
+        "alt": "Pinguïn zwemmend onder water",
+        "source": "commons"
+      }
     },
     {
       "id": "q045",
@@ -581,7 +797,13 @@
         "Het zorgt dat ze kunnen draaien met hun vleugels als rolgewricht"
       ],
       "c": 1,
-      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten."
+      "e": "Voor efficiënt zwemmen is een stijve vleugel (peddel/flipper) handig; daarom minder losse gewrichten.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Penguin_swimming.jpg/800px-Penguin_swimming.jpg",
+        "alt": "Pinguïn zwemmend onder water",
+        "source": "commons"
+      }
     },
     {
       "id": "q046",
@@ -594,7 +816,13 @@
         "handspieren"
       ],
       "c": 1,
-      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk."
+      "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk.",
+      "media": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Adelie_penguin.jpg/800px-Adelie_penguin.jpg",
+        "alt": "Adéliepinguïn (Pygoscelis adeliae)",
+        "source": "commons"
+      }
     },
     {
       "id": "q047",
