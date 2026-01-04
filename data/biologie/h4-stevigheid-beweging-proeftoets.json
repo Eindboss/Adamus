@@ -31,7 +31,8 @@
           "_score": 152,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Human_skeleton_front_en.svg/960px-Human_skeleton_front_en.svg.png"
     },
     {
       "id": "q002",
@@ -59,7 +60,8 @@
           "_score": 265,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Human_skeleton_back_en.svg/960px-Human_skeleton_back_en.svg.png"
     },
     {
       "id": "q003",
@@ -87,7 +89,8 @@
           "_score": 232,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Composition_of_bone.png/960px-Composition_of_bone.png"
     },
     {
       "id": "q004",
@@ -115,7 +118,8 @@
           "_score": 292,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bone_cross-section_uk.svg/960px-Bone_cross-section_uk.svg.png"
     },
     {
       "id": "q005",
@@ -143,7 +147,8 @@
           "_score": 132,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/716_Intervertebral_Disk.svg/960px-716_Intervertebral_Disk.svg.png"
     },
     {
       "id": "q006",
@@ -171,7 +176,8 @@
           "_score": 297,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Trigonocephaly.png"
     },
     {
       "id": "q007",
@@ -255,7 +261,8 @@
           "_score": 282,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Spongy_bone_in_polarized_light.jpg/960px-Spongy_bone_in_polarized_light.jpg"
     },
     {
       "id": "q010",
@@ -283,7 +290,8 @@
           "_score": 230,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Types_of_tissues_in_bone.png"
     },
     {
       "id": "q011",
@@ -304,7 +312,8 @@
           "_score": 200,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Temporomandibular_joint_number.svg/960px-Temporomandibular_joint_number.svg.png"
     },
     {
       "id": "q012",
@@ -332,7 +341,8 @@
           "_score": 122,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/907_Synovial_Joints.jpg/960px-907_Synovial_Joints.jpg"
     },
     {
       "id": "q013",
@@ -360,7 +370,8 @@
           "_score": 265,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Shoulder_Capsule.png"
     },
     {
       "id": "q014",
@@ -388,7 +399,8 @@
           "_score": 145,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ball_and_Socket_Joint_%28Hip_joint%29.svg/960px-Ball_and_Socket_Joint_%28Hip_joint%29.svg.png"
     },
     {
       "id": "q015",
@@ -472,7 +484,8 @@
           "_score": 130,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Joint_with_severe_osteoathritis.png"
     },
     {
       "id": "q018",
@@ -500,7 +513,8 @@
           "_score": 160,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Ankle_es.svg/960px-Ankle_es.svg.png"
     },
     {
       "id": "q019",
@@ -584,7 +598,8 @@
           "_score": 275,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Atlas_and_text-book_of_human_anatomy_%281914-%29_%2820337038512%29.jpg/960px-Atlas_and_text-book_of_human_anatomy_%281914-%29_%2820337038512%29.jpg"
     },
     {
       "id": "q022",
@@ -640,7 +655,8 @@
           "_score": 70,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Animation_biceps.gif"
     },
     {
       "id": "q024",
@@ -668,7 +684,8 @@
           "_score": 130,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1615505368758-8a3af2a4c379?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHxhbnRhZ29uaXN0aWMlMjBtdXNjbGUlMjBwYWlyJTIwZGlhZ3JhbSUyMGh1bWFufGVufDB8MHx8fDE3Njc1MTY1NjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
       "id": "q025",
@@ -696,7 +713,8 @@
           "_score": 215,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Animation_triceps_biceps.gif"
     },
     {
       "id": "q026",
@@ -724,7 +742,8 @@
           "_score": 175,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_human_body_and_health_-_an_elementary_text-book_of_essential_anatomy%2C_applied_physiology_and_practical_hygiene_for_schools_%281908%29_%2814772701962%29.jpg/960px-The_human_body_and_health_-_an_elementary_text-book_of_essential_anatomy%2C_applied_physiology_and_practical_hygiene_for_schools_%281908%29_%2814772701962%29.jpg"
     },
     {
       "id": "q027",
@@ -752,7 +771,8 @@
           "_score": 185,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Heart_numlabels.svg/960px-Heart_numlabels.svg.png"
     },
     {
       "id": "q028",
@@ -836,7 +856,8 @@
           "_score": 105,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Multiple_tissues_and_organ_systems_are_affected_by_exercise%2C_initiating_diverse_homeostatic_responses.jpg/960px-Multiple_tissues_and_organ_systems_are_affected_by_exercise%2C_initiating_diverse_homeostatic_responses.jpg"
     },
     {
       "id": "q031",
@@ -864,7 +885,8 @@
           "_score": 132,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1758521959402-61177dcc4e37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHx3YXJtaW5nJTIwdXAlMjBleGVyY2lzZSUyMGh1bWFufGVufDB8MHx8fDE3Njc0NjM1MDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
       "id": "q032",
@@ -892,7 +914,8 @@
           "_score": 97,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Exercises_in_practical_physiology_%281897%29_%2814764549592%29.jpg/960px-Exercises_in_practical_physiology_%281897%29_%2814764549592%29.jpg"
     },
     {
       "id": "q033",
@@ -920,7 +943,8 @@
           "_score": 97,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1597079997686-87eeebe516d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxzdHJldGNoaW5nJTIwZXhlcmNpc2UlMjBodW1hbnxlbnwwfDB8fHwxNzY3NTE3NTc0fDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
       "id": "q034",
@@ -948,7 +972,8 @@
           "_score": 97,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1696875036596-6f72dd25eab5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwzfHxjb29saW5nJTIwZG93biUyMGV4ZXJjaXNlJTIwaHVtYW58ZW58MHwwfHx8MTc2NzQ2MzUzMHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
       "id": "q035",
@@ -976,7 +1001,8 @@
           "_score": 145,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/202107_Single-unit_smooth_muscle.svg/960px-202107_Single-unit_smooth_muscle.svg.png"
     },
     {
       "id": "q036",
@@ -1004,7 +1030,8 @@
           "_score": 97,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Asdrubal_Cabrera_hurt_on_July_31%2C_2016.jpg/960px-Asdrubal_Cabrera_hurt_on_July_31%2C_2016.jpg"
     },
     {
       "id": "q037",
@@ -1088,7 +1115,8 @@
           "_score": 97,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1681264116691-00d820aece1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxlcmdvbm9taWNzJTIwY29tcHV0ZXIlMjBodW1hbnxlbnwwfDB8fHwxNzY3NTE3NjMxfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
       "id": "q040",
@@ -1144,7 +1172,8 @@
           "_score": 90,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ergonomics_of_drawing_tablets_by_David_Revoy.svg/960px-Ergonomics_of_drawing_tablets_by_David_Revoy.svg.png"
     },
     {
       "id": "q042",
@@ -1200,7 +1229,8 @@
           "_score": 145,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Pygoscelis_papua_-Nagasaki_Penguin_Aquarium_-swimming_underwater-8a.jpg/960px-Pygoscelis_papua_-Nagasaki_Penguin_Aquarium_-swimming_underwater-8a.jpg"
     },
     {
       "id": "q044",
@@ -1228,7 +1258,8 @@
           "_score": 152,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1565870304282-f99a26804887?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIwODF8MHwxfHNlYXJjaHwxfHxwZW5ndWluJTIwd2Fsa2luZyUyMGdhaXR8ZW58MHwwfHx8MTc2NzUxNzY5OHww&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
       "id": "q045",
@@ -1460,7 +1491,8 @@
           "_score": 210,
           "_escalated": false
         }
-      ]
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Human_Skeleton_Upper_Body_Posterior_View.jpg/960px-Human_Skeleton_Upper_Body_Posterior_View.jpg"
     }
   ]
 }
