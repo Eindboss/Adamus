@@ -3730,9 +3730,9 @@ function updateControls() {
 
   if (state.phase === "feedback") {
     if (rowMain) rowMain.style.display = "none";
-    if (rowNext) rowNext.style.display = "grid";
+    if (rowNext) rowNext.style.display = "flex";
   } else {
-    if (rowMain) rowMain.style.display = "grid";
+    if (rowMain) rowMain.style.display = "flex";
     if (rowNext) rowNext.style.display = "none";
   }
 
