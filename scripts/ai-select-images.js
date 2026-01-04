@@ -726,15 +726,36 @@ async function searchPexels(searchTerm, limit = 10) {
 }
 
 /**
- * v3.5: Download image and convert to base64 for AI vision
+ * v3.6: Download image and convert to base64 for AI vision
+ * Added timeout and better error handling
  */
 async function fetchImageAsBase64(imageUrl) {
   try {
-    const response = await fetch(imageUrl);
+    // Add timeout to prevent hanging on slow/dead URLs
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+
+    const response = await fetch(imageUrl, {
+      signal: controller.signal,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      },
+      redirect: 'follow', // Follow redirects
+    });
+    clearTimeout(timeoutId);
+
     if (!response.ok) return null;
 
     const contentType = response.headers.get('content-type') || 'image/jpeg';
+
+    // Skip if not an image
+    if (!contentType.includes('image')) return null;
+
     const buffer = await response.arrayBuffer();
+
+    // Skip empty or too small responses
+    if (buffer.byteLength < 1000) return null;
+
     const base64 = Buffer.from(buffer).toString('base64');
 
     // Determine mime type
@@ -746,6 +767,7 @@ async function fetchImageAsBase64(imageUrl) {
 
     return { base64, mimeType };
   } catch (err) {
+    // Silently fail - will be reported as "Could not download"
     return null;
   }
 }
