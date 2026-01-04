@@ -135,17 +135,17 @@ export function getSubjectAccent(subject) {
 }
 
 /**
- * Get icon SVG for subject (Egyptian/Classical theme)
+ * Get icon SVG for subject
  */
 export function getSubjectIcon(subject) {
   const s = String(subject || "").toLowerCase();
 
   if (s.startsWith("aardrijkskunde")) {
-    // Pyramid icon
+    // Globe / wereldbol
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2L2 20h20L12 2z"/>
-      <path d="M12 2v18"/>
-      <path d="M7 12h10"/>
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M2 12h20"/>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
     </svg>`;
   }
 
@@ -163,68 +163,81 @@ export function getSubjectIcon(subject) {
   }
 
   if (s.startsWith("latijn")) {
-    // Scroll/papyrus icon
+    // Roman laurel wreath
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M5 3c0 1.5 1 2 2 2s2-.5 2-2"/>
-      <path d="M7 3v16c0 1.5-1 2-2 2"/>
-      <path d="M19 3c0 1.5-1 2-2 2s-2-.5-2-2"/>
-      <path d="M17 3v16c0 1.5 1 2 2 2"/>
-      <path d="M7 5h10"/>
-      <path d="M7 19h10"/>
-      <path d="M10 9h4"/>
-      <path d="M10 13h4"/>
+      <path d="M5 8c0-2 1-4 3-5 0 2-1 4-3 5z"/>
+      <path d="M4 12c-1-2-1-4 1-6 1 2 1 4-1 6z"/>
+      <path d="M5 16c-2-1-3-3-2-5 2 0 3 3 2 5z"/>
+      <path d="M8 19c-2 0-4-1-5-3 2-1 4 0 5 3z"/>
+      <path d="M19 8c0-2-1-4-3-5 0 2 1 4 3 5z"/>
+      <path d="M20 12c1-2 1-4-1-6-1 2-1 4 1 6z"/>
+      <path d="M19 16c2-1 3-3 2-5-2 0-3 3-2 5z"/>
+      <path d="M16 19c2 0 4-1 5-3-2-1-4 0-5 3z"/>
+      <path d="M12 19v3"/>
     </svg>`;
   }
 
   if (s.startsWith("biologie")) {
-    // Lotus/papyrus plant (Egyptian symbol)
+    // DNA helix
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 22v-10"/>
-      <path d="M12 12c-3 0-5-2-5-5 0 3-2 5-5 5 3 0 5 2 5 5 0-3 2-5 5-5z"/>
-      <path d="M12 12c3 0 5-2 5-5 0 3 2 5 5 5-3 0-5 2-5 5 0-3-2-5-5-5z"/>
-      <circle cx="12" cy="5" r="2"/>
+      <path d="M2 15c6.667-6 13.333 0 20-6"/>
+      <path d="M9 22c1.8-2 2.5-4 2.8-6"/>
+      <path d="M15 2c-1.8 2-2.5 4-2.8 6"/>
+      <path d="M17 6l-2.5 2.5"/>
+      <path d="M14 8l-1.5 1.5"/>
+      <path d="M7 18l2.5-2.5"/>
+      <path d="M3.5 14.5l1 -1"/>
+      <path d="M20.5 9.5l-1 1"/>
+      <path d="M10 16l1.5-1.5"/>
+      <path d="M2 9c6.667 6 13.333 0 20 6"/>
     </svg>`;
   }
 
   if (s.startsWith("engels")) {
-    // Rosetta stone / tablet
+    // Speech bubble / conversation
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/>
-      <path d="M7 8h10"/>
-      <path d="M7 12h8"/>
-      <path d="M7 16h6"/>
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      <path d="M8 9h8"/>
+      <path d="M8 13h6"/>
+    </svg>`;
+  }
+
+  if (s.startsWith("frans")) {
+    // Eiffel Tower
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L8 22"/>
+      <path d="M12 2l4 20"/>
+      <path d="M6 10h12"/>
+      <path d="M7 16h10"/>
+      <path d="M10 6h4"/>
+      <path d="M4 22h16"/>
     </svg>`;
   }
 
   if (s.startsWith("nederlands")) {
-    // Quill/reed pen icon
+    // Pen / writing
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 2c-2 2-6 6-10 10l-2 6 6-2c4-4 8-8 10-10-1-2-3-3-4-4z"/>
-      <path d="M8 12l-3 8 8-3"/>
-      <path d="M15 5c2 0 4 2 4 4"/>
+      <path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
+      <path d="m15 5 4 4"/>
     </svg>`;
   }
 
   if (s.startsWith("wiskunde")) {
-    // Eye of Horus / geometry (triangle with eye)
+    // Compass / passer
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
-      <circle cx="12" cy="12" r="3"/>
-      <path d="M12 5v-3"/>
-      <path d="M12 22v-3"/>
-      <path d="M5 12H2"/>
-      <path d="M22 12h-3"/>
+      <circle cx="12" cy="5" r="3"/>
+      <path d="M12 8v2"/>
+      <path d="M8 10l-5 12"/>
+      <path d="M16 10l5 12"/>
+      <path d="M6 16h12"/>
     </svg>`;
   }
 
-  // Default papyrus scroll icon
+  // Default book icon
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M5 3c0 1.5 1 2 2 2s2-.5 2-2"/>
-    <path d="M7 3v16c0 1.5-1 2-2 2"/>
-    <path d="M19 3c0 1.5-1 2-2 2s-2-.5-2-2"/>
-    <path d="M17 3v16c0 1.5 1 2 2 2"/>
-    <path d="M7 5h10"/>
-    <path d="M7 19h10"/>
+    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+    <path d="M8 7h6"/>
+    <path d="M8 11h8"/>
   </svg>`;
 }
 
