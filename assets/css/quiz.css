@@ -483,10 +483,13 @@ textarea.open-input {
    =========================================== */
 .quiz-controls {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   gap: var(--space-2);
   margin-top: var(--space-5);
   align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
 }
 
 /* Primary action (Controleer) always rightmost and prominent */
@@ -504,7 +507,11 @@ textarea.open-input {
 }
 
 /* Small buttons for secondary actions */
-.btn-sm {
+.quiz-controls .btn {
+  flex-shrink: 1;
+}
+
+.quiz-controls .btn-sm {
   padding: var(--space-2) var(--space-3) !important;
   font-size: 0.8125rem !important;
   min-height: 36px !important;
