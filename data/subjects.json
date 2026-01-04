@@ -205,6 +205,17 @@
       "hideFlashcards": true,
       "questionsPerSession": 10,
       "examDurationMinutes": 60
+    },
+    {
+      "id": "frans-h2-moi-et-les-autres",
+      "subject": "Frans",
+      "label": "Frans – Unité 2: Moi et les autres",
+      "title": "Frans – Unité 2: Moi et les autres",
+      "file": "data/frans/h2-moi-et-les-autres-quiz.json",
+      "schema": "toets",
+      "hideFlashcards": true,
+      "questionsPerSession": 10,
+      "examDurationMinutes": 60
     }
   ]
 }

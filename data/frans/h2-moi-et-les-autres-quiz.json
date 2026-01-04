@@ -1,0 +1,242 @@
+{
+  "schema_version": "2.0.0",
+  "id": "frans-h2",
+  "title": "Frans – Unité 2: Moi et les autres",
+  "subject": "Frans",
+  "description": "Toets Unité 2 (Moi et les autres). Alle woordenschat en grammatica.",
+  "questions": [
+    {
+      "id": "q001",
+      "type": "vocab_list",
+      "direction": "fr-nl",
+      "instruction": "Vertaal de Franse woorden naar het Nederlands:",
+      "items": [
+        {
+          "fr": "la famille",
+          "nl": ["familie", "het gezin"]
+        },
+        {
+          "fr": "le frère",
+          "nl": ["broer"]
+        },
+        {
+          "fr": "la sœur",
+          "nl": ["zus"]
+        },
+        {
+          "fr": "les parents",
+          "nl": ["ouders"]
+        },
+        {
+          "fr": "le père",
+          "nl": ["vader"]
+        },
+        {
+          "fr": "la mère",
+          "nl": ["moeder"]
+        },
+        {
+          "fr": "le fils",
+          "nl": ["zoon"]
+        },
+        {
+          "fr": "la fille",
+          "nl": ["dochter"]
+        },
+        {
+          "fr": "l'oncle",
+          "nl": ["oom"]
+        },
+        {
+          "fr": "la tante",
+          "nl": ["tante"]
+        },
+        {
+          "fr": "le grand-père",
+          "nl": ["opa"]
+        },
+        {
+          "fr": "la grand-mère",
+          "nl": ["oma"]
+        },
+        {
+          "fr": "le cousin",
+          "nl": ["neef"]
+        },
+        {
+          "fr": "la cousine",
+          "nl": ["nicht"]
+        }
+      ],
+      "explanation": "Dit zijn familieleden uit Apprendre 1."
+    },
+    {
+      "id": "q002",
+      "type": "vocab_list",
+      "direction": "fr-nl",
+      "instruction": "Vertaal de woorden:",
+      "items": [
+        {
+          "fr": "demain",
+          "nl": ["morgen"]
+        },
+        {
+          "fr": "l'anniversaire",
+          "nl": ["verjaardag"]
+        },
+        {
+          "fr": "la fête",
+          "nl": ["feest"]
+        },
+        {
+          "fr": "l'invitation",
+          "nl": ["uitnodiging"]
+        },
+        {
+          "fr": "inviter",
+          "nl": ["uitnodigen"]
+        },
+        {
+          "fr": "danser",
+          "nl": ["dansen"]
+        },
+        {
+          "fr": "manger",
+          "nl": ["eten"]
+        }
+      ]
+    },
+    {
+      "id": "q003",
+      "type": "mc",
+      "q": "Kies de juiste vorm: Nous ___ amis.",
+      "a": ["sommes", "êtes", "sont", "es"],
+      "c": 0,
+      "e": "Bij 'nous' hoort 'sommes'."
+    },
+    {
+      "id": "q004",
+      "type": "mc",
+      "q": "Welke zin is correct?",
+      "a": [
+        "Elles est en vacances.",
+        "Elles sont en vacances.",
+        "Elles es en vacances.",
+        "Elles êtes en vacances."
+      ],
+      "c": 1,
+      "e": "Elles → sont."
+    },
+    {
+      "id": "q005",
+      "type": "fill_blank",
+      "instruction": "Vul de juiste vorm van avoir in.",
+      "text": "Tu {{blank}} quinze ans.",
+      "blanks": [
+        {
+          "id": "blank",
+          "answers": ["as"]
+        }
+      ],
+      "explanation": "Leeftijd druk je uit met 'avoir'."
+    },
+    {
+      "id": "q006",
+      "type": "matching",
+      "instruction": "Koppel het getal aan het juiste Franse woord.",
+      "left": ["0", "5", "8", "11", "16", "20"],
+      "right": ["zéro", "cinq", "huit", "onze", "seize", "vingt"],
+      "correct_pairs": {
+        "0": "zéro",
+        "5": "cinq",
+        "8": "huit",
+        "11": "onze",
+        "16": "seize",
+        "20": "vingt"
+      },
+      "explanation": "Telwoorden 0–20."
+    },
+    {
+      "id": "q007",
+      "type": "fill_blank_dropdown",
+      "instruction": "Kies het juiste bezittelijk voornaamwoord.",
+      "text": "C'est {{b1}} école et {{b2}} histoire.",
+      "blanks": [
+        {
+          "id": "b1",
+          "correct": "mon",
+          "options": ["mon", "ma"]
+        },
+        {
+          "id": "b2",
+          "correct": "son",
+          "options": ["son", "sa"]
+        }
+      ],
+      "explanation": "Bij klinker of stomme h gebruik je mon/ton/son."
+    },
+    {
+      "id": "q008",
+      "type": "mc",
+      "q": "Welke zin is correct?",
+      "a": [
+        "C'est ma ami.",
+        "C'est mon ami.",
+        "C'est mes ami.",
+        "C'est ma amie."
+      ],
+      "c": 1,
+      "e": "'Ami' begint met een klinker → mon ami."
+    },
+    {
+      "id": "q009",
+      "type": "sentence_correction",
+      "instruction": "Verbeter de fout.",
+      "items": [
+        {
+          "sentence": "Il a treize an.",
+          "error_type": "spelling",
+          "accept": ["Il a treize ans."]
+        },
+        {
+          "sentence": "Elles est gentilles.",
+          "error_type": "werkwoord",
+          "accept": ["Elles sont gentilles."]
+        }
+      ],
+      "explanation": "Let op meervoud en juiste werkwoordsvorm."
+    },
+    {
+      "id": "q010",
+      "type": "vocab_list",
+      "direction": "fr-nl",
+      "instruction": "Vertaal:",
+      "items": [
+        {
+          "fr": "le copain",
+          "nl": ["vriend"]
+        },
+        {
+          "fr": "la copine",
+          "nl": ["vriendin"]
+        },
+        {
+          "fr": "le weekend",
+          "nl": ["het weekend"]
+        },
+        {
+          "fr": "seul",
+          "nl": ["alleen"]
+        },
+        {
+          "fr": "le voisin",
+          "nl": ["buurman"]
+        },
+        {
+          "fr": "la voisine",
+          "nl": ["buurvrouw"]
+        }
+      ]
+    }
+  ]
+}
