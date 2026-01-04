@@ -1,8 +1,19 @@
 /**
- * AI-powered image selection for quiz questions (v3.9)
+ * AI-powered image selection for quiz questions (v4.0)
  *
  * Uses Gemini AI to generate optimal search terms in BATCHES,
  * then fetches images from multiple sources with AI VISION validation.
+ *
+ * v4.0 Improvements (ChatGPT architecture review - targeting 90%+ coverage):
+ * - PROXY-QUERY EXPANSION: Hard-coded alternatives for difficult concepts
+ *   → RSI → "office ergonomics", "computer posture", "typing hands"
+ *   → antagonisten → "biceps triceps arm anatomy", "arm flexion extension"
+ *   → spiercontractie → "muscle fiber structure", "sarcomere diagram"
+ * - COMMONS CATEGORY BROWSE: When search fails, browse curated categories
+ *   → Gray's Anatomy plates, Human skeleton diagrams, Muscle anatomy
+ * - WIKIPEDIA ARTICLE IMAGES: Harvest images from Wikipedia articles
+ *   → begrippen-index.wikipediaArticle mapping
+ * - EXPANDED FALLBACK CHAIN: baseline → AI → proxy → browse → Wikipedia
  *
  * v3.9 Improvements (fixing v3.8 query-language-mismatch):
  * - SOURCE-SPECIFIC QUERIES: Different query format per source
@@ -267,6 +278,82 @@ const REJECT_CONTENT_TYPES = [
   'scientific_method',
   'unrelated_diagram',
 ];
+
+// v4.0: PROXY QUERIES for difficult concepts
+// When AI-generated queries fail (0 results), try these pre-tested alternatives
+// Based on ChatGPT architecture review - these are "breadth-first" queries that work
+const PROXY_QUERIES = {
+  // RSI / Ergonomics cluster (q037-q042)
+  rsi: ['office ergonomics', 'computer workstation posture', 'typing hands keyboard', 'desk ergonomics'],
+  ergonomie: ['office ergonomics diagram', 'workstation setup', 'sitting posture desk'],
+  zithouding: ['correct sitting posture', 'ergonomic sitting', 'office chair posture'],
+  telefoon: ['smartphone neck posture', 'phone use posture', 'text neck'],
+
+  // Muscle contraction cluster (q022-q026)
+  spiercontractie: ['muscle fiber contraction', 'sarcomere sliding filament', 'actin myosin'],
+  samentrekken: ['muscle contraction diagram', 'skeletal muscle anatomy', 'muscle fiber'],
+  antagonist: ['biceps triceps arm muscles', 'antagonist muscle pair arm', 'flexor extensor'],
+  antagonisten: ['biceps triceps anatomy', 'arm muscles flexion extension', 'muscle pair diagram'],
+  biceps: ['biceps brachii anatomy', 'arm flexion muscle', 'upper arm muscles'],
+  triceps: ['triceps brachii anatomy', 'arm extension muscle', 'upper arm muscles'],
+
+  // Smooth/involuntary muscles (q026)
+  orgaanspier: ['smooth muscle diagram', 'visceral muscle', 'involuntary muscle types'],
+  gladde_spier: ['smooth muscle tissue', 'intestine muscle wall', 'blood vessel muscle'],
+
+  // Motor learning / coordination (q028-q029)
+  motorisch: ['motor learning brain', 'motor cortex', 'movement coordination'],
+  coordinatie: ['balance coordination exercise', 'motor skills training', 'agility exercise'],
+  coördinatie: ['balance coordination exercise', 'motor skills training', 'agility exercise'],
+
+  // Training phases (q032, q048)
+  warming_up: ['athletes warming up', 'dynamic stretching sport', 'warm up exercises'],
+  cooling_down: ['athletes cooling down', 'static stretching sport', 'cool down stretching'],
+  training: ['exercise workout fitness', 'sports training', 'physical activity'],
+
+  // Abstract bone concepts (q003)
+  botsamenstelling: ['bone composition diagram', 'bone structure calcium collagen', 'compact bone structure'],
+  kalkzouten: ['bone mineral content', 'calcium bone', 'bone composition'],
+};
+
+// v4.0: COMMONS CATEGORIES for browse fallback
+// When search yields 0 results, try browsing these curated categories
+const COMMONS_BROWSE_CATEGORIES = {
+  // Anatomy categories
+  anatomy: ['Gray\'s Anatomy plates', 'Human skeleton diagrams', 'Human anatomy diagrams'],
+  muscles: ['Muscles of the human body', 'Human arm muscles', 'Muscle diagrams'],
+  joints: ['Human joints', 'Synovial joints', 'Joint anatomy'],
+  skeleton: ['Human skeleton diagrams', 'Bones of the human body'],
+
+  // Ergonomics
+  ergonomics: ['Ergonomics', 'Office ergonomics', 'Workplace safety'],
+
+  // Exercise/fitness
+  exercise: ['Physical exercise', 'Stretching exercises', 'Fitness training'],
+
+  // Microscopy
+  histology: ['Histology', 'Tissue slides', 'Microscopy images'],
+};
+
+// v4.0: WIKIPEDIA ARTICLE MAPPING for difficult concepts
+// Maps concept keywords to Wikipedia articles that have good images
+const WIKIPEDIA_ARTICLE_MAPPING = {
+  antagonist: 'Antagonist_(muscle)',
+  antagonisten: 'Antagonist_(muscle)',
+  spiercontractie: 'Muscle_contraction',
+  samentrekken: 'Muscle_contraction',
+  biceps: 'Biceps',
+  triceps: 'Triceps',
+  orgaanspier: 'Smooth_muscle',
+  gladde_spier: 'Smooth_muscle',
+  rsi: 'Repetitive_strain_injury',
+  ergonomie: 'Ergonomics',
+  warming_up: 'Warming_up',
+  cooling_down: 'Cooling_down',
+  coordinatie: 'Motor_coordination',
+  coördinatie: 'Motor_coordination',
+  motorisch: 'Motor_learning',
+};
 
 // Subject profiles with default categoryHints and riskProfiles
 const SUBJECT_PROFILES = {
@@ -714,7 +801,7 @@ function normalizeForStock(query) {
  * v3.9: Generate baseline queries from begrippen index
  * These are simple, high-recall queries that work on all sources
  */
-function generateBaselineQueries(questionText, subject) {
+function generateBaselineQueries(questionText) {
   const baselines = [];
 
   if (begrippenIndex) {
@@ -732,6 +819,181 @@ function generateBaselineQueries(questionText, subject) {
   }
 
   return [...new Set(baselines)]; // Dedupe
+}
+
+/**
+ * v4.0: Get proxy queries for difficult concepts
+ * Returns pre-tested query alternatives when AI queries fail
+ */
+function getProxyQueries(questionText) {
+  const clean = questionText.replace(/<[^>]+>/g, ' ').toLowerCase();
+  const proxyQueries = [];
+
+  for (const [keyword, queries] of Object.entries(PROXY_QUERIES)) {
+    if (clean.includes(keyword)) {
+      proxyQueries.push(...queries);
+    }
+  }
+
+  return [...new Set(proxyQueries)]; // Dedupe
+}
+
+/**
+ * v4.0: Get Commons categories for browse fallback
+ * Returns curated categories based on question content
+ */
+function getBrowseCategories(questionText) {
+  const clean = questionText.replace(/<[^>]+>/g, ' ').toLowerCase();
+  const categories = [];
+
+  // Check for muscle-related keywords
+  if (clean.match(/spier|biceps|triceps|antagonist|samentrek/)) {
+    categories.push(...COMMONS_BROWSE_CATEGORIES.muscles);
+  }
+
+  // Check for skeleton/anatomy keywords
+  if (clean.match(/skelet|bot|gewricht|kraakbeen|wervel/)) {
+    categories.push(...COMMONS_BROWSE_CATEGORIES.anatomy);
+    categories.push(...COMMONS_BROWSE_CATEGORIES.skeleton);
+  }
+
+  // Check for RSI/ergonomics keywords
+  if (clean.match(/rsi|ergonomie|zithouding|houding|computer|telefoon/)) {
+    categories.push(...COMMONS_BROWSE_CATEGORIES.ergonomics);
+  }
+
+  // Check for exercise/training keywords
+  if (clean.match(/warming|cooling|training|oefening|stretching/)) {
+    categories.push(...COMMONS_BROWSE_CATEGORIES.exercise);
+  }
+
+  return [...new Set(categories)].slice(0, 3); // Max 3 categories
+}
+
+/**
+ * v4.0: Get Wikipedia article for concept
+ * Returns Wikipedia article name for harvesting images
+ */
+function getWikipediaArticleForConcept(questionText) {
+  const clean = questionText.replace(/<[^>]+>/g, ' ').toLowerCase();
+
+  for (const [keyword, article] of Object.entries(WIKIPEDIA_ARTICLE_MAPPING)) {
+    if (clean.includes(keyword)) {
+      return article;
+    }
+  }
+
+  // Also check begrippen index for wikipediaArticle
+  if (begrippenIndex) {
+    const match = begrippenIndex.matchQuestion(questionText);
+    if (match && match.matchedKeys.length > 0) {
+      const begrip = begrippenIndex.index?.begrippen?.[match.matchedKeys[0]];
+      if (begrip?.wikipediaArticle) {
+        return begrip.wikipediaArticle;
+      }
+    }
+  }
+
+  return null;
+}
+
+/**
+ * v4.0: Get all images from a Wikipedia article
+ * Harvests images from the article for fallback
+ */
+async function getWikipediaArticleImages(articleName, limit = 5) {
+  if (!articleName) return [];
+
+  try {
+    const params = new URLSearchParams({
+      action: 'query',
+      titles: articleName,
+      prop: 'images',
+      imlimit: String(limit * 2), // Get more, filter later
+      format: 'json',
+      origin: '*',
+    });
+
+    const response = await fetch(`${WIKIPEDIA_API}?${params}`);
+    if (!response.ok) return [];
+
+    const data = await response.json();
+    const pages = data.query?.pages || {};
+    const images = [];
+
+    for (const page of Object.values(pages)) {
+      if (page.images) {
+        for (const img of page.images) {
+          const title = img.title;
+          // Skip icons, logos, and non-content images
+          if (title.match(/icon|logo|flag|symbol|button|arrow|commons-logo/i)) continue;
+          // Skip non-image files
+          if (!title.match(/\.(jpg|jpeg|png|svg|gif)$/i)) continue;
+
+          // Get image info from Commons
+          const imageInfo = await getCommonsImageInfo(title.replace('File:', ''));
+          if (imageInfo) {
+            images.push({
+              ...imageInfo,
+              source: 'wikipedia',
+              fromArticle: articleName,
+            });
+          }
+
+          if (images.length >= limit) break;
+        }
+      }
+    }
+
+    return images;
+  } catch (err) {
+    return [];
+  }
+}
+
+/**
+ * v4.0: Get image info from Commons by filename
+ */
+async function getCommonsImageInfo(filename) {
+  try {
+    const params = new URLSearchParams({
+      action: 'query',
+      titles: `File:${filename}`,
+      prop: 'imageinfo',
+      iiprop: 'url|size|mime|extmetadata',
+      iiurlwidth: 800,
+      format: 'json',
+      origin: '*',
+    });
+
+    const response = await fetch(`${COMMONS_API}?${params}`);
+    if (!response.ok) return null;
+
+    const data = await response.json();
+    const pages = data.query?.pages || {};
+
+    for (const page of Object.values(pages)) {
+      if (page.imageinfo && page.imageinfo[0]) {
+        const info = page.imageinfo[0];
+        return {
+          pageid: page.pageid,
+          title: page.title.replace('File:', ''),
+          imageUrl: info.thumburl || info.url,
+          descriptionUrl: info.descriptionurl,
+          width: info.thumbwidth || info.width,
+          height: info.thumbheight || info.height,
+          mime: info.mime,
+          description: info.extmetadata?.ImageDescription?.value || '',
+          categories: [],
+          source: 'commons',
+        };
+      }
+    }
+
+    return null;
+  } catch (err) {
+    return null;
+  }
 }
 
 /**
@@ -1872,7 +2134,7 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
   const preferPhotos = subjectLower === 'biologie' || subjectLower === 'aardrijkskunde';
 
   // v3.9: Generate baseline queries from begrippen index (high-recall, simple)
-  const baselineQueries = generateBaselineQueries(questionText, subject);
+  const baselineQueries = generateBaselineQueries(questionText);
 
   // v3.9: Normalize AI queries for stock sites (remove incategory, negations)
   const stockQueries = queries.map(q => normalizeForStock(q)).filter(q => q.length > 2);
@@ -1982,6 +2244,80 @@ async function findBestImage(brief, usedImages, subject = null, questionText = '
         }
         scored.sort((a, b) => b.score - a.score);
       }
+    }
+  }
+
+  // v4.0: PROXY QUERIES - Try pre-tested alternative queries for difficult concepts
+  if (scored.length === 0 || (scored[0] && scored[0].score < minScore)) {
+    const proxyQueries = getProxyQueries(questionText);
+    if (proxyQueries.length > 0) {
+      process.stdout.write(' [PROXY]');
+      for (const pq of proxyQueries.slice(0, 3)) {
+        try {
+          // Try stock sites with proxy queries (they work better for lifestyle content)
+          const unsplashResults = await searchUnsplash(pq, 5);
+          for (const r of unsplashResults) {
+            r.score = scoreCandidate(r, brief, usedImages) + 30; // Proxy bonus
+            r.proxyQuery = pq;
+            scored.push(r);
+          }
+          await sleep(100);
+
+          const pexelsResults = await searchPexels(pq, 5);
+          for (const r of pexelsResults) {
+            r.score = scoreCandidate(r, brief, usedImages) + 30;
+            r.proxyQuery = pq;
+            scored.push(r);
+          }
+          await sleep(100);
+
+          // Also try Commons
+          const commonsResults = await searchCommons(pq, 10);
+          for (const r of commonsResults) {
+            r.score = scoreCandidate(r, brief, usedImages);
+            r.proxyQuery = pq;
+            scored.push(r);
+          }
+          await sleep(100);
+        } catch (err) { /* continue */ }
+      }
+      scored.sort((a, b) => b.score - a.score);
+    }
+  }
+
+  // v4.0: CATEGORY BROWSE - Browse curated Commons categories
+  if (scored.length === 0 || (scored[0] && scored[0].score < minScore)) {
+    const browseCategories = getBrowseCategories(questionText);
+    if (browseCategories.length > 0) {
+      process.stdout.write(' [BROWSE]');
+      for (const cat of browseCategories) {
+        try {
+          const results = await searchCommonsCategory(cat, 15);
+          for (const r of results) {
+            r.score = scoreCandidate(r, brief, usedImages);
+            r.browseCategory = cat;
+            scored.push(r);
+          }
+          await sleep(100);
+        } catch (err) { /* continue */ }
+      }
+      scored.sort((a, b) => b.score - a.score);
+    }
+  }
+
+  // v4.0: WIKIPEDIA ARTICLE IMAGES - Harvest images from Wikipedia articles
+  if (scored.length === 0 || (scored[0] && scored[0].score < minScore)) {
+    const wikiArticle = getWikipediaArticleForConcept(questionText);
+    if (wikiArticle) {
+      process.stdout.write(` [WIKI:${wikiArticle}]`);
+      try {
+        const wikiImages = await getWikipediaArticleImages(wikiArticle, 5);
+        for (const r of wikiImages) {
+          r.score = scoreCandidate(r, brief, usedImages) + 20; // Wiki article bonus
+          scored.push(r);
+        }
+        scored.sort((a, b) => b.score - a.score);
+      } catch (err) { /* continue */ }
     }
   }
 
