@@ -3784,15 +3784,44 @@ function setupEventListeners() {
   if (skipBtn) skipBtn.addEventListener("click", skipQuestion);
   if (giveUpBtn) giveUpBtn.addEventListener("click", giveUp);
 
-  // Global Enter key to check answer or go to next question
+  // Global keyboard handler for Enter and Arrow keys
   document.addEventListener("keydown", (e) => {
+    // Don't trigger if paused
+    if (state.paused) return;
+
+    const activeEl = document.activeElement;
+    const isInputField = activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA");
+
+    // Arrow key navigation for multiple choice options
+    if ((e.key === "ArrowUp" || e.key === "ArrowDown") && !isInputField) {
+      const options = $$$(".option:not(.disabled)");
+      if (options.length === 0) return;
+
+      e.preventDefault(); // Prevent page scroll
+
+      // Find currently selected or focused option
+      const selectedOption = document.querySelector(".option.selected");
+      const focusedOption = document.querySelector(".option:focus");
+      const currentOption = focusedOption || selectedOption;
+
+      let currentIndex = currentOption ? options.indexOf(currentOption) : -1;
+
+      if (e.key === "ArrowDown") {
+        currentIndex = currentIndex < options.length - 1 ? currentIndex + 1 : 0;
+      } else if (e.key === "ArrowUp") {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : options.length - 1;
+      }
+
+      const nextOption = options[currentIndex];
+      if (nextOption) {
+        nextOption.focus();
+        nextOption.click(); // Select the option
+      }
+      return;
+    }
+
+    // Enter key handling
     if (e.key === "Enter") {
-      // Don't trigger if paused
-      if (state.paused) return;
-
-      const activeEl = document.activeElement;
-      const isInputField = activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA");
-
       // In feedback phase, Enter should always go to next question (even from input fields)
       if (state.phase === "feedback") {
         e.preventDefault();
@@ -3805,7 +3834,6 @@ function setupEventListeners() {
 
       // Get current button state (buttons may be re-rendered)
       const currentCheckBtn = $("checkBtn");
-      const currentNextBtn = $("nextBtn");
 
       if (state.phase === "question" && !state.answered) {
         // Check if there's a selection and the check button is enabled
