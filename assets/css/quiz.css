@@ -482,19 +482,36 @@ textarea.open-input {
    Quiz Controls
    =========================================== */
 .quiz-controls {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
   margin-top: var(--space-5);
+  align-items: center;
+}
+
+/* Primary action (Controleer) always rightmost and prominent */
+.quiz-controls #checkBtn {
+  margin-left: auto;
 }
 
 .quiz-controls.single {
-  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.quiz-controls.single .btn {
+  min-width: 200px;
+}
+
+/* Small buttons for secondary actions */
+.btn-sm {
+  padding: var(--space-2) var(--space-3) !important;
+  font-size: 0.8125rem !important;
+  min-height: 36px !important;
 }
 
 @media (max-width: 640px) {
   .quiz-controls {
-    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
   }
 
   .question-card {
@@ -528,21 +545,30 @@ textarea.open-input {
   .feedback {
     padding: var(--space-4);
   }
+
+  .btn-sm {
+    padding: var(--space-1) var(--space-2) !important;
+    font-size: 0.75rem !important;
+    min-height: 32px !important;
+  }
 }
 
 @media (max-width: 480px) {
   .quiz-controls {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-2);
   }
 
-  /* Controleer knop bovenaan op mobiel */
+  /* Controleer button spans full width and comes first */
   .quiz-controls #checkBtn {
+    grid-column: 1 / -1;
     order: -1;
+    margin-left: 0;
   }
 
   .quiz-controls .btn {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .question-card {
@@ -599,6 +625,86 @@ textarea.open-input {
 .quiz-meta .timer strong {
   font-size: 1rem;
   color: var(--text);
+}
+
+/* Timer dot pulse animation - only in last 15 seconds */
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+}
+
+.stat-dot.warning {
+  background: var(--warning);
+  animation: timer-pulse 1s ease-in-out infinite;
+}
+
+.stat-dot.critical {
+  background: var(--error);
+  animation: timer-pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes timer-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-dot.warning,
+  .stat-dot.critical {
+    animation: none;
+  }
+}
+
+/* Responsive quiz-meta: 2 rows on mobile */
+@media (max-width: 640px) {
+  .quiz-meta {
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-3);
+  }
+
+  .quiz-meta #stat {
+    order: 1;
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 0.8125rem;
+  }
+
+  .stat-dot {
+    order: 0;
+  }
+
+  .quiz-meta .timer {
+    margin-left: 0;
+    order: 2;
+  }
+
+  .timer-toggle-wrap {
+    order: 3;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-meta #stat {
+    font-size: 0.75rem;
+  }
+
+  .quiz-meta .timer {
+    font-size: 0.8125rem;
+  }
+
+  .quiz-meta .timer strong {
+    font-size: 0.9375rem;
+  }
 }
 /* Timer Toggle Switch */
 .timer-toggle-wrap {
@@ -665,6 +771,28 @@ textarea.open-input {
    =========================================== */
 .quiz-progress {
   margin: var(--space-3) 0;
+}
+
+/* Progress bar with spring animation on correct answer */
+.quiz-progress .progress-bar {
+  transition: width 0.4s var(--ease-out);
+}
+
+.quiz-progress .progress-bar.progress-bump {
+  animation: progress-spring 0.4s var(--ease-out);
+}
+
+@keyframes progress-spring {
+  0% { transform: scaleY(1); }
+  30% { transform: scaleY(1.3); }
+  60% { transform: scaleY(0.95); }
+  100% { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-progress .progress-bar.progress-bump {
+    animation: none;
+  }
 }
 
 /* ===========================================

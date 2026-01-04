@@ -140,13 +140,24 @@ function updateTimerUI() {
   if (dotEl) {
     if (isPaused) {
       dotEl.className = "stat-dot paused";
-    } else if (timerMode === "exam" && remaining <= 300) {
-      // 5 minutes warning for exam
-      dotEl.className = "stat-dot danger";
-    } else if (timerMode === "question" && remaining <= 10) {
-      dotEl.className = "stat-dot danger";
+    } else if (timerMode === "exam") {
+      // Exam mode: warning at 5 min, critical at 2 min
+      if (remaining <= 120) {
+        dotEl.className = "stat-dot critical";
+      } else if (remaining <= 300) {
+        dotEl.className = "stat-dot warning";
+      } else {
+        dotEl.className = "stat-dot";
+      }
     } else {
-      dotEl.className = "stat-dot";
+      // Question mode: warning at 15 sec, critical at 10 sec
+      if (remaining <= 10) {
+        dotEl.className = "stat-dot critical";
+      } else if (remaining <= 15) {
+        dotEl.className = "stat-dot warning";
+      } else {
+        dotEl.className = "stat-dot";
+      }
     }
   }
 }

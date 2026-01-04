@@ -3256,6 +3256,17 @@ function showFeedback(isCorrect, explanation, correctAnswer) {
     questionCard.classList.add(isCorrect ? "is-correct" : "is-wrong");
   }
 
+  // Progress bar bump animation on correct answer
+  if (isCorrect) {
+    const progressBar = $("progressBar");
+    if (progressBar) {
+      progressBar.classList.remove("progress-bump");
+      // Trigger reflow to restart animation
+      void progressBar.offsetWidth;
+      progressBar.classList.add("progress-bump");
+    }
+  }
+
   const icon = isCorrect ? "✓" : "✗";
   const title = isCorrect ? "Goed!" : "Niet goed";
   const className = isCorrect ? "feedback-success" : "feedback-error";
