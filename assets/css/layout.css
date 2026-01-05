@@ -15,13 +15,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(
-    135deg,
-    var(--header-bg) 0%,
-    var(--header-bg-dark) 100%
-  );
-  border-bottom: 3px solid var(--brand);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  background: var(--header-bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .topbar-inner {

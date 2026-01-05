@@ -20,47 +20,47 @@ html {
 
 /* CSS Variables */
 :root {
-  /* Colors - Warm, Museum-inspired palette */
-  --bg: #f7f5f0;
-  --bg-alt: #ebe8e0;
+  /* Colors - Clean, modern palette */
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
   --card: #ffffff;
-  --text: #1a1815;
-  --text-light: #4a4740;
-  --muted: #5a5548;
-  --muted-foreground: #6a6560;
+  --text: #1f2937;
+  --text-light: #4b5563;
+  --muted: #6b7280;
+  --muted-foreground: #9ca3af;
 
-  /* Brand Colors - Gold/Amber theme */
-  --brand: #c9a227;
-  --brand-light: #f5ecd0;
-  --brand-dark: #a68618;
-  --brand-deep: #1a3a2a;
+  /* Brand Colors - Modern purple */
+  --brand: #7c3aed;
+  --brand-light: #ede9fe;
+  --brand-dark: #6d28d9;
+  --brand-deep: #4c1d95;
 
-  /* Single Accent - Warm Gold (used everywhere) */
-  --accent: #c9a227;
-  --accent-light: #f5ecd0;
-  --accent-dark: #a68618;
+  /* Single Accent - Vivid purple */
+  --accent: #7c3aed;
+  --accent-light: #ede9fe;
+  --accent-dark: #6d28d9;
 
   /* Feedback Colors */
-  --success: #2e7d52;
-  --success-light: #e3f2e8;
-  --success-dark: #1e6b43;
+  --success: #10b981;
+  --success-light: #d1fae5;
+  --success-dark: #059669;
   --success-text: #065f46;
-  --error: #c43e3e;
-  --error-light: #fce8e8;
-  --error-dark: #a33232;
+  --error: #ef4444;
+  --error-light: #fee2e2;
+  --error-dark: #dc2626;
   --error-text: #991b1b;
-  --warning: #c9a227;
-  --warning-light: #f5ecd0;
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
   --warning-text: #92400e;
 
-  /* Header Colors */
-  --header-bg: #1f4a38;
-  --header-bg-dark: #163328;
-  --header-text: #f9f8f5;
-  --header-accent: #d4af37;
+  /* Header Colors - Clean dark */
+  --header-bg: #1f2937;
+  --header-bg-dark: #111827;
+  --header-text: #f9fafb;
+  --header-accent: #a78bfa;
 
   /* Flashcard Back */
-  --flashcard-back: #0f251c;
+  --flashcard-back: #1f2937;
 
   /* UI Colors */
   --border: rgba(0, 0, 0, 0.1);
@@ -221,40 +221,40 @@ select:focus-visible {
    Dark Mode
    =========================================== */
 [data-theme="dark"] {
-  --bg: #1a1815;
-  --bg-alt: #252220;
-  --card: #2a2725;
-  --text: #f5f3ef;
-  --text-light: #c9c5bd;
-  --muted: #8a8578;
-  --muted-foreground: #9a9590;
+  --bg: #111827;
+  --bg-alt: #1f2937;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --text-light: #d1d5db;
+  --muted: #9ca3af;
+  --muted-foreground: #6b7280;
 
-  /* Brand stays the same for consistency */
-  --brand: #d4af37;
-  --brand-light: #3d3520;
-  --brand-dark: #e8c547;
+  /* Brand - purple adjusted for dark */
+  --brand: #a78bfa;
+  --brand-light: #2e1065;
+  --brand-dark: #c4b5fd;
 
   /* Feedback Colors - adjusted for dark */
-  --success: #4ade80;
-  --success-light: #1a3328;
-  --success-dark: #22c55e;
-  --success-text: #86efac;
+  --success: #34d399;
+  --success-light: #064e3b;
+  --success-dark: #6ee7b7;
+  --success-text: #6ee7b7;
   --error: #f87171;
-  --error-light: #3d2020;
-  --error-dark: #ef4444;
+  --error-light: #450a0a;
+  --error-dark: #fca5a5;
   --error-text: #fca5a5;
   --warning: #fbbf24;
-  --warning-light: #3d3520;
+  --warning-light: #451a03;
   --warning-text: #fcd34d;
 
-  /* Header Colors - darker green */
-  --header-bg: #0f251c;
-  --header-bg-dark: #0a1a13;
-  --header-text: #f9f8f5;
-  --header-accent: #d4af37;
+  /* Header Colors - dark gray */
+  --header-bg: #0f172a;
+  --header-bg-dark: #020617;
+  --header-text: #f9fafb;
+  --header-accent: #a78bfa;
 
   /* Flashcard Back */
-  --flashcard-back: #0a1a13;
+  --flashcard-back: #0f172a;
 
   /* UI Colors */
   --border: rgba(255, 255, 255, 0.1);
