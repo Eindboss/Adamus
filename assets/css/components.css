@@ -326,14 +326,14 @@
 /* Primary Button */
 .btn-primary {
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
-  color: #1a1815;
+  color: white;
   border-color: transparent;
-  box-shadow: 0 2px 8px rgba(201, 162, 39, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:hover {
   background: var(--brand-dark);
-  box-shadow: 0 4px 16px rgba(201, 162, 39, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Success Button */
@@ -744,14 +744,12 @@
 /* Dark mode: softer glow on subject cards */
 [data-theme="dark"] .subject-card .icon-wrap {
   box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.08),
-    0 0 12px rgba(201, 162, 39, 0.06),
+    0 4px 12px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] .subject-card:hover .icon-wrap {
   box-shadow:
-    0 6px 16px rgba(201, 162, 39, 0.2),
-    0 0 16px rgba(201, 162, 39, 0.1),
+    0 6px 16px rgba(0, 0, 0, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
