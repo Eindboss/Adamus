@@ -1301,12 +1301,13 @@ export function checkVocabList(q) {
   });
 
   const allCorrect = correctCount === items.length;
+  const totalCount = items.length;
 
-  if (allCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  // Award fractional credit based on correct answers
+  const fractionCorrect = totalCount > 0 ? correctCount / totalCount : 0;
+  state.score += fractionCorrect;
+  state.wrong += 1 - fractionCorrect;
+
   updateStats(state.subjectId, allCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
 
@@ -1314,10 +1315,12 @@ export function checkVocabList(q) {
     question: htmlToText(q.instruction || "Vocab list"),
     type: "vocab_list",
     correct: allCorrect,
-    details: `${correctCount}/${items.length} correct`,
+    correctCount,
+    totalCount,
+    details: `${correctCount}/${totalCount} correct`,
   });
 
-  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${items.length} goed`);
+  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${totalCount} goed`);
 }
 
 /* ===========================================
