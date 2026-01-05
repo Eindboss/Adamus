@@ -51,6 +51,13 @@
   animation: card-shake 0.2s ease-in-out;
 }
 
+.question-card.is-partial {
+  border-color: var(--warning);
+  box-shadow:
+    var(--shadow-md),
+    0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
 @keyframes card-shake {
   0%, 100% { transform: translateX(0); }
   25% { transform: translateX(-4px); }

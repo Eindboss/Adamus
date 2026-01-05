@@ -23,6 +23,73 @@ export function initV2QuestionTypes(quizState, showFeedback, resetForNextPart) {
   resetForNextPartFn = resetForNextPart;
 }
 
+/**
+ * Show feedback with partial support for multi-item questions
+ * @param {number} correctCount - Number of correct answers
+ * @param {number} totalCount - Total number of items
+ * @param {string} explanation - Optional explanation text
+ */
+function showGroupedItemFeedback(correctCount, totalCount, explanation = "") {
+  const feedbackEl = $("feedback");
+  if (!feedbackEl) return;
+
+  const questionCard = $("quizArea");
+  const allCorrect = correctCount === totalCount;
+  const noneCorrect = correctCount === 0;
+  
+  // Determine state: correct, partial, or wrong
+  let icon, title, className, cardClass;
+  
+  if (allCorrect) {
+    icon = "✓";
+    title = "Alles goed!";
+    className = "feedback-success";
+    cardClass = "is-correct";
+  } else if (noneCorrect) {
+    icon = "✗";
+    title = "Niet goed";
+    className = "feedback-error";
+    cardClass = "is-wrong";
+  } else {
+    icon = "◐";
+    title = "Gedeeltelijk goed";
+    className = "feedback-partial";
+    cardClass = "is-partial";
+  }
+  
+  // Update card state
+  if (questionCard) {
+    questionCard.classList.remove("is-correct", "is-wrong", "is-partial");
+    questionCard.classList.add(cardClass);
+  }
+  
+  // Progress bar bump animation on fully correct
+  if (allCorrect) {
+    const progressBar = $("progressBar");
+    if (progressBar) {
+      progressBar.classList.remove("progress-bump");
+      void progressBar.offsetWidth;
+      progressBar.classList.add("progress-bump");
+    }
+  }
+  
+  let html = \`
+    <div class="feedback-header">
+      <span>\${icon}</span>
+      <span>\${title}</span>
+    </div>
+    <div class="feedback-score">\${correctCount} / \${totalCount} goed</div>
+  \`;
+  
+  if (explanation) {
+    html += \`<div class="feedback-body">\${explanation}</div>\`;
+  }
+  
+  feedbackEl.className = \`feedback \${className}\`;
+  feedbackEl.innerHTML = html;
+  feedbackEl.style.display = "block";
+}
+
 /* ===========================================
    Fill Blank Question Type
    =========================================== */
@@ -597,7 +664,7 @@ export function checkMatching(q) {
     details: `${correctCount}/${totalPairs} correct`,
   });
 
-  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${totalPairs} juist gekoppeld`);
+  showGroupedItemFeedback(correctCount, totalPairs, q.explanation || q.e || "");
 }
 
 /* ===========================================
@@ -848,7 +915,7 @@ export function checkDataTable(q) {
     details: `${correctCount}/${totalCount} correct`,
   });
 
-  showFeedbackFn(allCorrect, q.e || "", allCorrect ? "" : `${correctCount}/${totalCount} juist`);
+  showGroupedItemFeedback(correctCount, totalCount, q.e || "");
 }
 
 /* ===========================================
@@ -1105,7 +1172,7 @@ export function checkMultipart(q) {
     details: `${correctParts}/${totalParts} deelvragen correct`,
   });
 
-  showFeedbackFn(allCorrect, q.e || "", `${correctParts}/${totalParts} deelvragen juist`);
+  showGroupedItemFeedback(correctParts, totalParts, q.e || "");
 }
 
 /* ===========================================
@@ -1320,7 +1387,8 @@ export function checkVocabList(q) {
     details: `${correctCount}/${totalCount} correct`,
   });
 
-  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${totalCount} goed`);
+  // Use grouped feedback for partial results
+  showGroupedItemFeedback(correctCount, totalCount, q.explanation || q.e || "");
 }
 
 /* ===========================================
@@ -1518,7 +1586,7 @@ export function checkGrammarTransform(q) {
     details: `${correctCount}/${items.length} correct`,
   });
 
-  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${items.length} goed`);
+  showGroupedItemFeedback(correctCount, items.length, q.explanation || q.e || "");
 }
 
 function addHint(input, correctAnswer) {
@@ -1670,7 +1738,7 @@ export function checkGrammarFill(q) {
     details: `${correctCount}/${items.length} correct`,
   });
 
-  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${items.length} goed`);
+  showGroupedItemFeedback(correctCount, items.length, q.explanation || q.e || "");
 }
 
 /* ===========================================
@@ -1800,5 +1868,5 @@ export function checkSentenceCorrection(q) {
     details: `${correctCount}/${items.length} correct`,
   });
 
-  showFeedbackFn(allCorrect, q.explanation || q.e || "", allCorrect ? "" : `${correctCount}/${items.length} goed`);
+  showGroupedItemFeedback(correctCount, items.length, q.explanation || q.e || "");
 }
