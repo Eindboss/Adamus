@@ -15,7 +15,7 @@
   text-decoration: none;
   color: var(--text);
   background: var(--card);
-  border: 1.5px solid var(--border);
+  border: none;
   border-radius: var(--radius-lg);
   padding: var(--space-7) var(--space-5);
   min-height: 150px;
@@ -28,9 +28,8 @@
 }
 
 .subject-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.15);
-  border-color: var(--brand);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .subject-card:focus-visible {
@@ -47,16 +46,16 @@
   justify-content: center;
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
   box-shadow:
-    0 4px 12px rgba(124, 58, 237, 0.25),
-    0 0 24px rgba(124, 58, 237, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    0 0 24px rgba(0, 0, 0, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transition: box-shadow var(--duration-normal) var(--ease-out);
 }
 
 .subject-card:hover .icon-wrap {
   box-shadow:
-    0 6px 16px rgba(124, 58, 237, 0.35),
-    0 0 32px rgba(124, 58, 237, 0.18),
+    0 6px 16px rgba(0, 0, 0, 0.15),
+    0 0 32px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
@@ -84,7 +83,7 @@
   text-decoration: none;
   color: var(--text);
   background: var(--card);
-  border: 1.5px solid var(--border);
+  border: none;
   border-radius: var(--radius-lg);
   padding: var(--space-5);
   box-shadow: var(--shadow-sm);
@@ -197,7 +196,7 @@
   justify-content: space-between;
   gap: var(--space-4);
   background: var(--card);
-  border: 1.5px solid var(--border);
+  border: none;
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-5);
   box-shadow: var(--shadow-sm);
@@ -745,7 +744,7 @@
 /* Dark mode: softer glow on subject cards */
 [data-theme="dark"] .subject-card .icon-wrap {
   box-shadow:
-    0 4px 12px rgba(124, 58, 237, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.08),
     0 0 12px rgba(201, 162, 39, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }

@@ -21,24 +21,24 @@ html {
 /* CSS Variables */
 :root {
   /* Colors - Clean, modern palette */
-  --bg: #ffffff;
-  --bg-alt: #f8f9fa;
+  --bg: #f5f5f7;
+  --bg-alt: #eeeef0;
   --card: #ffffff;
   --text: #1f2937;
   --text-light: #4b5563;
   --muted: #6b7280;
   --muted-foreground: #9ca3af;
 
-  /* Brand Colors - Modern purple */
-  --brand: #7c3aed;
-  --brand-light: #ede9fe;
-  --brand-dark: #6d28d9;
-  --brand-deep: #4c1d95;
+  /* Brand Colors - Neutral gray for buttons */
+  --brand: #374151;
+  --brand-light: #f3f4f6;
+  --brand-dark: #1f2937;
+  --brand-deep: #111827;
 
-  /* Single Accent - Vivid purple */
-  --accent: #7c3aed;
-  --accent-light: #ede9fe;
-  --accent-dark: #6d28d9;
+  /* Single Accent - Purple for highlights only */
+  --accent: #6b7280;
+  --accent-light: #f3f4f6;
+  --accent-dark: #4b5563;
 
   /* Feedback Colors */
   --success: #10b981;
@@ -54,10 +54,10 @@ html {
   --warning-text: #92400e;
 
   /* Header Colors - Clean dark */
-  --header-bg: #1f2937;
-  --header-bg-dark: #111827;
+  --header-bg: #2d2d2d;
+  --header-bg-dark: #1a1a1a;
   --header-text: #f9fafb;
-  --header-accent: #a78bfa;
+  --header-accent: #9ca3af;
 
   /* Flashcard Back */
   --flashcard-back: #1f2937;
@@ -230,7 +230,7 @@ select:focus-visible {
   --muted-foreground: #6b7280;
 
   /* Brand - purple adjusted for dark */
-  --brand: #a78bfa;
+  --brand: #9ca3af;
   --brand-light: #2e1065;
   --brand-dark: #c4b5fd;
 
@@ -248,10 +248,10 @@ select:focus-visible {
   --warning-text: #fcd34d;
 
   /* Header Colors - dark gray */
-  --header-bg: #0f172a;
-  --header-bg-dark: #020617;
+  --header-bg: #1a1a1a;
+  --header-bg-dark: #0f0f0f;
   --header-text: #f9fafb;
-  --header-accent: #a78bfa;
+  --header-accent: #9ca3af;
 
   /* Flashcard Back */
   --flashcard-back: #0f172a;
