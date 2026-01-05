@@ -24,6 +24,25 @@ export function initV2QuestionTypes(quizState, showFeedback, resetForNextPart) {
 }
 
 /**
+ * Generic progress update for multi-input question types
+ * Counts filled inputs and enables/disables check button
+ * @param {HTMLElement[]|NodeList} inputs - Input elements to check
+ * @param {string|null} counterId - Optional element ID to display filled count
+ */
+function updateInputProgress(inputs, counterId = null) {
+  const inputArray = Array.isArray(inputs) ? inputs : Array.from(inputs);
+  const filled = inputArray.filter(i => i.value.trim().length > 0).length;
+
+  if (counterId) {
+    const counterEl = $(counterId);
+    if (counterEl) counterEl.textContent = filled;
+  }
+
+  const checkBtn = $("checkBtn");
+  if (checkBtn) checkBtn.disabled = filled === 0;
+}
+
+/**
  * Show feedback with partial support for multi-item questions
  * @param {number} correctCount - Number of correct answers
  * @param {number} totalCount - Total number of items
@@ -208,9 +227,7 @@ export function renderFillBlank(container, q) {
 }
 
 function updateFillBlankProgress(inputs) {
-  const filled = inputs.filter(i => i.value.trim().length > 0).length;
-  const checkBtn = $("checkBtn");
-  if (checkBtn) checkBtn.disabled = filled === 0;
+  updateInputProgress(inputs);
 }
 
 /**
@@ -854,12 +871,7 @@ export function renderDataTable(container, q) {
 }
 
 function updateDataTableProgress() {
-  const filled = $$$(".data-input").filter(i => i.value.trim().length > 0).length;
-  const filledEl = $("dataFilled");
-  if (filledEl) filledEl.textContent = filled;
-
-  const checkBtn = $("checkBtn");
-  if (checkBtn) checkBtn.disabled = filled === 0;
+  updateInputProgress($$$(".data-input"), "dataFilled");
 }
 
 /**
@@ -1307,12 +1319,7 @@ export function renderVocabList(container, q) {
 }
 
 function updateVocabProgress(inputs) {
-  const filled = inputs.filter(i => i.value.trim().length > 0).length;
-  const filledEl = $("vocabFilled");
-  if (filledEl) filledEl.textContent = filled;
-
-  const checkBtn = $("checkBtn");
-  if (checkBtn) checkBtn.disabled = filled === 0;
+  updateInputProgress(inputs, "vocabFilled");
 }
 
 /**
@@ -1490,7 +1497,6 @@ export function renderGrammarTransform(container, q) {
 }
 
 function updateGrammarProgress(inputs, category, itemCount) {
-  let filled;
   if (category === "comparison") {
     // For comparison, need both fields filled per item
     const pairs = {};
@@ -1500,16 +1506,14 @@ function updateGrammarProgress(inputs, category, itemCount) {
       if (input.dataset.field === "comparative" && input.value.trim()) pairs[idx].comp = true;
       if (input.dataset.field === "superlative" && input.value.trim()) pairs[idx].super = true;
     });
-    filled = Object.values(pairs).filter(p => p.comp && p.super).length;
+    const filled = Object.values(pairs).filter(p => p.comp && p.super).length;
+    const filledEl = $("grammarFilled");
+    if (filledEl) filledEl.textContent = filled;
+    const checkBtn = $("checkBtn");
+    if (checkBtn) checkBtn.disabled = filled === 0;
   } else {
-    filled = inputs.filter(i => i.value.trim().length > 0).length;
+    updateInputProgress(inputs, "grammarFilled");
   }
-
-  const filledEl = $("grammarFilled");
-  if (filledEl) filledEl.textContent = filled;
-
-  const checkBtn = $("checkBtn");
-  if (checkBtn) checkBtn.disabled = filled === 0;
 }
 
 /**
@@ -1680,9 +1684,7 @@ export function renderGrammarFill(container, q) {
 }
 
 function updateGrammarFillProgress(fields) {
-  const filled = fields.filter(f => f.value.trim().length > 0).length;
-  const checkBtn = $("checkBtn");
-  if (checkBtn) checkBtn.disabled = filled === 0;
+  updateInputProgress(fields);
 }
 
 /**
@@ -1808,12 +1810,7 @@ export function renderSentenceCorrection(container, q) {
 }
 
 function updateCorrectionProgress(inputs) {
-  const filled = inputs.filter(i => i.value.trim().length > 0).length;
-  const filledEl = $("correctionFilled");
-  if (filledEl) filledEl.textContent = filled;
-
-  const checkBtn = $("checkBtn");
-  if (checkBtn) checkBtn.disabled = filled === 0;
+  updateInputProgress(inputs, "correctionFilled");
 }
 
 /**
