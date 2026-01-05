@@ -73,19 +73,19 @@ function showGroupedItemFeedback(correctCount, totalCount, explanation = "") {
     }
   }
   
-  let html = \`
+  let html = `
     <div class="feedback-header">
-      <span>\${icon}</span>
-      <span>\${title}</span>
+      <span>${icon}</span>
+      <span>${title}</span>
     </div>
-    <div class="feedback-score">\${correctCount} / \${totalCount} goed</div>
-  \`;
-  
+    <div class="feedback-score">${correctCount} / ${totalCount} goed</div>
+  `;
+
   if (explanation) {
-    html += \`<div class="feedback-body">\${explanation}</div>\`;
+    html += `<div class="feedback-body">${explanation}</div>`;
   }
-  
-  feedbackEl.className = \`feedback \${className}\`;
+
+  feedbackEl.className = `feedback ${className}`;
   feedbackEl.innerHTML = html;
   feedbackEl.style.display = "block";
 }
