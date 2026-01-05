@@ -8,28 +8,26 @@
    =========================================== */
 .subject-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
   gap: var(--space-3);
   text-decoration: none;
   color: var(--text);
   background: var(--card);
   border: none;
-  border-radius: var(--radius-lg);
-  padding: var(--space-7) var(--space-5);
-  min-height: 150px;
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
   box-shadow: var(--shadow-sm);
   transition:
     transform var(--duration-normal) var(--ease-out),
     box-shadow var(--duration-normal) var(--ease-out),
-    border-color var(--duration-fast) var(--ease);
-  text-align: center;
+    background var(--duration-fast) var(--ease);
 }
 
 .subject-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: var(--brand-light);
 }
 
 .subject-card:focus-visible {
@@ -38,38 +36,31 @@
 }
 
 .subject-card .icon-wrap {
-  width: 64px;
-  height: 64px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.12),
-    0 0 24px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transition: box-shadow var(--duration-normal) var(--ease-out);
+  flex-shrink: 0;
 }
 
 .subject-card:hover .icon-wrap {
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.15),
-    0 0 32px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  /* No change needed */
 }
 
 .subject-card .icon-wrap svg {
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   stroke: white;
   fill: none;
 }
 
 .subject-card .subject-name {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text);
 }
 
@@ -612,22 +603,21 @@
    =========================================== */
 @media (max-width: 640px) {
   .subject-card {
-    padding: var(--space-5) var(--space-4);
-    min-height: 130px;
+    padding: var(--space-3);
   }
 
   .subject-card .icon-wrap {
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
   }
 
   .subject-card .icon-wrap svg {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
   }
 
   .subject-card .subject-name {
-    font-size: 1.125rem;
+    font-size: 0.9375rem;
   }
 
   .quiz-card {
@@ -683,22 +673,21 @@
 
 @media (max-width: 480px) {
   .subject-card {
-    padding: var(--space-4) var(--space-3);
-    min-height: 120px;
+    padding: var(--space-3);
   }
 
   .subject-card .icon-wrap {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
   }
 
   .subject-card .icon-wrap svg {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
   }
 
   .subject-card .subject-name {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .quiz-card {
@@ -717,17 +706,22 @@
 
 @media (max-width: 375px) {
   .subject-card {
-    min-height: 110px;
-    padding: var(--space-3);
+    padding: var(--space-2);
+    gap: var(--space-2);
   }
 
   .subject-card .icon-wrap {
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .subject-card .icon-wrap svg {
+    width: 16px;
+    height: 16px;
   }
 
   .subject-card .subject-name {
-    font-size: 0.9375rem;
+    font-size: 0.8125rem;
   }
 
   .btn {

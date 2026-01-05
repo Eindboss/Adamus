@@ -169,7 +169,7 @@
   align-items: flex-start;
   gap: var(--space-3);
   padding: var(--space-4) var(--space-5);
-  background: var(--card);
+  background: var(--bg-alt);
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
