@@ -3,6 +3,22 @@
    =========================================== */
 
 /**
+ * Strict text normalization for comparison
+ * Always: lowercase, remove accents, punctuation to space, normalize whitespace
+ * Used by answer-checker.js and other modules that need consistent normalization
+ */
+export function normalizeStrict(text) {
+  if (!text) return "";
+  return String(text)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // remove accents
+    .replace(/[^\w\s]/g, " ")        // punctuation to space
+    .replace(/\s+/g, " ")            // normalize whitespace
+    .trim();
+}
+
+/**
  * DOM Helpers
  */
 export function $(id) {

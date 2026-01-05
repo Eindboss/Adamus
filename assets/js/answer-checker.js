@@ -3,6 +3,11 @@
    Fuzzy matching + synonym support for open answers
    =========================================== */
 
+import { normalizeStrict } from "./utils.js";
+
+// Alias for backward compatibility within this module
+const normalize = normalizeStrict;
+
 /**
  * Levenshtein distance - measures edit distance between two strings
  */
@@ -45,24 +50,6 @@ function similarity(a, b) {
 
   const distance = levenshtein(a, b);
   return 1 - distance / maxLen;
-}
-
-/**
- * Normalize text for comparison
- * - lowercase
- * - remove accents
- * - remove punctuation
- * - normalize whitespace
- */
-function normalize(text) {
-  if (!text) return "";
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // remove accents
-    .replace(/[^\w\s]/g, " ")        // punctuation to space
-    .replace(/\s+/g, " ")            // normalize whitespace
-    .trim();
 }
 
 /**
