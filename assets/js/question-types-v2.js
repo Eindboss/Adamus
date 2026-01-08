@@ -248,8 +248,9 @@ export function checkFillBlank(q) {
     let isCorrect = false;
 
     if (isDropdown) {
-      // Dropdown mode: check against correct value
-      isCorrect = userValue === blank.correct;
+      // Dropdown mode: check against correct value (supports both blank.correct and blank.answers)
+      const correctValue = blank.correct || (blank.answers && blank.answers[0]);
+      isCorrect = userValue === correctValue;
     } else {
       // Text input mode: check against accepted answers
       const acceptedAnswers = blank.answers || [];
@@ -273,7 +274,7 @@ export function checkFillBlank(q) {
     results.push({
       blankId: blank.id,
       userValue,
-      expected: isDropdown ? blank.correct : (blank.answers?.[0] || ""),
+      expected: blank.correct || (blank.answers?.[0] || ""),
       correct: isCorrect,
     });
   });
