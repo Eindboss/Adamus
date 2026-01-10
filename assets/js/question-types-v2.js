@@ -281,10 +281,17 @@ export function checkFillBlank(q) {
 
   const allCorrect = correctCount === blanks.length;
 
-  if (allCorrect) {
-    state.score++;
+  // Proportional scoring for multiple blanks
+  if (blanks.length > 1) {
+    const correctFraction = correctCount / blanks.length;
+    state.score += correctFraction;
+    state.wrong += (1 - correctFraction);
   } else {
-    state.wrong++;
+    if (allCorrect) {
+      state.score++;
+    } else {
+      state.wrong++;
+    }
   }
   updateStats(state.subjectId, allCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
@@ -293,7 +300,7 @@ export function checkFillBlank(q) {
     question: htmlToText(q.text),
     type: "fill_blank",
     correct: allCorrect,
-    details: `${correctCount}/${blanks.length} correct`,
+    details: blanks.length > 1 ? `${correctCount}/${blanks.length} correct` : undefined,
   });
 
   // Don't give away answers - just show count
@@ -667,11 +674,11 @@ export function checkMatching(q) {
 
   const allCorrect = correctCount === totalPairs;
 
-  if (allCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  // Proportional scoring for matching
+  const correctFraction = correctCount / totalPairs;
+  state.score += correctFraction;
+  state.wrong += (1 - correctFraction);
+
   updateStats(state.subjectId, allCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
 
@@ -913,11 +920,11 @@ export function checkDataTable(q) {
 
   const allCorrect = correctCount === totalCount;
 
-  if (allCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  // Proportional scoring for data_table
+  const correctFraction = correctCount / totalCount;
+  state.score += correctFraction;
+  state.wrong += (1 - correctFraction);
+
   updateStats(state.subjectId, allCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
 
@@ -1165,16 +1172,16 @@ export function checkMultipart(q) {
     return;
   }
 
-  // All parts done - calculate final score
+  // All parts done - calculate final score (proportional)
   const correctParts = multipartState.partResults.filter(r => r.correct).length;
   const totalParts = multipartState.parts.length;
   const allCorrect = correctParts === totalParts;
 
-  if (allCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  // Proportional scoring: 2/3 correct = 0.67 score, 0.33 wrong
+  const correctFraction = correctParts / totalParts;
+  state.score += correctFraction;
+  state.wrong += (1 - correctFraction);
+
   updateStats(state.subjectId, allCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
 
@@ -1576,11 +1583,11 @@ export function checkGrammarTransform(q) {
 
   const allCorrect = correctCount === items.length;
 
-  if (allCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  // Proportional scoring for grammar transform
+  const correctFraction = correctCount / items.length;
+  state.score += correctFraction;
+  state.wrong += (1 - correctFraction);
+
   updateStats(state.subjectId, allCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
 
@@ -1726,11 +1733,11 @@ export function checkGrammarFill(q) {
 
   const allCorrect = correctCount === items.length;
 
-  if (allCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  // Proportional scoring for grammar fill
+  const correctFraction = correctCount / items.length;
+  state.score += correctFraction;
+  state.wrong += (1 - correctFraction);
+
   updateStats(state.subjectId, allCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
 
@@ -1851,11 +1858,11 @@ export function checkSentenceCorrection(q) {
 
   const allCorrect = correctCount === items.length;
 
-  if (allCorrect) {
-    state.score++;
-  } else {
-    state.wrong++;
-  }
+  // Proportional scoring for sentence correction
+  const correctFraction = correctCount / items.length;
+  state.score += correctFraction;
+  state.wrong += (1 - correctFraction);
+
   updateStats(state.subjectId, allCorrect);
   if (q.id) updateQuestionBox(state.subjectId, q.id, allCorrect);
 
