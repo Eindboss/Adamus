@@ -87,7 +87,7 @@ export function normalizeQuestion(raw, preferMC = false) {
     type: "open",
     quiz_group: raw.quiz_group,
     q: raw.q || raw.question || raw.vraag || "",
-    accept: raw.accept || [],
+    accept: raw.accept || raw.accepted || raw.accepted_answers || [],
     caseSensitive: !!raw.caseSensitive,
     explanation: raw.explanation || raw.e || "",
     graph: raw.graph || null,
