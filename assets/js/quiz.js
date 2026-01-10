@@ -3035,7 +3035,7 @@ function showWiskundeFeedback(correctCount, totalCount, results, totalPoints, ma
       <span>${icon}</span>
       <span>${title}</span>
     </div>
-    <div class="feedback-score">${correctCount} / ${totalCount} goed (${totalPoints.toFixed(1)} / ${maxPoints.toFixed(1)} punten)</div>
+    <div class="feedback-score">${correctCount} / ${totalCount} goed</div>
     ${wrongHtml}
   `;
   feedbackEl.style.display = "block";
@@ -3103,7 +3103,7 @@ function showTableFeedback(
       <span>${icon}</span>
       <span>${title}</span>
     </div>
-    <div class="feedback-score">${correctCount} / ${totalCount} goed (${earnedPoints.toFixed(1)} / ${maxPoints.toFixed(1)} punten)</div>
+    <div class="feedback-score">${correctCount} / ${totalCount} goed</div>
     ${wrongHtml}
   `;
   feedbackEl.style.display = "block";
@@ -3226,7 +3226,7 @@ function showSelectFeedback(results, totalPoints, maxPoints) {
       <span>${icon}</span>
       <span>${title}</span>
     </div>
-    <div class="feedback-score">${perfectCount} / ${results.length} volledig goed (${totalPoints.toFixed(1)} / ${maxPoints.toFixed(1)} punten)</div>
+    <div class="feedback-score">${perfectCount} / ${results.length} volledig goed</div>
     ${detailsHtml}
   `;
   feedbackEl.style.display = "block";

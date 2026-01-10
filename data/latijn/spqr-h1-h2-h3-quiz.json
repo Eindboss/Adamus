@@ -113,7 +113,6 @@
         "text": "Vertaal de volgende woorden naar het Latijn:",
         "html": "Vertaal de volgende woorden naar het Latijn:"
       },
-      "points": 5,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -134,8 +133,7 @@
             "accepted_answers": [
               "flumen",
               "flumina"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -143,37 +141,30 @@
             "accepted_answers": [
               "rex",
               "regis"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
             "question": "slaaf",
             "accepted_answers": [
               "servus"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
             "question": "roepen",
             "accepted_answers": [
               "vocare"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "question": "komen",
             "accepted_answers": [
               "venire"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -227,7 +218,6 @@
         "text": "Vertaal de volgende Latijnse woorden naar het Nederlands:",
         "html": "Vertaal de volgende Latijnse woorden naar het Nederlands:"
       },
-      "points": 5,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -247,45 +237,37 @@
             "question": "audire",
             "accepted_answers": [
               "horen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
             "question": "videre",
             "accepted_answers": [
               "zien"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
             "question": "clamare",
             "accepted_answers": [
               "schreeuwen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
             "question": "lacrimare",
             "accepted_answers": [
               "huilen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "question": "necare",
             "accepted_answers": [
               "doden"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -337,7 +319,6 @@
         "text": "Wat is de juiste vertaling van 'infans, infantes'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -398,7 +379,6 @@
         "text": "Welk werkwoord betekent 'bevelen'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -473,7 +453,6 @@
         "text": "Vertaal naar het Latijn: vrezen / bang zijn voor",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -489,10 +468,7 @@
         "question": "Vertaal naar het Latijn: vrezen / bang zijn voor",
         "accepted_answers": [
           "timere"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -516,7 +492,6 @@
         "text": "Wat betekent 'mandatum'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -591,7 +566,6 @@
         "text": "Vertaal de volgende woorden naar het Latijn:",
         "html": "Vertaal de volgende woorden naar het Latijn:"
       },
-      "points": 5,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -611,45 +585,37 @@
             "question": "niet",
             "accepted_answers": [
               "non"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
             "question": "toch",
             "accepted_answers": [
               "tamen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
             "question": "daarom",
             "accepted_answers": [
               "ideo"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
             "question": "waar",
             "accepted_answers": [
               "ubi"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "question": "daar",
             "accepted_answers": [
               "ibi"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -701,7 +667,6 @@
         "text": "Welk voorzetsel betekent 'naar, tot' en gaat met de accusativus?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -762,7 +727,6 @@
         "text": "Vertaal de volgende werkwoorden naar het Nederlands:",
         "html": "Vertaal de volgende werkwoorden naar het Nederlands:"
       },
-      "points": 5,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -782,24 +746,21 @@
             "question": "portare",
             "accepted_answers": [
               "dragen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
             "question": "ponere",
             "accepted_answers": [
               "plaatsen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
             "question": "imponere",
             "accepted_answers": [
               "plaatsen in"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
@@ -807,21 +768,16 @@
             "accepted_answers": [
               "drijven",
               "blijven drijven"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "question": "fluere",
             "accepted_answers": [
               "stromen"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -874,7 +830,6 @@
         "text": "Wat betekent 'haerere'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -949,7 +904,6 @@
         "text": "Vertaal de volgende woorden naar het Latijn (Lupa):",
         "html": "Vertaal de volgende woorden naar het Latijn (Lupa):"
       },
-      "points": 5,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -970,8 +924,7 @@
             "accepted_answers": [
               "pastor",
               "pastores"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -979,37 +932,30 @@
             "accepted_answers": [
               "grex",
               "greges"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
             "question": "bewaken",
             "accepted_answers": [
               "custodire"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
             "question": "plotseling",
             "accepted_answers": [
               "subito"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "question": "naderen",
             "accepted_answers": [
               "accedere"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -1063,7 +1009,6 @@
         "text": "Wat is de infinitivus van het werkwoord 'zijn'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_werkwoorden"
       ],
@@ -1124,7 +1069,6 @@
         "text": "Vertaal naar het Latijn: (aan)bieden",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -1140,10 +1084,7 @@
         "question": "Vertaal naar het Latijn: (aan)bieden",
         "accepted_answers": [
           "praebere"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -1167,7 +1108,6 @@
         "text": "Vertaal de volgende werkwoorden naar het Nederlands:",
         "html": "Vertaal de volgende werkwoorden naar het Nederlands:"
       },
-      "points": 5,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -1187,8 +1127,7 @@
             "question": "bibere",
             "accepted_answers": [
               "drinken"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -1196,16 +1135,14 @@
             "accepted_answers": [
               "nadenken",
               "denken"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
             "question": "protegere",
             "accepted_answers": [
               "beschermen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
@@ -1213,21 +1150,16 @@
             "accepted_answers": [
               "laten verdrinken",
               "verdrinken"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "question": "tradere",
             "accepted_answers": [
               "overhandigen"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -1281,7 +1213,6 @@
         "text": "Welk werkwoord gaat met de DATIVUS en betekent 'kwaad doen'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -1342,7 +1273,6 @@
         "text": "Vertaal naar het Nederlands: domum",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -1358,10 +1288,7 @@
         "question": "Vertaal naar het Nederlands: domum",
         "accepted_answers": [
           "naar huis"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -1385,7 +1312,6 @@
         "text": "Vertaal de volgende zelfstandige naamwoorden naar het Latijn:",
         "html": "Vertaal de volgende zelfstandige naamwoorden naar het Latijn:"
       },
-      "points": 5,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -1406,24 +1332,21 @@
             "accepted_answers": [
               "uxor",
               "uxores"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
             "question": "zoon",
             "accepted_answers": [
               "filius"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
             "question": "vrouw",
             "accepted_answers": [
               "femina"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
@@ -1431,21 +1354,16 @@
             "accepted_answers": [
               "nomen",
               "nomina"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "question": "god",
             "accepted_answers": [
               "deus"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -1499,7 +1417,6 @@
         "text": "Wat betekent 'alter...alter'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -1574,7 +1491,6 @@
         "text": "Vertaal de volgende familiewoorden naar het Latijn:",
         "html": "Vertaal de volgende familiewoorden naar het Latijn:"
       },
-      "points": 5,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -1595,8 +1511,7 @@
             "accepted_answers": [
               "mater",
               "matres"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -1604,8 +1519,7 @@
             "accepted_answers": [
               "pater",
               "patres"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
@@ -1613,29 +1527,23 @@
             "accepted_answers": [
               "frater",
               "fratres"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
             "question": "zoon",
             "accepted_answers": [
               "filius"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "question": "vrouw",
             "accepted_answers": [
               "femina"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -1690,7 +1598,6 @@
         "text": "Welk werkwoord gaat met de DATIVUS en betekent 'steun geven aan'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -1751,7 +1658,6 @@
         "text": "Welk voorzetsel betekent 'van(af)' en gaat met de ablativus?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -1812,7 +1718,6 @@
         "text": "Welk voorzetsel betekent 'met' en gaat met de ablativus?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -1873,7 +1778,6 @@
         "text": "Wat betekent 'quoque'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -1948,7 +1852,6 @@
         "text": "Vertaal naar het Latijn: eindelijk",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -1964,10 +1867,7 @@
         "question": "Vertaal naar het Latijn: eindelijk",
         "accepted_answers": [
           "tandem"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -1991,7 +1891,6 @@
         "text": "Wat betekent 'et...et'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -2066,7 +1965,6 @@
         "text": "Wat betekent 'primum'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -2127,7 +2025,6 @@
         "text": "Vertaal naar het Nederlands: vir, viri",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -2143,10 +2040,7 @@
         "question": "Vertaal naar het Nederlands: vir, viri",
         "accepted_answers": [
           "man"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -2170,7 +2064,6 @@
         "text": "Welk werkwoord gaat met de DATIVUS en betekent 'bevallen'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2231,7 +2124,6 @@
         "text": "Vertaal naar het Nederlands: cur",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -2247,10 +2139,7 @@
         "question": "Vertaal naar het Nederlands: cur",
         "accepted_answers": [
           "waarom"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -2274,7 +2163,6 @@
         "text": "Wat betekent 'licet'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -2335,7 +2223,6 @@
         "text": "Welk werkwoord gaat met de DATIVUS en betekent 'belachelijk maken'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2396,7 +2283,6 @@
         "text": "Vertaal naar het Latijn: vijand",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -2413,10 +2299,7 @@
         "accepted_answers": [
           "hostis",
           "hostes"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -2441,7 +2324,6 @@
         "text": "Wat betekent 'facile est'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -2516,7 +2398,6 @@
         "text": "Vertaal naar het Latijn: zoals",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -2532,10 +2413,7 @@
         "question": "Vertaal naar het Latijn: zoals",
         "accepted_answers": [
           "sicut"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -2559,7 +2437,6 @@
         "text": "In welke naamval staat het ONDERWERP van een zin?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2620,7 +2497,6 @@
         "text": "In welke naamval staat het LIJDEND VOORWERP?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2681,7 +2557,6 @@
         "text": "In welke naamval staat het MEEWERKEND VOORWERP?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2742,7 +2617,6 @@
         "text": "Welke naamval gebruik je voor BIJWOORDELIJKE BEPALINGEN (waar? waarmee?)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2803,7 +2677,6 @@
         "text": "Wat is de nominativus enkelvoud van 'femina' (vrouw)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2864,7 +2737,6 @@
         "text": "Wat is de accusativus enkelvoud van 'servus' (slaaf)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2938,7 +2810,6 @@
         "text": "Wat is de dativus enkelvoud van 'rex' (koning)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -2999,7 +2870,6 @@
         "text": "Zet in de accusativus enkelvoud: femina",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -3015,10 +2885,7 @@
         "question": "Zet in de accusativus enkelvoud: femina",
         "accepted_answers": [
           "feminam"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -3042,7 +2909,6 @@
         "text": "Zet in de nominativus meervoud: servus",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -3058,10 +2924,7 @@
         "question": "Zet in de nominativus meervoud: servus",
         "accepted_answers": [
           "servi"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -3085,7 +2948,6 @@
         "text": "Tot welke verbuigingsgroep behoort 'aqua' (water)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -3146,7 +3008,6 @@
         "text": "Tot welke verbuigingsgroep behoort 'donum' (geschenk)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -3207,7 +3068,6 @@
         "text": "Tot welke verbuigingsgroep behoort 'nomen' (naam)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -3268,7 +3128,6 @@
         "text": "Wat is 'jullie zijn' in het Latijn?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -3344,7 +3203,6 @@
         "text": "Vertaal: De slaaf roept.",
         "html": null
       },
-      "points": 1,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -3361,10 +3219,7 @@
         "accepted_answers": [
           "servus vocat",
           "servus clamat"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -3402,7 +3257,6 @@
         "text": "Vertaal: De vrouw ziet de slaaf.",
         "html": null
       },
-      "points": 1,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -3418,10 +3272,7 @@
         "question": "Vertaal: De vrouw ziet de slaaf.",
         "accepted_answers": [
           "femina servum videt"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -3458,7 +3309,6 @@
         "text": "In de zin 'Pater servo mandatum dat', wat is de functie van 'servo'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -3519,7 +3369,6 @@
         "text": "Wat is het persoonlijk voornaamwoord 'ik' in de nominativus?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -3580,7 +3429,6 @@
         "text": "Wat is 'aan/voor mij' in het Latijn (dativus)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -3641,7 +3489,6 @@
         "text": "Wat is 'aan/voor jou' in het Latijn (dativus)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -3702,7 +3549,6 @@
         "text": "Welke uitgang krijgt een werkwoord in de 3e persoon enkelvoud?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_werkwoorden"
       ],
@@ -3763,7 +3609,6 @@
         "text": "Welke uitgang krijgt een werkwoord in de 3e persoon meervoud?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_werkwoorden"
       ],
@@ -3824,7 +3669,6 @@
         "text": "Zet in de ablativus enkelvoud: aqua",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -3840,10 +3684,7 @@
         "question": "Zet in de ablativus enkelvoud: aqua",
         "accepted_answers": [
           "aqua"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -3867,7 +3708,6 @@
         "text": "Zet in de ablativus enkelvoud: servus",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -3883,10 +3723,7 @@
         "question": "Zet in de ablativus enkelvoud: servus",
         "accepted_answers": [
           "servo"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -3910,7 +3747,6 @@
         "text": "Wat is de ablativus enkelvoud van 'rex'?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -3971,7 +3807,6 @@
         "text": "In + accusativus betekent...",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -4032,7 +3867,6 @@
         "text": "In + ablativus betekent...",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -4093,7 +3927,6 @@
         "text": "Vertaal naar het Latijn: De vader geeft aan de zoon.",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_nl_la"
       ],
@@ -4109,10 +3942,7 @@
         "question": "Vertaal naar het Latijn: De vader geeft aan de zoon.",
         "accepted_answers": [
           "pater filio dat"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -4136,7 +3966,6 @@
         "text": "Wat is de nominativus meervoud van 'urbs' (stad)?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -4197,7 +4026,6 @@
         "text": "Vertaal naar het Nederlands: Servi gregem custodiunt.",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -4213,10 +4041,7 @@
         "question": "Vertaal naar het Nederlands: Servi gregem custodiunt.",
         "accepted_answers": [
           "de slaven bewaken de kudde"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -4240,7 +4065,6 @@
         "text": "Hoe herken je een infinitivus in het Latijn?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "grammatica_werkwoorden"
       ],
@@ -4301,7 +4125,6 @@
         "text": "Vul de ontbrekende vormen in van servus (slaaf, groep 2).",
         "html": "Vul de ontbrekende vormen in van <b>servus</b> (slaaf, groep 2)."
       },
-      "points": 6,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -4368,10 +4191,7 @@
               }
             ]
           }
-        ],
-        "grading": {
-          "per_cell_points": 1
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -4433,11 +4253,7 @@
                 }
               ]
             }
-          ],
-          "points": 6,
-          "grading": {
-            "per_cell_points": 1
-          }
+          ]
         }
       }
     },
@@ -4449,7 +4265,6 @@
         "text": "Vul de ontbrekende vormen in van femina (vrouw, groep 1).",
         "html": "Vul de ontbrekende vormen in van <b>femina</b> (vrouw, groep 1)."
       },
-      "points": 6,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -4516,10 +4331,7 @@
               }
             ]
           }
-        ],
-        "grading": {
-          "per_cell_points": 1
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -4581,11 +4393,7 @@
                 }
               ]
             }
-          ],
-          "points": 6,
-          "grading": {
-            "per_cell_points": 1
-          }
+          ]
         }
       }
     },
@@ -4597,7 +4405,6 @@
         "text": "Vul de ontbrekende vormen in van rex (koning, groep 3).",
         "html": "Vul de ontbrekende vormen in van <b>rex</b> (koning, groep 3)."
       },
-      "points": 6,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -4664,10 +4471,7 @@
               }
             ]
           }
-        ],
-        "grading": {
-          "per_cell_points": 1
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -4729,11 +4533,7 @@
                 }
               ]
             }
-          ],
-          "points": 6,
-          "grading": {
-            "per_cell_points": 1
-          }
+          ]
         }
       }
     },
@@ -4745,7 +4545,6 @@
         "text": "Vul de ontbrekende vormen in van nomen (naam, groep 3).",
         "html": "Vul de ontbrekende vormen in van <b>nomen</b> (naam, groep 3)."
       },
-      "points": 6,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -4812,10 +4611,7 @@
               }
             ]
           }
-        ],
-        "grading": {
-          "per_cell_points": 1
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -4877,11 +4673,7 @@
                 }
               ]
             }
-          ],
-          "points": 6,
-          "grading": {
-            "per_cell_points": 1
-          }
+          ]
         }
       }
     },
@@ -4893,7 +4685,6 @@
         "text": "Vertaal het gemarkeerde woord in de context van de zin.",
         "html": "Vertaal het gemarkeerde woord in de context van de zin."
       },
-      "points": 5,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -4914,8 +4705,7 @@
             "accepted_answers": [
               "beveelt",
               "gebiedt"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -4923,37 +4713,30 @@
             "accepted_answers": [
               "de rivier",
               "rivier"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
             "latin_html": "Femina pueros <u>videt</u>.",
             "accepted_answers": [
               "ziet"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
             "latin_html": "Pastor gregem <u>custodit</u>.",
             "accepted_answers": [
               "bewaakt"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "latin_html": "Servi <u>domum</u> portant.",
             "accepted_answers": [
               "naar huis"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -4968,40 +4751,34 @@
               "accepted": [
                 "beveelt",
                 "gebiedt"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Pueri in <u>flumen</u> natant.",
               "accepted": [
                 "de rivier",
                 "rivier"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Femina pueros <u>videt</u>.",
               "accepted": [
                 "ziet"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Pastor gregem <u>custodit</u>.",
               "accepted": [
                 "bewaakt"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Servi <u>domum</u> portant.",
               "accepted": [
                 "naar huis"
-              ],
-              "points": 1
+              ]
             }
-          ],
-          "points": 5
+          ]
         }
       }
     },
@@ -5013,7 +4790,6 @@
         "text": "Vertaal het gemarkeerde woord in de context van de zin.",
         "html": "Vertaal het gemarkeerde woord in de context van de zin."
       },
-      "points": 5,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -5034,8 +4810,7 @@
             "accepted_answers": [
               "de wolvin",
               "wolvin"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -5043,8 +4818,7 @@
             "accepted_answers": [
               "steunt",
               "geeft steun aan"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
@@ -5052,29 +4826,23 @@
             "accepted_answers": [
               "het volk",
               "volk"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
             "latin_html": "Fratres urbem <u>aedificant</u>.",
             "accepted_answers": [
               "bouwen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
             "latin_html": "Romulus Remum gladio <u>necat</u>.",
             "accepted_answers": [
               "doodt"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -5089,41 +4857,35 @@
               "accepted": [
                 "de wolvin",
                 "wolvin"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Pater filio <u>favet</u>.",
               "accepted": [
                 "steunt",
                 "geeft steun aan"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Rex <u>populum</u> aspicit.",
               "accepted": [
                 "het volk",
                 "volk"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Fratres urbem <u>aedificant</u>.",
               "accepted": [
                 "bouwen"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Romulus Remum gladio <u>necat</u>.",
               "accepted": [
                 "doodt"
-              ],
-              "points": 1
+              ]
             }
-          ],
-          "points": 5
+          ]
         }
       }
     },
@@ -5135,7 +4897,6 @@
         "text": "Bepaal de naamval, het getal en de functie van het gemarkeerde woord.",
         "html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het gemarkeerde woord."
       },
-      "points": 5,
       "skills": [
         "zinsanalyse",
         "grammatica_naamvallen"
@@ -5176,8 +4937,7 @@
               "naamval": "nominativus",
               "getal": "enkelvoud",
               "verklaring": "onderwerp"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item02",
@@ -5186,8 +4946,7 @@
               "naamval": "accusativus",
               "getal": "enkelvoud",
               "verklaring": "lijdend voorwerp"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item03",
@@ -5196,8 +4955,7 @@
               "naamval": "dativus",
               "getal": "enkelvoud",
               "verklaring": "meewerkend voorwerp"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item04",
@@ -5206,8 +4964,7 @@
               "naamval": "ablativus",
               "getal": "enkelvoud",
               "verklaring": "bijwoordelijke bepaling"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item05",
@@ -5216,15 +4973,9 @@
               "naamval": "nominativus",
               "getal": "meervoud",
               "verklaring": "onderwerp"
-            },
-            "points": 1
+            }
           }
-        ],
-        "grading": {
-          "rule": "per_item_partial",
-          "full_points_if": 3,
-          "half_points_if": 2
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -5258,8 +5009,7 @@
                 "naamval": "nominativus",
                 "getal": "enkelvoud",
                 "verklaring": "onderwerp"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Rex <u>servum</u> vocat.",
@@ -5267,8 +5017,7 @@
                 "naamval": "accusativus",
                 "getal": "enkelvoud",
                 "verklaring": "lijdend voorwerp"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Pater <u>filio</u> donum dat.",
@@ -5276,8 +5025,7 @@
                 "naamval": "dativus",
                 "getal": "enkelvoud",
                 "verklaring": "meewerkend voorwerp"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Servus in <u>campo</u> laborat.",
@@ -5285,8 +5033,7 @@
                 "naamval": "ablativus",
                 "getal": "enkelvoud",
                 "verklaring": "bijwoordelijke bepaling"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "<u>Feminae</u> pueros vident.",
@@ -5294,16 +5041,9 @@
                 "naamval": "nominativus",
                 "getal": "meervoud",
                 "verklaring": "onderwerp"
-              },
-              "points": 1
+              }
             }
-          ],
-          "grading": {
-            "rule": "per_item_partial",
-            "full_points_if": 3,
-            "half_points_if": 2
-          },
-          "points": 5
+          ]
         }
       }
     },
@@ -5315,7 +5055,6 @@
         "text": "Vul de ontbrekende vormen in van donum (geschenk, groep 2 onzijdig).",
         "html": "Vul de ontbrekende vormen in van <b>donum</b> (geschenk, groep 2 onzijdig)."
       },
-      "points": 6,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -5382,10 +5121,7 @@
               }
             ]
           }
-        ],
-        "grading": {
-          "per_cell_points": 1
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -5447,11 +5183,7 @@
                 }
               ]
             }
-          ],
-          "points": 6,
-          "grading": {
-            "per_cell_points": 1
-          }
+          ]
         }
       }
     },
@@ -5463,7 +5195,6 @@
         "text": "Vertaal het gemarkeerde woord in de context van de zin.",
         "html": "Vertaal het gemarkeerde woord in de context van de zin."
       },
-      "points": 5,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -5484,8 +5215,7 @@
             "accepted_answers": [
               "bewaakt",
               "houdt de wacht over"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -5494,8 +5224,7 @@
               "de wolvin",
               "wolvin",
               "een wolvin"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
@@ -5503,8 +5232,7 @@
             "accepted_answers": [
               "drinken",
               "zuigen"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
@@ -5512,8 +5240,7 @@
             "accepted_answers": [
               "doden",
               "om te doden"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
@@ -5521,13 +5248,9 @@
             "accepted_answers": [
               "weigert niet",
               "wijst niet af"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -5542,8 +5265,7 @@
               "accepted": [
                 "bewaakt",
                 "houdt de wacht over"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "<u>Lupa</u> ad pueros accedit.",
@@ -5551,35 +5273,30 @@
                 "de wolvin",
                 "wolvin",
                 "een wolvin"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Pueri ubera <u>bibunt</u>.",
               "accepted": [
                 "drinken",
                 "zuigen"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Rex pueros <u>necare</u> iubet.",
               "accepted": [
                 "doden",
                 "om te doden"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Servus mandatum <u>non recusat</u>.",
               "accepted": [
                 "weigert niet",
                 "wijst niet af"
-              ],
-              "points": 1
+              ]
             }
-          ],
-          "points": 5
+          ]
         }
       }
     },
@@ -5591,7 +5308,6 @@
         "text": "Vertaal het gemarkeerde woord. Let op de naamval!",
         "html": "Vertaal het gemarkeerde woord. Let op de naamval!"
       },
-      "points": 5,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -5612,8 +5328,7 @@
             "accepted_answers": [
               "de koning",
               "koning"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -5622,8 +5337,7 @@
               "de slaaf",
               "slaaf",
               "een slaaf"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
@@ -5631,8 +5345,7 @@
             "accepted_answers": [
               "de jongens",
               "jongens"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
@@ -5640,8 +5353,7 @@
             "accepted_answers": [
               "de jongens",
               "jongens"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
@@ -5649,13 +5361,9 @@
             "accepted_answers": [
               "de rivier",
               "rivier"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -5670,8 +5378,7 @@
               "accepted": [
                 "de koning",
                 "koning"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Rex <u>servum</u> vocat.",
@@ -5679,35 +5386,30 @@
                 "de slaaf",
                 "slaaf",
                 "een slaaf"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "<u>Pueri</u> lacrimant.",
               "accepted": [
                 "de jongens",
                 "jongens"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Femina <u>pueros</u> videt.",
               "accepted": [
                 "de jongens",
                 "jongens"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Servus ad <u>flumen</u> venit.",
               "accepted": [
                 "de rivier",
                 "rivier"
-              ],
-              "points": 1
+              ]
             }
-          ],
-          "points": 5
+          ]
         }
       }
     },
@@ -5719,7 +5421,6 @@
         "text": "Vertaal het gemarkeerde werkwoord.",
         "html": "Vertaal het gemarkeerde werkwoord."
       },
-      "points": 5,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -5740,8 +5441,7 @@
             "accepted_answers": [
               "bouwt",
               "sticht"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item02",
@@ -5749,8 +5449,7 @@
             "accepted_answers": [
               "springt over",
               "overspringt"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item03",
@@ -5758,8 +5457,7 @@
             "accepted_answers": [
               "doodt",
               "vermoordt"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item04",
@@ -5767,8 +5465,7 @@
             "accepted_answers": [
               "komen samen",
               "verzamelen zich"
-            ],
-            "points": 1
+            ]
           },
           {
             "id": "item05",
@@ -5777,13 +5474,9 @@
               "tilt op",
               "pakt op",
               "neemt mee"
-            ],
-            "points": 1
+            ]
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -5798,32 +5491,28 @@
               "accepted": [
                 "bouwt",
                 "sticht"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Remus murum <u>transilit</u>.",
               "accepted": [
                 "springt over",
                 "overspringt"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Romulus fratrem <u>necat</u>.",
               "accepted": [
                 "doodt",
                 "vermoordt"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Cives <u>conveniunt</u>.",
               "accepted": [
                 "komen samen",
                 "verzamelen zich"
-              ],
-              "points": 1
+              ]
             },
             {
               "latijn_html": "Pastor pueros <u>tollit</u>.",
@@ -5831,11 +5520,9 @@
                 "tilt op",
                 "pakt op",
                 "neemt mee"
-              ],
-              "points": 1
+              ]
             }
-          ],
-          "points": 5
+          ]
         }
       }
     },
@@ -5847,7 +5534,6 @@
         "text": "Bepaal de naamval, het getal en de functie van het gemarkeerde woord.",
         "html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het gemarkeerde woord."
       },
-      "points": 5,
       "skills": [
         "zinsanalyse",
         "grammatica_naamvallen"
@@ -5888,8 +5574,7 @@
               "naamval": "nominativus",
               "getal": "enkelvoud",
               "verklaring": "onderwerp"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item02",
@@ -5898,8 +5583,7 @@
               "naamval": "accusativus",
               "getal": "enkelvoud",
               "verklaring": "lijdend voorwerp"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item03",
@@ -5908,8 +5592,7 @@
               "naamval": "dativus",
               "getal": "meervoud",
               "verklaring": "meewerkend voorwerp"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item04",
@@ -5918,8 +5601,7 @@
               "naamval": "ablativus",
               "getal": "enkelvoud",
               "verklaring": "aanvulling bij voorzetsel"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item05",
@@ -5928,13 +5610,9 @@
               "naamval": "nominativus",
               "getal": "meervoud",
               "verklaring": "onderwerp"
-            },
-            "points": 1
+            }
           }
-        ],
-        "grading": {
-          "rule": "per_item_full"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -5968,8 +5646,7 @@
                 "naamval": "nominativus",
                 "getal": "enkelvoud",
                 "verklaring": "onderwerp"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Pastor <u>gregem</u> custodit.",
@@ -5977,8 +5654,7 @@
                 "naamval": "accusativus",
                 "getal": "enkelvoud",
                 "verklaring": "lijdend voorwerp"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Lupa <u>pueris</u> ubera praebet.",
@@ -5986,8 +5662,7 @@
                 "naamval": "dativus",
                 "getal": "meervoud",
                 "verklaring": "meewerkend voorwerp"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Servus cum <u>cane</u> venit.",
@@ -5995,8 +5670,7 @@
                 "naamval": "ablativus",
                 "getal": "enkelvoud",
                 "verklaring": "aanvulling bij voorzetsel"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "<u>Pueri</u> non lacrimant.",
@@ -6004,11 +5678,9 @@
                 "naamval": "nominativus",
                 "getal": "meervoud",
                 "verklaring": "onderwerp"
-              },
-              "points": 1
+              }
             }
-          ],
-          "points": 5
+          ]
         }
       }
     },
@@ -6020,7 +5692,6 @@
         "text": "Bepaal de naamval en functie van het gemarkeerde woord.",
         "html": "Bepaal de <b>naamval</b> en <b>functie</b> van het gemarkeerde woord."
       },
-      "points": 5,
       "skills": [
         "zinsanalyse",
         "grammatica_naamvallen"
@@ -6061,8 +5732,7 @@
               "naamval": "dativus",
               "getal": "enkelvoud",
               "verklaring": "meewerkend voorwerp"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item02",
@@ -6071,8 +5741,7 @@
               "naamval": "accusativus",
               "getal": "enkelvoud",
               "verklaring": "aanvulling bij voorzetsel"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item03",
@@ -6081,8 +5750,7 @@
               "naamval": "accusativus",
               "getal": "enkelvoud",
               "verklaring": "aanvulling bij voorzetsel"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item04",
@@ -6091,8 +5759,7 @@
               "naamval": "nominativus",
               "getal": "enkelvoud",
               "verklaring": "onderwerp"
-            },
-            "points": 1
+            }
           },
           {
             "id": "item05",
@@ -6101,13 +5768,9 @@
               "naamval": "dativus",
               "getal": "enkelvoud",
               "verklaring": "meewerkend voorwerp"
-            },
-            "points": 1
+            }
           }
-        ],
-        "grading": {
-          "rule": "per_item_full"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -6141,8 +5804,7 @@
                 "naamval": "dativus",
                 "getal": "enkelvoud",
                 "verklaring": "meewerkend voorwerp"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Servus pueros in <u>flumen</u> ponit.",
@@ -6150,8 +5812,7 @@
                 "naamval": "accusativus",
                 "getal": "enkelvoud",
                 "verklaring": "aanvulling bij voorzetsel"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Corbis ad <u>arborem</u> haeret.",
@@ -6159,8 +5820,7 @@
                 "naamval": "accusativus",
                 "getal": "enkelvoud",
                 "verklaring": "aanvulling bij voorzetsel"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "<u>Femina</u> pueros videt.",
@@ -6168,8 +5828,7 @@
                 "naamval": "nominativus",
                 "getal": "enkelvoud",
                 "verklaring": "onderwerp"
-              },
-              "points": 1
+              }
             },
             {
               "latijn_html": "Pastor <u>uxori</u> pueros tradit.",
@@ -6177,11 +5836,9 @@
                 "naamval": "dativus",
                 "getal": "enkelvoud",
                 "verklaring": "meewerkend voorwerp"
-              },
-              "points": 1
+              }
             }
-          ],
-          "points": 5
+          ]
         }
       }
     },
@@ -6193,7 +5850,6 @@
         "text": "Vul de ontbrekende vormen in van esse (zijn).",
         "html": "Vul de ontbrekende vormen in van <b>esse</b> (zijn)."
       },
-      "points": 4,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -6251,10 +5907,7 @@
               }
             ]
           }
-        ],
-        "grading": {
-          "per_cell_points": 1
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -6307,11 +5960,7 @@
                 }
               ]
             }
-          ],
-          "points": 4,
-          "grading": {
-            "per_cell_points": 1
-          }
+          ]
         }
       }
     },
@@ -6323,7 +5972,6 @@
         "text": "Vul de ontbrekende vormen in van laudare (prijzen, groep 1).",
         "html": "Vul de ontbrekende vormen in van <b>laudare</b> (prijzen, groep 1)."
       },
-      "points": 4,
       "skills": [
         "grammatica_naamvallen"
       ],
@@ -6381,10 +6029,7 @@
               }
             ]
           }
-        ],
-        "grading": {
-          "per_cell_points": 1
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -6437,11 +6082,7 @@
                 }
               ]
             }
-          ],
-          "points": 4,
-          "grading": {
-            "per_cell_points": 1
-          }
+          ]
         }
       }
     },
@@ -6453,7 +6094,6 @@
         "text": "Geef beide betekenissen van de volgende woorden.",
         "html": "Geef <b>beide betekenissen</b> van de volgende woorden."
       },
-      "points": 3,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -6471,25 +6111,19 @@
           {
             "id": "item01",
             "question": "et",
-            "accepted_answers": [],
-            "points": 1
+            "accepted_answers": []
           },
           {
             "id": "item02",
             "question": "in + accusativus",
-            "accepted_answers": [],
-            "points": 1
+            "accepted_answers": []
           },
           {
             "id": "item03",
             "question": "dum",
-            "accepted_answers": [],
-            "points": 1
+            "accepted_answers": []
           }
-        ],
-        "grading": {
-          "rule": "per_item"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -6506,15 +6140,13 @@
                   "label": "1e betekenis",
                   "accepted": [
                     "en"
-                  ],
-                  "points": 0.5
+                  ]
                 },
                 {
                   "label": "2e betekenis",
                   "accepted": [
                     "ook"
-                  ],
-                  "points": 0.5
+                  ]
                 }
               ]
             },
@@ -6526,16 +6158,14 @@
                   "accepted": [
                     "in",
                     "naar"
-                  ],
-                  "points": 0.5
+                  ]
                 },
                 {
                   "label": "2e betekenis",
                   "accepted": [
                     "op",
                     "naar"
-                  ],
-                  "points": 0.5
+                  ]
                 }
               ]
             },
@@ -6546,21 +6176,18 @@
                   "label": "1e betekenis",
                   "accepted": [
                     "terwijl"
-                  ],
-                  "points": 0.5
+                  ]
                 },
                 {
                   "label": "2e betekenis",
                   "accepted": [
                     "zolang als",
                     "zolang"
-                  ],
-                  "points": 0.5
+                  ]
                 }
               ]
             }
-          ],
-          "points": 3
+          ]
         }
       },
       "media": [
@@ -6586,7 +6213,6 @@
         "text": "Vertaal de volgende zin naar het Nederlands:\n\nRex servum iubet pueros necare. Servus tamen mandatum recusat.",
         "html": "Vertaal de volgende zin naar het Nederlands:<br><br><i>Rex servum iubet pueros necare. Servus tamen mandatum recusat.</i>"
       },
-      "points": 4,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -6609,11 +6235,7 @@
           "doden",
           "weigert",
           "opdracht"
-        ],
-        "grading": {
-          "rule": "keyword_rubric",
-          "keywords_required_for_full": null
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -6633,8 +6255,7 @@
               "weigert",
               "opdracht"
             ]
-          },
-          "points": 4
+          }
         }
       }
     },
@@ -6646,7 +6267,6 @@
         "text": "Vertaal naar het Nederlands:\n\nLupa pueros videt et ad eos accedit. Pueris ubera praebet.",
         "html": "Vertaal naar het Nederlands:<br><br><i>Lupa pueros videt et ad eos accedit. Pueris ubera praebet.</i>"
       },
-      "points": 4,
       "skills": [
         "vertalen_la_nl"
       ],
@@ -6668,11 +6288,7 @@
           "gaat",
           "biedt",
           "tepels"
-        ],
-        "grading": {
-          "rule": "keyword_rubric",
-          "keywords_required_for_full": null
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -6691,8 +6307,7 @@
               "biedt",
               "tepels"
             ]
-          },
-          "points": 4
+          }
         }
       }
     },
@@ -6704,7 +6319,6 @@
         "text": "Wie was de rechtmatige koning van Alba Longa voordat Amulius de macht greep?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "cultuur_verhaal"
       ],
@@ -6781,7 +6395,6 @@
         "text": "Waarom dwong Amulius Rhea Silvia om Vestaalse Maagd te worden?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "cultuur_verhaal"
       ],
@@ -6858,7 +6471,6 @@
         "text": "Wie is volgens de mythe de vader van Romulus en Remus?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "cultuur_verhaal"
       ],
@@ -6935,7 +6547,6 @@
         "text": "Wat beval Amulius te doen met de pasgeboren tweeling?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -7012,7 +6623,6 @@
         "text": "Wat deed de slaaf in plaats van de tweeling te verdrinken?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -7031,10 +6641,7 @@
           "mandje in de rivier",
           "in mandje gelegd",
           "op de rivier gezet"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -7077,7 +6684,6 @@
         "text": "Waar bleef het mandje met de tweeling steken?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -7154,7 +6760,6 @@
         "text": "Welk dier vond de tweeling en zorgde voor hen?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -7231,7 +6836,6 @@
         "text": "Hoe heet de herder die Romulus en Remus vond en mee naar huis nam?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -7247,10 +6851,7 @@
         "question": "Hoe heet de herder die Romulus en Remus vond en mee naar huis nam?",
         "accepted_answers": [
           "Faustulus"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -7290,7 +6891,6 @@
         "text": "Wie voedde Romulus en Remus op als eigen kinderen?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "cultuur_verhaal"
       ],
@@ -7367,7 +6967,6 @@
         "text": "Wat deden Romulus en Remus toen ze ontdekten wie ze werkelijk waren?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "cultuur_verhaal"
       ],
@@ -7444,7 +7043,6 @@
         "text": "Waarover kregen Romulus en Remus ruzie bij het stichten van hun stad?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -7521,7 +7119,6 @@
         "text": "Hoe kwam Remus om het leven?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -7598,7 +7195,6 @@
         "text": "Naar wie is de stad Rome vernoemd?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "woordenschat_la_nl"
       ],
@@ -7614,10 +7210,7 @@
         "question": "Naar wie is de stad Rome vernoemd?",
         "accepted_answers": [
           "Romulus"
-        ],
-        "grading": {
-          "rule": "any_accepted"
-        }
+        ]
       },
       "source": {
         "schema_version": "1.x",
@@ -7657,7 +7250,6 @@
         "text": "Wie werd de eerste koning van Rome?",
         "html": null
       },
-      "points": 1,
       "skills": [
         "cultuur_verhaal"
       ],

@@ -5,7 +5,16 @@
     "language": "nl",
     "course": "Latijn brugklas",
     "time_limit_sec": null,
-    "source_sections": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"],
+    "source_sections": [
+      "I",
+      "II",
+      "III",
+      "IV",
+      "V",
+      "VI",
+      "VII",
+      "VIII"
+    ],
     "original_counts": {
       "aantal_vragen": 8,
       "totaal_punten": 45
@@ -14,228 +23,468 @@
   "questions": [
     {
       "id": "q1",
-      "ref": { "deel": "I", "nummer": 1 },
+      "ref": {
+        "deel": "I",
+        "nummer": 1
+      },
       "type": "short_text",
       "prompt_html": "Het zelfstandig naamwoord dat in een Latijnse zin de functie onderwerp heeft, staat in de naamval …",
       "answer": {
-        "accepted": ["nominativus"],
+        "accepted": [
+          "nominativus"
+        ],
         "case_sensitive": false,
         "trim": true,
         "normalize_diacritics": true
       },
-      "points": 1,
-      "tags": ["deel I", "invul"]
+      "tags": [
+        "deel I",
+        "invul"
+      ]
     },
     {
       "id": "q2",
-      "ref": { "deel": "II" },
+      "ref": {
+        "deel": "II"
+      },
       "type": "table_parse",
       "prompt_html": "Vul bij de zelfstandige naamwoorden de ontbrekende vormen in.",
       "blocks": [
         {
           "lemma": "servus",
           "rows": [
-            { "veld": "nom. ev", "invulbaar": true, "accepted": ["servus"] },
-            { "veld": "acc. ev", "invulbaar": false, "given": "servum" },
-            { "veld": "nom. mv", "invulbaar": true, "accepted": ["servi"] },
-            { "veld": "acc. mv", "invulbaar": true, "accepted": ["servos"] }
+            {
+              "veld": "nom. ev",
+              "invulbaar": true,
+              "accepted": [
+                "servus"
+              ]
+            },
+            {
+              "veld": "acc. ev",
+              "invulbaar": false,
+              "given": "servum"
+            },
+            {
+              "veld": "nom. mv",
+              "invulbaar": true,
+              "accepted": [
+                "servi"
+              ]
+            },
+            {
+              "veld": "acc. mv",
+              "invulbaar": true,
+              "accepted": [
+                "servos"
+              ]
+            }
           ]
         },
         {
           "lemma": "rex",
           "rows": [
-            { "veld": "nom. ev", "invulbaar": false, "given": "rex" },
-            { "veld": "acc. ev", "invulbaar": true, "accepted": ["regem"] },
-            { "veld": "nom. mv", "invulbaar": true, "accepted": ["reges"] },
-            { "veld": "acc. mv", "invulbaar": false, "given": "reges" }
+            {
+              "veld": "nom. ev",
+              "invulbaar": false,
+              "given": "rex"
+            },
+            {
+              "veld": "acc. ev",
+              "invulbaar": true,
+              "accepted": [
+                "regem"
+              ]
+            },
+            {
+              "veld": "nom. mv",
+              "invulbaar": true,
+              "accepted": [
+                "reges"
+              ]
+            },
+            {
+              "veld": "acc. mv",
+              "invulbaar": false,
+              "given": "reges"
+            }
           ]
         },
         {
           "lemma": "aqua",
           "rows": [
-            { "veld": "nom. ev", "invulbaar": true, "accepted": ["aqua"] },
-            { "veld": "acc. ev", "invulbaar": true, "accepted": ["aquam"] },
-            { "veld": "nom. mv", "invulbaar": false, "given": "aquae" },
-            { "veld": "acc. mv", "invulbaar": true, "accepted": ["aquas"] }
+            {
+              "veld": "nom. ev",
+              "invulbaar": true,
+              "accepted": [
+                "aqua"
+              ]
+            },
+            {
+              "veld": "acc. ev",
+              "invulbaar": true,
+              "accepted": [
+                "aquam"
+              ]
+            },
+            {
+              "veld": "nom. mv",
+              "invulbaar": false,
+              "given": "aquae"
+            },
+            {
+              "veld": "acc. mv",
+              "invulbaar": true,
+              "accepted": [
+                "aquas"
+              ]
+            }
           ]
         },
         {
           "lemma": "arbor",
           "rows": [
-            { "veld": "nom. ev", "invulbaar": false, "given": "arbor" },
-            { "veld": "acc. ev", "invulbaar": true, "accepted": ["arborem"] },
-            { "veld": "nom. mv", "invulbaar": true, "accepted": ["arbores"] },
-            { "veld": "acc. mv", "invulbaar": false, "given": "arbores" }
+            {
+              "veld": "nom. ev",
+              "invulbaar": false,
+              "given": "arbor"
+            },
+            {
+              "veld": "acc. ev",
+              "invulbaar": true,
+              "accepted": [
+                "arborem"
+              ]
+            },
+            {
+              "veld": "nom. mv",
+              "invulbaar": true,
+              "accepted": [
+                "arbores"
+              ]
+            },
+            {
+              "veld": "acc. mv",
+              "invulbaar": false,
+              "given": "arbores"
+            }
           ]
         }
       ],
-      "points": 5,
-      "tags": ["deel II", "naamvallen", "zelfstandig naamwoord"],
-      "grading": { "per_cell_points": 0.5, "open_cells": 10 }
+      "tags": [
+        "deel II",
+        "naamvallen",
+        "zelfstandig naamwoord"
+      ]
     },
     {
       "id": "q3",
-      "ref": { "deel": "III" },
+      "ref": {
+        "deel": "III"
+      },
       "type": "grouped_short_text",
       "prompt_html": "Vertaal het woord.",
       "words": [
-        { "latijn": "locus", "accepted": ["plaats", "plek", "locatie"], "points": 1 },
-        { "latijn": "audire", "accepted": ["horen", "luisteren"], "points": 1 },
-        { "latijn": "tollere", "accepted": ["optillen", "opheffen", "wegnemen"], "points": 1 },
+        {
+          "latijn": "locus",
+          "accepted": [
+            "plaats",
+            "plek",
+            "locatie"
+          ]
+        },
+        {
+          "latijn": "audire",
+          "accepted": [
+            "horen",
+            "luisteren"
+          ]
+        },
+        {
+          "latijn": "tollere",
+          "accepted": [
+            "optillen",
+            "opheffen",
+            "wegnemen"
+          ]
+        },
         {
           "latijn": "et",
           "subfields": [
-            { "label": "1e betekenis", "accepted": ["en"], "points": 0.5 },
-            { "label": "2e betekenis", "accepted": ["ook"], "points": 0.5 }
+            {
+              "label": "1e betekenis",
+              "accepted": [
+                "en"
+              ]
+            },
+            {
+              "label": "2e betekenis",
+              "accepted": [
+                "ook"
+              ]
+            }
           ]
         },
-        { "latijn": "rex", "accepted": ["koning"], "points": 1 }
+        {
+          "latijn": "rex",
+          "accepted": [
+            "koning"
+          ]
+        }
       ],
-      "tags": ["deel III", "woordenschat"],
-      "points": 5
+      "tags": [
+        "deel III",
+        "woordenschat"
+      ]
     },
     {
       "id": "q4",
-      "ref": { "deel": "IV" },
+      "ref": {
+        "deel": "IV"
+      },
       "type": "grouped_translation",
       "prompt_html": "Vertaal het <u>onderstreepte</u> woord in de context van de zin. Let op naamval, getal en persoon.",
       "items": [
-        { "latijn_html": "Rex servum iubet pueros <u>necare</u>.", "accepted": ["doden", "om te doden"], "points": 1 },
-        { "latijn_html": "<u>Puer</u> lacrimat.", "accepted": ["de jongen", "het kind"], "points": 1 },
-        { "latijn_html": "Pueri aquam <u>non</u> timent.", "accepted": ["niet"], "points": 1 },
-        { "latijn_html": "<u>Mandatum</u> non recusat.", "accepted": ["opdracht", "bevel"], "points": 1 },
-        { "latijn_html": "<u>Tamen</u> pueros in flumen ponit.", "accepted": ["toch", "echter"], "points": 1 }
+        {
+          "latijn_html": "Rex servum iubet pueros <u>necare</u>.",
+          "accepted": [
+            "doden",
+            "om te doden"
+          ]
+        },
+        {
+          "latijn_html": "<u>Puer</u> lacrimat.",
+          "accepted": [
+            "de jongen",
+            "het kind"
+          ]
+        },
+        {
+          "latijn_html": "Pueri aquam <u>non</u> timent.",
+          "accepted": [
+            "niet"
+          ]
+        },
+        {
+          "latijn_html": "<u>Mandatum</u> non recusat.",
+          "accepted": [
+            "opdracht",
+            "bevel"
+          ]
+        },
+        {
+          "latijn_html": "<u>Tamen</u> pueros in flumen ponit.",
+          "accepted": [
+            "toch",
+            "echter"
+          ]
+        }
       ],
-      "tags": ["deel IV", "vertalen", "context"],
-      "points": 5
+      "tags": [
+        "deel IV",
+        "vertalen",
+        "context"
+      ]
     },
     {
       "id": "q5",
-      "ref": { "deel": "V" },
+      "ref": {
+        "deel": "V"
+      },
       "type": "grouped_select",
       "prompt_html": "Bepaal de <b>naamval</b>, het <b>getal</b> en de <b>functie</b> van het onderstreepte woord.",
       "legend": {
-        "naamval_options": ["nominativus", "accusativus"],
-        "getal_options": ["enkelvoud", "meervoud"],
-        "verklaring_options": ["onderwerp", "lijdend voorwerp", "aanvulling bij voorzetsel"]
+        "naamval_options": [
+          "nominativus",
+          "accusativus"
+        ],
+        "getal_options": [
+          "enkelvoud",
+          "meervoud"
+        ],
+        "verklaring_options": [
+          "onderwerp",
+          "lijdend voorwerp",
+          "aanvulling bij voorzetsel"
+        ]
       },
       "items": [
         {
           "latijn_html": "Rex servum iubet <u>pueros</u> necare.",
-          "correct": { "naamval": "accusativus", "getal": "meervoud", "verklaring": "lijdend voorwerp" },
-          "points": 1
+          "correct": {
+            "naamval": "accusativus",
+            "getal": "meervoud",
+            "verklaring": "lijdend voorwerp"
+          }
         },
         {
           "latijn_html": "<u>Pueri</u> aquam non timent.",
-          "correct": { "naamval": "nominativus", "getal": "meervoud", "verklaring": "onderwerp" },
-          "points": 1
+          "correct": {
+            "naamval": "nominativus",
+            "getal": "meervoud",
+            "verklaring": "onderwerp"
+          }
         },
         {
           "latijn_html": "Pueri <u>aquam</u> non timent.",
-          "correct": { "naamval": "accusativus", "getal": "enkelvoud", "verklaring": "lijdend voorwerp" },
-          "points": 1
+          "correct": {
+            "naamval": "accusativus",
+            "getal": "enkelvoud",
+            "verklaring": "lijdend voorwerp"
+          }
         },
         {
           "latijn_html": "<u>Mandatum</u> non recusat.",
-          "correct": { "naamval": "accusativus", "getal": "enkelvoud", "verklaring": "lijdend voorwerp" },
-          "points": 1
+          "correct": {
+            "naamval": "accusativus",
+            "getal": "enkelvoud",
+            "verklaring": "lijdend voorwerp"
+          }
         },
         {
           "latijn_html": "Tamen pueros in <u>flumen</u> ponit.",
-          "correct": { "naamval": "accusativus", "getal": "enkelvoud", "verklaring": "aanvulling bij voorzetsel" },
-          "points": 1
+          "correct": {
+            "naamval": "accusativus",
+            "getal": "enkelvoud",
+            "verklaring": "aanvulling bij voorzetsel"
+          }
         }
       ],
-      "grading": { "rule": "per_item_partial", "full_points_if": 3, "half_points_if": 2, "zero_points_if": 0 },
-      "tags": ["deel V", "naamvallen", "analyse"],
-      "points": 5
+      "tags": [
+        "deel V",
+        "naamvallen",
+        "analyse"
+      ]
     },
     {
       "id": "q6",
-      "ref": { "deel": "VI" },
+      "ref": {
+        "deel": "VI"
+      },
       "type": "grouped_short_text",
       "prompt_html": "Beantwoord de vragen over de tekst van les 1 (Flumen).",
       "items": [
         {
           "vraag": "De titel van les 1 luidt <i>flumen</i> ('de rivier'). Geef de naam van deze rivier.",
-          "accepted": ["Tiber", "Tiberis"],
-          "points": 1
+          "accepted": [
+            "Tiber",
+            "Tiberis"
+          ]
         },
         {
           "vraag": "Welke god is de vader van de tweeling van Rhea Silvia?",
-          "accepted": ["Mars"],
-          "points": 1
+          "accepted": [
+            "Mars"
+          ]
         },
         {
           "vraag": "De vader van Amulius en Numitor liet beide zonen kiezen tussen zijn macht en zijn bezit. Waarvoor koos Amulius?",
-          "accepted": ["bezit", "rijkdom", "geld", "het bezit"],
-          "points": 1
+          "accepted": [
+            "bezit",
+            "rijkdom",
+            "geld",
+            "het bezit"
+          ]
         },
         {
           "vraag": "Noem twee besluiten waarmee Amulius ervoor zorgt dat hij koning wordt (en blijft).",
           "subfields": [
             {
               "label": "Eerste besluit",
-              "accepted": ["Numitor afzetten", "zijn broer afzetten", "broer verdrijven", "Numitor verdrijven"],
-              "points": 1
+              "accepted": [
+                "Numitor afzetten",
+                "zijn broer afzetten",
+                "broer verdrijven",
+                "Numitor verdrijven"
+              ]
             },
             {
               "label": "Tweede besluit",
-              "accepted": ["Rhea Silvia Vestaalse maagd maken", "Rhea Silvia priesteres maken", "Rhea Silvia dwingen maagd te worden"],
-              "points": 1
+              "accepted": [
+                "Rhea Silvia Vestaalse maagd maken",
+                "Rhea Silvia priesteres maken",
+                "Rhea Silvia dwingen maagd te worden"
+              ]
             }
-          ],
-          "points": 2
+          ]
         }
       ],
-      "tags": ["deel VI", "begrip", "tekstbegrip"],
-      "points": 5
+      "tags": [
+        "deel VI",
+        "begrip",
+        "tekstbegrip"
+      ]
     },
     {
       "id": "q7",
-      "ref": { "deel": "VII" },
+      "ref": {
+        "deel": "VII"
+      },
       "type": "translation_open",
       "prompt_html": "Vertaal de tekst naar Nederlands:<br><br><i>Servus canem vocat. Canem venire iubet. Canis servum non timet. Ideo mandatum non recusat. Venit ad locum, ubi servus est.</i>",
       "answer": {
         "accepted_any": [
-          ["De slaaf roept de hond. Hij beveelt de hond te komen. De hond is niet bang voor de slaaf. Daarom weigert hij het bevel niet. Hij komt naar de plaats waar de slaaf is."]
+          [
+            "De slaaf roept de hond. Hij beveelt de hond te komen. De hond is niet bang voor de slaaf. Daarom weigert hij het bevel niet. Hij komt naar de plaats waar de slaaf is."
+          ]
         ],
-        "normalize": { "lowercase": true, "strip_punctuation": true, "collapse_whitespace": true },
+        "normalize": {
+          "lowercase": true,
+          "strip_punctuation": true,
+          "collapse_whitespace": true
+        },
         "substring_ok": false
       },
       "rubric": "Controleer: onderwerp, werkwoordstijd, naamvallen en zinsverbanden.",
-      "points": 5,
-      "tags": ["deel VII", "tekst", "vertalen"]
+      "tags": [
+        "deel VII",
+        "tekst",
+        "vertalen"
+      ]
     },
     {
       "id": "q8",
-      "ref": { "deel": "VIII" },
+      "ref": {
+        "deel": "VIII"
+      },
       "type": "grouped_short_text",
       "prompt_html": "Beantwoord de vragen over de tekst:<br><br><i>Servus canem vocat. Canem venire iubet. Canis servum non timet. Ideo mandatum non recusat. Venit ad locum, ubi servus est.</i>",
       "items": [
         {
           "vraag": "Wat is de functie in de zin van <i>servus</i> (zin 1)?",
-          "accepted": ["onderwerp"],
-          "points": 1
+          "accepted": [
+            "onderwerp"
+          ]
         },
         {
           "vraag": "Wat is de functie in de zin van <i>canem</i> (zin 1)?",
-          "accepted": ["lijdend voorwerp"],
-          "points": 1
+          "accepted": [
+            "lijdend voorwerp"
+          ]
         },
         {
           "vraag": "Wie is het onderwerp van zin 2?",
-          "accepted": ["servus", "hij", "de slaaf"],
-          "points": 1
+          "accepted": [
+            "servus",
+            "hij",
+            "de slaaf"
+          ]
         },
         {
           "vraag": "Welke <i>mandatum</i> krijgt de hond?",
-          "accepted": ["het bevel om te komen", "om te komen", "venire", "komen"],
-          "points": 1
+          "accepted": [
+            "het bevel om te komen",
+            "om te komen",
+            "venire",
+            "komen"
+          ]
         }
       ],
-      "tags": ["deel VIII", "begripstekst", "analyse"],
-      "points": 4
+      "tags": [
+        "deel VIII",
+        "begripstekst",
+        "analyse"
+      ]
     }
   ]
 }

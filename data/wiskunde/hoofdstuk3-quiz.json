@@ -44,7 +44,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf de coördinaten van punt P op als (x, y).",
-          "points": 1,
           "answer": {
             "value": "(3, -2)",
             "accept": [
@@ -57,7 +56,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Schrijf de coördinaten van punt Q op als (x, y).",
-          "points": 1,
           "answer": {
             "value": "(-1, 4)",
             "accept": [
@@ -70,7 +68,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Ligt punt R op de y-as? Antwoord met ja of nee.",
-          "points": 1,
           "answer": {
             "value": "ja",
             "accept": [
@@ -80,9 +77,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -107,7 +101,6 @@
           "id": "a",
           "type": "point",
           "prompt": "Plaats punt A in het assenstelsel op (−4, 1).",
-          "points": 2,
           "answer": {
             "x": -4,
             "y": 1
@@ -117,16 +110,12 @@
           "id": "b",
           "type": "point",
           "prompt": "Plaats punt B in het assenstelsel op (2, −3).",
-          "points": 2,
           "answer": {
             "x": 2,
             "y": -3
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -173,7 +162,6 @@
           "id": "a",
           "type": "multi_select",
           "prompt": "Welke punten liggen op de x-as?",
-          "points": 2,
           "options": [
             "S",
             "T",
@@ -192,7 +180,6 @@
           "id": "b",
           "type": "multi_select",
           "prompt": "Welke punten liggen op de y-as?",
-          "points": 2,
           "options": [
             "S",
             "T",
@@ -208,9 +195,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -233,7 +217,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Op welk punt (x, y) kom je uit?",
-          "points": 2,
           "answer": {
             "value": "(-3, 2)",
             "accept": [
@@ -246,7 +229,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Welke coördinaat veranderde bij het omhoog lopen: x of y?",
-          "points": 1,
           "answer": {
             "value": "y",
             "accept": [
@@ -255,9 +237,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -294,7 +273,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel vakjes naar rechts/links moet je (minimaal) van A naar B?",
-          "points": 1,
           "answer": {
             "value": "5",
             "accept": [
@@ -307,7 +285,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoeveel vakjes omhoog/omlaag moet je (minimaal) van A naar B?",
-          "points": 1,
           "answer": {
             "value": "2",
             "accept": [
@@ -320,7 +297,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Wat is de totale minimale route in vakjes als je alleen horizontaal en verticaal mag lopen?",
-          "points": 2,
           "answer": {
             "value": "7",
             "accept": [
@@ -330,9 +306,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -369,7 +342,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Welk punt heeft een negatieve x-coördinaat: C of D?",
-          "points": 1,
           "answer": {
             "value": "C",
             "accept": [
@@ -381,7 +353,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Welk punt ligt het hoogst (grootste y): C of D?",
-          "points": 1,
           "answer": {
             "value": "D",
             "accept": [
@@ -390,9 +361,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -415,7 +383,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf de coördinaten van dit punt.",
-          "points": 2,
           "answer": {
             "value": "(4, -1)",
             "accept": [
@@ -425,9 +392,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -459,7 +423,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Spiegelbeeld van P in de y-as?",
-          "points": 2,
           "answer": {
             "value": "(-2, 5)",
             "accept": [
@@ -472,7 +435,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Spiegelbeeld van P in de x-as?",
-          "points": 2,
           "answer": {
             "value": "(2, -5)",
             "accept": [
@@ -482,9 +444,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -507,7 +466,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Een punt (x, y) ligt op de x-as als…",
-          "points": 1,
           "options": [
             "y = 0",
             "x = 0",
@@ -523,7 +481,6 @@
           "id": "b",
           "type": "mcq",
           "prompt": "De oorsprong heeft coördinaten…",
-          "points": 1,
           "options": [
             "(0, 0)",
             "(1, 0)",
@@ -536,9 +493,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -570,7 +524,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf de coördinaten van M.",
-          "points": 2,
           "answer": {
             "value": "(1.5, -2)",
             "accept": [
@@ -582,9 +535,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -607,7 +557,6 @@
           "id": "a",
           "type": "text",
           "prompt": "In welk punt eindig je?",
-          "points": 2,
           "answer": {
             "value": "(3, 1)",
             "accept": [
@@ -617,9 +566,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -666,7 +612,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Welk punt ligt rechtsonder? (A/B/C/D)",
-          "points": 1,
           "answer": {
             "value": "C",
             "accept": [
@@ -678,7 +623,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Noem twee punten met dezelfde y-coördinaat 2 (schrijf bv. 'A en B').",
-          "points": 2,
           "answer": {
             "value": "A en B",
             "accept": [
@@ -690,9 +634,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -715,7 +656,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Welk punt is een roosterpunt? Antwoord met 'punt 1' of 'punt 2'.",
-          "points": 1,
           "answer": {
             "value": "punt 1",
             "accept": [
@@ -729,16 +669,12 @@
           "id": "b",
           "type": "text",
           "prompt": "Leg kort uit waarom het andere punt geen roosterpunt is.",
-          "points": 2,
           "answer": {
             "value": "Omdat 3.4 niet precies op een roosterlijn/kruising ligt.",
             "accept": []
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -761,7 +697,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf de coördinaten van K.",
-          "points": 2,
           "answer": {
             "value": "(-6, 3)",
             "accept": [
@@ -771,9 +706,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -796,7 +728,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Welke keuze is juist?",
-          "points": 2,
           "options": [
             "Onjuist: het moet (−2, −5) zijn.",
             "Juist.",
@@ -809,9 +740,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -855,7 +783,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Noem in welke stukken de grafiek stijgt (gebruik x-intervals).",
-          "points": 2,
           "answer": {
             "value": "0-2 en 6-8",
             "accept": [
@@ -869,7 +796,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Noem in welk stuk de grafiek constant is.",
-          "points": 1,
           "answer": {
             "value": "2-4",
             "accept": [
@@ -883,7 +809,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Noem in welk stuk de grafiek daalt.",
-          "points": 1,
           "answer": {
             "value": "4-6",
             "accept": [
@@ -894,9 +819,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -949,7 +871,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel meter is de afstand na 4 minuten?",
-          "points": 1,
           "answer": {
             "value": "25",
             "accept": [
@@ -962,7 +883,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Tussen welke minuten staat de afstand stil?",
-          "points": 2,
           "answer": {
             "value": "4-6",
             "accept": [
@@ -976,7 +896,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Hoeveel meter neemt de afstand toe tussen minuut 8 en 10?",
-          "points": 2,
           "answer": {
             "value": "10",
             "accept": [
@@ -986,9 +905,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -1045,7 +961,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bij welke tijd is de hartslag 90?",
-          "points": 2,
           "answer": {
             "value": "4",
             "accept": [
@@ -1058,7 +973,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Wat is de hoogste hartslag in de grafiek?",
-          "points": 1,
           "answer": {
             "value": "130",
             "accept": [
@@ -1071,7 +985,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Noem één tijdstip waarop de hartslag daalt.",
-          "points": 2,
           "answer": {
             "value": "2-4",
             "accept": [
@@ -1083,9 +996,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -1145,7 +1055,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Welke grootheid hoort op de horizontale as (x-as)?",
-          "points": 1,
           "options": [
             "tijd (u)",
             "temperatuur (°C)"
@@ -1159,7 +1068,6 @@
           "id": "b",
           "type": "mcq",
           "prompt": "Welke grootheid hoort op de verticale as (y-as)?",
-          "points": 1,
           "options": [
             "tijd (u)",
             "temperatuur (°C)"
@@ -1173,7 +1081,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Welke temperatuur hoort bij tijd 3 uur?",
-          "points": 1,
           "answer": {
             "value": "16",
             "accept": [
@@ -1183,9 +1090,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -1208,7 +1112,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Wat voor grafiek is dit?",
-          "points": 1,
           "options": [
             "Een globale grafiek",
             "Een grafiek in een assenstelsel met schaal"
@@ -1222,16 +1125,12 @@
           "id": "b",
           "type": "text",
           "prompt": "Wat kun je wél uit zo’n grafiek halen? (noem 1 ding)",
-          "points": 2,
           "answer": {
             "value": "Het verloop: stijgend/dalend/constant.",
             "accept": []
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -1274,7 +1173,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Is het stuk van x=1 tot x=3 stijgend, dalend of constant?",
-          "points": 1,
           "answer": {
             "value": "constant",
             "accept": [
@@ -1286,7 +1184,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Is het stuk van x=0 tot x=1 stijgend, dalend of constant?",
-          "points": 1,
           "answer": {
             "value": "dalend",
             "accept": [
@@ -1298,7 +1195,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Is het stuk van x=3 tot x=5 stijgend, dalend of constant?",
-          "points": 1,
           "answer": {
             "value": "stijgend",
             "accept": [
@@ -1307,9 +1203,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -1362,7 +1255,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel pauzes (stilstand) zie je?",
-          "points": 1,
           "answer": {
             "value": "2",
             "accept": [
@@ -1375,7 +1267,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Noem de tijd-interval(s) van de pauze(s).",
-          "points": 2,
           "answer": {
             "value": "2-3 en 5-7",
             "accept": [
@@ -1385,9 +1276,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -1432,7 +1320,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Wat is de hoogte bij start (t=0)?",
-          "points": 1,
           "answer": {
             "value": "10",
             "accept": [
@@ -1442,9 +1329,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 1
-      },
       "answer_key": {}
     },
     {
@@ -1467,7 +1351,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Welke schaal is het handigst?",
-          "points": 2,
           "options": [
             "1 vakje = 10 km",
             "1 vakje = 25 km",
@@ -1483,16 +1366,12 @@
           "id": "b",
           "type": "text",
           "prompt": "Waarom is jouw keuze handig? (kort)",
-          "points": 2,
           "answer": {
             "value": "Omdat 10 vakjes × 25 km = 250 km, precies passend.",
             "accept": []
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -1545,7 +1424,6 @@
           "id": "a",
           "type": "text",
           "prompt": "In welke week is de hoogte het grootst?",
-          "points": 1,
           "answer": {
             "value": "6",
             "accept": [
@@ -1558,7 +1436,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Tussen welke twee weken is de grootste toename?",
-          "points": 2,
           "answer": {
             "value": "4-5",
             "accept": [
@@ -1569,9 +1446,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -1585,25 +1459,43 @@
           "id": "a",
           "type": "table_coords",
           "prompt": "Vul bij elke rij de bijbehorende coördinaat in.",
-          "points": 2,
           "table": {
-            "columns": ["x", "y"],
+            "columns": [
+              "x",
+              "y"
+            ],
             "rows": [
-              [0, 3],
-              [1, 5],
-              [2, 8],
-              [3, 8]
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                2,
+                8
+              ],
+              [
+                3,
+                8
+              ]
             ]
           },
           "answer": {
-            "coords": ["(0,3)", "(1,5)", "(2,8)", "(3,8)"]
+            "coords": [
+              "(0,3)",
+              "(1,5)",
+              "(2,8)",
+              "(3,8)"
+            ]
           }
         },
         {
           "id": "b",
           "type": "text",
           "prompt": "Tussen welke x-waarden is de grafiek constant?",
-          "points": 1,
           "answer": {
             "value": "2-3",
             "accept": [
@@ -1613,9 +1505,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -1658,7 +1547,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Wanneer gaat het het langzaamst vooruit?",
-          "points": 2,
           "options": [
             "0-2",
             "2-4",
@@ -1674,16 +1562,12 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoe zie je dat aan de grafiek?",
-          "points": 2,
           "answer": {
             "value": "Omdat de lijn daar het minst steil is (bijna horizontaal).",
             "accept": []
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -1736,7 +1620,6 @@
           "id": "a",
           "type": "table_fill",
           "prompt": "Vul de ontbrekende waarden in de tabel met behulp van de grafiek.",
-          "points": 3,
           "table": {
             "columns": [
               "u",
@@ -1778,9 +1661,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -1859,7 +1739,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bij welke tijd hebben Anne en Ron dezelfde afstand?",
-          "points": 1,
           "answer": {
             "value": "0",
             "accept": [
@@ -1872,7 +1751,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Noem nog een tijdstip waarop hun afstanden gelijk zijn (aflezen).",
-          "points": 2,
           "answer": {
             "value": "4",
             "accept": [
@@ -1885,7 +1763,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Wie loopt tussen 4 en 6 min sneller?",
-          "points": 2,
           "answer": {
             "value": "Ron",
             "accept": [
@@ -1894,9 +1771,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -1919,16 +1793,12 @@
           "id": "a",
           "type": "text",
           "prompt": "Wat betekent het moment dat de grafiek 0 liter raakt?",
-          "points": 2,
           "answer": {
             "value": "De bak is leeg.",
             "accept": []
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -1981,7 +1851,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel GB is er na 6 maanden over?",
-          "points": 1,
           "answer": {
             "value": "2",
             "accept": [
@@ -1994,7 +1863,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Na hoeveel maanden is er 1 GB over?",
-          "points": 1,
           "answer": {
             "value": "8",
             "accept": [
@@ -2004,9 +1872,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -2049,7 +1914,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Welke beschrijving past het best?",
-          "points": 2,
           "options": [
             "Eerst versnelt, dan remt, dan rijdt even constant, en remt daarna verder.",
             "Eerst remt, dan versnelt, dan stopt, en versnelt daarna.",
@@ -2062,9 +1926,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -2095,7 +1956,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Is de snelheid constant? Antwoord ja/nee.",
-          "points": 1,
           "answer": {
             "value": "ja",
             "accept": [
@@ -2105,9 +1965,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 1
-      },
       "answer_key": {}
     },
     {
@@ -2190,7 +2047,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Welke as is de horizontale as in deze grafiek: dag of gewicht?",
-          "points": 1,
           "answer": {
             "value": "dag",
             "accept": [
@@ -2202,7 +2058,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Wat is het gewicht op dag 6?",
-          "points": 1,
           "answer": {
             "value": "620",
             "accept": [
@@ -2212,9 +2067,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -2287,7 +2139,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Tussen welke twee opeenvolgende dagen is de grootste daling?",
-          "points": 2,
           "answer": {
             "value": "0-1",
             "accept": [
@@ -2301,7 +2152,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoe groot is die daling in gram?",
-          "points": 2,
           "answer": {
             "value": "40",
             "accept": [
@@ -2311,9 +2161,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -2340,7 +2187,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Wat betaal je voor 8 km?",
-          "points": 2,
           "answer": {
             "value": "21",
             "accept": [
@@ -2353,7 +2199,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoeveel kilometer heb je gereden als je €29 betaalt?",
-          "points": 3,
           "answer": {
             "value": "12",
             "accept": [
@@ -2363,9 +2208,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -2388,7 +2230,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken het bedrag bij d = 3.",
-          "points": 2,
           "answer": {
             "value": "175",
             "accept": [
@@ -2401,7 +2242,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Wat is het bedrag per dag (het deel dat met d meegaat)?",
-          "points": 1,
           "answer": {
             "value": "50",
             "accept": [
@@ -2414,7 +2254,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Wat is de startkosten (vast bedrag)?",
-          "points": 1,
           "answer": {
             "value": "25",
             "accept": [
@@ -2424,9 +2263,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -2483,7 +2319,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Wat is het batterijpercentage na 8 uur?",
-          "points": 1,
           "answer": {
             "value": "68",
             "accept": [
@@ -2496,7 +2331,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Op welk tijdstip is de batterij weer hoger dan bij 10 uur?",
-          "points": 2,
           "answer": {
             "value": "12",
             "accept": [
@@ -2506,9 +2340,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -2535,7 +2366,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken het bedrag bij a = 30.",
-          "points": 3,
           "answer": {
             "value": "84",
             "accept": [
@@ -2548,7 +2378,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Wat betaal je extra per uur boven de 24 uur?",
-          "points": 1,
           "answer": {
             "value": "2",
             "accept": [
@@ -2558,9 +2387,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -2583,7 +2409,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoe lang is de kaars na 3 uur?",
-          "points": 2,
           "answer": {
             "value": "24",
             "accept": [
@@ -2596,7 +2421,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Na hoeveel uur is de kaars 6 cm lang?",
-          "points": 3,
           "answer": {
             "value": "6",
             "accept": [
@@ -2606,9 +2430,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -2631,7 +2452,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken T bij h = 2 km.",
-          "points": 2,
           "answer": {
             "value": "9",
             "accept": [
@@ -2644,7 +2464,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Bij welke hoogte is T = -3°C?",
-          "points": 3,
           "answer": {
             "value": "4",
             "accept": [
@@ -2654,9 +2473,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -2679,7 +2495,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel beltegoed is er over na 120 minuten?",
-          "points": 2,
           "answer": {
             "value": "2800",
             "accept": [
@@ -2692,7 +2507,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Na hoeveel minuten is het beltegoed op?",
-          "points": 3,
           "answer": {
             "value": "400",
             "accept": [
@@ -2702,9 +2516,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -2731,7 +2542,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken de prijs in het laagseizoen voor 10 dagen.",
-          "points": 2,
           "answer": {
             "value": "800",
             "accept": [
@@ -2744,7 +2554,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Bereken het prijsverschil (hoog − laag) voor 10 dagen.",
-          "points": 2,
           "answer": {
             "value": "150",
             "accept": [
@@ -2754,9 +2563,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -2779,7 +2585,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken K bij u = 5.",
-          "points": 1,
           "answer": {
             "value": "28",
             "accept": [
@@ -2792,7 +2597,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Wat is de startprijs (als u=0)?",
-          "points": 1,
           "answer": {
             "value": "8",
             "accept": [
@@ -2802,9 +2606,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -2827,7 +2628,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel uur is dat in totaal?",
-          "points": 1,
           "answer": {
             "value": "53",
             "accept": [
@@ -2840,7 +2640,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoeveel betaal je?",
-          "points": 2,
           "answer": {
             "value": "159",
             "accept": [
@@ -2850,9 +2649,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -2875,7 +2671,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken h na 6 minuten.",
-          "points": 2,
           "answer": {
             "value": "40",
             "accept": [
@@ -2888,7 +2683,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Na hoeveel minuten is h = 60 cm?",
-          "points": 2,
           "answer": {
             "value": "10",
             "accept": [
@@ -2898,9 +2692,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -2923,7 +2714,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken T bij d = 1,5 km.",
-          "points": 2,
           "answer": {
             "value": "45",
             "accept": [
@@ -2936,7 +2726,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Welke diepte hoort bij T = 70°C?",
-          "points": 3,
           "answer": {
             "value": "4",
             "accept": [
@@ -2946,9 +2735,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -2975,7 +2761,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoe lang is kaars I na 2 uur?",
-          "points": 1,
           "answer": {
             "value": "9",
             "accept": [
@@ -2988,7 +2773,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoe lang is kaars II na 2 uur?",
-          "points": 1,
           "answer": {
             "value": "8",
             "accept": [
@@ -3001,7 +2785,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Welke kaars brandt het langst (tot lengte 0)?",
-          "points": 2,
           "answer": {
             "value": "Kaars II",
             "accept": [
@@ -3012,9 +2795,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -3037,7 +2817,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken inkomsten bij t = 3 uur.",
-          "points": 2,
           "answer": {
             "value": "14.50",
             "accept": [
@@ -3051,7 +2830,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoeveel uur werkte je als je €22,50 kreeg?",
-          "points": 3,
           "answer": {
             "value": "5",
             "accept": [
@@ -3061,9 +2839,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -3086,7 +2861,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf een woordformule voor het bedrag in euro’s (gebruik d voor aantal dagen).",
-          "points": 3,
           "answer": {
             "value": "bedrag = 20 + 2,5·d",
             "accept": [
@@ -3097,9 +2871,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -3122,7 +2893,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf de nieuwe formule.",
-          "points": 3,
           "answer": {
             "value": "bedrag = 25 + 55·d",
             "accept": [
@@ -3133,9 +2903,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -3158,7 +2925,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken T bij n = 5.",
-          "points": 2,
           "answer": {
             "value": "10",
             "accept": [
@@ -3171,7 +2937,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Na hoeveel minuten is T = 0°C?",
-          "points": 2,
           "answer": {
             "value": "4",
             "accept": [
@@ -3181,9 +2946,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -3206,7 +2968,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Wat betaal je voor 2 uur huren?",
-          "points": 2,
           "answer": {
             "value": "26",
             "accept": [
@@ -3219,7 +2980,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoeveel kwartieren is 2 uur?",
-          "points": 1,
           "answer": {
             "value": "8",
             "accept": [
@@ -3229,9 +2989,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -3254,7 +3011,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken b bij T = 4°C.",
-          "points": 2,
           "answer": {
             "value": "24",
             "accept": [
@@ -3267,7 +3023,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Bereken b bij T = −18°C.",
-          "points": 2,
           "answer": {
             "value": "-53",
             "accept": [
@@ -3280,16 +3035,12 @@
           "id": "c",
           "type": "text",
           "prompt": "Welke conclusie trek je uit b bij −18°C? (kort)",
-          "points": 3,
           "answer": {
             "value": "Deze formule is niet geschikt voor zulke temperaturen; je kunt geen negatieve bewaartijd hebben.",
             "accept": []
           }
         }
       ],
-      "scoring": {
-        "points": 7
-      },
       "answer_key": {}
     },
     {
@@ -3312,7 +3063,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Wat betaal je voor 3 uur?",
-          "points": 2,
           "answer": {
             "value": "95",
             "accept": [
@@ -3325,7 +3075,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Je betaalt €170. Hoeveel uur heb je gehuurd?",
-          "points": 3,
           "answer": {
             "value": "8",
             "accept": [
@@ -3335,9 +3084,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -3404,7 +3150,6 @@
           "id": "a",
           "type": "table_fill",
           "prompt": "Vul de tabel in met K = 5 + 3t.",
-          "points": 4,
           "table": {
             "columns": [
               "t",
@@ -3447,7 +3192,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Wat is K als t = 0?",
-          "points": 1,
           "answer": {
             "value": "5",
             "accept": [
@@ -3457,9 +3201,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -3483,7 +3224,6 @@
           "id": "a",
           "type": "table_fill",
           "prompt": "Bereken y voor de gegeven x-waarden.",
-          "points": 5,
           "table": {
             "columns": [
               "x",
@@ -3523,9 +3263,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -3548,7 +3285,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Wat is de startwaarde (y bij x=0)?",
-          "points": 1,
           "answer": {
             "value": "7",
             "accept": [
@@ -3560,7 +3296,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoeveel stijgt y als x 1 groter wordt?",
-          "points": 1,
           "answer": {
             "value": "4",
             "accept": [
@@ -3569,9 +3304,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -3594,7 +3326,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken de toename van y per 1 stap in x (helling).",
-          "points": 2,
           "answer": {
             "value": "3",
             "accept": [
@@ -3606,7 +3337,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Schrijf de formule van de lijn als y = a·x + b.",
-          "points": 3,
           "answer": {
             "value": "y = 3x + 2",
             "accept": [
@@ -3616,9 +3346,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -3641,7 +3368,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken y bij x = 6.",
-          "points": 2,
           "answer": {
             "value": "9.5",
             "accept": [
@@ -3654,7 +3380,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Bereken x als y = 5.",
-          "points": 3,
           "answer": {
             "value": "3",
             "accept": [
@@ -3663,9 +3388,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -3688,7 +3410,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Welk punt ligt op de grafiek?",
-          "points": 2,
           "options": [
             "(1, 2)",
             "(2, 5)",
@@ -3701,9 +3422,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 2
-      },
       "answer_key": {}
     },
     {
@@ -3726,7 +3444,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken yA bij x=4.",
-          "points": 1,
           "answer": {
             "value": "14",
             "accept": [
@@ -3738,7 +3455,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Bereken yB bij x=4.",
-          "points": 1,
           "answer": {
             "value": "14",
             "accept": [
@@ -3750,7 +3466,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Bij welke x-waarde zijn A en B gelijk?",
-          "points": 2,
           "answer": {
             "value": "4",
             "accept": [
@@ -3759,9 +3474,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -3784,7 +3496,6 @@
           "id": "a",
           "type": "mcq",
           "prompt": "Is de grafiek stijgend of dalend?",
-          "points": 1,
           "options": [
             "stijgend",
             "dalend"
@@ -3795,9 +3506,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 1
-      },
       "answer_key": {}
     },
     {
@@ -3838,7 +3546,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf de formule van y in de vorm y = a·x + b.",
-          "points": 4,
           "answer": {
             "value": "y = 5x + 12",
             "accept": [
@@ -3848,9 +3555,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -3873,7 +3577,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Bereken het snijpunt met de y-as (b in y=4x+b).",
-          "points": 4,
           "answer": {
             "value": "3",
             "accept": [
@@ -3882,9 +3585,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -3911,7 +3611,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel blokjes komen er elke stap bij?",
-          "points": 1,
           "answer": {
             "value": "4",
             "accept": [
@@ -3923,7 +3622,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Schrijf een formule voor het aantal blokjes in stap n.",
-          "points": 3,
           "answer": {
             "value": "aantal = 4n + 1",
             "accept": [
@@ -3937,7 +3635,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Hoeveel blokjes zijn er in stap 10?",
-          "points": 2,
           "answer": {
             "value": "41",
             "accept": [
@@ -3946,9 +3643,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 6
-      },
       "answer_key": {}
     },
     {
@@ -3990,7 +3684,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel blokjes komen er van stap 3 naar stap 4 bij?",
-          "points": 1,
           "answer": {
             "value": "5",
             "accept": [
@@ -4002,7 +3695,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Welke reeks zie je in de toename (van stap naar stap)?",
-          "points": 2,
           "answer": {
             "value": "3,4,5,...",
             "accept": [
@@ -4015,7 +3707,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Past de formule aantal = n(n+1)/2 + 1 bij deze tabel? Antwoord ja/nee.",
-          "points": 2,
           "answer": {
             "value": "nee",
             "accept": [
@@ -4025,9 +3716,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -4058,7 +3746,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Hoeveel lucifers komen er per extra vierkantje bij?",
-          "points": 1,
           "answer": {
             "value": "3",
             "accept": [
@@ -4070,7 +3757,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Schrijf de formule voor het aantal lucifers L.",
-          "points": 3,
           "answer": {
             "value": "L = 3n + 1",
             "accept": [
@@ -4083,7 +3769,6 @@
           "id": "c",
           "type": "text",
           "prompt": "Hoeveel lucifers zijn nodig voor 8 vierkantjes?",
-          "points": 2,
           "answer": {
             "value": "25",
             "accept": [
@@ -4092,9 +3777,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 6
-      },
       "answer_key": {}
     },
     {
@@ -4121,7 +3803,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf een formule die bij deze aantallen past.",
-          "points": 4,
           "answer": {
             "value": "aantal = n(n+1)/2",
             "accept": [
@@ -4135,7 +3816,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Bereken het aantal blokjes in stap 7.",
-          "points": 2,
           "answer": {
             "value": "28",
             "accept": [
@@ -4144,9 +3824,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 6
-      },
       "answer_key": {}
     },
     {
@@ -4173,7 +3850,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Zie je een patroon als kwadraten? Schrijf de bijbehorende formule.",
-          "points": 4,
           "answer": {
             "value": "aantal = (2n-1)^2",
             "accept": [
@@ -4187,7 +3863,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoeveel blokjes in stap 4?",
-          "points": 2,
           "answer": {
             "value": "49",
             "accept": [
@@ -4196,9 +3871,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 6
-      },
       "answer_key": {}
     },
     {
@@ -4221,7 +3893,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf een formule voor aantal in stap n.",
-          "points": 3,
           "answer": {
             "value": "aantal = 8n - 4",
             "accept": [
@@ -4234,7 +3905,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Bereken het aantal in stap 5.",
-          "points": 2,
           "answer": {
             "value": "36",
             "accept": [
@@ -4243,9 +3913,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -4268,7 +3935,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Welke stap (n) hoort bij aantal = 57?",
-          "points": 3,
           "answer": {
             "value": "14",
             "accept": [
@@ -4277,9 +3943,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 3
-      },
       "answer_key": {}
     },
     {
@@ -4310,7 +3973,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Welke groeit per stap sneller? (A/B)",
-          "points": 1,
           "answer": {
             "value": "A",
             "accept": [
@@ -4322,7 +3984,6 @@
           "id": "b",
           "type": "text",
           "prompt": "In welke stap zijn A en B even groot?",
-          "points": 3,
           "answer": {
             "value": "6",
             "accept": [
@@ -4331,9 +3992,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 4
-      },
       "answer_key": {}
     },
     {
@@ -4356,7 +4014,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Schrijf de formule in n (stapnummer) voor het aantal blokjes.",
-          "points": 3,
           "answer": {
             "value": "aantal = 5n + 7",
             "accept": [
@@ -4369,7 +4026,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Hoeveel blokjes in stap 9?",
-          "points": 2,
           "answer": {
             "value": "52",
             "accept": [
@@ -4378,9 +4034,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 5
-      },
       "answer_key": {}
     },
     {
@@ -4407,7 +4060,6 @@
           "id": "a",
           "type": "text",
           "prompt": "Geef een formule die hierbij past (hint: n(n+1)).",
-          "points": 4,
           "answer": {
             "value": "aantal = n(n+1) + 0",
             "accept": [
@@ -4420,7 +4072,6 @@
           "id": "b",
           "type": "text",
           "prompt": "Bereken het aantal in stap 7.",
-          "points": 2,
           "answer": {
             "value": "56",
             "accept": [
@@ -4429,9 +4080,6 @@
           }
         }
       ],
-      "scoring": {
-        "points": 6
-      },
       "answer_key": {}
     }
   ],
