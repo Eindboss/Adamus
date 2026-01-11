@@ -1,9 +1,9 @@
 {
   "schema_version": "2.0.0",
   "id": "biologie-h4-stevigheid-beweging-proef",
-  "title": "Hoofdstuk 4 – Stevigheid en beweging (Proeftoets, 50 vragen)",
+  "title": "Hoofdstuk 4 - Stevigheid en beweging (Proeftoets, 61 vragen)",
   "subject": "Biologie",
-  "description": "Proeftoets (1e klas gymnasium) over skelet, botten, beenverbindingen/gewrichten, spieren, houding, motorisch geheugen, warming-up/cooling-down, spierpijn en RSI. Inclusief penguin-casus en sport-casus.",
+  "description": "Proeftoets (1e klas gymnasium) over skelet, botten, botgroei, beenverbindingen/gewrichten, spieren, wervelkolom, houding, motorisch geheugen, warming-up/cooling-down, spierpijn en RSI. Inclusief penguin-casus en sport-casus.",
   "questions": [
     {
       "id": "q001",
@@ -32,6 +32,49 @@
       "e": "De romp bevat o.a. ribbenkast (ribben + borstbeen) en wervelkolom. De andere opties horen vooral bij ledematen/schoudergordel."
     },
     {
+      "id": "q051",
+      "type": "mc",
+      "q": "Het skelet wordt meestal ingedeeld in hoofd, romp en ledematen. Welke botten horen bij de ledematen?",
+      "a": [
+        "arm- en beenbeenderen",
+        "schedelbeenderen",
+        "ribben en borstbeen",
+        "wervels en bekken"
+      ],
+      "c": 0,
+      "e": "Ledematen zijn de armen en benen. Schedel, ribben en wervelkolom horen bij hoofd/romp."
+    },
+    {
+      "id": "q047",
+      "type": "matching",
+      "instruction": "Koppel het bot aan de juiste plek (mens).",
+      "left": [
+        "sleutelbeen",
+        "spaakbeen",
+        "ellepijp",
+        "kuitbeen",
+        "scheenbeen",
+        "schouderblad"
+      ],
+      "right": [
+        "onderarm (duimzijde)",
+        "onderarm (pinkzijde)",
+        "onderbeen (dun, zijkant)",
+        "onderbeen (dik, voorkant)",
+        "schoudergordel (voorzijde)",
+        "schoudergordel (achterzijde)"
+      ],
+      "correct_pairs": {
+        "sleutelbeen": "schoudergordel (voorzijde)",
+        "schouderblad": "schoudergordel (achterzijde)",
+        "spaakbeen": "onderarm (duimzijde)",
+        "ellepijp": "onderarm (pinkzijde)",
+        "kuitbeen": "onderbeen (dun, zijkant)",
+        "scheenbeen": "onderbeen (dik, voorkant)"
+      },
+      "explanation": "Deze botten hebben vaste plaatsen: spaakbeen ligt aan de duimzijde, ellepijp aan de pinkzijde; scheenbeen is het dikke bot vooraan, kuitbeen het dunnere bot aan de zijkant."
+    },
+    {
       "id": "q003",
       "type": "mc",
       "q": "Welke stof geeft botten vooral HARDHEID?",
@@ -43,6 +86,19 @@
       ],
       "c": 1,
       "e": "Kalkzouten maken botweefsel hard. Collageen maakt het juist enigszins buigzaam."
+    },
+    {
+      "id": "q010",
+      "type": "mc",
+      "q": "Collageen (lijmstof) in botweefsel zorgt vooral voor…",
+      "a": [
+        "hardheid",
+        "buigzaamheid",
+        "kleur",
+        "warmteproductie"
+      ],
+      "c": 1,
+      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten."
     },
     {
       "id": "q004",
@@ -84,6 +140,97 @@
       "e": "Fontanellen groeien dicht wanneer kraakbeen/bindweefsel in bot verandert tijdens het opgroeien."
     },
     {
+      "id": "q009",
+      "type": "mc",
+      "q": "Welke uitspraak over botcellen is het best passend bij de methode?",
+      "a": [
+        "Botcellen liggen in kringen rond kanaaltjes",
+        "Botcellen liggen los in een grote holte",
+        "Botcellen zitten alleen aan de buitenkant van bot",
+        "Botcellen zitten alleen in kraakbeen"
+      ],
+      "c": 0,
+      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten)."
+    },
+    {
+      "id": "q052",
+      "type": "mc",
+      "q": "Wat is het verschil tussen compact botweefsel en sponsachtig botweefsel?",
+      "a": [
+        "Compact is hard en dicht; sponsachtig heeft holtes en is lichter",
+        "Compact zit alleen in kraakbeen, sponsachtig in spieren",
+        "Sponsachtig is harder dan compact",
+        "Er is geen verschil"
+      ],
+      "c": 0,
+      "e": "Compact botweefsel is hard en dicht (vooral aan de buitenkant). Sponsachtig botweefsel heeft holtes en zit o.a. in uiteinden en wervels."
+    },
+    {
+      "id": "q053",
+      "type": "mc",
+      "q": "Hoe wordt een bot langer tijdens het groeien?",
+      "a": [
+        "Door groeischijven van kraakbeen die in bot worden omgezet",
+        "Door extra huidlaagjes",
+        "Door gewrichtssmeer",
+        "Door verbening van pezen"
+      ],
+      "c": 0,
+      "e": "In groeischijven zit kraakbeen. Dat wordt omgezet in bot, waardoor een bot in lengte groeit."
+    },
+    {
+      "id": "q054",
+      "type": "mc",
+      "q": "Waarom kun je met een rontgenfoto van de hand de botleeftijd bepalen?",
+      "a": [
+        "Je ziet groeischijven en botkernen die met de leeftijd veranderen",
+        "Je ziet hoeveel bloedvaten er zijn",
+        "Je ziet de spierkracht",
+        "Je ziet hoeveel kalk er in de tanden zit"
+      ],
+      "c": 0,
+      "e": "Op een rontgenfoto zie je groeischijven en botkernen. Die geven aan of botten nog groeien."
+    },
+    {
+      "id": "q055",
+      "type": "mc",
+      "q": "Waarom breken botten van ouderen sneller dan die van kinderen?",
+      "a": [
+        "Ze bevatten minder collageen en relatief meer kalkzouten, waardoor ze brozer zijn",
+        "Ze bevatten meer water en worden daardoor zachter",
+        "Ze bevatten meer kraakbeen en zijn daarom te buigzaam",
+        "Ze hebben geen botcellen meer"
+      ],
+      "c": 0,
+      "e": "Met de leeftijd daalt het collageen en stijgen kalkzouten: botten worden harder maar minder buigzaam (brozer)."
+    },
+    {
+      "id": "q061",
+      "type": "mc",
+      "q": "Waarom worden botten sterker door bewegen (bijv. springen of hardlopen)?",
+      "a": [
+        "Belasting prikkelt de botten om extra botweefsel aan te maken",
+        "Bewegen maakt botten zachter",
+        "Bewegen vervangt bot door vet",
+        "Bewegen verandert bot in kraakbeen"
+      ],
+      "c": 0,
+      "e": "Belasting stimuleert botopbouw; botten passen zich aan en worden sterker."
+    },
+    {
+      "id": "q060",
+      "type": "mc",
+      "q": "Wat is een kenmerk van achondroplasie?",
+      "a": [
+        "Korte armen en benen, relatief normale romp en vaak een groter hoofd",
+        "Extra lange benen en korte romp",
+        "Geen wervelkolom",
+        "Botten bestaan alleen uit kraakbeen"
+      ],
+      "c": 0,
+      "e": "Bij achondroplasie is de lengtegroei van botten verstoord: korte ledematen, relatief normale romp en vaak een groter hoofd."
+    },
+    {
       "id": "q007",
       "type": "mc",
       "q": "Welke beenverbinding laat GEEN beweging toe?",
@@ -108,32 +255,6 @@
       ],
       "c": 2,
       "e": "Kraakbeenverbindingen (bijv. tussen ribben en borstbeen) laten een beperkte beweging toe."
-    },
-    {
-      "id": "q009",
-      "type": "mc",
-      "q": "Welke uitspraak over botcellen is het best passend bij de methode?",
-      "a": [
-        "Botcellen liggen in kringen rond kanaaltjes",
-        "Botcellen liggen los in een grote holte",
-        "Botcellen zitten alleen aan de buitenkant van bot",
-        "Botcellen zitten alleen in kraakbeen"
-      ],
-      "c": 0,
-      "e": "In botweefsel liggen botcellen in ringen rond kanaaltjes (met bloedvaten)."
-    },
-    {
-      "id": "q010",
-      "type": "mc",
-      "q": "Collageen (lijmstof) in botweefsel zorgt vooral voor…",
-      "a": [
-        "hardheid",
-        "buigzaamheid",
-        "kleur",
-        "warmteproductie"
-      ],
-      "c": 1,
-      "e": "Collageen maakt botweefsel minder broos en een beetje buigzaam. Hardheid komt vooral door kalkzouten."
     },
     {
       "id": "q011",
@@ -246,17 +367,17 @@
       "e": "Tussenwervelschijven verbinden wervels en helpen krachten opvangen (vering)."
     },
     {
-      "id": "q020",
+      "id": "q059",
       "type": "mc",
-      "q": "Wat is het best passende gevolg van een dubbele-S-vorm van de wervelkolom?",
+      "q": "Wat hoort het meest bij hypermobiliteit?",
       "a": [
-        "Je wordt langer",
-        "Je rug kan krachten beter opvangen",
-        "Je kunt niet meer buigen",
-        "Je botten worden zachter"
+        "Gewrichten zijn erg soepel, maar er is meer kans op blessures",
+        "Gewrichten zijn stijf en bewegen nauwelijks",
+        "Botten groeien niet meer",
+        "Spieren kunnen niet samentrekken"
       ],
-      "c": 1,
-      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen."
+      "c": 0,
+      "e": "Hypermobiliteit betekent zeer soepele gewrichten. Dat kan handig zijn, maar geeft ook meer blessurerisico."
     },
     {
       "id": "q021",
@@ -374,6 +495,84 @@
       ],
       "c": 1,
       "e": "Coördinatie gaat over het goed op elkaar afstemmen van spierbewegingen."
+    },
+    {
+      "id": "q057",
+      "type": "mc",
+      "q": "Welke spier werkt onbewust maar is wel dwarsgestreept?",
+      "a": [
+        "hartspier",
+        "skeletspier",
+        "gladde spier",
+        "huidspiertje"
+      ],
+      "c": 0,
+      "e": "De hartspier is dwarsgestreept maar werkt onbewust. Skeletspieren werken bewust, gladde spieren zijn onbewust en niet-dwarsgestreept."
+    },
+    {
+      "id": "q020",
+      "type": "mc",
+      "q": "Wat is het best passende gevolg van een dubbele-S-vorm van de wervelkolom?",
+      "a": [
+        "Je wordt langer",
+        "Je rug kan krachten beter opvangen",
+        "Je kunt niet meer buigen",
+        "Je botten worden zachter"
+      ],
+      "c": 1,
+      "e": "De dubbele-S-vorm geeft stevigheid én werkt als vering, waardoor schokken beter worden opgevangen."
+    },
+    {
+      "id": "q056",
+      "type": "mc",
+      "q": "Wat is de belangrijkste functie van tussenwervelschijven?",
+      "a": [
+        "Schokken opvangen en beweging tussen wervels mogelijk maken",
+        "Bloed naar de wervels pompen",
+        "Botten langer maken",
+        "Spieren aansturen"
+      ],
+      "c": 0,
+      "e": "Tussenwervelschijven zijn kraakbeenverbindingen die als schokdemper werken en kleine bewegingen toelaten."
+    },
+    {
+      "id": "q040",
+      "type": "mc",
+      "q": "Welke houding-tip hoort bij 'goed gebruik van beeldschermen' in de samenvatting?",
+      "a": [
+        "Hoofd schuin omlaag houden",
+        "Scherm zo laag mogelijk zetten",
+        "Hoofd rechtop houden",
+        "Altijd op één voet staan"
+      ],
+      "c": 2,
+      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken."
+    },
+    {
+      "id": "q041",
+      "type": "mc",
+      "q": "Wat is een correcte uitspraak over een goede zithouding volgens de samenvatting?",
+      "a": [
+        "Armen en benen maken een rechte hoek",
+        "Altijd onderuitgezakt zitten",
+        "Met twee voeten op de stoel zitten",
+        "Met ronde schouders naar voren leunen"
+      ],
+      "c": 0,
+      "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden)."
+    },
+    {
+      "id": "q058",
+      "type": "mc",
+      "q": "Wat is de beste tilhouding om je rug te sparen?",
+      "a": [
+        "Knieen buigen, rug recht, last dicht bij het lichaam",
+        "Rug rond maken en met gestrekte benen tillen",
+        "Met een draaiing vanuit je onderrug tillen",
+        "Last ver van je lichaam houden"
+      ],
+      "c": 0,
+      "e": "Goed tillen: knie?n buigen, rug recht houden, last dicht bij het lichaam en niet draaien."
     },
     {
       "id": "q030",
@@ -506,32 +705,6 @@
       "e": "Tussendoor bewegen en houding afwisselen verkleinen de kans op RSI."
     },
     {
-      "id": "q040",
-      "type": "mc",
-      "q": "Welke houding-tip hoort bij 'goed gebruik van beeldschermen' in de samenvatting?",
-      "a": [
-        "Hoofd schuin omlaag houden",
-        "Scherm zo laag mogelijk zetten",
-        "Hoofd rechtop houden",
-        "Altijd op één voet staan"
-      ],
-      "c": 2,
-      "e": "In de samenvatting: houd je hoofd rechtop; voorkom veel omlaag kijken."
-    },
-    {
-      "id": "q041",
-      "type": "mc",
-      "q": "Wat is een correcte uitspraak over een goede zithouding volgens de samenvatting?",
-      "a": [
-        "Armen en benen maken een rechte hoek",
-        "Altijd onderuitgezakt zitten",
-        "Met twee voeten op de stoel zitten",
-        "Met ronde schouders naar voren leunen"
-      ],
-      "c": 0,
-      "e": "Goede zithouding: armen en benen in een rechte hoek (90 graden)."
-    },
-    {
       "id": "q042",
       "type": "mc",
       "q": "Welke keuze vermindert RSI na 20 minuten appen het meest?",
@@ -543,6 +716,47 @@
       ],
       "c": 0,
       "e": "Afwisseling en rust voor dezelfde spieren vermindert overbelasting; gamen op telefoon is vaak dezelfde houding/beweging."
+    },
+    {
+      "id": "q048",
+      "type": "ordering",
+      "instruction": "Zet de onderdelen van een training in de meest logische volgorde.",
+      "items": [
+        "Cooling-down",
+        "Warming-up",
+        "Rekoefeningen",
+        "Sporten (wedstrijd/training)"
+      ],
+      "correct_order": [
+        "Warming-up",
+        "Rekoefeningen",
+        "Sporten (wedstrijd/training)",
+        "Cooling-down"
+      ],
+      "explanation": "Je begint met een warming-up om spieren warm te maken, daarna kun je (sportafhankelijk) rekoefeningen doen, vervolgens sport je, en je eindigt met een cooling-down om afvalstoffen af te voeren."
+    },
+    {
+      "id": "q049",
+      "type": "fill_blank",
+      "instruction": "Vul de ontbrekende woorden in.",
+      "text": "RSI is een afkorting van {{blank1}} en ontstaat vaak door {{blank2}} bewegingen en een langdurig gespannen houding.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "Repetitive Strain Injury"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "herhaalde",
+            "steeds dezelfde",
+            "repetitieve"
+          ]
+        }
+      ],
+      "explanation": "RSI betekent Repetitive Strain Injury en komt door herhaalde bewegingen en langdurige spierspanning in eenzelfde houding."
     },
     {
       "id": "q043",
@@ -595,77 +809,6 @@
       ],
       "c": 1,
       "e": "De tekst: de kiel is aanhechtingsplaats voor borstspieren; die zijn dik/sterk."
-    },
-    {
-      "id": "q047",
-      "type": "matching",
-      "instruction": "Koppel het bot aan de juiste plek (mens).",
-      "left": [
-        "sleutelbeen",
-        "spaakbeen",
-        "ellepijp",
-        "kuitbeen",
-        "scheenbeen",
-        "schouderblad"
-      ],
-      "right": [
-        "onderarm (duimzijde)",
-        "onderarm (pinkzijde)",
-        "onderbeen (dun, zijkant)",
-        "onderbeen (dik, voorkant)",
-        "schoudergordel (voorzijde)",
-        "schoudergordel (achterzijde)"
-      ],
-      "correct_pairs": {
-        "sleutelbeen": "schoudergordel (voorzijde)",
-        "schouderblad": "schoudergordel (achterzijde)",
-        "spaakbeen": "onderarm (duimzijde)",
-        "ellepijp": "onderarm (pinkzijde)",
-        "kuitbeen": "onderbeen (dun, zijkant)",
-        "scheenbeen": "onderbeen (dik, voorkant)"
-      },
-      "explanation": "Deze botten hebben vaste plaatsen: spaakbeen ligt aan de duimzijde, ellepijp aan de pinkzijde; scheenbeen is het dikke bot vooraan, kuitbeen het dunnere bot aan de zijkant."
-    },
-    {
-      "id": "q048",
-      "type": "ordering",
-      "instruction": "Zet de onderdelen van een training in de meest logische volgorde.",
-      "items": [
-        "Cooling-down",
-        "Warming-up",
-        "Rekoefeningen",
-        "Sporten (wedstrijd/training)"
-      ],
-      "correct_order": [
-        "Warming-up",
-        "Rekoefeningen",
-        "Sporten (wedstrijd/training)",
-        "Cooling-down"
-      ],
-      "explanation": "Je begint met een warming-up om spieren warm te maken, daarna kun je (sportafhankelijk) rekoefeningen doen, vervolgens sport je, en je eindigt met een cooling-down om afvalstoffen af te voeren."
-    },
-    {
-      "id": "q049",
-      "type": "fill_blank",
-      "instruction": "Vul de ontbrekende woorden in.",
-      "text": "RSI is een afkorting van {{blank1}} en ontstaat vaak door {{blank2}} bewegingen en een langdurig gespannen houding.",
-      "blanks": [
-        {
-          "id": "blank1",
-          "answers": [
-            "Repetitive Strain Injury"
-          ]
-        },
-        {
-          "id": "blank2",
-          "answers": [
-            "herhaalde",
-            "steeds dezelfde",
-            "repetitieve"
-          ]
-        }
-      ],
-      "explanation": "RSI betekent Repetitive Strain Injury en komt door herhaalde bewegingen en langdurige spierspanning in eenzelfde houding."
     },
     {
       "id": "q050",
