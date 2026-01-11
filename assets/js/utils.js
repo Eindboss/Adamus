@@ -138,14 +138,14 @@ export function arraysEqual(a, b) {
 
 /**
  * Get accent colors for subject
- * All subjects now use unified brand colors (warm gold)
+ * All subjects now use unified brand colors (teal)
  */
 export function getSubjectAccent(subject) {
   // Unified brand colors for all subjects
   return {
-    color: "#c9a227",
-    light: "#f5ecd0",
-    dark: "#a68618",
+    color: "#0d9488",
+    light: "#ccfbf1",
+    dark: "#0f766e",
     name: "brand",
   };
 }
@@ -445,11 +445,11 @@ export function countGroupedInputs(items) {
 // ===========================================
 
 const confettiColors = [
-  "#c9a227", // brand gold
-  "#1f4a38", // brand green
+  "#0d9488", // brand teal
+  "#14b8a6", // teal-500
+  "#5eead4", // teal-300
   "#4ade80", // success green
   "#f59e0b", // amber
-  "#ec4899", // pink
   "#8b5cf6", // purple
 ];
 

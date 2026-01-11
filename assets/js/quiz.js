@@ -1580,9 +1580,9 @@ function renderInfoCard(container, q) {
     <div id="feedback" class="feedback" style="display: none;"></div>
   `;
 
-  // Info cards don't need checking - just show "next" immediately
+  // Info cards don't need checking - enable button immediately
+  // (button text is set to "Begrepen" by updateControls)
   const checkBtn = $("checkBtn");
-  if (checkBtn) checkBtn.textContent = "Begrepen";
   if (checkBtn) checkBtn.disabled = false;
 }
 
@@ -3734,6 +3734,12 @@ function updateControls() {
   } else {
     if (rowMain) rowMain.style.display = "flex";
     if (rowNext) rowNext.style.display = "none";
+
+    // Reset check button text (may have been changed to "Begrepen" for info_card)
+    if (checkBtn) {
+      const q = state.questions[state.currentIndex];
+      checkBtn.textContent = q?.type === "info_card" ? "Begrepen" : "Controleer";
+    }
   }
 
   // Update button visibility based on mode

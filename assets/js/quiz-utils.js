@@ -271,32 +271,21 @@ export function selectQuestionsForSession(questions, perSession, subjectId) {
 
 /**
  * Order questions for exam mode
+ * Uses exam_order from subject metadata if available, otherwise preserves JSON order
  * @param {Array} questions - Questions to order
  * @param {Object} subjectMeta - Subject metadata (optional)
  * @param {string} subjectId - Subject ID (optional)
  */
 export function orderQuestionsForExam(questions, subjectMeta = null, subjectId = null) {
-  // Check if subject has preserveOrder flag or is not geschiedenis
-  if (subjectMeta?.preserveOrder || !subjectId?.startsWith("geschiedenis")) {
-    // Keep original order from JSON file
+  // Check if subject has a custom exam order defined
+  const examOrder = subjectMeta?.examOrder;
+
+  // If no custom order or preserveOrder is true, keep original JSON order
+  if (!examOrder || subjectMeta?.preserveOrder) {
     return questions;
   }
 
-  // Geschiedenis: didactische volgorde (rustige start, zware vragen naar achteren)
-  const examOrder = [
-    // FASE 1 - Instap & rust (vraag 1-8): vertrouwen opbouwen, geen overload
-    "g-045", "g-005", "g-006", "g-016", "g-009", "g-027", "g-031", "g-049",
-    // FASE 2 - Kernkennis & inzicht (vraag 9-22)
-    "g-002", "g-007", "g-012", "g-013", "g-014", "g-015", "g-017", "g-018",
-    "g-020", "g-021", "g-022", "g-023", "g-025", "g-026",
-    // FASE 3 - Toepassen & verbanden (vraag 23-36)
-    "g-011", "g-019", "g-028", "g-029", "g-030", "g-032", "g-033", "g-034",
-    "g-035", "g-036", "g-037", "g-039", "g-040", "g-041",
-    // FASE 4 - Uitdaging & afronding (vraag 37-50): zware chronologie/bronvragen
-    "g-001", "g-003", "g-004", "g-008", "g-010", "g-024", "g-038", "g-042",
-    "g-043", "g-044", "g-046", "g-047", "g-048", "g-050"
-  ];
-
+  // Apply custom exam order
   const questionMap = new Map(questions.map(q => [q.id, q]));
   const ordered = examOrder.map(id => questionMap.get(id)).filter(Boolean);
 
