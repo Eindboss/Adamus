@@ -192,8 +192,7 @@
       "hideFlashcards": true,
       "week": "2e toetsweek",
       "questionsPerSession": 15,
-      "examDurationMinutes": 60,
-      "preserveOrder": true
+      "examDurationMinutes": 60
     },
     {
       "id": "engels-unit2-interface",
