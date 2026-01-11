@@ -46,10 +46,6 @@
   flex-shrink: 0;
 }
 
-.subject-card:hover .icon-wrap {
-  /* No change needed */
-}
-
 .subject-card .icon-wrap svg {
   width: 22px;
   height: 22px;
