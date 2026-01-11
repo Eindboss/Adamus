@@ -480,7 +480,7 @@ export function renderMatching(container, q) {
         ${leftHtml}
       </div>
       <div class="matching-pool">
-        <div class="matching-pool-header">Sleep naar begrip</div>
+        <div class="matching-pool-header">Sleep of tik naar begrip</div>
         ${rightHtml}
       </div>
     </div>
@@ -502,7 +502,7 @@ export function renderMatching(container, q) {
     container.innerHTML = contentHtml;
   }
 
-  // Setup drag and drop
+  // Setup drag and drop (plus tap fallback for touch devices)
   setupMatchingDragDrop();
 
   const checkBtn = $("checkBtn");
@@ -511,6 +511,35 @@ export function renderMatching(container, q) {
 
 function setupMatchingDragDrop() {
   let draggedEl = null;
+  let selectedRightEl = null;
+
+  function setSelectedRight(el) {
+    $$$(".match-betekenis").forEach((item) => item.classList.remove("selected"));
+    selectedRightEl = el;
+    if (selectedRightEl) {
+      selectedRightEl.classList.add("selected");
+    }
+  }
+
+  function assignToDropzone(dropzone, itemEl) {
+    if (!dropzone || !itemEl) return;
+
+    // If dropzone already has an item, return it to pool
+    const existing = dropzone.querySelector(".match-betekenis");
+    if (existing) {
+      returnToPool(existing);
+    }
+
+    const leftIdx = parseInt(dropzone.dataset.leftIdx);
+    const rightOriginalIdx = parseInt(itemEl.dataset.originalIdx);
+
+    dropzone.innerHTML = "";
+    dropzone.appendChild(itemEl);
+    itemEl.classList.add("paired");
+
+    matchingState.pairs[leftIdx] = rightOriginalIdx;
+    updateMatchingProgress();
+  }
 
   // Draggable items (betekenissen)
   $$$(".match-betekenis").forEach(el => {
@@ -531,6 +560,16 @@ function setupMatchingDragDrop() {
     el.addEventListener("click", () => {
       if (el.closest(".match-dropzone")) {
         returnToPool(el);
+        setSelectedRight(null);
+        return;
+      }
+      // Tap-to-select fallback (for iPad/touch)
+      if (el.closest(".matching-pool")) {
+        if (selectedRightEl === el) {
+          setSelectedRight(null);
+        } else {
+          setSelectedRight(el);
+        }
       }
     });
   });
@@ -553,24 +592,7 @@ function setupMatchingDragDrop() {
 
       if (!draggedEl) return;
 
-      const leftIdx = parseInt(dropzone.dataset.leftIdx);
-      const rightOriginalIdx = parseInt(draggedEl.dataset.originalIdx);
-
-      // If dropzone already has an item, return it to pool
-      const existing = dropzone.querySelector(".match-betekenis");
-      if (existing) {
-        returnToPool(existing);
-      }
-
-      // Move dragged item to dropzone
-      dropzone.innerHTML = "";
-      dropzone.appendChild(draggedEl);
-      draggedEl.classList.add("paired");
-
-      // Store pairing
-      matchingState.pairs[leftIdx] = rightOriginalIdx;
-
-      updateMatchingProgress();
+      assignToDropzone(dropzone, draggedEl);
     });
 
     // Click on dropzone to return item
@@ -578,6 +600,9 @@ function setupMatchingDragDrop() {
       if (e.target === dropzone || e.target.classList.contains("dropzone-hint")) {
         const item = dropzone.querySelector(".match-betekenis");
         if (item) returnToPool(item);
+      } else if (selectedRightEl && selectedRightEl.closest(".matching-pool")) {
+        assignToDropzone(dropzone, selectedRightEl);
+        setSelectedRight(null);
       }
     });
   });
