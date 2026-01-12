@@ -1979,6 +1979,16 @@ textarea.open-input {
   cursor: grabbing;
 }
 
+.ordering-item.ordering-selected {
+  border-color: var(--brand);
+  background: var(--brand-light);
+  box-shadow: 0 0 0 3px var(--brand-light);
+}
+
+.ordering-item.ordering-selected .ordering-number {
+  background: var(--brand);
+}
+
 .ordering-handle {
   color: var(--muted);
   font-size: 1rem;
@@ -2004,12 +2014,19 @@ textarea.open-input {
 }
 
 .ordering-input {
-  width: 50px;
+  width: 52px;
   padding: var(--space-2);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   text-align: center;
   font-size: 0.875rem;
+  background: var(--bg);
+}
+
+.ordering-input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.15);
 }
 
 .ordering-item.ordering-correct {
@@ -2176,6 +2193,12 @@ textarea.open-input {
 
   .ordering-text {
     font-size: 0.9375rem;
+  }
+
+  .ordering-input {
+    width: 44px;
+    padding: var(--space-1);
+    font-size: 0.8125rem;
   }
 
   .ratio-input {

@@ -12,6 +12,14 @@ PROJECT_REF = "ycmkfqduvziydyfnrczj"
 SQL_API_URL = f"https://api.supabase.com/v1/projects/{PROJECT_REF}/database/query"
 
 
+def sanitize_text(value):
+    if not value:
+        return ""
+    value = value.encode("utf-8", "ignore").decode("utf-8")
+    value = value.replace("\r\n", "\n").replace("\r", "\n")
+    return re.sub(r"[\x00-\x08\x0B\x0C\x0E-\x1F]", "", value)
+
+
 def load_env(path):
     env = {}
     for line in Path(path).read_text(encoding="utf-8").splitlines():
@@ -28,12 +36,13 @@ def sql_escape(value):
 
 
 def sql_literal(value):
-    safe = value.replace("\u0000", "")
-    tag = "$adamus$"
-    if tag in safe:
-        tag = "$adamus_text$"
-        if tag in safe:
-            tag = "$adamus_chunk$"
+    safe = sanitize_text(value)
+    base_tag = "adamus"
+    tag = f"${base_tag}$"
+    counter = 0
+    while tag in safe:
+        counter += 1
+        tag = f"${base_tag}_{counter}$"
     return f"{tag}{safe}{tag}"
 
 
@@ -88,7 +97,7 @@ def call_vision(api_key, image_path):
         text = data["responses"][0]["fullTextAnnotation"]["text"]
     except (KeyError, IndexError, TypeError):
         text = ""
-    return text.strip()
+    return sanitize_text(text.strip())
 
 
 def chunk_text(text, max_len=1200, overlap=200):
@@ -167,6 +176,12 @@ def main():
     paragraph = os.environ.get("ADAMUS_PARAGRAPH")
     title = os.environ.get("ADAMUS_TITLE", "Biologie hoofdstuk 4 (scans)")
     source_uri = os.environ.get("ADAMUS_SOURCE_URI", "local://vakken/biologie-h4")
+    force_pages_raw = os.environ.get("ADAMUS_FORCE_PAGES", "")
+    force_pages = {
+        int(p.strip())
+        for p in force_pages_raw.split(",")
+        if p.strip().isdigit()
+    }
 
     images = select_images(folder)
     if not images:
@@ -227,7 +242,7 @@ def main():
         print(f"ocr {idx}/{len(images)}: {image_path.name}")
         image_uri = f"file://{image_path.as_posix()}"
         existing = existing_by_page.get(idx) or existing_by_uri.get(image_uri)
-        if existing and int(existing.get("chunk_count", 0)) > 0:
+        if existing and int(existing.get("chunk_count", 0)) > 0 and idx not in force_pages:
             print(f"skip existing page {idx}: {image_path.name}")
             continue
 
@@ -266,8 +281,29 @@ def main():
                 f"{sql_literal(chunk)}"
                 ");"
             )
-            sql_query(token, chunk_sql)
-            time.sleep(0.1)
+            try:
+                sql_query(token, chunk_sql)
+                time.sleep(0.1)
+            except Exception as exc:
+                preview = chunk[:200].replace("\n", " ")
+                print(f"chunk insert failed page {idx} chunk {c_idx}: {exc}")
+                print(f"chunk preview: {preview!r}")
+                fallback = chunk.encode("ascii", "ignore").decode("ascii").strip()
+                if fallback and fallback != chunk:
+                    try:
+                        fallback_sql = (
+                            "insert into adamus.material_chunks "
+                            "(material_id, page_id, chunk_index, content) "
+                            "values ("
+                            f"'{material_id}', '{page_id}', {c_idx}, "
+                            f"{sql_literal(fallback)}"
+                            ");"
+                        )
+                        sql_query(token, fallback_sql)
+                        time.sleep(0.1)
+                        print(f"fallback insert ok page {idx} chunk {c_idx}")
+                    except Exception as fallback_exc:
+                        print(f"fallback insert failed page {idx} chunk {c_idx}: {fallback_exc}")
 
     print("done")
 

@@ -144,6 +144,8 @@ let state = {
   mode: "practice",
   // For retry wrong questions
   wrongQuestions: [],
+  // For ordering tap-to-swap (iPad support)
+  orderingSelectedIndex: null,
 };
 
 let subjects = [];
@@ -1224,11 +1226,14 @@ function updateSelectProgress() {
 
 /**
  * Render ordering question (put items in correct sequence)
- * Uses drag-and-drop or number inputs to arrange items
+ * Uses drag-and-drop on desktop, tap-to-swap on touch devices
  */
 function renderOrdering(container, q) {
   const items = q.items || [];
   const prompt = q.instruction || q.prompt_html || q.prompt || "Zet de items in de juiste volgorde.";
+
+  // Reset selected index
+  state.orderingSelectedIndex = null;
 
   // Shuffle items for display (store original indices)
   const shuffledItems = items.map((item, idx) => ({ text: item, originalIdx: idx }));
@@ -1241,7 +1246,14 @@ function renderOrdering(container, q) {
       <span class="ordering-handle">☰</span>
       <span class="ordering-number">${idx + 1}</span>
       <span class="ordering-text">${item.text}</span>
-      <input type="number" class="ordering-input" data-idx="${idx}" min="1" max="${items.length}" placeholder="${idx + 1}">
+      <input
+        type="number"
+        class="ordering-input"
+        data-idx="${idx}"
+        min="1"
+        max="${items.length}"
+        placeholder="${idx + 1}"
+        inputmode="numeric">
     </div>
   `,
     )
@@ -1249,7 +1261,7 @@ function renderOrdering(container, q) {
 
   const contentHtml = `
     <div class="question-title">${prompt}</div>
-    <div class="ordering-instructions">Sleep de items of vul nummers in (1 = eerste)</div>
+    <div class="ordering-instructions">Sleep de items, tik om te verwisselen, of vul nummers in om te verplaatsen.</div>
     <div class="ordering-list" id="orderingList">
       ${itemsHtml}
     </div>
@@ -1268,20 +1280,15 @@ function renderOrdering(container, q) {
     container.innerHTML = contentHtml;
   }
 
-  // Setup drag and drop
+  // Setup drag and drop + tap-to-swap
   setupOrderingDragDrop();
-
-  // Setup number inputs
-  $$$(".ordering-input", container).forEach((input) => {
-    input.addEventListener("input", updateOrderingProgress);
-  });
 
   const checkBtn = $("checkBtn");
   if (checkBtn) checkBtn.disabled = false; // Always enabled - can check current order
 }
 
 /**
- * Setup drag and drop for ordering items
+ * Setup drag and drop + tap-to-swap for ordering items
  */
 function setupOrderingDragDrop() {
   const list = $("orderingList");
@@ -1289,7 +1296,8 @@ function setupOrderingDragDrop() {
 
   let draggedItem = null;
 
-  $$$(".ordering-item").forEach((item) => {
+  $$$(".ordering-item", list).forEach((item, idx) => {
+    // Desktop: drag and drop
     item.addEventListener("dragstart", (e) => {
       draggedItem = item;
       item.classList.add("dragging");
@@ -1314,11 +1322,88 @@ function setupOrderingDragDrop() {
         }
       }
     });
+
+    // Touch/click: tap-to-swap (works on iPad)
+    item.addEventListener("click", (e) => {
+      if (e.target && e.target.classList.contains("ordering-input")) return;
+      handleOrderingTap(item, list);
+    });
+  });
+
+  // Number-input fallback: move item to position
+  $$$(".ordering-input", list).forEach((input) => {
+    input.addEventListener("change", () => {
+      const raw = input.value.trim();
+      if (!raw) return;
+      const target = parseInt(raw, 10);
+      const items = [...$$$(".ordering-item", list)];
+      const item = input.closest(".ordering-item");
+      if (!item || Number.isNaN(target)) return;
+      const targetIdx = Math.max(0, Math.min(items.length - 1, target - 1));
+      moveOrderingItem(list, item, targetIdx);
+      input.value = "";
+      updateOrderingNumbers();
+      clearOrderingSelection(list);
+    });
   });
 }
 
+function moveOrderingItem(list, item, targetIdx) {
+  const items = [...$$$(".ordering-item", list)];
+  const currentIdx = items.indexOf(item);
+  if (currentIdx === -1 || targetIdx === currentIdx) return;
+  if (targetIdx >= items.length - 1) {
+    list.appendChild(item);
+    return;
+  }
+  const ref = items[targetIdx];
+  list.insertBefore(item, targetIdx > currentIdx ? ref.nextSibling : ref);
+}
+
+function clearOrderingSelection(list) {
+  const selected = list.querySelector(".ordering-selected");
+  if (selected) selected.classList.remove("ordering-selected");
+  state.orderingSelectedIndex = null;
+}
+
 /**
- * Update ordering numbers after drag
+ * Handle tap on ordering item (for touch devices)
+ */
+function handleOrderingTap(item, list) {
+  const items = [...$$$(".ordering-item", list)];
+  const currentIdx = items.indexOf(item);
+
+  if (state.orderingSelectedIndex === null) {
+    // First tap: select this item
+    state.orderingSelectedIndex = currentIdx;
+    item.classList.add("ordering-selected");
+  } else if (state.orderingSelectedIndex === currentIdx) {
+    // Tap same item: deselect
+    clearOrderingSelection(list);
+  } else {
+    // Second tap on different item: swap
+    const selectedIdx = state.orderingSelectedIndex;
+    const selectedItem = items[selectedIdx];
+
+    // Swap DOM positions
+    if (selectedIdx < currentIdx) {
+      list.insertBefore(item, selectedItem);
+      list.insertBefore(selectedItem, items[currentIdx + 1] || null);
+    } else {
+      list.insertBefore(selectedItem, item);
+      list.insertBefore(item, items[selectedIdx + 1] || null);
+    }
+
+    // Clear selection
+    clearOrderingSelection(list);
+
+    // Update numbers
+    updateOrderingNumbers();
+  }
+}
+
+/**
+ * Update ordering numbers after drag/swap
  */
 function updateOrderingNumbers() {
   $$$(".ordering-item").forEach((item, idx) => {
@@ -1327,15 +1412,6 @@ function updateOrderingNumbers() {
     const input = $$(".ordering-input", item);
     if (input) input.placeholder = idx + 1;
   });
-}
-
-/**
- * Update ordering progress
- */
-function updateOrderingProgress() {
-  // Always allow checking since drag order is valid
-  const checkBtn = $("checkBtn");
-  if (checkBtn) checkBtn.disabled = false;
 }
 
 /**
