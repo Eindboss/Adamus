@@ -1,14 +1,14 @@
-{
+﻿{
   "schema_version": "2.0.0",
   "id": "engels-unit2-interface",
-  "title": "Engels – Unit 2: Interface",
+  "title": "Engels - Unit 2: Interface (herzien)",
   "subject": "Engels",
-  "description": "Woordenschat en grammatica voor Unit 2 Interface. Focus op: can/can't, kloktijden, present simple, have got, dagen en rangtelwoorden.",
+  "description": "Vwo gymnasium 1. Focus op grammatica (can/can't, present simple, have got, vraagvormen), kloktijden, dagen/ordinals en vertalen.",
   "questions": [
     {
       "id": "q001",
       "type": "mc",
-      "q": "Wat is de correcte zin?",
+      "q": "Which sentence is correct?",
       "a": [
         "She can sings very well.",
         "She can sing very well.",
@@ -16,427 +16,75 @@
         "She can to sing very well."
       ],
       "c": 1,
-      "e": "Na 'can' gebruik je altijd het hele werkwoord, zonder -s of 'to'."
+      "e": "After can, use the base form of the verb."
     },
     {
       "id": "q002",
       "type": "mc",
-      "q": "Hoe zeg je 14:30 in het Engels?",
+      "q": "Choose the correct negative form.",
       "a": [
-        "half two",
-        "half past two",
-        "two and a half",
-        "thirty past two"
+        "He don't can come today.",
+        "He can't come today.",
+        "He doesn't can come today.",
+        "He not can come today."
       ],
       "c": 1,
-      "e": "'Half past two' betekent half drie (14:30). Let op: Engels zegt 'half past' het uur, niet 'half' het volgende uur zoals in het Nederlands."
+      "e": "Negative of can is can't (cannot)."
     },
     {
       "id": "q003",
       "type": "mc",
-      "q": "Welke zin is correct?",
+      "q": "Choose the correct question.",
       "a": [
-        "He have a new phone.",
-        "He has got a new phone.",
-        "He have got a new phone.",
-        "He gots a new phone."
+        "Do you can play the guitar?",
+        "Can you play the guitar?",
+        "Can you to play the guitar?",
+        "You can play the guitar?"
       ],
       "c": 1,
-      "e": "Bij he/she/it gebruik je 'has got'."
+      "e": "Question with can: Can + subject + base verb."
     },
     {
       "id": "q004",
-      "type": "grammar_transform",
-      "category": "plural",
-      "instruction": "Geef het meervoud van deze woorden:",
+      "type": "grammar_fill",
+      "instruction": "Fill in the correct form with can/can't.",
+      "context": "Ability",
       "items": [
-        { "singular": "child", "accept": ["children"] },
-        { "singular": "woman", "accept": ["women"] },
-        { "singular": "foot", "accept": ["feet"] },
-        { "singular": "bus", "accept": ["buses"] }
+        {
+          "sentence": "I {{blank}} play the piano.",
+          "accept": ["can"]
+        },
+        {
+          "sentence": "She {{blank}} swim very well.",
+          "accept": ["can"]
+        },
+        {
+          "sentence": "I {{blank}} play the violin.",
+          "accept": ["can't", "cannot"]
+        }
       ],
-      "explanation": "Onregelmatige meervouden moet je uit je hoofd leren. Bij woorden op -s, -x, -ch, -sh voeg je -es toe."
+      "explanation": "Use can for ability and can't for inability."
     },
     {
       "id": "q005",
-      "type": "mc",
-      "q": "Welke dag komt na Wednesday?",
-      "a": [
-        "Tuesday",
-        "Thursday",
-        "Friday",
-        "Monday"
-      ],
-      "c": 1,
-      "e": "De volgorde is: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday."
+      "type": "translation_open",
+      "prompt_html": "Vertaal naar het Engels: <em>Ik kan vandaag niet komen.</em>",
+      "answer": {
+        "accepted_any": [
+          ["I can't come today.", "I cannot come today."]
+        ],
+        "normalize": {
+          "lowercase": true,
+          "strip_punctuation": true,
+          "collapse_whitespace": true
+        }
+      },
+      "rubric": "Gebruik can/can't + base verb."
     },
     {
       "id": "q006",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal de Engelse woorden naar het Nederlands:",
-      "items": [
-        { "en": "excited", "nl": ["opgewonden", "enthousiast"] },
-        { "en": "famous", "nl": ["beroemd"] },
-        { "en": "amazing", "nl": ["geweldig", "verbazingwekkend", "fantastisch"] },
-        { "en": "creative", "nl": ["creatief"] }
-      ],
-      "explanation": "Deze woorden komen uit Vocabulary 2.1."
-    },
-    {
-      "id": "q007",
       "type": "mc",
-      "q": "Wat is de correcte schrijfwijze van het rangtelwoord voor 3?",
-      "a": [
-        "tree",
-        "thirth",
-        "third",
-        "threeth"
-      ],
-      "c": 2,
-      "e": "Third is onregelmatig: one → first, two → second, three → third."
-    },
-    {
-      "id": "q008",
-      "type": "sentence_correction",
-      "instruction": "Verbeter de fout in elke zin:",
-      "items": [
-        {
-          "sentence": "He don't like football.",
-          "error_type": "verb agreement",
-          "accept": ["He doesn't like football.", "He does not like football."]
-        },
-        {
-          "sentence": "She have got two sisters.",
-          "error_type": "have got",
-          "accept": ["She has got two sisters."]
-        }
-      ],
-      "explanation": "Bij he/she/it gebruik je 'doesn't' en 'has got'."
-    },
-    {
-      "id": "q009",
-      "type": "mc",
-      "q": "Hoe vraag je in het Engels: 'Kun je gitaar spelen?'",
-      "a": [
-        "Do you can play guitar?",
-        "Can you play the guitar?",
-        "Are you can play guitar?",
-        "You can play guitar?"
-      ],
-      "c": 1,
-      "e": "Bij vragen met 'can' zet je 'can' vooraan. Let op: 'the guitar' met lidwoord."
-    },
-    {
-      "id": "q010",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal de Nederlandse woorden naar het Engels:",
-      "items": [
-        { "nl": "muzikant", "en": ["musician"] },
-        { "nl": "gitaar", "en": ["guitar"] },
-        { "nl": "podium", "en": ["stage"] },
-        { "nl": "saxofoon", "en": ["saxophone", "sax"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.2 en 2.4."
-    },
-    {
-      "id": "q011",
-      "type": "mc",
-      "q": "Welke zin is correct?",
-      "a": [
-        "I am agree with you.",
-        "I agree with you.",
-        "I agreeing with you.",
-        "I am agreeing to you."
-      ],
-      "c": 1,
-      "e": "'To agree' is een gewoon werkwoord in de present simple, zonder 'am'."
-    },
-    {
-      "id": "q012",
-      "type": "mc",
-      "q": "Wat betekent 'quarter past nine'?",
-      "a": [
-        "8:45",
-        "9:15",
-        "9:45",
-        "9:25"
-      ],
-      "c": 1,
-      "e": "'Quarter past nine' betekent kwart over negen (9:15)."
-    },
-    {
-      "id": "q013",
-      "type": "grammar_fill",
-      "instruction": "Vul de juiste vorm in:",
-      "context": "Present simple",
-      "items": [
-        {
-          "sentence": "She {{blank}} (to play) tennis every Saturday.",
-          "accept": ["plays"]
-        },
-        {
-          "sentence": "They {{blank}} (to watch) TV in the evening.",
-          "accept": ["watch"]
-        }
-      ],
-      "explanation": "Bij he/she/it krijgt het werkwoord een -s. Bij they niet."
-    },
-    {
-      "id": "q014",
-      "type": "mc",
-      "q": "Welke zin is correct?",
-      "a": [
-        "The concert is on Saturday the 5th of March.",
-        "The concert is in Saturday the 5th of March.",
-        "The concert is at Saturday the 5th of March.",
-        "The concert is to Saturday the 5th of March."
-      ],
-      "c": 0,
-      "e": "Bij dagen en data gebruik je 'on'."
-    },
-    {
-      "id": "q015",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "sold out", "nl": ["uitverkocht"] },
-        { "en": "wonderful", "nl": ["geweldig", "prachtig", "fantastisch"] },
-        { "en": "several", "nl": ["verschillende", "meerdere"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.2."
-    },
-    {
-      "id": "q016",
-      "type": "mc",
-      "q": "Welk antwoord maakt de zin correct? 'I ___ swim when I was five.'",
-      "a": [
-        "can",
-        "could",
-        "was can",
-        "cans"
-      ],
-      "c": 1,
-      "e": "'Could' is de verleden tijd van 'can'. 'When I was five' geeft aan dat het over het verleden gaat."
-    },
-    {
-      "id": "q017",
-      "type": "mc",
-      "q": "Wat is het rangtelwoord voor 12?",
-      "a": [
-        "twelveth",
-        "twelfth",
-        "twelf",
-        "twelth"
-      ],
-      "c": 1,
-      "e": "Twelve wordt twelfth (let op de f)."
-    },
-    {
-      "id": "q018",
-      "type": "sentence_correction",
-      "instruction": "Verbeter de fout:",
-      "items": [
-        {
-          "sentence": "They doesn't have any homework.",
-          "error_type": "verb agreement",
-          "accept": ["They don't have any homework.", "They do not have any homework."]
-        }
-      ],
-      "explanation": "Bij 'they' gebruik je 'don't', niet 'doesn't'."
-    },
-    {
-      "id": "q019",
-      "type": "mc",
-      "q": "Welke vraag is grammaticaal correct?",
-      "a": [
-        "Does she has a brother?",
-        "Does she have a brother?",
-        "Do she has a brother?",
-        "Has she have a brother?"
-      ],
-      "c": 1,
-      "e": "Na 'does' gebruik je het hele werkwoord 'have', zonder -s."
-    },
-    {
-      "id": "q020",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
-      "items": [
-        { "nl": "uitnodigen", "en": ["to invite", "invite"] },
-        { "nl": "ophalen", "en": ["to pick up", "pick up"] },
-        { "nl": "zich herinneren", "en": ["to remember", "remember"] }
-      ],
-      "explanation": "Werkwoorden uit Vocabulary 2.2."
-    },
-    {
-      "id": "q021",
-      "type": "grammar_fill",
-      "instruction": "Vul de juiste vorm in:",
-      "context": "Present simple",
-      "items": [
-        {
-          "sentence": "He always {{blank}} (to play) the guitar after school.",
-          "accept": ["plays"]
-        },
-        {
-          "sentence": "We {{blank}} (to listen) to music every day.",
-          "accept": ["listen"]
-        }
-      ],
-      "explanation": "Bij he/she/it krijgt het werkwoord een -s. Bij we niet."
-    },
-    {
-      "id": "q022",
-      "type": "mc",
-      "q": "Welke zin is correct?",
-      "a": [
-        "She have got two brothers.",
-        "She has got two brothers.",
-        "She got has two brothers.",
-        "She is got two brothers."
-      ],
-      "c": 1,
-      "e": "Bij he/she/it gebruik je 'has got'."
-    },
-    {
-      "id": "q023",
-      "type": "grammar_transform",
-      "category": "plural",
-      "instruction": "Geef het juiste meervoud:",
-      "items": [
-        { "singular": "lady", "accept": ["ladies"] },
-        { "singular": "photo", "accept": ["photos"] },
-        { "singular": "man", "accept": ["men"] }
-      ],
-      "explanation": "-y wordt -ies, sommige woorden zijn onregelmatig."
-    },
-    {
-      "id": "q024",
-      "type": "mc",
-      "q": "Wat betekent: 'quarter to four'?",
-      "a": [
-        "03:15",
-        "03:45",
-        "04:15",
-        "04:45"
-      ],
-      "c": 1,
-      "e": "'Quarter to four' is een kwartier vóór vier."
-    },
-    {
-      "id": "q025",
-      "type": "mc",
-      "q": "Welke zin is correct geschreven?",
-      "a": [
-        "My birthday is on june fifth.",
-        "My birthday is on June fifth.",
-        "My birthday is in June five.",
-        "My birthday is at June fifth."
-      ],
-      "c": 1,
-      "e": "Maanden krijgen een hoofdletter en data gebruiken 'on'."
-    },
-    {
-      "id": "q026",
-      "type": "sentence_correction",
-      "instruction": "Verbeter de fout:",
-      "items": [
-        {
-          "sentence": "He don't understand the question.",
-          "error_type": "verb agreement",
-          "accept": ["He doesn't understand the question."]
-        }
-      ],
-      "explanation": "Bij he/she/it gebruik je 'doesn't'."
-    },
-    {
-      "id": "q027",
-      "type": "vocab_list",
-      "direction": "mixed",
-      "instruction": "Vertaal de woorden:",
-      "items": [
-        { "prompt": "uitnodigen", "direction": "nl-en", "accept": ["invite", "to invite"] },
-        { "prompt": "together", "direction": "en-nl", "accept": ["samen"] },
-        { "prompt": "cadeau", "direction": "nl-en", "accept": ["present", "gift", "a present", "a gift"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.2."
-    },
-    {
-      "id": "q028",
-      "type": "mc",
-      "q": "Welke zin gebruik je om iemand uit te nodigen?",
-      "a": [
-        "I already have plans.",
-        "Would you like to come with me?",
-        "What time does it end?",
-        "I can't wait!"
-      ],
-      "c": 1,
-      "e": "Dit is een directe uitnodiging."
-    },
-    {
-      "id": "q029",
-      "type": "mc",
-      "q": "Welke zin past bij een telefoongesprek?",
-      "a": [
-        "Let's meet at the station.",
-        "Can I take a message?",
-        "How about tomorrow?",
-        "What time is it?"
-      ],
-      "c": 1,
-      "e": "Deze zin gebruik je als iemand niet beschikbaar is."
-    },
-    {
-      "id": "q030",
-      "type": "grammar_fill",
-      "instruction": "Vul de juiste vorm in:",
-      "context": "Have got",
-      "items": [
-        {
-          "sentence": "They {{blank}} got tickets for the concert.",
-          "accept": ["have"]
-        },
-        {
-          "sentence": "She {{blank}} got a guitar.",
-          "accept": ["has"]
-        }
-      ],
-      "explanation": "They → have got, she → has got."
-    },
-    {
-      "id": "q031",
-      "type": "mc",
-      "q": "Welke zin is correct?",
-      "a": [
-        "There are much people.",
-        "There is many people.",
-        "There are many people.",
-        "There is much peoples."
-      ],
-      "c": 2,
-      "e": "'People' is meervoud en combineert met 'many'."
-    },
-    {
-      "id": "q032",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "gig", "nl": ["optreden", "concert"] },
-        { "en": "sold out", "nl": ["uitverkocht"] },
-        { "en": "without", "nl": ["zonder"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.2."
-    },
-    {
-      "id": "q033",
-      "type": "mc",
-      "q": "Welke zin is grammaticaal correct?",
+      "q": "Which sentence is correct?",
       "a": [
         "He play the drums.",
         "He plays the drums.",
@@ -444,112 +92,316 @@
         "He playing the drums."
       ],
       "c": 1,
-      "e": "Present simple + he → werkwoord met -s."
+      "e": "Present simple: he/she/it + verb + s."
     },
     {
-      "id": "q034",
-      "type": "grammar_transform",
-      "category": "plural",
-      "instruction": "Geef het juiste meervoud:",
-      "items": [
-        { "singular": "tooth", "accept": ["teeth"] },
-        { "singular": "box", "accept": ["boxes"] }
-      ],
-      "explanation": "Onregelmatig: tooth → teeth. -x krijgt -es."
-    },
-    {
-      "id": "q035",
-      "type": "mc",
-      "q": "Wat betekent: 'I'm really looking forward to it.'?",
-      "a": [
-        "Ik kijk er erg tegenop.",
-        "Ik heb er geen zin in.",
-        "Ik heb er veel zin in.",
-        "Ik weet het nog niet."
-      ],
-      "c": 2,
-      "e": "Deze zin drukt enthousiasme uit."
-    },
-    {
-      "id": "q036",
-      "type": "mc",
-      "q": "Welke zin is correct?",
-      "a": [
-        "Can he helps us?",
-        "Can he help us?",
-        "Can he to help us?",
-        "Does he can help us?"
-      ],
-      "c": 1,
-      "e": "Na 'can' gebruik je het hele werkwoord zonder -s of 'to'."
-    },
-    {
-      "id": "q037",
+      "id": "q007",
       "type": "sentence_correction",
-      "instruction": "Verbeter de fout:",
+      "instruction": "Correct the mistake.",
       "items": [
         {
-          "sentence": "We has got enough time.",
-          "error_type": "have got",
-          "accept": ["We have got enough time."]
+          "sentence": "She don't like hip-hop.",
+          "error_type": "present simple negative",
+          "accept": ["She doesn't like hip-hop.", "She does not like hip-hop."]
+        },
+        {
+          "sentence": "They plays football after school.",
+          "error_type": "verb agreement",
+          "accept": ["They play football after school."]
         }
       ],
-      "explanation": "Bij 'we' gebruik je 'have got'."
+      "explanation": "Use doesn't with he/she/it; use base verb with they."
     },
     {
-      "id": "q038",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
+      "id": "q008",
+      "type": "grammar_fill",
+      "instruction": "Fill in the correct form.",
+      "context": "Present simple questions",
       "items": [
-        { "nl": "goedkoop", "en": ["cheap"] },
-        { "nl": "duur", "en": ["expensive"] }
+        {
+          "sentence": "{{blank}} she like pop music?",
+          "accept": ["Does"]
+        },
+        {
+          "sentence": "{{blank}} they live in London?",
+          "accept": ["Do"]
+        }
       ],
-      "explanation": "Tegenstellingen komen vaak samen voor."
+      "explanation": "Use Does for he/she/it, Do for I/you/we/they."
     },
     {
-      "id": "q039",
+      "id": "q009",
       "type": "mc",
-      "q": "Welke zin past bij het maken van een afspraak?",
+      "q": "Which sentence is correct?",
       "a": [
-        "Let's meet at seven o'clock.",
-        "Can I speak to Charlie?",
-        "I already have plans.",
-        "Thank you for inviting me."
+        "He have got a new phone.",
+        "He has got a new phone.",
+        "He got has a new phone.",
+        "He is got a new phone."
+      ],
+      "c": 1,
+      "e": "He/She/It uses has got."
+    },
+    {
+      "id": "q010",
+      "type": "grammar_fill",
+      "instruction": "Fill in the correct form of have got.",
+      "context": "Have got",
+      "items": [
+        {
+          "sentence": "I {{blank}} got two tickets.",
+          "accept": ["have"]
+        },
+        {
+          "sentence": "She {{blank}} got a brother.",
+          "accept": ["has"]
+        },
+        {
+          "sentence": "{{blank}} they got any homework?",
+          "accept": ["Have"]
+        }
+      ],
+      "explanation": "Have got: I/you/we/they = have; he/she/it = has."
+    },
+    {
+      "id": "q011",
+      "type": "mc",
+      "q": "What time is 14:30?",
+      "a": [
+        "half past two",
+        "half two",
+        "two and a half",
+        "thirty past two"
       ],
       "c": 0,
-      "e": "Deze zin stelt een concreet voorstel voor."
+      "e": "14:30 = half past two."
     },
     {
-      "id": "q040",
+      "id": "q012",
+      "type": "matching",
+      "instruction": "Match the time expressions to the digital times.",
+      "left": [
+        "quarter past nine",
+        "quarter to four",
+        "half past six",
+        "five past eight"
+      ],
+      "right": [
+        "09:15",
+        "15:45",
+        "06:30",
+        "08:05"
+      ],
+      "correct_pairs": {
+        "quarter past nine": "09:15",
+        "quarter to four": "15:45",
+        "half past six": "06:30",
+        "five past eight": "08:05"
+      },
+      "e": "Past = after, to = before the next hour."
+    },
+    {
+      "id": "q013",
       "type": "mc",
-      "q": "Wat is correct?",
+      "q": "Choose the correct preposition: My birthday is ___ June 5th.",
       "a": [
-        "Sunday is after saturday.",
-        "Sunday is after Saturday.",
-        "sunday is after Saturday.",
-        "Sunday is after saturday."
+        "on",
+        "in",
+        "at",
+        "by"
+      ],
+      "c": 0,
+      "e": "Use on with dates and days."
+    },
+    {
+      "id": "q014",
+      "type": "mc",
+      "q": "What is the correct ordinal for 12?",
+      "a": [
+        "twelveth",
+        "twelfth",
+        "twelth",
+        "twelvth"
       ],
       "c": 1,
-      "e": "Dagen van de week krijgen een hoofdletter."
+      "e": "Twelve becomes twelfth (f)."
     },
     {
-      "id": "q041",
+      "id": "q015",
+      "type": "translation_open",
+      "prompt_html": "Vertaal naar het Engels: <em>De afspraak is op donderdag 3 oktober om kwart voor vier.</em>",
+      "answer": {
+        "accepted_any": [
+          [
+            "The appointment is on Thursday 3rd October at quarter to four.",
+            "The appointment is on Thursday the 3rd of October at quarter to four."
+          ]
+        ],
+        "normalize": {
+          "lowercase": true,
+          "strip_punctuation": true,
+          "collapse_whitespace": true
+        }
+      },
+      "rubric": "Let op: on + day/date, at + time, quarter to."
+    },
+    {
+      "id": "q016",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands (muziek/optredens).",
+      "items": [
+        { "en": "musician", "nl": ["muzikant"] },
+        { "en": "stage", "nl": ["podium"] },
+        { "en": "gig", "nl": ["optreden", "concert"] },
+        { "en": "sold out", "nl": ["uitverkocht"] },
+        { "en": "ticket", "nl": ["kaartje", "ticket"] }
+      ]
+    },
+    {
+      "id": "q017",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels (werkwoorden).",
+      "items": [
+        { "nl": "uitnodigen", "en": ["invite", "to invite"] },
+        { "nl": "ophalen", "en": ["pick up", "to pick up"] },
+        { "nl": "herinneren", "en": ["remember", "to remember"] },
+        { "nl": "delen", "en": ["share", "to share"] },
+        { "nl": "versturen", "en": ["send", "to send"] }
+      ]
+    },
+    {
+      "id": "q018",
+      "type": "vocab_list",
+      "direction": "en-nl",
+      "instruction": "Vertaal naar het Nederlands (adjectieven).",
+      "items": [
+        { "en": "excited", "nl": ["opgewonden", "enthousiast"] },
+        { "en": "amazing", "nl": ["geweldig", "fantastisch", "verbazingwekkend"] },
+        { "en": "creative", "nl": ["creatief"] },
+        { "en": "cheap", "nl": ["goedkoop"] },
+        { "en": "expensive", "nl": ["duur"] }
+      ]
+    },
+    {
+      "id": "q019",
+      "type": "vocab_list",
+      "direction": "nl-en",
+      "instruction": "Vertaal naar het Engels (tijd/afspraken).",
+      "items": [
+        { "nl": "morgen", "en": ["tomorrow"] },
+        { "nl": "vanavond", "en": ["tonight"] },
+        { "nl": "samen", "en": ["together"] },
+        { "nl": "al", "en": ["already"] },
+        { "nl": "binnenkort", "en": ["soon"] }
+      ]
+    },
+    {
+      "id": "q020",
+      "type": "mc",
+      "q": "Choose the best meaning of 'sold out'.",
+      "a": [
+        "uitverkocht",
+        "uitverkoop",
+        "verkocht",
+        "verhuren"
+      ],
+      "c": 0,
+      "e": "Sold out = everything is sold; nothing left."
+    },
+    {
+      "id": "q021",
+      "type": "mc",
+      "q": "Which sentence invites someone?",
+      "a": [
+        "I already have plans.",
+        "Would you like to come with me?",
+        "Can I take a message?",
+        "What time does it end?"
+      ],
+      "c": 1,
+      "e": "This is a direct invitation."
+    },
+    {
+      "id": "q022",
+      "type": "translation_open",
+      "prompt_html": "Vertaal naar het Engels: <em>Het concert is uitverkocht, maar ik heb twee kaartjes.</em>",
+      "answer": {
+        "accepted_any": [
+          [
+            "The concert is sold out, but I have got two tickets.",
+            "The concert is sold out, but I've got two tickets.",
+            "The concert is sold out, but I have two tickets."
+          ]
+        ],
+        "normalize": {
+          "lowercase": true,
+          "strip_punctuation": true,
+          "collapse_whitespace": true
+        }
+      },
+      "rubric": "Gebruik sold out + have got/have."
+    },
+    {
+      "id": "q023",
+      "type": "grammar_transform",
+      "category": "plural",
+      "instruction": "Give the correct plural forms.",
+      "items": [
+        { "singular": "child", "accept": ["children"] },
+        { "singular": "woman", "accept": ["women"] },
+        { "singular": "bus", "accept": ["buses"] }
+      ],
+      "explanation": "Irregular plurals and -es after -s."
+    },
+    {
+      "id": "q024",
+      "type": "mc",
+      "q": "Choose the correct past ability sentence.",
+      "a": [
+        "I can swim when I was six.",
+        "I could swim when I was six.",
+        "I could to swim when I was six.",
+        "I can to swim when I was six."
+      ],
+      "c": 1,
+      "e": "Could is the past of can."
+    },
+    {
+      "id": "q025",
       "type": "grammar_fill",
-      "instruction": "Vul de juiste vorm in:",
-      "context": "Present simple",
+      "instruction": "Fill in the correct present simple form.",
+      "context": "Frequency adverbs",
       "items": [
         {
-          "sentence": "My parents {{blank}} (to work) in the city.",
-          "accept": ["work"]
+          "sentence": "She always {{blank}} (to listen) to music.",
+          "accept": ["listens"]
+        },
+        {
+          "sentence": "They often {{blank}} (to go) to concerts.",
+          "accept": ["go"]
         }
       ],
-      "explanation": "Bij een meervoud gebruik je het hele werkwoord."
+      "explanation": "He/She/It + -s; plural stays base form."
     },
     {
-      "id": "q042",
+      "id": "q026",
       "type": "mc",
-      "q": "Welke zin is correct?",
+      "q": "Where is the adverb usually placed?",
+      "a": [
+        "She goes often to the cinema.",
+        "She often goes to the cinema.",
+        "She goes to the often cinema.",
+        "Often she goes to the cinema." 
+      ],
+      "c": 1,
+      "e": "Adverb of frequency usually comes before the main verb."
+    },
+    {
+      "id": "q027",
+      "type": "mc",
+      "q": "Choose the correct sentence.",
       "a": [
         "There is two tickets.",
         "There are two tickets.",
@@ -557,301 +409,112 @@
         "There be two tickets."
       ],
       "c": 1,
-      "e": "'Tickets' is meervoud → there are."
+      "e": "Plural noun -> there are."
     },
     {
-      "id": "q043",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "stage", "nl": ["podium"] },
-        { "en": "musician", "nl": ["muzikant"] }
-      ],
-      "explanation": "Deze woorden horen bij het muziekthema."
-    },
-    {
-      "id": "q044",
-      "type": "mc",
-      "q": "Welke zin gebruik je om te reageren op een uitnodiging?",
-      "a": [
-        "What time is it?",
-        "I'd love to, thanks!",
-        "Can you help me?",
-        "Where shall we meet?"
-      ],
-      "c": 1,
-      "e": "Dit is een positieve reactie op een uitnodiging."
-    },
-    {
-      "id": "q045",
+      "id": "q028",
       "type": "sentence_correction",
-      "instruction": "Verbeter de fout:",
+      "instruction": "Correct the mistake.",
       "items": [
         {
-          "sentence": "She go to school by bus.",
-          "error_type": "present simple",
-          "accept": ["She goes to school by bus."]
+          "sentence": "There is many people at the show.",
+          "error_type": "there is/are",
+          "accept": ["There are many people at the show."]
         }
       ],
-      "explanation": "Bij he/she/it krijgt het werkwoord een -s."
+      "explanation": "Use are with plural."
     },
     {
-      "id": "q046",
+      "id": "q029",
+      "type": "matching",
+      "instruction": "Match the phrases to the situation.",
+      "left": [
+        "Can I take a message?",
+        "I'd love to, thanks!",
+        "What time does it end?",
+        "Let's meet at seven o'clock."
+      ],
+      "right": [
+        "Telefonisch iemand is niet beschikbaar",
+        "Positieve reactie op een uitnodiging",
+        "Vragen naar eindtijd",
+        "Afspraak maken"
+      ],
+      "correct_pairs": {
+        "Can I take a message?": "Telefonisch iemand is niet beschikbaar",
+        "I'd love to, thanks!": "Positieve reactie op een uitnodiging",
+        "What time does it end?": "Vragen naar eindtijd",
+        "Let's meet at seven o'clock.": "Afspraak maken"
+      },
+      "e": "Context helpt bij het kiezen van de juiste zin."
+    },
+    {
+      "id": "q030",
+      "type": "translation_open",
+      "prompt_html": "Vertaal naar het Engels: <em>Ik bel je vanavond terug.</em>",
+      "answer": {
+        "accepted_any": [
+          ["I'll call you back tonight.", "I will call you back tonight."]
+        ],
+        "normalize": {
+          "lowercase": true,
+          "strip_punctuation": true,
+          "collapse_whitespace": true
+        }
+      },
+      "rubric": "Call back = terugbellen; tonight = vanavond."
+    },
+    {
+      "id": "q031",
       "type": "mc",
-      "q": "Welke zin is correct?",
+      "q": "Which sentence is correct?",
       "a": [
-        "I have got no money.",
-        "I haven't got no money.",
-        "I got haven't money.",
-        "I don't got money."
-      ],
-      "c": 0,
-      "e": "Je gebruikt maar één ontkenning in een zin."
-    },
-    {
-      "id": "q047",
-      "type": "grammar_transform",
-      "category": "plural",
-      "instruction": "Geef het juiste meervoud:",
-      "items": [
-        { "singular": "friend", "accept": ["friends"] },
-        { "singular": "voice", "accept": ["voices"] }
-      ],
-      "explanation": "Regelmatige meervouden krijgen -s of -es."
-    },
-    {
-      "id": "q048",
-      "type": "mc",
-      "q": "Welke zin is correct Engels?",
-      "a": [
-        "Tomorrow I visit my uncle.",
-        "Tomorrow I am visit my uncle.",
-        "Tomorrow I visit my uncle in August.",
-        "Tomorrow I visit my uncle."
-      ],
-      "c": 3,
-      "e": "De present simple kan ook gebruikt worden voor vaste plannen."
-    },
-    {
-      "id": "q049",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
-      "items": [
-        { "nl": "morgen", "en": ["tomorrow"] },
-        { "nl": "vanavond", "en": ["tonight"] }
-      ],
-      "explanation": "Tijdsaanduidingen zijn belangrijk bij afspraken."
-    },
-    {
-      "id": "q050",
-      "type": "mc",
-      "q": "Welke zin is grammaticaal correct?",
-      "a": [
-        "Can they helps us?",
-        "Can they help us?",
-        "Do they can help us?",
-        "They can helps us?"
+        "He don't understand the question.",
+        "He doesn't understand the question.",
+        "He isn't understand the question.",
+        "He doesn't understands the question."
       ],
       "c": 1,
-      "e": "Na 'can' gebruik je altijd het hele werkwoord zonder -s."
+      "e": "Negative present simple: does + not + base verb."
     },
     {
-      "id": "v01",
+      "id": "q032",
+      "type": "mc",
+      "q": "Choose the correct question.",
+      "a": [
+        "Does she has a brother?",
+        "Does she have a brother?",
+        "Do she has a brother?",
+        "Has she have a brother?"
+      ],
+      "c": 1,
+      "e": "After does, use base verb."
+    },
+    {
+      "id": "q033",
       "type": "vocab_list",
       "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
+      "instruction": "Vertaal naar het Nederlands (algemeen).",
       "items": [
         { "en": "famous", "nl": ["beroemd"] },
         { "en": "guest", "nl": ["gast"] },
-        { "en": "example", "nl": ["voorbeeld"] },
-        { "en": "fun", "nl": ["leuk", "plezier", "lol"] },
-        { "en": "instrument", "nl": ["instrument", "muziekinstrument"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.1."
-    },
-    {
-      "id": "v02",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
-      "items": [
-        { "nl": "uitnodigen", "en": ["invite", "to invite"] },
-        { "nl": "samen", "en": ["together"] },
-        { "nl": "kiezen", "en": ["choose", "to choose"] },
-        { "nl": "verbeteren", "en": ["improve", "to improve"] },
-        { "nl": "leren", "en": ["learn", "to learn"] }
-      ],
-      "explanation": "Werkwoorden uit Vocabulary 2.1 en 2.2."
-    },
-    {
-      "id": "v03",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "tomorrow", "nl": ["morgen"] },
-        { "en": "tonight", "nl": ["vanavond"] },
-        { "en": "soon", "nl": ["binnenkort", "snel"] },
-        { "en": "sometimes", "nl": ["soms"] },
-        { "en": "already", "nl": ["al", "reeds"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.2 en 2.4."
-    },
-    {
-      "id": "v04",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
-      "items": [
-        { "nl": "beroemd", "en": ["famous"] },
-        { "nl": "muzikant", "en": ["musician"] },
-        { "nl": "podium", "en": ["stage"] },
-        { "nl": "drums", "en": ["drums"] },
-        { "nl": "gitaar", "en": ["guitar"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.2 en 2.4."
-    },
-    {
-      "id": "v05",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "cheap", "nl": ["goedkoop"] },
-        { "en": "expensive", "nl": ["duur"] },
-        { "en": "lazy", "nl": ["lui"] },
-        { "en": "disappointed", "nl": ["teleurgesteld"] },
-        { "en": "weird", "nl": ["vreemd", "raar"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.2 en 2.4."
-    },
-    {
-      "id": "v06",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
-      "items": [
-        { "nl": "begrijpen", "en": ["understand", "to understand"] },
-        { "nl": "voelen", "en": ["feel", "to feel"] },
-        { "nl": "zeggen", "en": ["say", "to say"] },
-        { "nl": "sturen", "en": ["send", "to send"] },
-        { "nl": "delen", "en": ["share", "to share"] }
-      ],
-      "explanation": "Werkwoorden uit Vocabulary 2.1."
-    },
-    {
-      "id": "v07",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "phone call", "nl": ["telefoontje", "telefoongesprek"] },
         { "en": "message", "nl": ["bericht"] },
-        { "en": "silence", "nl": ["stilte"] },
         { "en": "language", "nl": ["taal"] },
         { "en": "idea", "nl": ["idee"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.3."
+      ]
     },
     {
-      "id": "v08",
+      "id": "q034",
       "type": "vocab_list",
       "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
+      "instruction": "Vertaal naar het Engels (algemeen).",
       "items": [
-        { "nl": "vragen", "en": ["ask", "to ask"] },
-        { "nl": "mogen", "en": ["be allowed", "to be allowed"] },
+        { "nl": "begrijpen", "en": ["understand", "to understand"] },
         { "nl": "geluk hebben", "en": ["be lucky", "to be lucky"] },
-        { "nl": "lachen", "en": ["laugh", "to laugh"] },
-        { "nl": "geloven", "en": ["believe", "to believe"] }
-      ],
-      "explanation": "Werkwoorden uit Vocabulary 2.2 en 2.3."
-    },
-    {
-      "id": "v09",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "without", "nl": ["zonder"] },
-        { "en": "about", "nl": ["over"] },
-        { "en": "difficult", "nl": ["moeilijk"] },
-        { "en": "enough", "nl": ["genoeg", "voldoende"] },
-        { "en": "much", "nl": ["veel"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.2, 2.3 en 2.4."
-    },
-    {
-      "id": "v10",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
-      "items": [
-        { "nl": "betalen", "en": ["pay", "to pay"] },
-        { "nl": "uitgeven", "en": ["spend", "to spend"] },
-        { "nl": "bezoeken", "en": ["visit", "to visit"] },
+        { "nl": "vragen", "en": ["ask", "to ask"] },
         { "nl": "kopen", "en": ["buy", "to buy"] },
         { "nl": "uitkijken naar", "en": ["look forward to", "to look forward to"] }
-      ],
-      "explanation": "Werkwoorden uit Vocabulary 2.4."
-    },
-    {
-      "id": "v11",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "cousin", "nl": ["neef", "nicht"] },
-        { "en": "show", "nl": ["show", "voorstelling"] },
-        { "en": "sound", "nl": ["geluid", "klinken"] },
-        { "en": "way", "nl": ["manier", "weg"] },
-        { "en": "musical", "nl": ["muzikaal"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.1."
-    },
-    {
-      "id": "v12",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
-      "items": [
-        { "nl": "willen", "en": ["want", "to want"] },
-        { "nl": "reizen", "en": ["travel", "to travel"] },
-        { "nl": "winnen", "en": ["win", "to win"] },
-        { "nl": "dood", "en": ["dead"] },
-        { "nl": "vriendschap", "en": ["friendship"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.1 en 2.3."
-    },
-    {
-      "id": "v13",
-      "type": "vocab_list",
-      "direction": "en-nl",
-      "instruction": "Vertaal naar het Nederlands:",
-      "items": [
-        { "en": "beach", "nl": ["strand"] },
-        { "en": "both", "nl": ["beide", "allebei"] },
-        { "en": "hard", "nl": ["hard", "luid"] },
-        { "en": "price", "nl": ["prijs"] },
-        { "en": "directions", "nl": ["routebeschrijving", "aanwijzingen"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.3 en 2.4."
-    },
-    {
-      "id": "v14",
-      "type": "vocab_list",
-      "direction": "nl-en",
-      "instruction": "Vertaal naar het Engels:",
-      "items": [
-        { "nl": "elk", "en": ["each", "every"] },
-        { "nl": "niet meer", "en": ["not anymore", "not any more"] },
-        { "nl": "tot", "en": ["until", "till"] },
-        { "nl": "sms, berichtje", "en": ["text message", "text", "message"] },
-        { "nl": "geweldig", "en": ["amazing", "wonderful", "great"] }
-      ],
-      "explanation": "Woorden uit Vocabulary 2.3 en 2.4."
+      ]
     }
   ]
 }
