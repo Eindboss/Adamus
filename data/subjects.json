@@ -135,7 +135,8 @@
       "flashcardFile": "data/wiskunde/hoofdstuk3-flashcards.json",
       "schema": "toets",
       "week": "2e toetsweek",
-      "questionsPerSession": 10
+      "questionsPerSession": 10,
+      "examDurationMinutes": 60
     },
     {
       "id": "wiskunde-h4-getallen-praktijk",

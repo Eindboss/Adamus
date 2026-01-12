@@ -2894,6 +2894,7 @@ function checkWiskundePart(part, idx) {
   const type = part.type || "text";
   const answer = part.answer || {};
   const points = part.points || 1;
+  const explanation = part.explanation || part.e || "";
 
   let userAnswer = "";
   let isCorrect = false;
@@ -3015,6 +3016,7 @@ function checkWiskundePart(part, idx) {
     correct: isCorrect,
     earnedPoints: isCorrect ? points : 0,
     maxPoints: points,
+    explanation,
   };
 }
 
@@ -3105,6 +3107,27 @@ function showWiskundeFeedback(correctCount, totalCount, results, totalPoints, ma
   `
       : "";
 
+  const explanationItems = results.filter((r) => r.explanation);
+  const explanationHtml =
+    explanationItems.length > 0
+      ? `
+    <div class="feedback-results">
+      <div class="feedback-results-title">Uitleg:</div>
+      <div class="feedback-results-list">
+        ${explanationItems
+          .map(
+            (r) => `
+          <div class="feedback-result-item info">
+            <span><strong>${r.partId})</strong> ${r.explanation}</span>
+          </div>
+        `,
+          )
+          .join("")}
+      </div>
+    </div>
+  `
+      : "";
+
   feedbackEl.className = `feedback ${className}`;
   feedbackEl.innerHTML = `
     <div class="feedback-header">
@@ -3113,6 +3136,7 @@ function showWiskundeFeedback(correctCount, totalCount, results, totalPoints, ma
     </div>
     <div class="feedback-score">${correctCount} / ${totalCount} goed</div>
     ${wrongHtml}
+    ${explanationHtml}
   `;
   feedbackEl.style.display = "block";
 }
