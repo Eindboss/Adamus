@@ -1847,29 +1847,77 @@ function renderPart(part, partId, idx) {
       `;
       break;
 
-    case "table_fill":
-      // Table with fillable cells
-      const cells = part.cells || [];
-      inputHtml = `
-        <div class="wiskunde-table-fill" data-part="${idx}">
-          ${cells
-            .map(
-              (cell, cellIdx) => `
-            <div class="table-fill-cell">
-              <span class="cell-label">${cell.label || ""}</span>
-              <input type="text"
-                     id="part-${idx}-cell-${cellIdx}"
-                     class="wiskunde-input wiskunde-cell"
-                     data-part="${idx}"
-                     data-cell="${cellIdx}"
-                     placeholder="...">
-            </div>
-          `,
-            )
-            .join("")}
-        </div>
-      `;
+    case "table_fill": {
+      // Table with fillable cells (supports structured table or flat cell list)
+      if (part.table && Array.isArray(part.table.rows)) {
+        const table = part.table;
+        const columns = table.columns || [];
+        const rows = table.rows || [];
+
+        inputHtml = `
+          <div class="wiskunde-table-fill" data-part="${idx}">
+            <table class="wiskunde-table wiskunde-table-input">
+              <thead>
+                <tr>
+                  ${columns.map((col) => `<th>${col}</th>`).join("")}
+                </tr>
+              </thead>
+              <tbody>
+                ${rows
+                  .map(
+                    (row, rowIdx) => `
+                  <tr>
+                    ${row
+                      .map((cell, colIdx) => {
+                        if (cell === null || cell === undefined) {
+                          return `
+                            <td>
+                              <input type="text"
+                                     id="part-${idx}-cell-r${rowIdx}c${colIdx}"
+                                     class="wiskunde-input wiskunde-cell"
+                                     data-part="${idx}"
+                                     data-row="${rowIdx}"
+                                     data-col="${colIdx}"
+                                     placeholder="..."
+                                     autocomplete="off">
+                            </td>
+                          `;
+                        }
+                        return `<td>${cell}</td>`;
+                      })
+                      .join("")}
+                  </tr>
+                `,
+                  )
+                  .join("")}
+              </tbody>
+            </table>
+          </div>
+        `;
+      } else {
+        const cells = part.cells || [];
+        inputHtml = `
+          <div class="wiskunde-table-fill" data-part="${idx}">
+            ${cells
+              .map(
+                (cell, cellIdx) => `
+              <div class="table-fill-cell">
+                <span class="cell-label">${cell.label || ""}</span>
+                <input type="text"
+                       id="part-${idx}-cell-${cellIdx}"
+                       class="wiskunde-input wiskunde-cell"
+                       data-part="${idx}"
+                       data-cell="${cellIdx}"
+                       placeholder="...">
+              </div>
+            `,
+              )
+              .join("")}
+          </div>
+        `;
+      }
       break;
+    }
 
     case "table_coords":
       // Table with coordinate inputs per row
@@ -2955,20 +3003,46 @@ function checkWiskundePart(part, idx) {
     }
 
     case "table_fill": {
-      const cells = part.cells || [];
       let cellsCorrect = 0;
-      cells.forEach((cell, cellIdx) => {
-        const cellInput = $(`part-${idx}-cell-${cellIdx}`);
-        const cellValue = cellInput?.value?.trim() || "";
-        const cellAccept = [cell.value, ...(cell.accept || [])].filter(Boolean);
-        const cellCorrect = cellAccept.some(
-          (acc) => cellValue.toLowerCase() === String(acc).toLowerCase(),
-        );
-        if (cellCorrect) cellsCorrect++;
-      });
-      userAnswer = `${cellsCorrect}/${cells.length} cellen`;
+      let cellsTotal = 0;
+
+      if (part.table && Array.isArray(part.table.rows)) {
+        const rows = part.table.rows || [];
+        const expectedCells = answer.cells || {};
+
+        rows.forEach((row, rowIdx) => {
+          row.forEach((cell, colIdx) => {
+            if (cell === null || cell === undefined) {
+              cellsTotal++;
+              const cellInput = $(`part-${idx}-cell-r${rowIdx}c${colIdx}`);
+              const cellValue = cellInput?.value?.trim() || "";
+              const key = `r${rowIdx}c${colIdx}`;
+              const expectedValue = expectedCells[key];
+              const acceptList = [expectedValue].filter((v) => v !== undefined && v !== null);
+              const cellCorrect = acceptList.some(
+                (acc) => cellValue.toLowerCase() === String(acc).toLowerCase(),
+              );
+              if (cellCorrect) cellsCorrect++;
+            }
+          });
+        });
+      } else {
+        const cells = part.cells || [];
+        cellsTotal = cells.length;
+        cells.forEach((cell, cellIdx) => {
+          const cellInput = $(`part-${idx}-cell-${cellIdx}`);
+          const cellValue = cellInput?.value?.trim() || "";
+          const cellAccept = [cell.value, ...(cell.accept || [])].filter(Boolean);
+          const cellCorrect = cellAccept.some(
+            (acc) => cellValue.toLowerCase() === String(acc).toLowerCase(),
+          );
+          if (cellCorrect) cellsCorrect++;
+        });
+      }
+
+      userAnswer = `${cellsCorrect}/${cellsTotal} cellen`;
       expectedAnswer = "alle cellen correct";
-      isCorrect = cellsCorrect === cells.length;
+      isCorrect = cellsTotal > 0 && cellsCorrect === cellsTotal;
       break;
     }
 
@@ -4016,3 +4090,4 @@ function updateTimerToggleUI(toggle, display) {
 export function getState() {
   return { ...state };
 }
+
