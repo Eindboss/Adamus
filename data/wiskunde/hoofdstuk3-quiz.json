@@ -172,7 +172,7 @@
       "difficulty": 2,
       "topic": "assenstelsel",
       "quiz_group": 1,
-      "render": { "type": "table", "table": { "columns": ["x", "y"], "rows": [[-2, 1], [0, 3], [2, -1], [4, 2]] } },
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Schrijf de coordinaten bij elke rij." }] },
       "parts": [
         {
           "id": "a",

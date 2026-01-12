@@ -1897,7 +1897,7 @@ function renderPart(part, partId, idx) {
                            class="wiskunde-input wiskunde-coord-input"
                            data-part="${idx}"
                            data-row="${rowIdx}"
-                           placeholder="(${row[0]},${row[1]})"
+                           placeholder="..."
                            autocomplete="off">
                   </td>
                 </tr>
