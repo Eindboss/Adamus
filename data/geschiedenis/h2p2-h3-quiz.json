@@ -118,13 +118,14 @@
       "difficulty": 4,
       "q": "Je bent 18, man, woont in Athene (450 v.C.). Je vader is Atheens burger, je moeder komt uit Sparta. Welke conclusie is het best onderbouwd over jouw politieke rechten?",
       "a": [
-        "Je mag stemmen: vaderschap bepaalt alles.",
-        "Je mag niet stemmen: voor burgerrecht zijn (in deze periode) beide ouders Atheens vereist.",
-        "Je mag stemmen als je rijk genoeg bent.",
-        "Je mag stemmen, maar alleen in oorlogstijd."
+        "Je mag stemmen: vaderschap telt.",
+        "Je mag niet stemmen: ouders Atheens.",
+        "Je mag stemmen als hopliet.",
+        "Je mag stemmen vanaf dertig."
       ],
       "c": 1,
-      "e": "In deze periode gold (na hervormingen) dat burgerrecht aan strengere afstammingseisen gebonden kon zijn; de kern blijft: niet iedereen had politieke rechten."
+      "e": "In deze periode kon burgerrecht afhangen van afstamming; zonder twee Atheense ouders mis je politieke rechten.",
+      "type": "mc"
     },
     {
       "id": "g-005",
@@ -133,10 +134,10 @@
       "difficulty": 3,
       "q": "Waarom noemen historici de Atheense democratie 'beperkt'?",
       "a": [
-        "Omdat alleen rijke mensen mochten stemmen",
-        "Omdat vrouwen, slaven en vreemdelingen geen burgerrechten hadden",
-        "Omdat Athene een koninkrijk was",
-        "Omdat er geen wetten bestonden"
+        "Omdat alleen rijke burgers mochten stemmen in de praktijk.",
+        "Omdat vrouwen, slaven en vreemdelingen waren uitgesloten.",
+        "Omdat Athene toen onder een koning werd bestuurd.",
+        "Omdat er geen wetten en rechtbanken zouden zijn."
       ],
       "c": 1,
       "e": "De democratie gold alleen voor mannelijke burgers; grote groepen waren uitgesloten."
@@ -147,13 +148,14 @@
       "difficulty": 3,
       "q": "Welke uitspraak is het meest historisch verantwoord over mythen bij de Grieken?",
       "a": [
-        "Mythen waren alleen bedoeld als entertainment zonder betekenis.",
-        "Mythen gaven verklaringen (en normen) en waren een manier om de wereld te begrijpen.",
-        "Mythen zijn altijd letterlijk waargebeurd.",
-        "Mythen werden pas na de komst van de Romeinen bedacht."
+        "Mythen waren alleen vermaak zonder betekenis.",
+        "Mythen gaven verklaringen en normen voor het leven.",
+        "Mythen zijn altijd letterlijk waar gebeurd.",
+        "Mythen ontstonden pas na de Romeinen."
       ],
       "c": 1,
-      "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als ‘wereldbeeld’ vóór wetenschappelijke verklaringen dominant worden."
+      "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als ‘wereldbeeld’ vóór wetenschappelijke verklaringen dominant worden.",
+      "type": "mc"
     },
     {
       "id": "g-007",
@@ -188,10 +190,10 @@
       "difficulty": 4,
       "q": "Waarom konden mythen en beginnende wetenschap naast elkaar bestaan in Griekenland?",
       "a": [
-        "Omdat iedereen meteen stopte met geloven in goden",
-        "Omdat mythen traditie en betekenis boden, terwijl sommige denkers ook logisch gingen verklaren",
-        "Omdat wetenschap alleen in Egypte bestond",
-        "Omdat mythen wetenschappelijk bewezen waren"
+        "Omdat iedereen stopte met geloven in goden.",
+        "Omdat traditie bleef, naast logisch verklaren.",
+        "Omdat wetenschap alleen in Egypte bestond.",
+        "Omdat mythen wetenschappelijk bewezen waren."
       ],
       "c": 1,
       "e": "Mythen bleven belangrijk als wereldbeeld, terwijl sommige Grieken ook met observatie en logica gingen verklaren."
@@ -210,7 +212,8 @@
         "486 v.C."
       ],
       "c": 0,
-      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie."
+      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie.",
+      "type": "mc"
     },
     {
       "id": "g-010",
@@ -255,13 +258,14 @@
       "difficulty": 3,
       "q": "Wat is het scherpste (meest inhoudelijke) verschil tussen Athene en Sparta in hun inrichting?",
       "a": [
-        "Athene had bergen, Sparta zee.",
-        "Athene benadrukte burgerparticipatie/cultuur, Sparta militaire discipline en opvoeding.",
-        "Sparta was democratisch, Athene een koninkrijk.",
-        "Athene had geen slaven, Sparta wel."
+        "Athene draaide om handel en zeevaart, Sparta om landbouw.",
+        "Athene kende burgerparticipatie, Sparta militaire opvoeding.",
+        "Sparta was democratie en Athene een koninkrijk.",
+        "Athene had geen slaven en Sparta wel."
       ],
       "c": 1,
-      "e": "Athene: politiek debat, handel/cultuur. Sparta: krijgersstaat met strenge opvoeding (agoge)."
+      "e": "Athene: politiek debat, handel/cultuur. Sparta: krijgersstaat met strenge opvoeding (agoge).",
+      "type": "mc"
     },
     {
       "id": "g-012",
@@ -316,13 +320,14 @@
       "difficulty": 3,
       "q": "Waarom mummificeerden Egyptenaren hun doden (beste verklaring)?",
       "a": [
-        "Om het klimaat te verbeteren.",
-        "Omdat het lichaam volgens hun geloof nodig bleef voor het hiernamaals (ka/ba).",
-        "Omdat ze geen graven konden bouwen.",
-        "Om belasting te vermijden."
+        "Om het klimaat gunstig te stemmen bij de goden.",
+        "Omdat het lichaam nodig was voor het hiernamaals.",
+        "Omdat ze geen graven konden bouwen in steen.",
+        "Om belasting en arbeid te vermijden voor families."
       ],
       "c": 1,
-      "e": "Religieus wereldbeeld: het lichaam moest bewaard blijven voor voortbestaan na de dood."
+      "e": "Religieus wereldbeeld: het lichaam moest bewaard blijven voor voortbestaan na de dood.",
+      "type": "mc"
     },
     {
       "id": "g-014",
@@ -371,13 +376,14 @@
       "difficulty": 3,
       "q": "Waarom werden de Olympische Spelen in de oudheid gehouden?",
       "a": [
-        "Om geld te verdienen voor Athene",
-        "Ter ere van Zeus (religieus festival)",
-        "Om de Perzen te imponeren",
-        "Als verplichte legertraining"
+        "Om geld voor de polis.",
+        "Ter ere van Zeus.",
+        "Om de Perzen te imponeren.",
+        "Als legertraining."
       ],
       "c": 1,
-      "e": "Olympia was vooral religieus: offers, eer voor Zeus, en sport als onderdeel van het festival."
+      "e": "Olympia was vooral religieus: offers, eer voor Zeus, en sport als onderdeel van het festival.",
+      "type": "mc"
     },
     {
       "id": "g-017",
@@ -386,10 +392,10 @@
       "difficulty": 4,
       "q": "Waarom was er een heilige wapenstilstand tijdens de Olympische Spelen?",
       "a": [
-        "Om oorlogen definitief te beëindigen",
-        "Om atleten en bezoekers veilig naar Olympia te laten reizen",
-        "Omdat de Grieken geen legers hadden",
-        "Omdat sport belangrijker was dan religie"
+        "Om oorlogen voorgoed te stoppen.",
+        "Zodat bezoekers veilig konden reizen.",
+        "Omdat er geen legers bestonden.",
+        "Omdat sport belangrijker was dan goden."
       ],
       "c": 1,
       "e": "De wapenstilstand moest veilige deelname aan het religieuze sportfestival mogelijk maken."
@@ -400,13 +406,14 @@
       "difficulty": 3,
       "q": "Waar stichtten Grieken (meestal) géén kolonies, en waarom is dat logisch?",
       "a": [
-        "Zuid-Italië en Sicilië, omdat er geen landbouwgrond was",
-        "Kust van Klein-Azië, omdat het te koud was",
-        "Mesopotamië (Irak), omdat het ver landinwaarts lag en al door grote rijken werd beheerst",
-        "Noord-Afrika, omdat er geen havens waren"
+        "Zuid-Itali? en Sicili?, want daar was geen landbouwgrond.",
+        "Kust van Klein-Azi?, want het was te koud.",
+        "Mesopotami?, want ver landinwaarts en sterke rijken.",
+        "Noord-Afrika, want er waren geen havens."
       ],
       "c": 2,
-      "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotamië was moeilijk bereikbaar én politiek bezet door sterke rijken."
+      "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotamië was moeilijk bereikbaar én politiek bezet door sterke rijken.",
+      "type": "mc"
     },
     {
       "id": "g-019",
@@ -437,13 +444,14 @@
       "difficulty": 4,
       "q": "Welke uitspraak over Egyptische ambtenaren/schrijvers is het best onderbouwd?",
       "a": [
-        "Ambtenaren waren meestal analfabeet; mondeling bestuur was voldoende.",
-        "Ambtenaren hielden administratie bij (voorraad, belasting, bevelen) en waren cruciaal voor de staat.",
-        "Alleen de farao mocht schrijven; daarom waren er geen ambtenaren.",
+        "Ambtenaren waren meestal analfabeet.",
+        "Ze hielden administratie bij voor de staat.",
+        "Alleen de farao schreef; er waren geen ambtenaren.",
         "Ambtenaren waren altijd slaven."
       ],
       "c": 1,
-      "e": "Een complexe staat heeft registratie nodig: graan, arbeid, belasting, handel. Schriftgeleerden vormen de ruggengraat."
+      "e": "Een complexe staat heeft registratie nodig: graan, arbeid, belasting, handel. Schriftgeleerden vormen de ruggengraat.",
+      "type": "mc"
     },
     {
       "id": "g-021",
@@ -499,10 +507,10 @@
       "difficulty": 4,
       "q": "Wat wordt bedoeld met 'hellenisme'?",
       "a": [
-        "De overheersing van Griekenland door Rome",
-        "De verspreiding en vermenging van Griekse en oosterse culturen",
-        "De ondergang van de Griekse cultuur",
-        "De Griekse godsdienst"
+        "Griekenland onder Romeinse heerschappij.",
+        "Vermenging van Griekse en oosterse cultuur.",
+        "De ondergang van de Griekse cultuur.",
+        "Alleen de Griekse godsdienst."
       ],
       "c": 1,
       "e": "Door Alexanders veroveringen vermengde de Griekse cultuur zich met oosterse culturen."
@@ -514,10 +522,10 @@
       "difficulty": 3,
       "q": "Waarom bouwden Egyptenaren piramides?",
       "a": [
-        "Als woonhuizen voor de farao",
-        "Als graven én om de macht van de farao te tonen",
-        "Om landbouw te beschermen",
-        "Voor handel met andere volken"
+        "Als woonhuizen voor farao?s.",
+        "Als graven en om macht te tonen.",
+        "Om landbouw te beschermen.",
+        "Voor handel met andere volken."
       ],
       "c": 1,
       "e": "Piramides waren religieuze graven en symbolen van macht en organisatie."
@@ -528,13 +536,14 @@
       "difficulty": 3,
       "q": "Welke interpretatie past het best bij het Narmer-palet als bron?",
       "a": [
-        "Het bewijst exact hoe elke veldslag verliep.",
-        "Het is propaganda/ideologie: het toont heerschappij en eenheid (Boven- en Beneden-Egypte).",
-        "Het is een wiskundig schema.",
-        "Het gaat over Griekse mythologie."
+        "Exact verslag van elke veldslag in detail.",
+        "Propaganda over macht en eenheid.",
+        "Wiskundig schema voor kalenderberekening.",
+        "Griekse mythologie over goden."
       ],
       "c": 1,
-      "e": "Het palet toont machtssymboliek: legitimatie van een nieuwe politieke orde."
+      "e": "Het palet toont machtssymboliek: legitimatie van een nieuwe politieke orde.",
+      "type": "mc"
     },
     {
       "id": "g-025",
@@ -596,7 +605,8 @@
         "764 v.C."
       ],
       "c": 0,
-      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum."
+      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum.",
+      "type": "mc"
     },
     {
       "id": "g-028",
@@ -604,13 +614,14 @@
       "difficulty": 4,
       "q": "Waarom is het historisch interessant dat Pytheas mogelijk tot ‘Thule’ kwam?",
       "a": [
-        "Het bewijst dat de Grieken Amerika ontdekten.",
-        "Het laat zien dat Grieken kennis verzamelden via reizen/observatie buiten de Middellandse Zee.",
+        "Het bewijst dat Grieken Amerika bereikten.",
+        "Het toont reizen en kennis buiten de Middellandse Zee.",
         "Het betekent dat Sparta een zee-imperium had.",
-        "Het toont dat alle mythen onwaar zijn."
+        "Het bewijst dat alle mythen onwaar zijn."
       ],
       "c": 1,
-      "e": "Het gaat om nieuwsgierigheid, navigatie en observatie—een brug naar wetenschappelijk denken."
+      "e": "Het gaat om nieuwsgierigheid, navigatie en observatie—een brug naar wetenschappelijk denken.",
+      "type": "mc"
     },
     {
       "id": "g-029",
@@ -709,7 +720,8 @@
         "De Nijl was belangrijk voor transport en handel."
       ],
       "c": 2,
-      "e": "Vruchtbaar gebied = ‘zwarte land’ (kemet); woestijn = ‘rode land’ (deshret)."
+      "e": "Vruchtbaar gebied = ‘zwarte land’ (kemet); woestijn = ‘rode land’ (deshret).",
+      "type": "mc"
     },
     {
       "id": "g-032",
@@ -725,7 +737,8 @@
         "485 v.C."
       ],
       "c": 0,
-      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond."
+      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond.",
+      "type": "mc"
     },
     {
       "id": "g-033",
@@ -733,13 +746,14 @@
       "difficulty": 4,
       "q": "Wat maakte Salamis strategisch zo gunstig voor de Grieken?",
       "a": [
-        "Open zee, zodat grote vlootformaties beter werken.",
-        "Smalle wateren, waardoor de numerieke overmacht van Perzië minder telt.",
-        "Perzen hadden geen schepen.",
-        "Grieken konden cavalerie inzetten."
+        "Open zee, zodat grote formaties beter werken.",
+        "Smalle zeestraten beperkten Perzische overmacht.",
+        "Perzen hadden geen schepen met rammen.",
+        "Grieken konden cavalerie inzetten vanaf het strand."
       ],
       "c": 1,
-      "e": "Smalle zeestraat = manoeuvreerruimte beperkt → tactisch voordeel voor kleinere/behendigere vloot."
+      "e": "Smalle zeestraat = manoeuvreerruimte beperkt → tactisch voordeel voor kleinere/behendigere vloot.",
+      "type": "mc"
     },
     {
       "id": "g-034",
@@ -748,10 +762,10 @@
       "difficulty": 4,
       "q": "Wat zegt het woord 'barbaren' over de Griekse cultuur?",
       "a": [
-        "Dat Grieken geen contact hadden met andere volken",
-        "Dat Grieken zich cultureel één volk voelden tegenover niet-Grieken",
-        "Dat alle niet-Grieken vijanden waren",
-        "Dat Grieken alleen hun eigen dialect spraken"
+        "Grieken hadden geen contact met andere volken of handel.",
+        "Grieken zagen zich als wij tegenover niet-Grieken.",
+        "Alle niet-Grieken waren altijd vijanden.",
+        "Grieken spraken maar ??n dialect overal."
       ],
       "c": 1,
       "e": "'Barbaren' laat zien dat Grieken een wij-zij-denken hadden op basis van taal en cultuur."
@@ -762,13 +776,14 @@
       "difficulty": 3,
       "q": "Wat is een tirannie in het oude Griekenland (historisch correct)?",
       "a": [
-        "Bestuur door priesters.",
-        "Bestuur door één machthebber die de macht grijpt buiten de traditionele elite om.",
-        "Bestuur door het volk.",
-        "Bestuur door farao’s."
+        "Bestuur door priesters in tempels.",
+        "Bestuur door ??n machthebber buiten de elite.",
+        "Bestuur door het volk via directe stem.",
+        "Bestuur door farao?s met goddelijke macht."
       ],
       "c": 1,
-      "e": "Een tiran greep macht; het woord is niet per se ‘modern moreel’ negatief in de oudheid."
+      "e": "Een tiran greep macht; het woord is niet per se ‘modern moreel’ negatief in de oudheid.",
+      "type": "mc"
     },
     {
       "id": "g-036",
@@ -777,10 +792,10 @@
       "difficulty": 4,
       "q": "Waarom is een vaasafbeelding geen perfecte weergave van de werkelijkheid, maar toch bruikbaar?",
       "a": [
-        "Omdat vazen altijd liegen",
-        "Omdat ze idealiseren, maar wel laten zien wat mensen belangrijk vonden",
-        "Omdat ze alleen door kunstenaars werden gemaakt",
-        "Omdat ze altijd propaganda zijn"
+        "Vazen liegen altijd en zijn waardeloos.",
+        "Ze idealiseren, maar tonen wat belangrijk was.",
+        "Ze zijn alleen door kunstenaars gemaakt.",
+        "Het is altijd propaganda van de elite."
       ],
       "c": 1,
       "e": "Beelden zijn vaak symbolisch, maar geven inzicht in waarden en zelfbeeld."
@@ -877,13 +892,14 @@
       "difficulty": 3,
       "q": "De aanleiding van de Peloponnesische oorlog wordt soms ‘handelsconflict’ genoemd. Wat is dan de diepere oorzaak?",
       "a": [
-        "Een religieuze ruzie over offers.",
-        "Machtsstrijd: wie domineert Griekenland (hegemonie).",
+        "Religieuze ruzie over offers.",
+        "Machtsstrijd om hegemonie.",
         "Een natuurramp in Sparta.",
         "De komst van de Romeinen."
       ],
       "c": 1,
-      "e": "Aanleiding = directe trigger; diepere oorzaak = structurele machtsbalans en angst voor groeiende macht van de ander."
+      "e": "Aanleiding = directe trigger; diepere oorzaak = structurele machtsbalans en angst voor groeiende macht van de ander.",
+      "type": "mc"
     },
     {
       "id": "g-040",
@@ -891,13 +907,14 @@
       "difficulty": 3,
       "q": "Welke sport staat het duidelijkst afgebeeld op een vierspan-vaas (bron 37-achtig)?",
       "a": [
-        "Hardlopen",
+        "Wagenrennen",
         "Boksen",
-        "Wagenrennen (vierspan)",
-        "Speerwerpen"
+        "Speerwerpen",
+        "Hardlopen"
       ],
-      "c": 2,
-      "e": "Vierspan = vierspan-wagenrace, een prestigieuze discipline."
+      "c": 0,
+      "e": "Vierspan = vierspan-wagenrace, een prestigieuze discipline.",
+      "type": "mc"
     },
     {
       "id": "g-041",
@@ -905,13 +922,14 @@
       "difficulty": 4,
       "q": "Wat is een historisch correct verschil tussen de antieke Olympische Spelen en nu?",
       "a": [
-        "Toen deden alle landen mee; nu alleen Grieken.",
-        "Toen waren de Spelen religieus (Zeus) en vooral voor vrije Griekse mannen; nu is het mondiaal en niet religieus georganiseerd.",
-        "Toen waren er alleen wintersporten; nu zomersporten.",
-        "Toen waren vrouwen verplicht; nu verboden."
+        "Religieus festival; deelname vooral vrije Griekse mannen.",
+        "Teamsporten tussen landen waren verplicht voor iedereen.",
+        "Vrouwen moesten verplicht meedoen in elke discipline.",
+        "Wintersporten stonden centraal op sneeuw en ijs."
       ],
-      "c": 1,
-      "e": "Belangrijk: religieuze context + uitsluiting in de oudheid versus inclusiever en mondialer nu."
+      "c": 0,
+      "e": "Belangrijk: religieuze context + uitsluiting in de oudheid versus inclusiever en mondialer nu.",
+      "type": "mc"
     },
     {
       "id": "g-042",
@@ -925,7 +943,8 @@
         "De spelen vinden altijd in Griekenland plaats"
       ],
       "c": 0,
-      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats."
+      "e": "Zowel de klassieke als moderne Spelen worden elke 4 jaar gehouden. Bij de klassieke spelen mochten geen vrouwen meedoen, was het alleen voor Grieken, streden ze om eer (niet geld), en vonden ze altijd in Olympia plaats.",
+      "type": "mc"
     },
     {
       "id": "g-043",
@@ -978,7 +997,8 @@
         "macht van de adel"
       ],
       "c": 1,
-      "e": "demos = volk, kratos = macht/heerschappij."
+      "e": "demos = volk, kratos = macht/heerschappij.",
+      "type": "mc"
     },
     {
       "id": "g-046",
@@ -1064,7 +1084,8 @@
         "2800 v.C."
       ],
       "c": 0,
-      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes."
+      "e": "3100 v.C. is een gangbare datering voor de vereniging van Egypte onder Narmer/Menes.",
+      "type": "mc"
     },
     {
       "id": "g-049",
@@ -1072,13 +1093,14 @@
       "difficulty": 3,
       "q": "Wat is géén kenmerk van een mythe?",
       "a": [
-        "verklaart natuurverschijnselen",
-        "goden/helden spelen een rol",
-        "is gebaseerd op controleerbaar wetenschappelijk bewijs",
-        "wordt (oorspronkelijk) mondeling doorgegeven"
+        "Verklaart natuurverschijnselen.",
+        "Goden of helden spelen een rol.",
+        "Steunt op controleerbaar bewijs.",
+        "Wordt oorspronkelijk mondeling doorgegeven."
       ],
       "c": 2,
-      "e": "Mythen zijn betekenisvolle verklarende verhalen, maar niet gebaseerd op wetenschappelijk bewijs."
+      "e": "Mythen zijn betekenisvolle verklarende verhalen, maar niet gebaseerd op wetenschappelijk bewijs.",
+      "type": "mc"
     },
     {
       "id": "g-050",
@@ -1144,7 +1166,8 @@
         "4000 v.C."
       ],
       "c": 0,
-      "e": "Rond 3000 v.C. werden de eerste hiërogliefen gebruikt in Egypte. Dit was een beeldschrift dat door schrijvers werd gebruikt voor administratie en religieuze teksten."
+      "e": "Rond 3000 v.C. werden de eerste hiërogliefen gebruikt in Egypte. Dit was een beeldschrift dat door schrijvers werd gebruikt voor administratie en religieuze teksten.",
+      "type": "mc"
     },
     {
       "id": "g-052",
@@ -1160,7 +1183,8 @@
         "550-400 v.C."
       ],
       "c": 0,
-      "e": "De Atheense democratie duurde van 508 v.C. (hervormingen van Cleisthenes) tot 338 v.C. (verovering door Macedonië onder Philippus II)."
+      "e": "De Atheense democratie duurde van 508 v.C. (hervormingen van Cleisthenes) tot 338 v.C. (verovering door Macedonië onder Philippus II).",
+      "type": "mc"
     },
     {
       "id": "g-053",
@@ -1176,7 +1200,8 @@
         "485-465 v.C."
       ],
       "c": 0,
-      "e": "De Perzische Oorlogen duurden van 490 tot 479 v.C. Belangrijke veldslagen waren Marathon (490 v.C.), Thermopylae (480 v.C.), Salamis (480 v.C.) en Plataeae (479 v.C.)."
+      "e": "De Perzische Oorlogen duurden van 490 tot 479 v.C. Belangrijke veldslagen waren Marathon (490 v.C.), Thermopylae (480 v.C.), Salamis (480 v.C.) en Plataeae (479 v.C.).",
+      "type": "mc"
     },
     {
       "id": "g-054",
@@ -1192,7 +1217,8 @@
         "435-400 v.C."
       ],
       "c": 0,
-      "e": "De Peloponnesische Oorlog (431-404 v.C.) was een conflict tussen Athene en Sparta om de hegemonie over Griekenland. Sparta won uiteindelijk."
+      "e": "De Peloponnesische Oorlog (431-404 v.C.) was een conflict tussen Athene en Sparta om de hegemonie over Griekenland. Sparta won uiteindelijk.",
+      "type": "mc"
     },
     {
       "id": "g-055",

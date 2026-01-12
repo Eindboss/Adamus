@@ -1,11 +1,12 @@
-import base64
 import json
 import os
-import re
 import time
+from pathlib import Path
+
+from pypdf import PdfReader
+
 import urllib.error
 import urllib.request
-from pathlib import Path
 
 
 PROJECT_REF = "ycmkfqduvziydyfnrczj"
@@ -60,41 +61,10 @@ def sql_query(token, query, retries=5, backoff=1.5):
             raise
 
 
-def call_vision(api_key, image_path):
-    content = base64.b64encode(Path(image_path).read_bytes()).decode("ascii")
-    payload = {
-        "requests": [
-            {
-                "image": {"content": content},
-                "features": [{"type": "TEXT_DETECTION"}],
-            }
-        ]
-    }
-    url = f"https://vision.googleapis.com/v1/images:annotate?key={api_key}"
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            body = resp.read().decode("utf-8")
-            data = json.loads(body)
-    except urllib.error.HTTPError as exc:
-        raise RuntimeError(f"OCR request failed: {exc}") from exc
-    text = ""
-    try:
-        text = data["responses"][0]["fullTextAnnotation"]["text"]
-    except (KeyError, IndexError, TypeError):
-        text = ""
-    return text.strip()
-
-
 def chunk_text(text, max_len=1200, overlap=200):
     if not text:
         return []
-    paragraphs = [p.strip() for p in re.split(r"\n{2,}", text) if p.strip()]
+    paragraphs = [p.strip() for p in text.splitlines() if p.strip()]
     chunks = []
     current = ""
     for p in paragraphs:
@@ -117,62 +87,38 @@ def chunk_text(text, max_len=1200, overlap=200):
     return chunks
 
 
-def select_images(folder):
-    folder_path = Path(folder)
-    files = [
-        p for p in folder_path.iterdir()
-        if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg", ".png"}
-    ]
-    chosen = {}
-    for f in files:
-        name = f.stem
-        base = re.sub(r"\s+1$", "", name)
-        key = base + f.suffix.lower()
-        if key not in chosen:
-            chosen[key] = f
-            continue
-        if " 1" in f.stem and " 1" not in chosen[key].stem:
-            continue
-        if " 1" not in f.stem and " 1" in chosen[key].stem:
-            chosen[key] = f
-    selected = list(chosen.values())
-
-    def sort_key(p):
-        match = re.search(r"IMG_(\d+)", p.stem)
-        if match:
-            return (0, int(match.group(1)), p.name)
-        return (1, p.name)
-
-    return sorted(selected, key=sort_key)
-
-
 def main():
     env_path = os.environ.get("ADAMUS_ENV_PATH")
-    folder = os.environ.get("ADAMUS_INPUT_PATH")
-    if not env_path or not folder:
-        raise SystemExit("Set ADAMUS_ENV_PATH and ADAMUS_INPUT_PATH.")
+    pdf_path = os.environ.get("ADAMUS_PDF_PATH")
+    if not env_path or not pdf_path:
+        raise SystemExit("Set ADAMUS_ENV_PATH and ADAMUS_PDF_PATH.")
 
     env = load_env(env_path)
     token = env.get("SUPABASE_ACCESS_TOKEN")
-    api_key = env.get("GOOGLE_API_KEY")
-    if not token or not api_key:
-        raise SystemExit("SUPABASE_ACCESS_TOKEN or GOOGLE_API_KEY missing.")
+    if not token:
+        raise SystemExit("SUPABASE_ACCESS_TOKEN missing.")
 
-    subject_name = os.environ.get("ADAMUS_SUBJECT", "Biologie")
+    subject_name = os.environ.get("ADAMUS_SUBJECT", "Geschiedenis")
     subject_description = os.environ.get(
         "ADAMUS_SUBJECT_DESCRIPTION",
-        "Hoofdstuk 4: Stevigheid en beweging",
+        "Werkplaats hoofdstuk 2 paragraaf 2 en hoofdstuk 3 paragraaf 1-5",
     )
     chapter = os.environ.get("ADAMUS_CHAPTER")
     paragraph = os.environ.get("ADAMUS_PARAGRAPH")
-    title = os.environ.get("ADAMUS_TITLE", "Biologie hoofdstuk 4 (scans)")
-    source_uri = os.environ.get("ADAMUS_SOURCE_URI", "local://vakken/biologie-h4")
+    title = os.environ.get("ADAMUS_TITLE", "Jaartallen 1B")
+    source_uri = os.environ.get(
+        "ADAMUS_SOURCE_URI",
+        "local://vakken/geschiedenis-jaartallen-1b",
+    )
 
-    images = select_images(folder)
-    if not images:
-        raise SystemExit("No images found.")
+    reader = PdfReader(pdf_path)
+    page_texts = []
+    for page in reader.pages:
+        text = page.extract_text() or ""
+        page_texts.append(text.strip())
 
-    print(f"images: {len(images)}")
+    if not any(page_texts):
+        raise SystemExit("PDF has no extractable text.")
 
     subject_sql = (
         "insert into adamus.subjects (name, description) "
@@ -200,9 +146,9 @@ def main():
             "values ("
             f"'{subject_id}', {chapter_value}, {paragraph_value}, "
             f"'{sql_escape(title)}', "
-            "'image', "
+            "'pdf', "
             f"'{sql_escape(source_uri)}', "
-            f"'{{\"count\": {len(images)}}}'::jsonb"
+            f"'{{\"pages\": {len(page_texts)}}}'::jsonb"
             ") returning id;"
         )
         material_res = sql_query(token, material_sql)
@@ -216,34 +162,21 @@ def main():
         f"where p.material_id = '{material_id}';"
     )
     existing_pages = json.loads(sql_query(token, existing_pages_sql))
-    existing_by_page = {
-        row["page_no"]: row for row in existing_pages
-    }
-    existing_by_uri = {
-        row["image_uri"]: row for row in existing_pages if row["image_uri"]
-    }
+    existing_by_page = {row["page_no"]: row for row in existing_pages}
 
-    for idx, image_path in enumerate(images, start=1):
-        print(f"ocr {idx}/{len(images)}: {image_path.name}")
-        image_uri = f"file://{image_path.as_posix()}"
-        existing = existing_by_page.get(idx) or existing_by_uri.get(image_uri)
+    for idx, text in enumerate(page_texts, start=1):
+        existing = existing_by_page.get(idx)
         if existing and int(existing.get("chunk_count", 0)) > 0:
-            print(f"skip existing page {idx}: {image_path.name}")
             continue
-
-        text = call_vision(api_key, image_path)
-        time.sleep(0.3)
         page_sql = (
             "insert into adamus.material_pages "
             "(material_id, page_no, image_uri, ocr_text, ocr_confidence) "
             "values ("
-            f"'{material_id}', {idx}, '{sql_escape(image_uri)}', "
+            f"'{material_id}', {idx}, '{sql_escape(source_uri)}', "
             f"{sql_literal(text)}, null"
             ") "
             "on conflict (material_id, page_no) do update set "
-            "image_uri = excluded.image_uri, "
-            "ocr_text = excluded.ocr_text, "
-            "ocr_confidence = excluded.ocr_confidence "
+            "ocr_text = excluded.ocr_text "
             "returning id;"
         )
         page_res = sql_query(token, page_sql)
