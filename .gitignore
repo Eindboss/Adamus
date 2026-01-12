@@ -1,6 +1,6 @@
 # Runtime config with secrets (generated at container startup)
 # Keep the placeholder in git, but ignore local dev versions with real keys
-# assets/js/runtime-config.js
+assets/js/runtime-config.js
 
 # Local development
 .env
