@@ -1,2302 +1,810 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2025-12-24T12:00:00",
+  "generated_at": "2026-01-12T00:00:00Z",
   "language": "nl",
-  "level": "1e klas gymnasium",
-  "module": "H4 Getallen in de praktijk (4.1 t/m 4.5)",
-  "count": 75,
+  "module": "H4 Getallen in de praktijk",
+  "count": 40,
   "questions": [
     {
-      "id": "h4-q001",
-      "title": "Volgorde van grootte (decimalen)",
+      "id": "q001",
+      "title": "Volgorde van bewerkingen",
       "difficulty": 1,
-      "topic": "4.1 decimalen",
+      "topic": "rekenen",
       "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Zet de getallen in oplopende volgorde (klein naar groot)."
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Reken uit met de juiste volgorde." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "3 + 4 * 2 =",
+          "answer": { "value": "11", "accept": ["11"] },
+          "explanation": "Eerst 4*2=8, daarna 3+8=11."
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "(12 - 5) * 3 =",
+          "answer": { "value": "21", "accept": ["21"] },
+          "explanation": "Eerst 12-5=7, dan 7*3=21."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q002",
+      "title": "Afronden",
+      "difficulty": 1,
+      "topic": "afronden",
+      "quiz_group": 1,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Rond af zoals gevraagd." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Rond 7,846 af op 1 decimaal.",
+          "answer": { "value": "7,8", "accept": ["7,8", "7.8"] },
+          "explanation": "De tweede decimaal is 4, dus afronden naar 7,8."
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Rond 132,49 af op hele getallen.",
+          "answer": { "value": "132", "accept": ["132"] },
+          "explanation": "0,49 is kleiner dan 0,5."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q003",
+      "title": "Negatieve getallen",
+      "difficulty": 1,
+      "topic": "getallen",
+      "quiz_group": 1,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Bereken met negatieve getallen." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "-6 + 9 =",
+          "answer": { "value": "3", "accept": ["3"] },
+          "explanation": "Je gaat 9 omhoog vanaf -6."
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "-4 - 7 =",
+          "answer": { "value": "-11", "accept": ["-11"] },
+          "explanation": "Je gaat 7 verder omlaag."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q004",
+      "title": "Eenheden omrekenen",
+      "difficulty": 2,
+      "topic": "eenheden",
+      "quiz_group": 1,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Reken om." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "2,4 km = ... m",
+          "answer": { "value": "2400", "accept": ["2400"] },
+          "explanation": "1 km = 1000 m, dus 2,4 km = 2400 m."
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "6500 g = ... kg",
+          "answer": { "value": "6,5", "accept": ["6,5", "6.5"] },
+          "explanation": "1000 g = 1 kg, dus 6500 g = 6,5 kg."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q005",
+      "title": "Breuken omzetten",
+      "difficulty": 2,
+      "topic": "breuken",
+      "quiz_group": 1,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Zet om." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Zet 3/4 om naar een decimaal.",
+          "answer": { "value": "0,75", "accept": ["0,75", "0.75"] },
+          "explanation": "3 gedeeld door 4 is 0,75."
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Zet 0,2 om naar een breuk in eenvoudige vorm.",
+          "answer": { "value": "1/5", "accept": ["1/5"] },
+          "explanation": "0,2 = 2/10 = 1/5."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q006",
+      "title": "Gemiddelde",
+      "difficulty": 2,
+      "topic": "gemiddelde",
+      "quiz_group": 1,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Bereken het gemiddelde." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Gemiddelde van 6, 8, 11 en 9.",
+          "answer": { "value": "8,5", "accept": ["8,5", "8.5"] },
+          "explanation": "(6+8+11+9)/4 = 34/4 = 8,5."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q007",
+      "title": "Verhouding vereenvoudigen",
+      "difficulty": 2,
+      "topic": "verhoudingen",
+      "quiz_group": 1,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Vereenvoudig de verhouding." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "12 : 18 =",
+          "answer": { "value": "2:3", "accept": ["2:3", "2 : 3"] },
+          "explanation": "Deel beide getallen door 6."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q008",
+      "title": "Snelheid",
+      "difficulty": 2,
+      "topic": "snelheid",
+      "quiz_group": 1,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Gebruik v = afstand / tijd." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "120 km in 2 uur. Snelheid?",
+          "answer": { "value": "60", "accept": ["60", "60 km/u"] },
+          "explanation": "120/2 = 60 km/u."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q009",
+      "title": "Procenten basis",
+      "difficulty": 2,
+      "topic": "percentages",
+      "quiz_group": 2,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Bereken de procenten." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "15% van 80 =",
+          "answer": { "value": "12", "accept": ["12"] },
+          "explanation": "10% van 80 is 8, 5% is 4, samen 12."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q010",
+      "title": "Procenten terugrekenen",
+      "difficulty": 3,
+      "topic": "percentages",
+      "quiz_group": 2,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Bereken het geheel." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "24 is 30% van welk getal?",
+          "answer": { "value": "80", "accept": ["80"] },
+          "explanation": "100% = 24 / 0,30 = 80."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q011",
+      "title": "Korting",
+      "difficulty": 2,
+      "topic": "percentages",
+      "quiz_group": 2,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Bereken de prijs na korting." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Jas van 60 euro met 25% korting.",
+          "answer": { "value": "45", "accept": ["45", "45 euro"] },
+          "explanation": "25% van 60 is 15, dus 60-15=45."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q012",
+      "title": "BTW",
+      "difficulty": 3,
+      "topic": "percentages",
+      "quiz_group": 2,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Reken met 21% btw." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Prijs 50 euro excl. btw. Incl. btw?",
+          "answer": { "value": "60,5", "accept": ["60,5", "60.5"] },
+          "explanation": "21% van 50 is 10,5. 50+10,5=60,5."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q013",
+      "title": "Procentuele groei",
+      "difficulty": 3,
+      "topic": "percentages",
+      "quiz_group": 2,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Reken met groeipercentages." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "200 groeit met 8%. Nieuwe waarde?",
+          "answer": { "value": "216", "accept": ["216"] },
+          "explanation": "8% van 200 is 16, dus 216."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q014",
+      "title": "Procentuele daling",
+      "difficulty": 3,
+      "topic": "percentages",
+      "quiz_group": 2,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Reken met daling." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "180 daalt met 12%. Nieuwe waarde?",
+          "answer": { "value": "158,4", "accept": ["158,4", "158.4"] },
+          "explanation": "12% van 180 is 21,6. 180-21,6=158,4."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q015",
+      "title": "Procententabel",
+      "difficulty": 3,
+      "topic": "percentages",
+      "quiz_group": 2,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Vul de tabel aan." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "table_fill",
+          "prompt": "Vul de ontbrekende waarden in.",
+          "table": {
+            "columns": ["percentage", "deel"],
+            "rows": [["10%", 8], ["25%", null], ["50%", null], ["100%", 80]]
           },
-          {
-            "type": "p",
-            "text": "8,003 | 8,013 | 7,989 | 7,99 | 8,01"
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Schrijf de getallen in de juiste volgorde, gescheiden door komma's.",
-          "answer": {
-            "value": "7,989, 7,99, 8,003, 8,01, 8,013",
-            "accept": [
-              "7,989 7,99 8,003 8,01 8,013",
-              "7.989, 7.99, 8.003, 8.01, 8.013"
-            ]
-          }
+          "answer": { "cells": { "r1c1": 20, "r2c1": 40 } },
+          "explanation": "Als 100% = 80, dan 25% = 20 en 50% = 40."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q002",
-      "title": "Komma verschuiven: x 1000",
-      "difficulty": 1,
-      "topic": "4.1 decimalen",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Bij vermenigvuldigen met 1000 schuift de komma 3 plaatsen naar rechts."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken: 0,0837 x 1000",
-          "answer": {
-            "value": "83,7",
-            "accept": [
-              "83.7",
-              "83,70"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q003",
-      "title": "Komma verschuiven: : 100",
-      "difficulty": 1,
-      "topic": "4.1 decimalen",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Bij delen door 100 schuift de komma 2 plaatsen naar links."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken: 3720 : 100",
-          "answer": {
-            "value": "37,2",
-            "accept": [
-              "37.2"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q004",
-      "title": "Vermenigvuldigen met decimalen",
+      "id": "q016",
+      "title": "Verhoudingstabel",
       "difficulty": 2,
-      "topic": "4.1 decimalen",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
+      "topic": "verhoudingen",
+      "quiz_group": 3,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Gebruik de verhouding 5 liter kost 12,50 euro." }] },
       "parts": [
         {
           "id": "a",
           "type": "text",
-          "prompt": "Bereken: 8,23 x 100",
-          "answer": {
-            "value": "823",
-            "accept": [
-              "823,0",
-              "823.0"
-            ]
-          }
+          "prompt": "Wat kost 1 liter?",
+          "answer": { "value": "2,5", "accept": ["2,5", "2.5"] },
+          "explanation": "12,5 / 5 = 2,5."
         },
         {
           "id": "b",
           "type": "text",
-          "prompt": "Bereken: 0,09 x 1000",
-          "answer": {
-            "value": "90",
-            "accept": [
-              "90,0",
-              "90.0"
-            ]
-          }
+          "prompt": "Wat kost 8 liter?",
+          "answer": { "value": "20", "accept": ["20", "20 euro"] },
+          "explanation": "8 * 2,5 = 20."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q005",
-      "title": "Afronden op 1 decimaal",
-      "difficulty": 1,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Kijk naar het cijfer na de plek waarop je afrondt."
-          }
-        ]
-      },
+      "id": "q017",
+      "title": "Schaal",
+      "difficulty": 3,
+      "topic": "schaal",
+      "quiz_group": 3,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Kaart schaal 1 : 25 000." }] },
       "parts": [
         {
           "id": "a",
           "type": "text",
-          "prompt": "Rond 7,8946 af op 1 decimaal.",
-          "answer": {
-            "value": "7,9",
-            "accept": [
-              "7.9"
-            ]
-          }
+          "prompt": "4 cm op de kaart is hoeveel meter in het echt?",
+          "answer": { "value": "1000", "accept": ["1000", "1000 m"] },
+          "explanation": "4 cm * 25 000 = 100 000 cm = 1000 m."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q006",
-      "title": "Afronden op 2 decimalen",
-      "difficulty": 1,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
+      "id": "q018",
+      "title": "Schaal terugrekenen",
+      "difficulty": 3,
+      "topic": "schaal",
+      "quiz_group": 3,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Op een kaart is 3 cm gelijk aan 600 m." }] },
       "parts": [
         {
           "id": "a",
           "type": "text",
-          "prompt": "Rond 12,964 af op 2 decimalen.",
-          "answer": {
-            "value": "12,96",
-            "accept": [
-              "12.96"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Rond 12,965 af op 2 decimalen.",
-          "answer": {
-            "value": "12,97",
-            "accept": [
-              "12.97"
-            ]
-          }
+          "prompt": "Wat is de schaal?",
+          "answer": { "value": "1:20000", "accept": ["1:20000", "1 : 20000"] },
+          "explanation": "600 m = 60 000 cm. 3 cm op kaart, dus schaal 1:20 000."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q007",
-      "title": "Afronden op gehelen",
-      "difficulty": 1,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Afrondregel: 0-4 omlaag, 5-9 omhoog."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 11,49 af op gehelen.",
-          "answer": {
-            "value": "11",
-            "accept": [
-              "11,0",
-              "11.0"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Rond 11,50 af op gehelen.",
-          "answer": {
-            "value": "12",
-            "accept": [
-              "12,0",
-              "12.0"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q008",
-      "title": "Duizend, miljoen, miljard",
+      "id": "q019",
+      "title": "Verhouding en deel",
       "difficulty": 2,
-      "topic": "4.1 grote getallen",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "1 miljoen = 1 000 000. 1 miljard = 1 000 000 000."
-          }
-        ]
-      },
+      "topic": "verhoudingen",
+      "quiz_group": 3,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "De verhouding meisjes : jongens is 3 : 2." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Er zijn 15 meisjes. Hoeveel jongens?",
+          "answer": { "value": "10", "accept": ["10"] },
+          "explanation": "3 delen = 15, dus 1 deel = 5. Jongens 2 delen = 10."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q020",
+      "title": "Recept opschalen",
+      "difficulty": 3,
+      "topic": "verhoudingen",
+      "quiz_group": 3,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Recept voor 4 personen: 300 g pasta." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel pasta voor 6 personen?",
+          "answer": { "value": "450", "accept": ["450", "450 g"] },
+          "explanation": "Factor 1,5. 300 * 1,5 = 450."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q021",
+      "title": "Kaart afstand",
+      "difficulty": 2,
+      "topic": "schaal",
+      "quiz_group": 3,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Schaal 1 : 50 000." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel cm op de kaart voor 2 km echt?",
+          "answer": { "value": "4", "accept": ["4", "4 cm"] },
+          "explanation": "2 km = 200 000 cm. Deel door 50 000 = 4 cm."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q022",
+      "title": "Evenredig of niet",
+      "difficulty": 2,
+      "topic": "verhoudingen",
+      "quiz_group": 3,
+      "render": { "type": "table", "table": { "columns": ["x", "y"], "rows": [[2, 6], [4, 12], [6, 18], [8, 24]] } },
       "parts": [
         {
           "id": "a",
           "type": "mcq",
-          "prompt": "Wat is 1 miljard?",
-          "options": [
-            "1 000 000 000",
-            "1 000 000",
-            "1 000 000 000 000",
-            "1 000"
-          ],
-          "shuffle_options": false,
-          "answer": {
-            "correct_index": 0
-          }
+          "prompt": "Is dit verband evenredig?",
+          "options": ["ja", "nee"],
+          "answer": { "correct_index": 0 },
+          "explanation": "y/x is steeds 3."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q009",
-      "title": "Rekenmachine: haakjes",
+      "id": "q023",
+      "title": "Machten",
       "difficulty": 2,
-      "topic": "4.2 rekenmachine",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Gebruik haakjes om de juiste volgorde te krijgen."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken: 11,2 - (22,7 + 9,8)",
-          "answer": {
-            "value": "-21,3",
-            "accept": [
-              "-21.3"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q010",
-      "title": "Schatten",
-      "difficulty": 2,
-      "topic": "4.2 schatten",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Maak eerst een schatting door handig af te ronden, bereken daarna exact."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Schat: (7,21 - 2,5) x 3,2 (rond af naar hele getallen)",
-          "answer": {
-            "value": "15",
-            "accept": [
-              "ongeveer 15",
-              "16",
-              "ongeveer 16"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Bereken exact.",
-          "answer": {
-            "value": "15,072",
-            "accept": [
-              "15.072"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q011",
-      "title": "Procenten: deel van een geheel",
-      "difficulty": 2,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "p% van een getal = (p/100) x getal"
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken 17,5% van 84.",
-          "answer": {
-            "value": "14,7",
-            "accept": [
-              "14.7",
-              "14,70"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Een trui kost normaal 69,95 euro. Hoeveel betaal je bij 17,5% korting? Rond af op centen.",
-          "answer": {
-            "value": "57,71",
-            "accept": [
-              "57.71"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q012",
-      "title": "Procenten: welk percentage?",
-      "difficulty": 2,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "percentage = (deel / geheel) x 100%"
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel procent is 24 van 67? Rond af op 1 decimaal.",
-          "answer": {
-            "value": "35,8",
-            "accept": [
-              "35.8",
-              "35,8%",
-              "35.8%"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q013",
-      "title": "Evenredig of omgekeerd evenredig?",
-      "difficulty": 2,
-      "topic": "4.5 evenredig/omgekeerd",
+      "topic": "machten",
       "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "8 pompen vullen een bassin in 3 dagen. Wat gebeurt er met de tijd als je 12 pompen gebruikt?"
-          }
-        ]
-      },
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Bereken de macht." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "2^5 =",
+          "answer": { "value": "32", "accept": ["32"] },
+          "explanation": "2*2*2*2*2 = 32."
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "10^3 =",
+          "answer": { "value": "1000", "accept": ["1000"] },
+          "explanation": "10^3 is 10*10*10."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q024",
+      "title": "Machten vermenigvuldigen",
+      "difficulty": 3,
+      "topic": "machten",
+      "quiz_group": 4,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Gebruik machtsregels." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "2^3 * 2^4 =",
+          "answer": { "value": "2^7", "accept": ["2^7", "128"] },
+          "explanation": "Exponenten optellen: 3+4=7."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q025",
+      "title": "Wortels",
+      "difficulty": 2,
+      "topic": "wortels",
+      "quiz_group": 4,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Bereken de wortel." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wortel uit 81 =",
+          "answer": { "value": "9", "accept": ["9"] },
+          "explanation": "9*9=81."
+        },
+        {
+          "id": "b",
+          "type": "text",
+          "prompt": "Wortel uit 144 =",
+          "answer": { "value": "12", "accept": ["12"] },
+          "explanation": "12*12=144."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q026",
+      "title": "Wetenschappelijke notatie",
+      "difficulty": 3,
+      "topic": "machten",
+      "quiz_group": 4,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Schrijf in wetenschappelijke notatie." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "450 000 =",
+          "answer": { "value": "4,5 * 10^5", "accept": ["4,5*10^5", "4.5*10^5", "4,5 x 10^5"] },
+          "explanation": "Komma 5 plaatsen naar links geeft 4,5 * 10^5."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q027",
+      "title": "Notatie terug",
+      "difficulty": 3,
+      "topic": "machten",
+      "quiz_group": 4,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Zet om naar een gewoon getal." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "3,2 * 10^4 =",
+          "answer": { "value": "32000", "accept": ["32000"] },
+          "explanation": "Komma 4 plaatsen naar rechts."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q028",
+      "title": "Macht van een macht",
+      "difficulty": 3,
+      "topic": "machten",
+      "quiz_group": 4,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Gebruik de machtsregel." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "(3^2)^3 =",
+          "answer": { "value": "3^6", "accept": ["3^6", "729"] },
+          "explanation": "Exponenten vermenigvuldigen: 2*3=6."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q029",
+      "title": "Wortel en kwadraat",
+      "difficulty": 3,
+      "topic": "wortels",
+      "quiz_group": 4,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Controleer." }] },
       "parts": [
         {
           "id": "a",
           "type": "mcq",
-          "prompt": "Welk verband is dit?",
-          "options": [
-            "omgekeerd evenredig",
-            "evenredig",
-            "geen van beide"
-          ],
-          "shuffle_options": false,
-          "answer": {
-            "correct_index": 0
-          }
+          "prompt": "Welke uitkomst klopt?",
+          "options": ["sqrt(49)=7", "sqrt(49)=14", "sqrt(49)=-7", "sqrt(49)=0"],
+          "answer": { "correct_index": 0 },
+          "explanation": "De hoofdwortel is positief: 7."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q030",
+      "title": "Schattend afronden",
+      "difficulty": 2,
+      "topic": "afronden",
+      "quiz_group": 4,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Schat het product." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Schat 19,8 * 51,2 (rond af op hele getallen).",
+          "answer": { "value": "1000", "accept": ["1000"] },
+          "explanation": "Rond af: 20 * 50 = 1000."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q031",
+      "title": "Rekentijd",
+      "difficulty": 2,
+      "topic": "tijd",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Reken met tijd." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Van 09:35 tot 11:10 duurt ... minuten.",
+          "answer": { "value": "95", "accept": ["95"] },
+          "explanation": "1 uur 35 minuten = 95 minuten."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q032",
+      "title": "Gemiddelde snelheid",
+      "difficulty": 3,
+      "topic": "snelheid",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Bereken de gemiddelde snelheid." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "150 km in 2,5 uur.",
+          "answer": { "value": "60", "accept": ["60", "60 km/u"] },
+          "explanation": "150 / 2,5 = 60."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q033",
+      "title": "Gegevens uit tabel",
+      "difficulty": 2,
+      "topic": "tabellen",
+      "quiz_group": 5,
+      "render": { "type": "table", "table": { "columns": ["dag", "opbrengst"], "rows": [["ma", 120], ["di", 150], ["wo", 90], ["do", 140]] } },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Wat is de hoogste opbrengst?",
+          "answer": { "value": "150", "accept": ["150"] },
+          "explanation": "Dinsdag is het maximum."
         },
         {
           "id": "b",
           "type": "text",
-          "prompt": "Hoeveel dagen duurt het met 12 pompen?",
-          "answer": {
-            "value": "2",
-            "accept": [
-              "2 dagen",
-              "2,0"
-            ]
-          }
+          "prompt": "Wat is het gemiddelde?",
+          "answer": { "value": "125", "accept": ["125"] },
+          "explanation": "(120+150+90+140)/4 = 500/4 = 125."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q014",
-      "title": "De schoolkantine",
+      "id": "q034",
+      "title": "Proefwerk cijfers",
       "difficulty": 3,
-      "topic": "4.4 + 4.1",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "De kantine verkoopt limonade in bekers van 0,25 liter."
-          },
-          {
-            "type": "p",
-            "text": "Een krat bevat 24 flessen van 1,5 liter."
-          }
-        ]
-      },
+      "topic": "gemiddelde",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Cijfers: 6,5 7,0 8,0 5,5 en 7,5." }] },
       "parts": [
         {
           "id": "a",
           "type": "text",
-          "prompt": "Hoeveel liter limonade zit er in een krat?",
-          "answer": {
-            "value": "36",
-            "accept": [
-              "36,0",
-              "36 liter"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Hoeveel bekers van 0,25 liter kun je hiermee vullen?",
-          "answer": {
-            "value": "144",
-            "accept": [
-              "144 bekers",
-              "144,0"
-            ]
-          }
+          "prompt": "Wat is het gemiddelde cijfer?",
+          "answer": { "value": "6,9", "accept": ["6,9", "6.9"] },
+          "explanation": "Som 34,5 gedeeld door 5 = 6,9."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q015",
-      "title": "Evenredige verhoudingstabel",
-      "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "table",
-        "table": {
-          "columns": [
-            "gewicht (kg)",
-            "prijs (euro)"
-          ],
-          "rows": [
-            [
-              "4",
-              "12"
-            ],
-            [
-              "5",
-              "?"
-            ],
-            [
-              "?",
-              "24"
-            ],
-            [
-              "1",
-              "3"
-            ]
-          ]
-        }
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Wat is de prijs bij 5 kg?",
-          "answer": {
-            "value": "15",
-            "accept": [
-              "15,00",
-              "15.00"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Hoeveel kg hoort bij 24 euro?",
-          "answer": {
-            "value": "8",
-            "accept": [
-              "8,0",
-              "8 kg"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q016",
-      "title": "Afronden: geldbedragen",
-      "difficulty": 2,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Eurobedragen rond je af op 2 decimalen (centen)."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Je rekent 12,995 euro af. Op hoeveel cent rond je dit af?",
-          "answer": {
-            "value": "13,00",
-            "accept": [
-              "13.00",
-              "13"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q017",
-      "title": "Rekenmachine: deelstreep",
-      "difficulty": 2,
-      "topic": "4.2 rekenmachine",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Een deelstreep is hetzelfde als haakjes: teller / noemer."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken: 216 / (9 x 3)",
-          "answer": {
-            "value": "8",
-            "accept": [
-              "8,0",
-              "8.0"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q018",
-      "title": "Procent: groei",
+      "id": "q035",
+      "title": "Korte groei",
       "difficulty": 3,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Een abonnement kost 12 euro per maand. Volgend jaar stijgt de prijs met 8%."
-          }
-        ]
-      },
+      "topic": "percentages",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Een bedrag stijgt twee keer." }] },
       "parts": [
         {
           "id": "a",
           "type": "text",
-          "prompt": "Wat wordt de nieuwe maandprijs? Rond af op centen.",
-          "answer": {
-            "value": "12,96",
-            "accept": [
-              "12.96"
-            ]
-          }
+          "prompt": "100 euro stijgt met 10% en daarna nog eens 5%. Nieuwe waarde?",
+          "answer": { "value": "115,5", "accept": ["115,5", "115.5"] },
+          "explanation": "100*1,10=110, daarna 110*1,05=115,5."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q019",
-      "title": "Procent: terugrekenen",
-      "difficulty": 4,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Na korting betaal je een percentage van de originele prijs. Deel door dat percentage als decimaal."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Na 20% korting betaal je 56 euro. Wat was de originele prijs?",
-          "answer": {
-            "value": "70",
-            "accept": [
-              "70,00",
-              "70.00"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q020",
-      "title": "Evenredig: papier en gewicht",
+      "id": "q036",
+      "title": "Omrekenen m2",
       "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
+      "topic": "eenheden",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Reken om." }] },
       "parts": [
         {
           "id": "a",
           "type": "text",
-          "prompt": "250 vellen papier wegen 10 gram. Hoeveel gram wegen 800 vellen?",
-          "answer": {
-            "value": "32",
-            "accept": [
-              "32 g",
-              "32,0"
-            ]
-          }
+          "prompt": "3,2 m2 = ... cm2",
+          "answer": { "value": "32000", "accept": ["32000"] },
+          "explanation": "1 m2 = 10 000 cm2, dus 3,2 m2 = 32 000 cm2."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q021",
-      "title": "Evenredig: liften en tijd",
+      "id": "q037",
+      "title": "Wisselkoers",
       "difficulty": 3,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Een lift doet er 12 minuten over om 8 mensen naar boven te brengen (meerdere ritten). Nu zijn er maar 2 mensen."
-          }
-        ]
-      },
+      "topic": "toepassing",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "1 euro = 1,08 dollar." }] },
+      "parts": [
+        {
+          "id": "a",
+          "type": "text",
+          "prompt": "Hoeveel dollar is 250 euro?",
+          "answer": { "value": "270", "accept": ["270"] },
+          "explanation": "250 * 1,08 = 270."
+        }
+      ],
+      "answer_key": {}
+    },
+    {
+      "id": "q038",
+      "title": "Procentpunt verschil",
+      "difficulty": 3,
+      "topic": "percentages",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Vergelijk percentages." }] },
       "parts": [
         {
           "id": "a",
           "type": "mcq",
-          "prompt": "Welk verband is dit (minder mensen = minder ritten)?",
-          "options": [
-            "evenredig",
-            "omgekeerd evenredig",
-            "geen van beide"
-          ],
-          "shuffle_options": false,
-          "answer": {
-            "correct_index": 0
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Hoe lang duurt het voor 2 mensen?",
-          "answer": {
-            "value": "3",
-            "accept": [
-              "3 min",
-              "3 minuten"
-            ]
-          }
+          "prompt": "Van 8% naar 11% is een toename van:",
+          "options": ["3 procentpunten", "3%", "11%", "8 procentpunten"],
+          "answer": { "correct_index": 0 },
+          "explanation": "Procentpunten = verschil in percentage: 11-8=3."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q022",
-      "title": "Afronden: op drie decimalen",
-      "difficulty": 2,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 3,78649 af op 3 decimalen.",
-          "answer": {
-            "value": "3,786",
-            "accept": [
-              "3.786"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q023",
-      "title": "Afronden: op honderdtallen",
-      "difficulty": 2,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 67462 af op honderdtallen.",
-          "answer": {
-            "value": "67500",
-            "accept": [
-              "67 500"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q024",
-      "title": "Afronden: op duizendtallen",
-      "difficulty": 2,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 67462 af op duizendtallen.",
-          "answer": {
-            "value": "67000",
-            "accept": [
-              "67 000"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q025",
-      "title": "Vermenigvuldigen: 0,1 x 100000",
+      "id": "q039",
+      "title": "Getal in woorden",
       "difficulty": 1,
-      "topic": "4.1 decimalen",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
+      "topic": "getallen",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Schrijf in cijfers." }] },
       "parts": [
         {
           "id": "a",
           "type": "text",
-          "prompt": "Bereken: 0,1 x 100000",
-          "answer": {
-            "value": "10000",
-            "accept": [
-              "10 000"
-            ]
-          }
+          "prompt": "twee en drie tienden =",
+          "answer": { "value": "2,3", "accept": ["2,3", "2.3"] },
+          "explanation": "Twee en drie tienden is 2,3."
         }
-      ]
+      ],
+      "answer_key": {}
     },
     {
-      "id": "h4-q026",
-      "title": "Rekenmachine: gemengde bewerking",
-      "difficulty": 3,
-      "topic": "4.2 rekenmachine",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Let op de volgorde van bewerkingen en het minteken."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken: 75 - (21 - 7) x -3 + 315 / 21",
-          "answer": {
-            "value": "132",
-            "accept": [
-              "132,0",
-              "132.0"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q027",
-      "title": "Schatting: 698 x 19,6",
+      "id": "q040",
+      "title": "Controle berekening",
       "difficulty": 2,
-      "topic": "4.2 schatten",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Rond handig af: 700 x 20."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Schat: 698 x 19,6",
-          "answer": {
-            "value": "14000",
-            "accept": [
-              "14 000"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Bereken exact.",
-          "answer": {
-            "value": "13680,8",
-            "accept": [
-              "13680.8"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q028",
-      "title": "Procent: deel berekenen",
-      "difficulty": 2,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken 22,5% van 124,95. Rond af op centen.",
-          "answer": {
-            "value": "28,11",
-            "accept": [
-              "28.11"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q029",
-      "title": "Procent: welk deel?",
-      "difficulty": 3,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Een marathontraining duurt 90 minuten. Je hebt 42,6% gedaan. Hoeveel minuten is dat? Rond af op gehelen.",
-          "answer": {
-            "value": "38",
-            "accept": [
-              "38 min",
-              "38 minuten"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q030",
-      "title": "Procent: terugrekenen na korting",
-      "difficulty": 3,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Na 17,5% korting betaal je 82,5% van de originele prijs."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Je betaalt 57,71 euro na 17,5% korting. Wat was de oorspronkelijke prijs? Rond af op centen.",
-          "answer": {
-            "value": "69,95",
-            "accept": [
-              "69.95"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q031",
-      "title": "Evenredig: koken en tijd",
-      "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Een pan rijst kookt in 5 minuten. Je zet het vuur zachter zodat alles 20% langzamer gaat."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoe lang duurt het dan?",
-          "answer": {
-            "value": "6",
-            "accept": [
-              "6 min",
-              "6 minuten"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q032",
-      "title": "Omgekeerd evenredig: straatmakers",
-      "difficulty": 3,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "12 stratenmakers leggen straatstenen in 6 dagen. Hoeveel dagen met 36 stratenmakers?"
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Aantal dagen:",
-          "answer": {
-            "value": "2",
-            "accept": [
-              "2 dagen",
-              "2,0"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q033",
-      "title": "Evenredig: prijs per kilo",
-      "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "table",
-        "table": {
-          "columns": [
-            "kg",
-            "euro"
-          ],
-          "rows": [
-            [
-              "1",
-              "3"
-            ],
-            [
-              "4",
-              "12"
-            ],
-            [
-              "5",
-              "?"
-            ]
-          ]
-        }
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Wat kost 5 kg?",
-          "answer": {
-            "value": "15",
-            "accept": [
-              "15,00",
-              "15.00"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q034",
-      "title": "Omgekeerd evenredig: stukken verdelen",
-      "difficulty": 2,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Totale oppervlakte is constant. Meer stukken = kleiner per stuk."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Een schoolplein van 480 m2 wordt verdeeld in 6 gelijke stukken. Hoeveel m2 per stuk?",
-          "answer": {
-            "value": "80",
-            "accept": [
-              "80 m2"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "En bij 12 gelijke stukken?",
-          "answer": {
-            "value": "40",
-            "accept": [
-              "40 m2"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q035",
-      "title": "Procent: afval in Nederland",
-      "difficulty": 3,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "In 2017 werd er 2920 miljoen kg afval gestort. Nederland had 17,2 miljoen inwoners."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel kg afval is dat per persoon? Rond af op gehelen.",
-          "answer": {
-            "value": "170",
-            "accept": [
-              "170 kg"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q036",
-      "title": "Procent: 79,7% van 207",
-      "difficulty": 2,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel is 79,7% van 207? Rond af op 1 decimaal.",
-          "answer": {
-            "value": "165,0",
-            "accept": [
-              "165",
-              "165.0"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q037",
-      "title": "Afronden: diagnose-toets stijl",
-      "difficulty": 2,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 295,4497 af op 1 decimaal.",
-          "answer": {
-            "value": "295,4",
-            "accept": [
-              "295.4"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Rond 295,4497 af op 2 decimalen.",
-          "answer": {
-            "value": "295,45",
-            "accept": [
-              "295.45"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q038",
-      "title": "Evenredig: snijverlies",
-      "difficulty": 3,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Janelle wil 15 m2 laminaat leggen. Door snijverlies heeft ze 10% extra nodig."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel m2 laminaat moet ze kopen?",
-          "answer": {
-            "value": "16,5",
-            "accept": [
-              "16.5",
-              "16,50"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q039",
-      "title": "Omgekeerd evenredig: bussen huren",
-      "difficulty": 3,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Kosten per persoon = totale kosten / aantal personen."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "8 personen huren een bus en betalen 8 euro per persoon. Hoeveel betalen ze per persoon als er 6 personen gaan? Rond af op centen.",
-          "answer": {
-            "value": "10,67",
-            "accept": [
-              "10.67"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q040",
-      "title": "Rekenmachine: breuk als deling",
-      "difficulty": 2,
-      "topic": "4.2 rekenmachine",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken: 52 / 72. Geef je antwoord op 2 decimalen.",
-          "answer": {
-            "value": "0,72",
-            "accept": [
-              "0.72"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q041",
-      "title": "Procent: sportclub",
-      "difficulty": 4,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Atletiekvereniging MoveOn heeft 357 leden. Daarvan zitten 192 in de jeugdafdeling. Van de jeugdleden doen er 77 aan hardlopen."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel procent van alle leden is jeugdlid? Rond af op 1 decimaal.",
-          "answer": {
-            "value": "53,8",
-            "accept": [
-              "53.8",
-              "53,8%",
-              "53.8%"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Hoeveel procent van de jeugdleden doet aan hardlopen? Rond af op gehelen.",
-          "answer": {
-            "value": "40",
-            "accept": [
-              "40%"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q042",
-      "title": "Evenredig: snelheid en afstand",
-      "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
+      "topic": "rekenen",
+      "quiz_group": 5,
+      "render": { "type": "text", "blocks": [{ "type": "p", "text": "Controleer de uitkomst." }] },
       "parts": [
         {
           "id": "a",
           "type": "mcq",
-          "prompt": "Bij constante snelheid: afstand en tijd zijn...",
-          "options": [
-            "evenredig",
-            "omgekeerd evenredig",
-            "geen van beide"
-          ],
-          "shuffle_options": false,
-          "answer": {
-            "correct_index": 0
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Je loopt 3 km in 20 min. Hoe ver in 50 min (zelfde tempo)?",
-          "answer": {
-            "value": "7,5",
-            "accept": [
-              "7.5",
-              "7,50",
-              "7,5 km"
-            ]
-          }
+          "prompt": "Welke schatting past bij 48 * 19?",
+          "options": ["900", "1000", "1100", "1300"],
+          "answer": { "correct_index": 1 },
+          "explanation": "Rond af: 50*20=1000."
         }
-      ]
-    },
-    {
-      "id": "h4-q043",
-      "title": "Omgekeerd evenredig: baggervaartuigen",
-      "difficulty": 3,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "6 baggervaartuigen doen een klus in 12 maanden. Hoeveel maanden met 2 baggervaartuigen?",
-          "answer": {
-            "value": "36",
-            "accept": [
-              "36 maanden"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q044",
-      "title": "Evenredig: boom groeit",
-      "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Een boom groeit elk jaar 30 cm. In 2016 was de boom 3,60 m hoog."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoe hoog is de boom in 2020?",
-          "answer": {
-            "value": "4,80",
-            "accept": [
-              "4.8",
-              "4,8 m",
-              "480 cm"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q045",
-      "title": "Omgekeerd evenredig: kachel en gas",
-      "difficulty": 3,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Een gasfles is genoeg voor 12 dagen als de kachel 3 uur per dag brandt."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel dagen bij 2 uur per dag?",
-          "answer": {
-            "value": "18",
-            "accept": [
-              "18 dagen"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q046",
-      "title": "Afronden: op centen",
-      "difficulty": 1,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 8,005 euro af op centen.",
-          "answer": {
-            "value": "8,01",
-            "accept": [
-              "8.01"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q047",
-      "title": "Afronden: randgeval",
-      "difficulty": 2,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 7,085 af op 2 decimalen.",
-          "answer": {
-            "value": "7,09",
-            "accept": [
-              "7.09"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q048",
-      "title": "Procent: 8,7% van 56",
-      "difficulty": 2,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken 8,7% van 56. Rond af op 1 decimaal.",
-          "answer": {
-            "value": "4,9",
-            "accept": [
-              "4.9"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q049",
-      "title": "Procent: 6,1% van 33,9",
-      "difficulty": 3,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken 6,1% van 33,9. Rond af op 2 decimalen.",
-          "answer": {
-            "value": "2,07",
-            "accept": [
-              "2.07"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q050",
-      "title": "Evenredig: recept verdubbelen",
-      "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "In een recept zit 2,5 dl melk. Je maakt dubbel."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel dl melk heb je nodig?",
-          "answer": {
-            "value": "5",
-            "accept": [
-              "5,0",
-              "5 dl"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q051",
-      "title": "Omgekeerd evenredig: schoonmakers",
-      "difficulty": 3,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "12 schoonmakers doen een klus in 18 uur. Hoe lang doen 3 schoonmakers erover?",
-          "answer": {
-            "value": "72",
-            "accept": [
-              "72 uur"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q052",
-      "title": "Evenredig: kronen en euro",
-      "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Voor 50 euro krijg je 375 Deense kronen."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel kronen voor 80 euro?",
-          "answer": {
-            "value": "600",
-            "accept": [
-              "600,0",
-              "600 kronen"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q053",
-      "title": "Omgekeerd evenredig: oud papier",
-      "difficulty": 3,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Voor het ophalen van oud papier hebben 8 mensen samen 12 uur nodig. Hoeveel uur met 2 mensen?",
-          "answer": {
-            "value": "48",
-            "accept": [
-              "48 uur"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q054",
-      "title": "Procent: korting",
-      "difficulty": 2,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Een boek kost 18 euro. Je krijgt 15% korting. Wat betaal je?",
-          "answer": {
-            "value": "15,30",
-            "accept": [
-              "15.30"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q055",
-      "title": "Procent: van betalen naar korting",
-      "difficulty": 4,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Je betaalt 75 euro terwijl de oude prijs 100 euro was. Hoeveel procent korting kreeg je?",
-          "answer": {
-            "value": "25",
-            "accept": [
-              "25%"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q056",
-      "title": "Decimalen vergelijken",
-      "difficulty": 2,
-      "topic": "4.1 decimalen",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "mcq",
-          "prompt": "Welke is groter: 9,989 of 9,99?",
-          "options": [
-            "9,99",
-            "9,989"
-          ],
-          "shuffle_options": false,
-          "answer": {
-            "correct_index": 0
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q057",
-      "title": "Afronden: miljoenen",
-      "difficulty": 2,
-      "topic": "4.1 grote getallen",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 6493549,5 af op miljoenen.",
-          "answer": {
-            "value": "6000000",
-            "accept": [
-              "6 miljoen",
-              "6 000 000"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q058",
-      "title": "Rekenmachine: negatieve getallen",
-      "difficulty": 2,
-      "topic": "4.2 rekenmachine",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken: -8 - 5 x -7",
-          "answer": {
-            "value": "27",
-            "accept": [
-              "27,0",
-              "27.0"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q059",
-      "title": "Schatting: 29,3 x 21,8",
-      "difficulty": 2,
-      "topic": "4.2 schatten",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Rond af: 30 x 22 = 660."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Schat: 29,3 x 21,8",
-          "answer": {
-            "value": "660",
-            "accept": [
-              "ongeveer 660"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q060",
-      "title": "Evenredig: kaartjes verkopen",
-      "difficulty": 2,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "3 kaartjes kosten 7,50 euro. Wat kosten 8 kaartjes?",
-          "answer": {
-            "value": "20",
-            "accept": [
-              "20,00",
-              "20.0"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q061",
-      "title": "Omgekeerd evenredig: pizza delen",
-      "difficulty": 2,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Een pizza is voor 4 personen."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel van de pizza krijgt 1 persoon als je met 8 personen bent? (als breuk of decimaal)",
-          "answer": {
-            "value": "1/8",
-            "accept": [
-              "0,125",
-              "0.125"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q062",
-      "title": "Procent: samenstelling klas",
-      "difficulty": 3,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "In een klas van 28 leerlingen zijn er 12 meisjes. Hoeveel procent is meisje? Rond af op 1 decimaal.",
-          "answer": {
-            "value": "42,9",
-            "accept": [
-              "42.9",
-              "42,9%",
-              "42.9%"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q063",
-      "title": "Evenredig: schaalkaart",
-      "difficulty": 3,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Op een kaart is 2 cm in het echt 5 km."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel km is 7,5 cm?",
-          "answer": {
-            "value": "18,75",
-            "accept": [
-              "18.75",
-              "18,75 km"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q064",
-      "title": "Rekenmachine: deling met decimalen",
-      "difficulty": 3,
-      "topic": "4.2 rekenmachine",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Bereken: 12,8 / 3,7 (geef antwoord op 2 decimalen).",
-          "answer": {
-            "value": "3,46",
-            "accept": [
-              "3.46"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q065",
-      "title": "Afronden: negatief getal",
-      "difficulty": 2,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Let op bij negatieve getallen: afronden naar dichtstbijzijnde geheel."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond -2,6 af op gehelen.",
-          "answer": {
-            "value": "-3",
-            "accept": []
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q066",
-      "title": "Evenredig: seconden en minuten",
-      "difficulty": 1,
-      "topic": "4.5 evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel seconden zijn 4,5 minuten?",
-          "answer": {
-            "value": "270",
-            "accept": [
-              "270 s"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q067",
-      "title": "Procent: prijsstijging",
-      "difficulty": 3,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Een game kost 40 euro. De prijs stijgt met 12%. Wat is de nieuwe prijs?",
-          "answer": {
-            "value": "44,80",
-            "accept": [
-              "44.80",
-              "44,8"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q068",
-      "title": "Omgekeerd evenredig: pompen",
-      "difficulty": 3,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "8 pompen vullen een bassin in 3 dagen. Hoeveel dagen met 6 pompen?",
-          "answer": {
-            "value": "4",
-            "accept": [
-              "4 dagen"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q069",
-      "title": "Schatting en exact",
-      "difficulty": 3,
-      "topic": "4.2 schatten",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "6,3 x 12,2 - rond af naar 6 x 12 = 72."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Schat: 6,3 x 12,2",
-          "answer": {
-            "value": "72",
-            "accept": [
-              "ongeveer 72"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Bereken exact.",
-          "answer": {
-            "value": "76,86",
-            "accept": [
-              "76.86"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q070",
-      "title": "Evenredig: liters en milliliters",
-      "difficulty": 1,
-      "topic": "4.1 decimalen",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel milliliter is 1,5 liter?",
-          "answer": {
-            "value": "1500",
-            "accept": [
-              "1500 ml"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q071",
-      "title": "Procent: deel van deel",
-      "difficulty": 4,
-      "topic": "4.4 procenten",
-      "quiz_group": 3,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Van een budget gaat 40% naar sport. Van dat sportdeel gaat 25% naar voetbal."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoeveel procent van het totale budget gaat naar voetbal?",
-          "answer": {
-            "value": "10",
-            "accept": [
-              "10%"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q072",
-      "title": "Afronden: op tientallen",
-      "difficulty": 2,
-      "topic": "4.1 afronden",
-      "quiz_group": 1,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Rond 173 af op tientallen.",
-          "answer": {
-            "value": "170",
-            "accept": [
-              "170,0"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q073",
-      "title": "Omgekeerd evenredig: persoon-uren",
-      "difficulty": 4,
-      "topic": "4.5 omgekeerd evenredig",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": [
-          {
-            "type": "p",
-            "text": "Een klus kost 96 uur werk (persoon-uren)."
-          }
-        ]
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "text",
-          "prompt": "Hoe lang met 8 personen?",
-          "answer": {
-            "value": "12",
-            "accept": [
-              "12 uur"
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "En met 6 personen?",
-          "answer": {
-            "value": "16",
-            "accept": [
-              "16 uur"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q074",
-      "title": "Rekenmachine: prioriteit",
-      "difficulty": 3,
-      "topic": "4.2 rekenmachine",
-      "quiz_group": 2,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "mcq",
-          "prompt": "Welke invoer hoort bij 3 x (4 + 5)?",
-          "options": [
-            "3 x (4 + 5)",
-            "3 x 4 + 5",
-            "(3 x 4) + 5",
-            "3 + (4 x 5)"
-          ],
-          "shuffle_options": false,
-          "answer": {
-            "correct_index": 0
-          }
-        }
-      ]
-    },
-    {
-      "id": "h4-q075",
-      "title": "Eindmix: kies type verband",
-      "difficulty": 3,
-      "topic": "4.5 verbanden",
-      "quiz_group": 4,
-      "render": {
-        "type": "text",
-        "blocks": []
-      },
-      "parts": [
-        {
-          "id": "a",
-          "type": "mcq",
-          "prompt": "Als je dezelfde afstand reist: reistijd en snelheid zijn...",
-          "options": [
-            "omgekeerd evenredig",
-            "evenredig",
-            "geen van beide"
-          ],
-          "shuffle_options": false,
-          "answer": {
-            "correct_index": 0
-          }
-        },
-        {
-          "id": "b",
-          "type": "text",
-          "prompt": "Je fietst 24 km/u en doet 30 min over een route. Hoe lang doe je erover bij 16 km/u?",
-          "answer": {
-            "value": "45",
-            "accept": [
-              "45 min",
-              "45 minuten"
-            ]
-          }
-        }
-      ]
+      ],
+      "answer_key": {}
     }
-  ]
+  ],
+  "randomization": {
+    "note": "Vragen zijn standalone ontworpen en kunnen in willekeurige volgorde worden aangeboden.",
+    "shuffle_questions": true,
+    "shuffle_options_default": true
+  },
+  "ui_spec_notes": {
+    "grid": "Gebruik render.type='grid' om een assenstelsel te tonen.",
+    "table_fill": "Gebruik answer.cells met r{row}c{col} voor invulvakken.",
+    "decimals": "Accepteer zowel komma als punt bij decimale antwoorden."
+  }
 }
