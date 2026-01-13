@@ -177,6 +177,8 @@ def main():
     title = os.environ.get("ADAMUS_TITLE", "Biologie hoofdstuk 4 (scans)")
     source_uri = os.environ.get("ADAMUS_SOURCE_URI", "local://vakken/biologie-h4")
     force_pages_raw = os.environ.get("ADAMUS_FORCE_PAGES", "")
+    chunk_max = int(os.environ.get("ADAMUS_CHUNK_MAX", "1200"))
+    chunk_overlap = int(os.environ.get("ADAMUS_CHUNK_OVERLAP", "200"))
     force_pages = {
         int(p.strip())
         for p in force_pages_raw.split(",")
@@ -271,7 +273,7 @@ def main():
         sql_query(token, delete_chunks_sql)
         time.sleep(0.2)
 
-        chunks = chunk_text(text)
+        chunks = chunk_text(text, max_len=chunk_max, overlap=chunk_overlap)
         for c_idx, chunk in enumerate(chunks, start=1):
             chunk_sql = (
                 "insert into adamus.material_chunks "
