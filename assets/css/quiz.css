@@ -2373,8 +2373,8 @@ textarea.open-input {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  max-height: 400px;
-  overflow-y: auto;
+  max-height: none;
+  overflow-y: visible;
 }
 
 .matching-pool-header {

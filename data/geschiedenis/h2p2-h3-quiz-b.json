@@ -160,22 +160,18 @@
     },
     {
       "id": "gB-008",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 2,
-      "difficulty": 3,
-      "instruction": "Antwoord in 2 zinnen.",
-      "prompt": "Leg uit waarom schrijvers in Egypte veel macht hadden.",
-      "keywords": [
-        "lezen",
-        "schrijven",
-        "administratie",
-        "belasting",
-        "overheid",
-        "kennis"
+      "difficulty": 4,
+      "q": "Waarom hadden schrijvers in Egypte veel macht?",
+      "a": [
+        "Ze beheersten lezen en schrijven en regelden administratie en belasting.",
+        "Ze waren de enige militaire leiders.",
+        "Ze verkochten graan op de markt.",
+        "Ze bepaalden het waterpeil van de Nijl."
       ],
-      "min_keywords": 2,
-      "rubric": "Koppelt geletterdheid aan administratie en belasting; daardoor invloed in bestuur.",
-      "example_answer": "Schrijvers konden lezen en schrijven, iets wat bijna niemand kon. Ze regelden administratie en belastingen en hadden daardoor invloed in het bestuur."
+      "c": 0,
+      "e": "Schrijvers konden lezen en schrijven en beheerden administratie en belastingen; dat gaf invloed."
     },
     {
       "id": "gB-009",
@@ -380,21 +376,18 @@
     },
     {
       "id": "gB-018",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 4,
-      "difficulty": 3,
-      "instruction": "Antwoord in 2 zinnen.",
-      "prompt": "Waarom kende Sparta zo'n strenge militaire opvoeding?",
-      "keywords": [
-        "heloten",
-        "controle",
-        "leger",
-        "veiligheid",
-        "discipline"
+      "difficulty": 4,
+      "q": "Waarom kende Sparta een strenge militaire opvoeding?",
+      "a": [
+        "Om heloten onder controle te houden en het leger sterk te houden.",
+        "Omdat Sparta geen landbouw had.",
+        "Omdat het een handelsstad met een sterke vloot was.",
+        "Omdat alle Grieken zo leefden."
       ],
-      "min_keywords": 2,
-      "rubric": "Verbindt onderdrukking van heloten aan behoefte aan sterk leger en discipline.",
-      "example_answer": "Sparta had veel heloten en was bang voor opstanden. Daarom trainde Sparta zijn burgers hard om controle en veiligheid te behouden."
+      "c": 0,
+      "e": "Sparta had veel heloten en vreesde opstanden; een sterk, gedisciplineerd leger was nodig."
     },
     {
       "id": "gB-019",
@@ -601,21 +594,18 @@
     },
     {
       "id": "gB-028",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 6,
       "difficulty": 4,
-      "instruction": "Antwoord in 2 zinnen.",
-      "prompt": "Wat bedoelen historici met 'hellenisme'?",
-      "keywords": [
-        "Griekse",
-        "cultuur",
-        "verspreiding",
-        "Alexander",
-        "oost"
+      "q": "Wat betekent het begrip 'hellenisme'?",
+      "a": [
+        "De verspreiding van Griekse cultuur en taal na de veroveringen van Alexander.",
+        "De terugkeer naar Egyptische religie in Griekenland.",
+        "De periode waarin Athene een democratie was.",
+        "De opstand van de Griekse steden tegen Perzie."
       ],
-      "min_keywords": 2,
-      "rubric": "Legt uit dat Griekse cultuur zich verspreidt naar het Oosten na Alexander.",
-      "example_answer": "Hellenisme is de verspreiding van Griekse taal en cultuur naar het Oosten. Dat gebeurde vooral na de veroveringen van Alexander de Grote."
+      "c": 0,
+      "e": "Hellenisme gaat over het verspreiden van Griekse cultuur en taal in het Oosten, vooral na Alexander."
     },
     {
       "id": "gB-029",
@@ -649,21 +639,18 @@
     },
     {
       "id": "gB-031",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 7,
       "difficulty": 4,
-      "instruction": "Antwoord in 2 zinnen.",
-      "prompt": "Waarom was de Steen van Rosetta zo belangrijk voor historici?",
-      "keywords": [
-        "drie",
-        "schriften",
-        "Grieks",
-        "ontcijferen",
-        "hierogliefen"
+      "q": "Waarom was de Steen van Rosetta zo belangrijk?",
+      "a": [
+        "De tekst stond in drie schriften, waardoor hierogliefen konden worden ontcijferd.",
+        "Het was het oudste voorbeeld van een Griekse wet.",
+        "Het bewees dat de piramides door slaven gebouwd waren.",
+        "Het beschreef de veldtochten van Alexander."
       ],
-      "min_keywords": 2,
-      "rubric": "Legt uit dat dezelfde tekst in drie schriften stond, waardoor hierogliefen konden worden ontcijferd.",
-      "example_answer": "Op de steen stond dezelfde tekst in drie schriften, waaronder Grieks. Omdat Grieks leesbaar was, konden onderzoekers de hierogliefen ontcijferen."
+      "c": 0,
+      "e": "Omdat dezelfde tekst in meerdere schriften stond, konden onderzoekers de hierogliefen ontcijferen."
     },
     {
       "id": "gB-032",
@@ -761,21 +748,18 @@
     },
     {
       "id": "gB-037",
-      "type": "short_answer",
+      "type": "mc",
       "quiz_group": 8,
       "difficulty": 4,
-      "instruction": "Antwoord in 2 zinnen.",
-      "prompt": "Noem een duidelijk verschil tussen het bestuur van Athene en Sparta.",
-      "keywords": [
-        "democratie",
-        "oligarchie",
-        "volksvergadering",
-        "militair",
-        "raad"
+      "q": "Wat is een duidelijk verschil tussen het bestuur van Athene en Sparta?",
+      "a": [
+        "Athene had een directe democratie, Sparta werd bestuurd door een kleine elite.",
+        "Athene had een koning, Sparta had een volksvergadering.",
+        "Athene was een handelskolonie van Perzie, Sparta een Egyptische provincie.",
+        "Athene had geen leger, Sparta had geen wetten."
       ],
-      "min_keywords": 1,
-      "rubric": "Athene: (directe) democratie; Sparta: oligarchie of militair bestuur.",
-      "example_answer": "Athene had een directe democratie met een volksvergadering. Sparta werd bestuurd door een kleine groep en had een sterke militaire focus."
+      "c": 0,
+      "e": "Athene kende directe democratie; Sparta werd door een kleine groep bestuurd en was militair gericht."
     },
     {
       "id": "gB-038",
