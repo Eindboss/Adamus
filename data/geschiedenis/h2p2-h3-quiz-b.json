@@ -1,0 +1,833 @@
+{
+  "title": "Geschiedenis Toets B: Egypte en Grieken (Gymnasium 1)",
+  "description": "Toets B voor H2 paragraaf 2 (Egypte) en H3 (Grieken). 40 gevarieerde vragen, tekstueel en zonder boekverwijzingen.",
+  "questions": [
+    {
+      "id": "gB-001",
+      "type": "ordering",
+      "quiz_group": 1,
+      "difficulty": 2,
+      "instruction": "Zet de gebeurtenissen in chronologische volgorde (oudste eerst).",
+      "items": [
+        "Vereniging van Egypte onder Narmer",
+        "Bouw van de grote piramides (hoogtepunt)",
+        "Nieuwe Rijk in Egypte begint",
+        "Rosetta Stone wordt gevonden",
+        "Eerste Olympische Spelen"
+      ],
+      "correct_order": [
+        "Vereniging van Egypte onder Narmer",
+        "Bouw van de grote piramides (hoogtepunt)",
+        "Nieuwe Rijk in Egypte begint",
+        "Eerste Olympische Spelen",
+        "Rosetta Stone wordt gevonden"
+      ],
+      "explanation": "Narmer rond 3100 v.Chr., piramides rond 2600-2500 v.Chr., Nieuwe Rijk rond 1550 v.Chr., Olympische Spelen 776 v.Chr., Rosetta Stone gevonden in 1799."
+    },
+    {
+      "id": "gB-002",
+      "type": "matching",
+      "quiz_group": 1,
+      "difficulty": 2,
+      "instruction": "Koppel de groep in de Egyptische samenleving aan de juiste taak.",
+      "left": [
+        "Farao",
+        "Priesters",
+        "Schrijvers",
+        "Ambachtslieden",
+        "Boeren"
+      ],
+      "right": [
+        "Bestuurde het land en gold als goddelijke heerser",
+        "Verzorgden de eredienst en tempels",
+        "Hielden administratie en belasting bij",
+        "Maakten gereedschap, beelden en sieraden",
+        "Werkten op het land en leverden voedsel"
+      ],
+      "correct_pairs": {
+        "Farao": "Bestuurde het land en gold als goddelijke heerser",
+        "Priesters": "Verzorgden de eredienst en tempels",
+        "Schrijvers": "Hielden administratie en belasting bij",
+        "Ambachtslieden": "Maakten gereedschap, beelden en sieraden",
+        "Boeren": "Werkten op het land en leverden voedsel"
+      }
+    },
+    {
+      "id": "gB-003",
+      "type": "mc",
+      "quiz_group": 1,
+      "difficulty": 2,
+      "q": "Waarom was de jaarlijkse overstroming van de Nijl zo belangrijk?",
+      "a": [
+        "Ze bracht vruchtbaar slib en water voor landbouw.",
+        "Ze maakte de woestijn groter en dus onveilig.",
+        "Ze zorgde ervoor dat piramides sneller konden worden gebouwd.",
+        "Ze hield vreemdelingen tegen bij de kust."
+      ],
+      "c": 0,
+      "e": "De Nijl liet vruchtbaar slib achter en leverde water voor irrigatie."
+    },
+    {
+      "id": "gB-004",
+      "type": "mc",
+      "quiz_group": 1,
+      "difficulty": 3,
+      "q": "Wat was de belangrijkste functie van piramides?",
+      "a": [
+        "Verdedigingswerken tegen vijanden",
+        "Koninklijke graven die een eeuwig bestaan moesten garanderen",
+        "Marktplaatsen voor handel",
+        "Scholen voor schrijvers"
+      ],
+      "c": 1,
+      "e": "Piramides waren koninklijke graven en hoorden bij het geloof in het hiernamaals."
+    },
+    {
+      "id": "gB-005",
+      "type": "fill_blank",
+      "quiz_group": 1,
+      "difficulty": 3,
+      "instruction": "Vul de ontbrekende woorden in.",
+      "text": "Rond {{blank1}} ontwikkelden Egyptenaren het {{blank2}}. De groep die dit kon lezen en schrijven heette {{blank3}}.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "3000 v.Chr."
+          ],
+          "options": [
+            "3000 v.Chr.",
+            "3100 v.Chr.",
+            "1550 v.Chr.",
+            "776 v.Chr."
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "hierogliefenschrift"
+          ],
+          "options": [
+            "hierogliefenschrift",
+            "alfabet",
+            "spijkerschrift",
+            "runenschrift"
+          ]
+        },
+        {
+          "id": "blank3",
+          "answers": [
+            "schrijvers"
+          ],
+          "options": [
+            "schrijvers",
+            "soldaten",
+            "boeren",
+            "bouwmeesters"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gB-006",
+      "type": "mc",
+      "quiz_group": 2,
+      "difficulty": 2,
+      "q": "Wat betekent het dat de Egyptenaren polytheistisch waren?",
+      "a": [
+        "Ze geloofden in meerdere goden.",
+        "Ze geloofden in geen enkele god.",
+        "Ze geloofden in een persoon die geen god was.",
+        "Ze geloofden alleen in de zon."
+      ],
+      "c": 0,
+      "e": "Polytheisme betekent geloven in meerdere goden."
+    },
+    {
+      "id": "gB-007",
+      "type": "mc",
+      "quiz_group": 2,
+      "difficulty": 3,
+      "q": "Waarom werd het lichaam gemummificeerd?",
+      "a": [
+        "Zodat soldaten hun dode aanvoerder konden eren in het leger.",
+        "Omdat een goed bewaard lichaam nodig was voor het leven na de dood.",
+        "Om het lichaam lichter te maken voor de reis naar de piramide.",
+        "Omdat het wettelijk verplicht was voor iedereen."
+      ],
+      "c": 1,
+      "e": "Mummificatie hoorde bij het geloof in een leven na de dood."
+    },
+    {
+      "id": "gB-008",
+      "type": "short_answer",
+      "quiz_group": 2,
+      "difficulty": 3,
+      "instruction": "Antwoord in 2 zinnen.",
+      "prompt": "Leg uit waarom schrijvers in Egypte veel macht hadden.",
+      "keywords": [
+        "lezen",
+        "schrijven",
+        "administratie",
+        "belasting",
+        "overheid",
+        "kennis"
+      ],
+      "min_keywords": 2,
+      "rubric": "Koppelt geletterdheid aan administratie en belasting; daardoor invloed in bestuur.",
+      "example_answer": "Schrijvers konden lezen en schrijven, iets wat bijna niemand kon. Ze regelden administratie en belastingen en hadden daardoor invloed in het bestuur."
+    },
+    {
+      "id": "gB-009",
+      "type": "mc",
+      "quiz_group": 2,
+      "difficulty": 2,
+      "q": "In welk jaar verenigde Narmer Boven- en Beneden-Egypte?",
+      "a": [
+        "3100 v.Chr.",
+        "3000 v.Chr.",
+        "1550 v.Chr.",
+        "776 v.Chr."
+      ],
+      "c": 0,
+      "e": "Narmer verenigde Egypte rond 3100 v.Chr."
+    },
+    {
+      "id": "gB-010",
+      "type": "mc",
+      "quiz_group": 2,
+      "difficulty": 2,
+      "q": "Welke groep betaalde vaak belasting in de vorm van arbeid aan de staat?",
+      "a": [
+        "Priesters",
+        "Schrijvers",
+        "Boeren",
+        "Ambachtslieden"
+      ],
+      "c": 2,
+      "e": "Boeren verrichtten vaak herendiensten en leverden voedsel."
+    },
+    {
+      "id": "gB-011",
+      "type": "ordering",
+      "quiz_group": 3,
+      "difficulty": 2,
+      "instruction": "Zet de gebeurtenissen in chronologische volgorde (oudste eerst).",
+      "items": [
+        "Eerste Olympische Spelen",
+        "Slag bij Marathon",
+        "Slag bij Salamis",
+        "Begin Peloponnesische Oorlog",
+        "Alexander wordt koning van Macedonie"
+      ],
+      "correct_order": [
+        "Eerste Olympische Spelen",
+        "Slag bij Marathon",
+        "Slag bij Salamis",
+        "Begin Peloponnesische Oorlog",
+        "Alexander wordt koning van Macedonie"
+      ],
+      "explanation": "776 v.Chr. Olympische Spelen, 490 Marathon, 480 Salamis, 431 Peloponnesische Oorlog, 336 Alexander koning."
+    },
+    {
+      "id": "gB-012",
+      "type": "matching",
+      "quiz_group": 3,
+      "difficulty": 3,
+      "instruction": "Koppel jaartal/periode aan de juiste gebeurtenis (H1-H3).",
+      "left": [
+        "300000 jaar geleden",
+        "11.500 jaar geleden",
+        "9000 v.Chr.",
+        "5300 v.Chr.",
+        "3000 v.Chr. (steden)",
+        "3000 v.Chr. (hierogliefen)",
+        "3100 v.Chr.",
+        "508-338 v.Chr.",
+        "490-479 v.Chr.",
+        "431-404 v.Chr."
+      ],
+      "right": [
+        "Ontstaan Homo sapiens",
+        "Einde laatste ijstijd",
+        "Landbouwrevolutie in het Midden-Oosten",
+        "Eerste landbouw in Nederland",
+        "Ontstaan eerste steden",
+        "Uitvinding hierogliefenschrift in Egypte",
+        "Narmer verenigt Boven- en Beneden-Egypte",
+        "Athene was een democratie",
+        "Perzische oorlogen",
+        "Peloponnesische oorlog"
+      ],
+      "correct_pairs": {
+        "300000 jaar geleden": "Ontstaan Homo sapiens",
+        "11.500 jaar geleden": "Einde laatste ijstijd",
+        "9000 v.Chr.": "Landbouwrevolutie in het Midden-Oosten",
+        "5300 v.Chr.": "Eerste landbouw in Nederland",
+        "3000 v.Chr. (steden)": "Ontstaan eerste steden",
+        "3000 v.Chr. (hierogliefen)": "Uitvinding hierogliefenschrift in Egypte",
+        "3100 v.Chr.": "Narmer verenigt Boven- en Beneden-Egypte",
+        "508-338 v.Chr.": "Athene was een democratie",
+        "490-479 v.Chr.": "Perzische oorlogen",
+        "431-404 v.Chr.": "Peloponnesische oorlog"
+      }
+    },
+    {
+      "id": "gB-013",
+      "type": "mc",
+      "quiz_group": 3,
+      "difficulty": 3,
+      "q": "Waarom was de Atheense democratie beperkt?",
+      "a": [
+        "Alleen priesters mochten stemmen.",
+        "Vrouwen, slaven en vreemdelingen mochten niet meedoen.",
+        "De koning had altijd het laatste woord.",
+        "Er waren geen wetten of rechtbanken."
+      ],
+      "c": 1,
+      "e": "Alleen mannelijke burgers hadden stemrecht."
+    },
+    {
+      "id": "gB-014",
+      "type": "mc",
+      "quiz_group": 3,
+      "difficulty": 3,
+      "q": "Wat is direct democratisch bestuur?",
+      "a": [
+        "Burgers stemmen zelf over wetten in de volksvergadering.",
+        "Burgers kiezen een koning die voor hen beslist.",
+        "De rijken stemmen en de armen niet.",
+        "Priesters maken wetten zonder overleg."
+      ],
+      "c": 0,
+      "e": "In Athene stemden burgers direct in de volksvergadering."
+    },
+    {
+      "id": "gB-015",
+      "type": "mc",
+      "quiz_group": 3,
+      "difficulty": 2,
+      "q": "Wat was de functie van de agora?",
+      "a": [
+        "Een fort op een heuvel",
+        "Een markt- en ontmoetingsplein",
+        "Een tempel voor farao's",
+        "Een trainingskamp voor soldaten"
+      ],
+      "c": 1,
+      "e": "De agora was het centrale markt- en ontmoetingsplein."
+    },
+    {
+      "id": "gB-016",
+      "type": "fill_blank",
+      "quiz_group": 4,
+      "difficulty": 2,
+      "instruction": "Vul de begrippen in.",
+      "text": "Een {{blank1}} is een zelfstandig stadstaat. De {{blank2}} is de versterkte heuvel met tempels. De {{blank3}} is het marktplein.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "polis"
+          ],
+          "options": [
+            "polis",
+            "dynastie",
+            "delta",
+            "provincie"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "acropolis"
+          ],
+          "options": [
+            "acropolis",
+            "labyrinth",
+            "piramide",
+            "forum"
+          ]
+        },
+        {
+          "id": "blank3",
+          "answers": [
+            "agora"
+          ],
+          "options": [
+            "agora",
+            "oase",
+            "dok",
+            "atrium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gB-017",
+      "type": "mc",
+      "quiz_group": 4,
+      "difficulty": 3,
+      "q": "Wie waren de heloten in Sparta?",
+      "a": [
+        "Spartaanse burgers met stemrecht",
+        "Oorlogskoningen",
+        "Onderworpen boeren zonder burgerrechten",
+        "Handelaars uit andere poleis"
+      ],
+      "c": 2,
+      "e": "Heloten waren onderworpen boeren die het land bewerkten."
+    },
+    {
+      "id": "gB-018",
+      "type": "short_answer",
+      "quiz_group": 4,
+      "difficulty": 3,
+      "instruction": "Antwoord in 2 zinnen.",
+      "prompt": "Waarom kende Sparta zo'n strenge militaire opvoeding?",
+      "keywords": [
+        "heloten",
+        "controle",
+        "leger",
+        "veiligheid",
+        "discipline"
+      ],
+      "min_keywords": 2,
+      "rubric": "Verbindt onderdrukking van heloten aan behoefte aan sterk leger en discipline.",
+      "example_answer": "Sparta had veel heloten en was bang voor opstanden. Daarom trainde Sparta zijn burgers hard om controle en veiligheid te behouden."
+    },
+    {
+      "id": "gB-019",
+      "type": "mc",
+      "quiz_group": 4,
+      "difficulty": 3,
+      "q": "Wat is een kenmerk van de hoplieten-phalanx?",
+      "a": [
+        "Lichte ruiters die los van elkaar vechten",
+        "Soldaten die in dichte rijen met schilden samenwerken",
+        "Een verdedigingsmuur van stenen",
+        "Een vloot in drie rijen schepen"
+      ],
+      "c": 1,
+      "e": "Hopliten vochten in compacte rijen met overlappende schilden."
+    },
+    {
+      "id": "gB-020",
+      "type": "mc",
+      "quiz_group": 4,
+      "difficulty": 3,
+      "q": "Wat was een directe aanleiding voor de Perzische oorlogen?",
+      "a": [
+        "De bouw van piramides in Egypte",
+        "De opstand van Griekse steden in Ionie tegen Perzie",
+        "De stichting van Rome",
+        "De invoering van het schrift"
+      ],
+      "c": 1,
+      "e": "Griekse steden in Klein-Azie kwamen in opstand tegen Perzie."
+    },
+    {
+      "id": "gB-021",
+      "type": "mc",
+      "quiz_group": 5,
+      "difficulty": 3,
+      "q": "Welke periode hoort bij de Perzische oorlogen?",
+      "a": [
+        "490-479 v.Chr.",
+        "431-404 v.Chr.",
+        "508-338 v.Chr.",
+        "3000 v.Chr."
+      ],
+      "c": 0,
+      "e": "De Perzische oorlogen vonden plaats van 490 tot 479 v.Chr."
+    },
+    {
+      "id": "gB-022",
+      "type": "mc",
+      "quiz_group": 5,
+      "difficulty": 3,
+      "q": "Welke periode hoort bij de Peloponnesische oorlog?",
+      "a": [
+        "431-404 v.Chr.",
+        "490-479 v.Chr.",
+        "508-338 v.Chr.",
+        "776 v.Chr."
+      ],
+      "c": 0,
+      "e": "De Peloponnesische oorlog duurde van 431 tot 404 v.Chr."
+    },
+    {
+      "id": "gB-023",
+      "type": "mc",
+      "quiz_group": 5,
+      "difficulty": 3,
+      "q": "Waarom was de zeeslag bij Salamis zo beslissend?",
+      "a": [
+        "De Perzische vloot werd verslagen, waardoor hun bevoorrading instortte.",
+        "De Grieken verloren hun hele vloot.",
+        "Sparta verloor zijn leger.",
+        "Egypte viel de Perzen aan."
+      ],
+      "c": 0,
+      "e": "De Griekse vloot versloeg de Perzen en dwong hun terugtocht."
+    },
+    {
+      "id": "gB-024",
+      "type": "fill_blank",
+      "quiz_group": 5,
+      "difficulty": 3,
+      "instruction": "Vul de ontbrekende begrippen in.",
+      "text": "Griekse toneelstukken konden {{blank1}} (ernstig) of {{blank2}} (komisch) zijn. Denkers zoals Socrates en Plato horen bij de {{blank3}}.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "tragedie"
+          ],
+          "options": [
+            "tragedie",
+            "mythe",
+            "ode",
+            "epos"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "komedie"
+          ],
+          "options": [
+            "komedie",
+            "elegie",
+            "hymne",
+            "sage"
+          ]
+        },
+        {
+          "id": "blank3",
+          "answers": [
+            "filosofie"
+          ],
+          "options": [
+            "filosofie",
+            "astronomie",
+            "landbouw",
+            "bouwkunde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gB-025",
+      "type": "matching",
+      "quiz_group": 5,
+      "difficulty": 4,
+      "instruction": "Koppel jaartal/periode aan de juiste gebeurtenis (H4-H5).",
+      "left": [
+        "753 v.Chr.",
+        "750-509 v.Chr.",
+        "509-27 v.Chr.",
+        "27 v.Chr. - 476",
+        "rond 4 v.Chr.",
+        "313",
+        "380",
+        "9",
+        "395",
+        "476",
+        "622",
+        "800",
+        "einde 8e eeuw"
+      ],
+      "right": [
+        "Stichting van Rome (mythe Romulus en Remus)",
+        "Rome was een koninkrijk",
+        "Rome was een republiek",
+        "Rome was een keizerrijk",
+        "Geboorte van Jezus Christus",
+        "Constantijn gaf christenen godsdienstvrijheid",
+        "Christendom werd staatsgodsdienst",
+        "Slag in het Teutoburgerwoud",
+        "Splitsing van het Romeinse Rijk",
+        "Einde van het West-Romeinse Rijk",
+        "Begin islamitische jaartelling",
+        "Paus kroonde Karel de Grote tot keizer",
+        "Vikingen begonnen rooftochten"
+      ],
+      "correct_pairs": {
+        "753 v.Chr.": "Stichting van Rome (mythe Romulus en Remus)",
+        "750-509 v.Chr.": "Rome was een koninkrijk",
+        "509-27 v.Chr.": "Rome was een republiek",
+        "27 v.Chr. - 476": "Rome was een keizerrijk",
+        "rond 4 v.Chr.": "Geboorte van Jezus Christus",
+        "313": "Constantijn gaf christenen godsdienstvrijheid",
+        "380": "Christendom werd staatsgodsdienst",
+        "9": "Slag in het Teutoburgerwoud",
+        "395": "Splitsing van het Romeinse Rijk",
+        "476": "Einde van het West-Romeinse Rijk",
+        "622": "Begin islamitische jaartelling",
+        "800": "Paus kroonde Karel de Grote tot keizer",
+        "einde 8e eeuw": "Vikingen begonnen rooftochten"
+      }
+    },
+    {
+      "id": "gB-026",
+      "type": "mc",
+      "quiz_group": 6,
+      "difficulty": 2,
+      "q": "In welke periode was Athene een democratie?",
+      "a": [
+        "508-338 v.Chr.",
+        "431-404 v.Chr.",
+        "490-479 v.Chr.",
+        "3000 v.Chr."
+      ],
+      "c": 0,
+      "e": "Athene was een democratie van 508 tot 338 v.Chr."
+    },
+    {
+      "id": "gB-027",
+      "type": "mc",
+      "quiz_group": 6,
+      "difficulty": 3,
+      "q": "Waarom stichtten Grieken kolonies rond de Middellandse Zee?",
+      "a": [
+        "Ze wilden de piramides van Egypte nabouwen.",
+        "Ze zochten landbouwgrond en handelsmogelijkheden.",
+        "Ze moesten vluchten voor Romeinse veroveringen.",
+        "Ze wilden minder schepen gebruiken."
+      ],
+      "c": 1,
+      "e": "Kolonies boden nieuw land en betere handelsroutes."
+    },
+    {
+      "id": "gB-028",
+      "type": "short_answer",
+      "quiz_group": 6,
+      "difficulty": 4,
+      "instruction": "Antwoord in 2 zinnen.",
+      "prompt": "Wat bedoelen historici met 'hellenisme'?",
+      "keywords": [
+        "Griekse",
+        "cultuur",
+        "verspreiding",
+        "Alexander",
+        "oost"
+      ],
+      "min_keywords": 2,
+      "rubric": "Legt uit dat Griekse cultuur zich verspreidt naar het Oosten na Alexander.",
+      "example_answer": "Hellenisme is de verspreiding van Griekse taal en cultuur naar het Oosten. Dat gebeurde vooral na de veroveringen van Alexander de Grote."
+    },
+    {
+      "id": "gB-029",
+      "type": "mc",
+      "quiz_group": 6,
+      "difficulty": 3,
+      "q": "Wat veranderde er door de veroveringen van Alexander?",
+      "a": [
+        "Griekse cultuur raakte bekend in het Midden-Oosten.",
+        "Egypte werd een Romeinse provincie.",
+        "De Olympische Spelen verdwenen.",
+        "De democratie werd overal afgeschaft."
+      ],
+      "c": 0,
+      "e": "Alexander verspreidde Griekse taal en cultuur in zijn rijk."
+    },
+    {
+      "id": "gB-030",
+      "type": "mc",
+      "quiz_group": 6,
+      "difficulty": 3,
+      "q": "Welke uitspraak is het best over mythen als historische bron?",
+      "a": [
+        "Mythen zijn waardeloos omdat ze niet echt gebeurd zijn.",
+        "Mythen kunnen iets zeggen over denkbeelden en waarden.",
+        "Mythen zijn altijd volledig betrouwbaar.",
+        "Mythen zijn hetzelfde als wetten."
+      ],
+      "c": 1,
+      "e": "Mythen zijn niet letterlijk betrouwbaar, maar laten wel zien wat mensen geloofden."
+    },
+    {
+      "id": "gB-031",
+      "type": "short_answer",
+      "quiz_group": 7,
+      "difficulty": 4,
+      "instruction": "Antwoord in 2 zinnen.",
+      "prompt": "Waarom was de Steen van Rosetta zo belangrijk voor historici?",
+      "keywords": [
+        "drie",
+        "schriften",
+        "Grieks",
+        "ontcijferen",
+        "hierogliefen"
+      ],
+      "min_keywords": 2,
+      "rubric": "Legt uit dat dezelfde tekst in drie schriften stond, waardoor hierogliefen konden worden ontcijferd.",
+      "example_answer": "Op de steen stond dezelfde tekst in drie schriften, waaronder Grieks. Omdat Grieks leesbaar was, konden onderzoekers de hierogliefen ontcijferen."
+    },
+    {
+      "id": "gB-032",
+      "type": "mc",
+      "quiz_group": 7,
+      "difficulty": 2,
+      "q": "Wat maakte het mogelijk om grote rijken te besturen in Egypte?",
+      "a": [
+        "Een strak bestuur met belastingen en administratie",
+        "Alleen mondelinge afspraken",
+        "Een leger zonder regels",
+        "Dat iedereen gelijk was"
+      ],
+      "c": 0,
+      "e": "Belastingen en administratie maakten centraal bestuur mogelijk."
+    },
+    {
+      "id": "gB-033",
+      "type": "mc",
+      "quiz_group": 7,
+      "difficulty": 2,
+      "q": "Wat is het grootste verschil tussen een historicus en een archeoloog?",
+      "a": [
+        "Een historicus werkt vooral met teksten, een archeoloog met vondsten.",
+        "Een historicus werkt alleen in musea.",
+        "Een archeoloog bestudeert alleen moderne tijden.",
+        "Er is geen verschil."
+      ],
+      "c": 0,
+      "e": "Historici gebruiken vooral geschreven bronnen; archeologen gebruiken materiele resten."
+    },
+    {
+      "id": "gB-034",
+      "type": "fill_blank",
+      "quiz_group": 7,
+      "difficulty": 3,
+      "instruction": "Vul de begrippen in.",
+      "text": "Een {{blank1}} is bestuur door het volk. Een {{blank2}} is bestuur door een kleine groep.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "democratie"
+          ],
+          "options": [
+            "democratie",
+            "monarchie",
+            "dictatuur",
+            "dynastie"
+          ]
+        },
+        {
+          "id": "blank2",
+          "answers": [
+            "oligarchie"
+          ],
+          "options": [
+            "oligarchie",
+            "theocratie",
+            "republiek",
+            "keizerrijk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gB-035",
+      "type": "mc",
+      "quiz_group": 7,
+      "difficulty": 3,
+      "q": "Welke omschrijving past het best bij een polis?",
+      "a": [
+        "Een groot rijk met vele provincies",
+        "Een zelfstandige stadstaat met eigen regels",
+        "Een dorp zonder bestuur",
+        "Een tempelcomplex zonder bewoners"
+      ],
+      "c": 1,
+      "e": "Een polis is een zelfstandige stadstaat."
+    },
+    {
+      "id": "gB-036",
+      "type": "mc",
+      "quiz_group": 8,
+      "difficulty": 3,
+      "q": "Wie gold als burger in Athene?",
+      "a": [
+        "Iedereen die in Athene woonde",
+        "Mannen met Atheense ouders",
+        "Alle vrouwen en mannen boven de 18",
+        "Alleen rijke handelaren"
+      ],
+      "c": 1,
+      "e": "Burgerschap was voor vrije mannen met Atheense ouders."
+    },
+    {
+      "id": "gB-037",
+      "type": "short_answer",
+      "quiz_group": 8,
+      "difficulty": 4,
+      "instruction": "Antwoord in 2 zinnen.",
+      "prompt": "Noem een duidelijk verschil tussen het bestuur van Athene en Sparta.",
+      "keywords": [
+        "democratie",
+        "oligarchie",
+        "volksvergadering",
+        "militair",
+        "raad"
+      ],
+      "min_keywords": 1,
+      "rubric": "Athene: (directe) democratie; Sparta: oligarchie of militair bestuur.",
+      "example_answer": "Athene had een directe democratie met een volksvergadering. Sparta werd bestuurd door een kleine groep en had een sterke militaire focus."
+    },
+    {
+      "id": "gB-038",
+      "type": "mc",
+      "quiz_group": 8,
+      "difficulty": 2,
+      "q": "Wat is een acropolis?",
+      "a": [
+        "Het marktplein van een stad",
+        "De versterkte heuvel met tempels",
+        "Een buitenwijk van boeren",
+        "Een Romeins stadion"
+      ],
+      "c": 1,
+      "e": "De acropolis is de versterkte heuvel met tempels."
+    },
+    {
+      "id": "gB-039",
+      "type": "mc",
+      "quiz_group": 8,
+      "difficulty": 3,
+      "q": "Waarom was schrift zo belangrijk voor het ontstaan van beschavingen?",
+      "a": [
+        "Het maakte handel en wetten mogelijk.",
+        "Het zorgde voor meer regen.",
+        "Het maakte iedereen gelijk.",
+        "Het zorgde dat oorlogen stopten."
+      ],
+      "c": 0,
+      "e": "Schrift maakte administratie, wetten en handel op grote schaal mogelijk."
+    },
+    {
+      "id": "gB-040",
+      "type": "ordering",
+      "quiz_group": 8,
+      "difficulty": 3,
+      "instruction": "Zet de stappen van mummificatie in de juiste volgorde.",
+      "items": [
+        "Het lichaam wordt gereinigd",
+        "Organen worden verwijderd en apart bewaard",
+        "Het lichaam wordt gedroogd met natron",
+        "Het lichaam wordt in linnen gewikkeld",
+        "Het lichaam wordt in een sarcofaag gelegd"
+      ],
+      "correct_order": [
+        "Het lichaam wordt gereinigd",
+        "Organen worden verwijderd en apart bewaard",
+        "Het lichaam wordt gedroogd met natron",
+        "Het lichaam wordt in linnen gewikkeld",
+        "Het lichaam wordt in een sarcofaag gelegd"
+      ],
+      "explanation": "Na reinigen werden organen verwijderd, daarna drogen met natron, in linnen wikkelen en in de sarcofaag leggen."
+    }
+  ]
+}
