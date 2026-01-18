@@ -303,10 +303,19 @@ export function checkFillBlank(q) {
     details: blanks.length > 1 ? `${correctCount}/${blanks.length} correct` : undefined,
   });
 
-  // Don't give away answers - just show count
-  const hint = allCorrect ? "" : `${correctCount} van ${blanks.length} goed ingevuld.`;
+  const countText = allCorrect
+    ? ""
+    : `${correctCount} van ${blanks.length} goed ingevuld.`;
+  const correctAnswer = allCorrect
+    ? ""
+    : results
+        .map((result, index) => `${index + 1}: ${result.expected}`)
+        .join(" | ");
+  const explanationParts = [countText, q.explanation || q.e || ""]
+    .filter(Boolean)
+    .join(" ");
 
-  showFeedbackFn(allCorrect, q.explanation || q.e || "", hint);
+  showFeedbackFn(allCorrect, explanationParts, correctAnswer);
 }
 
 /* ===========================================
