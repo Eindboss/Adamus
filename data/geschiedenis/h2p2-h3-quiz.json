@@ -200,20 +200,26 @@
     },
     {
       "id": "g-009",
-      "quiz_group": 3,
+      "type": "fill_blank",
+      "quiz_group": 2,
       "difficulty": 2,
-      "q": "In welk jaar vond de Slag bij Marathon plaats?",
-      "a": [
-        "490 v.C.",
-        "480 v.C.",
-        "500 v.C.",
-        "479 v.C.",
-        "492 v.C.",
-        "486 v.C."
+      "instruction": "Vul het jaartal in.",
+      "text": "De slag bij Marathon vond plaats in {{blank1}}.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "490 v.Chr."
+          ],
+          "options": [
+            "490 v.Chr.",
+            "480 v.Chr.",
+            "431 v.Chr.",
+            "776 v.Chr."
+          ]
+        }
       ],
-      "c": 0,
-      "e": "Marathon (490 v.C.) is een kernmoment in de eerste Perzische expeditie tegen Athene. 480 v.C. = Thermopylae/Salamis, 479 v.C. = Plataeae, 492 v.C. = eerste mislukte expeditie.",
-      "type": "mc"
+      "explanation": "Marathon vond plaats in 490 v.Chr."
     },
     {
       "id": "g-010",
@@ -593,20 +599,26 @@
     },
     {
       "id": "g-027",
-      "quiz_group": 8,
+      "type": "fill_blank",
+      "quiz_group": 6,
       "difficulty": 2,
-      "q": "In welk jaar begonnen traditioneel de eerste Olympische Spelen (Olympia)?",
-      "a": [
-        "776 v.C.",
-        "780 v.C.",
-        "770 v.C.",
-        "756 v.C.",
-        "800 v.C.",
-        "764 v.C."
+      "instruction": "Vul het jaartal in.",
+      "text": "De eerste Olympische Spelen werden traditioneel gehouden in {{blank1}}.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "776 v.Chr."
+          ],
+          "options": [
+            "776 v.Chr.",
+            "490 v.Chr.",
+            "508 v.Chr.",
+            "431 v.Chr."
+          ]
+        }
       ],
-      "c": 0,
-      "e": "776 v.C. geldt traditioneel als startjaar in veel handboeken. De andere jaren liggen dicht in de buurt maar zijn niet de traditionele datum.",
-      "type": "mc"
+      "explanation": "De eerste Olympische Spelen dateren traditioneel van 776 v.Chr."
     },
     {
       "id": "g-028",
@@ -725,20 +737,26 @@
     },
     {
       "id": "g-032",
+      "type": "fill_blank",
       "quiz_group": 9,
-      "difficulty": 3,
-      "q": "In welk jaar vond de zeeslag bij Salamis plaats?",
-      "a": [
-        "480 v.C.",
-        "490 v.C.",
-        "479 v.C.",
-        "481 v.C.",
-        "478 v.C.",
-        "485 v.C."
+      "difficulty": 2,
+      "instruction": "Vul het jaartal in.",
+      "text": "De zeeslag bij Salamis vond plaats in {{blank1}}.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "480 v.Chr."
+          ],
+          "options": [
+            "480 v.Chr.",
+            "490 v.Chr.",
+            "479 v.Chr.",
+            "404 v.Chr."
+          ]
+        }
       ],
-      "c": 0,
-      "e": "Salamis (480 v.C.) is het keerpunt op zee tegen Xerxes' vloot. 490 v.C. = Marathon, 479 v.C. = Plataeae, 478 v.C. = oprichting Delisch-Atheense Zeebond.",
-      "type": "mc"
+      "explanation": "Salamis vond plaats in 480 v.Chr."
     },
     {
       "id": "g-033",
@@ -986,18 +1004,26 @@
     },
     {
       "id": "g-045",
-      "quiz_group": 15,
-      "difficulty": 3,
-      "q": "Wat betekent 'democratie' letterlijk (Grieks)?",
-      "a": [
-        "macht van de koning",
-        "macht van het volk",
-        "macht van de goden",
-        "macht van de adel"
+      "type": "fill_blank",
+      "quiz_group": 11,
+      "difficulty": 2,
+      "instruction": "Vul het begrip in.",
+      "text": "Democratie betekent letterlijk {{blank1}}.",
+      "blanks": [
+        {
+          "id": "blank1",
+          "answers": [
+            "volksmacht"
+          ],
+          "options": [
+            "volksmacht",
+            "koningsmacht",
+            "legerheerschappij",
+            "priesterheerschappij"
+          ]
+        }
       ],
-      "c": 1,
-      "e": "demos = volk, kratos = macht/heerschappij.",
-      "type": "mc"
+      "explanation": "Democratie komt van demos (volk) en kratein (heersen): volksmacht."
     },
     {
       "id": "g-046",
@@ -1287,18 +1313,28 @@
     },
     {
       "id": "g-058",
-      "type": "mc",
+      "type": "matching",
       "quiz_group": 15,
       "difficulty": 3,
-      "q": "Een brief uit 480 v.Chr. waarin iemand een veldslag beschrijft is een ...",
-      "a": [
+      "instruction": "Koppel de bron aan het juiste type bron.",
+      "left": [
+        "Dagboekfragment van een soldaat uit 480 v.Chr.",
+        "Schoolboek over de Perzische oorlogen",
+        "Griekse vaas uit de 5e eeuw v.Chr.",
+        "Moderne reconstructietekening van een hopliet"
+      ],
+      "right": [
         "geschreven, directe bron",
-        "ongeschreven, directe bron",
         "geschreven, indirecte bron",
+        "ongeschreven, directe bron",
         "ongeschreven, indirecte bron"
       ],
-      "c": 0,
-      "e": "De brief is tekst (geschreven) en komt uit de tijd zelf (direct)."
+      "correct_pairs": {
+        "Dagboekfragment van een soldaat uit 480 v.Chr.": "geschreven, directe bron",
+        "Schoolboek over de Perzische oorlogen": "geschreven, indirecte bron",
+        "Griekse vaas uit de 5e eeuw v.Chr.": "ongeschreven, directe bron",
+        "Moderne reconstructietekening van een hopliet": "ongeschreven, indirecte bron"
+      }
     },
     {
       "id": "g-059",
@@ -1362,18 +1398,23 @@
     },
     {
       "id": "g-063",
-      "type": "mc",
+      "type": "ordering",
       "quiz_group": 15,
-      "difficulty": 4,
-      "q": "Welke omschrijving past bij de 1e eeuw v.Chr.?",
-      "a": [
-        "100 v.Chr. tot 1 v.Chr.",
-        "1 v.Chr. tot 100 n.Chr.",
-        "200 v.Chr. tot 100 v.Chr.",
-        "1 n.Chr. tot 50 n.Chr."
+      "difficulty": 3,
+      "instruction": "Zet de eeuwen in chronologische volgorde (oudste eerst).",
+      "items": [
+        "2e eeuw v.Chr.",
+        "1e eeuw v.Chr.",
+        "1e eeuw",
+        "2e eeuw"
       ],
-      "c": 0,
-      "e": "De 1e eeuw v.Chr. loopt van 100 v.Chr. tot 1 v.Chr."
+      "correct_order": [
+        "2e eeuw v.Chr.",
+        "1e eeuw v.Chr.",
+        "1e eeuw",
+        "2e eeuw"
+      ],
+      "explanation": "Eerst eeuwen v.Chr. (200-100, 100-1), daarna 1-100 en 100-200."
     },
     {
       "id": "g-064",
