@@ -982,7 +982,6 @@
         "misleiding"
       ],
       "min_keywords": 2,
-      "rubric": "Metafoor: lijkt onschuldig \u2192 wordt binnengelaten \u2192 verborgen \u2018aanval\u2019 van binnenuit.",
       "example_answer": "Een trojan lijkt onschuldig (zoals een cadeau), waardoor je hem binnenlaat. Daarna voert hij verborgen schadelijke acties uit vanuit je systeem, net als soldaten die uit het paard kwamen."
     },
     {
@@ -1016,7 +1015,6 @@
         "kiezen"
       ],
       "min_keywords": 2,
-      "rubric": "Athene: burgers stemmen zelf over besluiten; NL: burgers kiezen vertegenwoordigers die besluiten nemen.",
       "example_answer": "In Athene stemden burgers direct zelf over besluiten. In Nederland kiezen burgers vertegenwoordigers die namens hen beslissen in parlement en raden."
     },
     {
