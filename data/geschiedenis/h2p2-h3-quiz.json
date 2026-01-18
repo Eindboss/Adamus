@@ -120,7 +120,7 @@
       "a": [
         "Je mag stemmen: vaderschap telt.",
         "Je mag niet stemmen: ouders Atheens.",
-        "Je mag stemmen als hopliet.",
+        "Je mag stemmen als hopliet in die tijd.",
         "Je mag stemmen vanaf dertig."
       ],
       "c": 1,
@@ -150,8 +150,8 @@
       "a": [
         "Mythen waren alleen vermaak zonder betekenis.",
         "Mythen gaven verklaringen en normen voor het leven.",
-        "Mythen zijn altijd letterlijk waar gebeurd.",
-        "Mythen ontstonden pas na de Romeinen."
+        "Mythen zijn altijd letterlijk waar gebeurd in die periode.",
+        "Mythen ontstonden pas na de Romeinen in die tijd."
       ],
       "c": 1,
       "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als \u2018wereldbeeld\u2019 v\u00f3\u00f3r wetenschappelijke verklaringen dominant worden.",
@@ -190,8 +190,8 @@
       "difficulty": 4,
       "q": "Waarom konden mythen en beginnende wetenschap naast elkaar bestaan in Griekenland?",
       "a": [
-        "Omdat iedereen stopte met geloven in goden.",
-        "Omdat traditie bleef, naast logisch verklaren.",
+        "Omdat iedereen stopte met geloven in goden en mythen.",
+        "Omdat traditie bleef, naast nieuw verklaren.",
         "Omdat wetenschap alleen in Egypte bestond.",
         "Omdat mythen wetenschappelijk bewezen waren."
       ],
@@ -258,10 +258,10 @@
       "difficulty": 3,
       "q": "Wat is het scherpste (meest inhoudelijke) verschil tussen Athene en Sparta in hun inrichting?",
       "a": [
-        "Athene draaide om handel en zeevaart, Sparta om landbouw.",
-        "Athene kende burgerparticipatie, Sparta militaire opvoeding.",
-        "Sparta was democratie en Athene een koninkrijk.",
-        "Athene had geen slaven en Sparta wel."
+        "Athene draaide om handel en zeevaart, Sparta om landbouw en discipline.",
+        "Athene kende burgerparticipatie, Sparta strenge militaire opvoeding.",
+        "Sparta was democratie en Athene een koninkrijk in die tijd.",
+        "Athene had geen slaven en Sparta wel in die tijd."
       ],
       "c": 1,
       "e": "Athene: politiek debat, handel/cultuur. Sparta: krijgersstaat met strenge opvoeding (agoge).",
@@ -362,10 +362,10 @@
       "difficulty": 4,
       "q": "Wat was een voordeel \u00e9n een nadeel van loting in Athene?",
       "a": [
-        "Voordeel: alleen deskundigen kregen macht; nadeel: te weinig burgers",
+        "Voordeel: alleen deskundigen kregen macht; nadeel: te weinig burgers in die tijd",
         "Voordeel: gelijke kansen voor burgers; nadeel: bestuurders konden onkundig zijn",
-        "Voordeel: snelle besluitvorming; nadeel: te weinig controle",
-        "Voordeel: rijkdom speelde geen rol; nadeel: alleen slaven deden mee"
+        "Voordeel: snelle besluitvorming; nadeel: te weinig controle in die tijd",
+        "Voordeel: rijkdom speelde geen rol; nadeel: alleen slaven deden mee in die tijd"
       ],
       "c": 1,
       "e": "Loting beperkte de macht van een elite, maar kon ongeschikte bestuurders opleveren."
@@ -509,8 +509,8 @@
       "a": [
         "Griekenland onder Romeinse heerschappij.",
         "Vermenging van Griekse en oosterse cultuur.",
-        "De ondergang van de Griekse cultuur.",
-        "Alleen de Griekse godsdienst."
+        "De ondergang van de Griekse cultuur in die periode.",
+        "Alleen de Griekse godsdienst in die tijd."
       ],
       "c": 1,
       "e": "Door Alexanders veroveringen vermengde de Griekse cultuur zich met oosterse culturen."
@@ -522,8 +522,8 @@
       "difficulty": 3,
       "q": "Waarom bouwden Egyptenaren piramides?",
       "a": [
-        "Als woonhuizen voor farao?s.",
-        "Als graven en om macht te tonen.",
+        "Als woonhuizen voor farao's.",
+        "Als graven voor farao's.",
         "Om landbouw te beschermen.",
         "Voor handel met andere volken."
       ],
@@ -614,10 +614,10 @@
       "difficulty": 4,
       "q": "Waarom is het historisch interessant dat Pytheas mogelijk tot \u2018Thule\u2019 kwam?",
       "a": [
-        "Het bewijst dat Grieken Amerika bereikten.",
+        "Het bewijst dat Grieken Amerika bereikten in die tijd.",
         "Het toont reizen en kennis buiten de Middellandse Zee.",
-        "Het betekent dat Sparta een zee-imperium had.",
-        "Het bewijst dat alle mythen onwaar zijn."
+        "Het betekent dat Sparta een zee-imperium had in die tijd.",
+        "Het bewijst dat alle mythen onwaar zijn in die tijd."
       ],
       "c": 1,
       "e": "Het gaat om nieuwsgierigheid, navigatie en observatie\u2014een brug naar wetenschappelijk denken.",
@@ -776,7 +776,7 @@
       "difficulty": 3,
       "q": "Wat is een tirannie in het oude Griekenland (historisch correct)?",
       "a": [
-        "Bestuur door priesters in tempels.",
+        "Bestuur door priesters in tempels in die tijd.",
         "Bestuur door ??n machthebber buiten de elite.",
         "Bestuur door het volk via directe stem.",
         "Bestuur door farao?s met goddelijke macht."
@@ -792,10 +792,10 @@
       "difficulty": 4,
       "q": "Waarom is een vaasafbeelding geen perfecte weergave van de werkelijkheid, maar toch bruikbaar?",
       "a": [
-        "Vazen liegen altijd en zijn waardeloos.",
+        "Vazen liegen altijd en zijn waardeloos in die periode.",
         "Ze idealiseren, maar tonen wat belangrijk was.",
         "Ze zijn alleen door kunstenaars gemaakt.",
-        "Het is altijd propaganda van de elite."
+        "Het is altijd propaganda van de elite in die periode."
       ],
       "c": 1,
       "e": "Beelden zijn vaak symbolisch, maar geven inzicht in waarden en zelfbeeld."
@@ -925,7 +925,7 @@
         "Religieus festival; deelname vooral vrije Griekse mannen.",
         "Teamsporten tussen landen waren verplicht voor iedereen.",
         "Vrouwen moesten verplicht meedoen in elke discipline.",
-        "Wintersporten stonden centraal op sneeuw en ijs."
+        "Wintersporten stonden centraal op sneeuw en ijs in die tijd."
       ],
       "c": 0,
       "e": "Belangrijk: religieuze context + uitsluiting in de oudheid versus inclusiever en mondialer nu.",
@@ -1279,7 +1279,7 @@
       "a": [
         "Oudheid (3000 v.Chr. tot 500 n.Chr.)",
         "Prehistorie (tot 3000 v.Chr.)",
-        "Middeleeuwen (500 tot 1500)",
+        "Middeleeuwen (500 tot 1500) in die tijd",
         "Vroegmoderne Tijd (1500 tot 1800)"
       ],
       "c": 0,
@@ -1337,10 +1337,10 @@
       "difficulty": 4,
       "q": "Wat bedoel je met standplaatsgebondenheid?",
       "a": [
-        "Dat mensen vanuit hun eigen tijd en plek naar de wereld kijken",
-        "Dat bronnen altijd onbetrouwbaar zijn",
-        "Dat er alleen geschreven bronnen bestaan",
-        "Dat iedereen dezelfde mening heeft"
+        "Dat je vanuit je eigen tijd en plek kijkt.",
+        "Dat bronnen altijd onbetrouwbaar zijn in die tijd.",
+        "Dat er alleen geschreven bronnen bestaan in die tijd.",
+        "Dat iedereen dezelfde mening heeft in die tijd."
       ],
       "c": 0,
       "e": "Standplaatsgebondenheid betekent dat iemands kijk wordt bepaald door tijd en plaats."
@@ -1353,8 +1353,8 @@
       "q": "Welke onderzoeksvraag is verklarend?",
       "a": [
         "Waarom konden de Grieken de Perzen verslaan?",
-        "Welke kleding droegen de Grieken?",
-        "In hoeverre was slavernij zwaar?",
+        "Welke kleding droegen de Grieken? in die tijd",
+        "In hoeverre was slavernij zwaar? in die tijd",
         "Wie bouwde de tempels op de acropolis?"
       ],
       "c": 0,

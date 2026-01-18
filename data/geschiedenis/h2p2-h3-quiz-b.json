@@ -74,10 +74,10 @@
       "difficulty": 3,
       "q": "Wat was de belangrijkste functie van piramides?",
       "a": [
-        "Verdedigingswerken tegen vijanden",
-        "Koninklijke graven die een eeuwig bestaan moesten garanderen",
-        "Marktplaatsen voor handel",
-        "Scholen voor schrijvers"
+        "Verdedigingswerken tegen vijanden en aanvallen.",
+        "Koninklijke graven voor farao's.",
+        "Marktplaatsen voor handel en uitwisseling.",
+        "Scholen voor schrijvers en priesters."
       ],
       "c": 1,
       "e": "Piramides waren koninklijke graven en hoorden bij het geloof in het hiernamaals."
@@ -150,10 +150,10 @@
       "difficulty": 3,
       "q": "Waarom werd het lichaam gemummificeerd?",
       "a": [
-        "Zodat soldaten hun dode aanvoerder konden eren in het leger.",
+        "Zodat soldaten hun dode aanvoerder konden eren in het leger in die periode.",
         "Omdat een goed bewaard lichaam nodig was voor het leven na de dood.",
         "Om het lichaam lichter te maken voor de reis naar de piramide.",
-        "Omdat het wettelijk verplicht was voor iedereen."
+        "Omdat het wettelijk verplicht was voor iedereen in die tijd."
       ],
       "c": 1,
       "e": "Mummificatie hoorde bij het geloof in een leven na de dood."
@@ -165,10 +165,10 @@
       "difficulty": 4,
       "q": "Waarom hadden schrijvers in Egypte veel macht?",
       "a": [
-        "Ze beheersten lezen en schrijven en regelden administratie en belasting.",
-        "Ze waren de enige militaire leiders.",
-        "Ze verkochten graan op de markt.",
-        "Ze bepaalden het waterpeil van de Nijl."
+        "Ze beheersten lezen en schrijven en deden administratie.",
+        "Ze waren de enige militaire leiders van het rijk.",
+        "Ze verkochten graan op de markt en bepaalden prijzen.",
+        "Ze bepaalden het waterpeil van de Nijl en verdeelden water."
       ],
       "c": 0,
       "e": "Schrijvers konden lezen en schrijven en beheerden administratie en belastingen; dat gaf invloed."
@@ -275,10 +275,10 @@
       "difficulty": 3,
       "q": "Waarom was de Atheense democratie beperkt?",
       "a": [
-        "Alleen priesters mochten stemmen.",
-        "Vrouwen, slaven en vreemdelingen mochten niet meedoen.",
-        "De koning had altijd het laatste woord.",
-        "Er waren geen wetten of rechtbanken."
+        "Alleen priesters mochten stemmen in de polis.",
+        "Vrouwen, slaven en vreemdelingen deden niet mee.",
+        "De koning had altijd het laatste woord in Athene.",
+        "Er waren geen wetten of rechtbanken in Athene."
       ],
       "c": 1,
       "e": "Alleen mannelijke burgers hadden stemrecht."
@@ -291,9 +291,9 @@
       "q": "Wat is direct democratisch bestuur?",
       "a": [
         "Burgers stemmen zelf over wetten in de volksvergadering.",
-        "Burgers kiezen een koning die voor hen beslist.",
-        "De rijken stemmen en de armen niet.",
-        "Priesters maken wetten zonder overleg."
+        "Burgers kiezen een koning die voor hen beslist in die tijd.",
+        "De rijken stemmen en de armen niet in die tijd.",
+        "Priesters maken wetten zonder overleg in die tijd."
       ],
       "c": 0,
       "e": "In Athene stemden burgers direct in de volksvergadering."
@@ -367,9 +367,9 @@
       "q": "Wie waren de heloten in Sparta?",
       "a": [
         "Spartaanse burgers met stemrecht",
-        "Oorlogskoningen",
+        "Oorlogskoningen in die tijd",
         "Onderworpen boeren zonder burgerrechten",
-        "Handelaars uit andere poleis"
+        "Handelaars uit andere poleis in die tijd"
       ],
       "c": 2,
       "e": "Heloten waren onderworpen boeren die het land bewerkten."
@@ -381,10 +381,10 @@
       "difficulty": 4,
       "q": "Waarom kende Sparta een strenge militaire opvoeding?",
       "a": [
-        "Om heloten onder controle te houden en het leger sterk te houden.",
-        "Omdat Sparta geen landbouw had.",
+        "Om heloten onder controle te houden en sterk te blijven.",
+        "Omdat Sparta nauwelijks landbouw had en weinig voedsel kreeg.",
         "Omdat het een handelsstad met een sterke vloot was.",
-        "Omdat alle Grieken zo leefden."
+        "Omdat alle Grieken zo leefden en dezelfde regels hadden."
       ],
       "c": 0,
       "e": "Sparta had veel heloten en vreesde opstanden; een sterk, gedisciplineerd leger was nodig."
@@ -396,10 +396,10 @@
       "difficulty": 3,
       "q": "Wat is een kenmerk van de hoplieten-phalanx?",
       "a": [
-        "Lichte ruiters die los van elkaar vechten",
+        "Lichte ruiters die los van elkaar vechten in die tijd",
         "Soldaten die in dichte rijen met schilden samenwerken",
-        "Een verdedigingsmuur van stenen",
-        "Een vloot in drie rijen schepen"
+        "Een verdedigingsmuur van stenen in die tijd",
+        "Een vloot in drie rijen schepen in die tijd"
       ],
       "c": 1,
       "e": "Hopliten vochten in compacte rijen met overlappende schilden."
@@ -411,10 +411,10 @@
       "difficulty": 3,
       "q": "Wat was een directe aanleiding voor de Perzische oorlogen?",
       "a": [
-        "De bouw van piramides in Egypte",
-        "De opstand van Griekse steden in Ionie tegen Perzie",
-        "De stichting van Rome",
-        "De invoering van het schrift"
+        "De bouw van piramides en tempels in Egypte.",
+        "De opstand van Griekse steden in Ionie.",
+        "De stichting van Rome aan de Tiber.",
+        "De invoering van het schrift in Egypte."
       ],
       "c": 1,
       "e": "Griekse steden in Klein-Azie kwamen in opstand tegen Perzie."
@@ -456,10 +456,10 @@
       "difficulty": 3,
       "q": "Waarom was de zeeslag bij Salamis zo beslissend?",
       "a": [
-        "De Perzische vloot werd verslagen, waardoor hun bevoorrading instortte.",
-        "De Grieken verloren hun hele vloot.",
-        "Sparta verloor zijn leger.",
-        "Egypte viel de Perzen aan."
+        "De Perzische vloot werd verslagen; bevoorrading viel weg.",
+        "De Grieken verloren hun hele vloot bij Salamis en trokken zich terug.",
+        "Sparta verloor zijn leger bij Salamis en gaf zich over.",
+        "Egypte viel de Perzen aan bij Salamis met schepen."
       ],
       "c": 0,
       "e": "De Griekse vloot versloeg de Perzen en dwong hun terugtocht."
@@ -584,10 +584,10 @@
       "difficulty": 3,
       "q": "Waarom stichtten Grieken kolonies rond de Middellandse Zee?",
       "a": [
-        "Ze wilden de piramides van Egypte nabouwen.",
+        "Ze wilden de piramides van Egypte nabouwen en kopieren.",
         "Ze zochten landbouwgrond en handelsmogelijkheden.",
         "Ze moesten vluchten voor Romeinse veroveringen.",
-        "Ze wilden minder schepen gebruiken."
+        "Ze wilden minder schepen gebruiken in die tijd."
       ],
       "c": 1,
       "e": "Kolonies boden nieuw land en betere handelsroutes."
@@ -599,10 +599,10 @@
       "difficulty": 4,
       "q": "Wat betekent het begrip 'hellenisme'?",
       "a": [
-        "De verspreiding van Griekse cultuur en taal na de veroveringen van Alexander.",
-        "De terugkeer naar Egyptische religie in Griekenland.",
-        "De periode waarin Athene een democratie was.",
-        "De opstand van de Griekse steden tegen Perzie."
+        "Verspreiding van Griekse cultuur na Alexander.",
+        "Terugkeer naar Egyptische religie in Griekenland.",
+        "Periode waarin Athene een democratie was.",
+        "Opstand van Griekse steden tegen Perzie."
       ],
       "c": 0,
       "e": "Hellenisme gaat over het verspreiden van Griekse cultuur en taal in het Oosten, vooral na Alexander."
@@ -614,10 +614,10 @@
       "difficulty": 3,
       "q": "Wat veranderde er door de veroveringen van Alexander?",
       "a": [
-        "Griekse cultuur raakte bekend in het Midden-Oosten.",
-        "Egypte werd een Romeinse provincie.",
-        "De Olympische Spelen verdwenen.",
-        "De democratie werd overal afgeschaft."
+        "Griekse cultuur werd bekend in het Oosten.",
+        "Egypte werd een Romeinse provincie in die tijd.",
+        "De Olympische Spelen verdwenen volledig uit Griekenland.",
+        "De democratie werd overal afgeschaft in Griekse steden."
       ],
       "c": 0,
       "e": "Alexander verspreidde Griekse taal en cultuur in zijn rijk."
@@ -644,10 +644,10 @@
       "difficulty": 4,
       "q": "Waarom was de Steen van Rosetta zo belangrijk?",
       "a": [
-        "De tekst stond in drie schriften, waardoor hierogliefen konden worden ontcijferd.",
-        "Het was het oudste voorbeeld van een Griekse wet.",
-        "Het bewees dat de piramides door slaven gebouwd waren.",
-        "Het beschreef de veldtochten van Alexander."
+        "Drie schriften met dezelfde tekst maakten ontcijferen mogelijk.",
+        "Oudste voorbeeld van een Griekse wet uit Athene en Sparta in de oudheid.",
+        "Bewijs dat piramides door slaven gebouwd waren in Egypte volgens de schrijver.",
+        "Beschrijving van veldtochten van Alexander in Azie en Egypte uit die tijd."
       ],
       "c": 0,
       "e": "Omdat dezelfde tekst in meerdere schriften stond, konden onderzoekers de hierogliefen ontcijferen."
@@ -659,10 +659,10 @@
       "difficulty": 2,
       "q": "Wat maakte het mogelijk om grote rijken te besturen in Egypte?",
       "a": [
-        "Een strak bestuur met belastingen en administratie",
-        "Alleen mondelinge afspraken",
-        "Een leger zonder regels",
-        "Dat iedereen gelijk was"
+        "Strak bestuur met belastingen en administratie.",
+        "Alleen mondelinge afspraken en tradities zonder schrift.",
+        "Een leger zonder regels of bevel van leiders.",
+        "Dat iedereen gelijk was in het rijk."
       ],
       "c": 0,
       "e": "Belastingen en administratie maakten centraal bestuur mogelijk."
@@ -674,10 +674,10 @@
       "difficulty": 2,
       "q": "Wat is het grootste verschil tussen een historicus en een archeoloog?",
       "a": [
-        "Een historicus werkt vooral met teksten, een archeoloog met vondsten.",
-        "Een historicus werkt alleen in musea.",
-        "Een archeoloog bestudeert alleen moderne tijden.",
-        "Er is geen verschil."
+        "Historicus gebruikt teksten, archeoloog vondsten.",
+        "Historicus werkt alleen in musea of archieven.",
+        "Archeoloog bestudeert alleen moderne tijden en steden.",
+        "Er is geen verschil tussen beiden in het vak."
       ],
       "c": 0,
       "e": "Historici gebruiken vooral geschreven bronnen; archeologen gebruiken materiele resten."
@@ -723,10 +723,10 @@
       "difficulty": 3,
       "q": "Welke omschrijving past het best bij een polis?",
       "a": [
-        "Een groot rijk met vele provincies",
+        "Een groot rijk met vele provincies in die tijd",
         "Een zelfstandige stadstaat met eigen regels",
-        "Een dorp zonder bestuur",
-        "Een tempelcomplex zonder bewoners"
+        "Een dorp zonder bestuur in die tijd",
+        "Een tempelcomplex zonder bewoners in die tijd"
       ],
       "c": 1,
       "e": "Een polis is een zelfstandige stadstaat."
@@ -753,9 +753,9 @@
       "difficulty": 4,
       "q": "Wat is een duidelijk verschil tussen het bestuur van Athene en Sparta?",
       "a": [
-        "Athene had een directe democratie, Sparta werd bestuurd door een kleine elite.",
-        "Athene had een koning, Sparta had een volksvergadering.",
-        "Athene was een handelskolonie van Perzie, Sparta een Egyptische provincie.",
+        "Athene had directe democratie; Sparta door kleine elite bestuurd.",
+        "Athene had een koning, Sparta een volksvergadering.",
+        "Athene was handelskolonie van Perzie, Sparta Egyptische provincie.",
         "Athene had geen leger, Sparta had geen wetten."
       ],
       "c": 0,
@@ -770,8 +770,8 @@
       "a": [
         "Het marktplein van een stad",
         "De versterkte heuvel met tempels",
-        "Een buitenwijk van boeren",
-        "Een Romeins stadion"
+        "Een buitenwijk van boeren in die periode",
+        "Een Romeins stadion in die tijd"
       ],
       "c": 1,
       "e": "De acropolis is de versterkte heuvel met tempels."
@@ -784,8 +784,8 @@
       "q": "Waarom was schrift zo belangrijk voor het ontstaan van beschavingen?",
       "a": [
         "Het maakte handel en wetten mogelijk.",
-        "Het zorgde voor meer regen.",
-        "Het maakte iedereen gelijk.",
+        "Het zorgde voor meer regen in die tijd.",
+        "Het maakte iedereen gelijk in die tijd.",
         "Het zorgde dat oorlogen stopten."
       ],
       "c": 0,
@@ -820,10 +820,10 @@
       "difficulty": 3,
       "q": "Wat is het verschil tussen continuiteit en verandering?",
       "a": [
-        "Continuiteit is (bijna) geen verandering, verandering is iets wat anders wordt",
-        "Continuiteit is altijd positief, verandering altijd negatief",
-        "Continuiteit gaat over economie, verandering over politiek",
-        "Continuiteit betekent dat er geen bronnen zijn"
+        "Continuiteit is bijna geen verandering; verandering is iets anders.",
+        "Continuiteit is altijd positief, verandering altijd negatief en slecht.",
+        "Continuiteit gaat over economie, verandering over politiek en macht.",
+        "Continuiteit betekent dat er geen bronnen zijn in een periode."
       ],
       "c": 0,
       "e": "Continuiteit betekent dat iets grotendeels hetzelfde blijft; verandering is dat iets anders wordt."
@@ -850,10 +850,10 @@
       "difficulty": 4,
       "q": "Welke uitspraak gaat over betrouwbaarheid van een bron?",
       "a": [
-        "De schrijver maakte reclame en wilde mensen overtuigen",
-        "Er zijn meerdere soortgelijke bronnen uit die tijd",
-        "De bron is een zeldzame uitzondering",
-        "De bron past bij maar een klein deel van de bevolking"
+        "De schrijver maakte reclame en wilde overtuigen.",
+        "Er zijn meerdere soortgelijke bronnen uit die tijd.",
+        "De bron is een zeldzame uitzondering in die tijd.",
+        "De bron past bij maar een klein deel van de bevolking."
       ],
       "c": 0,
       "e": "Betrouwbaarheid hangt af van maker, tijd en bedoeling; reclame kan de bron minder betrouwbaar maken."
@@ -866,9 +866,9 @@
       "q": "Welke uitspraak is een mening?",
       "a": [
         "De Atheners waren de beste soldaten van allemaal",
-        "De slag bij Marathon was in 490 v.Chr.",
-        "Athene had een volksvergadering",
-        "Sparta had heloten"
+        "De slag bij Marathon was in 490 v.Chr in die tijd.",
+        "Athene had een volksvergadering in die tijd",
+        "Sparta had heloten in die tijd"
       ],
       "c": 0,
       "e": "De zin over 'de beste soldaten' is een waardeoordeel en dus een mening."
@@ -880,10 +880,10 @@
       "difficulty": 3,
       "q": "Wat bedoelen historici met context?",
       "a": [
-        "De omstandigheden die helpen een gebeurtenis te begrijpen",
-        "Een lijst met jaartallen zonder uitleg",
-        "Een bron die altijd betrouwbaar is",
-        "Een willekeurige mening"
+        "Omstandigheden die helpen een gebeurtenis te begrijpen.",
+        "Een lijst met jaartallen zonder uitleg in een lesboek voor leerlingen.",
+        "Een bron die altijd betrouwbaar is en waar is.",
+        "Een willekeurige mening van iemand zonder context."
       ],
       "c": 0,
       "e": "Context is alle achtergrondinformatie die helpt een gebeurtenis te begrijpen."
@@ -895,10 +895,10 @@
       "difficulty": 4,
       "q": "Een bron is bruikbaar voor een vraag als...",
       "a": [
-        "de bron informatie bevat die past bij de onderzoeksvraag",
-        "de bron altijd uit de Oudheid komt",
-        "de bron zo oud mogelijk is",
-        "de bron vooral een mening bevat"
+        "De bron info bevat die past bij de onderzoeksvraag.",
+        "De bron altijd uit de Oudheid komt en dus oud is in het verleden.",
+        "De bron zo oud mogelijk is, ongeacht de inhoud en vraag.",
+        "De bron vooral een mening bevat van een schrijver in het verleden."
       ],
       "c": 0,
       "e": "Bruikbaarheid betekent dat de bron echt helpt om de vraag te beantwoorden."
@@ -915,8 +915,8 @@
         "1 tot 100",
         "100 tot 200"
       ],
-      "c": 1,
-      "e": "De 3e eeuw loopt van 300 tot 400."
+      "c": 0,
+      "e": "De 3e eeuw loopt van 200 tot 300."
     },
     {
       "id": "gB-048",
