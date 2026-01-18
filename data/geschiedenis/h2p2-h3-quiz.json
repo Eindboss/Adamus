@@ -243,17 +243,15 @@
         },
         {
           "id": "b",
-          "type": "text",
-          "prompt": "Noem \u00e9\u00e9n algemene methode die historici/taalkundigen hier gebruiken (1\u20135 woorden).",
-          "answer": {
-            "value": "vergelijking",
-            "accept": [
-              "vergelijking",
-              "vergelijken",
-              "comparatie",
-              "paralleltekst"
-            ]
-          }
+          "type": "mc",
+          "prompt": "Welke methode gebruiken historici/taalkundigen hier vooral?",
+          "options": [
+            "Vergelijken van teksten in verschillende schriften",
+            "Gebruik van mondelinge overlevering",
+            "Loting van antwoorden bij toeval",
+            "Schrifttekens willekeurig vervangen"
+          ],
+          "correct": 0
         }
       ],
       "explanation": "Gymnasium-skill: begrijpen hoe \u2018ontcijferen\u2019 werkt via parallelteksten."
@@ -986,21 +984,18 @@
     },
     {
       "id": "g-044",
-      "type": "short_answer",
-      "quiz_group": 14,
-      "difficulty": 5,
-      "instruction": "Computervraag: 2 zinnen.",
-      "prompt": "Waarom heet kwaadaardige software soms een \u2018Trojan horse\u2019? Leg de metafoor uit.",
-      "keywords": [
-        "verborgen",
-        "binnenlaten",
-        "onzichtbaar",
-        "schadelijk",
-        "vertrouwen",
-        "misleiding"
+      "type": "mc",
+      "quiz_group": 11,
+      "difficulty": 4,
+      "q": "Waarom heet kwaadaardige software soms een 'Trojan horse'?",
+      "a": [
+        "Omdat het onschuldig lijkt en van binnenuit schade veroorzaakt.",
+        "Omdat het alleen via paardenstallen wordt verspreid.",
+        "Omdat het altijd door Grieken wordt geschreven.",
+        "Omdat het alleen op oude computers werkt."
       ],
-      "min_keywords": 2,
-      "example_answer": "Een trojan lijkt onschuldig (zoals een cadeau), waardoor je hem binnenlaat. Daarna voert hij verborgen schadelijke acties uit vanuit je systeem, net als soldaten die uit het paard kwamen."
+      "c": 0,
+      "e": "Een trojan lijkt onschuldig, maar bevat verborgen schadelijke functies die na binnenlaten actief worden."
     },
     {
       "id": "g-045",
@@ -1027,21 +1022,18 @@
     },
     {
       "id": "g-046",
-      "type": "short_answer",
-      "quiz_group": 15,
-      "difficulty": 5,
-      "instruction": "Gymnasium: vergelijk met nu in 2 zinnen.",
-      "prompt": "Noem \u00e9\u00e9n belangrijk verschil tussen directe democratie (Athene) en representatieve democratie (Nederland).",
-      "keywords": [
-        "direct",
-        "vertegenwoordigers",
-        "stemmen",
-        "zelf",
-        "parlement",
-        "kiezen"
+      "type": "mc",
+      "quiz_group": 12,
+      "difficulty": 4,
+      "q": "Wat is het belangrijkste verschil tussen directe en representatieve democratie?",
+      "a": [
+        "Bij directe democratie stemmen burgers zelf; bij representatieve kiezen ze vertegenwoordigers.",
+        "Bij directe democratie is er een koning; bij representatieve niet.",
+        "Bij directe democratie stemmen alleen priesters; bij representatieve iedereen.",
+        "Bij directe democratie geldt geen wet; bij representatieve wel."
       ],
-      "min_keywords": 2,
-      "example_answer": "In Athene stemden burgers direct zelf over besluiten. In Nederland kiezen burgers vertegenwoordigers die namens hen beslissen in parlement en raden."
+      "c": 0,
+      "e": "Direct: burgers stemmen zelf. Representatief: burgers kiezen vertegenwoordigers die besluiten nemen."
     },
     {
       "id": "g-047",
