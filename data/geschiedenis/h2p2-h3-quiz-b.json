@@ -812,6 +812,126 @@
         "Het lichaam wordt in een sarcofaag gelegd"
       ],
       "explanation": "Na reinigen werden organen verwijderd, daarna drogen met natron, in linnen wikkelen en in de sarcofaag leggen."
+    },
+    {
+      "id": "gB-041",
+      "type": "mc",
+      "quiz_group": 9,
+      "difficulty": 3,
+      "q": "Wat is het verschil tussen continuiteit en verandering?",
+      "a": [
+        "Continuiteit is (bijna) geen verandering, verandering is iets wat anders wordt",
+        "Continuiteit is altijd positief, verandering altijd negatief",
+        "Continuiteit gaat over economie, verandering over politiek",
+        "Continuiteit betekent dat er geen bronnen zijn"
+      ],
+      "c": 0,
+      "e": "Continuiteit betekent dat iets grotendeels hetzelfde blijft; verandering is dat iets anders wordt."
+    },
+    {
+      "id": "gB-042",
+      "type": "mc",
+      "quiz_group": 9,
+      "difficulty": 4,
+      "q": "Welke omschrijving past bij de 2e eeuw v.Chr.?",
+      "a": [
+        "200 v.Chr. tot 100 v.Chr.",
+        "100 v.Chr. tot 1 v.Chr.",
+        "1 v.Chr. tot 100 n.Chr.",
+        "100 n.Chr. tot 200 n.Chr."
+      ],
+      "c": 0,
+      "e": "De 2e eeuw v.Chr. loopt van 200 v.Chr. tot 100 v.Chr."
+    },
+    {
+      "id": "gB-043",
+      "type": "mc",
+      "quiz_group": 9,
+      "difficulty": 4,
+      "q": "Welke uitspraak gaat over betrouwbaarheid van een bron?",
+      "a": [
+        "De schrijver maakte reclame en wilde mensen overtuigen",
+        "Er zijn meerdere soortgelijke bronnen uit die tijd",
+        "De bron is een zeldzame uitzondering",
+        "De bron past bij maar een klein deel van de bevolking"
+      ],
+      "c": 0,
+      "e": "Betrouwbaarheid hangt af van maker, tijd en bedoeling; reclame kan de bron minder betrouwbaar maken."
+    },
+    {
+      "id": "gB-044",
+      "type": "mc",
+      "quiz_group": 9,
+      "difficulty": 4,
+      "q": "Welke uitspraak is een mening?",
+      "a": [
+        "De Atheners waren de beste soldaten van allemaal",
+        "De slag bij Marathon was in 490 v.Chr.",
+        "Athene had een volksvergadering",
+        "Sparta had heloten"
+      ],
+      "c": 0,
+      "e": "De zin over 'de beste soldaten' is een waardeoordeel en dus een mening."
+    },
+    {
+      "id": "gB-045",
+      "type": "mc",
+      "quiz_group": 9,
+      "difficulty": 3,
+      "q": "Wat bedoelen historici met context?",
+      "a": [
+        "De omstandigheden die helpen een gebeurtenis te begrijpen",
+        "Een lijst met jaartallen zonder uitleg",
+        "Een bron die altijd betrouwbaar is",
+        "Een willekeurige mening"
+      ],
+      "c": 0,
+      "e": "Context is alle achtergrondinformatie die helpt een gebeurtenis te begrijpen."
+    },
+    {
+      "id": "gB-046",
+      "type": "mc",
+      "quiz_group": 9,
+      "difficulty": 4,
+      "q": "Een bron is bruikbaar voor een vraag als...",
+      "a": [
+        "de bron informatie bevat die past bij de onderzoeksvraag",
+        "de bron altijd uit de Oudheid komt",
+        "de bron zo oud mogelijk is",
+        "de bron vooral een mening bevat"
+      ],
+      "c": 0,
+      "e": "Bruikbaarheid betekent dat de bron echt helpt om de vraag te beantwoorden."
+    },
+    {
+      "id": "gB-047",
+      "type": "mc",
+      "quiz_group": 9,
+      "difficulty": 4,
+      "q": "Welke omschrijving past bij de 3e eeuw?",
+      "a": [
+        "200 tot 300",
+        "300 tot 400",
+        "1 tot 100",
+        "100 tot 200"
+      ],
+      "c": 1,
+      "e": "De 3e eeuw loopt van 300 tot 400."
+    },
+    {
+      "id": "gB-048",
+      "type": "mc",
+      "quiz_group": 9,
+      "difficulty": 4,
+      "q": "Welke onderzoeksvraag is waarderend?",
+      "a": [
+        "In hoeverre was slavernij zwaar?",
+        "Waarom hielden de Romeinen gladiatorenspelen?",
+        "Welke kleding droegen de Romeinen?",
+        "Wanneer begon de Peloponnesische oorlog?"
+      ],
+      "c": 0,
+      "e": "Waarderende vragen vragen om een oordeel (in hoeverre)."
     }
   ]
 }

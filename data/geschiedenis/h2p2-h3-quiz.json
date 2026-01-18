@@ -1,6 +1,6 @@
 {
-  "title": "Geschiedenis – Egypte & Grieken (Gymnasium 1) – Verbeterde quiz",
-  "description": "H2§2 Het oude Egypte + H3 De Grieken (§3.3–3.4). 50 gevarieerde vragen met hogere denkvaardigheden en per vraag een afbeeldingsopdracht.",
+  "title": "Geschiedenis \u2013 Egypte & Grieken (Gymnasium 1) \u2013 Verbeterde quiz",
+  "description": "H2\u00a72 Het oude Egypte + H3 De Grieken (\u00a73.3\u20133.4). 50 gevarieerde vragen met hogere denkvaardigheden en per vraag een afbeeldingsopdracht.",
   "questions": [
     {
       "id": "g-001",
@@ -22,7 +22,7 @@
         "Slag bij Marathon",
         "Alexander verovert het Perzische Rijk"
       ],
-      "explanation": "Narmer (~3100 v.C.) → piramides (~2600–2500 v.C.) → Olympische Spelen (776 v.C.) → Marathon (490 v.C.) → Alexander (334–330 v.C. veroveringen)."
+      "explanation": "Narmer (~3100 v.C.) \u2192 piramides (~2600\u20132500 v.C.) \u2192 Olympische Spelen (776 v.C.) \u2192 Marathon (490 v.C.) \u2192 Alexander (334\u2013330 v.C. veroveringen)."
     },
     {
       "id": "g-002",
@@ -88,10 +88,10 @@
         {
           "id": "blank3",
           "answers": [
-            "hiërogliefen"
+            "hi\u00ebrogliefen"
           ],
           "options": [
-            "hiërogliefen",
+            "hi\u00ebrogliefen",
             "spijkerschrift",
             "runen",
             "letters"
@@ -154,7 +154,7 @@
         "Mythen ontstonden pas na de Romeinen."
       ],
       "c": 1,
-      "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als ‘wereldbeeld’ vóór wetenschappelijke verklaringen dominant worden.",
+      "e": "Mythen verklaren natuur/maatschappij en geven waarden; ze functioneren als \u2018wereldbeeld\u2019 v\u00f3\u00f3r wetenschappelijke verklaringen dominant worden.",
       "type": "mc"
     },
     {
@@ -162,7 +162,7 @@
       "type": "matching",
       "quiz_group": 2,
       "difficulty": 3,
-      "instruction": "Koppel begrip → rol/functie (precies).",
+      "instruction": "Koppel begrip \u2192 rol/functie (precies).",
       "left": [
         "orakel",
         "altaar",
@@ -181,7 +181,7 @@
         "offer": "handeling om goden gunstig te stemmen",
         "tempel": "gebouw gewijd aan een godheid met cultusbeeld"
       },
-      "explanation": "Gymnasium-detail: tempel ≠ altaar. Altaar staat vaak buiten; tempel is ‘huis’ van de god."
+      "explanation": "Gymnasium-detail: tempel \u2260 altaar. Altaar staat vaak buiten; tempel is \u2018huis\u2019 van de god."
     },
     {
       "id": "g-008",
@@ -221,24 +221,24 @@
       "quiz_group": 3,
       "difficulty": 4,
       "instruction": "Beantwoord de bronvragen (gymnasium: functie van meertalige bron).",
-      "context": "De Steen van Rosetta bevat dezelfde tekst in drie schriften (hiërogliefen, demotisch, Grieks). Hierdoor konden geleerden een onbekend schrift ontcijferen door vergelijking met een bekend schrift.",
+      "context": "De Steen van Rosetta bevat dezelfde tekst in drie schriften (hi\u00ebrogliefen, demotisch, Grieks). Hierdoor konden geleerden een onbekend schrift ontcijferen door vergelijking met een bekend schrift.",
       "parts": [
         {
           "id": "a",
           "type": "mc",
-          "prompt": "Wat is de beste reden dat het Grieks hier een ‘sleutel’ is?",
+          "prompt": "Wat is de beste reden dat het Grieks hier een \u2018sleutel\u2019 is?",
           "options": [
             "Grieks was magisch en werkte als code.",
             "Geleerden konden Grieks al lezen en konden zo betekenis koppelen aan tekens.",
             "Het Grieks stond er als versiering bij.",
-            "Hiërogliefen zijn een soort Grieks."
+            "Hi\u00ebrogliefen zijn een soort Grieks."
           ],
           "correct": 1
         },
         {
           "id": "b",
           "type": "text",
-          "prompt": "Noem één algemene methode die historici/taalkundigen hier gebruiken (1–5 woorden).",
+          "prompt": "Noem \u00e9\u00e9n algemene methode die historici/taalkundigen hier gebruiken (1\u20135 woorden).",
           "answer": {
             "value": "vergelijking",
             "accept": [
@@ -250,7 +250,7 @@
           }
         }
       ],
-      "explanation": "Gymnasium-skill: begrijpen hoe ‘ontcijferen’ werkt via parallelteksten."
+      "explanation": "Gymnasium-skill: begrijpen hoe \u2018ontcijferen\u2019 werkt via parallelteksten."
     },
     {
       "id": "g-011",
@@ -272,7 +272,7 @@
       "type": "fill_blank",
       "quiz_group": 3,
       "difficulty": 3,
-      "instruction": "Vul de sociale opbouw van Athene in (hoog → laag).",
+      "instruction": "Vul de sociale opbouw van Athene in (hoog \u2192 laag).",
       "text": "Volledige politieke rechten hadden de mannelijke {{blank1}}. Vrije vreemdelingen zonder burgerrecht heetten {{blank2}}. Helemaal onderaan stonden {{blank3}}.",
       "blanks": [
         {
@@ -312,7 +312,7 @@
           ]
         }
       ],
-      "explanation": "Kern: ‘vrij’ ≠ ‘burger’. Burgerrecht bepaalt politieke deelname."
+      "explanation": "Kern: \u2018vrij\u2019 \u2260 \u2018burger\u2019. Burgerrecht bepaalt politieke deelname."
     },
     {
       "id": "g-013",
@@ -343,24 +343,24 @@
       ],
       "right": [
         "kritische vraagmethode; zelfkennis",
-        "Academie; ideeënwereld (theorie van vormen)",
+        "Academie; idee\u00ebnwereld (theorie van vormen)",
         "logica/empirie; brede natuurstudie",
-        "ziekte verklaren zonder ‘straf van goden’ als uitgangspunt"
+        "ziekte verklaren zonder \u2018straf van goden\u2019 als uitgangspunt"
       ],
       "correct_pairs": {
         "Socrates": "kritische vraagmethode; zelfkennis",
-        "Plato": "Academie; ideeënwereld (theorie van vormen)",
+        "Plato": "Academie; idee\u00ebnwereld (theorie van vormen)",
         "Aristoteles": "logica/empirie; brede natuurstudie",
-        "Hippocrates": "ziekte verklaren zonder ‘straf van goden’ als uitgangspunt"
+        "Hippocrates": "ziekte verklaren zonder \u2018straf van goden\u2019 als uitgangspunt"
       },
-      "explanation": "Niet alles is ‘wetenschap’ zoals nu, maar de methode (vragen/argumenteren/observeren) is beslissend."
+      "explanation": "Niet alles is \u2018wetenschap\u2019 zoals nu, maar de methode (vragen/argumenteren/observeren) is beslissend."
     },
     {
       "id": "g-015",
       "type": "mc",
       "quiz_group": 4,
       "difficulty": 4,
-      "q": "Wat was een voordeel én een nadeel van loting in Athene?",
+      "q": "Wat was een voordeel \u00e9n een nadeel van loting in Athene?",
       "a": [
         "Voordeel: alleen deskundigen kregen macht; nadeel: te weinig burgers",
         "Voordeel: gelijke kansen voor burgers; nadeel: bestuurders konden onkundig zijn",
@@ -404,7 +404,7 @@
       "id": "g-018",
       "quiz_group": 5,
       "difficulty": 3,
-      "q": "Waar stichtten Grieken (meestal) géén kolonies, en waarom is dat logisch?",
+      "q": "Waar stichtten Grieken (meestal) g\u00e9\u00e9n kolonies, en waarom is dat logisch?",
       "a": [
         "Zuid-Itali? en Sicili?, want daar was geen landbouwgrond.",
         "Kust van Klein-Azi?, want het was te koud.",
@@ -412,7 +412,7 @@
         "Noord-Afrika, want er waren geen havens."
       ],
       "c": 2,
-      "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotamië was moeilijk bereikbaar én politiek bezet door sterke rijken.",
+      "e": "Kolonies liggen vooral aan kusten/handelsroutes; Mesopotami\u00eb was moeilijk bereikbaar \u00e9n politiek bezet door sterke rijken.",
       "type": "mc"
     },
     {
@@ -420,7 +420,7 @@
       "type": "matching",
       "quiz_group": 6,
       "difficulty": 3,
-      "instruction": "Koppel oorlog → kernomschrijving (let op nuance).",
+      "instruction": "Koppel oorlog \u2192 kernomschrijving (let op nuance).",
       "left": [
         "Perzische Oorlogen",
         "Peloponnesische Oorlog",
@@ -436,7 +436,7 @@
         "Peloponnesische Oorlog": "Machtsstrijd in Griekenland: Athene vs Sparta en bondgenoten",
         "Veroveringen van Alexander": "Macedonische expansie verspreidt Griekse cultuur (hellenisme)"
       },
-      "explanation": "Gymnasium-detail: ‘samen’ is niet altijd harmonie; er is ook rivaliteit, maar extern gevaar dwingt samenwerking."
+      "explanation": "Gymnasium-detail: \u2018samen\u2019 is niet altijd harmonie; er is ook rivaliteit, maar extern gevaar dwingt samenwerking."
     },
     {
       "id": "g-020",
@@ -464,10 +464,10 @@
         {
           "id": "blank1",
           "answers": [
-            "Macedonië"
+            "Macedoni\u00eb"
           ],
           "options": [
-            "Macedonië",
+            "Macedoni\u00eb",
             "Athene",
             "Sparta",
             "Thebe"
@@ -498,7 +498,7 @@
           ]
         }
       ],
-      "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet ‘iedereen werd Grieks hetzelfde’."
+      "explanation": "Gymnasium-begrip: hellenisme = cultuurverspreiding + vermenging, niet \u2018iedereen werd Grieks hetzelfde\u2019."
     },
     {
       "id": "g-022",
@@ -550,9 +550,9 @@
       "type": "matching",
       "quiz_group": 7,
       "difficulty": 2,
-      "instruction": "Koppel begrip → betekenis (basisbegrippen, maar precies).",
+      "instruction": "Koppel begrip \u2192 betekenis (basisbegrippen, maar precies).",
       "left": [
-        "hiërogliefen",
+        "hi\u00ebrogliefen",
         "papyrus",
         "kanopen",
         "sarcofaag"
@@ -564,7 +564,7 @@
         "stenen doodskist"
       ],
       "correct_pairs": {
-        "hiërogliefen": "beeldschrift",
+        "hi\u00ebrogliefen": "beeldschrift",
         "papyrus": "schrijfmateriaal van riet",
         "kanopen": "vaten voor organen",
         "sarcofaag": "stenen doodskist"
@@ -612,7 +612,7 @@
       "id": "g-028",
       "quiz_group": 8,
       "difficulty": 4,
-      "q": "Waarom is het historisch interessant dat Pytheas mogelijk tot ‘Thule’ kwam?",
+      "q": "Waarom is het historisch interessant dat Pytheas mogelijk tot \u2018Thule\u2019 kwam?",
       "a": [
         "Het bewijst dat Grieken Amerika bereikten.",
         "Het toont reizen en kennis buiten de Middellandse Zee.",
@@ -620,7 +620,7 @@
         "Het bewijst dat alle mythen onwaar zijn."
       ],
       "c": 1,
-      "e": "Het gaat om nieuwsgierigheid, navigatie en observatie—een brug naar wetenschappelijk denken.",
+      "e": "Het gaat om nieuwsgierigheid, navigatie en observatie\u2014een brug naar wetenschappelijk denken.",
       "type": "mc"
     },
     {
@@ -668,7 +668,7 @@
           ]
         }
       ],
-      "explanation": "Delphi is hét voorbeeld van religieus ‘advies’ in politieke beslissingen."
+      "explanation": "Delphi is h\u00e9t voorbeeld van religieus \u2018advies\u2019 in politieke beslissingen."
     },
     {
       "id": "g-030",
@@ -676,7 +676,7 @@
       "quiz_group": 8,
       "difficulty": 4,
       "instruction": "Athene vs Sparta (kennis + interpretatie).",
-      "context": "Twee poleis kunnen dezelfde taal en goden delen en tóch sterk verschillen in bestuur en samenleving.",
+      "context": "Twee poleis kunnen dezelfde taal en goden delen en t\u00f3ch sterk verschillen in bestuur en samenleving.",
       "parts": [
         {
           "id": "a",
@@ -693,7 +693,7 @@
         {
           "id": "b",
           "type": "text",
-          "prompt": "Noem één reden waarom deze verschillen later tot conflict konden leiden (max 8 woorden).",
+          "prompt": "Noem \u00e9\u00e9n reden waarom deze verschillen later tot conflict konden leiden (max 8 woorden).",
           "answer": {
             "value": "machtsstrijd",
             "accept": [
@@ -716,11 +716,11 @@
       "a": [
         "De Nijl stroomt van zuid naar noord.",
         "Jaarlijkse overstromingen brachten vruchtbaar slib.",
-        "Het vruchtbare gebied heette ‘het rode land’.",
+        "Het vruchtbare gebied heette \u2018het rode land\u2019.",
         "De Nijl was belangrijk voor transport en handel."
       ],
       "c": 2,
-      "e": "Vruchtbaar gebied = ‘zwarte land’ (kemet); woestijn = ‘rode land’ (deshret).",
+      "e": "Vruchtbaar gebied = \u2018zwarte land\u2019 (kemet); woestijn = \u2018rode land\u2019 (deshret).",
       "type": "mc"
     },
     {
@@ -752,7 +752,7 @@
         "Grieken konden cavalerie inzetten vanaf het strand."
       ],
       "c": 1,
-      "e": "Smalle zeestraat = manoeuvreerruimte beperkt → tactisch voordeel voor kleinere/behendigere vloot.",
+      "e": "Smalle zeestraat = manoeuvreerruimte beperkt \u2192 tactisch voordeel voor kleinere/behendigere vloot.",
       "type": "mc"
     },
     {
@@ -782,7 +782,7 @@
         "Bestuur door farao?s met goddelijke macht."
       ],
       "c": 1,
-      "e": "Een tiran greep macht; het woord is niet per se ‘modern moreel’ negatief in de oudheid.",
+      "e": "Een tiran greep macht; het woord is niet per se \u2018modern moreel\u2019 negatief in de oudheid.",
       "type": "mc"
     },
     {
@@ -813,7 +813,7 @@
           "type": "mc",
           "prompt": "Wat is het symbool van Asklepios?",
           "options": [
-            "Een staf met één slang",
+            "Een staf met \u00e9\u00e9n slang",
             "Een staf met twee slangen",
             "Een slang die in zijn staart bijt",
             "Een adelaar met een slang"
@@ -833,7 +833,7 @@
           "correct": 0
         }
       ],
-      "e": "Het symbool van Asklepios is een staf met één slang, de esculaapstaf. De caduceus (twee slangen) hoort bij Hermes, niet bij geneeskunde."
+      "e": "Het symbool van Asklepios is een staf met \u00e9\u00e9n slang, de esculaapstaf. De caduceus (twee slangen) hoort bij Hermes, niet bij geneeskunde."
     },
     {
       "id": "g-038",
@@ -890,7 +890,7 @@
       "id": "g-039",
       "quiz_group": 12,
       "difficulty": 3,
-      "q": "De aanleiding van de Peloponnesische oorlog wordt soms ‘handelsconflict’ genoemd. Wat is dan de diepere oorzaak?",
+      "q": "De aanleiding van de Peloponnesische oorlog wordt soms \u2018handelsconflict\u2019 genoemd. Wat is dan de diepere oorzaak?",
       "a": [
         "Religieuze ruzie over offers.",
         "Machtsstrijd om hegemonie.",
@@ -961,7 +961,7 @@
       "correct_order": [
         "Grieken doen alsof ze vertrekken",
         "Trojanen halen het houten paard binnen",
-        "Soldaten komen ’s nachts uit het paard",
+        "Soldaten komen \u2019s nachts uit het paard",
         "Poorten worden geopend voor het Griekse leger"
       ],
       "explanation": "Dit is een klassiek verhaal over misleiding en psychologie in oorlog."
@@ -972,7 +972,7 @@
       "quiz_group": 14,
       "difficulty": 5,
       "instruction": "Computervraag: 2 zinnen.",
-      "prompt": "Waarom heet kwaadaardige software soms een ‘Trojan horse’? Leg de metafoor uit.",
+      "prompt": "Waarom heet kwaadaardige software soms een \u2018Trojan horse\u2019? Leg de metafoor uit.",
       "keywords": [
         "verborgen",
         "binnenlaten",
@@ -982,7 +982,7 @@
         "misleiding"
       ],
       "min_keywords": 2,
-      "rubric": "Metafoor: lijkt onschuldig → wordt binnengelaten → verborgen ‘aanval’ van binnenuit.",
+      "rubric": "Metafoor: lijkt onschuldig \u2192 wordt binnengelaten \u2192 verborgen \u2018aanval\u2019 van binnenuit.",
       "example_answer": "Een trojan lijkt onschuldig (zoals een cadeau), waardoor je hem binnenlaat. Daarna voert hij verborgen schadelijke acties uit vanuit je systeem, net als soldaten die uit het paard kwamen."
     },
     {
@@ -1006,7 +1006,7 @@
       "quiz_group": 15,
       "difficulty": 5,
       "instruction": "Gymnasium: vergelijk met nu in 2 zinnen.",
-      "prompt": "Noem één belangrijk verschil tussen directe democratie (Athene) en representatieve democratie (Nederland).",
+      "prompt": "Noem \u00e9\u00e9n belangrijk verschil tussen directe democratie (Athene) en representatieve democratie (Nederland).",
       "keywords": [
         "direct",
         "vertegenwoordigers",
@@ -1091,7 +1091,7 @@
       "id": "g-049",
       "quiz_group": 16,
       "difficulty": 3,
-      "q": "Wat is géén kenmerk van een mythe?",
+      "q": "Wat is g\u00e9\u00e9n kenmerk van een mythe?",
       "a": [
         "Verklaart natuurverschijnselen.",
         "Goden of helden spelen een rol.",
@@ -1137,7 +1137,7 @@
         {
           "id": "c",
           "type": "text",
-          "prompt": "Noem één reden waarom winnen zoveel status gaf (max 8 woorden).",
+          "prompt": "Noem \u00e9\u00e9n reden waarom winnen zoveel status gaf (max 8 woorden).",
           "answer": {
             "value": "eer",
             "accept": [
@@ -1156,7 +1156,7 @@
       "id": "g-051",
       "quiz_group": 17,
       "difficulty": 2,
-      "q": "Rond welk jaar werden hiërogliefen uitgevonden in Egypte?",
+      "q": "Rond welk jaar werden hi\u00ebrogliefen uitgevonden in Egypte?",
       "a": [
         "3000 v.C.",
         "3100 v.C.",
@@ -1166,7 +1166,7 @@
         "4000 v.C."
       ],
       "c": 0,
-      "e": "Rond 3000 v.C. werden de eerste hiërogliefen gebruikt in Egypte. Dit was een beeldschrift dat door schrijvers werd gebruikt voor administratie en religieuze teksten.",
+      "e": "Rond 3000 v.C. werden de eerste hi\u00ebrogliefen gebruikt in Egypte. Dit was een beeldschrift dat door schrijvers werd gebruikt voor administratie en religieuze teksten.",
       "type": "mc"
     },
     {
@@ -1183,7 +1183,7 @@
         "550-400 v.C."
       ],
       "c": 0,
-      "e": "De Atheense democratie duurde van 508 v.C. (hervormingen van Cleisthenes) tot 338 v.C. (verovering door Macedonië onder Philippus II).",
+      "e": "De Atheense democratie duurde van 508 v.C. (hervormingen van Cleisthenes) tot 338 v.C. (verovering door Macedoni\u00eb onder Philippus II).",
       "type": "mc"
     },
     {
@@ -1235,14 +1235,14 @@
       ],
       "right": [
         "Narmer verenigt Egypte",
-        "Uitvinding hiërogliefen",
+        "Uitvinding hi\u00ebrogliefen",
         "Eerste Olympische Spelen",
         "Slag bij Marathon",
         "Slag bij Salamis"
       ],
       "correct_pairs": {
         "3100 v.C.": "Narmer verenigt Egypte",
-        "3000 v.C.": "Uitvinding hiërogliefen",
+        "3000 v.C.": "Uitvinding hi\u00ebrogliefen",
         "776 v.C.": "Eerste Olympische Spelen",
         "490 v.C.": "Slag bij Marathon",
         "480 v.C.": "Slag bij Salamis"
@@ -1271,6 +1271,126 @@
         "431-404 v.C.": "Peloponnesische Oorlog"
       },
       "explanation": "Dit zijn de belangrijkste periodes uit H3 die je moet kennen voor de Griekse geschiedenis."
+    },
+    {
+      "id": "g-057",
+      "type": "mc",
+      "quiz_group": 15,
+      "difficulty": 3,
+      "q": "In welke periode valt de tijd van Grieken en Romeinen?",
+      "a": [
+        "Oudheid (3000 v.Chr. tot 500 n.Chr.)",
+        "Prehistorie (tot 3000 v.Chr.)",
+        "Middeleeuwen (500 tot 1500)",
+        "Vroegmoderne Tijd (1500 tot 1800)"
+      ],
+      "c": 0,
+      "e": "De tijd van Grieken en Romeinen hoort bij de Oudheid (3000 v.Chr. tot 500 n.Chr.)."
+    },
+    {
+      "id": "g-058",
+      "type": "mc",
+      "quiz_group": 15,
+      "difficulty": 3,
+      "q": "Een brief uit 480 v.Chr. waarin iemand een veldslag beschrijft is een ...",
+      "a": [
+        "geschreven, directe bron",
+        "ongeschreven, directe bron",
+        "geschreven, indirecte bron",
+        "ongeschreven, indirecte bron"
+      ],
+      "c": 0,
+      "e": "De brief is tekst (geschreven) en komt uit de tijd zelf (direct)."
+    },
+    {
+      "id": "g-059",
+      "type": "mc",
+      "quiz_group": 15,
+      "difficulty": 4,
+      "q": "Wat is een aanleiding (directe oorzaak) van een gebeurtenis?",
+      "a": [
+        "De laatste oorzaak vlak voordat iets gebeurt",
+        "Een gevolg dat pas jaren later merkbaar is",
+        "Een mening over een gebeurtenis",
+        "Een bron die door een archeoloog is gevonden"
+      ],
+      "c": 0,
+      "e": "De aanleiding is de directe, laatste oorzaak voordat iets gebeurt."
+    },
+    {
+      "id": "g-060",
+      "type": "mc",
+      "quiz_group": 15,
+      "difficulty": 3,
+      "q": "Een wijziging in godsdienst en tempelrituelen hoort vooral bij welke invalshoek?",
+      "a": [
+        "Cultureel",
+        "Politiek",
+        "Economisch",
+        "Sociaal"
+      ],
+      "c": 0,
+      "e": "Godsdienst en rituelen horen bij de culturele invalshoek."
+    },
+    {
+      "id": "g-061",
+      "type": "mc",
+      "quiz_group": 15,
+      "difficulty": 4,
+      "q": "Wat bedoel je met standplaatsgebondenheid?",
+      "a": [
+        "Dat mensen vanuit hun eigen tijd en plek naar de wereld kijken",
+        "Dat bronnen altijd onbetrouwbaar zijn",
+        "Dat er alleen geschreven bronnen bestaan",
+        "Dat iedereen dezelfde mening heeft"
+      ],
+      "c": 0,
+      "e": "Standplaatsgebondenheid betekent dat iemands kijk wordt bepaald door tijd en plaats."
+    },
+    {
+      "id": "g-062",
+      "type": "mc",
+      "quiz_group": 15,
+      "difficulty": 4,
+      "q": "Welke onderzoeksvraag is verklarend?",
+      "a": [
+        "Waarom konden de Grieken de Perzen verslaan?",
+        "Welke kleding droegen de Grieken?",
+        "In hoeverre was slavernij zwaar?",
+        "Wie bouwde de tempels op de acropolis?"
+      ],
+      "c": 0,
+      "e": "Verklarende vragen gaan over waarom iets gebeurde."
+    },
+    {
+      "id": "g-063",
+      "type": "mc",
+      "quiz_group": 15,
+      "difficulty": 4,
+      "q": "Welke omschrijving past bij de 1e eeuw v.Chr.?",
+      "a": [
+        "100 v.Chr. tot 1 v.Chr.",
+        "1 v.Chr. tot 100 n.Chr.",
+        "200 v.Chr. tot 100 v.Chr.",
+        "1 n.Chr. tot 50 n.Chr."
+      ],
+      "c": 0,
+      "e": "De 1e eeuw v.Chr. loopt van 100 v.Chr. tot 1 v.Chr."
+    },
+    {
+      "id": "g-064",
+      "type": "mc",
+      "quiz_group": 15,
+      "difficulty": 3,
+      "q": "Welke soort samenleving hoort bij een polis met landbouw en handel?",
+      "a": [
+        "Landbouwstedelijke samenleving",
+        "Samenleving van jager-verzamelaars",
+        "Industri?le samenleving",
+        "Informatiesamenleving"
+      ],
+      "c": 0,
+      "e": "Een polis combineert landbouw met stedelijke functies: landbouwstedelijk."
     }
   ]
 }
